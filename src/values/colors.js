@@ -27,5 +27,6 @@ export const NordTheme = {
 }
 
 export const OtherColors = {
-    neonGreen : "#1FFF0F"
+    neonGreen : "#1FFF0F",
+    headerFooterBlack: "#212529"
 }
