@@ -1,7 +1,7 @@
 import './App.css';
-// import Header from './mycomponents/header';
+import Header from './mycomponents/header';
 // import image from './images/mainBody.jpg';
-// import Footer from './mycomponents/footer';
+import Footer from './mycomponents/footer';
 import {NordTheme, OtherColors} from './values/colors';
 import TerminalWindow from './mycomponents/terminalWindow/terminalWindow';
 
