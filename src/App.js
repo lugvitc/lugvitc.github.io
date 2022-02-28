@@ -6,9 +6,12 @@ import Footer from './mycomponents/footer';
 function App() {
 	const myStyle = {
 		backgroundColor: 'black',
-		minHeight: '90vh',
+		height: 'auto',
 		backgroundImage: `url(${image})`,
-		width: '100%'
+		width: '100vw',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain',
+		backgroundPosition: 'center'
 	}
 
 	const myMainText = {
@@ -23,11 +26,12 @@ function App() {
 		backgroundColor: 'black',
 		borderWidth: 'thick'
 	}
+
   return (
     <div style={myStyle}>
 	  <Header />
+	  <div className="myHeaderText"><h2>Linux Users Club VIT Chennai</h2></div>
 	  <Footer />
-	  <center><div style={myMainText}><h2>Welcome to LINUX CLUB</h2></div></center>
 	  </div>
   );
 }

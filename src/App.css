@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.myHeaderText {
+	color: #33FF51;
+	font-size: 60px;
+	text-align: center;
+	padding: 30px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
