@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
 	const myFooter = {
 		marginTop: '100vh',
-		backgroundColor: 'black',
+		backgroundColor: '#212529',
 		width: '100%',
 		textAlign: 'center',
 		color: 'white'
