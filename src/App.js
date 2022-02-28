@@ -1,12 +1,11 @@
 import './App.css';
-import Header from './mycomponents/header';
-import image from './images/mainBody.jpg';
-import Footer from './mycomponents/footer';
+// import Header from './mycomponents/header';
+// import image from './images/mainBody.jpg';
+// import Footer from './mycomponents/footer';
 import {NordTheme, OtherColors} from './values/colors';
-import UpperDots from './mycomponents/terminalWindow/upperDots';
 import TerminalWindow from './mycomponents/terminalWindow/terminalWindow';
 
-function App() {
+export default function App() {
     const bgStyle = {
         backgroundColor: NordTheme.nord0,
         height: 'auto',
@@ -45,5 +44,3 @@ function App() {
         </div>
     );
 }
-
-export default App;
