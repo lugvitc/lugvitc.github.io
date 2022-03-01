@@ -4,6 +4,7 @@ import Header from './mycomponents/header';
 import Footer from './mycomponents/footer';
 import {NordTheme, OtherColors} from './values/colors';
 import TerminalWindow from './mycomponents/terminalWindow/terminalWindow';
+import TopBar from './mycomponents/topBar/topBar';
 
 export default function App() {
     const bgStyle = {
@@ -13,7 +14,13 @@ export default function App() {
     };
     return (
         <div style={bgStyle}>
-            <Header />
+            {/* <Header /> */}
+            <TopBar
+                titles = {["home", "events", "projects", "blog"]} 
+                activeIndex = {0}
+                time = "1:27 pm" /* this should be the current time, updated every second(or minute, idk)*/
+                date = "2022 03 01, Tuesday"/* this date should be the current date, updated every day*/
+            />
             <div style = {{display: "flex"}}>
                 <TerminalWindow>
                     lugvitc@VITC:~$ sudo lug <br/>
@@ -33,10 +40,7 @@ export default function App() {
                 </TerminalWindow>
                 <TerminalWindow>
                     <h2>
-                        Home<br/>
-                        Events<br/>
-                        Projects<br/>
-                        Blog<br/>
+                        Free as in <span style = {{color: NordTheme.nord11}}>freedom</span>
                     </h2>
                 </TerminalWindow>
             </div>
