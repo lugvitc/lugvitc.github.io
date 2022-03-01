@@ -18,8 +18,8 @@ export default function App() {
             <TopBar
                 titles = {["home", "events", "projects", "blog"]} 
                 activeIndex = {0}
-                time = "1:27 pm" /* this should be the current time, updated every second(or minute, idk)*/
-                date = "2022 03 01, Tuesday"/* this date should be the current date, updated every day*/
+                time = "4:20 pm" /* this should be the current time, updated every second(or minute, idk)*/
+                date = {new Date().toISOString().slice(0, 10)}/* this date should be the current date, updated every day*/
             />
             <div style = {{display: "flex"}}>
                 <TerminalWindow>

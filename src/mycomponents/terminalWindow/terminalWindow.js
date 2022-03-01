@@ -2,7 +2,7 @@ import React from 'react';
 import { NordTheme, OtherColors } from '../../values/colors';
 import UpperDots from './upperDots';
 
-export default function TerminalWindow(props) {
+export default function TerminalWindow({children}) {
     return (
         <div
             className = "terminalContainer"
@@ -26,7 +26,7 @@ export default function TerminalWindow(props) {
                 height: "100%",
                 width: "100%"
             }}>
-                {props.children}
+                {children}
             </div>
         </div>
     );
