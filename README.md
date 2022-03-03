@@ -1,3 +1,15 @@
+# Linux User Club, VIT Chennai
+- Landing page for the club
+
+# TODO
+- make proper css pages for all inline styles (should be modular)
+- put nord theme colours into css (idk how)
+- make pages for all sections
+- TopBar:
+    - start-like logo on lhs
+    - center align date and time
+    - right align shut-down button
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
