@@ -7,15 +7,17 @@ export default function TerminalWindow({children}) {
         <div
             className = "terminalContainer"
             style = {{
-            borderRadius: "10px",
-            backgroundColor: OtherColors.headerFooterBlack,
-            margin: "50px",
-            padding: "5px 0px 0px 0px",
-            width: "1000px"
-        }}>
+                borderRadius: "10px",
+                backgroundColor: OtherColors.headerFooterBlack,
+                margin: "5vh 5vw",
+                padding: "5px 0px 0px 0px",
+                width: "40vw",
+                height: "fit-content"
+            }}
+        >
             <div>
-            <UpperDots/>
-                </div>
+                <UpperDots/>
+            </div>
             <div style = {{
                 backgroundColor: NordTheme.nord1,
                 color: NordTheme.nord4,
