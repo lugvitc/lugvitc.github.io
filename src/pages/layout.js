@@ -1,5 +1,5 @@
 import React from 'react';
-import TopBar from '../mycomponents/topBar/topBar';
+import TopBar from '../mycomponents/topBar';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { NordTheme } from '../values/colors';
