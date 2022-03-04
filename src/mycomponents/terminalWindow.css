@@ -1,0 +1,37 @@
+.terminal-container {
+    border-radius: 10px;
+    background-color: #212529; /* headerFooterBlack */
+    margin: 5vh 5vw;
+    padding: 5px 0px 0px 0px;
+    width: 800px;
+    height: fit-content
+}
+
+.terminal-contents {
+    background-color: #3B4252/* NordTheme.nord1 */;
+    color: #D8DEE9/* NordTheme.nord4 */;
+    font-family: consolas;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    margin: 0px;
+    height: 100%;
+    width: 100%
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 5px;
+    margin: 10px 10px;
+}
+
+.terminal-dot {
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+}
+
+.terminal-dot:hover {
+    border-radius: 11px;
+    height: 11px;
+    width: 11px;
+}

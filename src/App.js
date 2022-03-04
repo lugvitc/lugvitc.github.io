@@ -1,8 +1,9 @@
-import TerminalWindow from './mycomponents/terminalWindow/terminalWindow';
+import TerminalWindow from './myComponents/terminalWindow';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Layout from './pages/layout';
 import { useState } from 'react';
+import About from './pages/about';
 
 export default function App() {
     const [navs, setNavs] = useState([
@@ -20,7 +21,7 @@ export default function App() {
                 <Route path = "events" element = {<TerminalWindow>events</TerminalWindow>}/>
                 <Route path = "projects" element = {<TerminalWindow>projects</TerminalWindow>}/>
                 <Route path = "blog" element = {<TerminalWindow>blog</TerminalWindow>}/>
-                <Route path = "about" element = {<TerminalWindow>about</TerminalWindow>}/>
+                <Route path = "about" element = {<About/>}/>
             </Route>
         </Routes>
         </BrowserRouter>

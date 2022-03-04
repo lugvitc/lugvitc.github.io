@@ -1,11 +1,12 @@
 import {NordTheme} from '../values/colors';
-import TerminalWindow from '../mycomponents/terminalWindow/terminalWindow';
+import TerminalWindow from '../myComponents/terminalWindow';
+import TerminalPrompt from '../myComponents/terminalPrompt';
 
 
 export default function Home() {
     return (
         <TerminalWindow>
-            lugvitc@VITC:~$ sudo lug <br/>
+            <TerminalPrompt> sudo lug </TerminalPrompt>
             [sudo] password for lugvitc: <span style = {{color: NordTheme.nord11}}> **********</span><br/>
             <span style = {{color: NordTheme.nord14}}>access granted...</span><br/>
 
