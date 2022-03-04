@@ -1,5 +1,5 @@
 import React from 'react';
-import { NordTheme, OtherColors } from '../values/colors';
+import { NordTheme } from '../values/colors';
 import './terminalWindow.css';
 
 export default function TerminalWindow({children}) {

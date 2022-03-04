@@ -1,5 +1,5 @@
 import React from 'react';
-import TopBar from '../myComponents/topBar';
+import TopBar from '../components/topBar';
 import { Outlet } from 'react-router-dom';
 import './pages.css';
 

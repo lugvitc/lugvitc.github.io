@@ -19,6 +19,7 @@
 
 .top-bar-element:hover {
     color: #5E81AC /* nord10 */;
+    background-color: #2E3440;
 }
 
 .top-bar-element-active {
@@ -40,5 +41,20 @@
 
 .top-bar-text {
     margin-left: auto;
-    margin: 5px 0px
+    margin: 5px 0px;
+}
+
+@media (max-width: 500px) {
+    .top-bar-element-container {
+        flex-direction: column;
+    }
+
+    .top-bar-element-active {
+        background-color: #2E3440 /* NordTheme.nord0 */;
+        border-radius:  5px;
+        padding: 0px 5px;
+        margin: 5px 5px;
+        border-width: 2px;
+        color: #5E81AC /* nord10 */;
+    }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import TerminalPrompt from '../myComponents/terminalPrompt';
-import TerminalWindow from '../myComponents/terminalWindow';
+import TerminalPrompt from '../components/terminalPrompt';
+import TerminalWindow from '../components/terminalWindow';
 import { NordTheme } from '../values/colors';
 
 export default function About() {
@@ -28,9 +28,15 @@ export default function About() {
 
             <br/>
             <TerminalPrompt> ls ./links/ </TerminalPrompt>
-            {links.map(
-                ({link, name}, index) =>
-                    <a style = {{textDecoration: "none", color: NordTheme.nord10}} href = {link}> {name} <br/></a>
+            {links.map(({link, name}, index) =>
+                <a
+                    style = {{textDecoration: "none", color: NordTheme.nord10}}
+                    href = {link}
+                    target = "_blank"
+                    rel = "noopener noreferrer"
+                >
+                    {name} <br/>
+                </a>
             )}
         </TerminalWindow>
     );

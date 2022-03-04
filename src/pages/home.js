@@ -1,6 +1,6 @@
 import {NordTheme} from '../values/colors';
-import TerminalWindow from '../myComponents/terminalWindow';
-import TerminalPrompt from '../myComponents/terminalPrompt';
+import TerminalWindow from '../components/terminalWindow';
+import TerminalPrompt from '../components/terminalPrompt';
 
 
 export default function Home() {

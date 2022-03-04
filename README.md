@@ -2,13 +2,11 @@
 - Landing page for the club
 
 # TODO
-- put nord theme colours into css (idk how)
-- make pages for all sections
-- make the site responsive (it looks quite bad on smaller sizes)
-- TopBar:
-    - start-like logo on lhs
-    - center align date and time
-    - right align shut-down button
+- improve the topBar design:
+    - proper placement of date/time
+    - shutdown button
+    - button for quick links
+    - responsive version (might have to ditch ubuntu-theming for phone sizes)
 
 # Getting Started with Create React App
 

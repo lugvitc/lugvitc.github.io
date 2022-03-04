@@ -1,6 +1,5 @@
 export const NordTheme = {
     // checkout https://www.nordtheme.com/docs/colors-and-palettes for more details
-    
     // Polar Night: dark bg colours
     nord0: "#2E3440",
     nord1: "#3B4252",
@@ -18,6 +17,7 @@ export const NordTheme = {
     nord9: "#81A1C1", // pastel blue
     nord10: "#5E81AC", // darkish blue
 
+    // try to find some 'darker' versions of them (for changing colours on hovering)
     // Aurora: standard terminal colours
     nord11: "#BF616A", // red
     nord12: "#D08770", // orange

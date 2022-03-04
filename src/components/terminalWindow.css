@@ -1,8 +1,10 @@
 .terminal-container {
     border-radius: 10px;
     background-color: #212529; /* headerFooterBlack */
-    margin: 5vh 5vw;
+    /* background-color: #3B4252; */ /* NordTheme.nord1 */ 
+    /* if the terminal container and contents have the same colour, consider refactoring the element a bit (reduce the top-padding a bit) */
     padding: 5px 0px 0px 0px;
+    margin: 5vh 5vw;
     width: 50vw;
     height: fit-content
 }
@@ -12,7 +14,7 @@
     color: #D8DEE9/* NordTheme.nord4 */;
     font-family: consolas;
     border-radius: 0px 0px 10px 10px;
-    padding: 10px;
+    padding: 30px;
     margin: 0px;
     height: 100%;
     width: 100%
@@ -25,9 +27,9 @@
 }
 
 .terminal-dot {
-    border-radius: 10px;
-    height: 10px;
-    width: 10px;
+    border-radius: 15px;
+    height: 15px;
+    width: 15px;
 }
 
 .terminal-dot:hover {
@@ -36,9 +38,9 @@
     width: 11px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .terminal-container {
-        width: 90vw;
-        margin: 5vh 1vw;
+        width: 96vw;
+        margin: 5vh 2vw;
     }
 }
