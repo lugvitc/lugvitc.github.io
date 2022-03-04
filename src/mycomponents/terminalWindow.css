@@ -3,7 +3,7 @@
     background-color: #212529; /* headerFooterBlack */
     margin: 5vh 5vw;
     padding: 5px 0px 0px 0px;
-    width: 800px;
+    width: 50vw;
     height: fit-content
 }
 
@@ -34,4 +34,11 @@
     border-radius: 11px;
     height: 11px;
     width: 11px;
+}
+
+@media (max-width: 800px) {
+    .terminal-container {
+        width: 90vw;
+        margin: 5vh 1vw;
+    }
 }
