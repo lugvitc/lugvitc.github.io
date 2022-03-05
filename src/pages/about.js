@@ -15,7 +15,7 @@ export default function About({links}) {
             <br/>
             <TerminalPrompt> ls ./links/ </TerminalPrompt>
             {links.map(({link, name}, index) =>
-                <LugLink link = {link} name = {name}/>
+                <LugLink key = {index} link = {link} name = {name}/>
             )}
         </TerminalWindow>
     );

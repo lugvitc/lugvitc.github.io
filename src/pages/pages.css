@@ -2,7 +2,8 @@
 
 .layout-body {
     background-color: var(--nord0);
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     width: 100vw;
 }
 
