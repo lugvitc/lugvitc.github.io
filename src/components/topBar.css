@@ -1,6 +1,8 @@
+@import '../values/colors.css';
+
 .top-bar {
-    background-color: #212529 /* OtherColors.headerFooterBlack */;
-    color: #D8DEE9 /* NordTheme.nord4 */;
+    background-color: var(--header-footer-black);
+    color: var(--nord4);
     display: flex;
     font-size: small
 }
@@ -10,29 +12,29 @@
 }
 
 .top-bar-element {
-    border-color: #434C5E /* NordTheme.nord2 */;
+    border-color: var(--nord2);
     border-style: solid;
     height: auto;
     text-decoration: none;
-    color: #D8DEE9 /* NordTheme.nord4 */
+    color: var(--nord4);
 }
 
 .top-bar-element:hover {
-    color: #5E81AC /* nord10 */;
+    color: var(--nord10);
     background-color: #2E3440;
 }
 
 .top-bar-element-active {
-    background-color: #2E3440 /* NordTheme.nord0 */;
+    background-color: var(--nord0);
     border-radius: 5px 5px 0px 0px;
     padding: 0px 5px;
     margin: 5px 5px 0px 5px;
     border-width: 2px 2px 0px 2px;
-    color: #5E81AC /* nord10 */;
+    color: var(--nord10);
 }
 
 .top-bar-element-inactive {
-    background-color: #3B4252 /* NordTheme.nord1 */;
+    background-color: var(--nord1);
     border-radius:  5px;
     padding: 0px 5px;
     margin: 5px 5px;
@@ -50,11 +52,11 @@
     }
 
     .top-bar-element-active {
-        background-color: #2E3440 /* NordTheme.nord0 */;
+        background-color: var(--nord0);
         border-radius:  5px;
         padding: 0px 5px;
         margin: 5px 5px;
         border-width: 2px;
-        color: #5E81AC /* nord10 */;
+        color: var(--nord10);
     }
 }

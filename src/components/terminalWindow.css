@@ -1,8 +1,8 @@
+@import '../values/colors.css';
+
 .terminal-container {
     border-radius: 10px;
-    background-color: #212529; /* headerFooterBlack */
-    /* background-color: #3B4252; */ /* NordTheme.nord1 */ 
-    /* if the terminal container and contents have the same colour, consider refactoring the element a bit (reduce the top-padding a bit) */
+    background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
     width: 50vw;
@@ -10,8 +10,8 @@
 }
 
 .terminal-contents {
-    background-color: #3B4252/* NordTheme.nord1 */;
-    color: #D8DEE9/* NordTheme.nord4 */;
+    background-color: var(--nord1);
+    color: var(--nord4);
     font-family: consolas;
     border-radius: 0px 0px 10px 10px;
     padding: 30px;

@@ -2,11 +2,6 @@
 - Landing page for the club
 
 # TODO
-- nord theme css:
-    - make a css file 'src/values/colors.css' with all the colours in 'src/values/colors.js'
-    - this file should be imported in any css file which needs the colours
-    - no colour in any css file other than colors.css should be a direct hex code (or any other format)
-    - any colour used should be imported from 'colors.css', in order to easily change them in the future
 - topBar:
     - gnome-like topBar
     - the nav links simulate open windows in gnome

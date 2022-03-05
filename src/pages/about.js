@@ -2,7 +2,6 @@ import React from 'react';
 import LugLink from '../components/lugLink';
 import TerminalPrompt from '../components/terminalPrompt';
 import TerminalWindow from '../components/terminalWindow';
-import { NordTheme } from '../values/colors';
 
 export default function About({links}) {
     return (

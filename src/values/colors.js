@@ -1,4 +1,7 @@
-export const NordTheme = {
+export const Colors = {
+
+    headerFooterBlack: "#212529",
+
     // checkout https://www.nordtheme.com/docs/colors-and-palettes for more details
     // Polar Night: dark bg colours
     nord0: "#2E3440",
@@ -24,9 +27,4 @@ export const NordTheme = {
     nord13: "#EBCB8B", // yellow
     nord14: "#A3BE8C", // green
     nord15: "#B48EAD" // purple
-}
-
-export const OtherColors = {
-    neonGreen : "#1FFF0F",
-    headerFooterBlack: "#212529"
 }
