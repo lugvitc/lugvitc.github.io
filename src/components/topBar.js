@@ -8,8 +8,8 @@ export default function TopBar({navs}) {
 
     // if these variables are set to be regularly updated, implement them using hooks
     // until then, constants are fine
-    const time = "1:35";
-    const date = new Date().toISOString().slice(0, 10);
+    const date = "Sun 6 March";
+    const time = "2:08 AM"
     // const [time, setTime] = useState("4:20pm");
     // const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
 
@@ -33,8 +33,11 @@ export default function TopBar({navs}) {
                     </Link>
                 )}
             </div>
-            <div className = "top-bar-text"> {time} </div>
-            <div className = "top-bar-text"> {date} </div>
+            <div
+                className = "top-bar-element-non-clickable"
+            >
+                {`${time}, ${date}`}
+            </div>
         </div>
     );
 }

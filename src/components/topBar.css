@@ -4,11 +4,25 @@
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
-    font-size: small
+    justify-content: space-between;
+    font-size: small;
 }
 
 .top-bar-element-container {
     display: flex;
+}
+
+.top-bar-element-non-clickable {
+    border-color: var(--nord2);
+    border-style: solid;
+    height: auto;
+    text-decoration: none;
+    color: var(--nord4);
+    background-color: var(--nord1);
+    border-radius:  5px;
+    padding: 0px 5px;
+    margin: 5px;
+    border-width: 2px;
 }
 
 .top-bar-element {
@@ -31,6 +45,7 @@
     margin: 5px 5px 0px 5px;
     border-width: 2px 2px 0px 2px;
     color: var(--nord10);
+    cursor: default;
 }
 
 .top-bar-element-inactive {
@@ -41,9 +56,8 @@
     border-width: 2px;
 }
 
-.top-bar-text {
-    margin-left: auto;
-    margin: 5px 0px;
+.top-bar-right-side {
+    display: flex;
 }
 
 @media (max-width: 500px) {
