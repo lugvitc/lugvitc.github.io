@@ -12,10 +12,7 @@ export default function App() {
         {title: "blog", link: "/blog"},
         {title: "about", link: "/about"}
     ];
-
-    // these links are being passed to both the about page and the dock in the layout as props
-    // if they have separate sets of links in the future, put the links needed for the dock in it's page
-    // and put the links needed for the about page in it's page
+    
     const links = [
         {
             link: "https://www.linkedin.com/company/lugvitc/",
