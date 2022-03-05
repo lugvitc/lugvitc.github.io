@@ -33,7 +33,7 @@ export default function App() {
     return (
         <BrowserRouter>
         <Routes>
-            <Route path = "/" element = {<Layout navs = {navs}/>}>
+            <Route path = "/" element = {<Layout navs = {navs} dockItems={ links }/>}>
                 <Route index element = {<Home/>}/>
                 <Route path = "events" element = {<TerminalWindow>coming soon!</TerminalWindow>}/>
                 <Route path = "projects" element = {<TerminalWindow>coming soon!</TerminalWindow>}/>
