@@ -33,11 +33,7 @@ export default function TopBar({navs}) {
                     </Link>
                 )}
             </div>
-            <div
-                className = "top-bar-element-non-clickable"
-            >
-                {`${time}, ${date}`}
-            </div>
+            <div className = "top-bar-element-non-clickable">{`${time}, ${date}`}</div>
         </div>
     );
 }
