@@ -12,15 +12,33 @@ export default function App() {
         {title: "blog", link: "/blog"},
         {title: "about", link: "/about"}
     ];
+
+    // these links are being passed to both the about page and the dock in the layout as props
+    // if they have separate sets of links in the future, put the links needed for the dock in it's page
+    // and put the links needed for the about page in it's page
+    const links = [
+        {
+            link: "https://www.linkedin.com/company/lugvitc/",
+            name: "linkedIn"
+        },
+        {
+            link: "https://www.instagram.com/lugvitc/",
+            name: "instagram"
+        },
+        {
+            link: "https://github.com/lugvitc",
+            name: "github"
+        }
+    ];
     return (
         <BrowserRouter>
         <Routes>
             <Route path = "/" element = {<Layout navs = {navs}/>}>
                 <Route index element = {<Home/>}/>
-                <Route path = "events" element = {<TerminalWindow>events</TerminalWindow>}/>
-                <Route path = "projects" element = {<TerminalWindow>projects</TerminalWindow>}/>
-                <Route path = "blog" element = {<TerminalWindow>blog</TerminalWindow>}/>
-                <Route path = "about" element = {<About/>}/>
+                <Route path = "events" element = {<TerminalWindow>coming soon!</TerminalWindow>}/>
+                <Route path = "projects" element = {<TerminalWindow>coming soon!</TerminalWindow>}/>
+                <Route path = "blog" element = {<TerminalWindow>coming soon!</TerminalWindow>}/>
+                <Route path = "about" element = {<About links = {links}/>}/>
             </Route>
         </Routes>
         </BrowserRouter>

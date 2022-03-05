@@ -1,0 +1,16 @@
+/*
+    the colour for the links is a bit dark maybe change it
+*/
+
+.lug-link,
+.lug-link:visited {
+    text-decoration: none;
+    color: #5E81AC; /* nord10 */
+}
+
+.lug-link:hover,
+.lug-link:active,
+.lug-link:visited:hover,
+.lug-link:visited:active {
+    color: #88C0D0 /* nord18 */
+}

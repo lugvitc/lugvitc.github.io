@@ -1,23 +1,10 @@
 import React from 'react';
+import LugLink from '../components/lugLink';
 import TerminalPrompt from '../components/terminalPrompt';
 import TerminalWindow from '../components/terminalWindow';
 import { NordTheme } from '../values/colors';
 
-export default function About() {
-    const links = [
-        {
-            link: "https://www.linkedin.com/company/lugvitc/",
-            name: "linkedIn"
-        },
-        {
-            link: "https://www.instagram.com/lugvitc/",
-            name: "instagram"
-        },
-        {
-            link: "https://github.com/lugvitc",
-            name: "github"
-        }
-    ];
+export default function About({links}) {
     return (
         <TerminalWindow>
             <TerminalPrompt> cat about.txt </TerminalPrompt>
@@ -29,14 +16,7 @@ export default function About() {
             <br/>
             <TerminalPrompt> ls ./links/ </TerminalPrompt>
             {links.map(({link, name}, index) =>
-                <a
-                    style = {{textDecoration: "none", color: NordTheme.nord10}}
-                    href = {link}
-                    target = "_blank"
-                    rel = "noopener noreferrer"
-                >
-                    {name} <br/>
-                </a>
+                <LugLink link = {link} name = {name}/>
             )}
         </TerminalWindow>
     );

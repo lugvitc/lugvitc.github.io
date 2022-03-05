@@ -32,12 +32,6 @@
     width: 15px;
 }
 
-.terminal-dot:hover {
-    border-radius: 11px;
-    height: 11px;
-    width: 11px;
-}
-
 @media (max-width: 900px) {
     .terminal-container {
         width: 96vw;
