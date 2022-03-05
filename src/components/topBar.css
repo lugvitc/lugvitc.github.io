@@ -21,7 +21,7 @@
 
 .top-bar-element:hover {
     color: var(--nord10);
-    background-color: #2E3440;
+    background-color: var(--nord0);
 }
 
 .top-bar-element-active {

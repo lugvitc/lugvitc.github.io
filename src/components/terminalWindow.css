@@ -12,7 +12,7 @@
 .terminal-contents {
     background-color: var(--nord1);
     color: var(--nord4);
-    font-family: consolas;
+    font-family: consolas, 'Courier New', Courier, monospace;
     border-radius: 0px 0px 10px 10px;
     padding: 30px;
     margin: 0px;
