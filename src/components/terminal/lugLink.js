@@ -1,10 +1,10 @@
 import React from 'react';
-import './lugLink.css';
+import './terminal.css';
 
 export default function LugLink({link, name}) {
     return (
         <a
-            className = "lug-link"
+            className = "terminal-text-link"
             href = {link}
             target = "_blank"
             rel = "noopener noreferrer"

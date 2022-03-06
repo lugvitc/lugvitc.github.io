@@ -1,6 +1,6 @@
 import React from 'react';
-import { Colors } from '../values/colors';
-import './terminalWindow.css';
+import { Colors } from '../../values/colors.js';
+import './terminal.css';
 
 export default function TerminalWindow({children}) {
     return (
@@ -10,7 +10,7 @@ export default function TerminalWindow({children}) {
                 <div className = "terminal-dot" style = {{backgroundColor: Colors.nord13}}/>
                 <div className = "terminal-dot" style = {{backgroundColor: Colors.nord14}}/>
             </div>
-            <div className = "terminal-contents">
+            <div className = "terminal-contents terminal-text">
                 {children}
             </div>
         </div>

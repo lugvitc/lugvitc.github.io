@@ -1,7 +1,7 @@
 import React from 'react';
-import LugLink from '../components/lugLink';
-import TerminalPrompt from '../components/terminalPrompt';
-import TerminalWindow from '../components/terminalWindow';
+import LugLink from '../components/terminal/lugLink';
+import TerminalPrompt from '../components/terminal/terminalPrompt';
+import TerminalWindow from '../components/terminal/terminalWindow';
 
 export default function About({links}) {
     return (

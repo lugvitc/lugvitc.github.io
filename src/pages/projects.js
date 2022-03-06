@@ -1,6 +1,6 @@
 import React from 'react';
-import TerminalPrompt from '../components/terminalPrompt';
-import TerminalWindow from '../components/terminalWindow';
+import TerminalPrompt from '../components/terminal/terminalPrompt';
+import TerminalWindow from '../components/terminal/terminalWindow';
 
 export default function Projects() {
     return (

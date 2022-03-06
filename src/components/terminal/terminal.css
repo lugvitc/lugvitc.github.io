@@ -1,0 +1,90 @@
+@import '../../values/colors.css';
+
+
+/* TEXT */
+.terminal-text {
+    font-family: consolas, 'Courier New', Courier, monospace;
+    color: var(--nord4)
+}
+
+.terminal-text::selection {
+    background-color: var(--nord7);
+    color: var(--nord0);
+}
+
+.terminal-text-link,
+.terminal-text-link:visited {
+    text-decoration: none;
+    color: var(--nord10);
+}
+
+.terminal-text-link::selection,
+.terminal-text-link:visited::selection {
+    color: var(--nord6);
+    background-color: var(--nord7);
+}
+
+br::selection {
+    background-color: transparent;
+}
+
+.terminal-text-link:hover,
+.terminal-text-link:active,
+.terminal-text-link:visited:hover,
+.terminal-text-link:visited:active {
+    color: var(--nord8)
+}
+
+.prompt-user-system {
+    color: var(--nord8);
+}
+
+.prompt-path {
+    color: var(--nord7);
+}
+
+.prompt-command {
+    color: var(--nord13)
+}
+
+/* OTHERS */
+.terminal-container {
+    border-radius: 10px;
+    background-color: var(--header-footer-black);
+    padding: 5px 0px 0px 0px;
+    margin: 5vh 5vw;
+    width: 50vw;
+    height: fit-content
+}
+
+.terminal-contents {
+    background-color: var(--nord1);
+    border-radius: 0px 0px 10px 10px;
+    padding: 30px;
+    margin: 0px;
+    height: 100%;
+    width: 100%
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 5px;
+    margin: 10px 10px;
+}
+
+.terminal-dot {
+    border-radius: 15px;
+    height: 15px;
+    width: 15px;
+}
+
+.terminal-dot:hover {
+    filter: brightness(50%);
+}
+
+@media (max-width: 900px) {
+    .terminal-container {
+        width: 96vw;
+        margin: 5vh 2vw;
+    }
+}

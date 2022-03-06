@@ -1,16 +1,17 @@
 import React from 'react';
-import { Colors } from '../values/colors';
+import { Colors } from '../../values/colors';
+import './terminal.css';
 
 export default function TerminalPrompt({path, children}) {
     return(
         <React.Fragment>
-            <span style = {{color: Colors.nord8}}>
+            <span className = "terminal-text prompt-user-system">
                 lug@vitc:
             </span>
-            <span style = {{color: Colors.nord7}}>
+            <span className = "terminal-text prompt-path">
                 {path}${" "}
             </span>
-            <span style = {{color: Colors.nord13}}>
+            <span className = "terminal-text prompt-command">
                 {children}
             </span>
             <br/>
