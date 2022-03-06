@@ -3,7 +3,25 @@ import LugLink from '../components/terminal/lugLink';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
 
-export default function About({links}) {
+export default function About() {
+    const links = [
+        {
+            link: "https://www.linkedin.com/company/lugvitc/",
+            name: "linkedIn"
+        },
+        {
+            link: "https://www.instagram.com/lugvitc/",
+            name: "instagram"
+        },
+        {
+            link: "https://github.com/lugvitc",
+            name: "github"
+        },
+        {
+            link: "https://discord.com/channels/949736566899744778/949736566899744781",
+            name: "discord"
+        }
+    ];
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~">cd about</TerminalPrompt>
