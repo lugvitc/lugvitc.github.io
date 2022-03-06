@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.8461ccbf.css",
-    "main.js": "/static/js/main.0ba6502f.js",
+    "main.css": "/static/css/main.438816ae.css",
+    "main.js": "/static/js/main.8e27ceb6.js",
+    "static/media/Instagram.svg": "/static/media/Instagram.56a2248c3675660c73a608044f8c9e7d.svg",
+    "static/media/Discord.svg": "/static/media/Discord.6c0ca1aa5bb623843bcc94ad2abd543c.svg",
+    "static/media/Github.svg": "/static/media/Github.d639d77c335f6d0ddb4f49b23046c3c8.svg",
+    "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.8461ccbf.css.map": "/static/css/main.8461ccbf.css.map",
-    "main.0ba6502f.js.map": "/static/js/main.0ba6502f.js.map"
+    "main.438816ae.css.map": "/static/css/main.438816ae.css.map",
+    "main.8e27ceb6.js.map": "/static/js/main.8e27ceb6.js.map"
   },
   "entrypoints": [
-    "static/css/main.8461ccbf.css",
-    "static/js/main.0ba6502f.js"
+    "static/css/main.438816ae.css",
+    "static/js/main.8e27ceb6.js"
   ]
 }
