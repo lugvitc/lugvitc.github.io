@@ -1,4 +1,3 @@
-import TerminalWindow from './components/terminal/terminalWindow';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Layout from './pages/layout';

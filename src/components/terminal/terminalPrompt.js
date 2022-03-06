@@ -1,5 +1,4 @@
 import React from 'react';
-import { Colors } from '../../values/colors';
 import './terminal.css';
 
 export default function TerminalPrompt({path, children}) {

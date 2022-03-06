@@ -3,7 +3,7 @@ import './dock.css';
 
 export default function Dock({items}) {
     return (
-    <div class = "dock">
+    <div className = "dock">
         {items.map(({link, icon}, index) =>
             <a
                 key = {index}

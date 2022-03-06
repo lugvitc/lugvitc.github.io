@@ -58,11 +58,7 @@
     border-width: 2px;
 }
 
-.top-bar-right-side {
-    display: flex;
-}
-
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .top-bar-element-container {
         flex-direction: column;
     }
