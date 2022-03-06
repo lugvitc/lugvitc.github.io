@@ -11,8 +11,19 @@ import LugLink from './lugLink';
 export default function Dock({items}) {
     return (
     <div class = "dock">
-        {items.map(({link, name}, index) =>
-            <LugLink className = "dock-item" link = {link} name = {name}/>
+        {items.map(({link, icon}, index) =>
+            <LugLink
+                key = {index}
+                className = "dock-item"
+                link = {link}
+                name = {
+                    <img
+                        alt = "" 
+                        className = "dock-icon"
+                        src = {icon}
+                    />
+                }
+            />
         )}
     </div>
     );
