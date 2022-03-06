@@ -10,3 +10,10 @@
 .layout-body-inner {
     display: flex;
 }
+
+@media only screen and (max-width: 800px) {
+    .layout-body-inner {
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+    }
+}

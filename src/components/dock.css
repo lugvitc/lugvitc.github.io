@@ -1,0 +1,33 @@
+.dock {
+    border-radius: 0px 5px 5px 0px;
+    height: 90%;
+    background-color: #3B4252 /* NordTheme.nord1 */;
+    padding: 10px;
+    margin: 5vh 0vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dock-icon {
+    /* display: block; */
+    width: 30px;
+    height: 30px;
+}
+
+.dock-icon:hover {
+    transform: translateX(5px);
+}
+
+@media only screen and (max-width: 800px) {
+    .dock {
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 5px 5px 0px 0px;
+        margin: 0px 10px 0px 10px;
+    }
+    .dock-icon:hover {
+        transform: translateY(-5px);
+    }
+}
