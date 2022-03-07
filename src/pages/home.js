@@ -1,12 +1,23 @@
 import {Colors} from '../values/colors';
 import TerminalWindow from '../components/terminalWindow';
 import TerminalPrompt from '../components/terminalPrompt';
-
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
     return (
         <TerminalWindow>
-            <TerminalPrompt path = "~"> sudo lug </TerminalPrompt>
+            <TerminalPrompt path = "~"> 
+	    <Typewriter
+		options = {{
+			delay: 200,
+			cursor: '█',
+		}}
+		onInit = {(write) => {
+			write.typeString(" sudo lug ")
+			.pauseFor(2000)
+			.start();
+		}}
+		/></TerminalPrompt>
             [sudo] password for lugvitc: <span style = {{color: Colors.nord11}}> **********</span><br/>
             <span style = {{color: Colors.nord14}}>access granted...</span><br/>
 
