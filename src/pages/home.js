@@ -1,23 +1,20 @@
 import {Colors} from '../values/colors';
 import TerminalWindow from '../components/terminalWindow';
 import TerminalPrompt from '../components/terminalPrompt';
-import Typewriter from 'typewriter-effect';
+import '../components/typeWriter.css';
+import {useEffect, useState} from 'react';
+
+const firstText = ' sudo lug'
 
 export default function Home() {
+	const [typingText, setTypingText] = useState('')
+	useEffect(() => {
+		const timeOut = setTimeout(() => {setTypingText(firstText.slice(0, typingText.length + 1 ))}, 250)
+		return () => clearTimeout(timeOut)
+	}, [typingText])
     return (
         <TerminalWindow>
-            <TerminalPrompt path = "~"> 
-	    <Typewriter
-		options = {{
-			delay: 200,
-			cursor: '█',
-		}}
-		onInit = {(write) => {
-			write.typeString(" sudo lug ")
-			.pauseFor(2000)
-			.start();
-		}}
-		/></TerminalPrompt>
+            <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span></TerminalPrompt>
             [sudo] password for lugvitc: <span style = {{color: Colors.nord11}}> **********</span><br/>
             <span style = {{color: Colors.nord14}}>access granted...</span><br/>
 
