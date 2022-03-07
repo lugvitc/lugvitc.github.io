@@ -33,9 +33,6 @@
 
 .top-bar-element:hover {
     transform: translateY(5px);
-}
-
-.top-bar-element:hover {
     color: var(--nord10);
     background-color: var(--nord0);
 }
@@ -63,7 +60,16 @@
         flex-direction: column;
     }
 
+    .top-bar-element:hover {
+        transform: translateX(10px);
+    }
+
+    /* .top-bar-element-active:hover {
+        transform: translateX(0px);
+    } */
+
     .top-bar-element-active {
+        transform: translateY(0);
         background-color: var(--nord0);
         border-radius:  5px;
         padding: 0px 5px;
