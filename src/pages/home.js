@@ -2,20 +2,18 @@ import {Colors} from '../values/colors';
 import TerminalWindow from '../components/terminalWindow';
 import TerminalPrompt from '../components/terminalPrompt';
 import '../components/typeWriter.css';
-import {useEffect, useState} from 'react';
+import {useTypeAnimation} from '../components/typeWriter.js';
 
-const firstText = ' sudo lug'
+const firstText = 'sudo lug'
+const secondText = '**********'
 
 export default function Home() {
-	const [typingText, setTypingText] = useState('')
-	useEffect(() => {
-		const timeOut = setTimeout(() => {setTypingText(firstText.slice(0, typingText.length + 1 ))}, 250)
-		return () => clearTimeout(timeOut)
-	}, [typingText])
+	const typingText = useTypeAnimation(firstText)
+	const typingSecondText = useTypeAnimation(secondText)
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span></TerminalPrompt>
-            [sudo] password for lugvitc: <span style = {{color: Colors.nord11}}> **********</span><br/>
+            [sudo] password for lugvitc: <span style = {{color: Colors.nord11}} className="typeWriteFirstText"> {typingSecondText}</span><br/>
             <span style = {{color: Colors.nord14}}>access granted...</span><br/>
 
             <h1>Linux Club VIT, Chennai</h1>
