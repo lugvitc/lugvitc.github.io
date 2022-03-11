@@ -34,7 +34,7 @@ export default function About() {
             <br/>
             <TerminalPrompt path = "~/about"> cat links.txt </TerminalPrompt>
             {links.map(({link, name}, index) =>
-                <LugLink key = {index} link = {link} name = {name}/>
+                <LugLink key = {index} link = {link}>{name}</LugLink>
             )}
         </TerminalWindow>
     );

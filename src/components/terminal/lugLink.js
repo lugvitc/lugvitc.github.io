@@ -1,7 +1,7 @@
 import React from 'react';
 import './terminal.css';
 
-export default function LugLink({link, name}) {
+export default function LugLink({link, children}) {
     return (
         <a
             className = "terminal-text-link"
@@ -9,7 +9,7 @@ export default function LugLink({link, name}) {
             target = "_blank"
             rel = "noopener noreferrer"
         >
-            {name} <br/>
+            {children} <br/>
         </a>
     );
 }

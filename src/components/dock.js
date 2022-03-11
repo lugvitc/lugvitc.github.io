@@ -1,23 +1,18 @@
 import React from 'react';
 import './dock.css';
+import LugLink from './terminal/lugLink';
 
 export default function Dock({items}) {
     return (
     <div className = "dock">
         {items.map(({link, icon}, index) =>
-            <a
-                key = {index}
-                className = "dock-item"
-                href = {link}
-                target = "_blank"
-                rel = "noopener noreferrer"
-            >
+            <LugLink link = {link}>
                 <img
                     alt = "" 
                     className = "dock-icon"
                     src = {icon}
                 />
-            </a>
+            </LugLink>
         )}
     </div>
     );

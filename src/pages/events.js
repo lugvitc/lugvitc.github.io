@@ -8,8 +8,9 @@ export default function Events() {
         <TerminalWindow>
             <TerminalPrompt path = "~">cd events</TerminalPrompt>
             <TerminalPrompt path = "~/blog">cat events.txt</TerminalPrompt>
-            <h1><LugLink link = "https://adrenaline.androidclubvit.com/" name = "Adrenaline"/></h1>
+            <h1>01: <LugLink link = "https://adrenaline.androidclubvit.com/">Adrenaline</LugLink></h1>
             Adrenaline is a one-day event for participants to show-off their open source skills by solving problems of a given domain.
+            ---
         </TerminalWindow>
     );
 }
