@@ -2,15 +2,22 @@ import React from 'react';
 import LugLink from '../components/terminal/lugLink';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
+import { eventsDetails } from '../content/eventsDetails';
 
 export default function Events() {
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~">cd events</TerminalPrompt>
             <TerminalPrompt path = "~/blog">cat events.txt</TerminalPrompt>
-            <h1>01: <LugLink link = "https://adrenaline.androidclubvit.com/">Adrenaline</LugLink></h1>
-            Adrenaline is a one-day event for participants to show-off their open source skills by solving problems of a given domain.
-            ---
+            {eventsDetails.map(({number, name, link, details}, index) =>
+                <span key = {index}>
+                    <h1>
+                        {number}: <LugLink link = {link}>{name}</LugLink>
+                    </h1>
+                    {details}
+                    ---
+                </span>
+            )}
         </TerminalWindow>
     );
 }
