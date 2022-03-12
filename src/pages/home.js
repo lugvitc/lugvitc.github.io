@@ -8,18 +8,14 @@ export default function Home() {
         <TerminalWindow>
             <TerminalPrompt path = "~"> sudo lug </TerminalPrompt>
             [sudo] password for lugvitc: <span className = "terminal-text" style = {{color: Colors.nord11}}> **********</span><br/>
-            <span className = "terminal-text" style = {{color: Colors.nord14}}>access granted...</span><br/>
 
             <h1 className = "terminal-text">Linux Club VIT, Chennai</h1>
-            Welcome to the home of all things Linux for VIT Chennai.<br/>
-            Stay tuned to this page as we are going to have a whole host of exciting stuff for every enthusiast of the Linux and FOSS world!<br/>
-            
-            <span className = "terminal-text" style = {{color: Colors.nord11}}>L</span>
-            <span className = "terminal-text" style = {{color: Colors.nord12}}>I</span>
-            <span className = "terminal-text" style = {{color: Colors.nord13}}>N</span>
-            <span className = "terminal-text" style = {{color: Colors.nord14}}>U</span>
-            <span className = "terminal-text" style = {{color: Colors.nord10}}>X</span>
-            <span className = "terminal-text" style = {{color: Colors.nord15}}>!</span>
+            The 'Linux Club' of VIT, Chennai was created to Spread the awareness of Free and Open Source Software (FOSS) through Linux flavours.
+            It believes in developing collaborative open-source projects.<br/>
+            It encourages users to understand the systems and softwares they use on a fundamental level. Which can be achieved only using non-proprietary tools.<br/>
+            It aims to get members to contribute to FOSS, make them more industry ready and to promote GNU/Linux in General.<br/>
+
+            <br/>
         </TerminalWindow>
     );
 }

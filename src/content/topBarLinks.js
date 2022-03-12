@@ -1,12 +1,12 @@
 export const topBarLinks = [ // make this a 'useState' thing if needed in the future
 {
-    title: "home",
+    title: "Home",
     link: "/"
 },
 {
-    title: "events",
+    title: "Events",
     link: "/events"
-},
+}/* ,
 {
     title: "projects",
     link: "/projects"
@@ -18,5 +18,5 @@ export const topBarLinks = [ // make this a 'useState' thing if needed in the fu
 {
     title: "about",
     link: "/about"
-}
+} */
 ];
