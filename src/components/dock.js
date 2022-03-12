@@ -6,7 +6,7 @@ export default function Dock({items}) {
     return (
     <div className = "dock">
         {items.map(({link, icon}, index) =>
-            <LugLink link = {link}>
+            <LugLink key = {index} link = {link}>
                 <img
                     alt = "" 
                     className = "dock-icon"

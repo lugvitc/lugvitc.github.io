@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Router } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Layout from './pages/layout';
 import About from './pages/about';
@@ -11,7 +11,7 @@ import { topBarLinks } from './content/topBarLinks';
 
 export default function App() {
     return (
-        <HashRouter basename = {process.env.PUBLIC_URl}>
+        <HashRouter basename = {process.env.PUBLIC_URL}>
         <Routes>
             <Route path = "/" element = {<Layout navs = {topBarLinks} dockItems={ dockItems }/>}>
                 <Route index element = {<Home/>}/>

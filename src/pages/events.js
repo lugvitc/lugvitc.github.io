@@ -14,7 +14,7 @@ export default function Events() {
                     <h1>
                         {number}: <LugLink link = {link}>{name}</LugLink>
                     </h1>
-                    {details}
+                    {details} <br/>
                     ---
                 </span>
             )}

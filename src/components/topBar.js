@@ -8,7 +8,7 @@ export default function TopBar({navs}) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const topBarElementClass = (activeIndex, index) =>
-        "top-bar-element " + (
+        "top-bar-element-clickable " + (
             activeIndex === index
                 ? "top-bar-element-active"
                 : "top-bar-element-inactive"
@@ -16,7 +16,7 @@ export default function TopBar({navs}) {
 
     return (
         <div className = "top-bar">
-            <div className = "top-bar-element-container">
+            <div className = "navlinks">
                 {navs.map((nav, index) =>
                     <Link
                         key = {index}

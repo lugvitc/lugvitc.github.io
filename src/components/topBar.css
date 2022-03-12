@@ -8,7 +8,7 @@
     font-size: small;
 }
 
-.top-bar-element-container {
+.navlinks {
     display: flex;
 }
 
@@ -24,9 +24,7 @@
     cursor: default;
 }
 
-.top-bar-element {
-    border-color: var(--nord2);
-    height: auto;
+.top-bar-element-clickable {
     text-decoration: none;
     color: var(--nord4);
 }
