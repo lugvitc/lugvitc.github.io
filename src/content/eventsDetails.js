@@ -1,7 +1,7 @@
 import React from "react";
-import adreanlinePic1 from "./../images/adrenaline/speaker.jpg";
-import adreanlinePic2 from "./../images/adrenaline/winner-one.jpg";
-import adreanlinePic3 from "./../images/adrenaline/winner-two.jpg";
+import speaker from "./../images/adrenaline/speaker.jpg";
+import winnerOne from "./../images/adrenaline/winner-one.jpg";
+import winnerTwo from "./../images/adrenaline/winner-two.jpg";
 
 const imgStyle = {
     width: "500px",
@@ -20,7 +20,7 @@ export const eventsDetails = [
                 to show-off their familiarity with open-source technologies. 
                 Participants gathered to demonstrate their projects to an industry expert.<br/><br/>
                 
-                <img style = {imgStyle} src = {adreanlinePic1} /><br/>
+                <img style = {imgStyle} src = {speaker} /><br/><br/>
                 
                 A total of x participants took part with 1-3 pariticipants in one team. 
                 They used FOSS (free and open-source software) resources of a number of fields 
@@ -29,20 +29,20 @@ export const eventsDetails = [
                 
                 <ol>
                     <li>
-                        a, b and c: topic<br/><br/>
+                        <em>Inclusion of Persons with Disabilities in the Technological World</em> by V Maheysh(19BCE1120), Suriyakrishnan S (19BCE1050) and Mithun P (19BPS1092)<br/><br/>
                         <img
                             style = {imgStyle}
-                            src = {adreanlinePic2}
+                            src = {winnerOne}
                         /><br/><br/>
-                        details <br/>
-                    </li>
+                        They created an integrated system to accomodate persons with disabilites in the tech world by using open-source machine learning libraries. They targeted a wide range of disabilities to make the system as inclusive as possible. <br/>
+                    </li> <br/>
                     <li>
-                        a, b and c: topic<br/><br/>
+                        <em>Decentralised Cloud Storage System Using Blockchain</em> by Divyashree S (19BCE1689), Aravinda B (19BCE1190) and Amudhini P K (19BCE1492)<br/><br/>
                         <img
                             style = {imgStyle}
-                            src = {adreanlinePic3}
+                            src = {winnerTwo}
                         /><br/><br/>
-                        details <br/>
+                        They created a system of encrypted storage by utilising popular blockchain technologies. <br/>
                     </li>
                 </ol>
                 The event was a success with the students learning about the importance of FOSS 
