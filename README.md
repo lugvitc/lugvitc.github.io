@@ -10,6 +10,7 @@
     - button for quick links
     - responsive version (might have to ditch ubuntu-theming for phone sizes)
     - set `activeIndex` according to the current URL
+    - Use semantic HTML tags instead of divs
 - dock:
     - an gnome-like dock
     - with links to our various social media handles (and other quick links)
