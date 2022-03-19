@@ -12,9 +12,9 @@ export default function Events() {
             {eventsDetails.map(({number, name, link, details, id}, index) =>
                 <section key = {index} id = {id}>
                     <h1>
-                        {number}: {name}
+                        {number}: <LugLink link = {link}>{name}</LugLink>
                     </h1>
-                    {details}
+                    <p>{details}</p>
                 </section>
             )}
         </TerminalWindow>
