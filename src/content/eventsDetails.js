@@ -22,9 +22,9 @@ export const eventsDetails = [
                 
                 <img style = {imgStyle} src = {speaker} /><br/><br/>
                 
-                A total of x participants took part with 1-3 pariticipants in one team. 
+                A total of 20 participants took part with 1-3 pariticipants in one team. 
                 They used FOSS (free and open-source software) resources of a number of fields 
-                including x, y, z, a, b, c, and w.<br/><br/>
+                including computer vision, web scraping, web automation and blockchain technologies.<br/><br/>
                 The two winning teams were were:<br/>
                 
                 <ol>
