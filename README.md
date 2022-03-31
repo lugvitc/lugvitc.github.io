@@ -2,31 +2,16 @@
 - Landing page for the club
 
 # TODO
-- topBar:
-    - gnome-like topBar
-    - the nav links simulate open windows in gnome
-    - proper placement of date/time
-    - shutdown button
-    - button for quick links
-    - responsive version (might have to ditch ubuntu-theming for phone sizes)
-    - set `activeIndex` according to the current URL
-    - Use semantic HTML tags instead of divs
-- dock:
-    - an gnome-like dock
-    - with links to our various social media handles (and other quick links)
-    - the links should be icons (which invert/change colour on hover to look nice)
-    - the dock will always be visible (like the topBar) so it should look good
-- Responsive design:
-    - desktop sizes: the topBar at the top, a terminal window in the body, the dock to the left, idk what to the right
-    - phone sizes: the topBar at the top (with a hamburger menu for the nav links), a terminal window in the middle, the dock at the bottom (like the macOs dock)
+- [x] active navlink should be set according to the current URL
+- [ ] proper responsive design for the top bar (idk what to do)
+- [ ] footer (should go below the dock(kinda merge into it) for small screens)
+- [ ] header (a proper display of LUG's name in the header (above the topBar or in it, idk)
 
 # Guidelines:
 - push major changes through a separate branch (or fork)
 - be a bit descriptive in commits
 - branching
-    - branch naming:
-        - your name
-        - in the format: add-feature-name
+    - branch naming format: add-<feature-name>
     - we still need to figure out a system to prune uneeded branches after merging
 
 # Getting Started with Create React App
