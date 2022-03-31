@@ -21,8 +21,8 @@ export const dockItems = [
         link: "https://discord.com/channels/949736566899744778/949736566899744781",
         icon: DiscordIcon
     },
-    {
-        link: "https://en.wikipedia.org/wiki/Game",
-        icon: GamesIcon
-    }
+    // {
+    //     link: "https://en.wikipedia.org/wiki/Game",
+    //     icon: GamesIcon
+    // }
 ];

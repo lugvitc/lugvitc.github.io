@@ -20,7 +20,11 @@ export const eventsDetails = [
                 to show-off their familiarity with open-source technologies. 
                 Participants gathered to demonstrate their projects to an industry expert.<br/><br/>
                 
-                <img style = {imgStyle} src = {speaker} /><br/><br/>
+                <img
+                    style = {imgStyle}
+                    src = {speaker}
+                    alt = "The guest speaker enlightening students about FOSS"
+                /><br/><br/>
                 
                 A total of 20 participants took part with 1-3 pariticipants in one team. 
                 They used FOSS (free and open-source software) resources of a number of fields 
@@ -33,6 +37,7 @@ export const eventsDetails = [
                         <img
                             style = {imgStyle}
                             src = {winnerOne}
+                            alt = "V Maheysh, Suriyakrishnan S and Mithun P receiving their prize"
                         /><br/><br/>
                         They created an integrated system to accomodate persons with disabilites in the tech world by using open-source machine learning libraries. They targeted a wide range of disabilities to make the system as inclusive as possible. <br/>
                     </li> <br/>
@@ -41,6 +46,7 @@ export const eventsDetails = [
                         <img
                             style = {imgStyle}
                             src = {winnerTwo}
+                            alt = "Divyashree S, Aravinda B and Amudhini P K receiving their prize"
                         /><br/><br/>
                         They created a system of encrypted storage by utilising popular blockchain technologies. <br/>
                     </li>
