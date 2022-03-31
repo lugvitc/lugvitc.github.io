@@ -1,6 +1,6 @@
 @import '../values/colors.css';
 
-.top-bar {
+#top-bar {
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
@@ -8,8 +8,9 @@
     font-size: small;
 }
 
-.navlinks {
+#top-bar-links {
     display: flex;
+    flex-direction: row;
 }
 
 .top-bar-element-non-clickable {
@@ -24,7 +25,7 @@
     cursor: default;
 }
 
-.top-bar-element-clickable {
+.top-bar-link {
     text-decoration: none;
     color: var(--nord4);
 }
@@ -35,7 +36,7 @@
     background-color: var(--nord0);
 }
 
-.top-bar-element-active {
+.top-bar-link-active {
     transform: translateY(5px);
     background-color: var(--nord0);
     border-radius: 5px 5px 0px 0px;
@@ -44,11 +45,12 @@
     color: var(--nord10);
     cursor: default;
 }
-.top-bar-element-active::after {
+
+.top-bar-link-active::after {
     content: " ▲";
 }
 
-.top-bar-element-inactive {
+.top-bar-link-inactive {
     background-color: var(--nord1);
     border-radius:  5px;
     padding: 0px 5px;
@@ -56,12 +58,12 @@
     border-width: 2px;
 }
 
-.top-bar-element-inactive::after {
+.top-bar-link-inactive::after {
     content: " ▼"
 }
 
-@media only screen and (max-width: 500px) {
-    .top-bar-element-container {
+@media only screen and (max-width: 1024px) {
+    #top-bar-links {
         flex-direction: column;
     }
 
@@ -69,11 +71,7 @@
         transform: translateX(10px);
     }
 
-    /* .top-bar-element-active:hover {
-        transform: translateX(0px);
-    } */
-
-    .top-bar-element-active {
+    .top-bar-link-active {
         transform: translateY(0);
         background-color: var(--nord0);
         border-radius:  5px;

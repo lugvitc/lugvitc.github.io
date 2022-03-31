@@ -12,6 +12,11 @@
     color: var(--nord0);
 }
 
+.terminal-text >* ::selection {
+    background-color: var(--nord7);
+    color: var(--nord0);
+}
+
 .terminal-text-link,
 .terminal-text-link:visited {
     text-decoration: none;
@@ -48,12 +53,12 @@ br::selection {
 }
 
 /* OTHERS */
-.terminal-container {
+main.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
-    width: 50vw;
+    width: 70vw;
     height: fit-content
 }
 
@@ -82,8 +87,8 @@ br::selection {
     filter: brightness(50%);
 }
 
-@media (max-width: 900px) {
-    .terminal-container {
+@media only screen and (max-width: 1024px) {
+    main.terminal {
         width: 96vw;
         margin: 5vh 2vw;
     }

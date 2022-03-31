@@ -4,7 +4,7 @@ import LugLink from './terminal/lugLink';
 
 export default function Dock({items}) {
     return (
-    <div className = "dock">
+    <aside id = "dock">
         {items.map(({link, icon}, index) =>
             <LugLink key = {index} link = {link}>
                 <img
@@ -14,6 +14,6 @@ export default function Dock({items}) {
                 />
             </LugLink>
         )}
-    </div>
+    </aside>
     );
 }

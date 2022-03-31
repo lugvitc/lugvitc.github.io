@@ -10,7 +10,7 @@ export default function Events() {
             <TerminalPrompt path = "~">cd events</TerminalPrompt>
             <TerminalPrompt path = "~/events">cat events.txt</TerminalPrompt>
             {eventsDetails.map(({number, name, link, details, id}, index) =>
-                <section key = {index} id = {id}>
+                <section className = "terminal-text" key = {index} id = {id}>
                     <h1>
                         {number}: <LugLink link = {link}>{name}</LugLink>
                     </h1>

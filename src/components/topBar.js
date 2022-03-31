@@ -1,29 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './topBar.css';
-import TopBarTimeDate from './topBarDate';
+import TopBarTimeDate from './topBarTimeDate';
 
 export default function TopBar({navs}) {
     return (
-        <div className = "top-bar">
-            <div className = "navlinks">
+        <header id = "top-bar">
+            <nav id = "top-bar-links">
                 {navs.map((nav, index) =>
                     <NavLink
                         key = {index}
-                        className = {currentNavLink => "top-bar-element-clickable " + (
+                        className = {currentNavLink => "top-bar-link " + (
                             currentNavLink.isActive
-                                ? "top-bar-element-active"
-                                : "top-bar-element-inactive"
+                                ? "top-bar-link-active"
+                                : "top-bar-link-inactive"
                         )}
                         to = {nav.link}
                     >
                         {nav.title}
                     </NavLink>
                 )}
-            </div>
+            </nav>
             <div className = "top-bar-element-non-clickable">
                 <TopBarTimeDate/>
             </div>
-        </div>
+        </header>
     );
 }

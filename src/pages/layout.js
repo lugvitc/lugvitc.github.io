@@ -6,12 +6,12 @@ import Dock from '../components/dock';
 
 export default function Layout({navs, dockItems}) {
     return(
-        <div className = "layout-body">
+        <React.Fragment>
             <TopBar navs = {navs}/>
-            <div className = "layout-body-inner">
+            <div className = "content">
                 <Dock items = {dockItems}/>
                 <Outlet/>
             </div>
-        </div>
+        </React.Fragment>
     );
 }

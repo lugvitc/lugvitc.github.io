@@ -4,7 +4,7 @@ import winnerOne from "./../images/adrenaline/winner-one.jpg";
 import winnerTwo from "./../images/adrenaline/winner-two.jpg";
 
 const imgStyle = {
-    width: "500px",
+    width: "100%",
     height: "auto"
 }
 
@@ -29,7 +29,7 @@ export const eventsDetails = [
                 A total of 20 participants took part with 1-3 pariticipants in one team. 
                 They used FOSS (free and open-source software) resources of a number of fields 
                 including computer vision, web scraping, web automation and blockchain technologies.<br/><br/>
-                The two winning teams were were:<br/>
+                The two winning teams were:<br/>
                 
                 <ol>
                     <li>

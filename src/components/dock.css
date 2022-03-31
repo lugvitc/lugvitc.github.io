@@ -1,4 +1,4 @@
-.dock {
+aside#dock {
     border-radius: 0px 10px 10px 0px;
     height: 90%;
     background-color: var(--nord1);
@@ -20,8 +20,8 @@
     transform: translateX(10px);
 }
 
-@media only screen and (max-width: 800px) {
-    .dock {
+@media only screen and (max-width: 1024px) {
+    aside#dock {
         justify-content: center;
         flex-direction: row;
         border-radius: 10px 10px 0px 0px;
