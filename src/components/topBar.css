@@ -25,18 +25,18 @@
     cursor: default;
 }
 
-.top-bar-link {
+.top-bar-element-clickable {
     text-decoration: none;
     color: var(--nord4);
 }
 
-.top-bar-element:hover {
+.top-bar-element-clickable:hover {
     transform: translateY(5px);
     color: var(--nord10);
     background-color: var(--nord0);
 }
 
-.top-bar-link-active {
+.top-bar-element-clickable-active {
     transform: translateY(5px);
     background-color: var(--nord0);
     border-radius: 5px 5px 0px 0px;
@@ -46,11 +46,11 @@
     cursor: default;
 }
 
-.top-bar-link-active::after {
+.top-bar-element-clickable-active::after {
     content: " ▲";
 }
 
-.top-bar-link-inactive {
+.top-bar-element-clickable-inactive {
     background-color: var(--nord1);
     border-radius:  5px;
     padding: 0px 5px;
@@ -58,7 +58,7 @@
     border-width: 2px;
 }
 
-.top-bar-link-inactive::after {
+.top-bar-element-clickable-inactive::after {
     content: " ▼"
 }
 
@@ -67,11 +67,11 @@
         flex-direction: column;
     }
 
-    .top-bar-element:hover {
+    .top-bar-element-clickable:hover {
         transform: translateX(10px);
     }
 
-    .top-bar-link-active {
+    .top-bar-element-clickable-active {
         transform: translateY(0);
         background-color: var(--nord0);
         border-radius:  5px;

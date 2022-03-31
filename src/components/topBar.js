@@ -10,10 +10,10 @@ export default function TopBar({navs}) {
                 {navs.map((nav, index) =>
                     <NavLink
                         key = {index}
-                        className = {currentNavLink => "top-bar-link " + (
+                        className = {currentNavLink => "top-bar-element-clickable " + (
                             currentNavLink.isActive
-                                ? "top-bar-link-active"
-                                : "top-bar-link-inactive"
+                                ? "top-bar-element-clickable-active"
+                                : "top-bar-element-clickable-inactive"
                         )}
                         to = {nav.link}
                     >

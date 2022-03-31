@@ -1,5 +1,11 @@
 @import '../../values/colors.css';
 
+/* the text selection is a bit complex,
+br tags are a bit inconsistent rn
+sort that out
+maybe make a new 'terminal-text.css' file
+which deals with just the text
+*/
 
 /* TEXT */
 .terminal-text {
