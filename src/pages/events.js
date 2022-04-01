@@ -7,10 +7,16 @@ import { eventsDetails } from '../content/eventsDetails';
 export default function Events() {
     return (
         <TerminalWindow>
-            <TerminalPrompt path = "~">cd events</TerminalPrompt>
-            <TerminalPrompt path = "~/events">cat events.txt</TerminalPrompt>
+            <section id = "terminal">
+                <TerminalPrompt path = "~">cd events</TerminalPrompt>
+                <TerminalPrompt path = "~/events">cat events.txt</TerminalPrompt>
+            </section>
             {eventsDetails.map(({number, name, link, details, id}, index) =>
-                <section className = "terminal-text" key = {index} id = {id}>
+                <section    
+                    className = "terminal-text"
+                    key = {index}
+                    id = {id}
+                >
                     <h1>
                         {number}: <LugLink link = {link}>{name}</LugLink>
                     </h1>

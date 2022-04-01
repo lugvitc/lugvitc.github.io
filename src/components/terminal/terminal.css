@@ -1,70 +1,10 @@
 @import '../../values/colors.css';
 
-/* the text selection is a bit complex,
-br tags are a bit inconsistent rn
-sort that out
-maybe make a new 'terminal-text.css' file
-which deals with just the text
-*/
-
-/* TEXT */
-.terminal-text {
-    font-family: consolas, 'Courier New', Courier, monospace;
-    color: var(--nord4)
-}
-
-.terminal-text::selection {
-    background-color: var(--nord7);
-    color: var(--nord0);
-}
-
-.terminal-text >* ::selection {
-    background-color: var(--nord7);
-    color: var(--nord0);
-}
-
-.terminal-text-link,
-.terminal-text-link:visited {
-    text-decoration: none;
-    color: var(--nord10);
-}
-
-.terminal-text-link::selection,
-.terminal-text-link:visited::selection {
-    color: var(--nord6);
-    background-color: var(--nord7);
-}
-
-br::selection {
-    background-color: transparent;
-}
-
-.terminal-text-link:hover,
-.terminal-text-link:active,
-.terminal-text-link:visited:hover,
-.terminal-text-link:visited:active {
-    color: var(--nord8)
-}
-
-.prompt-user-system {
-    color: var(--nord8);
-}
-
-.prompt-path {
-    color: var(--nord7);
-}
-
-.prompt-command {
-    color: var(--nord13)
-}
-
-/* OTHERS */
-main.terminal {
+article.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
-    width: 70vw;
     height: fit-content
 }
 
@@ -94,8 +34,7 @@ main.terminal {
 }
 
 @media only screen and (max-width: 1024px) {
-    main.terminal {
-        width: 96vw;
+    article.terminal {
         margin: 5vh 2vw;
     }
 }

@@ -8,6 +8,10 @@ body {
     max-width: calc(100vw - 10px); /* for scrollbar */
 }
 
+hr {
+    background-color: var(--header-footer-black);
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;

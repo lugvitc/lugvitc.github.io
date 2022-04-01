@@ -1,11 +1,11 @@
 @import '../values/colors.css';
 
-.content {
+main#content {
     display: flex;
 }
 
 @media only screen and (max-width: 1024px) {
-    .content {
+    main#content {
         flex-direction: column-reverse;
         margin-bottom: 0px;
     }

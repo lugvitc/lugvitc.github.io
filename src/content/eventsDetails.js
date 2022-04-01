@@ -15,7 +15,7 @@ export const eventsDetails = [
         link: "lugvitc.github.io/#/events#adrenaline",
         id: "adrenaline",
         details:
-            <React.Fragment>
+            <>
                 Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day event for participants 
                 to show-off their familiarity with open-source technologies. 
                 Participants gathered to demonstrate their projects to an industry expert.<br/><br/>
@@ -53,6 +53,7 @@ export const eventsDetails = [
                 </ol>
                 The event was a success with the students learning about the importance of FOSS 
                 and getting to know the numerous avenues where open-source tools are used.
-            </React.Fragment>
+                {/* <hr/> */ /* add lines between events */}
+            </>
     }
 ];
