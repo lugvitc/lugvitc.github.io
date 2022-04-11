@@ -18,7 +18,7 @@ export const dockItems = [
         icon: GithubIcon
     },
     {
-        link: "https://discord.com/channels/949736566899744778/949736566899744781",
+        link: "https://discord.gg/ApShC247me",
         icon: DiscordIcon
     },
     // {
