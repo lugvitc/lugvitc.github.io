@@ -1,6 +1,6 @@
 import {Colors} from '../values/colors';
-import TerminalWindow from '../components/terminalWindow';
-import TerminalPrompt from '../components/terminalPrompt';
+import TerminalWindow from '../components/terminal/terminalWindow';
+import TerminalPrompt from '../components/terminal/terminalPrompt';
 import '../components/typeWriter.css';
 import {TypeAnimation} from '../components/typeWriter.js';
 
