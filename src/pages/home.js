@@ -13,8 +13,10 @@ export default function Home() {
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span></TerminalPrompt>
-            [sudo] password for lugvitc: <span style = {{color: Colors.nord11}} className="typeWriteFirstText"> {typingSecondText}</span><br/>
-            <span style = {{color: Colors.nord14}}>access granted...</span><br/>
+	    { typingText=='sudo lug' ? (
+            <div> [sudo] password for lugvitc: <span style = {{color: Colors.nord11}} className="typeWriteFirstText"> {typingSecondText} </span><br/>
+	     
+	    <span style = {{color: Colors.nord14}}>access granted...</span><br/>
 
             <h1>Linux Club VIT, Chennai</h1>
             Welcome to the home of all things Linux for VIT Chennai.<br/>
@@ -26,6 +28,12 @@ export default function Home() {
             <span style = {{color: Colors.nord14}}>U</span>
             <span style = {{color: Colors.nord10}}>X</span>
             <span style = {{color: Colors.nord15}}>!</span>
+	    </div>
+	    ) : (
+		    <div> hi </div> 
+	    )}
+
+
         </TerminalWindow>
     );
 }
