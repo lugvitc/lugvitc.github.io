@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 
-export const useTypeAnimation = (textToType) => {
+export const TypeAnimation = (textToType) => {
 	const [typingText, setTypingText] = useState('')
 	useEffect(() => {
 		const nextTypingText = textToType.slice(0, typingText.length + 1)
