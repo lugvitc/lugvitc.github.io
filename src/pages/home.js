@@ -5,17 +5,19 @@ import '../components/typeWriter.css';
 import {useTypeAnimation} from '../components/typeWriter.js';
 
 const firstText = 'sudo lug'
-const secondText = '**********'
+const secondText = '*************************************'
 
 export default function Home() {
 	const typingText = useTypeAnimation(firstText)
 	const typingSecondText = useTypeAnimation(secondText)
+	
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span></TerminalPrompt>
 	    { typingText=='sudo lug' ? (
-            <div> [sudo] password for lugvitc: <span style = {{color: Colors.nord11}} className="typeWriteFirstText"> {typingSecondText} </span><br/>
-	     
+            <div> [sudo] password for lugvitc: <span style = {{color: Colors.nord11}} className="typeWriteSecondText"> {typingSecondText} </span><br/>
+	    { typingSecondText=='*************************************' ? (
+	    <div>
 	    <span style = {{color: Colors.nord14}}>access granted...</span><br/>
 
             <h1>Linux Club VIT, Chennai</h1>
@@ -30,10 +32,14 @@ export default function Home() {
             <span style = {{color: Colors.nord15}}>!</span>
 	    </div>
 	    ) : (
-		    <div> hi </div> 
-	    )}
-
-
+		    <div> </div>
+	    )
+	    }
+	    </div>
+	    ) : (
+	    <div> </div>
+	    )
+	    }
         </TerminalWindow>
     );
 }
