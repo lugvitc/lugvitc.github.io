@@ -1,9 +1,17 @@
 import {Colors} from '../values/colors';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
+import '../components/typeWriter.css';
+import {TypeAnimation} from '../components/typeWriter.js';
+
+const firstText = 'sudo lug'
+const secondText = '***************'
 
 
-export default function Home() {
+export default function Home() { 
+	const typingText = TypeAnimation(firstText)
+	const typingSecondText = TypeAnimation(secondText)
+
     return (
         <TerminalWindow>
             <TerminalPrompt path = "~"> sudo lug </TerminalPrompt>
