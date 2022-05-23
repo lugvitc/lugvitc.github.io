@@ -7,7 +7,7 @@ import '../components/typeWriter.css';
 import {TypeAnimation} from '../components/typeWriter.js';
 
 const firstText = 'cd events'
-const secondText = 'cat events.txt'
+const secondText = 'cat events.txt' 
 
 export default function Events() {
 	const typingText = TypeAnimation(firstText)
@@ -16,11 +16,10 @@ export default function Events() {
         <TerminalWindow>
             <section id = "terminal">
                 <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span> </TerminalPrompt>
-	    //</section>
+	    </section>
 	    { typingText=='cd events' ? (
 		    <div>
                 <TerminalPrompt path = "~/events"> <span className="typeWriteSecondText"> {typingSecondText} </span></TerminalPrompt>
-		</section>
 	    { typingSecondText=='cat events.txt' ? (
 		    <div>
             {eventsDetails.map(({number, name, link, details, id}, index) =>
@@ -41,7 +40,7 @@ export default function Events() {
 	    ) }
 		    </div>
 	    ) : (
-		    <div> </section> </div>
+		    <div> </div>
 	    ) }
 
         </TerminalWindow>
