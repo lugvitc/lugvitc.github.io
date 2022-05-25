@@ -1,54 +1,55 @@
-import React from 'react';
-import TerminalPrompt from '../components/terminal/terminalPrompt';
-import TerminalWindow from '../components/terminal/terminalWindow';
-import LugLink from '../components/terminal/lugLink';
-import { eventsDetails } from '../content/eventsDetails';
-import '../components/typeWriter.css';
-import {TypeAnimation} from '../components/typeWriter.js';
+import React, { Component } from 'react';
+import RecruitmentStepOne from './recruitmentStep1';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
+export default class UserForm extends Component {
+	state = {
+		step: 1,
+		name: '',
+		regno: '',
+		email: '',
+	}
 
-const firstText = 'cd recruitment'
-const secondText = './recruitment.exe -v 2022' 
+	//proceed to next step of form
+	nextStep = () => {
+		const { step } = this.state;
+		this.setState({ step: step+1 });
+	}
 
-export default function Recruitment() {
-	const typingText = TypeAnimation(firstText)
-	const typingSecondText = TypeAnimation(secondText)
-    return (
-        <TerminalWindow>
-            <section id = "terminal">
-                <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span> </TerminalPrompt>
-	    </section>
-	    { typingText=='cd recruitment' ? (
-		    <div>
-                <TerminalPrompt path = "~/recruitment"> <span className="typeWriteSecondText"> {typingSecondText} </span></TerminalPrompt>
-	    { typingSecondText=='./recruitment.exe -v 2022' ? (
-		    <div>
-		    <br/>
-		    <form>
-		    <label> Name: </label><br/>
-		    <input type="text" style={{backgroundColor: '#808080'}}/>
-		    <br/>
-		    <label> Registration Number (VIT): </label><br/>
-		    <input type="text" style={{backgroundColor: '#808080'}}/>
-		    <br/>
-		    <label> Email : </label><br/>
-		    <input type="email" style={{backgroundColor: '#808080'}}/>
-		    <br/>
-		    <button style={{backgroundColor: "#5cb85c", color: "white"}}>
-		    <FontAwesomeIcon icon={faAngleDoubleRight} />
-		    </button>
-		    </form>
-            	    </div>
-	    ) : (
-		    <div> </div>
-	    ) }
-		    </div>
-	    ) : (
-		    <div> </div>
-	    ) }
+	//Go back to previous step of form
+	previousStep = () => {
+		const { step } = this.state;
+		this.setState({ step: step-1 });
+	}
 
-        </TerminalWindow>
-    );
+	//Handle Fields Change
+	handleChange = input => e => {
+		this.setState({ [input]: e.target.value });
+	}
+	
+	render() {
+		const { step } = this.state;
+		const { name, regno, email } = this.state;
+		const values = { name, regno, email }
+
+		switch(step) {
+			case 1:
+				return (
+					<RecruitmentStepOne 
+					nextStep = {this.nextStep}
+					handleChange = {this.handleChange}
+					values = {values}
+					/>
+				)
+			case 2: 
+				return (
+					<h1> FormStepTwo </h1>
+				)
+			case 3: 
+				return (
+					<h1> FormStepThree </h1>
+				)
+		}
+	}
 }
+
+
