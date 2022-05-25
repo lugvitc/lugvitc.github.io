@@ -15,13 +15,15 @@ const secondText = './recruitment.exe -v 2022'
 
 export default function RecruitmentStepOne(props) {
 
-	//continue = e => {
-	//	e.preventDefault();
-	//	this.props.nextStep();
-	//}
 	const submit = (e) => {
 		e.preventDefault();
+		if(!values.name || !values.regno || !values.email || !values.contact)
+		{
+			alert("Please fill out all Fields")
+		}
+		else {
 		props.nextStep();
+		}
 	}
 	const typingText = TypeAnimation(firstText)
 	const typingSecondText = TypeAnimation(secondText)
@@ -48,6 +50,9 @@ export default function RecruitmentStepOne(props) {
 		    <br/>
 		    <label> Email : </label><br/>
 		    <input type="email" style={{backgroundColor: '#808080'}} onChange={handleChange('email')} value={values.email}/>
+		    <br/>
+		    <label> Contact Number (Whatsapp): </label><br/>
+		    <input type="tel" style={{backgroundColor: '#808080'}} onChange={handleChange('contact')} value={values.contact} pattern="[1-9]{1}[0-9]{9}" />
 		    <br/>
 		    <button type="submit" style={{backgroundColor: "#5cb85c", color: "white"}}>
 		    <FontAwesomeIcon icon={faAngleDoubleRight} />

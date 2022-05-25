@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import RecruitmentStepOne from './recruitmentStep1';
-
+import RecruitmentStepTwo from './recruitmentStep2';
 export default class UserForm extends Component {
 	state = {
 		step: 1,
 		name: '',
 		regno: '',
 		email: '',
+		contact: '',
+		whatLinux: '',
+		whyLinux: '',
+		expLinux: '',
+		prefDept: 'tech'
 	}
 
 	//proceed to next step of form
@@ -28,8 +33,8 @@ export default class UserForm extends Component {
 	
 	render() {
 		const { step } = this.state;
-		const { name, regno, email } = this.state;
-		const values = { name, regno, email }
+		const { name, regno, email, contact, whatLinux, whyLinux, expLinux, prefDept } = this.state;
+		const values = { name, regno, email, contact, whatLinux, whyLinux, expLinux, prefDept }
 
 		switch(step) {
 			case 1:
@@ -42,7 +47,12 @@ export default class UserForm extends Component {
 				)
 			case 2: 
 				return (
-					<h1> FormStepTwo </h1>
+					<RecruitmentStepTwo
+					nextStep = {this.nextStep}
+					handleChange = {this.handleChange}
+					values = {values}
+					previousStep = {this.previousStep}
+					/>
 				)
 			case 3: 
 				return (
