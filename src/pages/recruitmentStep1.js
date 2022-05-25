@@ -10,9 +10,6 @@ import {TypeAnimation} from '../components/typeWriter.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
-const firstText = 'cd recruitment'
-const secondText = './recruitment.exe -v 2022' 
-
 export default function RecruitmentStepOne(props) {
 
 	const submit = (e) => {
@@ -25,22 +22,18 @@ export default function RecruitmentStepOne(props) {
 		props.nextStep();
 		}
 	}
-	const typingText = TypeAnimation(firstText)
-	const typingSecondText = TypeAnimation(secondText)
+
 	const values = props.values
 	const handleChange = props.handleChange
 
 	return (
         <TerminalWindow>
             <section id = "terminal">
-                <TerminalPrompt path = "~"> <span className="typeWriteFirstText">{typingText}</span> </TerminalPrompt>
+                <TerminalPrompt path = "~"> cd recruitment </TerminalPrompt>
 	    </section>
-	    { typingText=='cd recruitment' ? (
-		    <div>
-                <TerminalPrompt path = "~/recruitment"> <span className="typeWriteSecondText"> {typingSecondText} </span></TerminalPrompt>
-	    { typingSecondText=='./recruitment.exe -v 2022' ? (
-		    <div>
+                <TerminalPrompt path = "~/recruitment"> ./recruitment.exe -v 2022 </TerminalPrompt>
 		    <br/>
+		    <h3 style={{color:'black',fontWeight:'bold'}}>Step 1 of 3</h3>
 		    <form onSubmit={submit}>
 		    <label> Name: </label><br/>
 		    <input type="text" style={{backgroundColor: '#808080'}} onChange={handleChange('name')} value={values.name} />
@@ -53,19 +46,11 @@ export default function RecruitmentStepOne(props) {
 		    <br/>
 		    <label> Contact Number (Whatsapp): </label><br/>
 		    <input type="tel" style={{backgroundColor: '#808080'}} onChange={handleChange('contact')} value={values.contact} pattern="[1-9]{1}[0-9]{9}" />
-		    <br/>
+		    <br/><br/>
 		    <button type="submit" style={{backgroundColor: "#5cb85c", color: "white"}}>
 		    <FontAwesomeIcon icon={faAngleDoubleRight} />
 		    </button>
 		    </form>
-            	    </div>
-	    ) : (
-		    <div> </div>
-	    ) }
-		    </div>
-	    ) : (
-		    <div> </div>
-	    ) }
 
         </TerminalWindow>
     );

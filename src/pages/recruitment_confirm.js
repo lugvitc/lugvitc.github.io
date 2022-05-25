@@ -11,17 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons'
 
-export default function RecruitmentStepTwo(props) {
+export default function Confirm(props) {
 
 	const next = (e) => {
 		e.preventDefault();
-		if(!values.whatLinux || !values.whyLinux || !values.expLinux || !values.prefDept)
-		{
-			alert("Please fill out all Fields")
-		}
-		else {
+		// USE FLASK BACKEND HERE TO COLLECT ALL DATA
 		props.nextStep();
-		}
 	}
 
 	const back = (e) => {
@@ -40,24 +35,18 @@ export default function RecruitmentStepTwo(props) {
 		    <div>
                 <TerminalPrompt path = "~/recruitment"> ./recruitment.exe -v 2022 </TerminalPrompt>
 		    <br/>
-		    <h3 style={{color:'black',fontWeight:'bold'}}>Step 2 of 3</h3>
-		    <form>
-		    <label> How would you describe Linux as short as possible? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('whatLinux')} value={values.whatLinux} />
+		    <h3 style={{color:'black',fontWeight:'bold'}}>Confirm your Details...</h3>
 		    <br/>
-		    <label> Why do you want to join the Linux Club? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('whyLinux')} value={values.whyLinux}/>
-		    <br/>
-		    <label> Have you ever used any Linux distro? Whats your favourtie distro? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('expLinux')} value={values.expLinux}/>
-		    <br/>
-		    <label htmlFor="dept"> Which department interests you the most in the Club? (You can change departments anytime later) </label><br/>
-		    <select name="dept" id="dept" value={values.prefDept} onChange={handleChange('prefDept')}>
-  		    <option value="Technical Department">Technical Department</option>
-		    <option value="Management Department">Management Department</option>
-		    <option value="Operations/Media Department">Operations/Social Media Department</option>
-		    </select>
-
+		    <ol>
+		        <li>Name : {values.name}</li>
+		        <li>Registration Number : {values.regno}</li>
+			<li>Email : {values.email}</li>
+			<li>Contact Number : {values.contact}</li>
+			<li>How would you describe Linux as shortly as possible : <p>{values.whatLinux}</p></li>
+		        <li>Why do you want to join the Linux Club : <p>{values.whyLinux}</p></li>
+			<li>Have you ever used any Linux distro? Whats your favourite distro? : <p>{values.expLinux}</p></li>
+			<li>Which Department interests you the most? : {values.prefDept}</li>
+		    </ol>
 		    <br/><br/>
 		    <button type="submit" style={{backgroundColor: "#5cb85c", color: "white"}} onClick={back}>
 		    <FontAwesomeIcon icon={faAngleDoubleLeft} />
@@ -66,7 +55,7 @@ export default function RecruitmentStepTwo(props) {
 		    <button type="submit" style={{backgroundColor: "#5cb85c", color: "white"}} onClick={next}>
 		    <FontAwesomeIcon icon={faAngleDoubleRight} />
 		    </button>
-		    </form>
+		
             	    </div>
 	  
         </TerminalWindow>
