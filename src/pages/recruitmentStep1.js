@@ -33,6 +33,7 @@ export default function RecruitmentStepOne(props) {
 	    </section>
                 <TerminalPrompt path = "~/recruitment"> ./recruitment.exe -v 2022 </TerminalPrompt>
 		    <br/>
+		<p> Hey there! The Linux Club Recruitments are here! Are you crazy about Linux? Do you get excited by the command line? Are you a beginner looking for exploring Linux? Open Source? Cybersecurity? We have it all! Join the coolest club out of the herd to discuss, share and lead all our ideas to Success! We hope you find our will equal to yours :D </p>
 		    <h3 style={{color:'black',fontWeight:'bold'}}>Step 1 of 3</h3>
 		    <form onSubmit={submit}>
 		    <label> Name: </label><br/>
