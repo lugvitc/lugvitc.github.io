@@ -43,19 +43,19 @@ export default function RecruitmentStepTwo(props) {
 		    <h3 style={{color:'black',fontWeight:'bold'}}>Step 2 of 3</h3>
 		    <form>
 		    <label> How would you describe Linux as short as possible? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('whatLinux')} value={values.whatLinux} />
+		    <textarea style={{backgroundColor: '#808080', width: '32vw'}} rows="6" onChange={handleChange('whatLinux')} value={values.whatLinux} />
 		    <br/>
 		    <label> Why do you want to join the Linux Club? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('whyLinux')} value={values.whyLinux}/>
+		    <textarea style={{backgroundColor: '#808080', width: '32vw'}} rows="6" onChange={handleChange('whyLinux')} value={values.whyLinux}/>
 		    <br/>
 		    <label> Have you ever used any Linux distro? Whats your favourtie distro? </label><br/>
-		    <textarea style={{backgroundColor: '#808080', width: '30rem'}} rows="4" onChange={handleChange('expLinux')} value={values.expLinux}/>
+		    <textarea style={{backgroundColor: '#808080', width: '32vw'}} rows="6" onChange={handleChange('expLinux')} value={values.expLinux}/>
 		    <br/>
 		    <label htmlFor="dept"> Which department interests you the most in the Club? (You can change departments anytime later) </label><br/>
 		    <select name="dept" id="dept" value={values.prefDept} onChange={handleChange('prefDept')}>
   		    <option value="Technical Department">Technical Department</option>
 		    <option value="Management Department">Management Department</option>
-		    <option value="Operations/Media Department">Operations/Social Media Department</option>
+		    <option value="Operations/Media Department">Operations/Media Department</option>
 		    </select>
 
 		    <br/><br/>

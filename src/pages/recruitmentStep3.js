@@ -20,7 +20,7 @@ export default function RecruitmentStepThree(props) {
 			alert("Please fill out all Fields")
 		}
 		else {
-			if(values.flagCommand=="whoami")
+			if(values.flagCommand=="whoami" || values.flagCommand=="Whoami")
 			{
 				alert("Hell yes! You're out of the herd! Welcome Linux");
 				props.nextStep();
@@ -48,7 +48,7 @@ export default function RecruitmentStepThree(props) {
                 <TerminalPrompt path = "~/recruitment"> ./recruitment.exe -v 2022 </TerminalPrompt>
 		    <br/>
 		    <h3 style={{color:'black',fontWeight:'bold'}}>Step 3 of 3:</h3>
-		    <h1> A final short Challenge for you :P </h1>
+		    <h1> A short Challenge for you :P </h1>
 		    <br/>
 		    <p>You were playing around the computers in the Networking Lab where you found the cool Linux Mint is used! Interesting... Just following your first instinct, you pulled open the terminal and pinged some random networking commands. Interestingly, you found it has access to the terminal of the administrator machine of the Lab! You are very excited and want to know whether you have root privileges on the administrator machine!<br/><br/>
 		What command would you run in the remote terminal to see which user is currently logged in? Try it out below!</p>
