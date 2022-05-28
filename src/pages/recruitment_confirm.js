@@ -13,7 +13,8 @@ import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Confirm(props) {
 
-	const next = async () => {
+	const next = async (e) => {
+		e.preventDefault();
 		// USE FLASK BACKEND HERE TO COLLECT ALL DATA
 		const formData = props.values
 		const result = await fetch('https://backmagic.herokuapp.com/api/recruitment', {
@@ -23,8 +24,9 @@ export default function Confirm(props) {
 			},
 			body: JSON.stringify(formData)
 		})
-		const resultInJson = await result.json()
-		console.log(resultInJson)
+		//console.log(formData)
+		//console.log(result)
+		props.nextStep();
 	}
 
 	const back = (e) => {
