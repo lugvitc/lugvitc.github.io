@@ -1,5 +1,4 @@
 import React from 'react';
-import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import '../components/typeWriter.css';
 
@@ -18,72 +17,50 @@ export default function RecruitmentStepOne({ values, nextStep, handleChange }) {
 
     return (
         <TerminalWindow>
-            <section id='terminal'>
-                <TerminalPrompt path='~'> cd recruitment </TerminalPrompt>
-            </section>
-            <TerminalPrompt path='~/recruitment'>
-                {' '}
-                ./recruitment.exe -v 2022{' '}
-            </TerminalPrompt>
-            <br />
-            <p>
-                {' '}
-                Hey there! The Linux Club Recruitments are here! Are you crazy
-                about Linux? Do you get excited by the command line? Are you a
-                beginner looking for exploring Linux? Open Source?
-                Cybersecurity? We have it all! Join the coolest club out of the
-                herd to discuss, share and lead all our ideas to Success! We
-                hope you find our will equal to yours :D{' '}
-            </p>
-            <h3 style={{ color: 'black', fontWeight: 'bold' }}>Step 1 of 3</h3>
-            <form onSubmit={submit}>
-                <label> Name: </label>
-                <br />
-                <input
-                    maxLength='128'
-                    type='text'
-                    style={{ backgroundColor: '#808080' }}
-                    onChange={handleChange('name')}
-                    value={values.name}
-                />
-                <br />
-                <label> Registration Number (VIT): </label>
-                <br />
-                <input
-                    type='text'
-                    maxLength='9'
-                    style={{ backgroundColor: '#808080' }}
-                    onChange={handleChange('regno')}
-                    value={values.regno}
-                />
-                <br />
-                <label> Email : </label>
-                <br />
-                <input
-                    maxLength='128'
-                    type='email'
-                    style={{ backgroundColor: '#808080' }}
-                    onChange={handleChange('email')}
-                    value={values.email}
-                />
-                <br />
-                <label> Contact Number (Whatsapp): </label>
-                <br />
-                <input
-                    type='tel'
-                    style={{ backgroundColor: '#808080' }}
-                    onChange={handleChange('contact')}
-                    value={values.contact}
-                    pattern='[1-9]{1}[0-9]{9}'
-                />
-                <br />
-                <br />
-                <button
-                    type='submit'
-                    style={{ backgroundColor: '#5cb85c', color: 'white' }}
-                >
-                    <FontAwesomeIcon icon={faAngleDoubleRight} />
-                </button>
+            <form className='lug-form' onSubmit={submit}>
+                <div className='form-start'>Step 1 of 3</div>
+                <div className='form-field'>
+                    <label> Name: </label>
+                    <input
+                        maxLength='128'
+                        type='text'
+                        onChange={handleChange('name')}
+                        value={values.name}
+                    />
+                </div>
+                <div className='form-field'>
+                    <label> Registration Number (VIT): </label>
+                    <input
+                        type='text'
+                        maxLength='9'
+                        onChange={handleChange('regno')}
+                        value={values.regno}
+                    />
+                </div>
+                <div className='form-field'>
+                    <label> Email : </label>
+                    <input
+                        maxLength='128'
+                        type='email'
+                        onChange={handleChange('email')}
+                        value={values.email}
+                    />
+                </div>
+                <div className='form-field'>
+                    <label> Contact Number (Whatsapp): </label>
+                    <input
+                        type='tel'
+                        onChange={handleChange('contact')}
+                        value={values.contact}
+                        pattern='[1-9]{1}[0-9]{9}'
+                    />
+                </div>
+                <div className='form-field'></div>
+                <div className='form-end'>
+                    <button type='submit' className='form-nav-button next'>
+                        <FontAwesomeIcon icon={faAngleDoubleRight} />
+                    </button>
+                </div>
             </form>
         </TerminalWindow>
     );

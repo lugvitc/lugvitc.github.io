@@ -3,17 +3,20 @@ import TopBar from '../components/topBar';
 import { Outlet } from 'react-router-dom';
 import './pages.css';
 import Dock from '../components/dock';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 
-export default function Layout({navs, dockItems}) {
-    return(
+export default function Layout({ navs, dockItems }) {
+    return (
         <React.Fragment>
-            <TopBar navs = {navs}/>
-            <main id = "content">
-                <Dock items = {dockItems}/>
-                <Outlet/>
+            <TopBar navs={navs} />
+            <main id='content'>
+                <Dock items={dockItems} />
+                <div className='terminals'>
+                    <Outlet />
+                </div>
             </main>
             {/* <Footer/> */}
         </React.Fragment>
     );
 }
+

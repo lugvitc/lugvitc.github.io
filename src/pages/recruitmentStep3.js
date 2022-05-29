@@ -37,68 +37,52 @@ export default function RecruitmentStepThree({
 
     return (
         <TerminalWindow>
-            <section id='terminal'>
-                <TerminalPrompt path='~'> cd recruitment </TerminalPrompt>
-            </section>
-            <div>
-                <TerminalPrompt path='~/recruitment'>
-                    {' '}
-                    ./recruitment.exe -v 2022{' '}
-                </TerminalPrompt>
-                <br />
-                <h3 style={{ color: 'black', fontWeight: 'bold' }}>
-                    Step 3 of 3:
-                </h3>
-                <h1> A short Challenge for you :P </h1>
-                <br />
-                <p>
-                    You were playing around the computers in the Networking Lab
-                    where you found the cool Linux Mint is used! Interesting...
-                    Just following your first instinct, you pulled open the
-                    terminal and pinged some random networking commands.
-                    Interestingly, you found it has access to the terminal of
-                    the administrator machine of the Lab! You are very excited
-                    and want to know whether you have root privileges on the
-                    administrator machine!
-                    <br />
-                    <br />
-                    What command would you run in the remote terminal to see
-                    which user is currently logged in? Try it out below!
-                </p>
-                <form>
-                    <TerminalPrompt path='~/administrator'>
-                        <input
-                            type='text'
-                            style={{
-                                backgroundColor: '#808080',
-                                color: '#EBCB8B'
-                            }}
-                            onChange={handleChange('flagCommand')}
-                            value={values.flagCommand}
-                        />
-                        <button
-                            type='submit'
-                            style={{
-                                backgroundColor: '#5cb85c',
-                                color: 'white'
-                            }}
-                            onClick={next}
-                        >
-                            <FontAwesomeIcon icon={faAngleDoubleRight} />
-                        </button>
-                    </TerminalPrompt>
-
-                    <br />
-                    <br />
+            <form className='lug-form'>
+                <div className='form-start'>Step 3 of 3</div>
+                <div>
+                    <div>
+                        You were playing around the computers in the Networking
+                        Lab where you found the cool Linux Mint is used!
+                        Interesting... Just following your first instinct, you
+                        pulled open the terminal and pinged some random
+                        networking commands. Interestingly, you found it has
+                        access to the terminal of the administrator machine of
+                        the Lab! You are very excited and want to know whether
+                        you have root privileges on the administrator machine!
+                        <br />
+                        <br />
+                        What command would you run in the remote terminal to see
+                        which user is currently logged in? Try it out below!
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        <TerminalPrompt path='~/administrator' />
+                    </label>
+                    {'  '}
+                    <input
+                        type='text'
+                        onChange={handleChange('flagCommand')}
+                        value={values.flagCommand}
+                    />
+                </div>
+                <div className='form-end'>
                     <button
+                        className='form-nav-button prev'
                         type='submit'
-                        style={{ backgroundColor: '#5cb85c', color: 'white' }}
                         onClick={back}
                     >
                         <FontAwesomeIcon icon={faAngleDoubleLeft} />
                     </button>
-                </form>
-            </div>
+                    <button
+                        className='form-nav-button next'
+                        type='submit'
+                        onClick={next}
+                    >
+                        <FontAwesomeIcon icon={faAngleDoubleRight} />
+                    </button>
+                </div>
+            </form>
         </TerminalWindow>
     );
 }

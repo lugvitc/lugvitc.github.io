@@ -4,9 +4,20 @@ main#content {
     display: flex;
 }
 
+.terminals {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    row-gap: 5vh;
+    padding-inline: 10vw;
+}
+
 @media only screen and (max-width: 1024px) {
     main#content {
         flex-direction: column-reverse;
         margin-bottom: 0px;
     }
 }
+

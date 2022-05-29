@@ -1,5 +1,4 @@
 import React from 'react';
-import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import '../components/typeWriter.css';
 
@@ -34,59 +33,42 @@ export default function RecruitmentStepTwo({
 
     return (
         <TerminalWindow>
-            <section id='terminal'>
-                <TerminalPrompt path='~'> cd recruitment </TerminalPrompt>
-            </section>
-            <div>
-                <TerminalPrompt path='~/recruitment'>
-                    {' '}
-                    ./recruitment.exe -v 2022{' '}
-                </TerminalPrompt>
-                <br />
-                <h3 style={{ color: 'black', fontWeight: 'bold' }}>
-                    Step 2 of 3
-                </h3>
-                <form>
+            <form className='lug-form'>
+                <div className='form-start'>Step 2 of 3</div>
+                <div className='form-textarea'>
                     <label>
-                        {' '}
                         How would you describe Linux as shortly as possible?{' '}
                     </label>
-                    <br />
                     <textarea
-                        style={{ backgroundColor: '#808080', width: '80%' }}
                         rows='6'
                         onChange={handleChange('whatLinux')}
                         value={values.whatLinux}
                     />
-                    <br />
+                </div>
+                <div className='form-textarea'>
                     <label> Why do you want to join the Linux Club? </label>
-                    <br />
                     <textarea
-                        style={{ backgroundColor: '#808080', width: '80%' }}
                         rows='6'
                         onChange={handleChange('whyLinux')}
                         value={values.whyLinux}
                     />
-                    <br />
+                </div>
+                <div className='form-textarea'>
                     <label>
-                        {' '}
                         Have you ever used any Linux distro? Whats your
                         favourite distro?{' '}
                     </label>
-                    <br />
                     <textarea
-                        style={{ backgroundColor: '#808080', width: '80%' }}
                         rows='6'
                         onChange={handleChange('expLinux')}
                         value={values.expLinux}
                     />
-                    <br />
+                </div>
+                <div className='form-field longlabel'>
                     <label htmlFor='dept'>
-                        {' '}
                         Which department interests you the most in the Club?
                         (You can change departments anytime later){' '}
                     </label>
-                    <br />
                     <select
                         name='dept'
                         id='dept'
@@ -103,26 +85,24 @@ export default function RecruitmentStepTwo({
                             Operations/Media Department
                         </option>
                     </select>
-
-                    <br />
-                    <br />
+                </div>
+                <div className='form-end'>
                     <button
                         type='submit'
-                        style={{ backgroundColor: '#5cb85c', color: 'white' }}
                         onClick={back}
+                        className='form-nav-button prev'
                     >
                         <FontAwesomeIcon icon={faAngleDoubleLeft} />
                     </button>
-
                     <button
                         type='submit'
-                        style={{ backgroundColor: '#5cb85c', color: 'white' }}
+                        className='form-nav-button next'
                         onClick={next}
                     >
                         <FontAwesomeIcon icon={faAngleDoubleRight} />
                     </button>
-                </form>
-            </div>
+                </div>
+            </form>
         </TerminalWindow>
     );
 }

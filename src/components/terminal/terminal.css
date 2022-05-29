@@ -4,19 +4,17 @@ article.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
-    margin: 5vh 5vw;
-    min-width: 50%;
-    /*change this height:fit content and min width in future to make the terminal on the left side of vertical page. the right side of vertical page can be used for displaying the ASCII art*/
-    height: fit-content
+    width: 100%;
 }
 
 .terminal-contents {
     background-color: var(--nord1);
     border-radius: 0px 0px 10px 10px;
     padding: 30px;
+    padding-bottom: 0;
     margin: 0px;
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 .terminal-dots {
@@ -40,3 +38,4 @@ article.terminal {
         margin: 5vh 2vw;
     }
 }
+
