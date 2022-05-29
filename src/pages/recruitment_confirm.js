@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 
-export default function Confirm(props) {
+export default function Confirm({ nextStep, values, previousStep }) {
     const next = async e => {
         e.preventDefault();
         // USE FLASK BACKEND HERE TO COLLECT ALL DATA
-        let formData = props.values;
+        let formData = values;
         delete formData['flagCommand'];
         const result = await fetch(
             'https://backmagic.herokuapp.com/api/recruitment',
@@ -29,16 +29,13 @@ export default function Confirm(props) {
         );
         //console.log(formData)
         //console.log(result)
-        props.nextStep();
+        nextStep();
     };
 
     const back = e => {
         e.preventDefault();
-        props.previousStep();
+        previousStep();
     };
-
-    const values = props.values;
-    const handleChange = props.handleChange;
 
     return (
         <TerminalWindow>

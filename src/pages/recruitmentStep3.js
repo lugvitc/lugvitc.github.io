@@ -11,7 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 
-export default function RecruitmentStepThree(props) {
+export default function RecruitmentStepThree({
+    nextStep,
+    handleChange,
+    values,
+    previousStep
+}) {
     const next = e => {
         e.preventDefault();
         if (!values.flagCommand) {
@@ -22,7 +27,7 @@ export default function RecruitmentStepThree(props) {
                 values.flagCommand == 'Whoami'
             ) {
                 alert("Hell yes! You're out of the herd! Welcome Linux");
-                props.nextStep();
+                nextStep();
             } else {
                 alert("You're close... Focus on who you are!!");
             }
@@ -31,11 +36,8 @@ export default function RecruitmentStepThree(props) {
 
     const back = e => {
         e.preventDefault();
-        props.previousStep();
+        previousStep();
     };
-
-    const values = props.values;
-    const handleChange = props.handleChange;
 
     return (
         <TerminalWindow>

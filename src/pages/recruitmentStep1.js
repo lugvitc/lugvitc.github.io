@@ -10,18 +10,15 @@ import { TypeAnimation } from '../components/typeWriter.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function RecruitmentStepOne(props) {
+export default function RecruitmentStepOne({ values, nextStep, handleChange }) {
     const submit = e => {
         e.preventDefault();
         if (!values.name || !values.regno || !values.email || !values.contact) {
             alert('Please fill out all Fields');
         } else {
-            props.nextStep();
+            nextStep();
         }
     };
-
-    const values = props.values;
-    const handleChange = props.handleChange;
 
     return (
         <TerminalWindow>

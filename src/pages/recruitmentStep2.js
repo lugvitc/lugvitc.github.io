@@ -11,7 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 
-export default function RecruitmentStepTwo(props) {
+export default function RecruitmentStepTwo({
+    values,
+    handleChange,
+    nextStep,
+    previousStep
+}) {
     const next = e => {
         e.preventDefault();
         if (
@@ -22,17 +27,14 @@ export default function RecruitmentStepTwo(props) {
         ) {
             alert('Please fill out all Fields');
         } else {
-            props.nextStep();
+            nextStep();
         }
     };
 
     const back = e => {
         e.preventDefault();
-        props.previousStep();
+        previousStep();
     };
-
-    const values = props.values;
-    const handleChange = props.handleChange;
 
     return (
         <TerminalWindow>
