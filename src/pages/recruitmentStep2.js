@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
-import LugLink from '../components/terminal/lugLink';
-import { eventsDetails } from '../content/eventsDetails';
 import '../components/typeWriter.css';
-import { TypeAnimation } from '../components/typeWriter.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';

@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
-import LugLink from '../components/terminal/lugLink';
-import { eventsDetails } from '../content/eventsDetails';
 import '../components/typeWriter.css';
-import { TypeAnimation } from '../components/typeWriter.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
@@ -17,16 +13,13 @@ export default function Confirm({ nextStep, values, previousStep }) {
         // USE FLASK BACKEND HERE TO COLLECT ALL DATA
         let formData = values;
         delete formData['flagCommand'];
-        const result = await fetch(
-            'https://backmagic.herokuapp.com/api/recruitment',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            }
-        );
+        fetch('https://backmagic.herokuapp.com/api/recruitment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
         //console.log(formData)
         //console.log(result)
         nextStep();
