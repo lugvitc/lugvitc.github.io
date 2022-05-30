@@ -4,17 +4,19 @@ article.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
-    width: 100%;
+    margin: 5vh 5vw;
+    min-width: 50%;
+    height: fit-content
 }
 
 .terminal-contents {
     background-color: var(--nord1);
     border-radius: 0px 0px 10px 10px;
     padding: 30px;
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
     margin: 0px;
     height: 100%;
-    width: 100%;
+    width: 100%
 }
 
 .terminal-dots {
