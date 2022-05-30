@@ -65,6 +65,13 @@ export default function RecruitmentStepThree({
                         onChange={handleChange('flagCommand')}
                         value={values.flagCommand}
                     />
+	    	    <button
+	    		type='submit'
+	    		onClick={next}
+	    		hidden="hidden"
+	    	    >
+	    	    </button>
+
                 </div>
                 <div className='form-end'>
                     <button
