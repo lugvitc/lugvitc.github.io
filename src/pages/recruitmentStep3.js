@@ -20,7 +20,13 @@ export default function RecruitmentStepThree({
         } else {
             if (
                 values.flagCommand === 'whoami' ||
-                values.flagCommand === 'Whoami'
+                values.flagCommand === 'Whoami' ||
+		values.flagCommand === 'who'	||
+		values.flagCommand === 'Who'	||
+		values.flagCommand === 'users'	||
+		values.flagCommand === 'Users'	||
+		values.flagCommand === 'w'	||
+		values.flagCommand === 'W'	
             ) {
                 alert("Hell yes! You're out of the herd! Welcome Linux");
                 nextStep();
