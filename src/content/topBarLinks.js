@@ -6,11 +6,11 @@ export const topBarLinks = [ // make this a 'useState' thing if needed in the fu
 {
     title: "Events",
     link: "/events"
-},
+}/*,
 {
     title: "Recruitment",
     link: "/recruitment"
-}/* ,
+} ,
 {
     title: "projects",
     link: "/projects"
