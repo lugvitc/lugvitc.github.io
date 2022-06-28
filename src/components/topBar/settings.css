@@ -5,7 +5,7 @@
 
 .top-bar-settings > svg:hover,
 .top-bar-settings.open > svg {
-    fill: var(--nord4);
+    fill: var(--nord10);
     animation: spin 4s linear infinite;
 }
 
@@ -20,9 +20,8 @@
 
 dialog.settings {
     border-radius: 10px;
-    border: solid var(--nord0);
-    background-color: var(--nord1);
-    /* padding: 10px; */
+    border: none;
+    background-color: transparent;
 }
 
 dialog.settings::backdrop {
@@ -32,3 +31,4 @@ dialog.settings::backdrop {
 .settings-contents {
     margin: 10px;
 }
+

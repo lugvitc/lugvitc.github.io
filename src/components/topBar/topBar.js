@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
+import TerminalWindow from '../terminal/terminalWindow';
 
 import './topBar.css';
 import './settings.css';
@@ -79,7 +80,7 @@ export default function TopBar({ refer, topBarLinks }) {
                 ref={settingsDialog}
                 open={false}
             >
-                <div className='settings-contents'>
+                <TerminalWindow onClickRed={closeSettings}>
                     <h3>Settings</h3>
                     <input
                         type='checkbox'
@@ -87,8 +88,7 @@ export default function TopBar({ refer, topBarLinks }) {
                         onChange={e => setShowAnimations(x => !x)}
                     />{' '}
                     Show animations
-                </div>
-                <button onClick={closeSettings}>Close</button>
+                </TerminalWindow>
             </dialog>
             <div className='bottom-strip' />
         </header>
