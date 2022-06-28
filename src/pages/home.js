@@ -1,9 +1,6 @@
 import { Colors } from '../styles/colors';
 import TerminalWindow from '../components/terminal/terminalWindow';
-import ShowAfterTypewriter from '../components/showAfterTypwriter';
-
-const firstText = 'sudo lug';
-const secondText = '***************';
+import ShowAfterTypewriter from '../components/showAfterTypewriter/showAfterTypwriter';
 
 export default function Home() {
     const prompts = [{ path: '~', contents: 'sudo lug' }];

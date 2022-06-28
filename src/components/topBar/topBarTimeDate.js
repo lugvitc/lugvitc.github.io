@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import './topBar.css';
 
@@ -9,13 +9,15 @@ export default function TopBarTimeDate() {
     const time = currentDate.toLocaleTimeString('en-IN');
 
     function refreshClock() {
-        setCurrentDate(new Date())
+        setCurrentDate(new Date());
     }
 
     useEffect(() => {
         const timerId = setInterval(refreshClock, 1000);
-        return function cleanup() { clearInterval(timerId); };
+        return function cleanup() {
+            clearInterval(timerId);
+        };
     }, []);
 
-    return (<span>{`${time}, ${date}`}</span>);
+    return <span>{`${time}, ${date}`}</span>;
 }

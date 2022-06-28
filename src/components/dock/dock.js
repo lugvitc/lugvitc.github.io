@@ -1,6 +1,7 @@
-import './dock.css';
-import LugLink from '../terminal/lugLink';
+import LugLink from '../lugLink';
 import { dockItems } from './dockItems';
+
+import './dock.css';
 
 export default function Dock() {
     return (

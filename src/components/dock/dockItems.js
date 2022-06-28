@@ -2,7 +2,7 @@ import InstagramIcon from '../../images/Instagram.svg';
 import LinkedInIcon from '../../images/LinkedIn.svg';
 import GithubIcon from '../../images/Github.svg';
 import DiscordIcon from '../../images/Discord.svg';
-import GamesIcon from '../../images/Games.svg';
+// import GamesIcon from '../../images/Games.svg';
 
 export const dockItems = [
     {

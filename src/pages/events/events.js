@@ -1,9 +1,6 @@
-import LugLink from '../../components/terminal/lugLink';
+import LugLink from '../../components/lugLink';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import { eventsDetails } from './eventsDetails';
-
-const firstText = 'cd events';
-const secondText = 'cat events.txt';
 
 export default function Events() {
     return (

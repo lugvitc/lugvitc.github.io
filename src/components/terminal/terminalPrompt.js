@@ -1,4 +1,3 @@
-import React from 'react';
 import './terminal.css';
 
 export default function TerminalPrompt({ path, children }) {

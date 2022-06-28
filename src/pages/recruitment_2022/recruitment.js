@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import RecruitmentStepOne from './recruitmentStep1';

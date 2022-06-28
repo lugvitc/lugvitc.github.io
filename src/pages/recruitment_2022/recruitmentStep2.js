@@ -1,4 +1,3 @@
-import React from 'react';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import '../components/typeWriter.css';
 

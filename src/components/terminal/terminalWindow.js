@@ -1,10 +1,9 @@
-import React from 'react';
+import TerminalPrompt from './terminalPrompt.js';
+import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
+
 import { Colors } from '../../styles/colors.js';
 import './terminal.css';
-import TerminalPrompt from './terminalPrompt.js';
 import './terminalText.css';
-import ShowAfterTypewriter from '../showAfterTypwriter.js';
-
 export default function TerminalWindow({ prompts, children }) {
     return (
         <div className='terminal'>
