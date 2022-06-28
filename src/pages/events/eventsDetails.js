@@ -85,22 +85,6 @@ export const eventsDetails = [
                 The event was a success with the students learning about the
                 importance of FOSS and getting to know the numerous avenues
                 where open-source tools are used.
-                {/* <hr/> */
-                /* add lines between events */}
-                <hr />
-            </>
-        )
-    },
-    {
-        number: '01',
-        name: 'Open Scholar',
-        link: 'lugvitc.github.io/#/events#open-scholar',
-        id: 'open-scholar',
-        details: (
-            <>
-                In-collaboration with The Zero Bugs Club, Open Scholar is an
-                upcoming event for participants to show-off their open-source
-                skills and get a chance to get their works published.
             </>
         )
     }
