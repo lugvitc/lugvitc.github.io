@@ -8,6 +8,23 @@ import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
 export default function App() {
+    const pages = [
+        {
+            title: 'Home',
+            link: '/',
+            component: <Home />
+        },
+        {
+            title: 'Events',
+            link: '/events',
+            component: <Events />
+        },
+        {
+            title: 'Learn Linux',
+            link: '/learn-linux',
+            component: <LearnLinux />
+        }
+    ];
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
             <Routes>
@@ -15,7 +32,7 @@ export default function App() {
                     path='/'
                     element={
                         <>
-                            <TopBar />
+                            <TopBar topBarLinks={pages} />
                             <main id='content'>
                                 <Dock />
                                 <div className='terminals'>
@@ -25,9 +42,17 @@ export default function App() {
                         </>
                     }
                 >
-                    <Route index element={<Home />} />
-                    <Route path='events' element={<Events />} />
-                    <Route path='learn-linux' element={<LearnLinux />} />
+                    {pages.map((page, index) =>
+                        page.link === '/' ? (
+                            <Route key={index} index element={page.component} />
+                        ) : (
+                            <Route
+                                key={index}
+                                path={page.link}
+                                element={page.component}
+                            />
+                        )
+                    )}
                 </Route>
             </Routes>
         </HashRouter>

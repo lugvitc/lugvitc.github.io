@@ -1,9 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import './topBar.css';
 import TopBarTimeDate from './topBarTimeDate';
-import { topBarLinks } from './topBarLinks';
 
-export default function TopBar() {
+export default function TopBar({ topBarLinks }) {
     return (
         <header id='top-bar'>
             <nav id='top-bar-links'>
@@ -28,3 +27,4 @@ export default function TopBar() {
         </header>
     );
 }
+
