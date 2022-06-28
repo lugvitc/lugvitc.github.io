@@ -1,7 +1,6 @@
-import React from 'react';
-import speaker from './../images/adrenaline/speaker.jpg';
-import winnerOne from './../images/adrenaline/winner-one.jpg';
-import winnerTwo from './../images/adrenaline/winner-two.jpg';
+import speaker from '../../images/adrenaline/speaker.jpg';
+import winnerOne from '../../images/adrenaline/winner-one.jpg';
+import winnerTwo from '../../images/adrenaline/winner-two.jpg';
 
 const imgStyle = {
     width: '100%',

@@ -1,6 +1,6 @@
 import React from 'react';
-import TerminalPrompt from '../components/terminal/terminalPrompt';
-import TerminalWindow from '../components/terminal/terminalWindow';
+import TerminalPrompt from '../../components/terminal/terminalPrompt';
+import TerminalWindow from '../../components/terminal/terminalWindow';
 import '../components/typeWriter.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,12 +21,12 @@ export default function RecruitmentStepThree({
             if (
                 values.flagCommand === 'whoami' ||
                 values.flagCommand === 'Whoami' ||
-		values.flagCommand === 'who'	||
-		values.flagCommand === 'Who'	||
-		values.flagCommand === 'users'	||
-		values.flagCommand === 'Users'	||
-		values.flagCommand === 'w'	||
-		values.flagCommand === 'W'	
+                values.flagCommand === 'who' ||
+                values.flagCommand === 'Who' ||
+                values.flagCommand === 'users' ||
+                values.flagCommand === 'Users' ||
+                values.flagCommand === 'w' ||
+                values.flagCommand === 'W'
             ) {
                 alert("Hell yes! You're out of the herd! Welcome Linux");
                 nextStep();
@@ -71,13 +71,11 @@ export default function RecruitmentStepThree({
                         onChange={handleChange('flagCommand')}
                         value={values.flagCommand}
                     />
-	    	    <button
-	    		type='submit'
-	    		onClick={next}
-	    		hidden="hidden"
-	    	    >
-	    	    </button>
-
+                    <button
+                        type='submit'
+                        onClick={next}
+                        hidden='hidden'
+                    ></button>
                 </div>
                 <div className='form-end'>
                     <button
