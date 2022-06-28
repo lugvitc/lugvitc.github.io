@@ -1,13 +1,17 @@
 #top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    z-index: 1;
+}
+
+.top-bar-contents {
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
     justify-content: flex-end;
     font-size: small;
-
-    position: fixed;
-    width: 100%;
-    top: 0;
 }
 
 #top-bar-links {
@@ -71,6 +75,11 @@
     content: ' ▼';
 }
 
+.bottom-strip {
+    background-color: var(--nord0);
+    height: 5px;
+}
+
 @media only screen and (max-width: 500px) {
     #top-bar-links {
         flex-direction: column;
@@ -88,6 +97,10 @@
         margin: 5px 5px;
         border-width: 2px;
         color: var(--nord10);
+    }
+
+    .bottom-strip {
+        display: none;
     }
 }
 
