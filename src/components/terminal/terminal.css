@@ -1,12 +1,10 @@
-@import '../../values/colors.css';
-
 article.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
     min-width: 50%;
-    height: fit-content
+    height: fit-content;
 }
 
 .terminal-contents {
@@ -16,7 +14,7 @@ article.terminal {
     /*padding-bottom: 0;*/
     margin: 0px;
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 .terminal-dots {

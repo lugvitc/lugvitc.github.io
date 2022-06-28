@@ -1,5 +1,3 @@
-@import '../../values/colors.css';
-
 /* the text selection is a bit complex,
 br tags are a bit inconsistent rn
 sort that out
@@ -10,7 +8,7 @@ which deals with just the text
 /* TEXT */
 .terminal-text {
     font-family: consolas, 'Courier New', Courier, monospace;
-    color: var(--nord4)
+    color: var(--nord4);
 }
 
 .terminal-text::selection {
@@ -18,7 +16,7 @@ which deals with just the text
     color: var(--nord0);
 }
 
-.terminal-text >* ::selection {
+.terminal-text > * ::selection {
     background-color: var(--nord7);
     color: var(--nord0);
 }
@@ -43,7 +41,7 @@ br::selection {
 .terminal-text-link:active,
 .terminal-text-link:visited:hover,
 .terminal-text-link:visited:active {
-    color: var(--nord8)
+    color: var(--nord8);
 }
 
 .prompt-user-system {
@@ -55,5 +53,5 @@ br::selection {
 }
 
 .prompt-command {
-    color: var(--nord13)
+    color: var(--nord13);
 }

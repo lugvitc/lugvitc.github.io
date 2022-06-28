@@ -1,4 +1,4 @@
-// display 
+// display
 
 export const tempLogoAsciiArt = `
 ',:codxxdol:,'..........,:cloddxxxxxxxxxxxxxxxddddddddddoooooolllllllcccclllloooolcc:;,,'''',,,;;;;;;;;;;;,,,,''''..'..''''''',,,,,,,,;;;;;;;,,'''''''

@@ -1,5 +1,3 @@
-@import '../values/colors.css';
-
 main#content {
     display: flex;
 }
@@ -7,8 +5,8 @@ main#content {
 .terminals {
     min-width: 50%;
     height: fit-content;
-    }
-    /*display: flex;
+}
+/*display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5vh;
