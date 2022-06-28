@@ -10,18 +10,14 @@ export default function Events() {
                 { path: '~/events', contents: 'cat events.txt' }
             ]}
         >
-            <div>
-                {eventsDetails.map(
-                    ({ number, name, link, details, id }, index) => (
-                        <section className='terminal-text' key={index} id={id}>
-                            <h1>
-                                {number}: <LugLink link={link}>{name}</LugLink>
-                            </h1>
-                            <span>{details}</span>
-                        </section>
-                    )
-                )}
-            </div>
+            {eventsDetails.map(({ number, name, link, details, id }, index) => (
+                <section className='terminal-text' key={index} id={id}>
+                    <h1>
+                        {number}: <LugLink link={link}>{name}</LugLink>
+                    </h1>
+                    <span>{details}</span>
+                </section>
+            ))}
         </TerminalWindow>
     );
 }

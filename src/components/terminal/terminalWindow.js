@@ -4,6 +4,7 @@ import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 import { Colors } from '../../styles/colors.js';
 import './terminal.css';
 import './terminalText.css';
+
 export default function TerminalWindow({ prompts, children }) {
     return (
         <div className='terminal'>

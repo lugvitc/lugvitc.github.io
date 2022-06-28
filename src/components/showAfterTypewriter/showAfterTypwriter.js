@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import './showAfterTypewriter.css';
 
 export default function ShowAfterTypewriter({ text, textContainer, children }) {
@@ -14,12 +15,16 @@ export default function ShowAfterTypewriter({ text, textContainer, children }) {
         return () => clearTimeout(timeOut);
     }, [text, typingText]);
 
-    return typingText !== text ? (
-        textContainer(<span className='typewriter-text'>{typingText}</span>)
-    ) : (
-        <>
-            {textContainer(text)}
-            {children}
-        </>
-    );
+    if (typingText !== text)
+        return textContainer(
+            <span className='typewriter-text'>{typingText}</span>
+        );
+    else
+        return (
+            <>
+                {textContainer(text)}
+                {children}
+            </>
+        );
 }
+
