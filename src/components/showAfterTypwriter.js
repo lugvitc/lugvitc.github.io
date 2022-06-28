@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './showAfterTypewriter.css';
 
 export default function ShowAfterTypewriter({ text, textContainer, children }) {
     const [typingText, setTypingText] = useState('');
