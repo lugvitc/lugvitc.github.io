@@ -64,8 +64,7 @@
     #top-bar-links {
         flex-direction: column;
     }
-}
-@media only screen and (max-width: 1024px) {
+
     .top-bar-element-clickable:hover {
         transform: translateX(10px);
     }
