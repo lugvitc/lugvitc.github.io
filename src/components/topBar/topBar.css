@@ -18,11 +18,6 @@
     margin-right: 2px;
 }
 
-.top-bar-settings > svg {
-    fill: var(--nord3);
-    cursor: pointer;
-}
-
 .top-bar-element-non-clickable {
     border-color: var(--nord2);
     height: auto;

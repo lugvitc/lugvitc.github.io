@@ -8,12 +8,15 @@ import './settings.css';
 
 export default function TopBar({ topBarLinks }) {
     const settingsDialog = useRef(null);
+    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
 
     const openSettings = () => {
+        setSettingsDialogOpen(true);
         if (settingsDialog.current) settingsDialog.current.showModal();
     };
 
     const closeSettings = () => {
+        setSettingsDialogOpen(false);
         if (settingsDialog.current) settingsDialog.current.close();
     };
 
@@ -49,8 +52,13 @@ export default function TopBar({ topBarLinks }) {
             <div className='top-bar-element-non-clickable'>
                 <TopBarTimeDate />
             </div>
-            <div className='top-bar-settings' onClick={openSettings}>
+            <div
+                className={`top-bar-settings ${
+                    settingsDialogOpen ? 'open' : 'close'
+                }`}
+            >
                 <svg
+                    onClick={openSettings}
                     xmlns='http://www.w3.org/2000/svg'
                     enableBackground='new 0 0 24 24'
                     height='24px'
