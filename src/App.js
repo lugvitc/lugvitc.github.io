@@ -3,10 +3,8 @@ import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Home from './pages/home';
 import Events from './pages/events/events';
 
-import { dockItems } from './content/dockItems';
-import { topBarLinks } from './content/topBarLinks';
-import TopBar from './components/topBar';
-import Dock from './components/dock';
+import TopBar from './components/topBar/topBar';
+import Dock from './components/dock/dock';
 
 export default function App() {
     return (
@@ -16,9 +14,9 @@ export default function App() {
                     path='/'
                     element={
                         <>
-                            <TopBar navs={topBarLinks} />
+                            <TopBar />
                             <main id='content'>
-                                <Dock items={dockItems} />
+                                <Dock />
                                 <div className='terminals'>
                                     <Outlet />
                                 </div>

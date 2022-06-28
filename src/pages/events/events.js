@@ -2,8 +2,7 @@ import LugLink from '../../components/terminal/lugLink';
 import TerminalPrompt from '../../components/terminal/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import { eventsDetails } from './eventsDetails';
-import '../../components/typeWriter.css';
-import { TypeAnimation } from '../../components/typeWriter.js';
+import { TypeAnimation } from '../../components/typeWriter/typeWriter.js';
 
 const firstText = 'cd events';
 const secondText = 'cat events.txt';

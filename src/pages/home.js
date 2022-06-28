@@ -1,8 +1,7 @@
 import { Colors } from '../styles/colors';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import TerminalPrompt from '../components/terminal/terminalPrompt';
-import '../components/typeWriter.css';
-import { TypeAnimation } from '../components/typeWriter.js';
+import { TypeAnimation } from '../components/typeWriter/typeWriter.js';
 
 const firstText = 'sudo lug';
 const secondText = '***************';
