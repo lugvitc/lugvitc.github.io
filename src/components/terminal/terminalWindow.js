@@ -5,8 +5,8 @@ import './terminalText.css';
 
 export default function TerminalWindow({ children }) {
     return (
-        <article className='terminal'>
-            <header className='terminal-dots'>
+        <div className='terminal'>
+            <div className='terminal-dots'>
                 <div
                     className='terminal-dot'
                     style={{ backgroundColor: Colors.nord11 }}
@@ -19,10 +19,9 @@ export default function TerminalWindow({ children }) {
                     className='terminal-dot'
                     style={{ backgroundColor: Colors.nord14 }}
                 />
-            </header>
-            <article className='terminal-contents terminal-text'>
-                {children}
-            </article>
-        </article>
+            </div>
+            <div className='terminal-contents terminal-text'>{children}</div>
+        </div>
     );
 }
+
