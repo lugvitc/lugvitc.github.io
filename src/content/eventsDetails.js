@@ -5,7 +5,7 @@ import winnerTwo from './../images/adrenaline/winner-two.jpg';
 
 const imgStyle = {
     width: '100%',
-    height: 'auto',
+    height: 'auto'
 };
 
 export const eventsDetails = [
@@ -23,6 +23,7 @@ export const eventsDetails = [
                 <br />
                 <br />
                 <img
+                    loading='lazy'
                     style={imgStyle}
                     src={speaker}
                     alt='The guest speaker enlightening students about FOSS'
@@ -48,6 +49,7 @@ export const eventsDetails = [
                         <br />
                         <br />
                         <img
+                            loading='lazy'
                             style={imgStyle}
                             src={winnerOne}
                             alt='V Maheysh, Suriyakrishnan S and Mithun P receiving their prize'
@@ -70,6 +72,7 @@ export const eventsDetails = [
                         <br />
                         <br />
                         <img
+                            loading='lazy'
                             style={imgStyle}
                             src={winnerTwo}
                             alt='Divyashree S, Aravinda B and Amudhini P K receiving their prize'
@@ -87,7 +90,7 @@ export const eventsDetails = [
                 /* add lines between events */}
                 <hr />
             </>
-        ),
+        )
     },
     {
         number: '01',
@@ -100,6 +103,7 @@ export const eventsDetails = [
                 upcoming event for participants to show-off their open-source
                 skills and get a chance to get their works published.
             </>
-        ),
-    },
+        )
+    }
 ];
+
