@@ -7,6 +7,7 @@ import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 import { Colors } from '../../styles/colors.js';
 import './terminal.css';
 import './terminalText.css';
+import TerminalDots from './terminalDots.js';
 
 export default function TerminalWindow({
     prompts,
@@ -29,26 +30,11 @@ export default function TerminalWindow({
 
     return (
         <div className='terminal'>
-            <div className='terminal-dots'>
-                <div
-                    className='terminal-dot'
-                    style={{
-                        backgroundColor: Colors.nord11,
-                        cursor: onClickRed ? 'pointer' : 'auto'
-                    }}
-                    onClick={onClickRed}
-                />
-                <div
-                    className='terminal-dot'
-                    style={{ backgroundColor: Colors.nord13 }}
-                    onClick={onClickYellow}
-                />
-                <div
-                    className='terminal-dot'
-                    style={{ backgroundColor: Colors.nord14 }}
-                    onClick={onClickGreen}
-                />
-            </div>
+            <TerminalDots
+                onClickRed={onClickRed}
+                onClickYellow={onClickYellow}
+                onClickGreen={onClickGreen}
+            />
             <div className='terminal-contents terminal-text'>
                 {prompts ? (
                     prompts.reduceRight(
