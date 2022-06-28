@@ -6,7 +6,7 @@ import TopBarTimeDate from './topBarTimeDate';
 import './topBar.css';
 import './settings.css';
 
-export default function TopBar({ topBarLinks }) {
+export default function TopBar({ refer, topBarLinks }) {
     const settingsDialog = useRef(null);
     const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
 
@@ -32,7 +32,7 @@ export default function TopBar({ topBarLinks }) {
     }, [showAnimations]);
 
     return (
-        <header id='top-bar'>
+        <header ref={refer} id='top-bar'>
             <nav id='top-bar-links'>
                 {topBarLinks.map((nav, index) => (
                     <NavLink

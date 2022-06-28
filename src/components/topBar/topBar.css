@@ -4,6 +4,10 @@
     display: flex;
     justify-content: flex-end;
     font-size: small;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 #top-bar-links {

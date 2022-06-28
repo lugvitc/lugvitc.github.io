@@ -6,6 +6,7 @@ import Events from './pages/events/events';
 import TopBar from './components/topBar/topBar';
 import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
+import { useEffect, useRef, useState } from 'react';
 
 export default function App() {
     const pages = [
@@ -25,6 +26,17 @@ export default function App() {
             component: <LearnLinux />
         }
     ];
+
+    const [mainTopMargin, setMainTopMargin] = useState('0');
+
+    const topBarRef = useRef(null);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setMainTopMargin(`${topBarRef.current.clientHeight}px`);
+        });
+    });
+
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
             <Routes>
@@ -32,8 +44,14 @@ export default function App() {
                     path='/'
                     element={
                         <>
-                            <TopBar topBarLinks={pages} />
-                            <main id='content'>
+                            <TopBar refer={topBarRef} topBarLinks={pages} />
+                            <main
+                                style={{
+                                    marginTop: mainTopMargin,
+                                    minHeight: `calc(100vh - ${mainTopMargin})`
+                                }}
+                                id='content'
+                            >
                                 <Dock />
                                 <div className='terminals'>
                                     <Outlet />
