@@ -32,10 +32,12 @@ export default function App() {
     const topBarRef = useRef(null);
 
     useEffect(() => {
+        setMainTopMargin(`${topBarRef.current.clientHeight}px`);
+
         window.addEventListener('resize', () => {
             setMainTopMargin(`${topBarRef.current.clientHeight}px`);
         });
-    });
+    }, []);
 
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
