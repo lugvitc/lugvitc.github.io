@@ -20,7 +20,7 @@ export default function Events() {
                     </span>{' '}
                 </TerminalPrompt>
             </section>
-            {typingText == 'cd events' ? (
+            {typingText === 'cd events' ? (
                 <div>
                     <TerminalPrompt path='~/events'>
                         {' '}
@@ -29,7 +29,7 @@ export default function Events() {
                             {typingSecondText}{' '}
                         </span>
                     </TerminalPrompt>
-                    {typingSecondText == 'cat events.txt' ? (
+                    {typingSecondText === 'cat events.txt' ? (
                         <div>
                             {eventsDetails.map(
                                 (

@@ -16,7 +16,7 @@ export default function Home() {
                 {' '}
                 <span className='typeWriteFirstText'>{typingText}</span>{' '}
             </TerminalPrompt>
-            {typingText == 'sudo lug' ? (
+            {typingText === 'sudo lug' ? (
                 <div>
                     {' '}
                     [sudo] password for lugvitc:{' '}
@@ -28,7 +28,7 @@ export default function Home() {
                         {typingSecondText}{' '}
                     </span>
                     <br />
-                    {typingSecondText == '***************' ? (
+                    {typingSecondText === '***************' ? (
                         <div>
                             <span style={{ color: Colors.nord14 }}>
                                 access granted...
