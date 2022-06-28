@@ -5,7 +5,6 @@ import TerminalPrompt from './terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
 import './terminal.css';
-import './terminalText.css';
 import TerminalDots from './terminalDots.js';
 
 export default function TerminalWindow({
@@ -34,7 +33,7 @@ export default function TerminalWindow({
                 onClickYellow={onClickYellow}
                 onClickGreen={onClickGreen}
             />
-            <div className='terminal-contents terminal-text'>
+            <div className='terminal-body'>
                 {prompts ? (
                     prompts.reduceRight(
                         (acc, curr) => (
@@ -44,15 +43,19 @@ export default function TerminalWindow({
                                         {text}
                                     </TerminalPrompt>
                                 )}
-                                text={curr.contents}
+                                text={curr.command}
                             >
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div /* ref={ref} */>{children}</div>
+                        <div className='terminal-contents' /* ref={ref} */>
+                            {children}
+                        </div>
                     )
                 ) : (
-                    <div /* ref={ref} */>{children}</div>
+                    <div className='terminal-contents' /* ref={ref} */>
+                        {children}
+                    </div>
                 )}
             </div>
         </div>

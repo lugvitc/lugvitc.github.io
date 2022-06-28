@@ -1,4 +1,4 @@
-import LugLink from '../lugLink';
+import LugLink from '../lugLink/lugLink';
 import { dockItems } from './dockItems';
 
 import './dock.css';

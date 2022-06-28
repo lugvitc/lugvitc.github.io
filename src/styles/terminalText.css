@@ -1,0 +1,19 @@
+.terminal-text {
+    font-family: consolas, 'Courier New', Courier, monospace;
+    color: var(--nord4);
+}
+
+.terminal-text::selection {
+    background-color: var(--nord7);
+    color: var(--nord0);
+}
+
+.terminal-text ::selection {
+    background-color: var(--nord7);
+    color: var(--nord0);
+}
+
+br::selection {
+    background-color: transparent;
+}
+

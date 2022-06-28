@@ -1,9 +1,9 @@
-import './terminal/terminalText.css';
+import './lugLink.css';
 
 export default function LugLink({ link, children }) {
     return (
         <a
-            className='terminal-text-link'
+            className='lug-link'
             href={link}
             target='_blank'
             rel='noopener noreferrer'

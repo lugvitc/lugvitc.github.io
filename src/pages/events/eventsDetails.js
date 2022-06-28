@@ -15,28 +15,26 @@ export const eventsDetails = [
         id: 'adrenaline',
         details: (
             <>
-                Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day
-                event for participants to show-off their familiarity with
-                open-source technologies. Participants gathered to demonstrate
-                their projects to an industry expert.
-                <br />
-                <br />
+                <p>
+                    Held on the 17th March, 2022, Adreanline/FOSS Day was a
+                    one-day event for participants to show-off their familiarity
+                    with open-source technologies. Participants gathered to
+                    demonstrate their projects to an industry expert.
+                </p>
                 <img
                     loading='lazy'
                     style={imgStyle}
                     src={speaker}
                     alt='The guest speaker enlightening students about FOSS'
                 />
-                <br />
-                <br />
-                A total of 20 participants took part with 1-3 pariticipants in
-                one team. They used FOSS (free and open-source software)
-                resources of a number of fields including computer vision, web
-                scraping, web automation and blockchain technologies.
-                <br />
-                <br />
+                <p>
+                    <br />A total of 20 participants took part with 1-3
+                    pariticipants in one team. They used FOSS (free and
+                    open-source software) resources from a number of fields
+                    including computer vision, web scraping, web automation and
+                    blockchain technologies.
+                </p>
                 The two winning teams were:
-                <br />
                 <ol>
                     <li>
                         <em>
@@ -60,7 +58,7 @@ export const eventsDetails = [
                         machine learning libraries. They targeted a wide range
                         of disabilities to make the system as inclusive as
                         possible. <br />
-                    </li>{' '}
+                    </li>
                     <br />
                     <li>
                         <em>
@@ -82,9 +80,11 @@ export const eventsDetails = [
                         popular blockchain technologies. <br />
                     </li>
                 </ol>
-                The event was a success with the students learning about the
-                importance of FOSS and getting to know the numerous avenues
-                where open-source tools are used.
+                <p>
+                    The event was a success with the students learning about the
+                    importance of FOSS and getting to know the numerous avenues
+                    where open-source tools are used.
+                </p>
             </>
         )
     }

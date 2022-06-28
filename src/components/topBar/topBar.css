@@ -4,6 +4,11 @@
     top: 0;
 
     z-index: 1;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .top-bar-contents {
@@ -11,6 +16,7 @@
     color: var(--nord4);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     font-size: small;
 }
 

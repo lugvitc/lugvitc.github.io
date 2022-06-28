@@ -17,7 +17,7 @@ export default function ShowAfterTypewriter({ text, textContainer, children }) {
             }, 250);
             return () => clearTimeout(timeOut);
         }
-    }, [text, typingText]);
+    }, [text, typingText, showAnimations]);
 
     if (showAnimations && typingText !== text)
         return textContainer(

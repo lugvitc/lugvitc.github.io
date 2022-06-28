@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import Home from './pages/home';
@@ -6,7 +7,8 @@ import Events from './pages/events/events';
 import TopBar from './components/topBar/topBar';
 import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
-import { useEffect, useRef, useState } from 'react';
+
+import './styles/terminalText.css';
 
 export default function App() {
     const pages = [
@@ -57,7 +59,7 @@ export default function App() {
                                 id='content'
                             >
                                 <Dock />
-                                <div className='terminals'>
+                                <div className='terminals terminal-text'>
                                     <Outlet />
                                 </div>
                             </main>

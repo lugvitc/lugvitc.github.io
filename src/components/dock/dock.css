@@ -8,6 +8,11 @@ aside#dock {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .dock-icon {
@@ -16,7 +21,7 @@ aside#dock {
     height: 30px;
 }
 
-.dock-icon:hover{
+.dock-icon:hover {
     transform: translateX(10px);
 }
 
