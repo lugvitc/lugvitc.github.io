@@ -1,4 +1,4 @@
-article.terminal {
+.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
@@ -34,7 +34,7 @@ article.terminal {
 }
 
 @media only screen and (max-width: 1024px) {
-    article.terminal {
+    .terminal {
         margin: 5vh 2vw;
     }
 }

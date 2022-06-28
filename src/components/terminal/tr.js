@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function TR({ text }) {
+export default function TR({ text, textContainer, children }) {
     const [typingText, setTypingText] = useState('');
 
     useEffect(() => {
@@ -14,8 +14,11 @@ export default function TR({ text }) {
     }, [text, typingText]);
 
     return typingText !== text ? (
-        <span className='typewriter-text'>{typingText}</span>
+        textContainer(<span className='typewriter-text'>{typingText}</span>)
     ) : (
-        <span>{text}</span>
+        <>
+            {textContainer(text)}
+            {children}
+        </>
     );
 }
