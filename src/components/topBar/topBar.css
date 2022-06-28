@@ -2,13 +2,25 @@
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: small;
 }
 
 #top-bar-links {
     display: flex;
     flex-direction: row;
+    margin-right: auto;
+}
+
+.top-bar-settings {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.top-bar-settings > svg {
+    fill: var(--nord3);
+    cursor: pointer;
 }
 
 .top-bar-element-non-clickable {

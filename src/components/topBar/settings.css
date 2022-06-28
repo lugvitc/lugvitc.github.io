@@ -1,0 +1,14 @@
+dialog.settings {
+    border-radius: 10px;
+    border: solid var(--nord0);
+    background-color: var(--nord1);
+    /* padding: 10px; */
+}
+
+dialog.settings::backdrop {
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+.settings-contents {
+    margin: 10px;
+}
