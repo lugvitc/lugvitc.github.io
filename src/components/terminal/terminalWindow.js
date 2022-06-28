@@ -1,10 +1,9 @@
-import { useCallback, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useCallback, useRef } from 'react';
+// import { useLocation } from 'react-router-dom';
 
 import TerminalPrompt from './terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
-import { Colors } from '../../styles/colors.js';
 import './terminal.css';
 import './terminalText.css';
 import TerminalDots from './terminalDots.js';
@@ -16,17 +15,17 @@ export default function TerminalWindow({
     onClickYellow,
     onClickGreen
 }) {
-    const location = useLocation();
+    // const location = useLocation();
 
-    const ref = useCallback(node => {
-        if (node) {
-            // console.log(location.pathname);
-            window.localStorage.setItem(
-                location.pathname,
-                new Date().toISOString()
-            );
-        }
-    }, []);
+    // const ref = useCallback(node => {
+    //     if (node) {
+    //         // console.log(location.pathname);
+    //         window.localStorage.setItem(
+    //             location.pathname,
+    //             new Date().toISOString()
+    //         );
+    //     }
+    // }, []);
 
     return (
         <div className='terminal'>
@@ -50,10 +49,10 @@ export default function TerminalWindow({
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div ref={ref}>{children}</div>
+                        <div /* ref={ref} */>{children}</div>
                     )
                 ) : (
-                    <div ref={ref}>{children}</div>
+                    <div /* ref={ref} */>{children}</div>
                 )}
             </div>
         </div>
