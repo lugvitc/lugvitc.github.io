@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function TR({ text, textContainer, children }) {
+export default function ShowAfterTypewriter({ text, textContainer, children }) {
     const [typingText, setTypingText] = useState('');
 
     useEffect(() => {
