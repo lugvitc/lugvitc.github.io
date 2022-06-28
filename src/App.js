@@ -32,11 +32,13 @@ export default function App() {
     const topBarRef = useRef(null);
 
     useEffect(() => {
-        setMainTopMargin(`${topBarRef.current.clientHeight}px`);
-
-        window.addEventListener('resize', () => {
+        const setCorrectMargin = () =>
             setMainTopMargin(`${topBarRef.current.clientHeight}px`);
-        });
+
+        setCorrectMargin();
+        window.addEventListener('resize', setCorrectMargin);
+
+        return () => window.removeEventListener('resize', setCorrectMargin);
     }, []);
 
     return (
