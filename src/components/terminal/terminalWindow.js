@@ -8,12 +8,18 @@ import { Colors } from '../../styles/colors.js';
 import './terminal.css';
 import './terminalText.css';
 
-export default function TerminalWindow({ prompts, children }) {
+export default function TerminalWindow({
+    prompts,
+    children,
+    onClickRed,
+    onClickYellow,
+    onClickGreen
+}) {
     const location = useLocation();
 
     const ref = useCallback(node => {
         if (node) {
-            console.log(location.pathname);
+            // console.log(location.pathname);
             window.localStorage.setItem(
                 location.pathname,
                 new Date().toISOString()
@@ -26,31 +32,41 @@ export default function TerminalWindow({ prompts, children }) {
             <div className='terminal-dots'>
                 <div
                     className='terminal-dot'
-                    style={{ backgroundColor: Colors.nord11 }}
+                    style={{
+                        backgroundColor: Colors.nord11,
+                        cursor: onClickRed ? 'pointer' : 'auto'
+                    }}
+                    onClick={onClickRed}
                 />
                 <div
                     className='terminal-dot'
                     style={{ backgroundColor: Colors.nord13 }}
+                    onClick={onClickYellow}
                 />
                 <div
                     className='terminal-dot'
                     style={{ backgroundColor: Colors.nord14 }}
+                    onClick={onClickGreen}
                 />
             </div>
             <div className='terminal-contents terminal-text'>
-                {prompts.reduceRight(
-                    (acc, curr) => (
-                        <ShowAfterTypewriter
-                            textContainer={text => (
-                                <TerminalPrompt path={curr.path}>
-                                    {text}
-                                </TerminalPrompt>
-                            )}
-                            text={curr.contents}
-                        >
-                            {acc}
-                        </ShowAfterTypewriter>
-                    ),
+                {prompts ? (
+                    prompts.reduceRight(
+                        (acc, curr) => (
+                            <ShowAfterTypewriter
+                                textContainer={text => (
+                                    <TerminalPrompt path={curr.path}>
+                                        {text}
+                                    </TerminalPrompt>
+                                )}
+                                text={curr.contents}
+                            >
+                                {acc}
+                            </ShowAfterTypewriter>
+                        ),
+                        <div ref={ref}>{children}</div>
+                    )
+                ) : (
                     <div ref={ref}>{children}</div>
                 )}
             </div>
