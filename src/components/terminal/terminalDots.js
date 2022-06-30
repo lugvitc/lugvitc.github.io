@@ -11,8 +11,11 @@ export default function TerminalDots({
     onClickYellow,
     onClickGreen
 }) {
+    const areDotsReversed =
+        window.localStorage.getItem('reverse-terminal-dots') === 'true';
+
     return (
-        <div className='terminal-dots'>
+        <div className={`terminal-dots ${areDotsReversed && 'reversed'}`}>
             <div
                 className='terminal-dot'
                 style={{

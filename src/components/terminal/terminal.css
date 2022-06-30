@@ -23,6 +23,11 @@
     gap: 5px;
 }
 
+.terminal-dots.reversed {
+    flex-direction: row-reverse;
+    right: 0;
+}
+
 .terminal-dot {
     border-radius: 15px;
     height: 15px;
