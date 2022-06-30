@@ -6,7 +6,7 @@ export default function Home() {
     const prompts = [{ path: '~', command: 'sudo lug' }];
 
     return (
-        <TerminalWindow prompts={prompts}>
+        <TerminalWindow title='lugvitc' prompts={prompts}>
             [sudo] password for lugvitc:{' '}
             <ShowAfterTypewriter
                 textContainer={text => (

@@ -59,7 +59,7 @@ export default function App() {
                                 id='content'
                             >
                                 <Dock />
-                                <div className='terminals terminal-text'>
+                                <div className='terminals'>
                                     <Outlet />
                                 </div>
                             </main>

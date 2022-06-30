@@ -12,7 +12,8 @@ export default function TerminalWindow({
     children,
     onClickRed,
     onClickYellow,
-    onClickGreen
+    onClickGreen,
+    title
 }) {
     // const location = useLocation();
 
@@ -28,12 +29,16 @@ export default function TerminalWindow({
 
     return (
         <div className='terminal'>
-            <TerminalDots
-                onClickRed={onClickRed}
-                onClickYellow={onClickYellow}
-                onClickGreen={onClickGreen}
-            />
-            <div className='terminal-body'>
+            <div className='terminal-titlebar'>
+                <TerminalDots
+                    onClickRed={onClickRed}
+                    onClickYellow={onClickYellow}
+                    onClickGreen={onClickGreen}
+                />
+                <div className='terminal-title'>{title}</div>
+            </div>
+
+            <div className='terminal-body  terminal-text'>
                 {prompts ? (
                     prompts.reduceRight(
                         (acc, curr) => (

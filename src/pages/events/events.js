@@ -9,6 +9,7 @@ export default function Events() {
                 { path: '~', command: 'cd events' },
                 { path: '~/events', command: 'cat events.txt' }
             ]}
+            title='Events'
         >
             {eventsDetails.map(({ number, name, link, details, id }, index) => (
                 <section key={index} id={id}>
