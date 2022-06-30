@@ -1,5 +1,4 @@
-import TerminalWindow from '../components/terminal/terminalWindow';
-import '../components/typeWriter.css';
+import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +28,7 @@ export default function Confirm({ nextStep, values, previousStep }) {
     };
 
     return (
-        <TerminalWindow>
+        <TerminalWindow title='Confirm Submission'>
             <div className='lug-form'>
                 <div className='form-start'>Confirm your Details...</div>
                 <div className='form-field'>Name : {values.name}</div>

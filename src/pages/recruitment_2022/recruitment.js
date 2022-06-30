@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import TerminalPrompt from '../components/terminal/terminalPrompt';
-import TerminalWindow from '../components/terminal/terminalWindow';
+import TerminalWindow from '../../components/terminal/terminalWindow';
 import RecruitmentStepOne from './recruitmentStep1';
 import RecruitmentStepTwo from './recruitmentStep2';
 import RecruitmentStepThree from './recruitmentStep3';
@@ -80,23 +79,22 @@ function RecruitmentStep() {
 export default function UserForm() {
     return (
         <>
-            <TerminalWindow>
-                <section id='terminal'>
-                    <TerminalPrompt path='~'> cd recruitment </TerminalPrompt>
-                </section>
-                <TerminalPrompt path='~/recruitment'>
-                    {' '}
-                    ./recruitment.exe -v 2022{' '}
-                </TerminalPrompt>
-                <br />
-                <div>
-                    Hey there! The Linux Club Recruitments are here! Are you
-                    crazy about Linux? Do you get excited by the command line?
-                    Are you a beginner looking for exploring Linux? Open Source?
-                    Cybersecurity? We have it all! Join the coolest club out of
-                    the herd to discuss, share and lead all our ideas to
-                    Success! We hope you find our will equal to yours :D
-                </div>
+            <TerminalWindow
+                title='Recruitment 2022'
+                prompts={[
+                    { path: '~', command: 'cd recruitment' },
+                    {
+                        path: '~/recruitment',
+                        command: './recruitment.exe -v 2022'
+                    }
+                ]}
+            >
+                Hey there! The Linux Club Recruitments are here! Are you crazy
+                about Linux? Do you get excited by the command line? Are you a
+                beginner looking for exploring Linux? Open Source?
+                Cybersecurity? We have it all! Join the coolest club out of the
+                herd to discuss, share and lead all our ideas to Success! We
+                hope you find our will equal to yours :D
             </TerminalWindow>
             <RecruitmentStep />
         </>

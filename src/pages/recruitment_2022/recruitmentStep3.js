@@ -1,6 +1,5 @@
 import TerminalPrompt from '../../components/terminal/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
-import '../components/typeWriter.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
@@ -41,7 +40,7 @@ export default function RecruitmentStepThree({
     };
 
     return (
-        <TerminalWindow>
+        <TerminalWindow title='Step 3'>
             <form className='lug-form'>
                 <div className='form-start'>Step 3 of 3</div>
                 <div>

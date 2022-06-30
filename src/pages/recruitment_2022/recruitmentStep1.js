@@ -1,5 +1,4 @@
-import TerminalWindow from '../components/terminal/terminalWindow';
-import '../components/typeWriter.css';
+import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +14,7 @@ export default function RecruitmentStepOne({ values, nextStep, handleChange }) {
     };
 
     return (
-        <TerminalWindow>
+        <TerminalWindow title='Step 1'>
             <form className='lug-form' onSubmit={submit}>
                 <div className='form-start'>Step 1 of 3</div>
                 <div className='form-field'>

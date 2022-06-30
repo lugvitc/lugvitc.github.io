@@ -1,10 +1,8 @@
-import TerminalPrompt from '../components/terminal/terminalPrompt';
-import TerminalWindow from '../components/terminal/terminalWindow';
-import '../components/typeWriter.css';
+import TerminalWindow from '../../components/terminal/terminalWindow';
 
 export default function Success() {
     return (
-        <TerminalWindow>
+        <TerminalWindow title='Submission Confirmed'>
             <div className='form-start'>Success...!</div>
             <div>
                 Thank you for onboarding with the Linux Club! We will contact

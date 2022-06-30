@@ -9,6 +9,7 @@ import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
 import './styles/terminalText.css';
+// import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
     const pages = [
@@ -27,6 +28,11 @@ export default function App() {
             link: '/learn-linux',
             component: <LearnLinux />
         }
+        //, {
+        //     title: 'Recruitment 2022',
+        //     link: '/recruitment',
+        //     component: <UserForm />
+        // }
     ];
 
     const [mainTopMargin, setMainTopMargin] = useState('0');
