@@ -105,6 +105,13 @@
         color: var(--nord10);
     }
 
+    .top-bar-element-clickable-active::after {
+        content: '';
+    }
+    .top-bar-element-clickable-inactive::after {
+        content: '';
+    }
+
     .bottom-strip {
         display: none;
     }
