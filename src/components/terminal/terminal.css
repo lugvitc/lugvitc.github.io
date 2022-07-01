@@ -2,11 +2,7 @@
     border-radius: 10px;
     background-color: var(--header-footer-black);
     min-width: 50%;
-    height: fit-content;
-}
-
-.terminals > .terminal {
-    margin: 5vh 5vw;
+    /* height: fit-content; */
 }
 
 .terminal-titlebar {
@@ -76,11 +72,5 @@
 
 .terminal-contents {
     margin-top: 1rem;
-}
-
-@media only screen and (max-width: 1024px) {
-    .terminals > .terminal {
-        margin: 5vh 2vw;
-    }
 }
 

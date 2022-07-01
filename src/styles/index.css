@@ -6,6 +6,41 @@ body {
     font-size: 1.1rem;
 }
 
+main#content {
+    display: flex;
+    padding-right: 2rem;
+    padding-block: 1rem;
+    /* min-height set in app.js */
+}
+
+#terminals {
+    flex: auto;
+}
+
+#terminals > .terminal {
+    max-height: 100%;
+}
+
+aside#dock {
+    flex: none;
+    margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    main#content {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        padding-inline: 2rem;
+        padding-bottom: 0;
+    }
+
+    aside#dock {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+}
+
 hr {
     background-color: var(--header-footer-black);
 }

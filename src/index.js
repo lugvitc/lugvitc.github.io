@@ -5,7 +5,6 @@ import App from './App';
 import './styles/colors.css';
 import './styles/index.css';
 import './styles/forms.css';
-import './styles/pages.css';
 
 ReactDOM.render(
     <React.StrictMode>
