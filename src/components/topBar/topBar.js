@@ -6,6 +6,7 @@ import TerminalWindow from '../terminal/terminalWindow';
 
 import './topBar.css';
 import './settings.css';
+import useSettings from '../../hooks/useSettings';
 
 export default function TopBar({ refer, topBarLinks }) {
     const settingsDialog = useRef(null);
@@ -21,16 +22,12 @@ export default function TopBar({ refer, topBarLinks }) {
         if (settingsDialog.current) settingsDialog.current.close();
     };
 
-    const [showAnimations, setShowAnimations] = useState(
-        window.localStorage.getItem('show-animations') === 'true'
-    );
-
-    useEffect(() => {
-        window.localStorage.setItem(
-            'show-animations',
-            showAnimations ? 'true' : 'false'
-        );
-    }, [showAnimations]);
+    const {
+        animationsOn,
+        setAnimationsOn,
+        terminalDotsOnLeft,
+        setTerminalDotsOnLeft
+    } = useSettings();
 
     return (
         <header ref={refer} id='top-bar'>
@@ -75,19 +72,28 @@ export default function TopBar({ refer, topBarLinks }) {
                     </svg>
                 </div>
             </div>
-            <dialog
-                className='settings terminal-text'
-                ref={settingsDialog}
-                open={false}
-            >
-                <TerminalWindow onClickRed={closeSettings}>
+            <dialog className='settings' ref={settingsDialog} open={false}>
+                <TerminalWindow title='Settings' onClickRed={closeSettings}>
                     <h3>Settings</h3>
-                    <input
-                        type='checkbox'
-                        checked={showAnimations}
-                        onChange={e => setShowAnimations(x => !x)}
-                    />{' '}
-                    Show animations
+                    <div>
+                        <input
+                            type='checkbox'
+                            checked={animationsOn}
+                            onChange={e => setAnimationsOn(!animationsOn)}
+                        />{' '}
+                        Show animations
+                    </div>
+                    <div>
+                        <input
+                            type='checkbox'
+                            checked={terminalDotsOnLeft}
+                            onChange={e => {
+                                console.log(!terminalDotsOnLeft);
+                                setTerminalDotsOnLeft(!terminalDotsOnLeft);
+                            }}
+                        />{' '}
+                        Terminal dots on left
+                    </div>
                 </TerminalWindow>
             </dialog>
             <div className='bottom-strip' />

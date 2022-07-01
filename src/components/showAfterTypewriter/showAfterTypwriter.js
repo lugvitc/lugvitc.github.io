@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
+import useSettings from '../../hooks/useSettings';
 
 import './showAfterTypewriter.css';
 
 export default function ShowAfterTypewriter({ text, textContainer, children }) {
     const [typingText, setTypingText] = useState('');
-    const showAnimations =
-        window.localStorage.getItem('show-animations') === 'true';
+    const { animationsOn } = useSettings();
 
     useEffect(() => {
-        if (showAnimations) {
+        if (animationsOn) {
             const nextTypingText = text.slice(0, typingText.length + 1);
             if (nextTypingText === typingText) return;
 
@@ -17,9 +17,9 @@ export default function ShowAfterTypewriter({ text, textContainer, children }) {
             }, 250);
             return () => clearTimeout(timeOut);
         }
-    }, [text, typingText, showAnimations]);
+    }, [text, typingText, animationsOn]);
 
-    if (showAnimations && typingText !== text)
+    if (animationsOn && typingText !== text)
         return textContainer(
             <span className='typewriter-text'>{typingText}</span>
         );

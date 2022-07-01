@@ -1,3 +1,4 @@
+import useSettings from '../../hooks/useSettings.js';
 import { Colors } from '../../styles/colors.js';
 
 export default function TerminalDots({
@@ -5,11 +6,12 @@ export default function TerminalDots({
     onClickYellow,
     onClickGreen
 }) {
-    const areDotsReversed =
-        window.localStorage.getItem('reverse-terminal-dots') === 'true';
+    const { terminalDotsOnLeft } = useSettings();
 
     return (
-        <div className={`terminal-dots ${areDotsReversed && 'reversed'}`}>
+        <div
+            className={`terminal-dots ${terminalDotsOnLeft ? 'left' : 'right'}`}
+        >
             <div
                 className='terminal-dot'
                 style={{
