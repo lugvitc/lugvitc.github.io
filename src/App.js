@@ -40,11 +40,7 @@ export default function App() {
 
     const topBarRef = useRef(null);
 
-    const { setDefaults } = useSettings();
-
     useEffect(() => {
-        setDefaults();
-
         const setCorrectMargin = () =>
             setMainTopMargin(`${topBarRef.current.clientHeight}px`);
 

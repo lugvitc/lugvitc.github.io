@@ -22,16 +22,16 @@ const animationsOnStore = create(set => ({
 
 const setDefaults = () => {
     if (!window.localStorage.getItem('animations-on')) {
-        window.localStorage.setItem('animations-on', 'true');
+        animationsOnStore(state => state.setAnimationsOn)(true);
     }
     if (!window.localStorage.getItem('terminal-dots-on-left')) {
-        window.localStorage.setItem('terminal-dots-on-left', 'true');
+        terminalDotsOnLeftStore(state => state.setTerminalDotsOnLeft)(true);
     }
 };
 
 export default function useSettings() {
+    setDefaults();
     return {
-        setDefaults,
         animationsOn: animationsOnStore(state => state.animationsOn),
         setAnimationsOn: animationsOnStore(state => state.setAnimationsOn),
         terminalDotsOnLeft: terminalDotsOnLeftStore(
