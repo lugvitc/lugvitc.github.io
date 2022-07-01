@@ -1,0 +1,21 @@
+main#content {
+    display: flex;
+}
+
+.terminals {
+    min-width: 50%;
+    height: fit-content;
+    flex: auto;
+}
+
+aside#dock {
+    flex: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    main#content {
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+        min-height: 100vh;
+    }
+}

@@ -1,0 +1,38 @@
+aside#dock {
+    border-radius: 0px 10px 10px 0px;
+    height: 90%;
+    background-color: var(--nord1);
+    padding: 10px;
+    margin: 5vh 0vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.dock-icon {
+    /* display: block; */
+    width: 30px;
+    height: 30px;
+}
+
+.dock-icon:hover {
+    transform: translateX(10px);
+}
+
+@media only screen and (max-width: 1024px) {
+    aside#dock {
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 10px 10px 0px 0px;
+        margin: 0px 2vw 0px 2vw;
+    }
+    .dock-icon:hover {
+        transform: translateY(-10px);
+    }
+}

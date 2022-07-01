@@ -1,8 +1,0 @@
-@import '../values/colors.css';
-
-footer {
-    bottom: 0;
-    background-color: var(--header-footer-black);
-    text-align: center;
-    color: var(--nord4)
-}

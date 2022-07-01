@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
-import './forms.css';
+
+import './styles/colors.css';
+import './styles/index.css';
+import './styles/forms.css';
+import './styles/pages.css';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -10,3 +13,4 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+

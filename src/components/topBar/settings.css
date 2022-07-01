@@ -1,0 +1,46 @@
+.top-bar-settings > svg {
+    fill: var(--nord3);
+    cursor: pointer;
+}
+
+.top-bar-settings > svg:hover,
+.top-bar-settings.open > svg {
+    fill: var(--nord10);
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+dialog.settings {
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+dialog.settings::backdrop {
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+.settings-contents {
+    margin: 10px;
+}
+
+.settings-toggle {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings-toggle:hover {
+    background-color: var(--nord2);
+}
+

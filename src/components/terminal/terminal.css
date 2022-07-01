@@ -1,28 +1,34 @@
-@import '../../values/colors.css';
-
-article.terminal {
+.terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
     padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
     min-width: 50%;
-    height: fit-content
+    height: fit-content;
 }
 
-.terminal-contents {
-    background-color: var(--nord1);
-    border-radius: 0px 0px 10px 10px;
-    padding: 30px;
-    /*padding-bottom: 0;*/
-    margin: 0px;
-    height: 100%;
-    width: 100%
+.terminal-titlebar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0.75rem;
 }
 
 .terminal-dots {
+    position: absolute;
     display: flex;
     gap: 5px;
-    margin: 10px 10px;
+}
+
+.terminal-dots.left {
+    flex-direction: row;
+    left: 0;
+}
+
+.terminal-dots.right {
+    flex-direction: row-reverse;
+    right: 0;
 }
 
 .terminal-dot {
@@ -35,8 +41,40 @@ article.terminal {
     filter: brightness(50%);
 }
 
+.terminal-title {
+    color: var(--nord4);
+    font-weight: bold;
+}
+
+.terminal-body {
+    background-color: var(--nord1);
+    border-radius: 0px 0px 10px 10px;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+}
+
+.terminal-prompt {
+    background-color: var(--nord1);
+}
+
+.prompt-user-system {
+    color: var(--nord11);
+}
+
+.prompt-path {
+    color: var(--nord13);
+}
+
+.prompt-command {
+    color: var(--nord14);
+}
+
+.terminal-contents {
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width: 1024px) {
-    article.terminal {
+    .terminal {
         margin: 5vh 2vw;
     }
 }
