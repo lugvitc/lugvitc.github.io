@@ -24,7 +24,6 @@ aside#dock {
         justify-content: center;
         flex-direction: row;
         border-radius: 10px 10px 0px 0px;
-        width: fit-content;
     }
     .dock-icon:hover {
         transform: translateY(-10px);
