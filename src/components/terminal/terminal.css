@@ -17,13 +17,16 @@
 
 .terminal-dots {
     position: absolute;
-    left: 0;
     display: flex;
-    flex-direction: row;
     gap: 5px;
 }
 
-.terminal-dots.reversed {
+.terminal-dots.left {
+    flex-direction: row;
+    left: 0;
+}
+
+.terminal-dots.right {
     flex-direction: row-reverse;
     right: 0;
 }
