@@ -9,6 +9,7 @@ import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
 import './styles/terminalText.css';
+import useSettings from './hooks/useSettings';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
@@ -39,7 +40,11 @@ export default function App() {
 
     const topBarRef = useRef(null);
 
+    const { setDefaults } = useSettings();
+
     useEffect(() => {
+        setDefaults();
+
         const setCorrectMargin = () =>
             setMainTopMargin(`${topBarRef.current.clientHeight}px`);
 

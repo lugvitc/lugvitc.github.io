@@ -84,8 +84,12 @@ export default function TopBar({ refer, topBarLinks }) {
                         className='settings-toggle'
                         onClick={() => setAnimationsOn(!animationsOn)}
                     >
-                        <input type='checkbox' checked={animationsOn} /> Show
-                        animations
+                        <input
+                            readOnly
+                            type='checkbox'
+                            checked={animationsOn}
+                        />{' '}
+                        Show animations
                     </div>
                     <div
                         className='settings-toggle'
@@ -93,7 +97,11 @@ export default function TopBar({ refer, topBarLinks }) {
                             setTerminalDotsOnLeft(!terminalDotsOnLeft)
                         }
                     >
-                        <input type='checkbox' checked={terminalDotsOnLeft} />{' '}
+                        <input
+                            readOnly
+                            type='checkbox'
+                            checked={terminalDotsOnLeft}
+                        />{' '}
                         Terminal dots on left
                     </div>
                 </TerminalWindow>

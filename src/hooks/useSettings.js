@@ -24,12 +24,17 @@ export default function useSettings() {
         }
     }));
 
-    const animationsOn = animationsOnStore(state => state.animationsOn);
-    const terminalDotsOnLeft = terminalDotsOnLeftStore(
-        state => state.terminalDotsOnLeft
-    );
+    const setDefaults = () => {
+        if (!window.localStorage.getItem('animations-on')) {
+            window.localStorage.setItem('animations-on', 'true');
+        }
+        if (!window.localStorage.getItem('terminal-dots-on-left')) {
+            window.localStorage.setItem('terminal-dots-on-left', 'true');
+        }
+    };
 
     return {
+        setDefaults,
         animationsOn: animationsOnStore(state => state.animationsOn),
         setAnimationsOn: animationsOnStore(state => state.setAnimationsOn),
         terminalDotsOnLeft: terminalDotsOnLeftStore(
@@ -40,3 +45,4 @@ export default function useSettings() {
         )
     };
 }
+
