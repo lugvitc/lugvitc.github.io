@@ -17,7 +17,7 @@ export default function useSettings() {
         animationsOn: window.localStorage.getItem('animations-on') === 'true',
         setAnimationsOn: val => {
             window.localStorage.setItem(
-                'animtaions-on',
+                'animations-on',
                 val ? 'true' : 'false'
             );
             set(state => ({ animationsOn: val }));
