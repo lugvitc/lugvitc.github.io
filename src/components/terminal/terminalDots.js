@@ -1,11 +1,5 @@
 import { Colors } from '../../styles/colors.js';
 
-/**
- * @param {(() => void) | undefined} onClickRed
- * @param {(() => void) | undefined} onClickYello
- * @param {(() => void) | undefined} onClickGreen
- */
-
 export default function TerminalDots({
     onClickRed,
     onClickYellow,
@@ -43,3 +37,4 @@ export default function TerminalDots({
         </div>
     );
 }
+
