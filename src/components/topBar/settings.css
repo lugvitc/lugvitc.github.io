@@ -32,3 +32,15 @@ dialog.settings::backdrop {
     margin: 10px;
 }
 
+.settings-toggle {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.settings-toggle:hover {
+    background-color: var(--nord2);
+}
+

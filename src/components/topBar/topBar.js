@@ -80,23 +80,20 @@ export default function TopBar({ refer, topBarLinks }) {
             <dialog className='settings' ref={settingsDialog} open={false}>
                 <TerminalWindow title='Settings' onClickRed={closeSettings}>
                     <h3>Settings</h3>
-                    <div>
-                        <input
-                            type='checkbox'
-                            checked={animationsOn}
-                            onChange={e => setAnimationsOn(!animationsOn)}
-                        />{' '}
-                        Show animations
+                    <div
+                        className='settings-toggle'
+                        onClick={() => setAnimationsOn(!animationsOn)}
+                    >
+                        <input type='checkbox' checked={animationsOn} /> Show
+                        animations
                     </div>
-                    <div>
-                        <input
-                            type='checkbox'
-                            checked={terminalDotsOnLeft}
-                            onChange={e => {
-                                console.log(!terminalDotsOnLeft);
-                                setTerminalDotsOnLeft(!terminalDotsOnLeft);
-                            }}
-                        />{' '}
+                    <div
+                        className='settings-toggle'
+                        onClick={() =>
+                            setTerminalDotsOnLeft(!terminalDotsOnLeft)
+                        }
+                    >
+                        <input type='checkbox' checked={terminalDotsOnLeft} />{' '}
                         Terminal dots on left
                     </div>
                 </TerminalWindow>
