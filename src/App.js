@@ -9,6 +9,7 @@ import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
 import SettingsDialog from './components/settingsDialog/settingsDialog';
+import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
@@ -34,6 +35,8 @@ export default function App() {
         //     component: <UserForm />
         // }
     ];
+
+    useKeyboardShortcuts();
 
     const [mainTopMargin, setMainTopMargin] = useState('0');
 
