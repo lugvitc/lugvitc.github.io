@@ -29,7 +29,7 @@ export default function TerminalWindow({
 
     return (
         <div className='terminal'>
-            <div className='terminal-titlebar'>
+            <div className='terminal-titlebar no-selection'>
                 <TerminalDots
                     onClickRed={onClickRed}
                     onClickYellow={onClickYellow}

@@ -9,6 +9,27 @@ hr {
     background-color: var(--header-footer-black);
 }
 
+.no-selection {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.terminal-text {
+    font-family: consolas, 'Courier New', Courier, monospace;
+    color: var(--nord4);
+}
+
+* ::selection {
+    background-color: var(--nord7);
+    color: var(--nord0);
+}
+
+br::selection {
+    background-color: transparent;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -32,3 +53,4 @@ hr {
 ::-webkit-scrollbar-thumb:active {
     background: var(--nord10);
 }
+

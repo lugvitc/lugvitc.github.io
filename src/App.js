@@ -8,8 +8,6 @@ import TopBar from './components/topBar/topBar';
 import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
-import './styles/terminalText.css';
-import useSettings from './hooks/useSettings';
 import SettingsDialog from './components/settingsDialog/settingsDialog';
 // import UserForm from './pages/recruitment_2022/recruitment';
 

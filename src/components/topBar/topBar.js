@@ -9,11 +9,11 @@ import './topBar.css';
 export default function TopBar({
     refer,
     topBarLinks,
-    openSettingsDialog,
+    openSettings,
     settingsDialogOpen
 }) {
     return (
-        <header ref={refer} id='top-bar'>
+        <header ref={refer} id='top-bar' className='no-selection'>
             <div className='top-bar-contents'>
                 <a
                     className='top-bar-logo'
@@ -48,7 +48,7 @@ export default function TopBar({
                     }`}
                 >
                     <svg
-                        onClick={openSettingsDialog}
+                        onClick={openSettings}
                         xmlns='http://www.w3.org/2000/svg'
                         enableBackground='new 0 0 24 24'
                         height='24px'
