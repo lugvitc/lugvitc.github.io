@@ -1,9 +1,12 @@
 .terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
-    margin: 5vh 5vw;
     min-width: 50%;
     height: fit-content;
+}
+
+.terminals > .terminal {
+    margin: 5vh 5vw;
 }
 
 .terminal-titlebar {
@@ -51,6 +54,8 @@
     border-radius: 0px 0px 10px 10px;
     padding-inline: 1rem;
     padding-block: 1rem;
+
+    overflow-y: auto;
 }
 
 .terminal-prompt {
@@ -74,7 +79,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .terminal {
+    .terminals > .terminal {
         margin: 5vh 2vw;
     }
 }

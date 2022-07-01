@@ -2,6 +2,13 @@ dialog.settings {
     border-radius: 10px;
     border: none;
     background-color: transparent;
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 dialog.settings::backdrop {

@@ -25,7 +25,7 @@ export default function SettingsDialog({
         };
         window.addEventListener('click', closeIfClickedOutside);
         return () => window.removeEventListener('click', closeIfClickedOutside);
-    }, [refer]);
+    }, [refer, settingsDialogOpen]);
 
     return (
         <dialog className='settings' ref={refer} open={false}>
@@ -48,6 +48,14 @@ export default function SettingsDialog({
                         checked={terminalDotsOnLeft}
                     />{' '}
                     Terminal dots on left
+                </div>
+                <div className='lug-form-end'>
+                    <button onClick={() => closeSettingsDialog()}>
+                        Save and Exit
+                    </button>
+                    <button onClick={() => setDefaults(true)}>
+                        Reset Defaults
+                    </button>
                 </div>
             </TerminalWindow>
         </dialog>
