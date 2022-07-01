@@ -4,8 +4,13 @@ import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({ refer, closeSettingsDialog }) {
+export default function SettingsDialog({
+    refer,
+    settingsDialogOpen,
+    closeSettingsDialog
+}) {
     const {
+        setDefaults,
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,
@@ -14,7 +19,9 @@ export default function SettingsDialog({ refer, closeSettingsDialog }) {
 
     useEffect(() => {
         const closeIfClickedOutside = e => {
-            if (refer?.current?.contains(e.target)) closeSettingsDialog();
+            if (settingsDialogOpen && e.target === refer.current) {
+                closeSettingsDialog();
+            }
         };
         window.addEventListener('click', closeIfClickedOutside);
         return () => window.removeEventListener('click', closeIfClickedOutside);

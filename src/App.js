@@ -77,6 +77,7 @@ export default function App() {
                             />
                             <SettingsDialog
                                 refer={settingsDialogRef}
+                                settingsDialogOpen={settingsDialogOpen}
                                 closeSettingsDialog={closeSettingsDialog}
                             />
                             <main
