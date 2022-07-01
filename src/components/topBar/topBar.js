@@ -34,9 +34,14 @@ export default function TopBar({ refer, topBarLinks }) {
     return (
         <header ref={refer} id='top-bar'>
             <div className='top-bar-contents'>
-                <div className='top-bar-logo'>
+                <a
+                    className='top-bar-logo'
+                    href='https://linktr.ee/lugvitc'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
                     <img src={LugvitcLogo} alt='lug logo' />
-                </div>
+                </a>
                 <nav id='top-bar-links'>
                     {topBarLinks.map((nav, index) => (
                         <NavLink

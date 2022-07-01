@@ -25,7 +25,7 @@
     padding: 0.5em;
     height: 2em;
     width: 2em;
-    /* cursor: pointer; */
+    cursor: pointer;
     border-radius: 100vmax;
     background-color: var(--nord2);
 
@@ -38,7 +38,7 @@
     background-color: var(--nord10);
 }
 
-.top-bar-logo > img {
+.top-bar-logo img {
     height: 1.5em;
 }
 
