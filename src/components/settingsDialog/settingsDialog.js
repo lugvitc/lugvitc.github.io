@@ -1,31 +1,34 @@
 import { useEffect } from 'react';
 import useSettings from '../../hooks/useSettings';
+import useSettingsDialog from '../../hooks/useSettingsDialog';
 import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({ refer, closeSettingsDialog }) {
+export default function SettingsDialog({ settingsDialogRef }) {
     const {
         setDefaults,
-        settingsDialogOpen,
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,
         setTerminalDotsOnLeft
     } = useSettings();
 
+    const { settingsDialogOpen, closeSettingsDialog } =
+        useSettingsDialog(settingsDialogRef);
+
     useEffect(() => {
         const closeIfClickedOutside = e => {
-            if (settingsDialogOpen && e.target === refer.current) {
+            if (settingsDialogOpen && e.target === settingsDialogRef.current) {
                 closeSettingsDialog();
             }
         };
         window.addEventListener('click', closeIfClickedOutside);
         return () => window.removeEventListener('click', closeIfClickedOutside);
-    }, [refer, settingsDialogOpen]);
+    }, [settingsDialogRef, settingsDialogOpen]);
 
     return (
-        <dialog className='settings' ref={refer} open={false}>
+        <dialog className='settings' ref={settingsDialogRef} open={false}>
             <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
                 <h3>Settings</h3>
                 <div

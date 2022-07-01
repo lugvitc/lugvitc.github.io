@@ -10,7 +10,6 @@ import LearnLinux from './pages/learnLinux/learnLinux';
 
 import SettingsDialog from './components/settingsDialog/settingsDialog';
 import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
-import useSettings from './hooks/useSettings';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
@@ -53,19 +52,7 @@ export default function App() {
         return () => window.removeEventListener('resize', setCorrectMargin);
     }, []);
 
-    const { setSettingsDialogOpen } = useSettings();
-
     const settingsDialogRef = useRef(null);
-
-    const openSettingsDialog = () => {
-        setSettingsDialogOpen(true);
-        if (settingsDialogRef.current) settingsDialogRef.current.showModal();
-    };
-
-    const closeSettingsDialog = () => {
-        setSettingsDialogOpen(false);
-        if (settingsDialogRef.current) settingsDialogRef.current.close();
-    };
 
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
@@ -77,11 +64,10 @@ export default function App() {
                             <TopBar
                                 refer={topBarRef}
                                 topBarLinks={pages}
-                                openSettingsDialog={openSettingsDialog}
+                                settingsDialogRef={settingsDialogRef}
                             />
                             <SettingsDialog
-                                refer={settingsDialogRef}
-                                closeSettingsDialog={closeSettingsDialog}
+                                settingsDialogRef={settingsDialogRef}
                             />
                             <main
                                 style={{
