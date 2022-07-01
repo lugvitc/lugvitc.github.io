@@ -3,7 +3,7 @@ import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({ refer, closeSettings }) {
+export default function SettingsDialog({ refer, closeSettingsDialog }) {
     const {
         animationsOn,
         setAnimationsOn,
@@ -13,7 +13,7 @@ export default function SettingsDialog({ refer, closeSettings }) {
 
     return (
         <dialog className='settings' ref={refer} open={false}>
-            <TerminalWindow title='Settings' onClickRed={closeSettings}>
+            <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
                 <h3>Settings</h3>
                 <div
                     className='settings-toggle'

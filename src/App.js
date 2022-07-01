@@ -57,7 +57,7 @@ export default function App() {
         if (settingsDialogRef.current) settingsDialogRef.current.showModal();
     };
 
-    const closeSettings = () => {
+    const closeSettingsDialog = () => {
         setSettingsDialogOpen(false);
         if (settingsDialogRef.current) settingsDialogRef.current.close();
     };
@@ -77,7 +77,7 @@ export default function App() {
                             />
                             <SettingsDialog
                                 refer={settingsDialogRef}
-                                closeSettings={closeSettings}
+                                closeSettingsDialog={closeSettingsDialog}
                             />
                             <main
                                 style={{
