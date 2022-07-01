@@ -5,13 +5,10 @@ import TopBarTimeDate from './topBarTimeDate';
 import LugvitcLogo from '../../images/Tux.svg';
 
 import './topBar.css';
+import useSettings from '../../hooks/useSettings';
 
-export default function TopBar({
-    refer,
-    topBarLinks,
-    openSettingsDialog,
-    settingsDialogOpen
-}) {
+export default function TopBar({ refer, topBarLinks, openSettingsDialog }) {
+    const { settingsDialogOpen } = useSettings();
     return (
         <header ref={refer} id='top-bar' className='no-selection'>
             <div className='top-bar-contents'>

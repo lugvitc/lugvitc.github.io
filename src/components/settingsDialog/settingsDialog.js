@@ -4,13 +4,10 @@ import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({
-    refer,
-    settingsDialogOpen,
-    closeSettingsDialog
-}) {
+export default function SettingsDialog({ refer, closeSettingsDialog }) {
     const {
         setDefaults,
+        settingsDialogOpen,
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,

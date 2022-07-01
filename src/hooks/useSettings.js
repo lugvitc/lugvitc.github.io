@@ -1,5 +1,10 @@
 import create from 'zustand';
 
+const settingsDialogStore = create(set => ({
+    settingsDialogOpen: false,
+    setSettingsDialogOpen: settingsDialogOpen => set({ settingsDialogOpen })
+}));
+
 const terminalDotsOnLeftStore = create(set => ({
     terminalDotsOnLeft:
         window.localStorage.getItem('terminal-dots-on-left') === 'true',
@@ -24,6 +29,7 @@ export default function useSettings() {
     const { animationsOn, setAnimationsOn } = animationsOnStore();
     const { terminalDotsOnLeft, setTerminalDotsOnLeft } =
         terminalDotsOnLeftStore();
+    const { settingsDialogOpen, setSettingsDialogOpen } = settingsDialogStore();
 
     const setDefaults = (force = false) => {
         if (!window.localStorage.getItem('animations-on') || force) {
@@ -38,6 +44,8 @@ export default function useSettings() {
 
     return {
         setDefaults,
+        settingsDialogOpen,
+        setSettingsDialogOpen,
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,

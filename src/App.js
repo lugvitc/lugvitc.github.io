@@ -10,6 +10,7 @@ import LearnLinux from './pages/learnLinux/learnLinux';
 
 import SettingsDialog from './components/settingsDialog/settingsDialog';
 import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
+import useSettings from './hooks/useSettings';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
@@ -41,7 +42,6 @@ export default function App() {
     const [mainTopMargin, setMainTopMargin] = useState('0');
 
     const topBarRef = useRef(null);
-    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
 
     useEffect(() => {
         const setCorrectMargin = () =>
@@ -52,6 +52,8 @@ export default function App() {
 
         return () => window.removeEventListener('resize', setCorrectMargin);
     }, []);
+
+    const { setSettingsDialogOpen } = useSettings();
 
     const settingsDialogRef = useRef(null);
 
@@ -76,11 +78,9 @@ export default function App() {
                                 refer={topBarRef}
                                 topBarLinks={pages}
                                 openSettingsDialog={openSettingsDialog}
-                                settingsDialogOpen={settingsDialogOpen}
                             />
                             <SettingsDialog
                                 refer={settingsDialogRef}
-                                settingsDialogOpen={settingsDialogOpen}
                                 closeSettingsDialog={closeSettingsDialog}
                             />
                             <main
