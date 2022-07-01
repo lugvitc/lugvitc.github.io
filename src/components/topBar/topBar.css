@@ -75,6 +75,7 @@
     transform: translateY(5px);
     color: var(--nord10);
     background-color: var(--nord0);
+    transition: ease-out 0.5s;
 }
 
 .top-bar-element-clickable-active {
