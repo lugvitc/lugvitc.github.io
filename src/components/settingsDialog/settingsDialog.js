@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import useSettings from '../../hooks/useSettings';
 import TerminalWindow from '../terminal/terminalWindow';
 
@@ -10,6 +11,14 @@ export default function SettingsDialog({ refer, closeSettingsDialog }) {
         terminalDotsOnLeft,
         setTerminalDotsOnLeft
     } = useSettings();
+
+    useEffect(() => {
+        const closeIfClickedOutside = e => {
+            if (refer?.current?.contains(e.target)) closeSettingsDialog();
+        };
+        window.addEventListener('click', closeIfClickedOutside);
+        return () => window.removeEventListener('click', closeIfClickedOutside);
+    }, [refer]);
 
     return (
         <dialog className='settings' ref={refer} open={false}>
@@ -37,3 +46,4 @@ export default function SettingsDialog({ refer, closeSettingsDialog }) {
         </dialog>
     );
 }
+
