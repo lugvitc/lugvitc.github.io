@@ -20,6 +20,28 @@
     font-size: small;
 }
 
+.top-bar-logo {
+    margin: 0.5em;
+    padding: 0.5em;
+    height: 2em;
+    width: 2em;
+    /* cursor: pointer; */
+    border-radius: 100vmax;
+    background-color: var(--nord2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar-logo:hover {
+    background-color: var(--nord10);
+}
+
+.top-bar-logo > img {
+    height: 1.5em;
+}
+
 #top-bar-links {
     display: flex;
     flex-direction: row;

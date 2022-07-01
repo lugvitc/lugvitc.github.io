@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
 import TerminalWindow from '../terminal/terminalWindow';
 
+import useSettings from '../../hooks/useSettings';
+import LugvitcLogo from '../../images/Tux.svg';
+
 import './topBar.css';
 import './settings.css';
-import useSettings from '../../hooks/useSettings';
 
 export default function TopBar({ refer, topBarLinks }) {
     const settingsDialog = useRef(null);
@@ -32,6 +34,9 @@ export default function TopBar({ refer, topBarLinks }) {
     return (
         <header ref={refer} id='top-bar'>
             <div className='top-bar-contents'>
+                <div className='top-bar-logo'>
+                    <img src={LugvitcLogo} alt='lug logo' />
+                </div>
                 <nav id='top-bar-links'>
                     {topBarLinks.map((nav, index) => (
                         <NavLink
