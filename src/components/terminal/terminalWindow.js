@@ -1,6 +1,3 @@
-// import { useCallback, useRef } from 'react';
-// import { useLocation } from 'react-router-dom';
-
 import TerminalPrompt from './terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
@@ -15,18 +12,6 @@ export default function TerminalWindow({
     onClickGreen,
     title
 }) {
-    // const location = useLocation();
-
-    // const ref = useCallback(node => {
-    //     if (node) {
-    //         // console.log(location.pathname);
-    //         window.localStorage.setItem(
-    //             location.pathname,
-    //             new Date().toISOString()
-    //         );
-    //     }
-    // }, []);
-
     return (
         <div className='terminal'>
             <div className='terminal-titlebar no-selection'>
@@ -53,14 +38,10 @@ export default function TerminalWindow({
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div className='terminal-contents' /* ref={ref} */>
-                            {children}
-                        </div>
+                        <div className='terminal-contents'>{children}</div>
                     )
                 ) : (
-                    <div className='terminal-contents' /* ref={ref} */>
-                        {children}
-                    </div>
+                    <div className='terminal-contents'>{children}</div>
                 )}
             </div>
         </div>

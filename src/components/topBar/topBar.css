@@ -2,7 +2,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-
     z-index: 1;
 }
 
@@ -13,6 +12,7 @@
     justify-content: flex-end;
     align-items: center;
     font-size: small;
+    padding-inline: 0.5rem;
 }
 
 .top-bar-logo {
@@ -87,14 +87,14 @@
 }
 
 .top-bar-element-clickable:hover {
-    transform: translateY(5px);
+    transform: translateY(0.5em);
     color: var(--nord10);
     background-color: var(--nord0);
     transition: ease-out 0.5s;
 }
 
 .top-bar-element-clickable-active {
-    transform: translateY(5px);
+    transform: translateY(0.5em);
     background-color: var(--nord0);
     border-radius: 5px 5px 0px 0px;
     padding: 0px 5px;

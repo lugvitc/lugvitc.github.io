@@ -1,7 +1,6 @@
 .terminal {
     border-radius: 10px;
     background-color: var(--header-footer-black);
-    padding: 5px 0px 0px 0px;
     margin: 5vh 5vw;
     min-width: 50%;
     height: fit-content;
@@ -12,7 +11,8 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    margin: 0.75rem;
+    padding-block: 0.75rem;
+    margin-inline: 0.75rem;
 }
 
 .terminal-dots {

@@ -5,7 +5,7 @@ import './dock.css';
 
 export default function Dock() {
     return (
-        <aside id='dock'>
+        <aside id='dock' className='no-selection'>
             {dockItems.map(({ link, icon }, index) => (
                 <LugLink key={index} link={link}>
                     <img alt='' className='dock-icon' src={icon} />

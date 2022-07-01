@@ -4,29 +4,24 @@ aside#dock {
     background-color: var(--nord1);
     padding: 10px;
     margin: 5vh 0vw;
-    height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    gap: 1em;
 }
 
 .dock-icon {
-    /* display: block; */
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
 }
 
 .dock-icon:hover {
     transform: translateX(10px);
+    transition: ease-out 0.5s;
 }
 
 @media only screen and (max-width: 1024px) {
     aside#dock {
+        display: flex;
         justify-content: center;
         flex-direction: row;
         border-radius: 10px 10px 0px 0px;
@@ -36,3 +31,4 @@ aside#dock {
         transform: translateY(-10px);
     }
 }
+
