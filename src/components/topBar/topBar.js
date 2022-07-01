@@ -1,36 +1,17 @@
-import { useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
-import TerminalWindow from '../terminal/terminalWindow';
 
-import useSettings from '../../hooks/useSettings';
 import LugvitcLogo from '../../images/Tux.svg';
 
 import './topBar.css';
-import './settings.css';
 
-export default function TopBar({ refer, topBarLinks }) {
-    const settingsDialog = useRef(null);
-    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
-
-    const openSettings = () => {
-        setSettingsDialogOpen(true);
-        if (settingsDialog.current) settingsDialog.current.showModal();
-    };
-
-    const closeSettings = () => {
-        setSettingsDialogOpen(false);
-        if (settingsDialog.current) settingsDialog.current.close();
-    };
-
-    const {
-        animationsOn,
-        setAnimationsOn,
-        terminalDotsOnLeft,
-        setTerminalDotsOnLeft
-    } = useSettings();
-
+export default function TopBar({
+    refer,
+    topBarLinks,
+    openSettingsDialog,
+    settingsDialogOpen
+}) {
     return (
         <header ref={refer} id='top-bar'>
             <div className='top-bar-contents'>
@@ -67,7 +48,7 @@ export default function TopBar({ refer, topBarLinks }) {
                     }`}
                 >
                     <svg
-                        onClick={openSettings}
+                        onClick={openSettingsDialog}
                         xmlns='http://www.w3.org/2000/svg'
                         enableBackground='new 0 0 24 24'
                         height='24px'
@@ -82,35 +63,6 @@ export default function TopBar({ refer, topBarLinks }) {
                     </svg>
                 </div>
             </div>
-            <dialog className='settings' ref={settingsDialog} open={false}>
-                <TerminalWindow title='Settings' onClickRed={closeSettings}>
-                    <h3>Settings</h3>
-                    <div
-                        className='settings-toggle'
-                        onClick={() => setAnimationsOn(!animationsOn)}
-                    >
-                        <input
-                            readOnly
-                            type='checkbox'
-                            checked={animationsOn}
-                        />{' '}
-                        Show animations
-                    </div>
-                    <div
-                        className='settings-toggle'
-                        onClick={() =>
-                            setTerminalDotsOnLeft(!terminalDotsOnLeft)
-                        }
-                    >
-                        <input
-                            readOnly
-                            type='checkbox'
-                            checked={terminalDotsOnLeft}
-                        />{' '}
-                        Terminal dots on left
-                    </div>
-                </TerminalWindow>
-            </dialog>
             <div className='bottom-strip' />
         </header>
     );
