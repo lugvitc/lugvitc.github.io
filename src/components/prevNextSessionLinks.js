@@ -14,8 +14,7 @@ export default function PrevNextSessionLinks({
         <div className='next-prev'>
             {prevIndex !== null && (
                 <div className='prev'>
-                    {' '}
-                    Prev:
+                    Prev:{' '}
                     <NavLink to={`/learn-linux?session=${prevIndex}`}>
                         {prevSession.title}
                     </NavLink>
@@ -23,7 +22,7 @@ export default function PrevNextSessionLinks({
             )}
             {nextIndex !== null && (
                 <div className='next'>
-                    Next:
+                    Next:{' '}
                     <NavLink to={`/learn-linux?session=${nextIndex}`}>
                         {nextSession.title}
                     </NavLink>

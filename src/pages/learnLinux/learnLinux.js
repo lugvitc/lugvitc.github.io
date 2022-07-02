@@ -2,9 +2,11 @@ import { NavLink, useSearchParams } from 'react-router-dom';
 import PrevNextSessionLinks from '../../components/prevNextSessionLinks';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 
+import './learnLinux.css';
+
 const sessions = [
     {
-        title: 'Linux: What, Why, How',
+        title: 'Linux: What? Why? How?',
         content: <>coming soon!</>
     },
     {
@@ -14,11 +16,23 @@ const sessions = [
     {
         title: 'Know the system',
         content: <>coming soon!</>
+    },
+    {
+        title: 'Installing Software',
+        content: <>coming soon!</>
+    },
+    {
+        title: 'Ricing',
+        content: <>coming soon!</>
+    },
+    {
+        title: 'Advanced Features',
+        content: <>coming soon!</>
     }
 ];
 
 export default function LearnLinux() {
-    const [params, setParams] = useSearchParams();
+    const [params] = useSearchParams();
     const sessionParam = params.get('session');
     if (sessionParam) {
         const sessionNo = Number(sessionParam);
@@ -32,7 +46,15 @@ export default function LearnLinux() {
                 sessionNo < sessions.length - 1 ? sessionNo + 1 : null;
             const prevSessionNo = sessionNo > 0 ? sessionNo - 1 : null;
             return (
-                <TerminalWindow title={`Learn Linux #${sessionNo}`}>
+                <TerminalWindow
+                    title={`Learn Linux #${sessionNo}`}
+                    prompts={[
+                        {
+                            path: '/learn-linux',
+                            command: `./'${session.title}'`
+                        }
+                    ]}
+                >
                     <NavLink to='/learn-linux'>Go back</NavLink>
                     <h1>{session.title}</h1>
                     <PrevNextSessionLinks
@@ -57,7 +79,7 @@ export default function LearnLinux() {
                 title='Learn Linux'
                 prompts={[
                     { path: '~', command: 'cd learn-linux' },
-                    { path: '~/learn-linux', command: 'ls' }
+                    { path: '~/learn-linux', command: 'ls -l' }
                 ]}
             >
                 {sessions.map((session, index) => (

@@ -1,0 +1,17 @@
+.next-prev {
+    display: flex;
+}
+
+.next-prev > .next {
+    margin-left: auto;
+}
+
+.next-prev > .prev {
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 630px) {
+    .ls-output {
+        display: none;
+    }
+}
