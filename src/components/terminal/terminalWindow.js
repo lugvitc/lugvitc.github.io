@@ -41,7 +41,9 @@ export default function TerminalWindow({
                         <div className='terminal-contents'>{children}</div>
                     )
                 ) : (
-                    <div className='terminal-contents'>{children}</div>
+                    <div className='terminal-contents no-prompts'>
+                        {children}
+                    </div>
                 )}
             </div>
         </div>
