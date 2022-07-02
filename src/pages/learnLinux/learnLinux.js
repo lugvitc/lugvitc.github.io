@@ -1,5 +1,7 @@
 import { NavLink, useSearchParams } from 'react-router-dom';
 import PrevNextSessionLinks from '../../components/prevNextSessionLinks';
+import ShowAfterTypewriter from '../../components/showAfterTypewriter/showAfterTypwriter';
+import TerminalPrompt from '../../components/terminal/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import './learnLinux.css';
@@ -79,20 +81,35 @@ export default function LearnLinux() {
                 title='Learn Linux'
                 prompts={[
                     { path: '~', command: 'cd learn-linux' },
-                    { path: '~/learn-linux', command: 'ls -l' }
+                    { path: '~/learn-linux', command: 'cat learn-linux.txt' }
                 ]}
             >
-                {sessions.map((session, index) => (
-                    <div key={index}>
-                        <span className='ls-output'>
-                            drwxrwxrwx 1 root root{' '}
-                        </span>
-                        #{index}:{' '}
-                        <NavLink to={`/learn-linux?session=${index}`}>
-                            {session.title}
-                        </NavLink>
-                    </div>
-                ))}
+                Linux learning resources by LUG VITC
+                <div className='v-1em-spacer' />
+                <ShowAfterTypewriter
+                    text={'ls -l'}
+                    textContainer={text => (
+                        <TerminalPrompt path={'~/learn-linux'}>
+                            {text}
+                        </TerminalPrompt>
+                    )}
+                >
+                    <div className='v-1em-spacer' />
+                    <span className='ls-output'>
+                        drwxrwxrwx 1 root root{' '}
+                    </span>{' '}
+                    learn-linux.txt
+                    {sessions.map((session, index) => (
+                        <div key={index}>
+                            <span className='ls-output'>
+                                drwxrwxrwx 1 root root{' '}
+                            </span>
+                            <NavLink to={`/learn-linux?session=${index}`}>
+                                {session.title}
+                            </NavLink>
+                        </div>
+                    ))}
+                </ShowAfterTypewriter>
             </TerminalWindow>
         );
 }
