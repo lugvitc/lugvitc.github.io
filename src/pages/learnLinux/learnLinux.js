@@ -57,7 +57,9 @@ export default function LearnLinux() {
                         }
                     ]}
                 >
-                    <NavLink to='/learn-linux'>Go back</NavLink>
+                    <NavLink className='lug-link' to='/learn-linux'>
+                        Go back
+                    </NavLink>
                     <h1>{session.title}</h1>
                     <PrevNextSessionLinks
                         prevIndex={prevSessionNo}
@@ -104,7 +106,10 @@ export default function LearnLinux() {
                             <span className='ls-output'>
                                 drwxrwxrwx 1 root root{' '}
                             </span>
-                            <NavLink to={`/learn-linux?session=${index}`}>
+                            <NavLink
+                                className='lug-link'
+                                to={`/learn-linux?session=${index}`}
+                            >
                                 {session.title}
                             </NavLink>
                         </div>
