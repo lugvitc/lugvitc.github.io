@@ -5,11 +5,12 @@ import TerminalPrompt from '../../components/terminal/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import './learnLinux.css';
+import Session1 from './sessions/session1';
 
 const sessions = [
     {
         title: 'Linux: What? Why? How?',
-        content: <>coming soon!</>
+        content: <Session1 />
     },
     {
         title: 'Know the terminal',
