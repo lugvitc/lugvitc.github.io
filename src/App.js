@@ -9,6 +9,7 @@ import Dock from './components/dock/dock';
 import LearnLinux from './pages/learnLinux/learnLinux';
 
 import SettingsDialog from './components/settingsDialog/settingsDialog';
+import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App() {
@@ -35,10 +36,11 @@ export default function App() {
         // }
     ];
 
+    useKeyboardShortcuts();
+
     const [mainTopMargin, setMainTopMargin] = useState('0');
 
     const topBarRef = useRef(null);
-    const [settingsDialogOpen, setSettingsDialogOpen] = useState(false);
 
     useEffect(() => {
         const setCorrectMargin = () =>
@@ -50,18 +52,6 @@ export default function App() {
         return () => window.removeEventListener('resize', setCorrectMargin);
     }, []);
 
-    const settingsDialogRef = useRef(null);
-
-    const openSettingsDialog = () => {
-        setSettingsDialogOpen(true);
-        if (settingsDialogRef.current) settingsDialogRef.current.showModal();
-    };
-
-    const closeSettingsDialog = () => {
-        setSettingsDialogOpen(false);
-        if (settingsDialogRef.current) settingsDialogRef.current.close();
-    };
-
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
             <Routes>
@@ -69,17 +59,8 @@ export default function App() {
                     path='/'
                     element={
                         <>
-                            <TopBar
-                                refer={topBarRef}
-                                topBarLinks={pages}
-                                openSettingsDialog={openSettingsDialog}
-                                settingsDialogOpen={settingsDialogOpen}
-                            />
-                            <SettingsDialog
-                                refer={settingsDialogRef}
-                                settingsDialogOpen={settingsDialogOpen}
-                                closeSettingsDialog={closeSettingsDialog}
-                            />
+                            <TopBar refer={topBarRef} topBarLinks={pages} />
+                            <SettingsDialog />
                             <main
                                 style={{
                                     marginTop: mainTopMargin,

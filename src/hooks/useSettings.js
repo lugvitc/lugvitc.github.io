@@ -8,7 +8,7 @@ const terminalDotsOnLeftStore = create(set => ({
             'terminal-dots-on-left',
             val ? 'true' : 'false'
         );
-        set(state => ({ terminalDotsOnLeft: val }));
+        set({ terminalDotsOnLeft: val });
     }
 }));
 
@@ -16,7 +16,7 @@ const animationsOnStore = create(set => ({
     animationsOn: window.localStorage.getItem('animations-on') === 'true',
     setAnimationsOn: val => {
         window.localStorage.setItem('animations-on', val ? 'true' : 'false');
-        set(state => ({ animationsOn: val }));
+        set({ animationsOn: val });
     }
 }));
 

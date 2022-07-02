@@ -2,16 +2,15 @@ import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
 
+import useSettingsDialog from '../../hooks/useSettingsDialog';
+
 import LugvitcLogo from '../../images/Tux.svg';
 
 import './topBar.css';
 
-export default function TopBar({
-    refer,
-    topBarLinks,
-    openSettingsDialog,
-    settingsDialogOpen
-}) {
+export default function TopBar({ refer, topBarLinks }) {
+    const { settingsDialogOpen, openSettingsDialog } = useSettingsDialog();
+
     return (
         <header ref={refer} id='top-bar' className='no-selection'>
             <div className='top-bar-contents'>

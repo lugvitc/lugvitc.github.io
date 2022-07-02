@@ -1,14 +1,11 @@
 import { useEffect } from 'react';
 import useSettings from '../../hooks/useSettings';
+import useSettingsDialog from '../../hooks/useSettingsDialog';
 import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({
-    refer,
-    settingsDialogOpen,
-    closeSettingsDialog
-}) {
+export default function SettingsDialog() {
     const {
         setDefaults,
         animationsOn,
@@ -17,18 +14,25 @@ export default function SettingsDialog({
         setTerminalDotsOnLeft
     } = useSettings();
 
+    const {
+        settingsDialogRef,
+        setSettingsDialogRef,
+        settingsDialogOpen,
+        closeSettingsDialog
+    } = useSettingsDialog();
+
     useEffect(() => {
         const closeIfClickedOutside = e => {
-            if (settingsDialogOpen && e.target === refer.current) {
+            if (settingsDialogOpen && e.target === settingsDialogRef.current) {
                 closeSettingsDialog();
             }
         };
         window.addEventListener('click', closeIfClickedOutside);
         return () => window.removeEventListener('click', closeIfClickedOutside);
-    }, [refer, settingsDialogOpen]);
+    }, [settingsDialogRef, settingsDialogOpen, closeSettingsDialog]);
 
     return (
-        <dialog className='settings' ref={refer} open={false}>
+        <dialog className='settings' ref={setSettingsDialogRef} open={false}>
             <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
                 <h3>Settings</h3>
                 <div
