@@ -8,9 +8,8 @@ import LugvitcLogo from '../../images/Tux.svg';
 
 import './topBar.css';
 
-export default function TopBar({ refer, topBarLinks, settingsDialogRef }) {
-    const { settingsDialogOpen, openSettingsDialog } =
-        useSettingsDialog(settingsDialogRef);
+export default function TopBar({ refer, topBarLinks }) {
+    const { settingsDialogOpen, openSettingsDialog } = useSettingsDialog();
 
     return (
         <header ref={refer} id='top-bar' className='no-selection'>

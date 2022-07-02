@@ -52,8 +52,6 @@ export default function App() {
         return () => window.removeEventListener('resize', setCorrectMargin);
     }, []);
 
-    const settingsDialogRef = useRef(null);
-
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
             <Routes>
@@ -61,14 +59,8 @@ export default function App() {
                     path='/'
                     element={
                         <>
-                            <TopBar
-                                refer={topBarRef}
-                                topBarLinks={pages}
-                                settingsDialogRef={settingsDialogRef}
-                            />
-                            <SettingsDialog
-                                settingsDialogRef={settingsDialogRef}
-                            />
+                            <TopBar refer={topBarRef} topBarLinks={pages} />
+                            <SettingsDialog />
                             <main
                                 style={{
                                     marginTop: mainTopMargin,

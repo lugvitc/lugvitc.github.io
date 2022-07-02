@@ -5,7 +5,7 @@ import TerminalWindow from '../terminal/terminalWindow';
 
 import './settingsDialog.css';
 
-export default function SettingsDialog({ settingsDialogRef }) {
+export default function SettingsDialog() {
     const {
         setDefaults,
         animationsOn,
@@ -14,8 +14,12 @@ export default function SettingsDialog({ settingsDialogRef }) {
         setTerminalDotsOnLeft
     } = useSettings();
 
-    const { settingsDialogOpen, closeSettingsDialog } =
-        useSettingsDialog(settingsDialogRef);
+    const {
+        settingsDialogRef,
+        setSettingsDialogRef,
+        settingsDialogOpen,
+        closeSettingsDialog
+    } = useSettingsDialog();
 
     useEffect(() => {
         const closeIfClickedOutside = e => {
@@ -25,10 +29,10 @@ export default function SettingsDialog({ settingsDialogRef }) {
         };
         window.addEventListener('click', closeIfClickedOutside);
         return () => window.removeEventListener('click', closeIfClickedOutside);
-    }, [settingsDialogRef, settingsDialogOpen]);
+    }, [settingsDialogRef, settingsDialogOpen, closeSettingsDialog]);
 
     return (
-        <dialog className='settings' ref={settingsDialogRef} open={false}>
+        <dialog className='settings' ref={setSettingsDialogRef} open={false}>
             <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
                 <h3>Settings</h3>
                 <div
