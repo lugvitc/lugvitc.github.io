@@ -34,7 +34,7 @@ export default function SettingsDialog() {
     return (
         <dialog className='settings' ref={setSettingsDialogRef} open={false}>
             <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
-                <h3>Settings</h3>
+                <div className='settings-heading'>Settings</div>
                 <div
                     className='settings-toggle'
                     onClick={() => setAnimationsOn(!animationsOn)}
@@ -53,13 +53,9 @@ export default function SettingsDialog() {
                     />{' '}
                     Terminal dots on left
                 </div>
-                <div className='lug-form-end'>
-                    <button onClick={() => closeSettingsDialog()}>
-                        Save and Exit
-                    </button>
-                    <button onClick={() => setDefaults(true)}>
-                        Reset Defaults
-                    </button>
+                <div className='settings-buttons'>
+                    <button onClick={() => closeSettingsDialog()}>Exit</button>
+                    <button onClick={() => setDefaults(true)}>Defaults</button>
                 </div>
             </TerminalWindow>
         </dialog>
