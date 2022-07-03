@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import Tooltip from '../tooltip/tooltip';
-import './codeBlock.css';
+import copyButtonStyles from './codeBlock.module.css';
 
 export default function CodeBlock({ children, copyText }) {
     const copyToClipboard = () => {
@@ -11,13 +11,13 @@ export default function CodeBlock({ children, copyText }) {
     const copyButtonRef = useRef(null);
 
     return (
-        <div className='code-block'>
-            <div className='code'>{children}</div>
+        <div className={copyButtonStyles.index}>
+            <div className={copyButtonStyles.contents}>{children}</div>
             <Tooltip toolRef={copyButtonRef} above>
                 Copy to clipboard
             </Tooltip>
             <div
-                className='copy-button'
+                className={copyButtonStyles.copyButton}
                 onClick={copyToClipboard}
                 ref={copyButtonRef}
             >
