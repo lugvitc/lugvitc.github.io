@@ -1,10 +1,14 @@
 import './codeBlock.css';
 
-export default function CodeBlock({ children }) {
+export default function CodeBlock({ children, copyText }) {
+    const copyToClipboard = () => {
+        if (!copyText) copyText = children;
+        navigator.clipboard.writeText(copyText);
+    };
     return (
         <div className='code-block'>
             <div className='code'>{children}</div>
-            <div className='copy-button'>
+            <div className='copy-button' onClick={copyToClipboard}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     height='24px'
