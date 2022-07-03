@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+import Tooltip from '../tooltip/tooltip';
 import './codeBlock.css';
 
 export default function CodeBlock({ children, copyText }) {
@@ -5,10 +7,20 @@ export default function CodeBlock({ children, copyText }) {
         if (!copyText) copyText = children;
         navigator.clipboard.writeText(copyText);
     };
+
+    const copyButtonRef = useRef(null);
+
     return (
         <div className='code-block'>
             <div className='code'>{children}</div>
-            <div className='copy-button' onClick={copyToClipboard}>
+            <Tooltip toolRef={copyButtonRef} above>
+                Copy to clipboard
+            </Tooltip>
+            <div
+                className='copy-button'
+                onClick={copyToClipboard}
+                ref={copyButtonRef}
+            >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     height='24px'

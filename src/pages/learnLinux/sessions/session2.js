@@ -6,6 +6,7 @@ export default function Session2() {
         <>
             type cd to switch directories:
             <CodeBlock>cd</CodeBlock>
+            <CodeBlock>ls</CodeBlock>
         </>
     );
 }
