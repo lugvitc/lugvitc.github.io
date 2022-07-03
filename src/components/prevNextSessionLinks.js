@@ -6,10 +6,6 @@ export default function PrevNextSessionLinks({
     nextIndex,
     nextSession
 }) {
-    console.log(prevIndex);
-    console.log(prevSession);
-    console.log(nextIndex);
-    console.log(nextSession);
     return (
         <div className='next-prev'>
             {prevIndex !== null && (
