@@ -1,14 +1,14 @@
-import './lugLink.css';
+import lugLinkStyles from './lugLink.module.css';
 
 export default function LugLink({ link, children }) {
     return (
         <a
-            className='lug-link'
+            className={lugLinkStyles._}
             href={link}
             target='_blank'
             rel='noopener noreferrer'
         >
-            {children} <br />
+            {children}
         </a>
     );
 }

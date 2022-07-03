@@ -1,0 +1,19 @@
+._,
+._:visited {
+    text-decoration: none;
+    color: var(--nord10);
+}
+
+._:hover,
+._:active,
+._:visited:hover,
+._:visited:active {
+    color: var(--nord8);
+}
+
+._::selection,
+._:visited::selection {
+    color: var(--nord6);
+    background-color: var(--nord10);
+}
+

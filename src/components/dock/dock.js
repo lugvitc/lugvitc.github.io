@@ -1,14 +1,13 @@
 import LugLink from '../lugLink/lugLink';
 import { dockItems } from './dockItems';
 
-import './dock.css';
-
+import dockStyles from './dock.module.css';
 export default function Dock() {
     return (
-        <aside id='dock' className='no-selection'>
+        <aside className={`${dockStyles.index} no-selection dock`}>
             {dockItems.map(({ link, icon }, index) => (
                 <LugLink key={index} link={link}>
-                    <img alt='' className='dock-icon' src={icon} />
+                    <img alt='' className={dockStyles.icon} src={icon} />
                 </LugLink>
             ))}
         </aside>

@@ -1,4 +1,4 @@
-aside#dock {
+.index {
     border-radius: 0px 10px 10px 0px;
     height: fit-content;
     background-color: var(--nord1);
@@ -8,24 +8,24 @@ aside#dock {
     gap: 1em;
 }
 
-.dock-icon {
+.icon {
     width: 2em;
     height: 2em;
 }
 
-.dock-icon:hover {
+.icon:hover {
     transform: translateX(10px);
     transition: ease-out 0.5s;
 }
 
 @media only screen and (max-width: 1024px) {
-    aside#dock {
+    .index {
         display: flex;
         justify-content: center;
         flex-direction: row;
         border-radius: 10px 10px 0px 0px;
     }
-    .dock-icon:hover {
+    .icon:hover {
         transform: translateY(-10px);
     }
 }
