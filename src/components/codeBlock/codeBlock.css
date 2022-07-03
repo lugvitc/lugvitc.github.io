@@ -1,0 +1,31 @@
+.code-block {
+    display: flex;
+    background-color: var(--nord0);
+    border-radius: 0.5em;
+}
+
+.code {
+    padding: 0.5em;
+}
+
+.copy-button {
+    margin-left: auto;
+    cursor: pointer;
+    background-color: var(--nord0);
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    padding: 0.5em;
+}
+
+.copy-button > svg {
+    fill: var(--nord2);
+}
+
+.copy-button:hover {
+    background-color: var(--nord2);
+}
+
+.copy-button:hover > svg {
+    fill: var(--nord10);
+}

@@ -6,6 +6,7 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import './learnLinux.css';
 import Session1 from './sessions/session1';
+import Session2 from './sessions/session2';
 
 const sessions = [
     {
@@ -14,7 +15,7 @@ const sessions = [
     },
     {
         title: 'Know the terminal',
-        content: <>coming soon!</>
+        content: <Session2 />
     },
     {
         title: 'Know the system',
