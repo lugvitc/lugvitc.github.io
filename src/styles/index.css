@@ -44,30 +44,6 @@ hr {
     background-color: var(--header-footer-black);
 }
 
-.no-selection {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-.shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1),
-        0 0 20px rgba(0, 0, 0, 0.05), 0 0 30px rgba(0, 0, 0, 0.042),
-        0 0 40px rgba(0, 0, 0, 0.03), 0 0 80px rgba(0, 0, 0, 0.02);
-}
-
-.terminal-text {
-    font-family: consolas, 'Courier New', Courier, monospace;
-    color: var(--nord4);
-}
-
-@media only screen and (max-width: 600px) {
-    .hide-600 {
-        display: none;
-    }
-}
-
 * ::selection {
     background-color: var(--nord7);
     color: var(--nord0);

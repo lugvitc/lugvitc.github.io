@@ -1,0 +1,11 @@
+.nextPrev {
+    display: flex;
+}
+
+.next {
+    margin-left: auto;
+}
+
+.prev {
+    margin-right: auto;
+}

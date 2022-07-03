@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useSettings from '../../hooks/useSettings';
 
-import './showAfterTypewriter.css';
+import styles from './showAfterTypewriter.module.css';
 
 export default function ShowAfterTypewriter({ text, textContainer, children }) {
     const [typingText, setTypingText] = useState('');
@@ -20,9 +20,7 @@ export default function ShowAfterTypewriter({ text, textContainer, children }) {
     }, [text, typingText, animationsOn]);
 
     if (animationsOn && typingText !== text)
-        return textContainer(
-            <span className='typewriter-text'>{typingText}</span>
-        );
+        return textContainer(<span className={styles.text}>{typingText}</span>);
     else
         return (
             <>

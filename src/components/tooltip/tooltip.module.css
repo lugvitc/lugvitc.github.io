@@ -1,4 +1,4 @@
-.tool-tip {
+.toolTip {
     position: fixed;
     z-index: 10;
     background-color: var(--header-footer-black);

@@ -1,4 +1,4 @@
-dialog.settings {
+.index {
     border-radius: 10px;
     border: none;
     background-color: transparent;
@@ -13,21 +13,21 @@ dialog.settings {
     transform: translate(-50%, -50%);
 }
 
-dialog.settings::backdrop {
+.index::backdrop {
     background-color: rgba(0, 0, 0, 50%);
 }
 
-.settings-contents {
+.contents {
     margin: 10px;
 }
 
-.settings-heading {
+.heading {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
 
-.settings-toggle {
+.toggle {
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -35,17 +35,17 @@ dialog.settings::backdrop {
     cursor: pointer;
 }
 
-.settings-toggle:hover {
+.toggle:hover {
     background-color: var(--nord2);
 }
 
-.settings-buttons {
+.buttons {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
 }
 
-.settings-buttons > button {
+.buttons > button {
     background-color: var(--nord3);
     color: var(--nord6);
     border-color: var(--nord3);

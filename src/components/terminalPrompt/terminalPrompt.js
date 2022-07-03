@@ -1,12 +1,16 @@
-import './terminalPrompt.css';
+import styles from './terminalPrompt.module.css';
+import util from '../../styles/util.module.css';
 
 export default function TerminalPrompt({ path, children }) {
     return (
-        <div className='terminal-prompt'>
-            <span className='prompt-user-system hide-600'>lug@vitc:</span>
-            <span className='prompt-path hide-600'>{path}$ </span>
-            <span className='prompt-command'>{children}</span>
-            <br />
+        <div className={styles.index}>
+            <span className={`${styles.userSystem} ${util.hideBelow600}`}>
+                lug@vitc:
+            </span>
+            <span className={`${styles.path} ${util.hideBelow600}`}>
+                {path}${' '}
+            </span>
+            <span className={styles.command}>{children}</span>
         </div>
     );
 }

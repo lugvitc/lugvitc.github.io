@@ -1,4 +1,6 @@
-import LugNavLink from './lugLink/lugNavLink';
+import LugNavLink from '../lugLink/lugNavLink';
+
+import styles from './prevNextSessionLinks.module.css';
 
 export default function PrevNextSessionLinks({
     prevIndex,
@@ -7,9 +9,9 @@ export default function PrevNextSessionLinks({
     nextSession
 }) {
     return (
-        <div className='next-prev'>
+        <div className={styles.nextPrev}>
             {prevIndex !== null && (
-                <div className='prev'>
+                <div className={styles.prev}>
                     Prev:{' '}
                     <LugNavLink link={`/learn-linux?session=${prevIndex}`}>
                         {prevSession.title}
@@ -17,7 +19,7 @@ export default function PrevNextSessionLinks({
                 </div>
             )}
             {nextIndex !== null && (
-                <div className='next'>
+                <div className={styles.next}>
                     Next:{' '}
                     <LugNavLink link={`/learn-linux?session=${nextIndex}`}>
                         {nextSession.title}

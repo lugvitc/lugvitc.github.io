@@ -1,18 +1,18 @@
-._,
-._:visited {
+.index,
+.index:visited {
     text-decoration: none;
     color: var(--nord10);
 }
 
-._:hover,
-._:active,
-._:visited:hover,
-._:visited:active {
+.index:hover,
+.index:active,
+.index:visited:hover,
+.index:visited:active {
     color: var(--nord8);
 }
 
-._::selection,
-._:visited::selection {
+.index::selection,
+.index:visited::selection {
     color: var(--nord6);
     background-color: var(--nord10);
 }

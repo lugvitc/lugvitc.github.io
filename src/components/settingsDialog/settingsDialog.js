@@ -3,7 +3,7 @@ import useSettings from '../../hooks/useSettings';
 import useSettingsDialog from '../../hooks/useSettingsDialog';
 import TerminalWindow from '../terminal/terminalWindow';
 
-import './settingsDialog.css';
+import sds from './settingsDialog.module.css';
 
 export default function SettingsDialog() {
     const {
@@ -32,18 +32,18 @@ export default function SettingsDialog() {
     }, [settingsDialogRef, settingsDialogOpen, closeSettingsDialog]);
 
     return (
-        <dialog className='settings' ref={setSettingsDialogRef} open={false}>
+        <dialog className={sds.index} ref={setSettingsDialogRef} open={false}>
             <TerminalWindow title='Settings' onClickRed={closeSettingsDialog}>
-                <div className='settings-heading'>Settings</div>
+                <div className={sds.heading}>Settings</div>
                 <div
-                    className='settings-toggle'
+                    className={sds.toggle}
                     onClick={() => setAnimationsOn(!animationsOn)}
                 >
                     <input readOnly type='checkbox' checked={animationsOn} />{' '}
                     Show animations
                 </div>
                 <div
-                    className='settings-toggle'
+                    className={sds.toggle}
                     onClick={() => setTerminalDotsOnLeft(!terminalDotsOnLeft)}
                 >
                     <input
@@ -53,7 +53,7 @@ export default function SettingsDialog() {
                     />{' '}
                     Terminal dots on left
                 </div>
-                <div className='settings-buttons'>
+                <div className={sds.buttons}>
                     <button onClick={() => closeSettingsDialog()}>Exit</button>
                     <button onClick={() => setDefaults(true)}>Defaults</button>
                 </div>

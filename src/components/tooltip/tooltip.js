@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import './tooltip.css';
+
+import styles from './tooltip.module.css';
+import util from '../../styles/util.module.css';
 
 export default function Tooltip({ toolRef, children, above, below, text }) {
     const [showToolTip, setShowToolTip] = useState(false);
@@ -41,7 +43,10 @@ export default function Tooltip({ toolRef, children, above, below, text }) {
             tooltipStyle.top = `calc(${bottomVal}px + 0.5em)`;
         }
         return (
-            <div className='terminal-text tool-tip' style={tooltipStyle}>
+            <div
+                className={`${util.terminalText} ${styles.toolTip}`}
+                style={tooltipStyle}
+            >
                 {children}
             </div>
         );

@@ -1,14 +1,15 @@
 import { useSearchParams } from 'react-router-dom';
-import PrevNextSessionLinks from '../../components/prevNextSessionLinks';
+
+import PrevNextSessionLinks from '../../components/prevNextSessionLinks/prevNextSessionLinks';
 import ShowAfterTypewriter from '../../components/showAfterTypewriter/showAfterTypwriter';
 import TerminalPrompt from '../../components/terminalPrompt/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import LugNavLink from '../../components/lugLink/lugNavLink';
 
-import Session1 from './sessions/session1';
-import Session2 from './sessions/session2';
+import Session1 from './session1';
+import Session2 from './session2';
 
-import './learnLinux.css';
+import util from '../../styles/util.module.css';
 
 const sessions = [
     {
@@ -89,7 +90,7 @@ export default function LearnLinux() {
                 ]}
             >
                 Linux learning resources by LUG VITC
-                <div className='v-1em-spacer' />
+                <div className={util.v1emSpacer} />
                 <ShowAfterTypewriter
                     text={'ls -l'}
                     textContainer={text => (
@@ -98,14 +99,14 @@ export default function LearnLinux() {
                         </TerminalPrompt>
                     )}
                 >
-                    <div className='v-1em-spacer' />
-                    <span className='hide-600'>
+                    <div className={util.v1emSpacer} />
+                    <span className={util.hideBelow600}>
                         drwxrwxrwx 1 root root{' '}
                     </span>{' '}
                     learn-linux.txt
                     {sessions.map((session, index) => (
                         <div key={index}>
-                            <span className='hide-600'>
+                            <span className={util.hideBelow600}>
                                 drwxrwxrwx 1 root root{' '}
                             </span>
                             <LugNavLink link={`/learn-linux?session=${index}`}>

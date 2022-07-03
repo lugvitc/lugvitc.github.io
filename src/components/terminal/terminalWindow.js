@@ -1,7 +1,8 @@
 import TerminalPrompt from '../terminalPrompt/terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
-import './terminal.css';
+import styles from './terminal.module.css';
+import util from '../../styles/util.module.css';
 import TerminalDots from './terminalDots.js';
 
 export default function TerminalWindow({
@@ -13,17 +14,17 @@ export default function TerminalWindow({
     title
 }) {
     return (
-        <div className='terminal'>
-            <div className='terminal-titlebar no-selection'>
+        <div className={styles.index}>
+            <div className={`${styles.titlebar} ${util.noSelection}`}>
                 <TerminalDots
                     onClickRed={onClickRed}
                     onClickYellow={onClickYellow}
                     onClickGreen={onClickGreen}
                 />
-                <div className='terminal-title'>{title}</div>
+                <div className={styles.title}>{title}</div>
             </div>
 
-            <div className='terminal-body  terminal-text'>
+            <div className={`${styles.body} ${util.terminalText}`}>
                 {prompts ? (
                     prompts.reduceRight(
                         (acc, curr) => (
@@ -38,10 +39,10 @@ export default function TerminalWindow({
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div className='terminal-contents'>{children}</div>
+                        <div className={styles.contents}>{children}</div>
                     )
                 ) : (
-                    <div className='terminal-contents no-prompts'>
+                    <div className={`${styles.contents} ${styles.noPrompts}`}>
                         {children}
                     </div>
                 )}

@@ -1,6 +1,6 @@
-.typewriter-text:after {
+.text:after {
     content: '█';
-    animation: blink 1s step-start infinite;
+    animation: blink 0.7s step-start infinite;
 }
 
 @keyframes blink {
@@ -8,3 +8,4 @@
         opacity: 0;
     }
 }
+
