@@ -1,4 +1,4 @@
-import TerminalPrompt from './terminalPrompt.js';
+import TerminalPrompt from '../terminalPrompt/terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
 import './terminal.css';

@@ -1,7 +1,7 @@
 import { NavLink, useSearchParams } from 'react-router-dom';
 import PrevNextSessionLinks from '../../components/prevNextSessionLinks';
 import ShowAfterTypewriter from '../../components/showAfterTypewriter/showAfterTypwriter';
-import TerminalPrompt from '../../components/terminal/terminalPrompt';
+import TerminalPrompt from '../../components/terminalPrompt/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import './learnLinux.css';

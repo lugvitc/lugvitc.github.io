@@ -2,7 +2,6 @@
     border-radius: 10px;
     background-color: var(--header-footer-black);
     min-width: 50%;
-    /* height: fit-content; */
 }
 
 .terminal-titlebar {
@@ -52,29 +51,5 @@
     padding-block: 1rem;
 
     overflow-y: auto;
-}
-
-.terminal-prompt {
-    background-color: var(--nord1);
-}
-
-.prompt-user-system {
-    color: var(--nord11);
-}
-
-.prompt-path {
-    color: var(--nord13);
-}
-
-.prompt-command {
-    color: var(--nord14);
-}
-
-.terminal-contents {
-    margin-top: 1rem;
-}
-
-.terminal-contents.no-prompts {
-    margin-top: 0;
 }
 

@@ -1,4 +1,4 @@
-import './terminal.css';
+import './terminalPrompt.css';
 
 export default function TerminalPrompt({ path, children }) {
     return (
