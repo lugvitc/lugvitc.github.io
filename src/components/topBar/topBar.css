@@ -46,7 +46,6 @@
 .top-bar-settings {
     display: flex;
     align-items: center;
-    margin-right: 2px;
 }
 
 .top-bar-settings > svg {
@@ -75,9 +74,9 @@
     text-decoration: none;
     color: var(--nord4);
     background-color: var(--nord1);
-    border-radius: 5px;
-    padding: 0px 5px;
-    margin: 5px;
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    margin: 0.5em;
     cursor: default;
 }
 
@@ -96,9 +95,9 @@
 .top-bar-element-clickable-active {
     transform: translateY(0.5em);
     background-color: var(--nord0);
-    border-radius: 5px 5px 0px 0px;
-    padding: 0px 5px;
-    margin: 5px 5px 0px 5px;
+    border-radius: 0.3rem 0.3rem 0 0;
+    padding-inline: 0.5rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
     color: var(--nord10);
     cursor: default;
 }
@@ -109,10 +108,9 @@
 
 .top-bar-element-clickable-inactive {
     background-color: var(--nord1);
-    border-radius: 5px;
-    padding: 0px 5px;
-    margin: 5px 5px;
-    border-width: 2px;
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    margin: 0.5em;
 }
 
 .top-bar-element-clickable-inactive::after {
@@ -121,7 +119,7 @@
 
 .bottom-strip {
     background-color: var(--nord0);
-    height: 5px;
+    height: 0.2em;
 }
 
 @media only screen and (max-width: 500px) {
@@ -130,16 +128,15 @@
     }
 
     .top-bar-element-clickable:hover {
-        transform: translateX(10px);
+        transform: translateX(0.5em);
     }
 
     .top-bar-element-clickable-active {
         transform: translateY(0);
         background-color: var(--nord0);
-        border-radius: 5px;
-        padding: 0px 5px;
-        margin: 5px 5px;
-        border-width: 2px;
+        border-radius: 0.3em;
+        padding-inline: 0.5em;
+        margin: 0.5em;
         color: var(--nord10);
     }
 
