@@ -21,7 +21,7 @@ main#content {
     max-height: 100%;
 }
 
-aside#dock {
+aside.dock {
     flex: none;
     margin-right: 2rem;
 }
@@ -34,7 +34,7 @@ aside#dock {
         padding-bottom: 0;
     }
 
-    aside#dock {
+    aside.dock {
         margin-top: 1rem;
         margin-right: 0;
     }

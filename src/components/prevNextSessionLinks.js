@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import LugNavLink from './lugLink/lugNavLink';
 
 export default function PrevNextSessionLinks({
     prevIndex,
@@ -11,23 +11,17 @@ export default function PrevNextSessionLinks({
             {prevIndex !== null && (
                 <div className='prev'>
                     Prev:{' '}
-                    <NavLink
-                        className='lug-link'
-                        to={`/learn-linux?session=${prevIndex}`}
-                    >
+                    <LugNavLink link={`/learn-linux?session=${prevIndex}`}>
                         {prevSession.title}
-                    </NavLink>
+                    </LugNavLink>
                 </div>
             )}
             {nextIndex !== null && (
                 <div className='next'>
                     Next:{' '}
-                    <NavLink
-                        className='lug-link'
-                        to={`/learn-linux?session=${nextIndex}`}
-                    >
+                    <LugNavLink link={`/learn-linux?session=${nextIndex}`}>
                         {nextSession.title}
-                    </NavLink>
+                    </LugNavLink>
                 </div>
             )}
         </div>

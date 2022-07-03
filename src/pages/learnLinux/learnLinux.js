@@ -1,12 +1,14 @@
-import { NavLink, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import PrevNextSessionLinks from '../../components/prevNextSessionLinks';
 import ShowAfterTypewriter from '../../components/showAfterTypewriter/showAfterTypwriter';
 import TerminalPrompt from '../../components/terminalPrompt/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
+import LugNavLink from '../../components/lugLink/lugNavLink';
 
-import './learnLinux.css';
 import Session1 from './sessions/session1';
 import Session2 from './sessions/session2';
+
+import './learnLinux.css';
 
 const sessions = [
     {
@@ -59,9 +61,7 @@ export default function LearnLinux() {
                         }
                     ]}
                 >
-                    <NavLink className='lug-link' to='/learn-linux'>
-                        Go back
-                    </NavLink>
+                    <LugNavLink link='/learn-linux'>Go back</LugNavLink>
                     <h1>{session.title}</h1>
                     <PrevNextSessionLinks
                         prevIndex={prevSessionNo}
@@ -108,12 +108,9 @@ export default function LearnLinux() {
                             <span className='hide-600'>
                                 drwxrwxrwx 1 root root{' '}
                             </span>
-                            <NavLink
-                                className='lug-link'
-                                to={`/learn-linux?session=${index}`}
-                            >
+                            <LugNavLink link={`/learn-linux?session=${index}`}>
                                 {session.title}
-                            </NavLink>
+                            </LugNavLink>
                         </div>
                     ))}
                 </ShowAfterTypewriter>
