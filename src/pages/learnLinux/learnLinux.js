@@ -99,13 +99,13 @@ export default function LearnLinux() {
                     )}
                 >
                     <div className='v-1em-spacer' />
-                    <span className='ls-output'>
+                    <span className='hide-600'>
                         drwxrwxrwx 1 root root{' '}
                     </span>{' '}
                     learn-linux.txt
                     {sessions.map((session, index) => (
                         <div key={index}>
-                            <span className='ls-output'>
+                            <span className='hide-600'>
                                 drwxrwxrwx 1 root root{' '}
                             </span>
                             <NavLink
