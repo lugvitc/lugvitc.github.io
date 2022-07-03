@@ -1,11 +1,11 @@
-#top-bar {
+.topBar {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1;
 }
 
-.top-bar-contents {
+.topBarContents {
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
@@ -15,7 +15,7 @@
     padding-inline: 0.5em;
 }
 
-.top-bar-logo {
+.topBarLogo {
     margin: 0.5em;
     padding: 0.5em;
     height: 2em;
@@ -29,32 +29,32 @@
     align-items: center;
 }
 
-.top-bar-logo:hover {
+.topBarLogo:hover {
     background-color: var(--nord10);
 }
 
-.top-bar-logo img {
+.topBarLogo img {
     height: 1.5em;
 }
 
-#top-bar-links {
+.topBarLinks {
     display: flex;
     flex-direction: row;
     margin-right: auto;
 }
 
-.top-bar-settings {
+.topBarSettings {
     display: flex;
     align-items: center;
 }
 
-.top-bar-settings > svg {
+.topBarSettings > svg {
     fill: var(--nord3);
     cursor: pointer;
 }
 
-.top-bar-settings > svg:hover,
-.top-bar-settings.open > svg {
+.topBarSettings > svg:hover,
+.topBarSettings.open > svg {
     fill: var(--nord10);
     animation: spin 4s linear infinite;
 }
@@ -68,7 +68,7 @@
     }
 }
 
-.top-bar-element-non-clickable {
+.topBarElementNonClickable {
     border-color: var(--nord2);
     height: auto;
     text-decoration: none;
@@ -80,19 +80,19 @@
     cursor: default;
 }
 
-.top-bar-element-clickable {
+.topBarElementClickable {
     text-decoration: none;
     color: var(--nord4);
 }
 
-.top-bar-element-clickable:hover {
+.topBarElementClickable:hover {
     transform: translateY(0.5em);
     color: var(--nord10);
     background-color: var(--nord0);
     transition: ease-out 0.5s;
 }
 
-.top-bar-element-clickable-active {
+.active {
     transform: translateY(0.5em);
     background-color: var(--nord0);
     border-radius: 0.3em 0.3em 0 0;
@@ -102,36 +102,36 @@
     cursor: default;
 }
 
-.top-bar-element-clickable-active::after {
+.active::after {
     content: ' ▲';
 }
 
-.top-bar-element-clickable-inactive {
+.inactive {
     background-color: var(--nord1);
     border-radius: 0.3em;
     padding-inline: 0.5em;
     margin: 0.5em;
 }
 
-.top-bar-element-clickable-inactive::after {
+.inactive::after {
     content: ' ▼';
 }
 
-.bottom-strip {
+.bottomStrip {
     background-color: var(--nord0);
     height: 0.2em;
 }
 
 @media only screen and (max-width: 500px) {
-    #top-bar-links {
+    .topBar-links {
         flex-direction: column;
     }
 
-    .top-bar-element-clickable:hover {
+    .topBarElementClickable:hover {
         transform: translateX(0.5em);
     }
 
-    .top-bar-element-clickable-active {
+    .active {
         transform: translateY(0);
         background-color: var(--nord0);
         border-radius: 0.3em;
@@ -140,14 +140,14 @@
         color: var(--nord10);
     }
 
-    .top-bar-element-clickable-active::after {
+    .active::after {
         content: '';
     }
-    .top-bar-element-clickable-inactive::after {
+    .inactive::after {
         content: '';
     }
 
-    .bottom-strip {
+    .bottomStrip {
         display: none;
     }
 }
