@@ -20,10 +20,24 @@ const animationsOnStore = create(set => ({
     }
 }));
 
+const keyboardShortcutsOnStore = create(set => ({
+    keyboardShortcutsOn:
+        window.localStorage.getItem('keyboard-shortcuts-on') === 'true',
+    setKeyboardShortcutsOn: val => {
+        window.localStorage.setItem(
+            'keyboard-shortcuts-on',
+            val ? 'true' : 'false'
+        );
+        set({ keyboardShortcutsOn: val });
+    }
+}));
+
 export default function useSettings() {
     const { animationsOn, setAnimationsOn } = animationsOnStore();
     const { terminalDotsOnLeft, setTerminalDotsOnLeft } =
         terminalDotsOnLeftStore();
+    const { keyboardShortcutsOn, setKeyboardShortcutsOn } =
+        keyboardShortcutsOnStore();
 
     const setDefaults = (force = false) => {
         if (!window.localStorage.getItem('animations-on') || force) {
@@ -31,6 +45,9 @@ export default function useSettings() {
         }
         if (!window.localStorage.getItem('terminal-dots-on-left') || force) {
             setTerminalDotsOnLeft(true);
+        }
+        if (!window.localStorage.getItem('keyboard-shortcuts-on') || force) {
+            setKeyboardShortcutsOn(true);
         }
     };
 
@@ -41,7 +58,9 @@ export default function useSettings() {
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,
-        setTerminalDotsOnLeft
+        setTerminalDotsOnLeft,
+        keyboardShortcutsOn,
+        setKeyboardShortcutsOn
     };
 }
 

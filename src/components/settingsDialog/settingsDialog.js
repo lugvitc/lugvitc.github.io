@@ -11,7 +11,9 @@ export default function SettingsDialog() {
         animationsOn,
         setAnimationsOn,
         terminalDotsOnLeft,
-        setTerminalDotsOnLeft
+        setTerminalDotsOnLeft,
+        keyboardShortcutsOn,
+        setKeyboardShortcutsOn
     } = useSettings();
 
     const {
@@ -28,7 +30,18 @@ export default function SettingsDialog() {
             }
         };
         window.addEventListener('click', closeIfClickedOutside);
-        return () => window.removeEventListener('click', closeIfClickedOutside);
+
+        const preventCancel = e => e.preventDefault();
+        if (settingsDialogRef.current)
+            settingsDialogRef.current.addEventListener('cancel', preventCancel);
+        return () => {
+            window.removeEventListener('click', closeIfClickedOutside);
+            if (settingsDialogRef.current)
+                settingsDialogRef.current.removeEventListener(
+                    'cancel',
+                    preventCancel
+                );
+        };
     }, [settingsDialogRef, settingsDialogOpen, closeSettingsDialog]);
 
     return (
@@ -52,6 +65,17 @@ export default function SettingsDialog() {
                         checked={terminalDotsOnLeft}
                     />{' '}
                     Terminal dots on left
+                </div>
+                <div
+                    className={sds.toggle}
+                    onClick={() => setKeyboardShortcutsOn(!keyboardShortcutsOn)}
+                >
+                    <input
+                        readOnly
+                        type='checkbox'
+                        checked={keyboardShortcutsOn}
+                    />{' '}
+                    Enable keyboard shortcuts
                 </div>
                 <div className={sds.buttons}>
                     <button onClick={() => closeSettingsDialog()}>Exit</button>
