@@ -1,14 +1,13 @@
+import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
 import Tooltip from '../tooltip/tooltip';
+import LugvitcLogo from '../../images/Tux.svg';
 
 import useSettingsDialog from '../../hooks/useSettingsDialog';
 
-import LugvitcLogo from '../../images/Tux.svg';
-
-import styles from './topBar.module.css';
-import { useRef } from 'react';
+import topBarStyles from './topBar.module.css';
 
 export default function TopBar({ refer, topBarLinks }) {
     const { settingsDialogOpen, openSettingsDialog } = useSettingsDialog();
@@ -16,26 +15,29 @@ export default function TopBar({ refer, topBarLinks }) {
 
     return (
         <>
-            <header ref={refer} className={`${styles.TopBar} no-selection`}>
-                <div className={styles.topBarContents}>
+            <header
+                ref={refer}
+                className={`${topBarStyles.index} no-selection`}
+            >
+                <div className={topBarStyles.contents}>
                     <a
-                        className={styles.topBarLogo}
+                        className={topBarStyles.logo}
                         href='https://linktr.ee/lugvitc'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
                         <img src={LugvitcLogo} alt='lug logo' />
                     </a>
-                    <nav className={styles.topBarLinks}>
+                    <nav className={topBarStyles.links}>
                         {topBarLinks.map((nav, index) => (
                             <NavLink
                                 key={index}
                                 className={({ isActive }) =>
-                                    `${styles.topBarElementClickable} 
+                                    `${topBarStyles.clickable} 
                                     ${
                                         isActive
-                                            ? styles.active
-                                            : styles.inactive
+                                            ? topBarStyles.active
+                                            : topBarStyles.inactive
                                     }`
                                 }
                                 to={nav.link}
@@ -44,12 +46,12 @@ export default function TopBar({ refer, topBarLinks }) {
                             </NavLink>
                         ))}
                     </nav>
-                    <div className={styles.topBarElementNonClickable}>
+                    <div className={topBarStyles.nonClickable}>
                         <TopBarTimeDate />
                     </div>
                     <div
-                        className={`${styles.topBarSettings} ${
-                            settingsDialogOpen && styles.open
+                        className={`${topBarStyles.settings} ${
+                            settingsDialogOpen && topBarStyles.open
                         }`}
                         ref={settingsButtonRef}
                     >
@@ -69,7 +71,7 @@ export default function TopBar({ refer, topBarLinks }) {
                         </svg>
                     </div>
                 </div>
-                <div className={styles.bottomStrip} />
+                <div className={topBarStyles.bottomStrip} />
             </header>
             {!settingsDialogOpen && (
                 <Tooltip toolRef={settingsButtonRef} below>

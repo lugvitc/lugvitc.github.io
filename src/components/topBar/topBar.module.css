@@ -1,11 +1,11 @@
-.topBar {
+.index {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1;
 }
 
-.topBarContents {
+.contents {
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
@@ -15,7 +15,7 @@
     padding-inline: 0.5em;
 }
 
-.topBarLogo {
+.logo {
     margin: 0.5em;
     padding: 0.5em;
     height: 2em;
@@ -29,32 +29,32 @@
     align-items: center;
 }
 
-.topBarLogo:hover {
+.logo:hover {
     background-color: var(--nord10);
 }
 
-.topBarLogo img {
+.logo img {
     height: 1.5em;
 }
 
-.topBarLinks {
+.links {
     display: flex;
     flex-direction: row;
     margin-right: auto;
 }
 
-.topBarSettings {
+.settings {
     display: flex;
     align-items: center;
 }
 
-.topBarSettings > svg {
+.settings > svg {
     fill: var(--nord3);
     cursor: pointer;
 }
 
-.topBarSettings > svg:hover,
-.topBarSettings.open > svg {
+.settings > svg:hover,
+.settings.open > svg {
     fill: var(--nord10);
     animation: spin 4s linear infinite;
 }
@@ -68,7 +68,7 @@
     }
 }
 
-.topBarElementNonClickable {
+.nonClickable {
     border-color: var(--nord2);
     height: auto;
     text-decoration: none;
@@ -80,12 +80,12 @@
     cursor: default;
 }
 
-.topBarElementClickable {
+.clickable {
     text-decoration: none;
     color: var(--nord4);
 }
 
-.topBarElementClickable:hover {
+.clickable:hover {
     transform: translateY(0.5em);
     color: var(--nord10);
     background-color: var(--nord0);
@@ -123,11 +123,11 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .topBar-links {
+    .links {
         flex-direction: column;
     }
 
-    .topBarElementClickable:hover {
+    .clickable:hover {
         transform: translateX(0.5em);
     }
 
