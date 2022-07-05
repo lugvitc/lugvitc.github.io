@@ -7,7 +7,7 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 import LugNavLink from '../../components/lugLink/lugNavLink';
 
 import Session1 from './session1';
-import Session2 from './session2';
+// import Session2 from './session2';
 
 import util from '../../styles/util.module.css';
 
@@ -15,46 +15,46 @@ const sessions = [
     {
         title: 'Linux: What? Why? How?',
         content: <Session1 />
-    },
-    {
-        title: 'Know the terminal',
-        content: <Session2 />
-    },
-    {
-        title: 'Know the system',
-        content: <>coming soon!</>
-    },
-    {
-        title: 'Installing Software',
-        content: <>coming soon!</>
-    },
-    {
-        title: 'Ricing',
-        content: <>coming soon!</>
-    },
-    {
-        title: 'Advanced Features',
-        content: <>coming soon!</>
     }
+    // ,{
+    //     title: 'Know the terminal',
+    //     content: <Session2 />
+    // },
+    // {
+    //     title: 'Know the system',
+    //     content: <>coming soon!</>
+    // },
+    // {
+    //     title: 'Installing Software',
+    //     content: <>coming soon!</>
+    // },
+    // {
+    //     title: 'Ricing',
+    //     content: <>coming soon!</>
+    // },
+    // {
+    //     title: 'Advanced Features',
+    //     content: <>coming soon!</>
+    // }
 ];
 
 export default function LearnLinux() {
     const [params] = useSearchParams();
     const sessionParam = params.get('session');
     if (sessionParam) {
-        const sessionNo = Number(sessionParam);
+        const sessionIndex = Number(sessionParam) - 1;
         if (
-            sessionNo !== null &&
-            sessionNo >= 0 &&
-            sessionNo < sessions.length
+            sessionIndex !== null &&
+            sessionIndex >= 0 &&
+            sessionIndex < sessions.length
         ) {
-            const session = sessions[sessionNo];
-            const nextSessionNo =
-                sessionNo < sessions.length - 1 ? sessionNo + 1 : null;
-            const prevSessionNo = sessionNo > 0 ? sessionNo - 1 : null;
+            const session = sessions[sessionIndex];
+            const nextIndex =
+                sessionIndex < sessions.length - 1 ? sessionIndex + 1 : null;
+            const prevIndex = sessionIndex > 0 ? sessionIndex - 1 : null;
             return (
                 <TerminalWindow
-                    title={`Learn Linux #${sessionNo}`}
+                    title={`Learn Linux #${sessionIndex + 1}`}
                     prompts={[
                         {
                             path: '/learn-linux',
@@ -65,17 +65,17 @@ export default function LearnLinux() {
                     <LugNavLink link='/learn-linux'>Go back</LugNavLink>
                     <h1>{session.title}</h1>
                     <PrevNextSessionLinks
-                        prevIndex={prevSessionNo}
-                        prevSession={sessions[prevSessionNo]}
-                        nextIndex={nextSessionNo}
-                        nextSession={sessions[nextSessionNo]}
+                        prevIndex={prevIndex}
+                        prevSession={sessions[prevIndex]}
+                        nextIndex={nextIndex}
+                        nextSession={sessions[nextIndex]}
                     />
                     <div className='session-content'>{session.content}</div>
                     <PrevNextSessionLinks
-                        prevIndex={prevSessionNo}
-                        prevSession={sessions[prevSessionNo]}
-                        nextIndex={nextSessionNo}
-                        nextSession={sessions[nextSessionNo]}
+                        prevIndex={prevIndex}
+                        prevSession={sessions[prevIndex]}
+                        nextIndex={nextIndex}
+                        nextSession={sessions[nextIndex]}
                     />
                 </TerminalWindow>
             );
@@ -109,7 +109,9 @@ export default function LearnLinux() {
                             <span className={util.hideBelow600}>
                                 drwxrwxrwx 1 root root{' '}
                             </span>
-                            <LugNavLink link={`/learn-linux?session=${index}`}>
+                            <LugNavLink
+                                link={`/learn-linux?session=${index + 1}`}
+                            >
                                 {session.title}
                             </LugNavLink>
                         </div>
