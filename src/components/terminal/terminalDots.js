@@ -1,6 +1,8 @@
 import useSettings from '../../hooks/useSettings.js';
 import { Colors } from '../../styles/colors.js';
 
+import styles from './terminal.module.css';
+
 export default function TerminalDots({
     onClickRed,
     onClickYellow,
@@ -10,10 +12,12 @@ export default function TerminalDots({
 
     return (
         <div
-            className={`terminal-dots ${terminalDotsOnLeft ? 'left' : 'right'}`}
+            className={`${styles.dots} ${
+                terminalDotsOnLeft ? styles.left : styles.right
+            }`}
         >
             <div
-                className='terminal-dot'
+                className={styles.dot}
                 style={{
                     backgroundColor: Colors.nord11,
                     cursor: onClickRed ? 'pointer' : 'auto'
@@ -21,7 +25,7 @@ export default function TerminalDots({
                 onClick={onClickRed}
             />
             <div
-                className='terminal-dot'
+                className={styles.dot}
                 style={{
                     backgroundColor: Colors.nord13,
                     cursor: onClickYellow ? 'pointer' : 'auto'
@@ -29,7 +33,7 @@ export default function TerminalDots({
                 onClick={onClickYellow}
             />
             <div
-                className='terminal-dot'
+                className={styles.dot}
                 style={{
                     backgroundColor: Colors.nord14,
                     cursor: onClickGreen ? 'pointer' : 'auto'

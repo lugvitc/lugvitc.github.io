@@ -1,0 +1,11 @@
+.userSystem {
+    color: var(--nord11);
+}
+
+.path {
+    color: var(--nord13);
+}
+
+.command {
+    color: var(--nord14);
+}

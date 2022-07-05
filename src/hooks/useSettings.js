@@ -8,7 +8,7 @@ const terminalDotsOnLeftStore = create(set => ({
             'terminal-dots-on-left',
             val ? 'true' : 'false'
         );
-        set(state => ({ terminalDotsOnLeft: val }));
+        set({ terminalDotsOnLeft: val });
     }
 }));
 
@@ -16,30 +16,51 @@ const animationsOnStore = create(set => ({
     animationsOn: window.localStorage.getItem('animations-on') === 'true',
     setAnimationsOn: val => {
         window.localStorage.setItem('animations-on', val ? 'true' : 'false');
-        set(state => ({ animationsOn: val }));
+        set({ animationsOn: val });
     }
 }));
 
-const setDefaults = () => {
-    if (!window.localStorage.getItem('animations-on')) {
-        animationsOnStore(state => state.setAnimationsOn)(true);
+const keyboardShortcutsOnStore = create(set => ({
+    keyboardShortcutsOn:
+        window.localStorage.getItem('keyboard-shortcuts-on') === 'true',
+    setKeyboardShortcutsOn: val => {
+        window.localStorage.setItem(
+            'keyboard-shortcuts-on',
+            val ? 'true' : 'false'
+        );
+        set({ keyboardShortcutsOn: val });
     }
-    if (!window.localStorage.getItem('terminal-dots-on-left')) {
-        terminalDotsOnLeftStore(state => state.setTerminalDotsOnLeft)(true);
-    }
-};
+}));
 
 export default function useSettings() {
+    const { animationsOn, setAnimationsOn } = animationsOnStore();
+    const { terminalDotsOnLeft, setTerminalDotsOnLeft } =
+        terminalDotsOnLeftStore();
+    const { keyboardShortcutsOn, setKeyboardShortcutsOn } =
+        keyboardShortcutsOnStore();
+
+    const setDefaults = (force = false) => {
+        if (!window.localStorage.getItem('animations-on') || force) {
+            setAnimationsOn(true);
+        }
+        if (!window.localStorage.getItem('terminal-dots-on-left') || force) {
+            setTerminalDotsOnLeft(true);
+        }
+        if (!window.localStorage.getItem('keyboard-shortcuts-on') || force) {
+            setKeyboardShortcutsOn(true);
+        }
+    };
+
     setDefaults();
+
     return {
-        animationsOn: animationsOnStore(state => state.animationsOn),
-        setAnimationsOn: animationsOnStore(state => state.setAnimationsOn),
-        terminalDotsOnLeft: terminalDotsOnLeftStore(
-            state => state.terminalDotsOnLeft
-        ),
-        setTerminalDotsOnLeft: terminalDotsOnLeftStore(
-            state => state.setTerminalDotsOnLeft
-        )
+        setDefaults,
+        animationsOn,
+        setAnimationsOn,
+        terminalDotsOnLeft,
+        setTerminalDotsOnLeft,
+        keyboardShortcutsOn,
+        setKeyboardShortcutsOn
     };
 }
 

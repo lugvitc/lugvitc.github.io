@@ -1,81 +1,62 @@
-.terminal {
+.index {
     border-radius: 10px;
     background-color: var(--header-footer-black);
-    padding: 5px 0px 0px 0px;
-    margin: 5vh 5vw;
     min-width: 50%;
-    height: fit-content;
 }
 
-.terminal-titlebar {
+.titlebar {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    margin: 0.75rem;
+    padding-block: 0.75rem;
+    margin-inline: 0.75rem;
 }
 
-.terminal-dots {
+.dots {
     position: absolute;
     display: flex;
     gap: 5px;
 }
 
-.terminal-dots.left {
+.dots.left {
     flex-direction: row;
     left: 0;
 }
 
-.terminal-dots.right {
+.dots.right {
     flex-direction: row-reverse;
     right: 0;
 }
 
-.terminal-dot {
+.dot {
     border-radius: 15px;
     height: 15px;
     width: 15px;
 }
 
-.terminal-dot:hover {
+.dot:hover {
     filter: brightness(50%);
 }
 
-.terminal-title {
+.title {
     color: var(--nord4);
     font-weight: bold;
 }
 
-.terminal-body {
+.body {
     background-color: var(--nord1);
     border-radius: 0px 0px 10px 10px;
     padding-inline: 1rem;
     padding-block: 1rem;
+
+    overflow-y: auto;
 }
 
-.terminal-prompt {
-    background-color: var(--nord1);
-}
-
-.prompt-user-system {
-    color: var(--nord11);
-}
-
-.prompt-path {
-    color: var(--nord13);
-}
-
-.prompt-command {
-    color: var(--nord14);
-}
-
-.terminal-contents {
+.contents {
     margin-top: 1rem;
 }
-
-@media only screen and (max-width: 1024px) {
-    .terminal {
-        margin: 5vh 2vw;
-    }
+.contents.noPrompts {
+    margin-top: 0;
 }
 

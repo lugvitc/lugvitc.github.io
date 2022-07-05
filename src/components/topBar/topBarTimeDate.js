@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import './topBar.css';
 
 export default function TopBarTimeDate() {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -21,3 +20,4 @@ export default function TopBarTimeDate() {
 
     return <span>{`${time}, ${date}`}</span>;
 }
+

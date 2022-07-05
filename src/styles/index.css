@@ -3,22 +3,45 @@ body {
     height: fit-content;
     width: 100vw;
     max-width: calc(100vw - 10px); /* for scrollbar */
+    font-size: 1.1rem;
+}
+
+main#content {
+    display: flex;
+    padding-right: 2rem;
+    padding-block: 1rem;
+    /* min-height set in app.js */
+}
+
+#terminals {
+    flex: auto;
+}
+
+#terminals > .terminal {
+    max-height: 100%;
+}
+
+aside.dock {
+    flex: none;
+    margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    main#content {
+        flex-direction: column-reverse;
+
+        padding-inline: 2rem;
+        padding-bottom: 0;
+    }
+
+    aside.dock {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
 }
 
 hr {
     background-color: var(--header-footer-black);
-}
-
-.no-selection {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
-
-.terminal-text {
-    font-family: consolas, 'Courier New', Courier, monospace;
-    color: var(--nord4);
 }
 
 * ::selection {

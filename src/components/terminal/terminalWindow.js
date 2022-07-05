@@ -1,10 +1,8 @@
-// import { useCallback, useRef } from 'react';
-// import { useLocation } from 'react-router-dom';
-
-import TerminalPrompt from './terminalPrompt.js';
+import TerminalPrompt from '../terminalPrompt/terminalPrompt.js';
 import ShowAfterTypewriter from '../showAfterTypewriter/showAfterTypwriter.js';
 
-import './terminal.css';
+import styles from './terminal.module.css';
+import util from '../../styles/util.module.css';
 import TerminalDots from './terminalDots.js';
 
 export default function TerminalWindow({
@@ -15,30 +13,18 @@ export default function TerminalWindow({
     onClickGreen,
     title
 }) {
-    // const location = useLocation();
-
-    // const ref = useCallback(node => {
-    //     if (node) {
-    //         // console.log(location.pathname);
-    //         window.localStorage.setItem(
-    //             location.pathname,
-    //             new Date().toISOString()
-    //         );
-    //     }
-    // }, []);
-
     return (
-        <div className='terminal'>
-            <div className='terminal-titlebar no-selection'>
+        <div className={styles.index}>
+            <div className={`${styles.titlebar} ${util.noSelection}`}>
                 <TerminalDots
                     onClickRed={onClickRed}
                     onClickYellow={onClickYellow}
                     onClickGreen={onClickGreen}
                 />
-                <div className='terminal-title'>{title}</div>
+                <div className={styles.title}>{title}</div>
             </div>
 
-            <div className='terminal-body  terminal-text'>
+            <div className={`${styles.body} ${util.terminalText}`}>
                 {prompts ? (
                     prompts.reduceRight(
                         (acc, curr) => (
@@ -53,12 +39,10 @@ export default function TerminalWindow({
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div className='terminal-contents' /* ref={ref} */>
-                            {children}
-                        </div>
+                        <div className={styles.contents}>{children}</div>
                     )
                 ) : (
-                    <div className='terminal-contents' /* ref={ref} */>
+                    <div className={`${styles.contents} ${styles.noPrompts}`}>
                         {children}
                     </div>
                 )}

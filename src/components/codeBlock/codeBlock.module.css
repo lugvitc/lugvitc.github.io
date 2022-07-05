@@ -1,0 +1,32 @@
+.index {
+    display: flex;
+    background-color: var(--nord0);
+    border-radius: 0.5em;
+    margin-block: 1em;
+}
+
+.contents {
+    padding: 0.5em;
+}
+
+.copyButton {
+    margin-left: auto;
+    cursor: pointer;
+    background-color: var(--nord0);
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    padding: 0.5em;
+}
+
+.copyButton > svg {
+    fill: var(--nord2);
+}
+
+.copyButton:hover {
+    background-color: var(--nord2);
+}
+
+.copyButton:hover > svg {
+    fill: var(--nord10);
+}

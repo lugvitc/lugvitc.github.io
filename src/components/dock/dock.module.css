@@ -1,38 +1,32 @@
-aside#dock {
+.index {
     border-radius: 0px 10px 10px 0px;
-    height: 90%;
+    height: fit-content;
     background-color: var(--nord1);
     padding: 10px;
-    margin: 5vh 0vw;
-    height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    gap: 1em;
 }
 
-.dock-icon {
-    /* display: block; */
-    width: 30px;
-    height: 30px;
+.icon {
+    width: 2em;
+    height: 2em;
 }
 
-.dock-icon:hover {
+.icon:hover {
     transform: translateX(10px);
+    transition: ease-out 0.5s;
 }
 
 @media only screen and (max-width: 1024px) {
-    aside#dock {
+    .index {
+        display: flex;
         justify-content: center;
         flex-direction: row;
         border-radius: 10px 10px 0px 0px;
-        margin: 0px 2vw 0px 2vw;
     }
-    .dock-icon:hover {
+    .icon:hover {
         transform: translateY(-10px);
     }
 }
+
