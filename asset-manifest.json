@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea515ff1.css",
-    "main.js": "/static/js/main.3e4c049e.js",
+    "main.css": "/static/css/main.783f6564.css",
+    "main.js": "/static/js/main.fff682db.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
+    "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
     "static/media/Tux.svg": "/static/media/Tux.cc9a8e9221fef2b05c6c88364e219728.svg",
@@ -11,11 +12,11 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.ea515ff1.css.map": "/static/css/main.ea515ff1.css.map",
-    "main.3e4c049e.js.map": "/static/js/main.3e4c049e.js.map"
+    "main.783f6564.css.map": "/static/css/main.783f6564.css.map",
+    "main.fff682db.js.map": "/static/js/main.fff682db.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea515ff1.css",
-    "static/js/main.3e4c049e.js"
+    "static/css/main.783f6564.css",
+    "static/js/main.fff682db.js"
   ]
 }
