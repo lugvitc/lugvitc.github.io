@@ -1,6 +1,8 @@
-import { useRef, useState } from 'react';
-import Tooltip from '../tooltip/tooltip';
-import copyButtonStyles from './codeBlock.module.css';
+// import { useRef } from 'react';
+// import Tooltip from '../tooltip/tooltip';
+
+import util from '../../styles/util.module.css';
+import styles from './codeBlock.module.css';
 
 export default function CodeBlock({ children, copyText }) {
     const copyToClipboard = () => {
@@ -8,18 +10,18 @@ export default function CodeBlock({ children, copyText }) {
         navigator.clipboard.writeText(copyText);
     };
 
-    const copyButtonRef = useRef(null);
+    // const copyButtonRef = useRef(null);
 
     return (
-        <div className={copyButtonStyles.index}>
-            <div className={copyButtonStyles.contents}>{children}</div>
-            <Tooltip toolRef={copyButtonRef} above>
+        <code className={`${styles.index} ${util.terminalText}`}>
+            <div className={styles.contents}>{children}</div>
+            {/* <Tooltip toolRef={copyButtonRef} above>
                 Copy to clipboard
-            </Tooltip>
+            </Tooltip> */}
             <div
-                className={copyButtonStyles.copyButton}
+                className={styles.copyButton}
                 onClick={copyToClipboard}
-                ref={copyButtonRef}
+                // ref={copyButtonRef}
             >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -32,6 +34,7 @@ export default function CodeBlock({ children, copyText }) {
                     <path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z' />
                 </svg>
             </div>
-        </div>
+        </code>
     );
 }
+

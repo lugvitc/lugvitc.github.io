@@ -6,10 +6,10 @@
 .sessionConent h2::before {
     content: counter(h2counter) '. ';
     counter-increment: h2counter;
-    counter-reset: h3counter;
 }
 .sessionConent h2 {
     color: var(--nord13);
+    counter-reset: h3counter;
 }
 
 .sessionConent h3::before {
@@ -19,3 +19,4 @@
 .sessionConent h3 {
     color: var(--nord12);
 }
+

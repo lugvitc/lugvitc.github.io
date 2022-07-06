@@ -7,7 +7,7 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 import LugNavLink from '../../components/lugLink/lugNavLink';
 
 import Session1 from './session1';
-// import Session2 from './session2';
+import Session2 from './session2';
 
 import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
@@ -27,12 +27,12 @@ const sessions = [
                 allowfullscreen
             />
         )
+    },
+    {
+        title: 'Know the terminal',
+        content: <Session2 />
     }
-    // ,{
-    //     title: 'Know the terminal',
-    //     content: <Session2 />
-    // },
-    // {
+    //, {
     //     title: 'Know the system',
     //     content: <>coming soon!</>
     // },
