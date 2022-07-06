@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.783f6564.css",
-    "main.js": "/static/js/main.fff682db.js",
+    "main.js": "/static/js/main.0cb3e02a.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
@@ -13,10 +13,10 @@
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
     "main.783f6564.css.map": "/static/css/main.783f6564.css.map",
-    "main.fff682db.js.map": "/static/js/main.fff682db.js.map"
+    "main.0cb3e02a.js.map": "/static/js/main.0cb3e02a.js.map"
   },
   "entrypoints": [
     "static/css/main.783f6564.css",
-    "static/js/main.fff682db.js"
+    "static/js/main.0cb3e02a.js"
   ]
 }
