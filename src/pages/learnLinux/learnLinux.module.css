@@ -1,0 +1,11 @@
+.sessionConent {
+    padding-inline: 1em;
+}
+
+.sessionConent h2 {
+    color: var(--nord13);
+}
+
+.sessionConent h3 {
+    color: var(--nord12);
+}

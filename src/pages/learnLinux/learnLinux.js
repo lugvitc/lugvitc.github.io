@@ -10,6 +10,7 @@ import Session1 from './session1';
 // import Session2 from './session2';
 
 import util from '../../styles/util.module.css';
+import styles from './learnLinux.module.css';
 
 const sessions = [
     {
@@ -70,7 +71,9 @@ export default function LearnLinux() {
                         nextIndex={nextIndex}
                         nextSession={sessions[nextIndex]}
                     />
-                    <div className='session-content'>{session.content}</div>
+                    <div className={styles.sessionConent}>
+                        {session.content}
+                    </div>
                     <PrevNextSessionLinks
                         prevIndex={prevIndex}
                         prevSession={sessions[prevIndex]}
