@@ -1,0 +1,21 @@
+.sessionConent {
+    padding-inline: 1em;
+    counter-reset: h2counter;
+}
+
+.sessionConent h2::before {
+    content: counter(h2counter) '. ';
+    counter-increment: h2counter;
+    counter-reset: h3counter;
+}
+.sessionConent h2 {
+    color: var(--nord13);
+}
+
+.sessionConent h3::before {
+    content: counter(h2counter) '.' counter(h3counter) '. ';
+    counter-increment: h3counter;
+}
+.sessionConent h3 {
+    color: var(--nord12);
+}

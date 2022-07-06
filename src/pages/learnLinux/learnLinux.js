@@ -10,11 +10,23 @@ import Session1 from './session1';
 // import Session2 from './session2';
 
 import util from '../../styles/util.module.css';
+import styles from './learnLinux.module.css';
 
 const sessions = [
     {
         title: 'Linux: What? Why? How?',
-        content: <Session1 />
+        content: <Session1 />,
+        ytVideoElement: (
+            <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/nZDx0dSeg6w'
+                title='YouTube video player'
+                frameborder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowfullscreen
+            />
+        )
     }
     // ,{
     //     title: 'Know the terminal',
@@ -70,7 +82,11 @@ export default function LearnLinux() {
                         nextIndex={nextIndex}
                         nextSession={sessions[nextIndex]}
                     />
-                    <div className='session-content'>{session.content}</div>
+
+                    <div className={styles.sessionConent}>
+                        {session.ytVideoElement && session.ytVideoElement}
+                        {session.content}
+                    </div>
                     <PrevNextSessionLinks
                         prevIndex={prevIndex}
                         prevSession={sessions[prevIndex]}
