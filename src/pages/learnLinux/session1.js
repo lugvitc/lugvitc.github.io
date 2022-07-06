@@ -187,6 +187,12 @@ export default function Session1() {
                 <LugLink link='https://www.stackscale.com/blog/popular-linux-distributions/'>
                     Resource 2
                 </LugLink>
+                <br />
+                Try out running linux distros in a cloud server:
+                <br />
+                <LugLink link='https://distrotest.net/index.php'>
+                    Resource 3
+                </LugLink>
             </section>
 
             <section>
