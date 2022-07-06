@@ -83,6 +83,8 @@ export default function Session2() {
                 <p>This is the terminal prompt.</p>
                 <p>
                     The part in red, <code>sam</code> shows the current user.
+                </p>
+                <p>
                     The part in yellow, <code>pop-hp-2020</code> shows the name
                     of the machine.
                 </p>
