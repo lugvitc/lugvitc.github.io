@@ -77,3 +77,10 @@ br::selection {
     background: var(--nord10);
 }
 
+code {
+    color: var(--nord11);
+    background-color: var(--nord0);
+    padding-inline: 0.5em;
+    border-radius: 0.3em;
+}
+

@@ -13,7 +13,7 @@ export default function CodeBlock({ children, copyText }) {
     // const copyButtonRef = useRef(null);
 
     return (
-        <code className={`${styles.index} ${util.terminalText}`}>
+        <code className={styles.index}>
             <div className={styles.contents}>{children}</div>
             {/* <Tooltip toolRef={copyButtonRef} above>
                 Copy to clipboard
