@@ -211,15 +211,218 @@ export default function Session2() {
             </section>
             <section>
                 <h2>Terminal Basics</h2>
+                <p>
+		   In this section, we will learn about some terminal commands 
+	           which will help us to move around the filesystem, check the
+	           command history and do some basic chores.
+		</p>
                 <h3>Moving Around</h3>
+		<p>
+		   <ol>
+		       <li>
+		           <code>cd</code>: The <code>cd</code> command stands for change 
+	                   directory and it helps to navigate into different directories 
+	                   according to their path. By default, when you open the terminal, 
+		           your working directory is set to the home directory. Thus, you 
+	                   can use the <code>cd</code> command to change to sub-directories etc.
+		           <br />
+		           syntax : <code>cd /path/to/directory</code>
+		           <br />
+		           <CodeBlock>
+		                       cd /etc/NetworkManager
+	                   </CodeBlock> 
+		       </li>
+		       <li>
+		           <code>pwd</code>: The <code>pwd</code> command stands for print
+			   working directory and it outputs the current directory you are 
+	 	           working upon. This is helpful when you are working with many 
+	 		   nested directories, as it will give you the absolute path of the
+	 		   current directory. You can then copy the output of this command and
+	                   use it with the <code>cd</code> command to get into the dircetory.
+		           <br />
+		           syntax: <code>pwd</code>
+		           <br />
+		           <CodeBlock>
+		                       pwd
+	                   </CodeBlock>
+		       </li>
+		       <li>
+		           <code>ls</code>: The <code>ls</code> command lists the files/sub-directories
+	                   present in the current working directory. This command is often coupled with
+	                   the <code>cd</code> and <code>pwd</code> command to effectively navigate
+	                   into directories.
+		           <br />
+		           syntax: <code>ls</code>
+		           <br />
+		           <CodeBlock>
+		                         ls
+	                   </CodeBlock>
+		       </li>
+		    </ol>
+		</p>
                 <h3>Command History</h3>
-                <h3>Tab Completion</h3>
+		<p>
+		   The Command history stores the list of the commands you have used in the past.
+		   This helps you to effectively re-use the recent commands without having to type
+	           it all again. You can navigate between the command history by pressing the <code>UpArrowKey</code> or <code>DownArrowKey</code> 
+		    to load the previous or next command in the list.
+		</p>
+		<p>
+		    <code>history</code>: The <code>history</code> command prints the Command History discussed above.
+		    If you want to re-run any command in the history, type <code>!commandNumber</code>. Alternatively, you 
+	            can also use string matching to run the most recent match of the command <code>!string</code>. You can 
+	            also use the <code>UpArrowKey</code>/<code>DownArrowKey</code> to navigate to the stack of commands in
+		    the history.
+		</p>
+		<p>
+		   Syntax of the above commands:
+		   <CodeBlock> history </CodeBlock>
+		   <CodeBlock> !507 </CodeBlock>
+		   <CodeBlock> !time </CodeBlock>
+		</p>
+
+		<p>
+                    For those who are curious, the output of the above command
+                    is given below
+                </p>
+                <p
+                    style={{
+                        backgroundColor: 'var(--nord0)',
+                        padding: '1em',
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}
+                >
+                    <TerminalWindow title='bash'>
+		          [beleswar@arch ~]$ history<br />
+		          489  vim schedule.md<br />
+  			  490  vim schedule.md<br />
+                          491  vim schedule.md<br />
+		          492  vim schedule.md<br />
+		          493  poweroff<br />
+		  	  494  directories<br />
+			  495  directory<br />
+			  496  exit<br />
+			  497  timedatectk <br />
+			  498  timedatectl<br />
+			  499  clear<br />
+			  500  exit<br />
+			  501  cd /ect<br />
+			  502  cd /etc<br />
+			  503  ls<br />
+			  504  pwd<br />
+			  505  cd ..<br />
+			  506  cd<br />
+			  507  pwd<br />
+			  508  clear<br />
+			  509  history<br />
+		          510  this is a very very very long command for test lets see what the computer outputs to the exec of this  <br />
+		          [beleswar@arch ~]${' '}
+                        <span className={blinkStyle.text} />
+                    </TerminalWindow>
+                </p>
+		             
+		<h3>Tab Completion</h3>
+		<p>
+		    Tab Completion is a great feature which helps you become faster by saving much keystrokes.
+		    It is an auto-completion feature which attempts to complete your full command/filename, if
+	            a unique match is found within the initial letters. If there are multiple commands/files
+	            which match the pattern, it prints all of them out and waits at the command prompt again
+	            for you to type out few more letters.
+		    <CodeBlock>
+		                cd /etc/Net (press tab here)
+		    </CodeBlock>
+		</p>
                 <h3>Manual Pages</h3>
+		<p> Manual pages give the complete description of a command. It prints out the name, description, 
+		    syntax, options, exit status, authors etc. of a command. So if you are confused at any point 
+	            about the options of a command, you can check this manual page to get an idea of it.
+		    <br />
+		    syntax: <code>man CommandName</code>
+		    <CodeBlock>
+		                 man ls
+	            </CodeBlock>
+		</p>
             </section>
             <section>
                 <h2>Working with files</h2>
+		<p>
+		    This section talks about the commands used for file management (like copying files, renaming files
+	            looking at the content of files etc.). Linux is essentialy a hierarchy of files. So half of your work
+		    in Linux will be based upon these commands.
+		</p>
                 <h3>File types</h3>
+		<p>
+		    <ol>
+		         <li>
+		              <code>file</code>: The <code>file</code> command scans the file and determines what 
+	                      kind of content is in the file. The Linux environment does NOT need file extensions
+	                      (e.g. .md, .py, .c etc.). So, you might encounter multiple files which do not have
+	                      extensions. Thus, this <code>file</code> command is a great way to learn what kind
+	           	      of file we are dealing with currently.
+		              <br />
+		              syntax: <code>file /path/to/file</code>
+		 	      <CodeBlock>
+		                          file /etc/passwd
+	                      </CodeBlock>
+		         </li>
+		    </ol>
+		</p>
                 <h3>File contents</h3>
+		<p>
+		   <ol>
+		        <li>
+			    <code>cat</code>: The <code>cat</code> command is the shortform for concatenate.
+		            It outputs all the contents of a file to the screen. The <code>cat</code> command
+	                    can print the content of any of the files regardless of its extension, thus its
+	 	 	    super helpful when you want to see the file without opening it.
+		            <br />syntax: <code>cat /path/to/file1 /path/to/file2</code>
+		            <CodeBlock>
+		                        cat /etc/passwd
+	 		    </CodeBlock>
+		        </li>
+		        <li>
+		            <code>less</code>: The <code>less</code> command prints content of the file one page
+	                    at a time. It is very useful for reading long files. Use <code>UpArrowKey</code>/<code>DownArrowKey</code>
+		            or <code>spacebar</code> to navigate between the pages, and use <code>q</code> to exit.
+		            <br />
+		            syntax: <code>less /path/to/file</code>
+		            <CodeBlock>
+		                        less /etc/passwd
+	                    </CodeBlock>
+		        </li>
+		        <li>
+		            <code>head</code>: The <code>head</code> command prints the first 10 lines of the file
+		            by default. This is useful when you just want to see the first few lines of a file rather
+	                    than reading the whole long file. If you want to print specific number of lines other than
+	                    the first 10, use the <code>-n</code> argument.
+		            <br />syntax: <code>head -n 3 /path/to/file</code>
+		            <CodeBlock>
+		                        head -n 3 /etc/passwd
+	                    </CodeBlock>
+		        </li>
+		        <li>
+		            <code>tail</code>: Similarly, the <code>tail</code> command prints the last 10 lines of the file. 
+		            This is useful in instances like when you append some records to a file, you might just want to check
+	                    the last 10 records of the file to verify if the operation was successful. 
+		            <br />syntax: <code>tail -n 4 /path/to/file</code>
+		            <CodeBlock>
+		                        tail -n 4 /etc/passwd
+	                    </CodeBlock>
+		        </li>
+		        <li>
+		            <code>wc</code>: The <code>wc</code> command stands for word count, and is a very 
+	                    useful command which counts the lines, 
+		            words and characters of a file and prints it to the screen.
+		            <br />syntax: <code>wc /path/to/file</code>
+		            <CodeBlock>
+		                         wc /etc/passwd
+	                    </CodeBlock>
+		        </li>
+		       
+		   </ol>
+
+		</p>
                 <h3>File Management</h3>
             </section>
         </>
