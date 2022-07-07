@@ -418,12 +418,53 @@ export default function Session2() {
 		            <CodeBlock>
 		                         wc /etc/passwd
 	                    </CodeBlock>
-		        </li>
-		       
+		        </li> 
 		   </ol>
 
 		</p>
                 <h3>File Management</h3>
+		<p>
+		   <ol>
+		       <li>
+		            <code>cp</code>: The <code>cp</code> command helps to make a copy of a file from one destination
+	                    to another destination. It takes both the destinations as arguments in the command.
+		            <br />syntax: <code>cp /path/to/source/file /path/to/destination/file</code>
+		            <CodeBlock>
+		                         cp /etc/passwd ./tempPasswd
+                            </CodeBlock>
+		      </li>
+		      <li>
+		           <code>mv</code>: The <code>mv</code> command helps to move a file from the source
+	                   to the destination directory. Similar to the <code>cp</code> command, it takes both the
+	                   destinations as arguments in the command.
+		           <br />syntax: <code>mv /path/to/source/file /path/to/destination/file</code>
+		           <CodeBlock>
+		                       mv ./tempPasswd ./tempDir/tempPasswd
+	                   </CodeBlock>
+		      </li>
+		      <li>
+		          <code>rm</code>: The <code>rm</code> command helps to delete a file or directory in the system.
+		          <br />syntax: <code>rm /path/to/file</code>
+		          <CodeBlock>
+		                      rm ./tempDir/tempPasswd
+	                  </CodeBlock>
+		          <CodeBlock>
+		                      rm -r tempDir
+	                  </CodeBlock>
+		      </li>
+		      <li>
+		          Some shortcuts: <br />
+			  * ctrl+A - jumps to the beginning of the command <br />
+			  * ctrl+E - jumps to the end of the command <br />
+			  * ctrl+U - clears the part of the command which is in the left of the current position of the cursor.<br />
+			  * ctrl+K - clears the part of the command which is in the right of the current position of the cursor.<br />
+			  * ctrl+leftarrow - jumps to the previous word of the command<br />
+			  * ctrl+rightarrow - jumps to the next word of the command <br />
+		     </li>
+		    
+		   </ol>
+		</p>
+
             </section>
         </>
     );
