@@ -257,6 +257,17 @@ export default function Session2() {
                             <br />
                             <CodeBlock>ls</CodeBlock>
                         </li>
+		        <li>
+		            <code>mkdir</code>: The <code>mkdir</code> command
+	                    stands for make directory, and it creates a 
+	                    directory at the specified path. You can then{' '}
+	                    <code>cd</code> into the created directory and
+	                    create some files there.
+		            <br />
+		            syntax: <code>mkdir directory-name</code>
+		            <br />
+		            <CodeBlock>mkdir temporaryDirectory</CodeBlock>
+		        </li>
                     </ol>
                 </p>
                 <h3>Command History</h3>
