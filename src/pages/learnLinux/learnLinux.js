@@ -8,6 +8,7 @@ import LugNavLink from '../../components/lugLink/lugNavLink';
 
 import Session1 from './session1';
 import Session2 from './session2';
+import Session3 from './session3';
 
 import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
@@ -31,11 +32,11 @@ const sessions = [
     {
         title: 'Know the terminal',
         content: <Session2 />
+    },
+    {
+        title: 'Know the system',
+        content: <Session3 />
     }
-    //, {
-    //     title: 'Know the system',
-    //     content: <>coming soon!</>
-    // },
     // {
     //     title: 'Installing Software',
     //     content: <>coming soon!</>
