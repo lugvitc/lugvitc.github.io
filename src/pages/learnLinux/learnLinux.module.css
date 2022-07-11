@@ -18,5 +18,11 @@
 }
 .sessionConent h3 {
     color: var(--nord12);
+    counter-reset: h4counter;
 }
 
+.sessionConent h4::before {
+    content: counter(h2counter) '.' counter(h3counter) '.' counter(h4counter)
+        '. ';
+    counter-increment: h4counter;
+}
