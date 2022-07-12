@@ -230,12 +230,114 @@ export default function Session3() {
                 <h2>Users, Groups and Permissions</h2>
 
                 <h3>Users and Groups</h3>
-                <p></p>
+                <h4>What are user accounts and why do we need them</h4>
+                <p>
+		    <ul>
+		        <li> There may be multiple users using the same system, the OS needs to differentiate (secuity and boundaries). </li>
+                        <li> Os uses a number to keep track of the user. </li>
+		        <li> Every file has a particular user assigned to it. </li>
+                        <li> To view a list of the users, cat the /etc/passwd file. </li>
+		    </ul>
+		</p>
+
+		<h4> Types of users </h4>
+		<p>
+		    <ul>
+			 <li> Super User (For administrative purposes) </li>
+			 <li> System User (For processes) </li>
+		         <li> Regular User (Normal users with usernames and passwords) </li>
+		    </ul>
+		</p>
+
+		<h4> Managing local users </h4>
+		<p>
+		    <ul>
+			 <li> Creating (useradd) </li>
+		  	 <li> Modifying (usermod) </li>
+		 	 <li> Deleting (userdel -r) </li>
+			 <li> Changing password (passwd [username]) </li>
+		    </ul>
+		</p>
+
+		<h4> Handy commands </h4>
+		<p>
+		    <ul>
+		 	 <li> <code>whoami</code> : Prints the current users name </li>
+			 <li> <code>id</code>     : Prints real and effective user and group ids </li>
+		         <li> <code>su</code>     : Switch User </li>
+		         <li> <code>ps -au</code> : Snapshot of the current processes and the owner </li>
+		         <li> <code>ls -al</code> : Lists all files in a verbose manner </li>
+		    </ul>
+		</p>
+
+		<h4> What are groups </h4>
+		<p>
+		    <ul>
+		         <li> Groups are a collection of users that share access to files/resources. </li>
+			 <li> Os uses a number to keep track of the group. </li>
+			 <li> System groups have GIDs between 0 and 999, keep this in mind while setting a GID manually. </li>
+			 <li> To view the groups, cat the /etc/group file. </li>
+		    </ul>
+		</p>
+
+		<h4> Managing groups </h4>
+		<p>
+		    <ul>
+			 <li> Creating a group, a group must be created prior to adding users to it. Create a group by using the <code>groupadd</code> command. 
+		              <CodeBlock> groupadd -r [group_name]. </CodeBlock> </li>
+			 <li> Modifying a group, use groupmod. <CodeBlock> groupmod -n [new_name] [old_name] </CodeBlock> </li>
+		 	 <li> Deleting a group, use the groupdel command. NOTE: You cannot delete a group if it is a users primary group. </li>
+			 <li> Adding users to a group, use the usermod command. <CodeBlock> usermod -aG [group_name] [username] </CodeBlock> G -> secondary group. (the 'a' stands for append, if not supplied, it overwrites.) </li>
+		    </ul>
+		</p>
 
                 <h3>Permissions</h3>
-                <p></p>
+                <h4> What are permissions and how is it used </h4>
+		<p>
+		    <ul>
+		         <li> File permissions are used to control access to a file. </li>
+		         <li> There are 3 categories to a file permissions:  1. Owned by a user (u) 2. Owned by a group (g) 3. Others (o) </li>
+		 	 <li> The most specific permission takes precedence. User perms > group perms > others. </li>
+		    </ul>
+		</p>
 
-                <h3></h3>
+		<h4> Permission categories </h4>
+		<p>
+		    <ul>
+			 <li> r - Read (files -> can read the contents, directories -> contents may be listed out). </li>
+			 <li>  w - Write (files -> may be modified, directories -> files may be added or deleted). </li>
+			 <li> x - Execute (files -> may be run, directories -> can be made pwd). </li>
+		    </ul>
+		</p>
+
+		<h4> Changing permissions </h4>
+		<p>
+	 	    <ul>
+		         <li> We use the chmod command. There are 2 ways of going about this - the symbolic way and the numeric way (using the octal system). In the numeric way, each bit represents a group and _ _ _ for r,w,x; 1 => enable, 0 => disable. Thus 0b(111) = 0o(7) -> give r,w,x. 0b(101) = 0o(5) -> give r,x (no w).</li>
+		         <li> Eg: [symbolic]: (+ -> give, - -> remove) <CodeBlock>chmod go-rw file1</CodeBlock> </li>
+		 	 <li> Eg: [Numeric] : (gives read, write, exec perms to everyone) <CodeBlock>chmod 777 file1</CodeBlock> </li>
+		    </ul>
+		</p>
+
+		<h4> Changing ownership </h4>
+		<p>
+		    <ul>
+			 <li> We change ownership using the <code>chown</code> command. </li>
+		         <li> chown new_owner file1, use -R to recursively change ownership in a directory. </li>
+		         <li> <code>chown :new_group some_dir</code>, changes the group owner ship (note the ':') to new_group, anything after the colon signifies the group. </li>
+		    </ul>
+		</p>
+
+		<h4> Special permissions </h4>
+		<p>
+		    <ul>
+		         <li> a fourth permission type in addition to the basic user, group, and other types. </li>
+			 <li> 1. [suid] u+s (Files: File executes as the user that owns the file, not the user that ran the file, Dirs: no effect). </li>
+		         <li> 2. [sgid] g+s (Files: File execs as the group that owns the file, Dirs: newly created files have their group owner set to match the owner of the directory). </li>
+		         <li> 3. [sticky] o+t (Files: No effect, Dirs: Users with write access to the directory can only remove files that they own). </li>
+		         <li> If this has ot be set numerically, a fourth preceding bit is used to denote it. setuid = 4; setgid = 2; sticky = 1. </li>
+		    </ul>
+		</p>
             </section>
             <section>
                 <h2>Processes</h2>
