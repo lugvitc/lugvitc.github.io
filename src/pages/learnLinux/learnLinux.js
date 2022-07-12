@@ -12,6 +12,7 @@ import Session3 from './session3';
 
 import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
+import Session4 from './session4';
 
 const sessions = [
     {
@@ -36,11 +37,11 @@ const sessions = [
     {
         title: 'Know the system',
         content: <Session3 />
+    },
+    {
+        title: 'Installing Software',
+        content: <Session4 />
     }
-    // {
-    //     title: 'Installing Software',
-    //     content: <>coming soon!</>
-    // },
     // {
     //     title: 'Ricing',
     //     content: <>coming soon!</>
