@@ -232,155 +232,379 @@ export default function Session3() {
                 <h3>Users and Groups</h3>
                 <h4>What are user accounts and why do we need them</h4>
                 <p>
-		    <ul>
-		        <li> There may be multiple users using the same system, the OS needs to differentiate (secuity and boundaries). </li>
+                    <ul>
+                        <li>
+                            {' '}
+                            There may be multiple users using the same system,
+                            the OS needs to differentiate (secuity and
+                            boundaries).{' '}
+                        </li>
                         <li> Os uses a number to keep track of the user. </li>
-		        <li> Every file has a particular user assigned to it. </li>
-                        <li> To view a list of the users, cat the /etc/passwd file. </li>
-		    </ul>
-		</p>
+                        <li>
+                            {' '}
+                            Every file has a particular user assigned to it.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            To view a list of the users, cat the /etc/passwd
+                            file.{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Types of users </h4>
-		<p>
-		    <ul>
-			 <li> Super User (For administrative purposes) </li>
-			 <li> System User (For processes) </li>
-		         <li> Regular User (Normal users with usernames and passwords) </li>
-		    </ul>
-		</p>
+                <h4> Types of users </h4>
+                <p>
+                    <ul>
+                        <li> Super User (For administrative purposes) </li>
+                        <li> System User (For processes) </li>
+                        <li>
+                            {' '}
+                            Regular User (Normal users with usernames and
+                            passwords){' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Managing local users </h4>
-		<p>
-		    <ul>
-			 <li> Creating (useradd) </li>
-		  	 <li> Modifying (usermod) </li>
-		 	 <li> Deleting (userdel -r) </li>
-			 <li> Changing password (passwd [username]) </li>
-		    </ul>
-		</p>
+                <h4> Managing local users </h4>
+                <p>
+                    <ul>
+                        <li> Creating (useradd) </li>
+                        <li> Modifying (usermod) </li>
+                        <li> Deleting (userdel -r) </li>
+                        <li> Changing password (passwd [username]) </li>
+                    </ul>
+                </p>
 
-		<h4> Handy commands </h4>
-		<p>
-		    <ul>
-		 	 <li> <code>whoami</code> : Prints the current users name </li>
-			 <li> <code>id</code>     : Prints real and effective user and group ids </li>
-		         <li> <code>su</code>     : Switch User </li>
-		         <li> <code>ps -au</code> : Snapshot of the current processes and the owner </li>
-		         <li> <code>ls -al</code> : Lists all files in a verbose manner </li>
-		    </ul>
-		</p>
+                <h4> Handy commands </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            <code>whoami</code> : Prints the current users name{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            <code>id</code> : Prints real and effective user and
+                            group ids{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            <code>su</code> : Switch User{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            <code>ps -au</code> : Snapshot of the current
+                            processes and the owner{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            <code>ls -al</code> : Lists all files in a verbose
+                            manner{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> What are groups </h4>
-		<p>
-		    <ul>
-		         <li> Groups are a collection of users that share access to files/resources. </li>
-			 <li> Os uses a number to keep track of the group. </li>
-			 <li> System groups have GIDs between 0 and 999, keep this in mind while setting a GID manually. </li>
-			 <li> To view the groups, cat the /etc/group file. </li>
-		    </ul>
-		</p>
+                <h4> What are groups </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            Groups are a collection of users that share access
+                            to files/resources.{' '}
+                        </li>
+                        <li> Os uses a number to keep track of the group. </li>
+                        <li>
+                            {' '}
+                            System groups have GIDs between 0 and 999, keep this
+                            in mind while setting a GID manually.{' '}
+                        </li>
+                        <li> To view the groups, cat the /etc/group file. </li>
+                    </ul>
+                </p>
 
-		<h4> Managing groups </h4>
-		<p>
-		    <ul>
-			 <li> Creating a group, a group must be created prior to adding users to it. Create a group by using the <code>groupadd</code> command. 
-		              <CodeBlock> groupadd -r [group_name]. </CodeBlock> </li>
-			 <li> Modifying a group, use groupmod. <CodeBlock> groupmod -n [new_name] [old_name] </CodeBlock> </li>
-		 	 <li> Deleting a group, use the groupdel command. NOTE: You cannot delete a group if it is a users primary group. </li>
-			 <li> Adding users to a group, use the usermod command. <CodeBlock> usermod -aG [group_name] [username] </CodeBlock> G -> secondary group. (the 'a' stands for append, if not supplied, it overwrites.) </li>
-		    </ul>
-		</p>
+                <h4> Managing groups </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            Creating a group, a group must be created prior to
+                            adding users to it. Create a group by using the{' '}
+                            <code>groupadd</code> command.
+                            <CodeBlock>
+                                {' '}
+                                groupadd -r [group_name].{' '}
+                            </CodeBlock>{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            Modifying a group, use groupmod.{' '}
+                            <CodeBlock>
+                                {' '}
+                                groupmod -n [new_name] [old_name]{' '}
+                            </CodeBlock>{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            Deleting a group, use the groupdel command. NOTE:
+                            You cannot delete a group if it is a users primary
+                            group.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            Adding users to a group, use the usermod command.{' '}
+                            <CodeBlock>
+                                {' '}
+                                usermod -aG [group_name] [username]{' '}
+                            </CodeBlock>{' '}
+                            G -&gt; secondary group. (the 'a' stands for append,
+                            if not supplied, it overwrites.){' '}
+                        </li>
+                    </ul>
+                </p>
 
                 <h3>Permissions</h3>
                 <h4> What are permissions and how is it used </h4>
-		<p>
-		    <ul>
-		         <li> File permissions are used to control access to a file. </li>
-		         <li> There are 3 categories to a file permissions:  1. Owned by a user (u) 2. Owned by a group (g) 3. Others (o) </li>
-		 	 <li> The most specific permission takes precedence. User perms > group perms > others. </li>
-		    </ul>
-		</p>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            File permissions are used to control access to a
+                            file.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            There are 3 categories to a file permissions: 1.
+                            Owned by a user (u) 2. Owned by a group (g) 3.
+                            Others (o){' '}
+                        </li>
+                        <li>
+                            {' '}
+                            The most specific permission takes precedence. User
+                            perms &gt; group perms &gt; others.{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Permission categories </h4>
-		<p>
-		    <ul>
-			 <li> r - Read (files -> can read the contents, directories -> contents may be listed out). </li>
-			 <li>  w - Write (files -> may be modified, directories -> files may be added or deleted). </li>
-			 <li> x - Execute (files -> may be run, directories -> can be made pwd). </li>
-		    </ul>
-		</p>
+                <h4> Permission categories </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            r - Read (files -&gt; can read the contents,
+                            directories -&gt; contents may be listed out).{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            w - Write (files -&gt; may be modified, directories
+                            -&gt; files may be added or deleted).{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            x - Execute (files -&gt; may be run, directories
+                            -&gt; can be made pwd).{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Changing permissions </h4>
-		<p>
-	 	    <ul>
-		         <li> We use the chmod command. There are 2 ways of going about this - the symbolic way and the numeric way (using the octal system). In the numeric way, each bit represents a group and _ _ _ for r,w,x; 1 => enable, 0 => disable. Thus 0b(111) = 0o(7) -> give r,w,x. 0b(101) = 0o(5) -> give r,x (no w).</li>
-		         <li> Eg: [symbolic]: (+ -> give, - -> remove) <CodeBlock>chmod go-rw file1</CodeBlock> </li>
-		 	 <li> Eg: [Numeric] : (gives read, write, exec perms to everyone) <CodeBlock>chmod 777 file1</CodeBlock> </li>
-		    </ul>
-		</p>
+                <h4> Changing permissions </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            We use the chmod command. There are 2 ways of going
+                            about this - the symbolic way and the numeric way
+                            (using the octal system). In the numeric way, each
+                            bit represents a group and _ _ _ for r,w,x; 1 =&gt;
+                            enable, 0 =&gt;disable. Thus 0b(111) = 0o(7) -&gt;
+                            give r,w,x. 0b(101) = 0o(5) -&gt; give r,x (no w).
+                        </li>
+                        <li>
+                            {' '}
+                            Eg: [symbolic]: (+ -&gt; give, - -&gt; remove){' '}
+                            <CodeBlock>chmod go-rw file1</CodeBlock>{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            Eg: [Numeric] : (gives read, write, exec perms to
+                            everyone) <CodeBlock>
+                                chmod 777 file1
+                            </CodeBlock>{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Changing ownership </h4>
-		<p>
-		    <ul>
-			 <li> We change ownership using the <code>chown</code> command. </li>
-		         <li> chown new_owner file1, use -R to recursively change ownership in a directory. </li>
-		         <li> <code>chown :new_group some_dir</code>, changes the group owner ship (note the ':') to new_group, anything after the colon signifies the group. </li>
-		    </ul>
-		</p>
+                <h4> Changing ownership </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            We change ownership using the <code>
+                                chown
+                            </code>{' '}
+                            command.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            chown new_owner file1, use -R to recursively change
+                            ownership in a directory.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            <code>chown :new_group some_dir</code>, changes the
+                            group owner ship (note the ':') to new_group,
+                            anything after the colon signifies the group.{' '}
+                        </li>
+                    </ul>
+                </p>
 
-		<h4> Special permissions </h4>
-		<p>
-		    <ul>
-		         <li> a fourth permission type in addition to the basic user, group, and other types. </li>
-			 <li> 1. [suid] u+s (Files: File executes as the user that owns the file, not the user that ran the file, Dirs: no effect). </li>
-		         <li> 2. [sgid] g+s (Files: File execs as the group that owns the file, Dirs: newly created files have their group owner set to match the owner of the directory). </li>
-		         <li> 3. [sticky] o+t (Files: No effect, Dirs: Users with write access to the directory can only remove files that they own). </li>
-		         <li> If this has ot be set numerically, a fourth preceding bit is used to denote it. setuid = 4; setgid = 2; sticky = 1. </li>
-		    </ul>
-		</p>
+                <h4> Special permissions </h4>
+                <p>
+                    <ul>
+                        <li>
+                            {' '}
+                            a fourth permission type in addition to the basic
+                            user, group, and other types.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            1. [suid] u+s (Files: File executes as the user that
+                            owns the file, not the user that ran the file, Dirs:
+                            no effect).{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            2. [sgid] g+s (Files: File execs as the group that
+                            owns the file, Dirs: newly created files have their
+                            group owner set to match the owner of the
+                            directory).{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            3. [sticky] o+t (Files: No effect, Dirs: Users with
+                            write access to the directory can only remove files
+                            that they own).{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            If this has ot be set numerically, a fourth
+                            preceding bit is used to denote it. setuid = 4;
+                            setgid = 2; sticky = 1.{' '}
+                        </li>
+                    </ul>
+                </p>
             </section>
             <section>
                 <h2>Processes</h2>
-		<p>
-		    A Process is a program under execution. The concept of Processes is related more to the Operating System. Every OS deal with processes in order to achieve a particular job. A job is a complete unit of work under execution. To put it simply, Jobs are a collection of Processes which work to perform a specific task. Everything you do in Linux is associated with a process in the background. For example, clicking on a button, opening folders, opening terminal, opening Apps, running code etc. all are powered by processes in the background.
-		</p>
-		<p>
-		   Every process has a Process ID (PID) and a Parent Process ID (PPID) attached to it. The <code>init</code> process is the parent process of all the processes running in the OS. And every process gets forked by a parent process. For example, if you open Chromium app, a new process gets forked from the parent <code>init</code> process in the name of <code>chromium</code>. Then again if you open a new tab in the Chromium app, a new process again gets forked from its parent <code>chromium</code> process in the name of <code>tab1</code>.
-		</p>
-		<h3> Process states </h3>
-		<p>
-		    Every process goes through a sequence of states before its completed (called as process life cycle).
-		    <ol>
-		         <li> R: Running or Runnable state. A process starts with this state as it attempts to complete its execution. </li>
-		         <li> S: Sleeping state. A process goes to this state when it needs resources that are currently not available (for e.g. waiting for user input). It automatically comes out of sleep state when the resources are made available by the CPU. </li>
-		         <li> D: Uninterruptable sleeping state. If a process reaches this state, you can not kill the process or suspend it. It will only be terminated after it acquires the resource it is waiting for.</li>
-		         <li> T: Stopped or Traced state. This is a state where the process is suspended temporarily due to multiple reasons (maybe suspended by the user). You can resume the process execution from this state by bringing it to the running state again. </li>
-		         <li> Z: Zombie state. This is a state where the process is orphaned. This happens when the parent process is terminated before the child process. This process will only be terminated when the <code>init</code> process gets terminated. </li>
-		    </ol>
-		</p>
-		<h3> Process Monitoring </h3>
-		<p>
-		   Since every command/application is powered by processes in the background, you can control the applications usage by monitoring processes. <CodeBlock>htop</CodeBlock> command shows you the list of all processes running and shows what are the resources grabbed by them. It is a responsive output, meaning it refreshes the list of output every 3 seconds so you can monitor the processes at a single place.
-		</p>
-		<h3> Background and Foreground jobs </h3>
-		<p>Foreground is the normal terminal interface where you type a command, wait for its response and then type another command and so on. So, on Foreground you can work with only a single command at a time. But with background, you can work with multiple commands at the same time. As the name suggests, here, you put a job execution to run in the background, and then you can run another job on the foreground at the same time! You can even put multiple jobs to run in the background while you are working on the foreground!
-		</p>
-		<p>
-		Append the <code>&</code> to the command to execute it in the background.
-		<CodeBlock>sleep 10000 &</CodeBlock>
-		</p>
-		<p>
-		To list all the jobs running in background use command
-	        <CodeBlock>jobs</CodeBlock>
-		</p>
-		<p>
-		To bring a job execution from background to foreground, use command
-	        <CodeBlock>fg %[jobnumber]</CodeBlock>
-	        </p>
-		<p>
-		To push a job back into the background from foreground, use command
-	        <CodeBlock>Ctrl+Z</CodeBlock>
-		</p>
+                <p>
+                    A Process is a program under execution. The concept of
+                    Processes is related more to the Operating System. Every OS
+                    deal with processes in order to achieve a particular job. A
+                    job is a complete unit of work under execution. To put it
+                    simply, Jobs are a collection of Processes which work to
+                    perform a specific task. Everything you do in Linux is
+                    associated with a process in the background. For example,
+                    clicking on a button, opening folders, opening terminal,
+                    opening Apps, running code etc. all are powered by processes
+                    in the background.
+                </p>
+                <p>
+                    Every process has a Process ID (PID) and a Parent Process ID
+                    (PPID) attached to it. The <code>init</code> process is the
+                    parent process of all the processes running in the OS. And
+                    every process gets forked by a parent process. For example,
+                    if you open Chromium app, a new process gets forked from the
+                    parent <code>init</code> process in the name of{' '}
+                    <code>chromium</code>. Then again if you open a new tab in
+                    the Chromium app, a new process again gets forked from its
+                    parent <code>chromium</code> process in the name of{' '}
+                    <code>tab1</code>.
+                </p>
+                <h3> Process states </h3>
+                <p>
+                    Every process goes through a sequence of states before its
+                    completed (called as process life cycle).
+                    <ol>
+                        <li>
+                            {' '}
+                            R: Running or Runnable state. A process starts with
+                            this state as it attempts to complete its execution.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            S: Sleeping state. A process goes to this state when
+                            it needs resources that are currently not available
+                            (for e.g. waiting for user input). It automatically
+                            comes out of sleep state when the resources are made
+                            available by the CPU.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            D: Uninterruptable sleeping state. If a process
+                            reaches this state, you can not kill the process or
+                            suspend it. It will only be terminated after it
+                            acquires the resource it is waiting for.
+                        </li>
+                        <li>
+                            {' '}
+                            T: Stopped or Traced state. This is a state where
+                            the process is suspended temporarily due to multiple
+                            reasons (maybe suspended by the user). You can
+                            resume the process execution from this state by
+                            bringing it to the running state again.{' '}
+                        </li>
+                        <li>
+                            {' '}
+                            Z: Zombie state. This is a state where the process
+                            is orphaned. This happens when the parent process is
+                            terminated before the child process. This process
+                            will only be terminated when the <code>
+                                init
+                            </code>{' '}
+                            process gets terminated.{' '}
+                        </li>
+                    </ol>
+                </p>
+                <h3> Process Monitoring </h3>
+                <p>
+                    Since every command/application is powered by processes in
+                    the background, you can control the applications usage by
+                    monitoring processes. <CodeBlock>htop</CodeBlock> command
+                    shows you the list of all processes running and shows what
+                    are the resources grabbed by them. It is a responsive
+                    output, meaning it refreshes the list of output every 3
+                    seconds so you can monitor the processes at a single place.
+                </p>
+                <h3> Background and Foreground jobs </h3>
+                <p>
+                    Foreground is the normal terminal interface where you type a
+                    command, wait for its response and then type another command
+                    and so on. So, on Foreground you can work with only a single
+                    command at a time. But with background, you can work with
+                    multiple commands at the same time. As the name suggests,
+                    here, you put a job execution to run in the background, and
+                    then you can run another job on the foreground at the same
+                    time! You can even put multiple jobs to run in the
+                    background while you are working on the foreground!
+                </p>
+                <p>
+                    Append the <code>&amp;</code> to the command to execute it
+                    in the background.
+                    <CodeBlock>sleep 10000 &amp;</CodeBlock>
+                </p>
+                <p>
+                    To list all the jobs running in background use command
+                    <CodeBlock>jobs</CodeBlock>
+                </p>
+                <p>
+                    To bring a job execution from background to foreground, use
+                    command
+                    <CodeBlock>fg %[jobnumber]</CodeBlock>
+                </p>
+                <p>
+                    To push a job back into the background from foreground, use
+                    command
+                    <CodeBlock>Ctrl+Z</CodeBlock>
+                </p>
             </section>
         </>
     );
