@@ -14,7 +14,6 @@ export default function Logo() {
         >
             <path
                 // className={styles.tuxBack}
-                // fill='#2e3440'
                 d='M 547.277344 709.410156 L 547.320312 709.460938 L 547.277344 709.410156 '
                 fillOpacity='1'
                 fillRule='nonzero'
@@ -27,7 +26,7 @@ export default function Logo() {
                 fillRule='nonzero'
             />
             <path
-                className={styles.tuxBack}
+                // className={styles.tuxBack}
                 fill='#2e3440'
                 d='M 547.382812 709.523438 L 547.425781 709.566406 L 547.382812 709.523438 '
                 fillOpacity='1'
