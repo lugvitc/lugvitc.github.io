@@ -77,11 +77,11 @@ export default function Session4() {
                 <p>
                     Since every command/application is powered by processes in
                     the background, you can control the applications usage by
-                    monitoring processes. <code>htop</code> command shows you
-                    the list of all processes running and shows what are the
-                    resources grabbed by them. It is a responsive output,
-                    meaning it refreshes the list of output every 3 seconds so
-                    you can monitor the processes at a single place.
+                    monitoring processes. The <code>htop</code> command or the {' '} 
+	            <code>ps -aux</code> command shows you the list of all processes 
+	            running and shows what are the resources grabbed by them. It is a 
+	            responsive output, meaning it refreshes the list of output every 3 
+	            seconds so you can monitor the processes at a single place.
                 </p>
                 <h3> Background and Foreground jobs </h3>
                 <p>
@@ -115,6 +115,12 @@ export default function Session4() {
                     command
                 </p>
                 <CodeBlock>Ctrl+Z</CodeBlock>
+	        
+	        <p>
+	            To resume execution of a suspended job in the background, u
+	            se command
+	        </p>
+	        <CodeBlock>bg %[jobnumber]</CodeBlock>
             </section>
 
             <section>
