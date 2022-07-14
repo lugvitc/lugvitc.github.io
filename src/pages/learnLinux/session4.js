@@ -209,9 +209,7 @@ export default function Session4() {
                                 </CodeBlock>
                             </td>
                             <td>
-                                <CodeBlock>
-                                    sudo pacman -Syu &lt;name&gt;
-                                </CodeBlock>
+                                <CodeBlock>sudo pacman -Syu</CodeBlock>
                             </td>
                         </tr>
                     </tbody>
