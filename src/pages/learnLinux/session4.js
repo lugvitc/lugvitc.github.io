@@ -201,10 +201,10 @@ export default function Session4() {
                         <tr>
                             <td>Listing all Packages</td>
                             <td>
-                                <CodeBlock>sudo apt list</CodeBlock>
+                                <CodeBlock>sudo apt list --installed</CodeBlock>
                             </td>
                             <td>
-                                <CodeBlock>sudo pacman -Qe</CodeBlock>
+                                <CodeBlock>sudo pacman -Qs</CodeBlock>
                             </td>
                         </tr>
                         <tr>
