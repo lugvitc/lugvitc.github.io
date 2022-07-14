@@ -5,11 +5,11 @@
 }
 
 .tuxBack {
-    fill: var(--nord2);
+    fill: var(--nord1);
 }
 
 .tuxMid {
-    fill: var(--nord4);
+    fill: var(--nord3);
 }
 
 .tuxFront {
@@ -17,5 +17,22 @@
 }
 
 .tuxBeak {
-    fill: var(--nord11);
+    /* fill: var(--nord12); */
+    fill: orangered;
+}
+
+.svg:hover .tuxBack {
+    fill: var(--nord10);
+}
+
+.svg:hover .tuxMid {
+    fill: var(--nord9);
+}
+
+.svg:hover .tuxFront {
+    fill: var(--nord6);
+}
+
+.svg:hover .tuxBeak {
+    fill: var(--nord12);
 }
