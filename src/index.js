@@ -10,6 +10,7 @@ import App from './App';
 import Home from './pages/home';
 import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
+import EscapeHunt from './pages/escapeHunt/escapeHunt';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 const pages = [
@@ -27,6 +28,11 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
+    },
+    {
+        title: 'Escape Hunt',
+        link: '/escape-hunt',
+        component: <EscapeHunt />
     }
     //, {
     //     title: 'Recruitment 2022',
