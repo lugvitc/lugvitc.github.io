@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
 import Tooltip from '../tooltip/tooltip';
-import LugvitcLogo from '../../images/Tux.svg';
+import LugvitcLogo from '../../images/logo.svg';
 
 import useSettingsDialog from '../../hooks/useSettingsDialog';
 
