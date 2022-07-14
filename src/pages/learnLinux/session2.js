@@ -62,7 +62,7 @@ export default function Session2() {
                     or <code>super/windows</code> + <code>t</code>.
                 </p>
                 <p>You will find a window looking something like this:</p>
-                <p
+                <div
                     style={{
                         backgroundColor: 'var(--nord0)',
                         padding: '1em',
@@ -78,7 +78,7 @@ export default function Session2() {
                         <span style={{ color: 'var(--nord14)' }}> ~ </span> ${' '}
                         <span className={blinkStyle.text} />
                     </TerminalWindow>
-                </p>
+                </div>
                 <h3>The prompt</h3>
                 <p>This is the terminal prompt.</p>
                 <p>
@@ -89,13 +89,11 @@ export default function Session2() {
                     of the machine.
                 </p>
                 <p>
-                    {' '}
                     The part in green, <code>~</code> shows the{' '}
                     <em>current working directory</em>. This is the folder that
                     is currently open in the current terminal session.
                 </p>
                 <p>
-                    {' '}
                     After that, you see a <em>$</em> sign which signifies you
                     are not the <em>root</em> user (we will come that in another
                     session, but think of it as an admin account).
@@ -110,7 +108,7 @@ export default function Session2() {
                     through commands. Below, you can see an example of a
                     command, pay close attention to the syntax.
                 </p>
-                <p
+                <div
                     style={{
                         backgroundColor: 'var(--nord0)',
                         padding: '1em',
@@ -128,7 +126,7 @@ export default function Session2() {
                             ls -l --block-size K ~
                         </span>
                     </TerminalWindow>
-                </p>
+                </div>
                 <p>
                     The command is <code>ls</code> or 'list'. It is used to list
                     the contents of the currently open folder. To execute a
@@ -158,7 +156,7 @@ export default function Session2() {
                     For those who are curious, the output of the above command
                     is given below
                 </p>
-                <p
+                <div
                     style={{
                         backgroundColor: 'var(--nord0)',
                         padding: '1em',
@@ -207,7 +205,7 @@ export default function Session2() {
                         <br /> sam@pop-hp-2020 ~ ${' '}
                         <span className={blinkStyle.text} />
                     </TerminalWindow>
-                </p>
+                </div>
             </section>
             <section>
                 <h2>Terminal Basics</h2>
@@ -217,59 +215,55 @@ export default function Session2() {
                     command history and do some basic chores.
                 </p>
                 <h3>Moving Around</h3>
-                <p>
-                    <ol>
-                        <li>
-                            <code>cd</code>: The <code>cd</code> command stands
-                            for change directory and it helps to navigate into
-                            different directories according to their path. By
-                            default, when you open the terminal, your working
-                            directory is set to the home directory. Thus, you
-                            can use the <code>cd</code> command to change to
-                            sub-directories etc.
-                            <br />
-                            syntax : <code>cd /path/to/directory</code>
-                            <br />
-                            <CodeBlock>cd /etc/NetworkManager</CodeBlock>
-                        </li>
-                        <li>
-                            <code>pwd</code>: The <code>pwd</code> command
-                            stands for print working directory and it outputs
-                            the current directory you are working upon. This is
-                            helpful when you are working with many nested
-                            directories, as it will give you the absolute path
-                            of the current directory. You can then copy the
-                            output of this command and use it with the{' '}
-                            <code>cd</code> command to get into the dircetory.
-                            <br />
-                            syntax: <code>pwd</code>
-                            <br />
-                            <CodeBlock>pwd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>ls</code>: The <code>ls</code> command lists
-                            the files/sub-directories present in the current
-                            working directory. This command is often coupled
-                            with the <code>cd</code> and <code>pwd</code>{' '}
-                            command to effectively navigate into directories.
-                            <br />
-                            syntax: <code>ls</code>
-                            <br />
-                            <CodeBlock>ls</CodeBlock>
-                        </li>
-		        <li>
-		            <code>mkdir</code>: The <code>mkdir</code> command
-	                    stands for make directory, and it creates a 
-	                    directory at the specified path. You can then{' '}
-	                    <code>cd</code> into the created directory and
-	                    create some files there.
-		            <br />
-		            syntax: <code>mkdir directory-name</code>
-		            <br />
-		            <CodeBlock>mkdir temporaryDirectory</CodeBlock>
-		        </li>
-                    </ol>
-                </p>
+                <ol>
+                    <li>
+                        <code>cd</code>: The <code>cd</code> command stands for
+                        change directory and it helps to navigate into different
+                        directories according to their path. By default, when
+                        you open the terminal, your working directory is set to
+                        the home directory. Thus, you can use the{' '}
+                        <code>cd</code> command to change to sub-directories
+                        etc.
+                        <br />
+                        syntax : <code>cd /path/to/directory</code>
+                        <br />
+                        <CodeBlock>cd /etc/NetworkManager</CodeBlock>
+                    </li>
+                    <li>
+                        <code>pwd</code>: The <code>pwd</code> command stands
+                        for print working directory and it outputs the current
+                        directory you are working upon. This is helpful when you
+                        are working with many nested directories, as it will
+                        give you the absolute path of the current directory. You
+                        can then copy the output of this command and use it with
+                        the <code>cd</code> command to get into the dircetory.
+                        <br />
+                        syntax: <code>pwd</code>
+                        <br />
+                        <CodeBlock>pwd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>ls</code>: The <code>ls</code> command lists the
+                        files/sub-directories present in the current working
+                        directory. This command is often coupled with the{' '}
+                        <code>cd</code> and <code>pwd</code> command to
+                        effectively navigate into directories.
+                        <br />
+                        syntax: <code>ls</code>
+                        <br />
+                        <CodeBlock>ls</CodeBlock>
+                    </li>
+                    <li>
+                        <code>mkdir</code>: The <code>mkdir</code> command
+                        stands for make directory, and it creates a directory at
+                        the specified path. You can then <code>cd</code> into
+                        the created directory and create some files there.
+                        <br />
+                        syntax: <code>mkdir directory-name</code>
+                        <br />
+                        <CodeBlock>mkdir temporaryDirectory</CodeBlock>
+                    </li>
+                </ol>
                 <h3>Command History</h3>
                 <p>
                     The Command history stores the list of the commands you have
@@ -289,17 +283,16 @@ export default function Session2() {
                     <code>UpArrowKey</code>/<code>DownArrowKey</code> to
                     navigate to the stack of commands in the history.
                 </p>
-                <p>
-                    Syntax of the above commands:
-                    <CodeBlock> history </CodeBlock>
-                    <CodeBlock> !507 </CodeBlock>
-                    <CodeBlock> !time </CodeBlock>
-                </p>
+                <p>Syntax of the above commands:</p>
+                <CodeBlock> history </CodeBlock>
+                <CodeBlock> !507 </CodeBlock>
+                <CodeBlock> !time </CodeBlock>
+
                 <p>
                     For those who are curious, the output of the above command
                     is given below
                 </p>
-                <p
+                <div
                     style={{
                         backgroundColor: 'var(--nord0)',
                         padding: '1em',
@@ -355,7 +348,7 @@ export default function Session2() {
                         see what the computer outputs to the exec of this <br />
                         [beleswar@arch ~]$ <span className={blinkStyle.text} />
                     </TerminalWindow>
-                </p>
+                </div>
                 <h3>Tab Completion</h3>
                 <p>
                     Tab Completion is a great feature which helps you become
@@ -366,8 +359,9 @@ export default function Session2() {
                     match the pattern, it prints all of them out and waits at
                     the command prompt again for you to type out few more
                     letters.
-                    <CodeBlock>cd /etc/Net (press tab here)</CodeBlock>
                 </p>
+                <CodeBlock>cd /etc/Net (press tab here)</CodeBlock>
+
                 <h3>Manual Pages</h3>
                 <p>
                     {' '}
@@ -378,8 +372,9 @@ export default function Session2() {
                     manual page to get an idea of it.
                     <br />
                     syntax: <code>man CommandName</code>
-                    <CodeBlock>man ls</CodeBlock>
                 </p>
+                <CodeBlock>man ls</CodeBlock>
+
                 <h3>Some Keyboard Shortcuts</h3>
                 <ul>
                     <li>
@@ -432,125 +427,110 @@ export default function Session2() {
                 </p>
                 <h3>File types</h3>
                 <p>
-                    <ol>
-                        <li>
-                            <code>file</code>: The <code>file</code> command
-                            scans the file and determines what kind of content
-                            is in the file. The Linux environment does NOT need
-                            file extensions (e.g. .md, .py, .c etc.). So, you
-                            might encounter multiple files which do not have
-                            extensions. Thus, this <code>file</code> command is
-                            a great way to learn what kind of file we are
-                            dealing with currently.
-                            <br />
-                            syntax: <code>file /path/to/file</code>
-                            <CodeBlock>file /etc/passwd</CodeBlock>
-                        </li>
-                    </ol>
+                    <code>file</code>: The <code>file</code> command scans the
+                    file and determines what kind of content is in the file. The
+                    Linux environment does NOT need file extensions (e.g. .md,
+                    .py, .c etc.). So, you might encounter multiple files which
+                    do not have extensions. Thus, this <code>file</code> command
+                    is a great way to learn what kind of file we are dealing
+                    with currently.
+                    <br />
+                    syntax: <code>file /path/to/file</code>
                 </p>
+                <CodeBlock>file /etc/passwd</CodeBlock>
+
                 <h3>File contents</h3>
-                <p>
-                    <ol>
-                        <li>
-                            <code>cat</code>: The <code>cat</code> command is
-                            the shortform for concatenate. It outputs all the
-                            contents of a file to the screen. The{' '}
-                            <code>cat</code> command can print the content of
-                            any of the files regardless of its extension, thus
-                            its super helpful when you want to see the file
-                            without opening it.
-                            <br />
-                            syntax:{' '}
-                            <code>cat /path/to/file1 /path/to/file2</code>
-                            <CodeBlock>cat /etc/passwd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>less</code>: The <code>less</code> command
-                            prints content of the file one page at a time. It is
-                            very useful for reading long files. Use{' '}
-                            <code>UpArrowKey</code>/<code>DownArrowKey</code>
-                            or <code>spacebar</code> to navigate between the
-                            pages, and use <code>q</code> to exit.
-                            <br />
-                            syntax: <code>less /path/to/file</code>
-                            <CodeBlock>less /etc/passwd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>head</code>: The <code>head</code> command
-                            prints the first 10 lines of the file by default.
-                            This is useful when you just want to see the first
-                            few lines of a file rather than reading the whole
-                            long file. If you want to print specific number of
-                            lines other than the first 10, use the{' '}
-                            <code>-n</code> argument.
-                            <br />
-                            syntax: <code>head -n 3 /path/to/file</code>
-                            <CodeBlock>head -n 3 /etc/passwd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>tail</code>: Similarly, the <code>tail</code>{' '}
-                            command prints the last 10 lines of the file. This
-                            is useful in instances like when you append some
-                            records to a file, you might just want to check the
-                            last 10 records of the file to verify if the
-                            operation was successful.
-                            <br />
-                            syntax: <code>tail -n 4 /path/to/file</code>
-                            <CodeBlock>tail -n 4 /etc/passwd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>wc</code>: The <code>wc</code> command stands
-                            for word count, and is a very useful command which
-                            counts the lines, words and characters of a file and
-                            prints it to the screen.
-                            <br />
-                            syntax: <code>wc /path/to/file</code>
-                            <CodeBlock>wc /etc/passwd</CodeBlock>
-                        </li>
-                    </ol>
-                </p>
+                <ol>
+                    <li>
+                        <code>cat</code>: The <code>cat</code> command is the
+                        shortform for concatenate. It outputs all the contents
+                        of a file to the screen. The <code>cat</code> command
+                        can print the content of any of the files regardless of
+                        its extension, thus its super helpful when you want to
+                        see the file without opening it.
+                        <br />
+                        syntax: <code>cat /path/to/file1 /path/to/file2</code>
+                        <CodeBlock>cat /etc/passwd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>less</code>: The <code>less</code> command prints
+                        content of the file one page at a time. It is very
+                        useful for reading long files. Use{' '}
+                        <code>UpArrowKey</code>/<code>DownArrowKey</code>
+                        or <code>spacebar</code> to navigate between the pages,
+                        and use <code>q</code> to exit.
+                        <br />
+                        syntax: <code>less /path/to/file</code>
+                        <CodeBlock>less /etc/passwd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>head</code>: The <code>head</code> command prints
+                        the first 10 lines of the file by default. This is
+                        useful when you just want to see the first few lines of
+                        a file rather than reading the whole long file. If you
+                        want to print specific number of lines other than the
+                        first 10, use the <code>-n</code> argument.
+                        <br />
+                        syntax: <code>head -n 3 /path/to/file</code>
+                        <CodeBlock>head -n 3 /etc/passwd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>tail</code>: Similarly, the <code>tail</code>{' '}
+                        command prints the last 10 lines of the file. This is
+                        useful in instances like when you append some records to
+                        a file, you might just want to check the last 10 records
+                        of the file to verify if the operation was successful.
+                        <br />
+                        syntax: <code>tail -n 4 /path/to/file</code>
+                        <CodeBlock>tail -n 4 /etc/passwd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>wc</code>: The <code>wc</code> command stands for
+                        word count, and is a very useful command which counts
+                        the lines, words and characters of a file and prints it
+                        to the screen.
+                        <br />
+                        syntax: <code>wc /path/to/file</code>
+                        <CodeBlock>wc /etc/passwd</CodeBlock>
+                    </li>
+                </ol>
                 <h3>File Management</h3>
-                <p>
-                    <ol>
-                        <li>
-                            <code>cp</code>: The <code>cp</code> command helps
-                            to make a copy of a file from one destination to
-                            another destination. It takes both the destinations
-                            as arguments in the command.
-                            <br />
-                            syntax:{' '}
-                            <code>
-                                cp /path/to/source/file
-                                /path/to/destination/file
-                            </code>
-                            <CodeBlock>cp /etc/passwd ./tempPasswd</CodeBlock>
-                        </li>
-                        <li>
-                            <code>mv</code>: The <code>mv</code> command helps
-                            to move a file from the source to the destination
-                            directory. Similar to the <code>cp</code> command,
-                            it takes both the destinations as arguments in the
-                            command.
-                            <br />
-                            syntax:{' '}
-                            <code>
-                                mv /path/to/source/file
-                                /path/to/destination/file
-                            </code>
-                            <CodeBlock>
-                                mv ./tempPasswd ./tempDir/tempPasswd
-                            </CodeBlock>
-                        </li>
-                        <li>
-                            <code>rm</code>: The <code>rm</code> command helps
-                            to delete a file or directory in the system.
-                            <br />
-                            syntax: <code>rm /path/to/file</code>
-                            <CodeBlock>rm ./tempDir/tempPasswd</CodeBlock>
-                            <CodeBlock>rm -r tempDir</CodeBlock>
-                        </li>
-                    </ol>
-                </p>
+                <ol>
+                    <li>
+                        <code>cp</code>: The <code>cp</code> command helps to
+                        make a copy of a file from one destination to another
+                        destination. It takes both the destinations as arguments
+                        in the command.
+                        <br />
+                        syntax:{' '}
+                        <code>
+                            cp /path/to/source/file /path/to/destination/file
+                        </code>
+                        <CodeBlock>cp /etc/passwd ./tempPasswd</CodeBlock>
+                    </li>
+                    <li>
+                        <code>mv</code>: The <code>mv</code> command helps to
+                        move a file from the source to the destination
+                        directory. Similar to the <code>cp</code> command, it
+                        takes both the destinations as arguments in the command.
+                        <br />
+                        syntax:{' '}
+                        <code>
+                            mv /path/to/source/file /path/to/destination/file
+                        </code>
+                        <CodeBlock>
+                            mv ./tempPasswd ./tempDir/tempPasswd
+                        </CodeBlock>
+                    </li>
+                    <li>
+                        <code>rm</code>: The <code>rm</code> command helps to
+                        delete a file or directory in the system.
+                        <br />
+                        syntax: <code>rm /path/to/file</code>
+                        <CodeBlock>rm ./tempDir/tempPasswd</CodeBlock>
+                        <CodeBlock>rm -r tempDir</CodeBlock>
+                    </li>
+                </ol>
             </section>
         </>
     );

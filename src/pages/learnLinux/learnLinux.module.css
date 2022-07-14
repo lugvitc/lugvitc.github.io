@@ -27,20 +27,21 @@
     counter-increment: h4counter;
 }
 
-.sessionConent table td:first-child {
-    width: 15%;
+.sessionConent table td,
+.sessionConent table th {
+    text-align: center;
+    width: 45%;
+    border: 1px solid var(--header-footer-black);
+    padding: 0.5em;
 }
 
-.sessionConent table td {
-    text-align: center;
-    width: 30%;
-    border: 1px solid var(--nord0);
-    padding: 0.5em;
+.sessionConent table td:first-child,
+.sessionConent table th:first-child {
+    width: 10%;
 }
 
 .sessionConent table th {
-    text-align: center;
-    width: 30%;
-    border: 1px solid var(--nord0);
-    padding: 0.5em;
+    background-color: var(--nord0);
+    border: 1px solid var(--header-footer-black);
 }
+
