@@ -1,0 +1,21 @@
+.svg {
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.tuxBack {
+    fill: var(--nord2);
+}
+
+.tuxMid {
+    fill: var(--nord4);
+}
+
+.tuxFront {
+    fill: var(--nord6);
+}
+
+.tuxBeak {
+    fill: var(--nord11);
+}

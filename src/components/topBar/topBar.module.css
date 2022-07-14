@@ -33,7 +33,7 @@
     background-color: var(--nord10);
 }
 
-.logo img {
+.logo svg {
     height: 2em;
 }
 
