@@ -8,7 +8,7 @@ import useSettingsDialog from '../../hooks/useSettingsDialog';
 
 import styles from './topBar.module.css';
 import util from '../../styles/util.module.css';
-import Logo from './logo';
+import Logo from '../logo/logo';
 
 export default function TopBar({ refer, topBarLinks }) {
     const { settingsDialogOpen, openSettingsDialog } = useSettingsDialog();
