@@ -39,7 +39,7 @@ const sessions = [
         content: <Session3 />
     },
     {
-        title: 'Installing Software',
+        title: 'Processes and Packages',
         content: <Session4 />
     }
     // {

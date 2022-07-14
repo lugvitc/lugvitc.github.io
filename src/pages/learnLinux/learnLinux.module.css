@@ -26,3 +26,21 @@
         '. ';
     counter-increment: h4counter;
 }
+
+.sessionConent table td:first-child {
+    width: 15%;
+}
+
+.sessionConent table td {
+    text-align: center;
+    width: 30%;
+    border: 1px solid var(--nord0);
+    padding: 0.5em;
+}
+
+.sessionConent table th {
+    text-align: center;
+    width: 30%;
+    border: 1px solid var(--nord0);
+    padding: 0.5em;
+}
