@@ -36,40 +36,35 @@ export default function Session4() {
                 </p>
                 <ol>
                     <li>
-                        {' '}
                         R: Running or Runnable state. A process starts with this
                         state as it attempts to complete its execution.{' '}
                     </li>
                     <li>
-                        {' '}
                         S: Sleeping state. A process goes to this state when it
                         needs resources that are currently not available (for
                         e.g. waiting for user input). It automatically comes out
                         of sleep state when the resources are made available by
-                        the CPU.{' '}
+                        the CPU.
                     </li>
                     <li>
-                        {' '}
                         D: Uninterruptable sleeping state. If a process reaches
                         this state, you can not kill the process or suspend it.
                         It will only be terminated after it acquires the
                         resource it is waiting for.
                     </li>
                     <li>
-                        {' '}
                         T: Stopped or Traced state. This is a state where the
                         process is suspended temporarily due to multiple reasons
                         (maybe suspended by the user). You can resume the
                         process execution from this state by bringing it to the
-                        running state again.{' '}
+                        running state again.
                     </li>
                     <li>
-                        {' '}
                         Z: Zombie state. This is a state where the process is
                         orphaned. This happens when the parent process is
                         terminated before the child process. This process will
                         only be terminated when the <code>init</code> process
-                        gets terminated.{' '}
+                        gets terminated.
                     </li>
                 </ol>
 
