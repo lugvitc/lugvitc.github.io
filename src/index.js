@@ -11,6 +11,7 @@ import Home from './pages/home';
 import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
 // import UserForm from './pages/recruitment_2022/recruitment';
+import RescueTheTux from './pages/rescueTheTux/home';
 
 const pages = [
     {
@@ -27,6 +28,11 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
+    },
+    {
+	title: 'Rescue the Tux',
+	link: '/rescue-the-tux',
+	component: <RescueTheTux />
     }
     //, {
     //     title: 'Recruitment 2022',
