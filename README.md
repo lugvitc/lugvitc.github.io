@@ -1,86 +1,29 @@
 # Linux User Club, VIT Chennai
 - Landing page for the club
+  
+# Pages Description
+  
+1. Welcome : Shows the welcome text to the participant. It describes the schedule of the event. And also shows the background story of the competition (the kidnapping thing of Tux by Bill gates. We can add designed videos/images here to make it more interesting.  
+2. Instructions : Shows the instructions to the participants which they need to follow while playing the competition.  
+3. Registration : A normal registration page having name, reg.no, email, contact, payment id stuffs.  
+4. Login : A normal login page whihc has the username and password field and a submit button. Must also have the forgot password option.  
+5. Challenges : Show all the challenges in stages to the participant. Every challenge must be enclosed in a box which pops up when the participant clicks it. Every box should have a input flag field and a submit button, which takes the flag entered by the participants and checks if its correct or not.  
+6. Leaderboard : Make a leaderboard page which shows all the teams participating and their current score. Arrange the teams in descending order. Can add leaderboard graphs if time permits. but basic thing required is showing all teams in descending order.  
+  
+# Contributing Guidelines for Rescue-The-Tux event
+  
+1. Fork this repository into your own copy.
+2. Clone your copy of the repository into your local machine.
+3. Run the command `npm install` in the local repo.  
+4. Run the command `git checkout -b rescue-the-tux origin/rescue-the-tux` to make the local branch track the remote branch.  
+5. Create a unique branch in your local repo. Branch name format: <user_name>-add-<page>. So, if your name is 'Tux', and you are adding the Leaderboard page for the event, then your branch name should be : `Tux-add-Leaderboard`. Ensure that your unique branch is being created from the `rescue-the-tux` branch source, and not the master branch source.
+6. Run the command `npm start` to see how the website looks before you add your changes.  
+7. Go to the respective directory of the page you are wanting to add.  
+    * if you want to add challenges page, go to `src/pages/rescueTheTux/challenges`.
+    * similarly if you want to add leaderboard page, registration page or login page etc. go to `src/pages/rescueTheTux/leaderboard`, `src/pages/rescueTheTux/registration`, `src/pages/rescueTheTux/login` directories.  
+8. Make your changes in the respective directory. You can add as many files as you want in your directory to make your page. Please do not make any changes in other directories. If you want to work on mulitple pages, open multiple Pull Requests. But in a single PR, just deal with the respective page directory.  
+9. Run the command `npm start` again to see how the website looks after your changes have been added. 
+10. Save and Commit your files in the local repo.
+11. Push your Commits to the remote repo (your copy of the main repo).
+12. Create a Pull Request from your unique branch to the **rescue-the-tux** branch of our main repo.
 
-# TODO
-- [x] active navlink should be set according to the current URL
-- [ ] proper responsive design for the top bar (idk what to do)
-- [ ] footer (should go below the dock(kinda merge into it) for small screens)
-- [ ] header (a proper display of LUG's name in the header (above the topBar or in it, idk)
-
-# Guidelines:
-- push major changes through a separate branch (or fork)
-- be a bit descriptive in commits
-- branching
-    - branch naming format: add-<feature-name>
-    - we still need to figure out a system to prune uneeded branches after merging
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
