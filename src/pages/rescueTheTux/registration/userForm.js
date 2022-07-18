@@ -2,7 +2,6 @@
 // which adds a registration page
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
-import { useState } from 'react';
 import QRcode from './qrcode_chrome.png';
 
 export default function UserForm({ showSuccess, showFailureRegno, showFailurePayment, handleChange, formValues }) {
@@ -41,7 +40,7 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
 		title="Join the team"
 		prompts={[
 			{ path: '~/rescue-the-tux', command: 'cd ./register' },
-			{ path: '~/rescue-the-tux/register', command: 'sudo start register.service' }
+			{ path: '~/rescue-the-tux/register', command: 'sudo start registration.service' }
 		]}
 		>
 		<form className='lug-form' onSubmit={submit}>
@@ -125,7 +124,7 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
 		</div>
 		
 		<div className='form-field longlabel'>
-		<label> Meal Preference </label>
+		<label> Meal Preference: </label>
 		<select
 		    id = 'meal'
 		    value = {formValues.meal}
@@ -137,14 +136,10 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
 		</div>
 		
 		<div className='form-end'>
-		<button> Submit </button>
+		<button type='submit' className='form-nav-button'> Register </button>
 		</div>
 		</form>
-
-		<h1> Register here </h1>
-		Just a registration form containing fields
-		like name, reg.no., email, whatsapp no.,
-		payment id, meal pref: veg/nveg.
+	
 		</TerminalWindow>
 	);
 }

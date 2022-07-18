@@ -7,7 +7,7 @@ export default function FailurePayment({formValues}) {
 		title="Registration Failed !"
 		prompts={[
 			{ path: '~/rescue-the-tux', command: 'cd ./register' },
-			{ path: '~/rescue-the-tux/register', command: 'sudo start register.service' }
+			{ path: '~/rescue-the-tux/register', command: 'sudo status registration.service' }
 		]}
 		>
 		<div className='form-start'>[!] Registration Failed...</div>

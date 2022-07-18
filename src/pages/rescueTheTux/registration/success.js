@@ -7,7 +7,7 @@ export default function Success({formValues}) {
 		title="Registration Successful"
 		prompts={[
 			{ path: '~/rescue-the-tux', command: 'cd ./register' },
-			{ path: '~/rescue-the-tux/register', command: 'sudo start register.service' }
+			{ path: '~/rescue-the-tux/register', command: 'sudo status registration.service' }
 		]}
 		>
 		<div className='form-start'>Success!...</div>
