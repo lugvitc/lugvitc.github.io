@@ -3,17 +3,18 @@
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import { useState } from 'react';
+import QRcode from './qrcode_chrome.png';
 
 export default function Challenges() {
 	const [formValues, setFormValues] = useState({
-		name: 'smellyFarts',
+		name: '',
 		regno: '',
 		email: '',
 		countryCode: '+91',
 		contact: '',
 		paymentID: '',
 		groupName: '',
-		meal: 'non veg'
+		meal: 'Non-veg'
 	});
 
 	const handleChange = input => e => {
@@ -95,13 +96,19 @@ export default function Challenges() {
 		</div>
 
 		<div className='form-field'>
-		<label> WhatsApp Number: </label>
-		<input
-		    type = 'tel'
-		    onChange = {handleChange('contact')}
-		    value = {formValues.contact}
-		    pattern = '[1-9]{1}[0-9]{9}'
-		    />
+                    <label> Contact Number (WhatsApp): </label>
+                    <input
+                        type='tel'
+                        onChange={handleChange('contact')}
+                        value={formValues.contact}
+                        pattern='[1-9]{1}[0-9]{9}'
+                    />
+                </div>
+
+
+		<div className='form-field'>
+		<label> Pay us here </label>
+		<img src = {QRcode} height={500} width={500} style={{alignSelf: 'center'}} alt='payment_QR_code'/>
 		</div>
 
 		<div className='form-field'>
@@ -124,16 +131,18 @@ export default function Challenges() {
 		    />
 		</div>
 		
-		<div className='form-field'>
+		<div className='form-field longlabel'>
 		<label> Meal Preference </label>
-		<input
-		    type = 'text'
-		    maxLength = '128'
-		    onChange = {handleChange('meal')}
+		<select
+		    id = 'meal'
 		    value = {formValues.meal}
-		    />
+		    onChange = {handleChange('meal')}
+		>
+		<option value='Non-veg'>Non-veg</option>
+		<option value='Veg'>Veg</option>
+		</select>
 		</div>
-
+		
 		<div className='form-end'>
 		<button> Submit </button>
 		</div>
