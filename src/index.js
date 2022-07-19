@@ -13,6 +13,7 @@ import LearnLinux from "./pages/learnLinux/learnLinux";
 // import UserForm from './pages/recruitment_2022/recruitment';
 import RescueTheTux from "./pages/rescueTheTux/home";
 import Challenges from "./pages/rescueTheTux/challenges";
+import LeaderBoard from "./pages/rescueTheTux/DetailedLeaderBoard";
 
 const pages = [
   {
@@ -44,6 +45,11 @@ const pages = [
     title: "Challenges",
     link: "/challenges",
     component: <Challenges />,
+  },
+  {
+    title: "LeaderBoard",
+    link: "/leader-board",
+    component: <LeaderBoard />,
   },
 ];
 

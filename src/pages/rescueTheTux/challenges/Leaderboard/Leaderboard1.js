@@ -3,56 +3,24 @@ import { motion } from "framer-motion";
 import User from "./components/User/User";
 import classes from "./Leaderboard1.module.css";
 import Card from "./components/Card/Card";
+import { Questions } from "./Questions";
+// import UserDetailsFun from "./UserDetails";
 
 function Leaderboard() {
   const [points, setPoints] = useState(0);
+  // UserDetailsFun(points);
   const players = [
     { score: 10, name: "Apple" },
     { score: 20, name: "Mango" },
     { score: 100, name: "Orange" },
     { score: points, name: "You" },
   ];
+  players.sort(function (a, b) {
+    return b.score - a.score;
+  });
 
-  const questions = [
-    {
-      q: 1,
-      points: 5,
-      title: "Bill",
-      tag: "Easy",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      hint1: "Lorem Ipsum1",
-      hint2: "Lorem Ipsum2",
-      hint3: "Lorem Ipseum3",
-      answer: "pico",
-    },
-    {
-      q: 2,
-      points: 10,
-      title: "Bill",
-      tag: "Medium",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      hint1: "Lorem Ipsum1",
-      hint2: "Lorem Ipsum2",
-      hint3: null,
-      answer: "pico",
-    },
-    {
-      q: 3,
-      points: 20,
-      title: "Bill",
-      tag: "Hard",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      hint1: "Lorem Ipsum1",
-      hint2: "Lorem Ipsum2",
-      hint3: null,
-      answer: "pico",
-    },
-  ];
   const [expand, setExpand] = useState(true);
-  const [questionObj, setQuestionObj] = useState(questions);
+  const [questionObj, setQuestionObj] = useState(Questions);
   // const [playerObj, setPlayerObj] = useState(players);
 
   function expandHandler() {
