@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 import TopBarTimeDate from './topBarTimeDate';
 import Tooltip from '../tooltip/tooltip';
-import LugvitcLogo from '../../images/Tux.svg';
 
 import useSettingsDialog from '../../hooks/useSettingsDialog';
 
 import styles from './topBar.module.css';
 import util from '../../styles/util.module.css';
+import Logo from '../logo/logo';
 
 export default function TopBar({ refer, topBarLinks }) {
     const { settingsDialogOpen, openSettingsDialog } = useSettingsDialog();
@@ -22,12 +22,12 @@ export default function TopBar({ refer, topBarLinks }) {
             >
                 <div className={styles.contents}>
                     <a
-                        className={styles.logo}
+                        // className={styles.logo}
                         href='https://linktr.ee/lugvitc'
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        <img src={LugvitcLogo} alt='lug logo' />
+                        <Logo />
                     </a>
                     <nav className={styles.links}>
                         {topBarLinks.map((nav, index) => (
