@@ -14,6 +14,8 @@ import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
 import Session4 from './session4';
 
+import Session5 from './session5';
+
 const sessions = [
     {
         title: 'Linux: What? Why? How?',
@@ -41,6 +43,10 @@ const sessions = [
     {
         title: 'Processes and Packages',
         content: <Session4 />
+    },
+    {
+	title: 'Advanced Features',
+	content: <Session5 />
     }
     // {
     //     title: 'Ricing',
