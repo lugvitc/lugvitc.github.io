@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.dda0be6e.css",
-    "main.js": "/static/js/main.8c8acde7.js",
+    "main.css": "/static/css/main.5b8cf740.css",
+    "main.js": "/static/js/main.a7b08072.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
-    "static/media/Tux.svg": "/static/media/Tux.cc9a8e9221fef2b05c6c88364e219728.svg",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
     "static/media/Discord.svg": "/static/media/Discord.27583b533952833679e4badca4e9e2a4.svg",
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.dda0be6e.css.map": "/static/css/main.dda0be6e.css.map",
-    "main.8c8acde7.js.map": "/static/js/main.8c8acde7.js.map"
+    "main.5b8cf740.css.map": "/static/css/main.5b8cf740.css.map",
+    "main.a7b08072.js.map": "/static/js/main.a7b08072.js.map"
   },
   "entrypoints": [
-    "static/css/main.dda0be6e.css",
-    "static/js/main.8c8acde7.js"
+    "static/css/main.5b8cf740.css",
+    "static/js/main.a7b08072.js"
   ]
 }
