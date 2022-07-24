@@ -46,12 +46,12 @@ const sessions = [
         content: <Session4 />
     },
     {
-	title: 'Advanced Features',
-	content: <Session5 />
+        title: 'Advanced Features',
+        content: <Session5 />
     },
     {
         title: 'Desktop Customization',
-	content: <Session6 />
+        content: <Session6 />
     }
 ];
 
