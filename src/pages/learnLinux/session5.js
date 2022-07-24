@@ -113,7 +113,18 @@ export default function Session5() {
                 <h3> unzip </h3>
                 The unzip command helps to unzip an archive from the command line interface.
                 <CodeBlock> unzip (zip_file_name) -d (/path/to/unzip) </CodeBlock>
-
+            </section>
+            <section>
+                <h2>vim: A terminal-based text editor</h2>
+                <h3>Modes</h3>
+                <h3>Commands</h3>
+                <h3>Working with Files</h3>
+                <h3>Moving Around</h3>
+                <h3>Editing Text</h3>
+                <h3>Selecting text</h3>
+                <h3>Cutting, Copying, Pasting</h3>
+                <h3>Finding and Replacing Text</h3>
+                <h3>Files in multiple tabs</h3>
             </section>
         </>
     );
