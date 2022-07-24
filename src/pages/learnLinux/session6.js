@@ -1,5 +1,6 @@
 import CodeBlock from '../../components/codeBlock/codeBlock';
 import LugLink from '../../components/lugLink/lugLink';
+
 export default function Session6() {
     return (
         <>
@@ -81,20 +82,62 @@ export default function Session6() {
             </section>
 
             <section>
-                <h2>Customizing Gnome</h2>
+                <h2>Customizing GNOME</h2>
+                <p>Customization is one of the most appealing aspects of linux. Below, you can find some information on how to customize the GNOME desktop enviroment.</p>
+
                 <h3>Theming</h3>
                 <h4>Gnome Tweaks</h4>
-                <h4>Icon Packs</h4>
-                <h4>Custom Cursors</h4>
+                <p>
+                    Gnome tweaks are a set of extra settings for gnome (which honestly should be a part of gnome by default). After installing the application, you can make a lot of{' '}
+                    customizations like changing the theme, the set of icons used, the cursor, etc.
+                </p>
+                <p>Gnome Tweaks should be in the official repositories and you can download it using:</p>
+                <ol>
+                    <li><code>apt</code>: <CodeBlock>sudo apt install gnome-tweaks</CodeBlock></li>
+                    <li><code>pacman</code>: <CodeBlock>sudo pacman -S gnome-tweaks</CodeBlock></li>
+                    <li><code>dnf</code>: <CodeBlock>sudo dnf install gnome-tweaks</CodeBlock></li>
+                </ol>
+                <p>Now, searching for the gnome tweaks app or typing <code>gnome-tweaks</code> in the terminal will open the app.</p>
+
+                <h4>Custom Icons/Cursors</h4>
+                <p>Go to <LugLink link='https://www.gnome-look.org/browse/'>gnome-look.org</LugLink> and find an icon pack you like. Download it and extract the tarball by typing:</p>
+                <CodeBlock>tar -xvf name.tar.gz</CodeBlock>
+                <p>Now, move this file to the icons folder:</p>
+                <CodeBlock>
+                    sudo mv name /usr/share/icons
+                </CodeBlock>
+                <p>
+                    Now, open the gnome-tweaks app (or restart if it was already open) and go to the 'Appearance' tab and select the icon pack you just added in the 'Icons' drop down menu.
+                </p>
+                <p>NOTE: any custom cursors you download also go in the same folder.</p>
+
                 <h4>Shell themes</h4>
+                <p>Download a theme from the same site and put in <code>/usr/share/themes</code> using:</p>
+                <CodeBlock>
+                    sudo mv name /usr/share/themes
+                </CodeBlock>
+                <p>Go to the gnome tweaks app and change the theme</p>
+
                 <h4>Shell themes and Gnome 42</h4>
+                <p>NOTE: Written on 20220724</p>
+                <p>If you see a 'Legacy Applications' option, that means you are in GNOME 42 (or higher, idk). For a whole lot of reasons, I would suggest you to not change the theme. Not all apps will look the same and there will be a lot of inconsistencies.</p>
 
                 <h3>Extensions</h3>
                 <h4>What are Extensions</h4>
-                <h4>Browser Extension</h4>
+                <p>Extensions are extra software which increase the functionality of gnome. They are very powerful and may break the system, so proceed on you own risk and make sure you trust the extension.</p>
+
                 <h4>Downloading Extensions</h4>
-                <h4>Managing Extensions</h4>
-                <h4>Some Popular Extensions</h4>
+                <p>Frst, get the gnome shell browser extension for your preferred browser. Then go to <LugLink link='https://extensions.gnome.org/'>extensions.gnome.org</LugLink> to install any extensions you like.</p>
+                <p>Install the 'Extensions Mangaer' app to easily view your extensions. </p>
+
+                <h4>Some Recommended Extensions</h4>
+                <p>Here are some of the extensions I use:</p>
+                <ul>
+                    <li>Dash to panel: Not a fan of the dock and top-bar paradigm in GNOME, me neither. Dash to panel bring a familiar Windows-like taskbar at the bottom of the screen. It is VERY VERY customizable, so you can fine tune it as much as you want.</li>
+                    <li>Arc menu: Get a start-menu like arc-menu, where you can search for apps and even pin apps!</li>
+                    <li>Vitals: Shows you basic stats about your system (like the amount of free memory, the network speed, etc.) on the top-bar (or the panel)</li>
+                    <li>Lock keys: Shows you which (num lock or caps lock) lock keys are currently active.</li>
+                </ul>
             </section>
         </>
     );
