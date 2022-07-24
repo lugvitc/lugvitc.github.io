@@ -102,15 +102,15 @@ export default function Session5() {
 	    <CodeBlock> myDirectory=value </CodeBlock>
 	    <CodeBlock> cd $myDirectory </CodeBlock>
 
-	    <h4> grep </h4>
+	    <h3> grep </h3>
 	    The grep command filters the output of a command and shows only the lines/text which matches the pattern you provide as an arguement.
 	    <CodeBlock> ls -l | grep movie </CodeBlock>
 
-	    <h4> zip </h4>
+	    <h3> zip </h3>
 	    The zip command helps to zip/archive a directory directly from the command line interface. 
 	    <CodeBlock> zip (zip_file_name) (myDirectory) </CodeBlock>
 
-	    <h4> unzip </h4>
+	    <h3> unzip </h3>
 	    The unzip command helps to unzip an archive from the command line interface.
 	    <CodeBlock> unzip (zip_file_name) -d (/path/to/unzip) </CodeBlock>
 

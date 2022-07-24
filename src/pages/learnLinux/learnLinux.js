@@ -15,6 +15,7 @@ import styles from './learnLinux.module.css';
 import Session4 from './session4';
 
 import Session5 from './session5';
+import Session6 from './session6';
 
 const sessions = [
     {
@@ -47,15 +48,11 @@ const sessions = [
     {
 	title: 'Advanced Features',
 	content: <Session5 />
+    },
+    {
+        title: 'Desktop Customization',
+	content: <Session6 />
     }
-    // {
-    //     title: 'Ricing',
-    //     content: <>coming soon!</>
-    // },
-    // {
-    //     title: 'Advanced Features',
-    //     content: <>coming soon!</>
-    // }
 ];
 
 export default function LearnLinux() {
