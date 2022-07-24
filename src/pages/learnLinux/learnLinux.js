@@ -9,13 +9,13 @@ import LugNavLink from '../../components/lugLink/lugNavLink';
 import Session1 from './session1';
 import Session2 from './session2';
 import Session3 from './session3';
+import Session4 from './session4';
+import Session5 from './session5';
+import Session6 from './session6';
 
 import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
-import Session4 from './session4';
 
-import Session5 from './session5';
-import Session6 from './session6';
 
 const sessions = [
     {
