@@ -133,8 +133,7 @@ export default function Session5() {
                 <p>To be able to effectively replace all the funcionality a mouse provides and still let you be able to type, vim has certain 'modes'. They are:</p>
                 <ol>
                     <li>
-                        Normal mode: Used for moving around, entering commands and switching to other modes. You can enter other modes only from normal mode.In normal mode, you can give certain commands{' '}
-                        after typing the <code>:</code> (<code>shift</code> + <code>;</code>) key. In normal mode, you can give certain commands after typing the <code>:</code> (<code>shift</code> + <code>;</code>) key.
+                        Normal mode: Used for moving around, entering commands and switching to other modes. You can enter other modes only from normal mode. In normal mode, you can give certain commands after typing the <code>:</code> (<code>shift</code> + <code>;</code>) key.
                     </li>
                     <li>Insert mode: Used to actually type text.</li>
                     <li>Visual mode: Used to select text.</li>

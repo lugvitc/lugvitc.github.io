@@ -35,19 +35,67 @@ const sessions = [
     },
     {
         title: 'Know the terminal',
-        content: <Session2 />
+        content: <Session2 />,
+	ytVideoElement: (
+            <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/IE1LKumWW7A'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+            />
+        )
+
     },
     {
         title: 'Know the system',
-        content: <Session3 />
+        content: <Session3 />,
+	ytVideoElement: (
+            <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/r7zz63Xt56E'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+            />
+        )
+
     },
     {
         title: 'Processes and Packages',
-        content: <Session4 />
+        content: <Session4 />,
+	ytVideoElement: (
+            <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/H6Y0yRxu2Rs'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+            />
+        )
+
     },
     {
         title: 'Advanced Features',
-        content: <Session5 />
+        content: <Session5 />,
+	ytVideoElement: (
+            <iframe
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/szIsA5awyP8'
+                title='YouTube video player'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+            />
+        )
+
     },
     {
         title: 'Desktop Customization',
