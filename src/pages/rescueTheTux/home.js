@@ -1,21 +1,21 @@
-import TerminalWindow from "../../components/terminal/terminalWindow";
-import WelcomeText from "./welcome";
-import Instructions from "./instructions";
-import Challenges from "./challenges";
-import Leaderboard from "./leaderboard";
-import Registration from "./registration";
-import Login from "./login";
+import TerminalWindow from '../../components/terminal/terminalWindow';
+import WelcomeText from './welcome';
+import Instructions from './instructions';
+import Challenges from './challenges';
+import LeaderBoard from './leaderboard';
+import Registration from './registration';
+import Login from './login';
 
 export default function RTTEvent() {
   return (
     <>
       <TerminalWindow
-        title="Rescue the Tux"
+        title='Rescue the Tux'
         prompts={[
-          { path: "~", command: "cd rescue-the-tux" },
+          { path: '~', command: 'cd rescue-the-tux' },
           {
-            path: "~/rescue-the-tux",
-            command: "./rescue-the-tux --play",
+            path: '~/rescue-the-tux',
+            command: './rescue-the-tux --play',
           },
         ]}
       >
@@ -23,8 +23,8 @@ export default function RTTEvent() {
         <Instructions />
         <Registration />
         <Login />
-        {/* <Challenges /> */}
-        <Leaderboard />
+        <Challenges />
+        <LeaderBoard />
       </TerminalWindow>
     </>
   );

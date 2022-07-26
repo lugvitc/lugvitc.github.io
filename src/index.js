@@ -1,56 +1,44 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { HashRouter, Routes, Route, Outlet } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 
-import "./styles/colors.css";
-import "./styles/index.css";
-import "./styles/forms.css";
+import './styles/colors.css';
+import './styles/index.css';
+import './styles/forms.css';
 
-import App from "./App";
-import Home from "./pages/home";
-import Events from "./pages/events/events";
-import LearnLinux from "./pages/learnLinux/learnLinux";
+import App from './App';
+import Home from './pages/home';
+import Events from './pages/events/events';
+import LearnLinux from './pages/learnLinux/learnLinux';
 // import UserForm from './pages/recruitment_2022/recruitment';
-import RescueTheTux from "./pages/rescueTheTux/home";
-import Challenges from "./pages/rescueTheTux/challenges";
-import LeaderBoard from "./pages/rescueTheTux/DetailedLeaderBoard";
+import RescueTheTux from './pages/rescueTheTux/home';
 
 const pages = [
   {
-    title: "Home",
-    link: "/",
+    title: 'Home',
+    link: '/',
     component: <Home />,
   },
   {
-    title: "Events",
-    link: "/events",
+    title: 'Events',
+    link: '/events',
     component: <Events />,
   },
   {
-    title: "Learn Linux",
-    link: "/learn-linux",
+    title: 'Learn Linux',
+    link: '/learn-linux',
     component: <LearnLinux />,
   },
   {
-    title: "Rescue the Tux",
-    link: "/rescue-the-tux",
+    title: 'Rescue the Tux',
+    link: '/rescue-the-tux',
     component: <RescueTheTux />,
-  },
+  }
   //, {
   //     title: 'Recruitment 2022',
   //     link: '/recruitment',
   //     component: <UserForm />
-  // }
-  {
-    title: "Challenges",
-    link: "/challenges",
-    component: <Challenges />,
-  },
-  {
-    title: "LeaderBoard",
-    link: "/leader-board",
-    component: <LeaderBoard />,
-  },
+  // } 
 ];
 
 ReactDOM.render(
@@ -58,7 +46,7 @@ ReactDOM.render(
     <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route
-          path="/"
+          path='/'
           element={
             <App pages={pages}>
               <Outlet />
@@ -66,7 +54,7 @@ ReactDOM.render(
           }
         >
           {pages.map((page, index) =>
-            page.link === "/" ? (
+            page.link === '/' ? (
               <Route key={index} index element={page.component} />
             ) : (
               <Route key={index} path={page.link} element={page.component} />
@@ -76,5 +64,5 @@ ReactDOM.render(
       </Routes>
     </HashRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
