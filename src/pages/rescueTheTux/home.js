@@ -24,7 +24,7 @@ export default function RTTEvent() {
         <Registration />
         <Login />
         <Challenges />
-        <LeaderBoard />
+	<LeaderBoard />
       </TerminalWindow>
     </>
   );
