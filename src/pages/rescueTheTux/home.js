@@ -1,6 +1,5 @@
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import WelcomeText from './welcome';
-import Instructions from './instructions';
 import Challenges from './challenges';
 import LeaderBoard from './leaderboard';
 import Registration from './registration';
@@ -21,7 +20,6 @@ export default function RTTEvent() {
         ]}
       >
         <WelcomeText />
-        <Instructions />
         <Registration />
         <TeamRegistration />
 	<Login />
