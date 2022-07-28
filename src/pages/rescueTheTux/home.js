@@ -4,6 +4,7 @@ import Instructions from './instructions';
 import Challenges from './challenges';
 import LeaderBoard from './leaderboard';
 import Registration from './registration';
+import TeamRegistration from './teamRegistration';
 import Login from './login';
 
 export default function RTTEvent() {
@@ -22,7 +23,8 @@ export default function RTTEvent() {
         <WelcomeText />
         <Instructions />
         <Registration />
-        <Login />
+        <TeamRegistration />
+	<Login />
         <Challenges />
 	<LeaderBoard />
       </TerminalWindow>
