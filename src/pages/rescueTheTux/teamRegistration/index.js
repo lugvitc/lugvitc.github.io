@@ -2,8 +2,9 @@
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import { useState } from 'react';
+import Success from './success';
 
-export default function TeamRegistration() {
+export default function TeamRegistration( {nextStep, prevStep, loginTeamPage}) {
 	const [step, setStep] = useState(1); 
         const [teamValues, setTeamValues] = useState({
 		gname: '',
@@ -34,7 +35,11 @@ export default function TeamRegistration() {
 			// fetch('https://backmagic.herokuapp.com/api/rescuethetux', { method: 'POST', headers: { Content-Type: 'application/json' }, body: JSON.stringify(formValues) });
 			console.log(teamValues);
 			// if backend result is success,
-			//showSuccess();
+		        <Success 
+			 nextStep = {nextStep}
+			 prevStep = {prevStep}
+			 loginTeamPage = {loginTeamPage}
+			/>
 			// if backend result is failure with duplicate regno,
 		        // showFailureRegno();
 			// if backend result is failure with duplicate payment,
@@ -43,8 +48,6 @@ export default function TeamRegistration() {
 	};
 
 	return (
-		<>
-		<h1> Form your team </h1>
                 <TerminalWindow
 		title="Form your team"
 		prompts={[
@@ -107,12 +110,12 @@ export default function TeamRegistration() {
 		</div>	
 		
 		<div className='form-end'>
-		<button type='submit' className='form-nav-button'> Create </button>
+		<button type='submit' className='form-nav-button next'> Create </button>
+		<button className='form-nav-button' onClick={prevStep}> Back </button>
 		</div>
 		</form>
 	
 		</TerminalWindow> 
-		</>
 	);
 	};
 

@@ -1,13 +1,20 @@
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 
-export default function WelcomeText() {
+export default function WelcomeText( {nextStep, prevStep} ) {
 	// Write an innovative welcome message
 	// for the event. The message should
 	// describe the event and show the 
 	// scenario of Tux Capture.
 
 	return (
-		<TerminalWindow title="Welcome">
+		<TerminalWindow
+                title='Rescue the Tux'
+		prompts={[
+			{ path: '~', command: 'cd rescue-the-tux' },
+			{ path: '~/rescue-the-tux', command: './rescue-the-tux --play',
+			},
+		]}
+		>
 		<h1> Welcome Participant </h1>
 		Oh no, Bill Gates has kidnapped our lovely Tux. His mission is to bring Apocalypse 
 		to the Technical World by wiping out the existence of Tux and thus, blowing away 
@@ -28,6 +35,10 @@ export default function WelcomeText() {
 		    <li> Cash Prize for winners </li>
 		    <li> Everything done from scratch </li>
 		</ol>
+
+		<div className='form-end'>
+		<button className='form-nav-button next' onClick={nextStep}> Register! </button>
+		</div>
 		</TerminalWindow>
 	);
 }

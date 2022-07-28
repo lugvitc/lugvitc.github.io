@@ -1,6 +1,6 @@
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 
-export default function Success( {formValues, nextStep, prevStep, createTeamPage, loginTeamPage} ) {
+export default function Success( {nextStep, prevStep, loginTeamPage} ) {
 		
 	return (
 		<TerminalWindow
@@ -12,11 +12,11 @@ export default function Success( {formValues, nextStep, prevStep, createTeamPage
 		>
 		<div className='form-start'>Success!...</div>
 		<div>
-		     Dear {formValues.name}, Thank you for joining the team to rescue our Tux! See you soon on 19th August! :)
+		     Dear, Thank you for joining the team to rescue our Tux! See you soon on 19th August! :)
 	        </div>
 		<div className='form-end'>
-		<button className='form-nav-button next' onClick={createTeamPage}> Create your team </button>
-	        <button className='form-nav-button' onClick={loginTeamPage}>Login </button>
+		<button className='form-nav-button next' onClick={loginTeamPage}> Login </button>
+	        <button className='form-nav-button' onClick={prevStep}>Back </button>
 		</div>
 		</TerminalWindow>
 	);
