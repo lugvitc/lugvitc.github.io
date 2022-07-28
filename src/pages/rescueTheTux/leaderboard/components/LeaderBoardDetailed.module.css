@@ -1,0 +1,25 @@
+.box {
+  border: 1px solid #898e97;
+  border-radius: 11px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  padding-bottom: 0;
+}
+.current {
+  /* position: sticky; */
+  background-color: #626875;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 640px) {
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    gap: 0;
+  }
+}
