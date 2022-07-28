@@ -5,7 +5,7 @@ export default function Challenges() {
   return (
     <>
       <h1> Challenges </h1>
-      <TerminalWindow title="Rescue the Tux">
+      <TerminalWindow title="Challenges">
         <Leaderboard1 />
       </TerminalWindow>
     </>
