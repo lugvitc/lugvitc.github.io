@@ -1,4 +1,3 @@
-import React from "react";
 // import { points } from "./Leaderboard1";
 
 const UserDetails = [

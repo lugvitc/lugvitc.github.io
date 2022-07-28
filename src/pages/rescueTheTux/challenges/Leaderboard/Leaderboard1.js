@@ -4,17 +4,18 @@ import User from "./components/User/User";
 import classes from "./Leaderboard1.module.css";
 import Card from "./components/Card/Card";
 import { Questions } from "./Questions";
-// import UserDetailsFun from "./UserDetails";
+import { UserDetails } from "./UserDetails";
 
 function Leaderboard() {
   const [points, setPoints] = useState(0);
   // UserDetailsFun(points);
-  const players = [
-    { score: 10, name: "Apple" },
-    { score: 20, name: "Mango" },
-    { score: 100, name: "Orange" },
-    { score: points, name: "You" },
-  ];
+  const players = UserDetails.slice(0, 4);
+  //const players = [
+  //  { score: 10, name: "Apple" },
+  //  { score: 20, name: "Mango" },
+  //  { score: 100, name: "Orange" },
+  //  { score: points, name: "You" },
+  //];
   players.sort(function (a, b) {
     return b.score - a.score;
   });
