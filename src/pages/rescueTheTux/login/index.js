@@ -5,8 +5,7 @@
 import { useState } from 'react';
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 
-export default function Login() {
-	const [step, setStep] = useState(2); 
+export default function Login( {nextStep, prevStep, challengesPage} ) {
         const [loginValues, setLoginValues] = useState({
 		gname: '',
 		pwd: ''
@@ -30,6 +29,7 @@ export default function Login() {
 			// to the hosted API.
 			// fetch('https://backmagic.herokuapp.com/api/rescuethetux', { method: 'POST', headers: { Content-Type: 'application/json' }, body: JSON.stringify(formValues) });
 			console.log(loginValues);
+			challengesPage();
 			// if backend result is success,
 			// showSuccess();
 			// if backend result is failure with duplicate regno,
