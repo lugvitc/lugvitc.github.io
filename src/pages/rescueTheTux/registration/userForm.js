@@ -14,7 +14,6 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
 	            !formValues.countryCode ||
 		    !formValues.contact ||
 		    !formValues.paymentID ||
-		    !formValues.groupName ||
 		    !formValues.meal)
 		{
 			alert('Please fill out all the fields');
@@ -110,16 +109,6 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
 		    maxLength = '128'
 		    onChange = {handleChange('paymentID')}
 		    value = {formValues.paymentID}
-		    />
-		</div>
-
-		<div className='form-field'>
-		<label> Group Name: </label>
-		<input
-		    type = 'text'
-		    maxLength = '128'
-		    onChange = {handleChange('groupName')}
-		    value = {formValues.groupName}
 		    />
 		</div>
 		

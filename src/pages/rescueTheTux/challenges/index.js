@@ -1,12 +1,13 @@
 import TerminalWindow from "../../../components/terminal/terminalWindow";
 import Leaderboard1 from "./Leaderboard/Leaderboard1";
 
-export default function Challenges() {
+export default function Challenges( {nextStep, prevStep, LeaderboardPage} ) {
   return (
     <>
-      <h1> Challenges </h1>
       <TerminalWindow title="Challenges">
-        <Leaderboard1 />
+        <Leaderboard1 
+	  LeaderboardPage = {LeaderboardPage}
+	/>
       </TerminalWindow>
     </>
   );

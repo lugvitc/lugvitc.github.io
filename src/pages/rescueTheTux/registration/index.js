@@ -9,7 +9,7 @@ import Success from './success';
 import FailureRegno from './failureRegno';
 import FailurePayment from './failurePayment';
 
-export default function Registration() {
+export default function Registration( {nextStep, prevStep, createTeamPage, loginTeamPage} ) {
 	const [step, setStep] = useState(2); 
         const [formValues, setFormValues] = useState({
 		name: '',
@@ -18,7 +18,6 @@ export default function Registration() {
 		countryCode: '+91',
 		contact: '',
 		paymentID: '',
-		groupName: '',
 		meal: 'Non-veg'
 	});
 
@@ -62,6 +61,10 @@ export default function Registration() {
 			return (
 				<Success
 				   formValues = {formValues}
+				   nextStep = {nextStep}
+				   prevStep = {prevStep}
+				   createTeamPage = {createTeamPage}
+				   loginTeamPage = {loginTeamPage}
 				/>
 			);
 		case 1:

@@ -6,7 +6,7 @@ import Card from "./components/Card/Card";
 import { Questions } from "./Questions";
 import { UserDetails } from "./UserDetails";
 
-function Leaderboard() {
+function Leaderboard( {LeaderboardPage} ) {
   const [points, setPoints] = useState(0);
   // UserDetailsFun(points);
   const players = UserDetails.slice(0, 4);
@@ -64,6 +64,10 @@ function Leaderboard() {
             />
           );
         })}
+      </div>
+      <br />    
+      <div className='form-end'>
+      <button className='form-navigate-btn next' onClick={LeaderboardPage}> Leaderboard </button>
       </div>
     </>
   );

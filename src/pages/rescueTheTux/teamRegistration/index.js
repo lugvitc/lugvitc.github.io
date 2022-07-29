@@ -2,9 +2,13 @@
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import { useState } from 'react';
+import Success from './success';
+import FailureGroup from './failureGroup';
+import GroupForm from './groupForm';
+import FailureDuplicate from './failureDuplicate';
 
-export default function TeamRegistration() {
-	const [step, setStep] = useState(1); 
+export default function TeamRegistration( {nextStep, prevStep, loginTeamPage}) {
+	const [step, setStep] = useState(2); 
         const [teamValues, setTeamValues] = useState({
 		gname: '',
 		regno1: '',
@@ -17,102 +21,47 @@ export default function TeamRegistration() {
 		setTeamValues({ ...teamValues, [input]: e.target.value });
 	};
 
-	const submit = async e => {
-		e.preventDefault();
-		if (!teamValues.gname ||
-		    !teamValues.regno1 ||
-		    !teamValues.pwd
-		)
-		{
-			alert('Please fill out all the fields');
-		}
-		else
-		{
-			// Use flask backend here to 
-			// submit all the data as a JSON object
-			// to the hosted API.
-			// fetch('https://backmagic.herokuapp.com/api/rescuethetux', { method: 'POST', headers: { Content-Type: 'application/json' }, body: JSON.stringify(formValues) });
-			console.log(teamValues);
-			// if backend result is success,
-			//showSuccess();
-			// if backend result is failure with duplicate regno,
-		        // showFailureRegno();
-			// if backend result is failure with duplicate payment,
-			// showFailurePayment();
-		}
+	const showSuccess = () => {
+		setStep(3);
 	};
 
-	return (
-		<>
-		<h1> Form your team </h1>
-                <TerminalWindow
-		title="Form your team"
-		prompts={[
-			{ path: '~/rescue-the-tux', command: 'cd ./team' },
-			{ path: '~/rescue-the-tux/team', command: 'crunch teams.txt' }
-		]}
-		>
-		<form className='lug-form' onSubmit={submit}>
-		<div className='form-start'> Register here </div>
-		
-		<div className='form-field'>
-		<label> * Group Name: </label>
-		<input
-		    type = 'text'
-		    maxLength = '128'
-		    onChange = {handleChange('gname')}
-		    value = {teamValues.name}
-		    />
-		</div> 
-
-		<div className='form-field'>
-		<label> * Group Password: </label>
-		<input
-		    type = 'password'
-		    maxLength = '16'
-		    onChange = {handleChange('pwd')}
-		    value = {teamValues.pwd}
-		    />
-		</div> 
-
-	
-		<div className='form-field'>
-		<label> * Registration Number (Member 1): </label>
-		<input
-		    type = 'text'
-		    maxLength = '9'
-		    onChange = {handleChange('regno1')}
-		    value = {teamValues.regno1}
-		    />
-		</div>
-
-		<div className='form-field'>
-		<label> Registration Number (Member 2): </label>
-		<input
-		    type = 'text'
-		    maxLength = '9'
-		    onChange = {handleChange('regno2')}
-		    value = {teamValues.regno2}
-		    />
-		</div>
-
-		<div className='form-field'>
-		<label> Registration Number (Member 3): </label>
-		<input
-		    type = 'text'
-		    maxLength = '9'
-		    onChange = {handleChange('regno3')}
-		    value = {teamValues.regno3}
-		    />
-		</div>	
-		
-		<div className='form-end'>
-		<button type='submit' className='form-nav-button'> Create </button>
-		</div>
-		</form>
-	
-		</TerminalWindow> 
-		</>
-	);
+	const showFailureGroupName = () => {
+		setStep(1);
 	};
 
+	const showFailureParticipantDuplicate = () => {
+		setStep(0);
+	};
+	
+	switch (step) {
+		case 2:
+			return (
+				<GroupForm
+				teamValues = {teamValues}
+			        showSuccess = {showSuccess}
+				handleChange = {handleChange}
+				showFailureGroupName = {showFailureGroupName}
+				showFailureParticipantDuplicate = {showFailureParticipantDuplicate}
+				/>
+			);
+		case 3:
+			return (
+				<Success
+				 teamValues = {teamValues}
+				 loginTeamPage = {loginTeamPage}
+				/>
+			);
+		case 1:
+			return (
+				<FailureGroup 
+				 teamValues = {teamValues}
+				/>
+			);
+		case 0:
+			return (
+				<FailureDuplicate
+				 teamValues = {teamValues}
+				/>
+			);
+	}
+}

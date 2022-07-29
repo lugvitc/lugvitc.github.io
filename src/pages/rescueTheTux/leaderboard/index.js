@@ -1,12 +1,13 @@
 import TerminalWindow from "../../../components/terminal/terminalWindow";
 import LeaderBoardDetailed from "./components/LeaderBoardDetailed";
 
-export default function LeaderBoard() {
+export default function LeaderBoard( {nextStep, prevStep, challengesPage} ) {
   return (
     <>
-      <h1> Leader Board </h1>
       <TerminalWindow title="LeaderBoard" style={{ position: "relative" }}>
-        <LeaderBoardDetailed />
+        <LeaderBoardDetailed 
+	  challengesPage = {challengesPage}
+	/>
       </TerminalWindow>
     </>
   );
