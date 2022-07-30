@@ -17,19 +17,50 @@ export default function WelcomeText({ nextStep, prevStep }) {
                 },
             ]}
         >
-            <div className={styles.welcomeText}>welcome to...</div>
+            <div className={styles.welcomeText}>Welcome to...</div>
             <div className={styles.eventName}>Rescue Tux</div>
             <div className={styles.subtitle}>...a one day event for learning linux basics and rescuing a beloved mascot!</div>
 
             <br />
+
+            <iframe
+                className={styles.video}
+                width="100%"
+                height="576"
+                src='https://www.youtube.com/embed/H5HHULuYMDo'
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+            </iframe>
+
             <br />
 
+            <div>
+                Rescue Tux is a fun, one-day event with two sessions:
+            </div>
+
+            <ul>
+                <li>The first, about learning basic linux skills.</li>
+                <li>The second allows you to put your skills into action and solve exciting challenges and uncover a mystery.</li>
+            </ul>
+
+            <div>
+                There is a cash prize for the winning teams, a catered lunch and participation certificates for all!
+            </div>
+
+            <br />
+            <div className='form-end'>
+                <button className='form-nav-button next' onClick={nextStep}> Register! </button>
+            </div>
+
+            {/*
             <div className={styles.big}>oh no!!!</div>
             <div className={styles.big}>Tux has suddenly gone missing!!!</div>
             <div>all we have is a mysterious video found in his home folder!</div>
 
             <br />
-            <div className={styles.placeholderForVideo} />
+            
             <br />
 
             <div>We do not know what happened or who is behind this but he clearly wants us to find him.</div>
@@ -37,6 +68,7 @@ export default function WelcomeText({ nextStep, prevStep }) {
             <br />
 
             <div>Its up to you guys to step up to the challenge, learn the skills required to navigate the linux world and save everyone's favourite penguin</div>
+            */}
 
             {/* <h1> Welcome Participant </h1>
             Oh no, Bill Gates has kidnapped our lovely Tux. His mission is to bring Apocalypse
@@ -58,10 +90,6 @@ export default function WelcomeText({ nextStep, prevStep }) {
                 <li> Cash Prize for winners </li>
                 <li> Everything done from scratch </li>
             </ol> */}
-
-            <div className='form-end'>
-                <button className='form-nav-button next' onClick={nextStep}> Register! </button>
-            </div>
         </TerminalWindow>
     );
 }

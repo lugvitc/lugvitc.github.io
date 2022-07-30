@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+.video {
+    display: flex;
+    align-items: center;
+}
+
 .big {
     font-size: 2.5rem;
 }
