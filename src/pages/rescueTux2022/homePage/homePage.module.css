@@ -1,0 +1,27 @@
+/* .welcomeText { */
+/* } */
+
+.eventName {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: medium;
+    text-align: center;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+}
+
+.big {
+    font-size: 2.5rem;
+}
+
+.placeholderForVideo {
+    height: 40ch;
+    width: 100%;
+    background-color: grey;
+}
