@@ -32,7 +32,8 @@ const pages = [
     },
     {
         title: 'Rescue Tux',
-        link: '/rescue-tux//*',
+        link: '/rescue-tux',
+        path: '/rescue-tux/*',
         component: <RescueTux2022Routes />
     }
     //, {
@@ -60,7 +61,7 @@ ReactDOM.render(
                         ) : (
                             <Route
                                 key={index}
-                                path={page.link}
+                                path={page.path || page.link}
                                 element={page.component}
                             />
                         )

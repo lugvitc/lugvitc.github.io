@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './homePage/homePage';
-import Registration from './registration';
+import Registration from './registration/registration';
 
 export default function RescueTux2022Routes() {
     return (
