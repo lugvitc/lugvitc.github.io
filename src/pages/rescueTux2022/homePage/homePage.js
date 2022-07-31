@@ -54,44 +54,8 @@ export default function HomePage() {
             <br />
             <div>
                 <NavLink to='/rescue-tux/register'>Register</NavLink>
+                <NavLink to='/rescue-tux/login'>Login</NavLink>
             </div>
-
-            {/*
-            <div className={styles.big}>oh no!!!</div>
-            <div className={styles.big}>Tux has suddenly gone missing!!!</div>
-            <div>all we have is a mysterious video found in his home folder!</div>
-
-            <br />
-            
-            <br />
-
-            <div>We do not know what happened or who is behind this but he clearly wants us to find him.</div>
-
-            <br />
-
-            <div>Its up to you guys to step up to the challenge, learn the skills required to navigate the linux world and save everyone's favourite penguin</div>
-            */}
-
-            {/* <h1> Welcome Participant </h1>
-            Oh no, Bill Gates has kidnapped our lovely Tux. His mission is to bring Apocalypse
-            to the Technical World by wiping out the existence of Tux and thus, blowing away
-            all the services which run upon the Linux kernel. This means the end to Google,
-            Meta, Twitter and ... the internet?
-            <br />
-            We have to hurry, we have to rescue the Tux. Are you joining the team? Our lovely
-            Tux has also left some clues on his way diving into the linux kernel. Start with
-            Challenge 1.
-            <br />
-            <br />
-            <h1> General Trivia </h1>
-            <ol>
-                <li> One-day event </li>
-                <li> Linux learning </li>
-                <li> Linux-themed CTF </li>
-                <li> Free lunch and OD for participants </li>
-                <li> Cash Prize for winners </li>
-                <li> Everything done from scratch </li>
-            </ol> */}
         </TerminalWindow>
     );
 }

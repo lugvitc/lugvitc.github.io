@@ -2,7 +2,10 @@
 // which adds a registration page
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import QRcode from './qrcode_chrome.png';
 
 export default function Registration() {
@@ -19,6 +22,8 @@ export default function Registration() {
     const handleChange = input => e => {
         setFormValues({ ...formValues, [input]: e.target.value });
     };
+
+    const navigate = useNavigate();
 
     const submitForm = async e => {
         e.preventDefault();
@@ -56,9 +61,9 @@ export default function Registration() {
             });
 
             if (res.ok) {
-                window.alert('success');
+                navigate('/rescue-tux/login');
             } else {
-                window.alert('failiure');
+                window.alert('there was an error, please try again');
             }
         }
     };
