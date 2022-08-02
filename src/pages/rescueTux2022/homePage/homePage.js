@@ -54,7 +54,10 @@ export default function HomePage() {
             <br />
             <div>
                 <NavLink to='/rescue-tux/register'>Register</NavLink>
+                <br />
                 <NavLink to='/rescue-tux/login'>Login</NavLink>
+                <br />
+                <NavLink to='/rescue-tux/make-team'>Create a Team</NavLink>
             </div>
         </TerminalWindow>
     );

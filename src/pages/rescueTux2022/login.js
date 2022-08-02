@@ -63,8 +63,7 @@ export default function Login() {
 
                 <div className='form-end'>
                     <button type='submit' className='form-nav-button'>
-                        {' '}
-                        Login{' '}
+                        Login
                     </button>
                 </div>
             </form>
