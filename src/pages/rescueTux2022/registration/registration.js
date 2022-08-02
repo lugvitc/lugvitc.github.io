@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import QRcode from './qrcode_chrome.png';
+import useFetch from '../../../hooks/useFetch';
 
 export default function Registration() {
     const [formValues, setFormValues] = useState({
@@ -24,6 +25,7 @@ export default function Registration() {
     };
 
     const navigate = useNavigate();
+    const {apiPost} = useFetch();
 
     const submitForm = async e => {
         e.preventDefault();
@@ -38,12 +40,12 @@ export default function Registration() {
         ) {
             alert('Please fill out all the fields');
         } else {
-            // add email
             const properFormValues = {
                 name: formValues.name,
                 registrationNo: formValues.regno,
                 phoneNo: `${formValues.countryCode}${formValues.contact}`,
                 paymentId: formValues.paymentID,
+                email: formValues.email,
                 mealPreference:
                     formValues.meal === 'Non-veg'
                         ? 'non-vegetarian'
@@ -52,16 +54,10 @@ export default function Registration() {
 
             console.log(formValues);
 
-            const res = await fetch('http://localhost:5000/api/rt22/signup', {
-                method: 'POST',
-                headers: {
-                    ContentType: 'application/json'
-                },
-                body: JSON.stringify(properFormValues)
-            });
+            const res = await apiPost('/rt22/signup', properFormValues);
 
             if (res.ok) {
-                navigate('/rescue-tux/login');
+                navigate('/rescue-tux/make-team');
             } else {
                 window.alert('there was an error, please try again');
             }
