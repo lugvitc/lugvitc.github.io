@@ -1,4 +1,4 @@
-import TerminalPrompt from '../../components/terminal/terminalPrompt';
+import TerminalPrompt from '../../components/terminalPrompt/terminalPrompt';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
