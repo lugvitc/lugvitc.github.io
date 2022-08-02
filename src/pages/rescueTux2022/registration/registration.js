@@ -2,63 +2,80 @@
 // which adds a registration page
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import QRcode from './qrcode_chrome.png';
+import useFetch from '../../../hooks/useFetch';
 
-export default function UserForm({ showSuccess, showFailureRegno, showFailurePayment, handleChange, formValues }) {
+export default function Registration() {
+    const [formValues, setFormValues] = useState({
+        name: '',
+        regno: '',
+        email: '',
+        countryCode: '+91',
+        contact: '',
+        paymentID: '',
+        meal: 'Non-veg'
+    });
 
-    const submit = async e => {
+    const handleChange = input => e => {
+        setFormValues({ ...formValues, [input]: e.target.value });
+    };
+
+    const navigate = useNavigate();
+    const {apiPost} = useFetch();
+
+    const submitForm = async e => {
         e.preventDefault();
-        if (!formValues.name ||
+        if (
+            !formValues.name ||
             !formValues.regno ||
             !formValues.email ||
             !formValues.countryCode ||
             !formValues.contact ||
             !formValues.paymentID ||
-            !formValues.meal) {
+            !formValues.meal
+        ) {
             alert('Please fill out all the fields');
-        }
-        else {
-            // Use flask backend here to 
-            // submit all the data as a JSON object
-            // to the hosted API.
-
-            // add email
+        } else {
             const properFormValues = {
                 name: formValues.name,
                 registrationNo: formValues.regno,
                 phoneNo: `${formValues.countryCode}${formValues.contact}`,
                 paymentId: formValues.paymentID,
-                mealPreference: formValues.meal === 'Non-veg' ? "non-vegetarian" : "vegetarian"
-            }
+                email: formValues.email,
+                mealPreference:
+                    formValues.meal === 'Non-veg'
+                        ? 'non-vegetarian'
+                        : 'vegetarian'
+            };
 
-            fetch(
-                'http://localhost:5000/api/rt22/signup',
-                {
-                    method: 'POST',
-                    headers: {
-                        ContentType: 'application/json'
-                    },
-                    body: JSON.stringify(properFormValues)
-                });
             console.log(formValues);
-            // if backend result is success,
-            showSuccess();
-            // if backend result is failure with duplicate regno,
-            // showFailureRegno();
-            // if backend result is failure with duplicate payment,
-            // showFailurePayment();
+
+            const res = await apiPost('/rt22/signup', properFormValues);
+
+            if (res.ok) {
+                navigate('/rescue-tux/make-team');
+            } else {
+                window.alert('there was an error, please try again');
+            }
         }
     };
 
     return (
         <TerminalWindow
-            title="Join the team"
+            title='Join the team'
             prompts={[
-                { path: '~/rescue-the-tux', command: 'cd ./register' },
-                { path: '~/rescue-the-tux/register', command: 'sudo start registration.service' }
+                { path: '~/rescue-tux', command: 'cd ./register' },
+                {
+                    path: '~/rescue-tux/register',
+                    command: 'sudo start registration.service'
+                }
             ]}
         >
-            <form className='lug-form' onSubmit={submit}>
+            <form className='lug-form' onSubmit={submitForm}>
                 <div className='form-start'> Register here </div>
 
                 <div className='form-field'>
@@ -112,10 +129,16 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
                     />
                 </div>
 
-
                 <div className='form-field'>
                     <label> Pay us here </label>
-                    <img loading='lazy' src={QRcode} height={500} width={500} style={{ width: '100%', height: 'auto' }} alt='payment_QR_code' />
+                    <img
+                        loading='lazy'
+                        src={QRcode}
+                        height={500}
+                        width={500}
+                        style={{ width: '100%', height: 'auto' }}
+                        alt='payment_QR_code'
+                    />
                 </div>
 
                 <div className='form-field'>
@@ -141,10 +164,12 @@ export default function UserForm({ showSuccess, showFailureRegno, showFailurePay
                 </div>
 
                 <div className='form-end'>
-                    <button type='submit' className='form-nav-button'> Register </button>
+                    <button type='submit' className='form-nav-button'>
+                        Register
+                    </button>
                 </div>
             </form>
-
         </TerminalWindow>
     );
 }
+
