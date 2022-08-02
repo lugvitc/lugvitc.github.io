@@ -33,8 +33,8 @@ export default function TeamRegistration() {
         <TerminalWindow
             title='Form your team'
             prompts={[
-                { path: '~/rescue-the-tux', command: 'cd ./team' },
-                { path: '~/rescue-the-tux/team', command: 'crunch teams.txt' }
+                { path: '~/rescue-tux', command: 'cd ./make-team' },
+                { path: '~/rescue-tux/make-team', command: './make-team' }
             ]}
         >
             <form className='lug-form' onSubmit={submit}>

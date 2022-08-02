@@ -72,9 +72,9 @@ export default function Registration() {
         <TerminalWindow
             title='Join the team'
             prompts={[
-                { path: '~/rescue-the-tux', command: 'cd ./register' },
+                { path: '~/rescue-tux', command: 'cd ./register' },
                 {
-                    path: '~/rescue-the-tux/register',
+                    path: '~/rescue-tux/register',
                     command: 'sudo start registration.service'
                 }
             ]}

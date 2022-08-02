@@ -33,8 +33,8 @@ export default function Login() {
         <TerminalWindow
             title='Start the Competition'
             prompts={[
-                { path: '~/rescue-the-tux', command: 'cd login' },
-                { path: '~/rescue-the-tux/login', command: './start' }
+                { path: '~/rescue-tux', command: 'cd login' },
+                { path: '~/rescue-tux/login', command: './start' }
             ]}
         >
             <h1> Login Page </h1>
