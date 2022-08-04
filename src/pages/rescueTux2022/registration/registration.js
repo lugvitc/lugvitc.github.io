@@ -3,7 +3,7 @@
 // needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import QRcode from './qrcode_chrome.png';
@@ -25,11 +25,46 @@ export default function Registration() {
     };
 
     const navigate = useNavigate();
-    const {apiPost} = useFetch();
+    const { apiPost } = useFetch();
+
+    const [validRegNo, setValidRegNo] = useState(false);
+    const [validPaymentId, setValidPaymentId] = useState(false);
+
+    const validateRegistrationNo = async () => {
+        if (formValues.regno && formValues.regno.length !== 9)
+            setValidRegNo(false);
+        else {
+            const res = await apiPost('/rt22/verify-participant-regno', {
+                registrationNo: formValues.regno
+            });
+            const data = await res.json();
+            const isValid = await data.valid;
+            setValidRegNo(isValid);
+        }
+    };
+
+    const validatePaymentId = async () => {
+        const res = await apiPost('/rt22/verify-payment-id', {
+            paymentId: formValues.paymentID
+        });
+        const data = await res.json();
+        const isValid = await data.valid;
+        setValidRegNo(isValid);
+    };
+
+    useEffect(() => {
+        if (formValues.regno) validateRegistrationNo();
+    }, [formValues.regno]);
+
+    useEffect(() => {
+        if (formValues.paymentID) validatePaymentId();
+    }, [formValues.paymentID]);
 
     const submitForm = async e => {
         e.preventDefault();
-        if (
+        if (!validRegNo) window.alert('you have already registered');
+        else if (!validRegNo) window.alert('duplicate payment Id');
+        else if (
             !formValues.name ||
             !formValues.regno ||
             !formValues.email ||
