@@ -21,13 +21,17 @@ export default function HomePage() {
                 beloved mascot!
             </div>
 
-            <br />
+            <div className={styles.buttons}>
+                <NavLink className={styles.button} to='/rescue-tux/register'>
+                    Register Now!
+                </NavLink>
+            </div>
 
             <iframe
                 className={styles.video}
                 width='100%'
                 height='576'
-                src='https://www.youtube.com/embed/H5HHULuYMDo'
+                src='https://www.youtube.com/C8Vae7JlekA'
                 title='YouTube video player'
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
@@ -52,12 +56,14 @@ export default function HomePage() {
             </div>
 
             <br />
-            <div>
-                <NavLink to='/rescue-tux/register'>Register</NavLink>
-                <br />
+            <div className={styles.buttons}>
+                <NavLink className={styles.button} to='/rescue-tux/register'>
+                    Register Now!
+                </NavLink>
+                {/* <br />
                 <NavLink to='/rescue-tux/login'>Login</NavLink>
                 <br />
-                <NavLink to='/rescue-tux/make-team'>Create a Team</NavLink>
+                <NavLink to='/rescue-tux/make-team'>Create a Team</NavLink> */}
             </div>
         </TerminalWindow>
     );

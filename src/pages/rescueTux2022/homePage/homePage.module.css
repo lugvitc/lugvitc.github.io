@@ -25,3 +25,24 @@
     width: 100%;
     background-color: grey;
 }
+
+.buttons {
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.button {
+    display: block;
+    color: var(--nord4);
+    text-decoration: none;
+    background-color: var(--nord10);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.button:hover {
+    filter: brightness(80%);
+    color: var(--nord4);
+}
+
