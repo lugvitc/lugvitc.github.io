@@ -29,13 +29,13 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
-    },
-    {
-        title: 'Rescue Tux',
-        link: '/rescue-tux',
-        path: '/rescue-tux/*',
-        component: <RescueTux2022Routes />
     }
+    //, {
+    //     title: 'Rescue Tux',
+    //     link: '/rescue-tux',
+    //     path: '/test/rescue-tux/*',
+    //     component: <RescueTux2022Routes />
+    // }
     //, {
     //     title: 'Recruitment 2022',
     //     link: '/recruitment',
@@ -66,6 +66,11 @@ ReactDOM.render(
                             />
                         )
                     )}
+
+                    <Route
+                        path='test-rt22/*'
+                        element={<RescueTux2022Routes />}
+                    />
                 </Route>
             </Routes>
         </HashRouter>
