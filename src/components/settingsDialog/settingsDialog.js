@@ -66,7 +66,7 @@ export default function SettingsDialog() {
                     />{' '}
                     Terminal dots on left
                 </div>
-                <div
+                {/* <div
                     className={sds.toggle}
                     onClick={() => setKeyboardShortcutsOn(!keyboardShortcutsOn)}
                 >
@@ -76,7 +76,7 @@ export default function SettingsDialog() {
                         checked={keyboardShortcutsOn}
                     />{' '}
                     Enable keyboard shortcuts
-                </div>
+                </div> */}
                 <div className={sds.buttons}>
                     <button onClick={() => closeSettingsDialog()}>Exit</button>
                     <button onClick={() => setDefaults(true)}>Defaults</button>

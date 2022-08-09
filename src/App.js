@@ -8,7 +8,7 @@ import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
 // import UserForm from './pages/recruitment_2022/recruitment';
 
 export default function App({ children, pages }) {
-    useKeyboardShortcuts();
+    // useKeyboardShortcuts();
 
     const [mainTopMargin, setMainTopMargin] = useState('0');
 
