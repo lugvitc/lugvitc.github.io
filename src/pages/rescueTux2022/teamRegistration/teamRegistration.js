@@ -26,7 +26,7 @@ export default function TeamRegistration() {
             const res = await apiPost('/rt22/create-team', teamValues);
             if (res.ok) {
                 window.alert(JSON.stringify(teamValues));
-                navigate('/rescue-tux/login');
+                navigate('/test-rt22/login');
             }
         }
     };
@@ -40,7 +40,7 @@ export default function TeamRegistration() {
             title='Form your team'
             prompts={[
                 { path: '~/rescue-tux', command: 'cd ./make-team' },
-                { path: '~/rescue-tux/make-team', command: './make-team' }
+                { path: '~/test-rt22/make-team', command: './make-team' }
             ]}
         >
             <form className='lug-form' onSubmit={submit}>

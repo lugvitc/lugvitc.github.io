@@ -78,7 +78,7 @@ export default function Registration() {
             const properFormValues = {
                 name: formValues.name,
                 registrationNo: formValues.regno,
-                phoneNo: `${formValues.countryCode}${formValues.contact}`,
+                phoneNo: `${formValues.countryCode.replace('+', '')}${formValues.contact}`,
                 paymentId: formValues.paymentID,
                 email: formValues.email,
                 mealPreference:
@@ -92,7 +92,7 @@ export default function Registration() {
             const res = await apiPost('/rt22/signup', properFormValues);
 
             if (res.ok) {
-                navigate('/rescue-tux/make-team');
+                navigate('/test-rt22/make-team');
             } else {
                 window.alert('there was an error, please try again');
             }
@@ -105,7 +105,7 @@ export default function Registration() {
             prompts={[
                 { path: '~/rescue-tux', command: 'cd ./register' },
                 {
-                    path: '~/rescue-tux/register',
+                    path: '~/test-rt22/register',
                     command: 'sudo start registration.service'
                 }
             ]}
