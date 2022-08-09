@@ -1,3 +1,18 @@
+.phone {
+  display: flex;
+  gap: 0.15rem;
+  width: 100%;
+}
+.phone input:nth-child(1) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 20%;
+}
+.phone input:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 80%;
+}
 @media (min-width: 768px) {
   .grid {
     display: grid;
@@ -6,17 +21,34 @@
     padding: 0;
     margin: 0;
     padding-left: 3.6rem;
+
+    justify-items: center;
   }
   .grid_QRCode {
     grid-column: 2/3;
-    grid-row: 2/ 10;
+    grid-row: 1/ 8;
   }
-  .grid_register {
-    grid-column: 1/3;
+
+  .phone input:nth-child(1) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 20%;
+  }
+  .phone input:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 80%;
   }
 }
 @media (min-width: 1200px) {
   .grid_QRCode {
-    padding: 2.4rem;
+    /* padding: 2.4rem; */
+    width: 74%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .phone {
+    width: 90%;
   }
 }

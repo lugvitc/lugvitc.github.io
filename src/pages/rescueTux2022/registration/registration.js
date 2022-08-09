@@ -113,11 +113,6 @@ export default function Registration() {
     >
       <form className="lug-form" onSubmit={submitForm}>
         <div className={classes.grid}>
-          <div className={`${"form-start"} ${classes.grid_register}`}>
-            {" "}
-            Register here{" "}
-          </div>
-
           <div className="form-field">
             <label> Name: </label>
             <input
@@ -149,24 +144,22 @@ export default function Registration() {
           </div>
 
           <div className="form-field">
-            <label> Country Code: </label>
-            <input
-              type="text"
-              maxLength="128"
-              onChange={handleChange("countryCode")}
-              value={formValues.countryCode}
-            />
-          </div>
-
-          <div className="form-field">
             <label> Contact Number (WhatsApp): </label>
-            <input
-              type="tel"
-              maxLength="10"
-              onChange={handleChange("contact")}
-              value={formValues.contact}
-              pattern="[1-9]{1}[0-9]{9}"
-            />
+            <div className={classes.phone}>
+              <input
+                type="text"
+                maxLength="5"
+                onChange={handleChange("countryCode")}
+                value={formValues.countryCode}
+              />
+              <input
+                type="tel"
+                maxLength="10"
+                onChange={handleChange("contact")}
+                value={formValues.contact}
+                pattern="[1-9]{1}[0-9]{9}"
+              />
+            </div>
           </div>
 
           <div className={`${"form-field"} ${classes.grid_QRCode}`}>
