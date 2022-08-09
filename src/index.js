@@ -30,11 +30,6 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
-    },
-    {
-        title: 'Escape Hunt',
-        link: '/escape-hunt',
-        component: <EscapeHunt />
     }
     //, {
     //     title: 'Rescue Tux',
