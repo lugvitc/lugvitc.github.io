@@ -27,17 +27,17 @@ export default function HomePage() {
                 </NavLink>
             </div>
 
-            <iframe
-                className={styles.video}
-                width='100%'
-                height='576'
-                src='https://www.youtube.com/C8Vae7JlekA'
-                title='YouTube video player'
-                frameBorder='0'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowFullScreen
-            ></iframe>
-
+	    <iframe 
+	    	className={styles.video}
+	    	width="100%" 
+	    	height="576" 
+	    	src="https://www.youtube.com/embed/BRUzI-esD2c" 
+	    	title="YouTube video player" 
+	    	frameborder="0" 
+	    	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+	    	allowfullscreen>
+	    </iframe>
+             
             <br />
 
             <div>Rescue Tux is a fun, one-day event with two sessions:</div>
@@ -52,7 +52,7 @@ export default function HomePage() {
 
             <div>
                 There is a cash prize for the winning teams, a catered lunch and
-                participation certificates for all!
+                GeeksForGeeks swags for all!
             </div>
 
             <br />
