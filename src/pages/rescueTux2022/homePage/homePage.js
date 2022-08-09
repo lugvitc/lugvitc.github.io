@@ -22,7 +22,7 @@ export default function HomePage() {
             </div>
 
             <div className={styles.buttons}>
-                <NavLink className={styles.button} to='/rescue-tux/register'>
+                <NavLink className={styles.button} to='/test-rt22/register'>
                     Register Now!
                 </NavLink>
             </div>
@@ -33,9 +33,9 @@ export default function HomePage() {
                 height='576'
                 src='https://www.youtube.com/embed/BRUzI-esD2c'
                 title='YouTube video player'
-                frameborder='0'
+                frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                allowfullscreen
+                allowFullScreen
             ></iframe>
 
             <br />
@@ -57,7 +57,7 @@ export default function HomePage() {
 
             <br />
             <div className={styles.buttons}>
-                <NavLink className={styles.button} to='/rescue-tux/register'>
+                <NavLink className={styles.button} to='/test-rt22/register'>
                     Register Now!
                 </NavLink>
                 {/* <br />
