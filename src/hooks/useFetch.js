@@ -1,5 +1,5 @@
 export default function useFetch() {
-    const apiURL = 'http://localhost:5000/api';
+    const apiURL = 'https://backmagic.herokuapp.com/api';
     
     const api = (path, init) => fetch(apiURL + path, init);
 
