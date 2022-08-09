@@ -12,6 +12,8 @@ import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
 import EscapeHunt from './pages/escapeHunt/escapeHunt';
 // import UserForm from './pages/recruitment_2022/recruitment';
+// import RescueTheTux from './pages/rescueTheTux/home';
+import RescueTux2022Routes from './pages/rescueTux2022/routes';
 
 const pages = [
     {
@@ -34,6 +36,12 @@ const pages = [
         link: '/escape-hunt',
         component: <EscapeHunt />
     }
+    //, {
+    //     title: 'Rescue Tux',
+    //     link: '/rescue-tux',
+    //     path: '/test/rescue-tux/*',
+    //     component: <RescueTux2022Routes />
+    // }
     //, {
     //     title: 'Recruitment 2022',
     //     link: '/recruitment',
@@ -59,11 +67,16 @@ ReactDOM.render(
                         ) : (
                             <Route
                                 key={index}
-                                path={page.link}
+                                path={page.path || page.link}
                                 element={page.component}
                             />
                         )
                     )}
+
+                    <Route
+                        path='test-rt22/*'
+                        element={<RescueTux2022Routes />}
+                    />
                 </Route>
             </Routes>
         </HashRouter>
