@@ -6,7 +6,7 @@ import TerminalWindow from '../../../components/terminal/terminalWindow';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import QRcode from './qrcode_chrome.png';
+import QRcode from './qrcode_payus.png';
 import useFetch from '../../../hooks/useFetch';
 
 export default function Registration() {
@@ -169,7 +169,7 @@ export default function Registration() {
                     <img
                         loading='lazy'
                         src={QRcode}
-                        height={500}
+                        height={200}
                         width={500}
                         style={{ width: '100%', height: 'auto' }}
                         alt='payment_QR_code'
