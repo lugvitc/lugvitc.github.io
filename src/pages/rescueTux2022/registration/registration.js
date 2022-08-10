@@ -49,7 +49,7 @@ export default function Registration() {
         });
         const data = await res.json();
         const isValid = await data.valid;
-        setValidRegNo(isValid);
+        setValidPaymentId(isValid);
     };
 
     useEffect(() => {
@@ -62,9 +62,7 @@ export default function Registration() {
 
     const submitForm = async e => {
         e.preventDefault();
-        if (!validRegNo) window.alert('you have already registered');
-        else if (!validRegNo) window.alert('duplicate payment Id');
-        else if (
+        if (
             !formValues.name ||
             !formValues.regno ||
             !formValues.email ||
@@ -74,11 +72,19 @@ export default function Registration() {
             !formValues.meal
         ) {
             alert('Please fill out all the fields');
+        } else if (!validRegNo) {
+            window.alert(
+                'Invalid Registration Number (Already registered or incorrect format)'
+            );
+        } else if (!validPaymentId) {
+            window.alert('duplicate payment Id');
         } else {
             const properFormValues = {
                 name: formValues.name,
                 registrationNo: formValues.regno,
-                phoneNo: `${formValues.countryCode.replace('+', '')}${formValues.contact}`,
+                phoneNo: `${formValues.countryCode.replace('+', '')}${
+                    formValues.contact
+                }`,
                 paymentId: formValues.paymentID,
                 email: formValues.email,
                 mealPreference:
