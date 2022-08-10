@@ -14,11 +14,15 @@ export default function TeamRegistration() {
     });
 
     const navigate = useNavigate();
-    const {apiPost} = useFetch();
+    const { apiPost } = useFetch();
 
     const submit = async e => {
         e.preventDefault();
-        if (!teamValues.name || !teamValues.member1RegNo || !teamValues.password) {
+        if (
+            !teamValues.name ||
+            !teamValues.member1RegNo ||
+            !teamValues.password
+        ) {
             alert('Please fill out all the fields');
         } else {
             if (!teamValues.member2RegNo) delete teamValues['member2RegNo'];
@@ -26,7 +30,7 @@ export default function TeamRegistration() {
             const res = await apiPost('/rt22/create-team', teamValues);
             if (res.ok) {
                 window.alert(JSON.stringify(teamValues));
-                navigate('/test-rt22/login');
+                navigate('/rescue-tux/login');
             }
         }
     };
@@ -40,7 +44,7 @@ export default function TeamRegistration() {
             title='Form your team'
             prompts={[
                 { path: '~/rescue-tux', command: 'cd ./make-team' },
-                { path: '~/test-rt22/make-team', command: './make-team' }
+                { path: '~/rescue-tux/make-team', command: './make-team' }
             ]}
         >
             <form className='lug-form' onSubmit={submit}>

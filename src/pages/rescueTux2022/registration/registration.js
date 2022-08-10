@@ -99,7 +99,7 @@ export default function Registration() {
             const res = await apiPost('/rt22/signup', properFormValues);
 
             if (res.ok) {
-                // navigate('/test-rt22/make-team');
+                // navigate('/rescue-tux/make-team');
                 window.localStorage.setItem('rt22-registration-done', 'true');
                 window.localStorage.setItem(
                     'rt22-participant-name',
@@ -118,7 +118,7 @@ export default function Registration() {
             prompts={[
                 { path: '~/rescue-tux', command: 'cd ./register' },
                 {
-                    path: '~/test-rt22/register',
+                    path: '~/rescue-tux/register',
                     command: 'sudo ./registration --rt22'
                 }
             ]}

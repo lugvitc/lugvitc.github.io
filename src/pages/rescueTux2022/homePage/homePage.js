@@ -22,7 +22,7 @@ export default function HomePage() {
             </div>
 
             <div className={styles.buttons}>
-                <NavLink className={styles.button} to='/test-rt22/register'>
+                <NavLink className={styles.button} to='/rescue-tux/register'>
                     Register Now!
                 </NavLink>
             </div>
@@ -57,13 +57,13 @@ export default function HomePage() {
 
             <br />
             <div className={styles.buttons}>
-                <NavLink className={styles.button} to='/test-rt22/register'>
+                <NavLink className={styles.button} to='/rescue-tux/register'>
                     Register Now!
                 </NavLink>
                 {/* <br />
-                <NavLink to='/test-rt22/login'>Login</NavLink>
+                <NavLink to='/rescue-tux/login'>Login</NavLink>
                 <br />
-                <NavLink to='/test-rt22/make-team'>Create a Team</NavLink> */}
+                <NavLink to='/rescue-tux/make-team'>Create a Team</NavLink> */}
             </div>
         </TerminalWindow>
     );

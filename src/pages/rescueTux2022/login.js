@@ -22,7 +22,7 @@ export default function Login() {
             // const res = await fetch(');
             // if (res.ok) {
             window.alert(`${loginValues.groupName} ${loginValues.password}`);
-            navigate('/test-rt22/play');
+            navigate('/rescue-tux/play');
             // } else {
             // window.alert('try again');
             // }
@@ -34,7 +34,7 @@ export default function Login() {
             title='Start the Competition'
             prompts={[
                 { path: '~/rescue-tux', command: 'cd login' },
-                { path: '~/test-rt22/login', command: './start' }
+                { path: '~/rescue-tux/login', command: './start' }
             ]}
         >
             <h1> Login Page </h1>
