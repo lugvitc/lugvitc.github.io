@@ -136,6 +136,7 @@ export default function Registration() {
                         maxLength='9'
                         onChange={handleChange('regno')}
                         value={formValues.regno}
+                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                     />
                 </div>
 
@@ -156,6 +157,7 @@ export default function Registration() {
                         maxLength='128'
                         onChange={handleChange('countryCode')}
                         value={formValues.countryCode}
+                        pattern='\+\d+'
                     />
                 </div>
 
