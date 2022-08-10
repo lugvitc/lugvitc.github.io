@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import QRcode from './qrcode_payus.png';
 import useFetch from '../../../hooks/useFetch';
 
+import styles from './registration.module.css';
+
 export default function Registration() {
     const [formValues, setFormValues] = useState({
         name: '',
@@ -17,7 +19,7 @@ export default function Registration() {
         countryCode: '+91',
         contact: '',
         paymentID: '',
-        meal: 'Non-veg'
+        meal: 'Veg'
     });
 
     const handleChange = input => e => {
@@ -107,7 +109,7 @@ export default function Registration() {
 
     return (
         <TerminalWindow
-            title='Join the team'
+            title='Registration'
             prompts={[
                 { path: '~/rescue-tux', command: 'cd ./register' },
                 {
@@ -117,99 +119,94 @@ export default function Registration() {
             ]}
         >
             <form className='lug-form' onSubmit={submitForm}>
-                <div className='form-start'> Register here </div>
+                <div className={styles.grid}>
+                    <div className='form-field'>
+                        <label> Name: </label>
+                        <input
+                            type='text'
+                            maxLength='128'
+                            onChange={handleChange('name')}
+                            value={formValues.name}
+                        />
+                    </div>
+                    <div className='form-field'>
+                        <label> Registration Number (VIT): </label>
+                        <input
+                            type='text'
+                            maxLength='9'
+                            onChange={handleChange('regno')}
+                            value={formValues.regno}
+                            pattern='\d{2}[a-zA-Z]{3}\d{4}'
+                        />
+                    </div>
+                    <div className='form-field'>
+                        <label> Email: </label>
+                        <input
+                            type='email'
+                            maxLength='128'
+                            onChange={handleChange('email')}
+                            value={formValues.email}
+                        />
+                    </div>
 
-                <div className='form-field'>
-                    <label> Name: </label>
-                    <input
-                        type='text'
-                        maxLength='128'
-                        onChange={handleChange('name')}
-                        value={formValues.name}
-                    />
-                </div>
+                    <div className='form-field'>
+                        <label> Contact Number (WhatsApp): </label>
+                        <div className={styles.phone}>
+                            <input
+                                type='text'
+                                maxLength='5'
+                                onChange={handleChange('countryCode')}
+                                value={formValues.countryCode}
+                            />
+                            <input
+                                type='tel'
+                                maxLength='10'
+                                onChange={handleChange('contact')}
+                                value={formValues.contact}
+                                pattern='[1-9]{1}[0-9]{9}'
+                            />
+                        </div>
+                    </div>
 
-                <div className='form-field'>
-                    <label> Registration Number (VIT): </label>
-                    <input
-                        type='text'
-                        maxLength='9'
-                        onChange={handleChange('regno')}
-                        value={formValues.regno}
-                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
-                    />
-                </div>
+                    <div className={`${'form-field'} ${styles.grid_QRCode}`}>
+                        <label> Pay us here </label>
+                        <img
+                            loading='lazy'
+                            src={QRcode}
+                            height={200}
+                            width={500}
+                            style={{ width: '100%', height: 'auto' }}
+                            alt='payment_QR_code'
+                        />
+                    </div>
 
-                <div className='form-field'>
-                    <label> Email: </label>
-                    <input
-                        type='email'
-                        maxLength='128'
-                        onChange={handleChange('email')}
-                        value={formValues.email}
-                    />
-                </div>
+                    <div className='form-field'>
+                        <label> Payment ID: </label>
+                        <input
+                            type='text'
+                            maxLength='128'
+                            onChange={handleChange('paymentID')}
+                            value={formValues.paymentID}
+                        />
+                    </div>
 
-                <div className='form-field'>
-                    <label> Country Code: </label>
-                    <input
-                        type='text'
-                        maxLength='8'
-                        onChange={handleChange('countryCode')}
-                        value={formValues.countryCode}
-                        pattern='\+\d+'
-                    />
-                </div>
+                    <div className='form-field longlabel'>
+                        <label> Meal Preference: </label>
+                        <select
+                            id='meal'
+                            value={formValues.meal}
+                            onChange={handleChange('meal')}
+                        >
+                            <option value='Non-veg'>Non-veg</option>
+                            <option value='Veg'>Veg</option>
+                        </select>
+                    </div>
 
-                <div className='form-field'>
-                    <label> Contact Number (WhatsApp): </label>
-                    <input
-                        type='tel'
-                        maxLength='10'
-                        onChange={handleChange('contact')}
-                        value={formValues.contact}
-                        pattern='[1-9]{1}[0-9]{9}'
-                    />
-                </div>
-
-                <div className='form-field'>
-                    <label> Pay us here </label>
-                    <img
-                        loading='lazy'
-                        src={QRcode}
-                        height={200}
-                        width={500}
-                        style={{ width: '100%', height: 'auto' }}
-                        alt='payment_QR_code'
-                    />
-                </div>
-
-                <div className='form-field'>
-                    <label> Payment ID: </label>
-                    <input
-                        type='text'
-                        maxLength='128'
-                        onChange={handleChange('paymentID')}
-                        value={formValues.paymentID}
-                    />
-                </div>
-
-                <div className='form-field longlabel'>
-                    <label> Meal Preference: </label>
-                    <select
-                        id='meal'
-                        value={formValues.meal}
-                        onChange={handleChange('meal')}
-                    >
-                        <option value='Non-veg'>Non-veg</option>
-                        <option value='Veg'>Veg</option>
-                    </select>
-                </div>
-
-                <div className='form-end'>
-                    <button type='submit' className='form-nav-button'>
-                        Register
-                    </button>
+                    <div className='form-end'>
+                        <button type='submit' className='form-nav-button'>
+                            Register
+                        </button>
+                    </div>
                 </div>
             </form>
         </TerminalWindow>
