@@ -154,7 +154,7 @@ export default function Registration() {
                     <label> Country Code: </label>
                     <input
                         type='text'
-                        maxLength='128'
+                        maxLength='8'
                         onChange={handleChange('countryCode')}
                         value={formValues.countryCode}
                         pattern='\+\d+'
