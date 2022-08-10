@@ -1,6 +1,3 @@
-// Edit this file to write your code
-// which adds a registration page
-// needed to add a new participant to the event.
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 
 import { useEffect, useState } from 'react';
@@ -114,7 +111,7 @@ export default function Registration() {
                 { path: '~/rescue-tux', command: 'cd ./register' },
                 {
                     path: '~/test-rt22/register',
-                    command: 'sudo start registration.service'
+                    command: 'sudo ./registration --rt22'
                 }
             ]}
         >
