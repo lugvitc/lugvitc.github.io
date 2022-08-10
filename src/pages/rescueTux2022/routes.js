@@ -9,11 +9,12 @@ export default function RescueTux2022Routes() {
         <Routes>
             <Route index element={<HomePage />} />
             <Route path='/register' element={<Registration />} />
-            <Route path='/make-team' element={<TeamRegistration />} />
+            {/* <Route path='/make-team' element={<<TeamRegistration />>} />
             <Route path='/login' element={<Login />} />
             <Route path='/play' element={<div>play</div>} />
             <Route path='/play/my-team' element={<div>my team</div>} />
-            <Route path='/play/leaderboard' element={<div>leaderboard</div>} />
+            <Route path='/play/leaderboard' element={<div>leaderboard</div>} /> */}
         </Routes>
     );
 }
+
