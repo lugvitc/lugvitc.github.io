@@ -29,7 +29,6 @@ export default function TeamRegistration() {
             if (!teamValues.member3RegNo) delete teamValues['member3RegNo'];
             const res = await apiPost('/rt22/create-team', teamValues);
             if (res.ok) {
-                window.alert(JSON.stringify(teamValues));
                 navigate('/rescue-tux/login');
             }
         }
@@ -43,8 +42,8 @@ export default function TeamRegistration() {
         <TerminalWindow
             title='Form your team'
             prompts={[
-                { path: '~/rescue-tux', command: 'cd ./make-team' },
-                { path: '~/rescue-tux/make-team', command: './make-team' }
+                { path: '~/rescue-tux', command: 'cd ./create-team' },
+                { path: '~/rescue-tux/make-team', command: './create-team' }
             ]}
         >
             <form className='lug-form' onSubmit={submit}>
