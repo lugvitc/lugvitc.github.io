@@ -63,7 +63,7 @@ export default function TeamRegistration() {
                     <label> * Group Password: </label>
                     <input
                         type='password'
-                        maxLength='16'
+                        maxLength='64'
                         onChange={handleChange('password')}
                         value={teamValues.password}
                     />
@@ -74,6 +74,7 @@ export default function TeamRegistration() {
                     <input
                         type='text'
                         maxLength='9'
+                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member1RegNo')}
                         value={teamValues.member1RegNo}
                     />
@@ -84,6 +85,7 @@ export default function TeamRegistration() {
                     <input
                         type='text'
                         maxLength='9'
+                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member2RegNo')}
                         value={teamValues.member2RegNo}
                     />
@@ -94,6 +96,7 @@ export default function TeamRegistration() {
                     <input
                         type='text'
                         maxLength='9'
+                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member3RegNo')}
                         value={teamValues.member3RegNo}
                     />
