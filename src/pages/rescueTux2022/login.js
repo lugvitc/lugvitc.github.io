@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TerminalWindow from '../../components/terminal/terminalWindow';
+import useFetch from '../../hooks/useFetch';
 
 export default function Login() {
     const [loginValues, setLoginValues] = useState({
-        groupName: '',
+        name: '',
         password: ''
     });
 
@@ -13,19 +14,20 @@ export default function Login() {
     };
 
     const navigate = useNavigate();
+    const {apiPost} = useFetch();
 
     const submit = async e => {
         e.preventDefault();
-        if (!loginValues.groupName || !loginValues.password) {
+        if (!loginValues.name || !loginValues.password) {
             alert('Please fill out all the fields');
         } else {
-            // const res = await fetch(');
-            // if (res.ok) {
-            window.alert(`${loginValues.groupName} ${loginValues.password}`);
-            navigate('/rescue-tux/play');
-            // } else {
-            // window.alert('try again');
-            // }
+            const res = await apiPost('/rt22/team-login', loginValues);
+            if (res.ok) {
+                // set csrf token here
+                navigate('/rescue-tux/play');
+            } else {
+                window.alert('There was an error');
+            }
         }
     };
 
@@ -46,8 +48,8 @@ export default function Login() {
                     <input
                         type='text'
                         maxLength='128'
-                        onChange={handleChange('groupName')}
-                        value={loginValues.groupName}
+                        onChange={handleChange('name')}
+                        value={loginValues.name}
                     />
                 </div>
 
