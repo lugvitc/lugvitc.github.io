@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TerminalWindow from '../../../../components/terminal/terminalWindow';
 import styles from './ChallengeModal.module.css';
 
@@ -20,6 +20,19 @@ function ChallengeModal({
             modalRef.current.close();
         }
     }
+
+    useEffect(() => {
+        const closeIfClickedOutside = e => {
+            if (questionModalOpen && e.target === modalRef.current) {
+                closeQuestionModal();
+                setQuestionModalOpen(false);
+            }
+        };
+        window.addEventListener('click', closeIfClickedOutside);
+        return () => {
+            window.removeEventListener('click', closeIfClickedOutside);
+        };
+    }, [modalRef, questionModalOpen, closeQuestionModal]);
 
     return (
         <dialog ref={modalRef} open={false} className={styles.modal}>
