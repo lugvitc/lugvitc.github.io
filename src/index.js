@@ -10,9 +10,7 @@ import App from './App';
 import Home from './pages/home';
 import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
-import EscapeHunt from './pages/escapeHunt/escapeHunt';
 // import UserForm from './pages/recruitment_2022/recruitment';
-// import RescueTheTux from './pages/rescueTheTux/home';
 import RescueTux2022Routes from './pages/rescueTux2022/routes';
 
 const pages = [
