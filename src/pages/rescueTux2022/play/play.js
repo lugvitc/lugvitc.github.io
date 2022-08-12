@@ -16,14 +16,14 @@ export default function Play() {
             points: 5
         },
         {
-            id: 1,
+            id: 2,
             name: 'Secrets Galore',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             points: 5
         },
         {
-            id: 1,
+            id: 3,
             name: 'Where is it?',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

@@ -1,42 +1,27 @@
-import React, { useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './Card.module.css';
-import QuestionModal from '../challengeModal/QuestionModal';
+import ChallengeModal from '../challengeModal/ChallengeModal';
 
-function Card({ challenge }) {
-    const [questionClicked, setQuestionClicked] = useState(false);
-    const [questionSolved, setQuestionSolved] = useState(false);
-    const [solvedCount, setSolvedCount] = useState(10);
+export default function Card({ challenge }) {
+    const [questionModalOpen, setQuestionModalOpen] = useState(false);
+    const modalRef = useRef(null);
 
-    function solvedHandler() {
-        setQuestionSolved(true);
-        // scoredPoints(challenge.q, challenge.points);
-        setSolvedCount(prevCount => prevCount++);
-    }
-    function questionClickedHandler() {
-        // event.preventDefault();
-        setQuestionClicked(!questionClicked);
+    function openQuestionModal() {
+        if (modalRef.current) {
+            setQuestionModalOpen(true);
+            modalRef.current.showModal();
+        }
     }
 
     return (
         <>
-            {/* {questionClicked && (
-                // <QuestionModal
-                //     q={q}
-                //     points={points}
-                //     title={title}
-                //     tag={tag}
-                //     description={description}
-                //     hint1={hint1}
-                //     hint2={hint2}
-                //     hint3={hint3}
-                //     color={color}
-                //     answer={answer}
-                //     questionClickedHandler={questionClickedHandler}
-                //     solvedHandler={solvedHandler}
-                // />
-            )} */}
-
-            <div className={`${styles.card} `} onClick={questionClickedHandler}>
+            <ChallengeModal
+                challenge={challenge}
+                modalRef={modalRef}
+                questionModalOpen={questionModalOpen}
+                setQuestionModalOpen={setQuestionModalOpen}
+            />
+            <div className={`${styles.card} `} onClick={openQuestionModal}>
                 <div className={styles.header}>
                     <h2>{challenge.name}</h2>
                     <div>Points | {challenge.points}</div>
@@ -46,6 +31,4 @@ function Card({ challenge }) {
         </>
     );
 }
-
-export default Card;
 
