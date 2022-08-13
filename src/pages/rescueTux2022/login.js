@@ -23,7 +23,8 @@ export default function Login() {
         } else {
             const res = await apiPost('/rt22/team-login', loginValues);
             if (res.ok) {
-                // set csrf token here
+                const data = await res.json()
+                window.localStorage.setItem('access-token', data.access_token);
                 navigate('/rescue-tux/play');
             } else {
                 window.alert('There was an error');
