@@ -45,7 +45,9 @@ function ChallengeModal({
                     <p>Points | {challenge.points}</p>
                 </div>
                 <div className={styles.grid}>
-                    <p>Description : {challenge.description}</p>
+                    <div className={styles.description}>
+                        Description : {challenge.description}
+                    </div>
                 </div>
                 <input
                     value={inputValue}

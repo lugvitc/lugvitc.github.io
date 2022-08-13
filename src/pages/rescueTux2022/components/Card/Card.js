@@ -21,12 +21,12 @@ export default function Card({ challenge }) {
                 questionModalOpen={questionModalOpen}
                 setQuestionModalOpen={setQuestionModalOpen}
             />
-            <div className={`${styles.card} `} onClick={openQuestionModal}>
+            <div className={styles.card} onClick={openQuestionModal}>
                 <div className={styles.header}>
                     <h2>{challenge.name}</h2>
                     <div>Points | {challenge.points}</div>
                 </div>
-                <div>{challenge.description}</div>
+                <div className={styles.description}>{challenge.description}</div>
             </div>
         </>
     );
