@@ -1,38 +1,25 @@
 import { useEffect, useState } from 'react';
 
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+import useFetch from '../../../hooks/useFetch';
 import Card from '../components/Card/Card';
 
 import styles from './play.module.css';
 
 export default function Play() {
     const [challenges, setChallenges] = useState(null);
-    const tempChallenges = [
-        {
-            id: 1,
-            name: 'A hidden secret',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            points: 5
-        },
-        {
-            id: 2,
-            name: 'Secrets Galore',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            points: 5
-        },
-        {
-            id: 3,
-            name: 'Where is it?',
-            description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            points: 5
-        }
-    ];
+
+    const { apiAsTeam } = useFetch();
+
+    const fetchChallenges = async () => {
+        const res = await apiAsTeam('/rt22/challenges');
+        const data = await res.json();
+        console.log(data);
+        setChallenges(data.challenges);
+    };
 
     useEffect(() => {
-        setChallenges(tempChallenges);
+        fetchChallenges();
     }, []);
 
     return (
@@ -54,9 +41,10 @@ export default function Play() {
                         </div>
                     </>
                 ) : (
-                    <>Connection Error :(</>
+                    <>loading ...</>
                 )}
             </section>
         </TerminalWindow>
     );
 }
+
