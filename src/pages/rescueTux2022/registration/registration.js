@@ -1,4 +1,5 @@
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+import TerminalPrompt from '../../../components/terminalPrompt/terminalPrompt';
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -115,14 +116,11 @@ export default function Registration() {
     return (
         <TerminalWindow
             title='Registration'
-            prompts={[
-                { path: '~/rescue-tux', command: 'cd ./register' },
-                {
-                    path: '~/rescue-tux/register',
-                    command: 'sudo ./registration --rt22'
-                }
-            ]}
         >
+	    <section id = "terminal">
+	    <TerminalPrompt path = "~/rescue-tux"> cd ./register </TerminalPrompt>
+	    <TerminalPrompt path = "~/rescue-tux/register"> sudo ./registration --rt22 </TerminalPrompt>
+	    </section>
             {registrationDone ? (
                 <>
                     Dear {window.localStorage.getItem('rt22-participant-name')},
