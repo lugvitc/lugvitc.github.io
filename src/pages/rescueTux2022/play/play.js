@@ -52,12 +52,20 @@ export default function Play() {
                         <h2>Challenges</h2>
                         <div className={styles.challenges}>
                             {challenges.map(c => (
-                                <Card key={c.id} challenge={c} />
+                                <Card
+                                    key={c.id}
+                                    challenge={c}
+                                    isSolved={
+                                        team
+                                            ? c.solvedBy.includes(team.name)
+                                            : false
+                                    }
+                                />
                             ))}
                         </div>
                     </>
                 ) : (
-                    <>loading ...</>
+                    <>loading challenges...</>
                 )}
             </section>
         </TerminalWindow>

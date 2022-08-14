@@ -7,7 +7,8 @@ function ChallengeModal({
     challenge,
     modalRef,
     questionModalOpen,
-    setQuestionModalOpen
+    setQuestionModalOpen,
+    isSolved
 }) {
     const [inputValue, setInputValue] = useState('');
 
@@ -55,6 +56,7 @@ function ChallengeModal({
                 title={challenge.name}
                 onClickRed={closeQuestionModal}
             >
+                {isSolved && 'done'}
                 <div className={styles.header}>
                     <h2>Challenge {challenge.name}</h2>
                     <p>Points | {challenge.points}</p>
