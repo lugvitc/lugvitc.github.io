@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import useFetch from '../../../hooks/useFetch';
+import useRT22Team from '../../../hooks/useRT22Team';
 import Card from '../components/Card/Card';
 
 import styles from './play.module.css';
@@ -10,6 +11,7 @@ export default function Play() {
     const [challenges, setChallenges] = useState(null);
 
     const { apiAsTeam } = useFetch();
+    const { team, fetchTeam } = useRT22Team();
 
     const fetchChallenges = async () => {
         const res = await apiAsTeam('/rt22/challenges');
@@ -20,6 +22,7 @@ export default function Play() {
 
     useEffect(() => {
         fetchChallenges();
+        fetchTeam();
     }, []);
 
     return (
@@ -28,8 +31,21 @@ export default function Play() {
             prompts={[{ path: '~/rescue-tux', command: './rescue-tux --play' }]}
         >
             <section id='team'>
-                <h2>Your Team</h2>
+                {team ? (
+                    <>
+                        <h2>Team: {team.name}</h2>
+                        <ul>
+                            {team.members.map(
+                                m => m.regNo && <li key={m.regNo}>{m.regNo}</li>
+                            )}
+                        </ul>
+                        <div>{team.currentPoints || 0} points</div>
+                    </>
+                ) : (
+                    <>loading team data...</>
+                )}
             </section>
+
             <section id='challenges'>
                 {challenges ? (
                     <>
