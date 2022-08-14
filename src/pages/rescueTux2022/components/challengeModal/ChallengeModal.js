@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import TerminalWindow from '../../../../components/terminal/terminalWindow';
 import styles from './ChallengeModal.module.css';
+import useFetch from '../../../../hooks/useFetch';
 
 function ChallengeModal({
     challenge,
@@ -18,8 +19,22 @@ function ChallengeModal({
         if (modalRef.current) {
             setQuestionModalOpen(false);
             modalRef.current.close();
+            setInputValue('');
         }
     }
+
+    const { apiPostAsTeam } = useFetch();
+
+    const submitFlag = async () => {
+        const res = await apiPostAsTeam('/rt22/submit-flag', {
+            flag: inputValue,
+            challenge_id: challenge.id
+        });
+        const data = await res.json();
+        if (data.valid) {
+            console.log('good!');
+        }
+    };
 
     useEffect(() => {
         const closeIfClickedOutside = e => {
@@ -54,7 +69,7 @@ function ChallengeModal({
                     onChange={inputChangeHandler}
                     className={styles.valid}
                 />
-                <button>Submit</button>
+                <button onClick={submitFlag}>Submit</button>
             </TerminalWindow>
         </dialog>
     );
