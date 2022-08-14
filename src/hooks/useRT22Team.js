@@ -9,11 +9,10 @@ const teamStore = create(set => ({
 export default function useRT22Team() {
     const { team, setTeam } = teamStore();
 
-    const { apiAsTeam } = useFetch();
+    const { apiPostGetJsonAsTeam } = useFetch();
 
     const fetchTeam = async () => {
-        const res = await apiAsTeam('/rt22/team');
-        const data = await res.json();
+        const data = await apiPostGetJsonAsTeam('/rt22/team');
         setTeam(data);
         console.log(data);
     };

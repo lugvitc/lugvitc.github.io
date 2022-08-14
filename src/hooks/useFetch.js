@@ -1,6 +1,6 @@
 export default function useFetch() {
-    const apiURL = 'https://backmagic.herokuapp.com/api';
-    // const apiURL = 'http://localhost:5000/api';
+    // const apiURL = 'https://backmagic.herokuapp.com/api';
+    const apiURL = 'http://localhost:5000/api';
 
     const api = (path, init) => fetch(apiURL + path, init);
 
@@ -15,27 +15,70 @@ export default function useFetch() {
 
     const accessToken = window.localStorage.getItem('access-token');
 
-    const apiAsTeam = path =>
-        api(path, {
+    const apiAsTeam = async path => {
+        const res = api(path, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
         });
+        const response = res.clone();
+        if (res.status !== 401) {
+            const data = await res.json();
+            if (data && data.access_token)
+                window.localStorage.setItem('access-token', data.access_token);
+        } else {
+            window.localStorage.setItem('access-token', '');
+        }
+        return response;
+    };
 
-    const apiPostAsTeam = (path, object) =>
-        api(path, {
+    const apiPostAsTeam = async (path, object) => {
+        const res = await api(path, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${accessToken}`
             },
             body: JSON.stringify(object)
         });
+        const response = res.clone();
+        if (res.status !== 401) {
+            const data = await res.json();
+            if (data && data.access_token)
+                window.localStorage.setItem('access-token', data.access_token);
+        } else {
+            window.localStorage.setItem('access-token', '');
+        }
+        return response;
+    };
+
+    const apiPostGetJsonAsTeam = async (path, object) => {
+        const res = await api(path, {
+            method: object ? 'POST' : 'GET',
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            },
+            body: object ? JSON.stringify(object) : undefined
+        });
+        if (res.status !== 401) {
+            const data = await res.json();
+            const ans = data;
+            if (data && data.access_token) {
+                window.localStorage.setItem('access-token', data.access_token);
+                delete ans['access_token'];
+                console.log(data);
+            }
+            return ans;
+        } else {
+            window.localStorage.setItem('access-token', '');
+        }
+    };
 
     return {
         api,
         apiPost,
         apiAsTeam,
-        apiPostAsTeam
+        apiPostAsTeam,
+        apiPostGetJsonAsTeam
     };
 }
 

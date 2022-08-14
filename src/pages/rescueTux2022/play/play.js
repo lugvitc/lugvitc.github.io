@@ -10,12 +10,11 @@ import styles from './play.module.css';
 export default function Play() {
     const [challenges, setChallenges] = useState(null);
 
-    const { apiAsTeam } = useFetch();
+    const { apiPostGetJsonAsTeam } = useFetch();
     const { team, fetchTeam } = useRT22Team();
 
     const fetchChallenges = async () => {
-        const res = await apiAsTeam('/rt22/challenges');
-        const data = await res.json();
+        const data = await apiPostGetJsonAsTeam('/rt22/challenges');
         console.log(data);
         setChallenges(data.challenges);
     };
