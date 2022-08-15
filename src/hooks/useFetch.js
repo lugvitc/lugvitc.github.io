@@ -13,12 +13,12 @@ export default function useFetch() {
             body: JSON.stringify(object)
         });
 
-    const accessToken = window.localStorage.getItem('access-token');
-
     const apiAsTeam = async path => {
         const res = api(path, {
             headers: {
-                Authorization: `Bearer ${accessToken}`
+                Authorization: `Bearer ${window.localStorage.getItem(
+                    'access-token'
+                )}`
             }
         });
         const response = res.clone();
@@ -36,12 +36,14 @@ export default function useFetch() {
         const res = await api(path, {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${accessToken}`
+                Authorization: `Bearer ${window.localStorage.getItem(
+                    'access-token'
+                )}`
             },
             body: JSON.stringify(object)
         });
         const response = res.clone();
-        if (res.status !== 401) {
+        if (res.ok) {
             const data = await res.json();
             if (data && data.access_token)
                 window.localStorage.setItem('access-token', data.access_token);
@@ -55,11 +57,13 @@ export default function useFetch() {
         const res = await api(path, {
             method: object ? 'POST' : 'GET',
             headers: {
-                Authorization: `Bearer ${accessToken}`
+                Authorization: `Bearer ${window.localStorage.getItem(
+                    'access-token'
+                )}`
             },
             body: object ? JSON.stringify(object) : undefined
         });
-        if (res.status !== 401) {
+        if (res.ok) {
             const data = await res.json();
             const ans = data;
             if (data && data.access_token) {
