@@ -1,0 +1,52 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--nord3);
+    border-radius: 0.5rem;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.card > * {
+    padding: 1rem;
+}
+
+.card:nth-child(1) {
+    background-color: var(--nord14);
+    color: var(--nord0);
+}
+.card:nth-child(1) .position {
+    font-size: 3rem;
+}
+
+.card:nth-child(2) {
+    background-color: var(--nord10);
+}
+.card:nth-child(2) .position {
+    font-size: 2rem;
+}
+
+.position {
+    border-right: 1px solid var(--nord5);
+    display: flex;
+    align-items: center;
+}
+
+.teamData {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.points {
+    font-size: 2rem;
+}
