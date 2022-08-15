@@ -11,7 +11,7 @@ export default function Play() {
     const [challenges, setChallenges] = useState(null);
 
     const { apiPostGetJsonAsTeam } = useFetch();
-    const { team, fetchTeam } = useRT22Team();
+    const { team, logoutTeam } = useRT22Team();
 
     const fetchChallenges = async () => {
         const data = await apiPostGetJsonAsTeam('/rt22/challenges');
@@ -21,7 +21,6 @@ export default function Play() {
 
     useEffect(() => {
         fetchChallenges();
-        fetchTeam();
     }, []);
 
     return (
@@ -34,15 +33,20 @@ export default function Play() {
                     <>
                         <h2>Team: {team.name}</h2>
                         <ul>
-                            {team.members.map(
-                                m => m.regNo && <li key={m.regNo}>{m.regNo}</li>
-                            )}
+                            {team.members &&
+                                team.members.map(
+                                    m =>
+                                        m.regNo && (
+                                            <li key={m.regNo}>{m.regNo}</li>
+                                        )
+                                )}
                         </ul>
                         <div>{team.currentPoints || 0} points</div>
                     </>
                 ) : (
                     <>loading team data...</>
                 )}
+                <button onClick={logoutTeam}>Logout</button>
             </section>
 
             <section id='challenges'>
