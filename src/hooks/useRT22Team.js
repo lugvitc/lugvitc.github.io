@@ -9,16 +9,22 @@ const teamStore = create(set => ({
 export default function useRT22Team() {
     const { team, setTeam } = teamStore();
 
-    const { apiPostGetJsonAsTeam } = useFetch();
+    const { apiPostGetJsonAsTeam, apiAsTeam } = useFetch();
 
     const fetchTeam = async () => {
         const data = await apiPostGetJsonAsTeam('/rt22/team');
         setTeam(data);
-        console.log(data);
+    };
+
+    const logoutTeam = () => {
+        // apiAsTeam('/rt22/logout');
+        window.localStorage.setItem('access-token', '');
+        setTeam(null);
     };
 
     return {
         team,
-        fetchTeam
+        fetchTeam,
+        logoutTeam
     };
 }
