@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import useFetch from '../../hooks/useFetch';
+import useRT22Team from '../../hooks/useRT22Team';
 
 export default function Login() {
     const [loginValues, setLoginValues] = useState({
@@ -14,7 +15,8 @@ export default function Login() {
     };
 
     const navigate = useNavigate();
-    const {apiPost} = useFetch();
+    const { apiPost } = useFetch();
+    const { fetchTeam } = useRT22Team();
 
     const submit = async e => {
         e.preventDefault();
@@ -23,8 +25,9 @@ export default function Login() {
         } else {
             const res = await apiPost('/rt22/team-login', loginValues);
             if (res.ok) {
-                const data = await res.json()
+                const data = await res.json();
                 window.localStorage.setItem('access-token', data.access_token);
+                await fetchTeam();
                 navigate('/rescue-tux/play');
             } else {
                 window.alert('There was an error');
