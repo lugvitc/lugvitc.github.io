@@ -1,5 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import Challenges from '../rescueTheTux/challenges';
+import LoggedInRoute from './components/LoggedInRoute';
 import HomePage from './homePage/homePage';
 import Login from './login';
 import Play from './play/play';
@@ -13,8 +14,20 @@ export default function RescueTux2022Routes() {
             <Route path='/register' element={<Registration />} />
             <Route path='/create-team' element={<TeamRegistration />} />
             <Route path='/login' element={<Login />} />
-            <Route path='/play' element={<Play />} />
-            <Route path='/challenges' element={<Challenges />} />
+            <Route
+                path='/play'
+                element={
+                    <LoggedInRoute>
+                        <Outlet />
+                    </LoggedInRoute>
+                }
+            >
+                <Route index element={<Play />} />
+                <Route
+                    path='/play/leaderboard'
+                    element={<div>leaderboard</div>}
+                />
+            </Route>
             {/* <Route path='/play/my-team' element={<div>my team</div>} />
             <Route path='/play/leaderboard' element={<div>leaderboard</div>} /> */}
         </Routes>
