@@ -11,6 +11,18 @@ import styles from './registration.module.css';
 import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
 export default function Registration() {
+	return (
+		<div>
+	<TerminalWindow
+            title='Registration'
+        >
+	    <section id = "terminal">
+	    <TerminalPrompt path = "~/rescue-tux"> cd ./register </TerminalPrompt>
+	    <TerminalPrompt path = "~/rescue-tux/register"> sudo ./registration --rt22 </TerminalPrompt>
+	    </section>
+		Registrations closed!! Thank you for your interest!! See you on 18th August, Netaji Auditorium :)
+	    </TerminalWindow></div>
+	);
     const [registrationDone, setRegistrationDone] = useState(
         window.localStorage.getItem('rt22-registration-done') === 'true'
     );
