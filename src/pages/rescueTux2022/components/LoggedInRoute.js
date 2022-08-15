@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import TerminalWindow from '../../../components/terminal/terminalWindow';
 import useRT22Team from '../../../hooks/useRT22Team';
 import Login from '../login';
 
@@ -15,6 +16,9 @@ export default function LoggedInRoute({ children }) {
         checkTeam();
     }, [team]);
 
-    if (team) return children;
-    else return <Login />;
+    if (!isPossibleValidToken) return <Login />;
+    else if (!team) {
+        return <TerminalWindow title='Login'>Logging you in...</TerminalWindow>;
+    } else return children;
 }
+
