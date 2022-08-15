@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import useFetch from '../../../hooks/useFetch';
@@ -15,7 +16,6 @@ export default function Play() {
 
     const fetchChallenges = async () => {
         const data = await apiPostGetJsonAsTeam('/rt22/challenges');
-        console.log(data);
         setChallenges(data.challenges);
     };
 
@@ -47,6 +47,11 @@ export default function Play() {
                     <>loading team data...</>
                 )}
                 <button onClick={logoutTeam}>Logout</button>
+                <button>
+                    <NavLink to='/rescue-tux/play/leaderboard'>
+                        Leaderboard
+                    </NavLink>
+                </button>
             </section>
 
             <section id='challenges'>
