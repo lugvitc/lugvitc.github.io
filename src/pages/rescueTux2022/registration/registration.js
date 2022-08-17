@@ -11,7 +11,8 @@ import styles from './registration.module.css';
 import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
 export default function Registration() {
-	return (
+	//Uncomment to stop the registrations!
+	/*return (
 		<div>
 	<TerminalWindow
             title='Registration'
@@ -22,7 +23,7 @@ export default function Registration() {
 	    </section>
 		Registrations closed!! Thank you for your interest!! See you on 18th August, Netaji Auditorium :)
 	    </TerminalWindow></div>
-	);
+	);*/
     const [registrationDone, setRegistrationDone] = useState(
         window.localStorage.getItem('rt22-registration-done') === 'true'
     );
