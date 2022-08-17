@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.08a712ad.css",
-    "main.js": "/static/js/main.f0e9de55.js",
+    "main.js": "/static/js/main.91de603b.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
     "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
@@ -13,10 +13,10 @@
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
     "main.08a712ad.css.map": "/static/css/main.08a712ad.css.map",
-    "main.f0e9de55.js.map": "/static/js/main.f0e9de55.js.map"
+    "main.91de603b.js.map": "/static/js/main.91de603b.js.map"
   },
   "entrypoints": [
     "static/css/main.08a712ad.css",
-    "static/js/main.f0e9de55.js"
+    "static/js/main.91de603b.js"
   ]
 }
