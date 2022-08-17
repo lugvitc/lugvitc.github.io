@@ -1,4 +1,5 @@
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+import TerminalPrompt from '../../../components/terminalPrompt/terminalPrompt';
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +11,19 @@ import styles from './registration.module.css';
 import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
 export default function Registration() {
+	//Uncomment to stop the registrations!
+	/*return (
+		<div>
+	<TerminalWindow
+            title='Registration'
+        >
+	    <section id = "terminal">
+	    <TerminalPrompt path = "~/rescue-tux"> cd ./register </TerminalPrompt>
+	    <TerminalPrompt path = "~/rescue-tux/register"> sudo ./registration --rt22 </TerminalPrompt>
+	    </section>
+		Registrations closed!! Thank you for your interest!! See you on 18th August, Netaji Auditorium :)
+	    </TerminalWindow></div>
+	);*/
     const [registrationDone, setRegistrationDone] = useState(
         window.localStorage.getItem('rt22-registration-done') === 'true'
     );
@@ -115,19 +129,16 @@ export default function Registration() {
     return (
         <TerminalWindow
             title='Registration'
-            prompts={[
-                { path: '~/rescue-tux', command: 'cd ./register' },
-                {
-                    path: '~/rescue-tux/register',
-                    command: 'sudo ./registration --rt22'
-                }
-            ]}
         >
+	    <section id = "terminal">
+	    <TerminalPrompt path = "~/rescue-tux"> cd ./register </TerminalPrompt>
+	    <TerminalPrompt path = "~/rescue-tux/register"> sudo ./registration --rt22 </TerminalPrompt>
+	    </section>
             {registrationDone ? (
                 <>
                     Dear {window.localStorage.getItem('rt22-participant-name')},
                     Thanks for registering for our event! See you soon on the
-                    18th of August! :)
+                    21th of August! :)
                 </>
             ) : (
                 <form className='lug-form' onSubmit={submitForm}>

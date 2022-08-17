@@ -1,19 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import TerminalWindow from '../../../components/terminal/terminalWindow';
+import TerminalPrompt from '../../../components/terminalPrompt/terminalPrompt';
+
 import styles from './homePage.module.css';
 
 export default function HomePage() {
     return (
         <TerminalWindow
             title='Rescue Tux'
-            prompts={[
-                { path: '~', command: 'cd rescue-tux' },
-                {
-                    path: '~/rescue-tux',
-                    command: './rescue-tux --play'
-                }
-            ]}
-        >
+	>
+	    <section id = "terminal">
+	    <TerminalPrompt path = "~"> cd rescue-tux </TerminalPrompt>
+	    <TerminalPrompt path = "~/rescue-tux"> ./rescue-tux --play </TerminalPrompt>
+	    </section>
             <div className={styles.welcomeText}>Welcome to...</div>
             <div className={styles.eventName}>Rescue Tux</div>
             <div className={styles.subtitle}>
