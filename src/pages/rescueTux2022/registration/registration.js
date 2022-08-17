@@ -138,7 +138,7 @@ export default function Registration() {
                 <>
                     Dear {window.localStorage.getItem('rt22-participant-name')},
                     Thanks for registering for our event! See you soon on the
-                    18th of August! :)
+                    21th of August! :)
                 </>
             ) : (
                 <form className='lug-form' onSubmit={submitForm}>
