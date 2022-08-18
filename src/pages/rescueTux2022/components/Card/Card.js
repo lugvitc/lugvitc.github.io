@@ -30,7 +30,7 @@ export default function Card({ challenge, isSolved }) {
                     <div>Points | {challenge.points}</div>
                 </div>
                 <div className={styles.description}>
-                    <ReactMarkdowns>{challenge.description}</ReactMarkdown>
+                    <ReactMarkdown>{challenge.description}</ReactMarkdown>
                 </div>
             </div>
         </>

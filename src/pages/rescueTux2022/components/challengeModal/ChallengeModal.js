@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import TerminalWindow from '../../../../components/terminal/terminalWindow';
 import styles from './ChallengeModal.module.css';
 import useFetch from '../../../../hooks/useFetch';
+import ReactMarkdown from 'react-markdown';
 
 function ChallengeModal({
     challenge,
@@ -63,7 +64,7 @@ function ChallengeModal({
                 </div>
                 <div className={styles.grid}>
                     <div className={styles.description}>
-                        Description : {challenge.description}
+                        <ReactMarkdown>{challenge.description}</ReactMarkdown>
                     </div>
                 </div>
                 <input
