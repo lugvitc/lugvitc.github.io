@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import styles from './Card.module.css';
 import ChallengeModal from '../challengeModal/ChallengeModal';
+import ReactMarkdown from 'react-markdown';
 
 export default function Card({ challenge, isSolved }) {
     const [questionModalOpen, setQuestionModalOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Card({ challenge, isSolved }) {
                     <div>Points | {challenge.points}</div>
                 </div>
                 <div className={styles.description}>
-                    {challenge.description}
+                    <ReactMarkdowns>{challenge.description}</ReactMarkdown>
                 </div>
             </div>
         </>
