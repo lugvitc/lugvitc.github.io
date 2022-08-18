@@ -64,7 +64,19 @@ function ChallengeModal({
                 </div>
                 <div className={styles.grid}>
                     <div className={styles.description}>
-                        <ReactMarkdown>{challenge.description}</ReactMarkdown>
+                        <ReactMarkdown
+                            components={{
+                                a: props => (
+                                    <a
+                                        {...props}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                    />
+                                )
+                            }}
+                        >
+                            {challenge.description}
+                        </ReactMarkdown>
                     </div>
                 </div>
                 <input
