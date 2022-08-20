@@ -5,6 +5,13 @@
     border-radius: 0.5rem;
     cursor: pointer;
 }
+
+.solved {
+    cursor: arrow;
+    background-color: var(--nord14);
+    color: var(--header-footer-black);
+}
+
 .header {
     display: flex;
     justify-content: space-between;

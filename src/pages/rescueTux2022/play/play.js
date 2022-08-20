@@ -23,6 +23,10 @@ export default function Play() {
         fetchChallenges();
     }, []);
 
+    const qWasCorrect = () => {
+        fetchChallenges();
+    };
+
     return (
         <TerminalWindow
             title='Play'
@@ -68,6 +72,7 @@ export default function Play() {
                                             ? c.solvedBy.includes(team.name)
                                             : false
                                     }
+                                    qWasCorrect={qWasCorrect}
                                 />
                             ))}
                         </div>

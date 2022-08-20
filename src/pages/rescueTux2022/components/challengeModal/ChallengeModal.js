@@ -9,7 +9,8 @@ function ChallengeModal({
     modalRef,
     questionModalOpen,
     setQuestionModalOpen,
-    isSolved
+    isSolved,
+    qWasCorrect
 }) {
     const [inputValue, setInputValue] = useState('');
 
@@ -32,9 +33,19 @@ function ChallengeModal({
             flag: inputValue,
             challenge_id: challenge.id
         });
-        const data = await res.json();
-        if (data.valid) {
-            console.log('good!');
+        try {
+            const data = await res.json();
+            if (data.valid) {
+                console.log('good!');
+                setQuestionModalOpen(false);
+                qWasCorrect();
+            } else {
+                alert('error');
+                setQuestionModalOpen(false);
+            }
+        } catch {
+            alert('error');
+            setQuestionModalOpen(false);
         }
     };
 
