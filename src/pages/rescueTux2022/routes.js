@@ -1,5 +1,4 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
-import Challenges from '../rescueTheTux/challenges';
 import LoggedInRoute from './components/LoggedInRoute';
 import HomePage from './homePage/homePage';
 import Leaderboard from './leaderboard/leaderboard';
@@ -26,8 +25,6 @@ export default function RescueTux2022Routes() {
                 <Route index element={<Play />} />
                 <Route path='/play/leaderboard' element={<Leaderboard />} />
             </Route>
-            {/* <Route path='/play/my-team' element={<div>my team</div>} />
-            <Route path='/play/leaderboard' element={<div>leaderboard</div>} /> */}
         </Routes>
     );
 }
