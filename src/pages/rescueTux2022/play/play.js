@@ -12,7 +12,7 @@ export default function Play() {
     const [challenges, setChallenges] = useState(null);
 
     const { apiPostGetJsonAsTeam } = useFetch();
-    const { team, logoutTeam } = useRT22Team();
+    const { team, logoutTeam, fetchTeam } = useRT22Team();
 
     const fetchChallenges = async () => {
         const data = await apiPostGetJsonAsTeam('/rt22/challenges');
@@ -25,6 +25,7 @@ export default function Play() {
 
     const qWasCorrect = () => {
         fetchChallenges();
+        fetchTeam();
     };
 
     return (
