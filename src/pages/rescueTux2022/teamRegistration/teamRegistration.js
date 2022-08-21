@@ -15,7 +15,7 @@ export default function TeamRegistration() {
         password: ''
     });
 
-    const [regNosAreValid, setRegNosAreValid] = useState({
+    const [teamValuesAreValid, setTeamValuesAreValid] = useState({
         member1RegNo: false,
         member2RegNo: false,
         member3RegNo: false
@@ -25,21 +25,24 @@ export default function TeamRegistration() {
     const { apiPost } = useFetch();
 
     useEffect(() => {
-        const verify = async regno => {
+        const verifyRegNo = async (regno, endpoint) => {
             if (teamValues[regno] && teamValues.member1RegNo.length === 9) {
-                const res = await apiPost('/rt22/verify-duplicate-regno', {
+                const res = await apiPost(endpoint, {
                     regno: teamValues.member1RegNo
                 });
                 const data = await res.json();
                 if (data.valid) {
-                    setRegNosAreValid({ ...regNosAreValid, [regno]: true });
-                    console.log({ regno: true });
+                    setTeamValuesAreValid({
+                        ...teamValuesAreValid,
+                        [regno]: true
+                    });
                 }
             }
         };
-        verify('member1RegNo');
-        verify('member2RegNo');
-        verify('member3RegNo');
+
+        verifyRegNo('member1RegNo', '/rt22/verify-duplicate-regno');
+        verifyRegNo('member2RegNo', '/rt22/verify-duplicate-regno');
+        verifyRegNo('member3RegNo', '/rt22/verify-duplicate-regno');
     }, [
         teamValues.member1RegNo,
         teamValues.member2RegNo,
@@ -57,9 +60,19 @@ export default function TeamRegistration() {
         } else {
             if (!teamValues.member2RegNo) delete teamValues['member2RegNo'];
             if (!teamValues.member3RegNo) delete teamValues['member3RegNo'];
-            const res = await apiPost('/rt22/create-team', teamValues);
-            if (res.ok) {
-                navigate('/rescue-tux/login');
+
+            const r1 = await apiPost('/rt22/verify-team-name', {
+                name: teamValues.name
+            });
+            const d1 = await r1.json();
+
+            if (d1.valid) {
+                const res = await apiPost('/rt22/create-team', teamValues);
+                if (res.ok) {
+                    navigate('/rescue-tux/login');
+                }
+            } else {
+                alert('team name already taken');
             }
         }
     };
@@ -86,9 +99,6 @@ export default function TeamRegistration() {
                         maxLength='128'
                         onChange={handleChange('name')}
                         value={teamValues.name}
-                        className={
-                            teamValues.name ? styles.valid : styles.invalid
-                        }
                     />
                 </div>
 
@@ -99,9 +109,6 @@ export default function TeamRegistration() {
                         maxLength='64'
                         onChange={handleChange('password')}
                         value={teamValues.password}
-                        className={
-                            teamValues.password ? styles.valid : styles.invalid
-                        }
                     />
                 </div>
 
@@ -115,12 +122,11 @@ export default function TeamRegistration() {
                         value={teamValues.member1RegNo}
                         className={
                             teamValues.member1RegNo &&
-                            regNosAreValid.member1RegNo
+                            teamValuesAreValid.member1RegNo
                                 ? styles.valid
                                 : styles.invalid
                         }
                     />
-                    {regNosAreValid['member1RegNo'] && <>valid</>}
                 </div>
 
                 <div className='form-field'>
@@ -133,7 +139,7 @@ export default function TeamRegistration() {
                         value={teamValues.member2RegNo}
                         className={
                             teamValues.member2RegNo
-                                ? regNosAreValid.member2RegNo
+                                ? teamValuesAreValid.member2RegNo
                                     ? styles.valid
                                     : styles.invalid
                                 : ''
@@ -151,7 +157,7 @@ export default function TeamRegistration() {
                         value={teamValues.member3RegNo}
                         className={
                             teamValues.member3RegNo
-                                ? regNosAreValid.member3RegNo
+                                ? teamValuesAreValid.member3RegNo
                                     ? styles.valid
                                     : styles.invalid
                                 : ''
