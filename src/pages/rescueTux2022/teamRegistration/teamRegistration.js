@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import TerminalWindow from '../../../components/terminal/terminalWindow';
 import useFetch from '../../../hooks/useFetch';
+
+import styles from './teamRegistration.module.css';
 
 export default function TeamRegistration() {
     const [teamValues, setTeamValues] = useState({
@@ -13,8 +15,36 @@ export default function TeamRegistration() {
         password: ''
     });
 
+    const [regNosAreValid, setRegNosAreValid] = useState({
+        member1RegNo: false,
+        member2RegNo: false,
+        member3RegNo: false
+    });
+
     const navigate = useNavigate();
     const { apiPost } = useFetch();
+
+    useEffect(() => {
+        const verify = async regno => {
+            if (teamValues[regno] && teamValues.member1RegNo.length === 9) {
+                const res = await apiPost('/rt22/verify-duplicate-regno', {
+                    regno: teamValues.member1RegNo
+                });
+                const data = await res.json();
+                if (data.valid) {
+                    setRegNosAreValid({ ...regNosAreValid, [regno]: true });
+                    console.log({ regno: true });
+                }
+            }
+        };
+        verify('member1RegNo');
+        verify('member2RegNo');
+        verify('member3RegNo');
+    }, [
+        teamValues.member1RegNo,
+        teamValues.member2RegNo,
+        teamValues.member3RegNo
+    ]);
 
     const submit = async e => {
         e.preventDefault();
@@ -56,6 +86,9 @@ export default function TeamRegistration() {
                         maxLength='128'
                         onChange={handleChange('name')}
                         value={teamValues.name}
+                        className={
+                            teamValues.name ? styles.valid : styles.invalid
+                        }
                     />
                 </div>
 
@@ -66,6 +99,9 @@ export default function TeamRegistration() {
                         maxLength='64'
                         onChange={handleChange('password')}
                         value={teamValues.password}
+                        className={
+                            teamValues.password ? styles.valid : styles.invalid
+                        }
                     />
                 </div>
 
@@ -77,7 +113,14 @@ export default function TeamRegistration() {
                         pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member1RegNo')}
                         value={teamValues.member1RegNo}
+                        className={
+                            teamValues.member1RegNo &&
+                            regNosAreValid.member1RegNo
+                                ? styles.valid
+                                : styles.invalid
+                        }
                     />
+                    {regNosAreValid['member1RegNo'] && <>valid</>}
                 </div>
 
                 <div className='form-field'>
@@ -88,6 +131,13 @@ export default function TeamRegistration() {
                         pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member2RegNo')}
                         value={teamValues.member2RegNo}
+                        className={
+                            teamValues.member2RegNo
+                                ? regNosAreValid.member2RegNo
+                                    ? styles.valid
+                                    : styles.invalid
+                                : ''
+                        }
                     />
                 </div>
 
@@ -99,6 +149,13 @@ export default function TeamRegistration() {
                         pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member3RegNo')}
                         value={teamValues.member3RegNo}
+                        className={
+                            teamValues.member3RegNo
+                                ? regNosAreValid.member3RegNo
+                                    ? styles.valid
+                                    : styles.invalid
+                                : ''
+                        }
                     />
                 </div>
 
