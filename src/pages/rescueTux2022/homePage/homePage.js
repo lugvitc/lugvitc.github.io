@@ -6,13 +6,13 @@ import styles from './homePage.module.css';
 
 export default function HomePage() {
     return (
-        <TerminalWindow
-            title='Rescue Tux'
-	>
-	    <section id = "terminal">
-	    <TerminalPrompt path = "~"> cd rescue-tux </TerminalPrompt>
-	    <TerminalPrompt path = "~/rescue-tux"> ./rescue-tux --play </TerminalPrompt>
-	    </section>
+        <TerminalWindow title='Rescue Tux'>
+            <section id='terminal'>
+                <TerminalPrompt path='~'> cd rescue-tux </TerminalPrompt>
+                <TerminalPrompt path='~/rescue-tux'>
+                    ./rescue-tux --play
+                </TerminalPrompt>
+            </section>
             <div className={styles.welcomeText}>Welcome to...</div>
             <div className={styles.eventName}>Rescue Tux</div>
             <div className={styles.subtitle}>
@@ -21,8 +21,12 @@ export default function HomePage() {
             </div>
 
             <div className={styles.buttons}>
-                <NavLink className={styles.button} to='/rescue-tux/register'>
-                    Register Now!
+                <NavLink className={styles.button} to='/rescue-tux/create-team'>
+                    Create Team
+                </NavLink>
+                <br />
+                <NavLink className={styles.button} to='/rescue-tux/play'>
+                    Play
                 </NavLink>
             </div>
 

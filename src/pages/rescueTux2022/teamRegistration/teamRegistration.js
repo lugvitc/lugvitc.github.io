@@ -66,7 +66,16 @@ export default function TeamRegistration() {
             });
             const d1 = await r1.json();
 
-            if (d1.valid) {
+            if (
+                d1.valid &&
+                teamValuesAreValid.member1RegNo &&
+                (teamValues.member2RegNo
+                    ? teamValuesAreValid.member2RegNo
+                    : true) &&
+                (teamValues.member3RegNo
+                    ? teamValuesAreValid.member3RegNo
+                    : true)
+            ) {
                 const res = await apiPost('/rt22/create-team', teamValues);
                 if (res.ok) {
                     navigate('/rescue-tux/login');

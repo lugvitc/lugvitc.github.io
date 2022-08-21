@@ -11,7 +11,6 @@ export default function RescueTux2022Routes() {
     return (
         <Routes>
             <Route index element={<HomePage />} />
-            <Route path='/register' element={<Registration />} />
             <Route path='/create-team' element={<TeamRegistration />} />
             <Route path='/login' element={<Login />} />
             <Route

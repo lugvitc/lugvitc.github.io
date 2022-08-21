@@ -69,7 +69,6 @@ export default function useFetch() {
             if (data && data.access_token) {
                 window.localStorage.setItem('access-token', data.access_token);
                 delete ans['access_token'];
-                console.log(data);
             }
             return ans;
         } else {
