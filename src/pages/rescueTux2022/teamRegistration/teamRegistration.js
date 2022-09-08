@@ -24,7 +24,7 @@ export default function TeamRegistration() {
     const navigate = useNavigate();
     const { apiPost } = useFetch();
 
-    useEffect(() => {
+    /*useEffect(() => {
         const verifyRegNo = async (regno, endpoint) => {
             if (teamValues[regno] && teamValues.member1RegNo.length === 9) {
                 const res = await apiPost(endpoint, {
@@ -47,7 +47,7 @@ export default function TeamRegistration() {
         teamValues.member1RegNo,
         teamValues.member2RegNo,
         teamValues.member3RegNo
-    ]);
+    ]);*/
 
     const submit = async e => {
         e.preventDefault();
@@ -66,22 +66,24 @@ export default function TeamRegistration() {
             });
             const d1 = await r1.json();
 
-            if (
+            /*if (
                 d1.valid &&
-                teamValuesAreValid.member1RegNo &&
+                (teamValues.member1RegNoteamValuesAreValid.member1RegNo &&
                 (teamValues.member2RegNo
                     ? teamValuesAreValid.member2RegNo
                     : true) &&
                 (teamValues.member3RegNo
                     ? teamValuesAreValid.member3RegNo
                     : true)
-            ) {
+            )*/
+	    if (d1.valid)
+		{
                 const res = await apiPost('/rt22/create-team', teamValues);
                 if (res.ok) {
                     navigate('/rescue-tux/login');
                 }
             } else {
-                alert('team name already taken');
+                alert('team name already taken or registration numbers are not valid');
             }
         }
     };
