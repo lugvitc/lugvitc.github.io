@@ -10,7 +10,7 @@ import App from './App';
 import Home from './pages/home';
 import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
-// import UserForm from './pages/recruitment_2022/recruitment';
+import UserForm from './pages/recruitment_2022_v2/recruitment';
 import RescueTux2022Routes from './pages/rescueTux2022/routes';
 
 const pages = [
@@ -30,11 +30,16 @@ const pages = [
         component: <LearnLinux />
     },
     {
-        title: 'Rescue Tux',
-        link: '/rescue-tux',
-        path: '/rescue-tux/*',
-        component: <RescueTux2022Routes />
+	title: 'Recruitment 2022',
+	link: '/recruitment',
+	component: <UserForm />
     }
+    //{
+    //    title: 'Rescue Tux',
+    //    link: '/rescue-tux',
+    //    path: '/rescue-tux/*',
+    //    component: <RescueTux2022Routes />
+    //}
     //, {
     //     title: 'Recruitment 2022',
     //     link: '/recruitment',
