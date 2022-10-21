@@ -10,14 +10,14 @@ export default function Confirm({ nextStep, values, previousStep }) {
         // USE FLASK BACKEND HERE TO COLLECT ALL DATA
         let formData = values;
         delete formData['flagCommand'];
-        fetch('https://backmagic.herokuapp.com/api/recruitment', {
+        fetch('https://whale-app-7b3m2.ondigitalocean.app/api/recruitment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
         });
-        //console.log(formData)
+        console.log(formData)
         //console.log(result)
         nextStep();
     };
@@ -40,10 +40,6 @@ export default function Confirm({ nextStep, values, previousStep }) {
                     Contact Number : {values.contact}
                 </div>
                 <div className='form-field'>
-                    How would you describe Linux as shortly as possible :{' '}
-                    <p>{values.whatLinux}</p>
-                </div>
-                <div className='form-field'>
                     Why do you want to join the Linux Club :{' '}
                     <p>{values.whyLinux}</p>
                 </div>
@@ -52,8 +48,12 @@ export default function Confirm({ nextStep, values, previousStep }) {
                     distro? : <p>{values.expLinux}</p>
                 </div>
                 <div className='form-field'>
-                    Which Department interests you the most? : {values.prefDept}
+                    Department Preference 1 : {values.prefDept}
                 </div>
+	        <div className='form-field'>
+                    Department Preference 2 : {values.prefDept2}
+                </div>
+
                 <div className='form-end'>
                     <button className='form-nav-button prev' onClick={back}>
                         <FontAwesomeIcon icon={faAngleDoubleLeft} />
