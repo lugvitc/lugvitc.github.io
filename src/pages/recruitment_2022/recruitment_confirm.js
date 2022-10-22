@@ -26,7 +26,7 @@ export default function Confirm({ nextStep, values, previousStep }) {
         e.preventDefault();
         previousStep();
     };
-
+ 
     return (
         <TerminalWindow title='Confirm Submission'>
             <div className='lug-form'>
