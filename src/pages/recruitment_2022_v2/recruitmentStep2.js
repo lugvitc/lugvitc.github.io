@@ -90,6 +90,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech1')}
                         value={values.tech1}
+			placeholder='E.g. Cybersecurity, Web Development, App Development, AI etc.'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -98,6 +99,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech2')}
                         value={values.tech2}
+			placeholder='E.g. Metasploit, Kali Linux, ReactJS, NodeJS, Flask, Django, Flutter etc.'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -106,6 +108,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech3')}
                         value={values.tech3}
+			placeholder='E.g. https://github.com/user'
                     />
                    </div>
 		  </div>
@@ -118,6 +121,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('mang1')}
                         value={values.mang1}
+			placeholder='E.g. yes, I have marketed so and so event under this club'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -138,6 +142,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('ops1')}
                         value={values.ops1}
+			placeholder='E.G. yes, I have approached so and so sponsor for this event'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -159,6 +164,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('media1')}
                         value={values.media1}
+			placeholder='E.g, yes, I have experience with canva/figma. Designed a poster for so and so event'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -167,6 +173,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('media2')}
                         value={values.media2}
+			placeholder='E.g. canva design links, figma design links, gdrive links for photography'
                     />
                    </div>
 
@@ -181,6 +188,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('content1')}
                         value={values.content1}
+			placeholder='E.g. yes, I have covered captions/email body for so and so event under this club'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -189,6 +197,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('content2')}
                         value={values.content2}
+			placeholder='E.g. A text content with proper combination of simple words and complex phrases attracts the eyes'
                     />
                    </div>
 
@@ -210,7 +219,7 @@ export default function RecruitmentStepTwo({
                         onChange={handleChange('prefDept2')}
                     >
 	                <option value=' '>
-	    		    Select a Department
+	    		    Select a Department (Optional)
 	    		</option>
                         <option value='Technical Department'>
                             Technical Department
@@ -238,6 +247,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech1')}
                         value={values.tech1}
+			placeholder='E.g. Cybersecurity, Web Development, App Development, AI etc.'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -246,6 +256,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech2')}
                         value={values.tech2}
+			placeholder='E.g. Metasploit, Kali Linux, ReactJS, NodeJS, Flask, Django, Flutter etc.'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -254,6 +265,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('tech3')}
                         value={values.tech3}
+			placeholder='E.g. https://github.com/user'
                     />
                    </div>
 		  </div>
@@ -266,6 +278,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('mang1')}
                         value={values.mang1}
+			placeholder='E.g. yes, I have marketed so and so event under this club'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -286,6 +299,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('ops1')}
                         value={values.ops1}
+			placeholder='E.G. yes, I have approached so and so sponsor for this event'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -307,6 +321,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('media1')}
                         value={values.media1}
+			placeholder='E.g, yes, I have experience with canva/figma. Designed a poster for so and so event'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -315,6 +330,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('media2')}
                         value={values.media2}
+			placeholder='E.g. canva design links, figma design links, gdrive links for photography'
                     />
                    </div>
 
@@ -329,6 +345,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('content1')}
                         value={values.content1}
+			placeholder='E.g. yes, I have covered captions/email body for so and so event under this club'
                     />
                    </div>
 	           <div className='form-textarea'>
@@ -337,6 +354,7 @@ export default function RecruitmentStepTwo({
                         rows='6'
                         onChange={handleChange('content2')}
                         value={values.content2}
+			placeholder='E.g. A text content with proper combination of simple words and complex phrases attracts the eyes'
                     />
                    </div>
 
