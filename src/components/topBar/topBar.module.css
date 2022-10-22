@@ -1,154 +1,187 @@
 .index {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .contents {
-    background-color: var(--header-footer-black);
-    color: var(--nord4);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: small;
-    padding-inline: 0.5em;
+  background-color: var(--header-footer-black);
+  color: var(--nord4);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: small;
+  padding-inline: 0.5em;
 }
 
 .logo {
-    margin: 0.5em;
-    padding: 0.5em;
-    height: 2em;
-    width: 2em;
-    cursor: pointer;
-    border-radius: 100vmax;
-    background-color: var(--nord2);
+  /* margin: 0.5em;
+  padding: 0.5em;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  border-radius: 100vmax;
+  background-color: var(--nord2);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-right: auto;
 }
 
 .logo:hover {
-    background-color: var(--nord10);
+  background-color: var(--nord10);
 }
 
 .logo svg {
-    height: 2em;
+  height: 2em;
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
 }
 
 .settings {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .settings > svg {
-    fill: var(--nord3);
-    cursor: pointer;
+  fill: var(--nord3);
+  cursor: pointer;
 }
 
 .settings > svg:hover,
 .settings.open > svg {
-    fill: var(--nord10);
-    animation: spin 4s linear infinite;
+  fill: var(--nord10);
+  animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .nonClickable {
-    border-color: var(--nord2);
-    height: auto;
-    text-decoration: none;
-    color: var(--nord4);
-    background-color: var(--nord1);
-    border-radius: 0.3em;
-    padding-inline: 0.5em;
-    margin: 0.5em;
-    cursor: default;
+  border-color: var(--nord2);
+  height: auto;
+  text-decoration: none;
+  color: var(--nord4);
+  background-color: var(--nord1);
+  border-radius: 0.3em;
+  padding-inline: 0.5em;
+  margin: 0.5em;
+  cursor: default;
 }
 
 .clickable {
-    text-decoration: none;
-    color: var(--nord4);
+  text-decoration: none;
+  color: var(--nord4);
 }
 
 .clickable:hover {
-    transform: translateY(0.5em);
-    color: var(--nord10);
-    background-color: var(--nord0);
-    transition: ease-out 0.5s;
+  transform: translateY(0.5em);
+  color: var(--nord10);
+  background-color: var(--nord0);
+  transition: ease-out 0.5s;
 }
 
 .active {
-    transform: translateY(0.5em);
-    background-color: var(--nord0);
-    border-radius: 0.3em 0.3em 0 0;
-    padding-inline: 0.5em;
-    margin: 0.5em 0.5em 0 0.5em;
-    color: var(--nord10);
-    cursor: default;
+  transform: translateY(0.5em);
+  background-color: var(--nord0);
+  border-radius: 0.3em 0.3em 0 0;
+  padding-inline: 0.5em;
+  margin: 0.5em 0.5em 0 0.5em;
+  color: var(--nord10);
+  cursor: default;
 }
 
 .active::after {
-    content: ' ▲';
+  content: " ▲";
 }
 
 .inactive {
-    background-color: var(--nord1);
-    border-radius: 0.3em;
-    padding-inline: 0.5em;
-    margin: 0.5em;
+  background-color: var(--nord1);
+  border-radius: 0.3em;
+  padding-inline: 0.5em;
+  margin: 0.5em;
 }
 
 .inactive::after {
-    content: ' ▼';
+  content: " ▼";
 }
 
 .bottomStrip {
-    background-color: var(--nord0);
-    height: 0.2em;
+  background-color: var(--nord0);
+  height: 0.2em;
+}
+.hamburger {
+  display: none;
+  height: 2rem;
+  width: 2rem;
 }
 
 @media only screen and (max-width: 500px) {
-    .links {
-        flex-direction: column;
-    }
+  .links {
+    flex-direction: column;
 
-    .clickable:hover {
-        transform: translateX(0.5em);
-    }
+    /* transition: ease-in-out all 0.3s; */
+    /* display: none; */
+    /* visibility: hidden; */
+  }
+  .icons_media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents {
+    min-height: 3.6rem;
+  }
+  .hamburger {
+    padding-top: 0.25rem;
+    display: block;
+  }
+  .settings {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .linksVisible {
+    display: flex;
+  }
 
-    .active {
-        transform: translateY(0);
-        background-color: var(--nord0);
-        border-radius: 0.3em;
-        padding-inline: 0.5em;
-        margin: 0.5em;
-        color: var(--nord10);
-    }
+  .clickable:hover {
+    transform: translateX(0.5em);
+  }
 
-    .active::after {
-        content: '';
-    }
-    .inactive::after {
-        content: '';
-    }
+  .active {
+    transform: translateY(0);
+    background-color: var(--nord0);
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    margin: 0.5em;
+    color: var(--nord10);
+  }
 
-    .bottomStrip {
-        display: none;
-    }
+  .active::after {
+    content: "";
+  }
+  .inactive::after {
+    content: "";
+  }
+
+  .bottomStrip {
+    display: none;
+  }
 }
-
