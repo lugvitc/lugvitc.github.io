@@ -18,17 +18,17 @@ function RecruitmentStep() {
         prefDept: ' ',
 	prefDept2: ' ',
         flagCommand: '',
-	tech1: 'E.g. Cybersecurity, Web Development, App Development, AI etc.',
-	tech2: 'E.g. Metasploit, Kali Linux, ReactJS, NodeJS, Flask, Django, Flutter etc.',
-	tech3: 'E.g. https://github.com/user',
-	mang1: 'E.g. yes, I have marketed so and so event under this club',
+	tech1: '',
+	tech2: '',
+	tech3: '',
+	mang1: '',
 	mang2: '',
-	ops1: 'E.G. yes, I have approached so and so sponsor for this event',
+	ops1: '',
 	ops2: '',
-	media1: 'E.g, yes, I have experience with canva/figma. Designed a poster for so and so event',
-	media2: 'E.g. canva design links, figma design links, gdrive links for photography',
-	content1: 'E.g. yes, I have covered captions/email body for so and so event under this club',
-	content2: 'E.g. A text content with proper combination of simple words and complex phrases attracts the eyes'
+	media1: '',
+	media2: '',
+	content1: '',
+	content2: ''
     });
 
     //proceed to next step of form
