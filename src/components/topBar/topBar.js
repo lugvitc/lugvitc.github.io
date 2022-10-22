@@ -22,7 +22,7 @@ export default function TopBar({ refer, topBarLinks }) {
   return (
     <>
       <header ref={refer} className={`${styles.index} ${util.noSelection}`}>
-        <div className={styles.contents}>
+        <div className={`${styles.contents} ${onOpenState && styles.link}`}>
           <a
             className={styles.logo}
             href="https://linktr.ee/lugvitc"
@@ -32,9 +32,9 @@ export default function TopBar({ refer, topBarLinks }) {
             <Logo />
           </a>
           <nav
-            className={`${onOpenState && styles.links} ${
-              !onOpenState && styles.hide
-            } `}
+            className={`${styles.links} ${!onOpenState && styles.hide} ${
+              onOpenState && styles.link
+            }`}
           >
             {topBarLinks.map((nav, index) => (
               <NavLink
@@ -51,6 +51,7 @@ export default function TopBar({ refer, topBarLinks }) {
               </NavLink>
             ))}
           </nav>
+
           <div className={styles.nonClickable}>
             <TopBarTimeDate />
           </div>

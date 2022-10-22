@@ -13,6 +13,7 @@
   align-items: center;
   font-size: small;
   padding-inline: 0.5em;
+  height: 2.8rem;
 }
 
 .logo {
@@ -23,11 +24,11 @@
   cursor: pointer;
   border-radius: 100vmax;
   background-color: var(--nord2);
-
+*/
   display: flex;
   justify-content: center;
-  align-items: center; */
-  margin-right: auto;
+  align-items: center;
+  /* margin-right: auto; */
 }
 
 .logo:hover {
@@ -142,7 +143,14 @@
     align-items: center;
   }
   .contents {
-    min-height: 3.6rem;
+    /* min-height: 3.6rem; */
+    height: 4rem;
+  }
+  .link {
+    height: 10rem;
+  }
+  .contents a {
+    margin-right: auto;
   }
   .hamburger {
     padding-top: 0.25rem;
