@@ -25,44 +25,52 @@ export default function RecruitmentStepOne({
   };
 
   return (
-    <div className={classes.transistion}>
+    <div>
       <form className="lug-form" onSubmit={submit}>
         <div className="form-start">Step 1 of 3</div>
         <div className="form-field">
           <label> Name: </label>
-          <input
-            maxLength="128"
-            type="text"
-            onChange={handleChange("name")}
-            value={values.name}
-          />
+          <div className={classes.input}>
+            <input
+              maxLength="128"
+              type="text"
+              onChange={handleChange("name")}
+              value={values.name}
+            />
+          </div>
         </div>
         <div className="form-field">
           <label> Registration Number (VIT): </label>
-          <input
-            type="text"
-            maxLength="9"
-            onChange={handleChange("regno")}
-            value={values.regno}
-          />
+          <div className={classes.input}>
+            <input
+              type="text"
+              maxLength="9"
+              onChange={handleChange("regno")}
+              value={values.regno}
+            />
+          </div>
         </div>
         <div className="form-field">
           <label> Email Address (VIT): </label>
-          <input
-            maxLength="128"
-            type="email"
-            onChange={handleChange("email")}
-            value={values.email}
-          />
+          <div className={classes.input}>
+            <input
+              maxLength="128"
+              type="email"
+              onChange={handleChange("email")}
+              value={values.email}
+            />
+          </div>
         </div>
         <div className="form-field">
           <label> Contact Number (Whatsapp): </label>
-          <input
-            type="tel"
-            onChange={handleChange("contact")}
-            value={values.contact}
-            pattern="[1-9]{1}[0-9]{9}"
-          />
+          <div className={classes.input}>
+            <input
+              type="tel"
+              onChange={handleChange("contact")}
+              value={values.contact}
+              pattern="[1-9]{1}[0-9]{9}"
+            />
+          </div>
         </div>
         <div className="form-field"></div>
         <div className="form-end">

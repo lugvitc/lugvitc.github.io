@@ -1,114 +1,130 @@
 .lug-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
 }
 
 .lug-form > * {
-    width: 100%;
+  width: 100%;
 }
 
 .form-field {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
 }
 
 .form-field > label {
-    text-align: center;
+  text-align: center;
 }
 
 .form-field.longlabel {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50rem;
 }
 
 .form-field.longlabel > label {
-    text-align: center;
+  text-align: center;
 }
 
 .lug-form input,
 .lug-form textarea,
 .lug-form select {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--nord4);
+  height: 2rem;
+  min-width: 100%;
+}
+.dept-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.form-textarea {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  align-items: center;
+  justify-content: center;
+}
+.form-textarea > label {
+  text-align: center;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.form-textarea > textarea {
+  height: 5rem;
+  /* max-width: 50rem !important; */
+}
+
+.form-start {
+  text-align: center;
+  font-size: xxx-large;
+  color: var(--nord10);
+}
+
+.form-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-nav-button {
+  background-color: var(--nord3);
+  color: var(--nord6);
+  border-color: var(--nord3);
+  border-radius: 10px;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.form-nav-button.next {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .lug-form {
+    padding: 0;
+  }
+  .lug-form > * {
+    width: 100%;
+  }
+
+  .lug-form input,
+  .lug-form textarea,
+  .lug-form select {
     border-radius: 10px;
     border: none;
     background-color: var(--nord4);
     height: 2rem;
-    width: 90%;
+    padding-left: 1rem;
+    width: 100%;
+  }
 }
 
-.form-textarea {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-textarea > textarea {
-    height: 5rem;
-}
-
-.form-start {
-    text-align: center;
-    font-size: xxx-large;
-    color: var(--nord10);
-}
-
-.form-end {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-nav-button {
-    background-color: var(--nord3);
-    color: var(--nord6);
-    border-color: var(--nord3);
-    border-radius: 10px;
-    display: flex;
-    padding: 5px 10px;
-}
-
-.form-nav-button.next {
-    margin-left: auto;
-}
-
-@media (min-width: 768px) {
-    .lug-form {
-        padding: 0;
-    }
-    .lug-form > * {
-        width: 100%;
-    }
-
-    .lug-form input,
-    .lug-form textarea,
-    .lug-form select {
-        border-radius: 10px;
-        border: none;
-        background-color: var(--nord4);
-        height: 2rem;
-        padding-left: 1rem;
-        width: 100%;
-    }
-}
 @media (max-width: 1000px) {
-    .form-field.longlabel,
-    .form-field {
-        width: 100%;
-    }
+  .form-field.longlabel,
+  .form-field {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
-    .lug-form {
-        padding: 0;
-    }
+  .lug-form {
+    padding: 0;
+  }
 }
-

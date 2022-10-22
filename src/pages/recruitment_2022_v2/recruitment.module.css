@@ -1,3 +1,21 @@
 .transistion {
   transition: background-color 0.5s ease;
 }
+.input {
+  width: 100%;
+  max-width: 40rem;
+}
+.input textarea {
+  height: 5rem;
+}
+
+.step2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+@media (max-width: 500px) {
+  .input {
+    width: 100%;
+  }
+}
