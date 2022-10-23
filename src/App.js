@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import TopBar from "./components/topBar/topBar";
-import Dock from "./components/dock/dock";
+import TopBar from './components/topBar/topBar';
+import Dock from './components/dock/dock';
 
-import SettingsDialog from "./components/settingsDialog/settingsDialog";
-import useKeyboardShortcuts from "./hooks/useKeyboardShortcuts";
-import UserForm from "./pages/recruitment_2022_v2/recruitment";
+import SettingsDialog from './components/settingsDialog/settingsDialog';
+import useKeyboardShortcuts from './hooks/useKeyboardShortcuts';
+import UserForm from './pages/recruitment_2022_v2/recruitment';
 
 export default function App({ children, pages }) {
   // useKeyboardShortcuts();
 
-  const [mainTopMargin, setMainTopMargin] = useState("0");
+  const [mainTopMargin, setMainTopMargin] = useState('0');
 
   const topBarRef = useRef(null);
 
@@ -19,9 +19,9 @@ export default function App({ children, pages }) {
       setMainTopMargin(`${topBarRef.current.clientHeight}px`);
 
     setCorrectMargin();
-    window.addEventListener("resize", setCorrectMargin);
+    window.addEventListener('resize', setCorrectMargin);
 
-    return () => window.removeEventListener("resize", setCorrectMargin);
+    return () => window.removeEventListener('resize', setCorrectMargin);
   }, []);
 
   return (

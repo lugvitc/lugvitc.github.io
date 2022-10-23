@@ -1,9 +1,9 @@
-import TerminalWindow from "../../components/terminal/terminalWindow";
+import TerminalWindow from '../../components/terminal/terminalWindow';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
-import classes from "./recruitment.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
+import classes from './recruitment.module.css';
 
 export default function RecruitmentStepTwo({
   values,
@@ -14,7 +14,7 @@ export default function RecruitmentStepTwo({
   const next = (e) => {
     e.preventDefault();
     if (!values.whyLinux || !values.expLinux || !values.prefDept) {
-      alert("Please fill out all Fields");
+      alert('Please fill out all Fields');
     } else {
       nextStep();
     }
@@ -33,19 +33,19 @@ export default function RecruitmentStepTwo({
         <div className={classes.input}>
           <textarea
             rows="6"
-            onChange={handleChange("whyLinux")}
+            onChange={handleChange('whyLinux')}
             value={values.whyLinux}
           />
         </div>
       </div>
       <div className="form-textarea">
         <label>
-          Have you ever used any Linux distro? Whats your favourite distro?{" "}
+          Have you ever used any Linux distro? Whats your favourite distro?{' '}
         </label>
         <div className={classes.input}>
           <textarea
             rows="6"
-            onChange={handleChange("expLinux")}
+            onChange={handleChange('expLinux')}
             value={values.expLinux}
           />
         </div>
@@ -61,7 +61,7 @@ export default function RecruitmentStepTwo({
             name="dept"
             id="dept"
             value={values.prefDept}
-            onChange={handleChange("prefDept")}
+            onChange={handleChange('prefDept')}
           >
             <option value=" ">Select a department</option>
             <option value="Technical Department">Technical Department</option>
@@ -73,7 +73,7 @@ export default function RecruitmentStepTwo({
         </div>
       </div>
 
-      {values.prefDept === "Technical Department" ? (
+      {values.prefDept === 'Technical Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>What are your field of interests? </label>
@@ -81,21 +81,21 @@ export default function RecruitmentStepTwo({
           <div className={classes.input}>
             <textarea
               rows="6"
-              onChange={handleChange("tech1")}
+              onChange={handleChange('tech1')}
               value={values.tech1}
               placeholder="E.g. Cybersecurity, Web Development, App Development, AI etc."
             />
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               What frameworks/tools are you comfortable with in your field of
-              interest?{" "}
+              interest?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("tech2")}
+                onChange={handleChange('tech2')}
                 value={values.tech2}
                 placeholder="E.g. Metasploit, Kali Linux, ReactJS, NodeJS, Flask, Django, Flutter etc."
               />
@@ -103,21 +103,21 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Give the link to your github or any place where your projects are
-              hosted (if any){" "}
+              hosted (if any){' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("tech3")}
+                onChange={handleChange('tech3')}
                 value={values.tech3}
                 placeholder="E.g. https://github.com/user"
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept === "Management Department" ? (
+      ) : values.prefDept === 'Management Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
@@ -127,7 +127,7 @@ export default function RecruitmentStepTwo({
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("mang1")}
+                onChange={handleChange('mang1')}
                 value={values.mang1}
                 placeholder="E.g. yes, I have marketed so and so event under this club"
               />
@@ -138,23 +138,23 @@ export default function RecruitmentStepTwo({
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("mang2")}
+                onChange={handleChange('mang2')}
                 value={values.mang2}
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept === "Operations Department" ? (
+      ) : values.prefDept === 'Operations Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
-              Do you have prior experience in getting sponsors for events?{" "}
+              {' '}
+              Do you have prior experience in getting sponsors for events?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("ops1")}
+                onChange={handleChange('ops1')}
                 value={values.ops1}
                 placeholder="E.G. yes, I have approached so and so sponsor for this event"
               />
@@ -162,31 +162,31 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               How would you approch a cybersecurity firm to sponsor a club CTF
-              event?{" "}
+              event?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("ops2")}
+                onChange={handleChange('ops2')}
                 value={values.ops2}
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept === "Media Department" ? (
+      ) : values.prefDept === 'Media Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Do you have prior experience in Designing or Photography? If so,
-              specify where you worked.{" "}
+              specify where you worked.{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("media1")}
+                onChange={handleChange('media1')}
                 value={values.media1}
                 placeholder="E.g, yes, I have experience with canva/figma. Designed a poster for so and so event"
               />
@@ -197,24 +197,24 @@ export default function RecruitmentStepTwo({
           <div className={classes.input}>
             <textarea
               rows="6"
-              onChange={handleChange("media2")}
+              onChange={handleChange('media2')}
               value={values.media2}
               placeholder="E.g. canva design links, figma design links, gdrive links for photography"
             />
           </div>
         </div>
-      ) : values.prefDept === "Content Department" ? (
+      ) : values.prefDept === 'Content Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Do you have prior experience in writing content for events or
-              social media handles? If so, specify where you worked.{" "}
+              social media handles? If so, specify where you worked.{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("content1")}
+                onChange={handleChange('content1')}
                 value={values.content1}
                 placeholder="E.g. yes, I have covered captions/email body for so and so event under this club"
               />
@@ -222,14 +222,14 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Which type of content attracts the user{"'"}s eyes in your opinion
-              and why?{" "}
+              and why?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("content2")}
+                onChange={handleChange('content2')}
                 value={values.content2}
                 placeholder="E.g. A text content with proper combination of simple words and complex phrases attracts the eyes"
               />
@@ -247,7 +247,7 @@ export default function RecruitmentStepTwo({
             name="dept2"
             id="dept2"
             value={values.prefDept2}
-            onChange={handleChange("prefDept2")}
+            onChange={handleChange('prefDept2')}
           >
             <option value=" ">Select a Department (Optional)</option>
             <option value="Technical Department">Technical Department</option>
@@ -259,28 +259,28 @@ export default function RecruitmentStepTwo({
         </div>
       </div>
 
-      {values.prefDept2 === "Technical Department" ? (
+      {values.prefDept2 === 'Technical Department' ? (
         <div className="dept-area">
           <div className="form-textarea"></div>
           <label>What are your field of interests? </label>
           <div className={classes.input}>
             <textarea
               rows="6"
-              onChange={handleChange("tech1")}
+              onChange={handleChange('tech1')}
               value={values.tech1}
               placeholder="E.g. Cybersecurity, Web Development, App Development, AI etc."
             />
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               What frameworks/tools are you comfortable with in your field of
-              interest?{" "}
+              interest?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("tech2")}
+                onChange={handleChange('tech2')}
                 value={values.tech2}
                 placeholder="E.g. Metasploit, Kali Linux, ReactJS, NodeJS, Flask, Django, Flutter etc."
               />
@@ -288,21 +288,21 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Give the link to your github or any place where your projects are
-              hosted (if any){" "}
+              hosted (if any){' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("tech3")}
+                onChange={handleChange('tech3')}
                 value={values.tech3}
                 placeholder="E.g. https://github.com/user"
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept2 === "Management Department" ? (
+      ) : values.prefDept2 === 'Management Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
@@ -312,7 +312,7 @@ export default function RecruitmentStepTwo({
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("mang1")}
+                onChange={handleChange('mang1')}
                 value={values.mang1}
                 placeholder="E.g. yes, I have marketed so and so event under this club"
               />
@@ -323,23 +323,23 @@ export default function RecruitmentStepTwo({
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("mang2")}
+                onChange={handleChange('mang2')}
                 value={values.mang2}
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept2 === "Operations Department" ? (
+      ) : values.prefDept2 === 'Operations Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
-              Do you have prior experience in getting sponsors for events?{" "}
+              {' '}
+              Do you have prior experience in getting sponsors for events?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("ops1")}
+                onChange={handleChange('ops1')}
                 value={values.ops1}
                 placeholder="E.G. yes, I have approached so and so sponsor for this event"
               />
@@ -347,31 +347,31 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               How would you approch a cybersecurity firm to sponsor a club CTF
-              event?{" "}
+              event?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("ops2")}
+                onChange={handleChange('ops2')}
                 value={values.ops2}
               />
             </div>
           </div>
         </div>
-      ) : values.prefDept2 === "Media Department" ? (
+      ) : values.prefDept2 === 'Media Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Do you have prior experience in Designing or Photography? If so,
-              specify where you worked.{" "}
+              specify where you worked.{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("media1")}
+                onChange={handleChange('media1')}
                 value={values.media1}
                 placeholder="E.g, yes, I have experience with canva/figma. Designed a poster for so and so event"
               />
@@ -382,24 +382,24 @@ export default function RecruitmentStepTwo({
           <div className={classes.input}>
             <textarea
               rows="6"
-              onChange={handleChange("media2")}
+              onChange={handleChange('media2')}
               value={values.media2}
               placeholder="E.g. canva design links, figma design links, gdrive links for photography"
             />
           </div>
         </div>
-      ) : values.prefDept2 === "Content Department" ? (
+      ) : values.prefDept2 === 'Content Department' ? (
         <div className="dept-area">
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Do you have prior experience in writing content for events or
-              social media handles? If so, specify where you worked.{" "}
+              social media handles? If so, specify where you worked.{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("content1")}
+                onChange={handleChange('content1')}
                 value={values.content1}
                 placeholder="E.g. yes, I have covered captions/email body for so and so event under this club"
               />
@@ -407,14 +407,14 @@ export default function RecruitmentStepTwo({
           </div>
           <div className="form-textarea">
             <label>
-              {" "}
+              {' '}
               Which type of content attracts the user{"'"}s eyes in your opinion
-              and why?{" "}
+              and why?{' '}
             </label>
             <div className={classes.input}>
               <textarea
                 rows="6"
-                onChange={handleChange("content2")}
+                onChange={handleChange('content2')}
                 value={values.content2}
                 placeholder="E.g. A text content with proper combination of simple words and complex phrases attracts the eyes"
               />

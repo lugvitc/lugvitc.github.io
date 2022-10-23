@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import classes from "./recruitment.module.css";
+import React, { useState } from 'react';
+import classes from './recruitment.module.css';
 
 function RecruitmentStep0({ nextStep, previousStep }) {
   const back = (e) => {

@@ -1,4 +1,4 @@
-import TerminalWindow from "../../components/terminal/terminalWindow";
+import TerminalWindow from '../../components/terminal/terminalWindow';
 
 export default function Success() {
   return (

@@ -105,7 +105,7 @@
 }
 
 .active::after {
-  content: " ▲";
+  content: ' ▲';
 }
 
 .inactive {
@@ -116,7 +116,7 @@
 }
 
 .inactive::after {
-  content: " ▼";
+  content: ' ▼';
 }
 
 .bottomStrip {
@@ -183,10 +183,10 @@
   }
 
   .active::after {
-    content: "";
+    content: '';
   }
   .inactive::after {
-    content: "";
+    content: '';
   }
 
   .bottomStrip {

@@ -1,19 +1,17 @@
-import TerminalWindow from "../../components/terminal/terminalWindow";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function Confirm({ nextStep, values, previousStep }) {
   const next = async (e) => {
     e.preventDefault();
     // USE FLASK BACKEND HERE TO COLLECT ALL DATA
     let formData = values;
-    delete formData["flagCommand"];
-    fetch("https://whale-app-7b3m2.ondigitalocean.app/api/recruitment", {
-      method: "POST",
+    delete formData['flagCommand'];
+    fetch('https://whale-app-7b3m2.ondigitalocean.app/api/recruitment', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
@@ -38,7 +36,7 @@ export default function Confirm({ nextStep, values, previousStep }) {
         Why do you want to join the Linux Club : <p>{values.whyLinux}</p>
       </div>
       <div className="form-field">
-        Have you ever used any Linux distro? Whats your favourite distro? :{" "}
+        Have you ever used any Linux distro? Whats your favourite distro? :{' '}
         <p>{values.expLinux}</p>
       </div>
       <div className="form-field">
