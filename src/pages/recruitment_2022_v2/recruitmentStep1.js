@@ -1,9 +1,9 @@
-import TerminalWindow from "../../components/terminal/terminalWindow";
-import classes from "./recruitment.module.css";
+import TerminalWindow from '../../components/terminal/terminalWindow';
+import classes from './recruitment.module.css';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
-import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function RecruitmentStepOne({
   values,
@@ -14,7 +14,7 @@ export default function RecruitmentStepOne({
   const submit = (e) => {
     e.preventDefault();
     if (!values.name || !values.regno || !values.email || !values.contact) {
-      alert("Please fill out all Fields");
+      alert('Please fill out all Fields');
     } else {
       nextStep();
     }
@@ -34,7 +34,7 @@ export default function RecruitmentStepOne({
             <input
               maxLength="128"
               type="text"
-              onChange={handleChange("name")}
+              onChange={handleChange('name')}
               value={values.name}
             />
           </div>
@@ -45,7 +45,7 @@ export default function RecruitmentStepOne({
             <input
               type="text"
               maxLength="9"
-              onChange={handleChange("regno")}
+              onChange={handleChange('regno')}
               value={values.regno}
             />
           </div>
@@ -56,7 +56,7 @@ export default function RecruitmentStepOne({
             <input
               maxLength="128"
               type="email"
-              onChange={handleChange("email")}
+              onChange={handleChange('email')}
               value={values.email}
             />
           </div>
@@ -66,7 +66,7 @@ export default function RecruitmentStepOne({
           <div className={classes.input}>
             <input
               type="tel"
-              onChange={handleChange("contact")}
+              onChange={handleChange('contact')}
               value={values.contact}
               pattern="[1-9]{1}[0-9]{9}"
             />
