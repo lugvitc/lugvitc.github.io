@@ -28,12 +28,12 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
-    },
-    {
-	title: 'Recruitment 2022',
-	link: '/recruitment',
-	component: <UserForm />
     }
+    //{
+    //	title: 'Recruitment 2022',
+    //	link: '/recruitment',
+    //	component: <UserForm />
+    //}
     //{
     //    title: 'Rescue Tux',
     //    link: '/rescue-tux',
