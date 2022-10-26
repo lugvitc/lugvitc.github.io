@@ -14,7 +14,7 @@ export default function ShowAfterTypewriter({ text, textContainer, children }) {
 
             const timeOut = setTimeout(() => {
                 setTypingText(text.slice(0, typingText.length + 1));
-            }, 250);
+            }, 100);
             return () => clearTimeout(timeOut);
         }
     }, [text, typingText, animationsOn]);
