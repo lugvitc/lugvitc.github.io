@@ -17,7 +17,7 @@ If you spot something new, maybe a bug or a feature you want to implement, [open
 * Fork this repository into your own copy.
 * Clone your copy of the repository into your local machine.
 * Make your changes to files as required.
-* Save and Commit your chanfes in the local repo.
+* Save and Commit your changes in the local repo.
 * Push your commits to the remote repo (your copy of the main repo).
 * Create a Pull Request from your repo to our repo.
 
