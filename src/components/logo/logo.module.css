@@ -17,8 +17,7 @@
 }
 
 .tuxBeak {
-    /* fill: var(--nord12); */
-    fill: orangered;
+    fill: var(--nord13);
 }
 
 .svg:hover .tuxBack {
@@ -34,5 +33,5 @@
 }
 
 .svg:hover .tuxBeak {
-    fill: var(--nord12);
+    fill: var(--nord13);
 }
