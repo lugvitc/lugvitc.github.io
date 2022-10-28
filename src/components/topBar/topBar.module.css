@@ -89,7 +89,7 @@
     transform: translateY(0.5em);
     color: var(--nord10);
     background-color: var(--nord0);
-    transition: ease-out 0.5s;
+    transition: ease-out 0.25s;
 }
 
 .active {
@@ -151,4 +151,3 @@
         display: none;
     }
 }
-
