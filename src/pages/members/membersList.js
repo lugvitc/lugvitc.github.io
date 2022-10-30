@@ -1,5 +1,5 @@
 import president from '../../images/members/Baleswar.jpeg';
-import vp from '../../images/members/blank.png';
+import vp from '../../images/members/Samridh.jpeg';
 const imgStyle = {
     width: '100%',
     height: 'auto'
