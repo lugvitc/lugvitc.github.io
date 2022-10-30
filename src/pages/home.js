@@ -19,7 +19,7 @@ export default function Home() {
                 <br />
                 <br />
                 <h1>Linux Club VIT, Chennai</h1>
-                The 'Linux Club' of VIT, Chennai was created to Spread the
+                The 'Linux Club' of VIT, Chennai was created to spread
                 awareness of Free and Open Source Software (FOSS) through Linux
                 flavours. It believes in developing collaborative open-source
                 projects.

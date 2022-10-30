@@ -15,6 +15,7 @@ import Session6 from './session6';
 
 import util from '../../styles/util.module.css';
 import styles from './learnLinux.module.css';
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons';
 
 
 const sessions = [
@@ -22,6 +23,7 @@ const sessions = [
         title: 'Linux: What? Why? How?',
         content: <Session1 />,
         ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -30,13 +32,16 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
         )
     },
     {
         title: 'Know the terminal',
         content: <Session2 />,
 	ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -45,7 +50,9 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
         )
 
     },
@@ -53,6 +60,7 @@ const sessions = [
         title: 'Know the system',
         content: <Session3 />,
 	ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -61,7 +69,9 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
         )
 
     },
@@ -69,6 +79,7 @@ const sessions = [
         title: 'Processes and Packages',
         content: <Session4 />,
 	ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -77,7 +88,9 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
         )
 
     },
@@ -85,6 +98,7 @@ const sessions = [
         title: 'Advanced Features',
         content: <Session5 />,
 	ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -93,7 +107,9 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
         )
 
     },
@@ -101,6 +117,7 @@ const sessions = [
         title: 'Desktop Customization',
         content: <Session6 />,
 	ytVideoElement: (
+        <div className={util.container}>
             <iframe
                 width='560'
                 height='315'
@@ -109,7 +126,9 @@ const sessions = [
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen
+                className={util.video}
             />
+        </div>
 	)
 
     }
@@ -149,7 +168,7 @@ export default function LearnLinux() {
                     />
 
                     <div className={styles.sessionConent}>
-                        {session.ytVideoElement && session.ytVideoElement}
+                    <center>{session.ytVideoElement && session.ytVideoElement}</center>
                         {session.content}
                     </div>
                     <PrevNextSessionLinks
