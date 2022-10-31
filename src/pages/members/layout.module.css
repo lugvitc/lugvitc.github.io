@@ -16,7 +16,7 @@
 }
 
 .twos{
-  display: ruby;
+  display: inline-flex;
 }
 .spacer{
   padding: 10%;
