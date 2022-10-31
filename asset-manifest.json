@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.7648fbfe.css",
-    "main.js": "/static/js/main.511bdb66.js",
+    "main.css": "/static/css/main.857f07aa.css",
+    "main.js": "/static/js/main.1671ce44.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
-    "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
+    "static/media/Baleswar.jpeg": "/static/media/Baleswar.33912741090ac4c60dff.jpeg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
+    "static/media/Samridh.jpeg": "/static/media/Samridh.540d386ce961409837b7.jpeg",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
@@ -12,11 +13,11 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.7648fbfe.css.map": "/static/css/main.7648fbfe.css.map",
-    "main.511bdb66.js.map": "/static/js/main.511bdb66.js.map"
+    "main.857f07aa.css.map": "/static/css/main.857f07aa.css.map",
+    "main.1671ce44.js.map": "/static/js/main.1671ce44.js.map"
   },
   "entrypoints": [
-    "static/css/main.7648fbfe.css",
-    "static/js/main.511bdb66.js"
+    "static/css/main.857f07aa.css",
+    "static/js/main.1671ce44.js"
   ]
 }
