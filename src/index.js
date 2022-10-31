@@ -10,8 +10,9 @@ import App from './App';
 import Home from './pages/home';
 import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
-import UserForm from './pages/recruitment_2022_v2/recruitment';
-import RescueTux2022Routes from './pages/rescueTux2022/routes';
+//import UserForm from './pages/recruitment_2022_v2/recruitment';
+//import RescueTux2022Routes from './pages/rescueTux2022/routes';
+import Members from './pages/members/members';
 
 const pages = [
     {
@@ -28,6 +29,11 @@ const pages = [
         title: 'Learn Linux',
         link: '/learn-linux',
         component: <LearnLinux />
+    },
+    {
+        title: 'Members',
+        link: '/members',
+        component: <Members />
     }
     //{
     //	title: 'Recruitment 2022',
