@@ -1,5 +1,5 @@
 import TerminalWindow from '../../components/terminal/terminalWindow';
-import TopCards from '../../components/topThree/topcards';
+import Topcards from '../../components/topThree/topcards.js';
 import LeaderboardPopUpPage from '../../components/leaderboard_popup_page/leaderboard_popup_page';
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from 'react';
@@ -57,7 +57,7 @@ export default function FFCSLeaderboard() {
             ]}
             title='Leaderboard'
         >
-            <TopCards></TopCards>
+            <Topcards/>
             <button onClick={() => { setOpenPopup(true); }} >Get</button>
             <LeaderboardPopUpPage member={member}></LeaderboardPopUpPage>
         </TerminalWindow>
