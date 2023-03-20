@@ -16,13 +16,27 @@
 }
 
 .twos{
-  display: ruby;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
 .spacer{
   padding: 10%;
 }
+
+@media only screen and (max-width: 700px) {
+  .twos{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
 @media only screen and (max-width: 500px) {
   .twos{
-    display: inline-block;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .twos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
