@@ -87,6 +87,92 @@ export const eventsDetails = [
                 </p>
             </>
         )
+    },
+    {
+        number: '01',
+        name: 'Rescue Tux',
+        link: 'lugvitc.github.io/#/events#rescue-tux',
+        id: 'rescue-tux',
+        details: (
+            <>
+                <p>
+                    The Linux Club at VIT Chennai organized the "Rescue Tux"
+                    event on 21st August 2022, sponsored by GeeksForGeeks. The
+                    event saw the participation of about 180 attendees, who
+                    enjoyed a Linux workshop by the club's President Beleswar
+                    Prasad Padhi and Vice President Samridh Anand Paatni,
+                    followed by lunch. The participants also took part in a CTF
+                    event featuring challenges created by LUG members, with the
+                    CTF platform developed by the VP and President. Finally, the
+                    winners of the CTF were awarded prizes.{' '}
+                </p>
+                <p>
+                    The top three teams that emerged victorious were as follows:{' '}
+                </p>
+                <ol>
+                    <li>Team EchoHelloWorld, who received a prize of X rs.</li>
+                    <li>Team X, who received a prize of X rs.</li>
+                    <li>Team X, who received a prize of X rs.</li>
+                </ol>
+            </>
+        )
+    },
+    {
+        number: '02',
+        name: 'Cyber-0-Day',
+        link: 'lugvitc.github.io/#/events#cyber-0-day',
+        id: 'cyber-0-day',
+        details: (
+            <>
+                <p>
+                    The Linux Club at VIT Chennai, in collaboration with The
+                    Tech-Researchers Club, organized the "Cyber 0 Day" event
+                    from 24th to 25th September 2022. The event saw the
+                    participation of around 100 participants in teams of 1-3,
+                    and was sponsored by Rapido. The event began with a Linux
+                    workshop by the President Beleswar Prasad Padhi and Vice
+                    President Samridh Anand Paatni, followed by a cybersecurity
+                    quiz and lunch.
+                </p>
+                <p>
+                    Later, participants enjoyed a CTF+Bug Bounty challenge,
+                    created by LUG members and featuring a CTF platform
+                    developed by the club. After the scores were tallied, the
+                    top 10 teams were selected to participate in a 12-hour
+                    hackathon that tested their technical cybersecurity
+                    knowledge, with problem statements on API testing platforms
+                    and network monitoring tools. Finally, the winners of the
+                    event were awarded their prizes in the Nethaji Auditorium.{' '}
+                </p>
+                <p>
+                    The top three teams that emerged victorious were as follows:
+                </p>
+                <ol>
+                    <li>
+                        Team <i>EchoHelloWorld</i> (Zehran 21BPS1091, Christeo
+                        21BCE1635 & Aditya 21BCE1431), who received a prize of X
+                        rs.
+                    </li>
+                    <li>
+                        Team <i>HailAlan</i> (Kushal Agrawal 22BPS1141, Ansh
+                        Sharma 22BCE1338 & Shashwat Mishra 22BCE1853), who
+                        received a prize of X rs.
+                    </li>
+                    <li>
+                        Team <i>chill_sette</i> (Naman 21BCE5852, Yash Singh
+                        21BCE5760 & Sagar 21BCE5790), who received a prize of X
+                        rs.
+                    </li>
+                </ol>
+            </>
+        )
+    },
+    {
+        number: '03',
+        name: "Hackers' Horizon",
+        link: 'lugvitc.github.io/#/events#hackers-horizon',
+        id: 'hackers-horizon',
+        details: <>Hackers' Horizon</>
     }
 ];
 
