@@ -1,6 +1,6 @@
-import LugLink from '../../components/lugLink/lugLink';
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import { eventsDetails } from './eventsDetails';
+import eventStyles from './events.module.css';
 
 export default function Events() {
     return (
@@ -11,11 +11,11 @@ export default function Events() {
             ]}
             title='Events'
         >
-            {eventsDetails.map(({ number, name, link, details, id }, index) => (
-                <section key={index} id={id}>
-                    <h1>
-                        {number}: <LugLink link={link}>{name}</LugLink>
-                    </h1>
+            {eventsDetails.map(({ number, name, details, id }, index) => (
+                <section key={index} id={id} className={eventStyles.event}>
+                    <h2 className={eventStyles.name}>
+                        {number}: {name}
+                    </h2>
                     {details}
                 </section>
             ))}
