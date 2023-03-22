@@ -13,16 +13,16 @@ export default function LeaderboardPopUpPage({
                     <div className={styles.name}>{member.name}</div>
                 </div>
                 <div className={styles.details}>
-                    <div className={styles.details_option}>{member.reg}</div>
+                    <div className={styles.details_option}>{member.regno}</div>
                     <div className={styles.details_option}>{member.dept}</div>
-                    <div className={styles.details_option}>{member.contrib_count}</div>
-                    <div className={styles.details_option}>{member.score}</div>
+                    <div className={styles.details_option}>{member.contributions}</div>
+                    <div className={styles.details_option}>{member.points}</div>
                 </div>
             </div>
             {/* contributions part */}
             <div className={styles.side}>
                 <div className={styles.side_header}>Contributions</div>
-                {member.contribs.map((line, index) => (
+                {member.contribution_details.map((line, index) => (
                     <span className={styles.side_contribs} key={index}>{line}</span>
                 ))
                 }
