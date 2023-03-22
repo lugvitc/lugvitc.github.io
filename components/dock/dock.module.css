@@ -1,0 +1,33 @@
+.index {
+    border-radius: 0px 10px 10px 0px;
+    height: fit-content;
+    background-color: var(--nord1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+    transition: ease-out 0.2s;
+}
+
+@media only screen and (max-width: 1024px) {
+    .index {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 10px 10px 0px 0px;
+        /* width: fit-content; */
+    }
+    .icon:hover {
+        transform: scale(1.25px);
+        transition: ease-out 0.2s;
+    }
+}

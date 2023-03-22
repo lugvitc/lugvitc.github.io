@@ -1,0 +1,11 @@
+.text:after {
+    content: '█';
+    animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
