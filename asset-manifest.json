@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.65e61329.css",
-    "main.js": "/static/js/main.491f5064.js",
+    "main.css": "/static/css/main.60248dca.css",
+    "main.js": "/static/js/main.d5f419ce.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
+    "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
     "static/media/Baleswar.jpeg": "/static/media/Baleswar.33912741090ac4c60dff.jpeg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/Samridh.jpeg": "/static/media/Samridh.540d386ce961409837b7.jpeg",
@@ -13,11 +14,11 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.65e61329.css.map": "/static/css/main.65e61329.css.map",
-    "main.491f5064.js.map": "/static/js/main.491f5064.js.map"
+    "main.60248dca.css.map": "/static/css/main.60248dca.css.map",
+    "main.d5f419ce.js.map": "/static/js/main.d5f419ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.65e61329.css",
-    "static/js/main.491f5064.js"
+    "static/css/main.60248dca.css",
+    "static/js/main.d5f419ce.js"
   ]
 }
