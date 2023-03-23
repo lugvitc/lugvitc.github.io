@@ -1,6 +1,7 @@
 export default function useFetch() {
-    const apiURL = 'https://backmagic.herokuapp.com/api';
+    // const apiURL = 'https://backmagic.herokuapp.com/api';
     // const apiURL = 'http://127.0.0.1:5000/api';
+    const apiURL = 'https://leaderboard.lugvitc.org/api';
 
     const api = (path, init) => fetch(apiURL + path, init);
 
