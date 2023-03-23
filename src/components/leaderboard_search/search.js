@@ -1,32 +1,36 @@
-import styles from './search.css'
+import styles from "./search.module.css"
 
 
 // function to sort members by name
 function sortByName(members, setter, reverse = false) {
-  members.sort((a, b) => a.name.localeCompare(b.name));
+  // create a copy of members, as original array will not be modified
+  let members_copy = members.filter((mem) => true);
+  members_copy.sort((a, b) => a.name.localeCompare(b.name));
   if (reverse)
-    members.reverse()
-  setter(members)
+    members_copy.reverse();
+  setter(members_copy);
 }
 
 // function to sort members by score
 function sortByScore(members, setter, reverse = false) {
-  members.sort((a, b) => {
-    return b.score - a.score
+  let members_copy = members.filter((mem) => true);
+  members_copy.sort((a, b) => {
+    return b.points - a.points == 0 ? a.rank - b.rank : b.points - a.points;
   });
-  if (reverse)
-    members.reverse()
-  setter(members)
+  if (reverse) {
+    members_copy.reverse()
+  }
+  setter(members_copy)
 }
 
 // function to search for members by name or registration number
-function searchFunction(members, e) {
-  const input = e
+function searchFunction(members, e, setter) {
+  const input = e.currentTarget;
   const filter = input.value.toUpperCase();
   const filteredMembers = members.filter(member => {
-    return member.name.toUpperCase().includes(filter) || member.regNo.toUpperCase().includes(filter);
+    return member.name.toUpperCase().includes(filter) || member.regno.toUpperCase().includes(filter);
   });
-  return filteredMembers
+  setter(filteredMembers);
 }
 
 function chooseSort(members, setter) {
@@ -39,6 +43,12 @@ function chooseSort(members, setter) {
     case "Score \u2191":
       sortByScore(members, setter);
       break;
+    case "Name \u2193":
+      sortByName(members, setter, true);
+      break;
+    case "Score \u2193":
+      sortByScore(members, setter, true);
+      break;
   }
 }
 
@@ -48,22 +58,18 @@ export default function LeaderboardSearch({
 }) {
   return (
     <div className={styles.container}>
-      <div className={styles.container_btn}>
-        <div className={styles.searchbar}>
-          <div className={styles.search}>
-            <input type="text" id="searchinput" onChange={() => { searchFunction(members, this) }} placeholder="Search" />
-          </div>
-        </div>
-        <div className={styles.buttons}>
-          <div className={styles.btn_group}>
-            <span style={{color: "#ffffff", fontSize: "14px"}}>Sort By: </span>
-            <select className="leaderboard_sort_button" onChange={() => { chooseSort(members, setter) }}>
-              <option>Name &uarr;</option>
-              <option>Name &darr;</option>
-              <option>Score &uarr;</option>
-              <option>Score &darr; </option>
-            </select>
-          </div>
+      <div className={styles.searchbar}>
+          <input type="text" id="searchinput" onChange={(e) => { searchFunction(members, e, setter) }} placeholder="Search" />
+      </div>
+      <div className={styles.buttons}>
+        <div className={styles.btn_group}>
+          <span style={{ color: "#ffffff", fontSize: "14px" }}>Sort By: </span>
+          <select className="leaderboard_sort_button" onChange={(e) => { chooseSort(members, setter) }}>
+            <option>Score &uarr;</option>
+            <option>Score &darr; </option>
+            <option>Name &uarr;</option>
+            <option>Name &darr;</option>
+          </select>
         </div>
       </div>
     </div>

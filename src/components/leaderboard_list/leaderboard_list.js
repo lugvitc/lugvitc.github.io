@@ -25,7 +25,7 @@ export default function List({
 
 
                     <div className="position" onClick={openPopUp(this)} memberindex={index}>
-                        <div className='rank1'>{index + 1}</div>
+                        <div className='rank1'>{member.rank}</div>
                         {/* <div className="img">
                     <img src={img1} alt="eren jaegar"/>
                 </div> */}
