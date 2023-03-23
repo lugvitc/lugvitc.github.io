@@ -2,6 +2,7 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 import Topcards from '../../components/topThree/topcards.js';
 import LeaderboardPopUpPage from '../../components/leaderboard_popup_page/leaderboard_popup_page';
 import LeaderboardList from '../../components/leaderboard_list/leaderboard_list.js';
+import LeaderboardSearch from '../../components/leaderboard_search/search';
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -100,6 +101,7 @@ export default function FFCSLeaderboard() {
             title='Leaderboard'
         >
             <Topcards top_3_members={leaderboard_members.slice(0, 3)}></Topcards>
+            <LeaderboardSearch members={leaderboard_members} setter={setLeaderboardMembers}></LeaderboardSearch>
             <LeaderboardList all_members={leaderboard_members} openPopUp={() => { return updateMember }} />
             <LeaderboardPopUpPage member={member} close_leaderboard_popup={close_leaderboard_popup}></LeaderboardPopUpPage>
         </TerminalWindow>
