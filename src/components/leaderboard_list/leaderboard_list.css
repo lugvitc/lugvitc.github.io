@@ -26,10 +26,11 @@
 
 .block {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 65px 1.5fr repeat(4, 1fr);
   /* flex-direction: row; */
   align-items: center;
   justify-items: center;
+  /* gap: 20px; */
   height: 65px;
   width: 100%;
   background-color: var(--nord2);
