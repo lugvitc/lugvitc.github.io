@@ -3,7 +3,6 @@ import Topcards from '../../components/topThree/topcards.js';
 import LeaderboardPopUpPage from '../../components/leaderboard_popup_page/leaderboard_popup_page';
 import LeaderboardList from '../../components/leaderboard_list/leaderboard_list.js';
 import useFetch from "../../hooks/useFetch";
-import apiURL from "../../hooks/useFetch"
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -32,7 +31,7 @@ export default function FFCSLeaderboard() {
     const [openPopup, setOpenPopup] = useState(false);
     // stores all members data fetched from the backend
     const [leaderboard_members, setLeaderboardMembers] = useState([]);
-    const { api, apiPost } = useFetch();
+    const { api, apiPost, apiURL } = useFetch();
 
     const fetchMember = () => {
         api("/leaderboard", {
@@ -40,12 +39,18 @@ export default function FFCSLeaderboard() {
         }).then((response) => response.json())
             .then((response) => {
                 for (let mem in response) {
-                    if (response[mem].photo) {
-                        response[mem].photo_path = apiURL + "/leaderboard/pic/" + response[mem].regno;
-                    }
-                    else {
-                        response[mem].photo_path = "https://api.dicebear.com/5.x/avataaars/svg?backgroundColor=03a9f4&seed=" + (Math.random() + 1).toString(36).substring(7);
-                    }
+                    let check = "/leaderboard/pic/" + response[mem].regno;
+                    api(check, {
+                        method : "GET"
+                    }).then((res)=>{
+                        if(!res.ok){
+                            response[mem].photo_path = "https://api.dicebear.com/5.x/avataaars/svg?backgroundColor=03a9f4&seed=" + (Math.random() + 1).toString(36).substring(7);
+                        }
+                        else{
+                            response[mem].photo_path = apiURL + "/leaderboard/pic/" + response[mem].regno;
+                        }
+                        console.log(response[mem], apiURL);
+                    })
                     if (response[mem].contribution_details) {
                         response[mem].contribution_details = response[mem].contribution_details.split(";")
                     }
@@ -55,6 +60,7 @@ export default function FFCSLeaderboard() {
                     response[mem].contribution_details.map((contrib) => {
                         return contrib.trim()
                     })
+                    response[mem].display = response[mem].name.length > 17 ? response[mem].name.slice(0,12)+"..." : response[mem].name;
                 }
                 setLeaderboardMembers(response)
             })

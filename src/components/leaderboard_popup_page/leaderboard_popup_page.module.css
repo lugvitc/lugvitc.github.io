@@ -72,6 +72,10 @@ body {
     text-transform: uppercase;
 }
 
+.details_desc{
+    float: right;
+}
+
 .side {
     display: flex;
     flex-direction: column;
@@ -91,6 +95,7 @@ body {
     width: 100%;
     top: 0;
     position: sticky;
+    text-align: center;
 }
 
 .side_contribs {
@@ -116,6 +121,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.close:hover{
+    color: rgb(255, 0, 0);
 }
 
 .display_inactive {
