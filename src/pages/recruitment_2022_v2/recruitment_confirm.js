@@ -10,7 +10,7 @@ export default function Confirm({ nextStep, values, previousStep }) {
         // USE FLASK BACKEND HERE TO COLLECT ALL DATA
         let formData = values;
         delete formData['flagCommand'];
-        fetch('https://whale-app-7b3m2.ondigitalocean.app/api/recruitment', {
+        fetch('https://leaderboard.lugvitc.org/api/recruitment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
