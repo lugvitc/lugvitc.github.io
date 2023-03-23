@@ -3,10 +3,9 @@ import Topcards from '../../components/topThree/topcards.js';
 import LeaderboardPopUpPage from '../../components/leaderboard_popup_page/leaderboard_popup_page';
 import LeaderboardList from '../../components/leaderboard_list/leaderboard_list.js';
 import useFetch from "../../hooks/useFetch";
+import apiURL from "../../hooks/useFetch"
 import { useEffect } from 'react';
 import { useState } from 'react';
-
-const apiURL = 'http://127.0.0.1:5000/api';
 
 export default function FFCSLeaderboard() {
     // for applying styles to elements
