@@ -41,7 +41,6 @@ body {
     overflow: hidden;
     max-width: 200px;
     max-height: 200px;
-    width: 100%;
     background-color: antiquewhite;
     display: flex;
     align-items: center;
@@ -56,6 +55,7 @@ body {
 .name {
     /* font-weight: bold; */
     font-size: 1.2em;
+    text-align: center;
 }
 
 .details {
@@ -112,7 +112,7 @@ body {
 
 .close {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 20px;
     width: 40px;
     height: 40px;
@@ -162,7 +162,7 @@ body {
         margin-top: -50vh;
         margin-left: -50vw;
         border-radius: 0;
-        height: auto;
+        height: 100vh;
     }
 }
 
@@ -170,11 +170,27 @@ body {
 @media only screen and (max-width: 570px) {
     .main {
         padding: 20px;
-        padding-top: 40px;
+        padding-top: 80px;
     }
 
     .details_option {
         padding: 12px;
         border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main{
+        font-size: 0.75em;
+    }
+
+    .details_option{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .photo img{
+        width: 120px;
+        height: 120px;
     }
 }
