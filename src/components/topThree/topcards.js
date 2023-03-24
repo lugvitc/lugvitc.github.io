@@ -66,7 +66,7 @@ export default function Topcards({
                             2
                         </div>
                         <div className="name">
-                            {top_3_members[1].name}
+                            {top_3_members[1].display}
                         </div>
                         <div className="dept">
                             {top_3_members[1].dept}
@@ -128,7 +128,7 @@ export default function Topcards({
                             1
                         </div>
                         <div className="name">
-                            {top_3_members[0].name}
+                            {top_3_members[0].display}
                         </div>
                         <div className="dept">
                             {top_3_members[0].dept}
@@ -190,7 +190,7 @@ export default function Topcards({
                             3
                         </div>
                         <div className="name">
-                            {top_3_members[2].name}
+                            {top_3_members[2].display}
                         </div>
                         <div className="dept">
                             {top_3_members[2].dept}
