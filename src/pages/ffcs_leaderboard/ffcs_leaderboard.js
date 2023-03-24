@@ -2,6 +2,7 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 import Topcards from '../../components/topThree/topcards.js';
 import LeaderboardPopUpPage from '../../components/leaderboard_popup_page/leaderboard_popup_page';
 import LeaderboardList from '../../components/leaderboard_list/leaderboard_list.js';
+import LeaderboardSearch from '../../components/leaderboard_search/search';
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -31,6 +32,7 @@ export default function FFCSLeaderboard() {
     const [openPopup, setOpenPopup] = useState(false);
     // stores all members data fetched from the backend
     const [leaderboard_members, setLeaderboardMembers] = useState([]);
+    const [leaderboard_all_members, setLeaderboardAllMembers] = useState([]);
     const { api, apiPost, apiURL } = useFetch();
 
     const fetchMember = () => {
@@ -49,7 +51,6 @@ export default function FFCSLeaderboard() {
                         else{
                             response[mem].photo_path = apiURL + "/leaderboard/pic/" + response[mem].regno;
                         }
-                        console.log(response[mem], apiURL);
                     })
                     if (response[mem].contribution_details) {
                         response[mem].contribution_details = response[mem].contribution_details.split(";")
@@ -61,8 +62,10 @@ export default function FFCSLeaderboard() {
                         return contrib.trim()
                     })
                     response[mem].display = response[mem].name.length > 17 ? response[mem].name.slice(0,12)+"..." : response[mem].name;
+                    response[mem].rank = parseInt(mem,10)+1;
                 }
-                setLeaderboardMembers(response)
+                setLeaderboardMembers(response);
+                setLeaderboardAllMembers(response);
             })
     }
 
@@ -99,7 +102,8 @@ export default function FFCSLeaderboard() {
             ]}
             title='Leaderboard'
         >
-            <Topcards top_3_members={leaderboard_members.slice(0, 3)}></Topcards>
+            <Topcards top_3_members={leaderboard_all_members.slice(0, 3)}></Topcards>
+            <LeaderboardSearch members={leaderboard_all_members} setter={setLeaderboardMembers}></LeaderboardSearch>
             <LeaderboardList all_members={leaderboard_members} openPopUp={() => { return updateMember }} />
             <LeaderboardPopUpPage member={member} close_leaderboard_popup={close_leaderboard_popup}></LeaderboardPopUpPage>
         </TerminalWindow>
