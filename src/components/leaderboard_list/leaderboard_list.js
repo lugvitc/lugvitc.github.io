@@ -7,16 +7,16 @@ export default function List({
         <>
             <div className="container">
                 <div className="position">
-                    <div className='rank1' style={{ backgroundColor: "#3b4252", fontSize: "20px", fontFamily: "monospace", fontWeight: "bold" }}>Rank</div>
+                    <div className='rank1' style={{ backgroundColor: "#3b4252", fontFamily: "monospace", fontWeight: "bold" }}>Rank</div>
                     <div className="block" style={{ backgroundColor: "#3b4252" }}>
-                        {/* <div className="img">
-                	<img src={img1} alt="eren jaegar"/>
-            	</div> */}
-                        <div> Name </div>
-                        <div> Reg.No. </div>
-                        <div> Department </div>
-                        <div> Score </div>
-                        <div> Contributions </div>
+                        <div>
+                            <img className="leaderboard_list_img" style={{opacity: "0"}}/>
+                        </div>
+                        <div className="leaderboard_list_name">Name</div>
+                        <div className="leaderboard_list_regno"> Reg.No. </div>
+                        <div className="leaderboard_list_dept"> Department </div>
+                        <div className="leaderboard_list_score"> Score </div>
+                        <div className="leaderboard_list_contributions"> Contributions </div>
                     </div>
                 </div>
 
@@ -33,15 +33,12 @@ export default function List({
                             {/* <div className="img">
                     	<img src={img1} alt="eren jaegar"/>
                 	</div> */}
-                            <div><img style={{ width: "65px", height: "65px", borderRadius: "50%"}} src={member.photo_path}></img></div>
-                            <div style={{ textTransform: "capitalize", wordBreak: "break-all"}}><span>{member.display}</span></div>
-                            <div style={{ textTransform: "uppercase"}}> {member.regno} </div>
-                            <div style={{ textTransform: "capitalize"}}> {member.dept} </div>
-                            {/* <div style={{ textTransform: "capitalize", display: "inline-block", overflow: "hidden", whiteSpace: "nowrap", backgroundColor: "inherit" }}><span>{member.display}</span></div>
-                            <div style={{ textTransform: "uppercase", padding: "10px", backgroundColor: "inherit" }}> {member.regno} </div>
-                            <div style={{ textTransform: "capitalize", padding: "10px", backgroundColor: "inherit" }}> {member.dept} </div> */}
-                            <div> {member.points} </div>
-                            <div> {member.contributions} </div>
+                            <div><img className="leaderboard_list_img" src={member.photo_path}></img></div>
+                            <div className="leaderboard_list_name" style={{ textTransform: "capitalize"}}><span className="d-inline-block text-truncate">{member.display}</span></div>
+                            <div style={{ textTransform: "uppercase" }} className="leaderboard_list_regno"> {member.regno} </div>
+                            <div className="leaderboard_list_dept" style={{ textTransform: "capitalize" }}> {member.dept} </div>
+                            <div className="leaderboard_list_score"> {member.points} </div>
+                            <div className="leaderboard_list_contributions"> {member.contributions} </div>
                         </div>
                     </div>
                 ))}

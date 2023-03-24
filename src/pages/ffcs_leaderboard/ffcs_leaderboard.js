@@ -61,7 +61,7 @@ export default function FFCSLeaderboard() {
                     response[mem].contribution_details.map((contrib) => {
                         return contrib.trim()
                     })
-                    response[mem].display = response[mem].name.length > 17 ? response[mem].name.slice(0,12)+"..." : response[mem].name;
+                    response[mem].display = response[mem].name.length > 15 ? response[mem].name.slice(0,12)+"..." : response[mem].name;
                     response[mem].rank = parseInt(mem,10)+1;
                 }
                 setLeaderboardMembers(response);
