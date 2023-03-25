@@ -82,12 +82,12 @@ export default function UserForm() {
     return (
         <>
             <TerminalWindow
-                title='Recruitment 2022'
+                title='Recruitment 2023'
                 prompts={[
                     { path: '~', command: 'cd recruitment' },
                     {
                         path: '~/recruitment',
-                        command: './recruitment.exe -v 2022'
+                        command: './recruitment.exe -v 2023'
                     }
                 ]}
             >
