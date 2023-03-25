@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fcd7311c.css",
-    "main.js": "/static/js/main.c68f8254.js",
+    "main.js": "/static/js/main.3847c45b.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
     "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
     "static/media/Baleswar.jpeg": "/static/media/Baleswar.33912741090ac4c60dff.jpeg",
@@ -15,10 +15,10 @@
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
     "main.fcd7311c.css.map": "/static/css/main.fcd7311c.css.map",
-    "main.c68f8254.js.map": "/static/js/main.c68f8254.js.map"
+    "main.3847c45b.js.map": "/static/js/main.3847c45b.js.map"
   },
   "entrypoints": [
     "static/css/main.fcd7311c.css",
-    "static/js/main.c68f8254.js"
+    "static/js/main.3847c45b.js"
   ]
 }
