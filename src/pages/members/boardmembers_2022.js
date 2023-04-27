@@ -3,7 +3,6 @@ import vp from '../../images/members/Samridh.jpeg';
 import TechHead from '../../images/members/21BCE5139.jpg';
 import TechCoHead from '../../images/members/21BEC1506.jpeg';
 import OperationHead from '../../images/members/21BCE1972.png';
-import OperationCoHead from '../../images/members/21BLC1153.jpg';
 import blank from '../../images/members/blank.png';
 import { faAlignCenter, faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 const imgStyle = {
@@ -89,7 +88,7 @@ export const boardmembers_2022 = [
             <>
                 <img
                     style={imgStyle}
-                    src={OperationCoHead}
+                    src={blank}
                     alt='Club Tech-Head'
                 />
             </>
