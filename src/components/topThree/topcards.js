@@ -3,7 +3,7 @@ import '../topThree/topcards.css';
 // import img2 from '../../images/top3ffcs/img2.png';
 // import img3 from '../../images/top3ffcs/img3.png';
 export default function Topcards({
-    top_3_members
+    top_3_members, getImgfromAPI, picBaseURL
 }) {
     if (top_3_members.length == 0) {
         return (<></>)
@@ -59,7 +59,7 @@ export default function Topcards({
                                 fill="#c0c0c0"
                             />
                         </svg>
-                        <img src={top_3_members[1].photo_path} alt="" />
+                        <img src={picBaseURL + top_3_members[1].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(1);}} />
                     </div>
                     <div className="second-place">
                         <div className="rank">
@@ -121,7 +121,7 @@ export default function Topcards({
                                 fill="#0092D2"
                             />
                         </svg>
-                        <img src={top_3_members[0].photo_path} alt="" />
+                        <img src={picBaseURL + top_3_members[0].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(0);}} />
                     </div>
                     <div className="first-place">
                         <div className="rank">
@@ -183,7 +183,7 @@ export default function Topcards({
                                 fill="#835220"
                             />
                         </svg>
-                        <img src={top_3_members[2].photo_path} alt="" />
+                        <img src={picBaseURL + top_3_members[2].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(2);}} />
                     </div>
                     <div className="third-place">
                         <div className="rank">

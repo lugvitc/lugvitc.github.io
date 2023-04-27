@@ -34,24 +34,15 @@ export default function FFCSLeaderboard() {
     const [leaderboard_members, setLeaderboardMembers] = useState([]);
     const [leaderboard_all_members, setLeaderboardAllMembers] = useState([]);
     const { api, apiPost, apiURL } = useFetch();
+    const picBaseURL = apiURL + "/leaderboard/pic/"
 
     const fetchMember = () => {
         api("/leaderboard", {
             method: "GET"
         }).then((response) => response.json())
             .then((response) => {
-                for (let mem in response) {
-                    let check = "/leaderboard/pic/" + response[mem].regno;
-                    api(check, {
-                        method : "GET"
-                    }).then((res)=>{
-                        if(!res.ok){
-                            response[mem].photo_path = "https://api.dicebear.com/5.x/avataaars/svg?backgroundColor=03a9f4&seed=" + (Math.random() + 1).toString(36).substring(7);
-                        }
-                        else{
-                            response[mem].photo_path = apiURL + "/leaderboard/pic/" + response[mem].regno;
-                        }
-                    })
+                for (let mem in response) {                    
+                    response[mem].photo_path = picBaseURL + response[mem].regno;
                     if (response[mem].contribution_details) {
                         response[mem].contribution_details = response[mem].contribution_details.split(";")
                     }
@@ -81,6 +72,14 @@ export default function FFCSLeaderboard() {
         setOpenPopup(false);
     }
 
+    function getImgfromAPI(ind){
+        let url = "https://api.dicebear.com/5.x/avataaars/svg?backgroundColor=03a9f4&seed=" + (Math.random() + 1).toString(10).substring(7);
+        leaderboard_all_members[ind].photo_path = url;
+        setLeaderboardMembers(leaderboard_all_members);
+        setLeaderboardAllMembers(leaderboard_all_members);
+        return url;
+    }
+
     useEffect(() => {
         let memberObj = Object.assign({}, member);
         if (openPopup) {
@@ -102,9 +101,9 @@ export default function FFCSLeaderboard() {
             ]}
             title='Leaderboard'
         >
-            <Topcards top_3_members={leaderboard_all_members.slice(0, 3)}></Topcards>
+            <Topcards picBaseURL={picBaseURL} top_3_members={leaderboard_all_members.slice(0, 3)} getImgfromAPI={getImgfromAPI}></Topcards>
             <LeaderboardSearch members={leaderboard_all_members} setter={setLeaderboardMembers}></LeaderboardSearch>
-            <LeaderboardList all_members={leaderboard_members} openPopUp={() => { return updateMember }} />
+            <LeaderboardList picBaseURL={picBaseURL} getImgfromAPI={getImgfromAPI} all_members={leaderboard_members} openPopUp={() => { return updateMember }}/>
             <LeaderboardPopUpPage member={member} close_leaderboard_popup={close_leaderboard_popup}></LeaderboardPopUpPage>
         </TerminalWindow>
     );
