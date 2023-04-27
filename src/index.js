@@ -12,7 +12,7 @@ import Events from './pages/events/events';
 import LearnLinux from './pages/learnLinux/learnLinux';
 import UserForm from './pages/recruitment_2022_v2/recruitment';
 import RescueTux2022Routes from './pages/rescueTux2022/routes';
-import Members from './pages/members/members';
+import Members from './pages/members/boardmembers';
 import FFCSLeaderboard from './pages/ffcs_leaderboard/ffcs_leaderboard';
 
 const pages = [
