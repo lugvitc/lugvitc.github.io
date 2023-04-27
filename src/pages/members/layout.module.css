@@ -1,16 +1,24 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
+  display: inline-grid;
   margin: auto;
   text-align: center;
   background: #2e3440; /* nord0 */
-}
 
+}
+.member {
+    font-size: 25px;
+}
 .position {
   color: #bf616a; /* nord11 */
   font-size: 18px;
 }
-
+.extra {
+  color: #a3be8c; /* nord11 */
+  font-size: 25px;
+  text-indent: 10%;
+}
 .batch {
   color: #ebcb8b; /* nord13 */
 }
@@ -20,7 +28,7 @@
   grid-template-columns: repeat(3,1fr);
 }
 .spacer{
-  padding: 10%;
+  padding: 13px;
 }
 
 @media only screen and (max-width: 700px) {
