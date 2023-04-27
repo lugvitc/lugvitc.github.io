@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom';
 import lugLinkStyles from './lugLink.module.css';
 
 export default function LugLink({ link, children }) {
     return (
-        <a
+        <Link
             className={lugLinkStyles.index}
-            href={link}
+            to={link}
             target='_blank'
             rel='noopener noreferrer'
         >
             {children}
-        </a>
+        </Link>
     );
 }
 
