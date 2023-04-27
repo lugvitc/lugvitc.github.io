@@ -25,7 +25,7 @@ export default function List({
                 {all_members.map((member, index) => (
 
 
-                    <div className="position" onClick={openPopUp(this)} memberindex={index}>
+                    <div key={"img-member-"+member.regno} className="position" onClick={openPopUp(this)} memberindex={index}>
                         <div className='rank1'>{member.rank}</div>
                         <div className="block">
                             <div><img className="leaderboard_list_img" src={picBaseURL + member.regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(index);}}></img></div>
