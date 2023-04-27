@@ -1,6 +1,7 @@
 import '../leaderboard_list/leaderboard_list.css';
+
 export default function List({
-    all_members, openPopUp
+    all_members, openPopUp, getImgfromAPI, picBaseURL
 }) {
     // all_members = all_members.slice(3,)
     return (
@@ -26,14 +27,8 @@ export default function List({
 
                     <div className="position" onClick={openPopUp(this)} memberindex={index}>
                         <div className='rank1'>{member.rank}</div>
-                        {/* <div className="img">
-                    <img src={img1} alt="eren jaegar"/>
-                </div> */}
                         <div className="block">
-                            {/* <div className="img">
-                    	<img src={img1} alt="eren jaegar"/>
-                	</div> */}
-                            <div><img className="leaderboard_list_img" src={member.photo_path}></img></div>
+                            <div><img className="leaderboard_list_img" src={picBaseURL + member.regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(index);}}></img></div>
                             <div className="leaderboard_list_name" style={{ textTransform: "capitalize"}}><span className="d-inline-block text-truncate">{member.display}</span></div>
                             <div style={{ textTransform: "uppercase" }} className="leaderboard_list_regno"> {member.regno} </div>
                             <div className="leaderboard_list_dept" style={{ textTransform: "capitalize" }}> {member.dept} </div>
