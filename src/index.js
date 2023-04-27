@@ -40,7 +40,7 @@ const pages = [
         title: 'Leaderboard',
         link: '/leaderboard',
         component: <FFCSLeaderboard />
-    },
+    }
     //{
     //	title: 'Recruitment 2022',
     //	link: '/recruitment',
@@ -52,11 +52,11 @@ const pages = [
     //    path: '/rescue-tux/*',
     //    component: <RescueTux2022Routes />
     //}
-    {
-         title: 'Recruitment 2022',
-         link: '/recruitment',
-        component: <UserForm />
-     }
+    //{
+    //     title: 'Recruitment 2023',
+    //     link: '/recruitment',
+    //    component: <UserForm />
+    // }
 ];
 
 ReactDOM.render(
