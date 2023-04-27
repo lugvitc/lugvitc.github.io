@@ -10,7 +10,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Aditya Dutt',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -25,7 +25,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Aditya Kushwaha',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -39,7 +39,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Animesh Agarwal',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -53,7 +53,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Emmanuel Allan',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -67,7 +67,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Meetesh Saini',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -81,7 +81,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Moonish S',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
@@ -95,7 +95,7 @@ export const techadvisors_2022 = [
     {
         position: 'Technical Advisor',
         member: 'Rahul Vijayakumar',
-        batch: 'Member since- 2021',
+        batch: 'Member since- 2022',
         photo:(
             <>
                 <img
