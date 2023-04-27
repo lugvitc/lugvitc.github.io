@@ -1,0 +1,9 @@
+.event strong {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--nord13);
+}
+
+.name {
+    color: var(--nord12);
+}
