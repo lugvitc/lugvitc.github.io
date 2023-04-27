@@ -12,12 +12,12 @@ export default function Events() {
             title='Events'
         >
             {eventsDetails.map(({ number, name, details, id }, index) => (
-                <section key={index} id={id} className={eventStyles.event}>
-                    <h2 className={eventStyles.name}>
+                <details key={index} id={id} className={eventStyles.event}>
+                    <summary className={eventStyles.name}>
                         {number}: {name}
-                    </h2>
+                    </summary>
                     {details}
-                </section>
+                </details>
             ))}
         </TerminalWindow>
     );
