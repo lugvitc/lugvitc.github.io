@@ -1,10 +1,10 @@
 import president from '../../images/members/Baleswar.jpeg';
 import vp from '../../images/members/Samridh.jpeg';
 const imgStyle = {
-    width: '100%',
-    height: 'auto'
+    width: '300px',
+    height: '300px',
 };
-export const membersList = [
+export const boardmembers_2021 = [
     {
         position: 'President',
         member: 'Beleswar Prasad Padhi',
