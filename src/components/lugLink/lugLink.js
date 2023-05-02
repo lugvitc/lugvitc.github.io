@@ -6,8 +6,11 @@ export default function LugLink({ link, children }) {
         <Link
             className={lugLinkStyles.index}
             to={link}
-            target='_blank'
             rel='noopener noreferrer'
+            onClick={(e)=>{
+                e.preventDefault();
+                window.open(link,'_blank')
+            }}
         >
             {children}
         </Link>
