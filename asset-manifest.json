@@ -1,24 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.35a6d271.css",
-    "main.js": "/static/js/main.9fec6fe4.js",
+    "main.css": "/static/css/main.6146f61b.css",
+    "main.js": "/static/js/main.81109d83.js",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
+    "static/media/21BCE1972.png": "/static/media/21BCE1972.2d6b57504812df52dea6.png",
+    "static/media/21BCE5926.jpg": "/static/media/21BCE5926.9dc65391d51c7b885790.jpg",
+    "static/media/Baleswar.jpeg": "/static/media/Baleswar.64f84cd548dade5c9760.jpeg",
     "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
-    "static/media/Baleswar.jpeg": "/static/media/Baleswar.33912741090ac4c60dff.jpeg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
-    "static/media/Samridh.jpeg": "/static/media/Samridh.540d386ce961409837b7.jpeg",
+    "static/media/21BPS1330.jpg": "/static/media/21BPS1330.58b0f0a6a1a79d58b613.jpg",
+    "static/media/Samridh.jpeg": "/static/media/Samridh.c756f84bfcb1faa7f02c.jpeg",
+    "static/media/21BCE6104.jpeg": "/static/media/21BCE6104.344f728f46aecfd5e56e.jpeg",
+    "static/media/21BEC1506.jpeg": "/static/media/21BEC1506.2e0d27e09e94587bbb27.jpeg",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
+    "static/media/21BCE5139.jpg": "/static/media/21BCE5139.256eea8af6a0f0e96d0d.jpg",
+    "static/media/blank.png": "/static/media/blank.2fda6558cd58b877e14f.png",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
     "static/media/Discord.svg": "/static/media/Discord.27583b533952833679e4badca4e9e2a4.svg",
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
-    "main.35a6d271.css.map": "/static/css/main.35a6d271.css.map",
-    "main.9fec6fe4.js.map": "/static/js/main.9fec6fe4.js.map"
+    "main.6146f61b.css.map": "/static/css/main.6146f61b.css.map",
+    "main.81109d83.js.map": "/static/js/main.81109d83.js.map"
   },
   "entrypoints": [
-    "static/css/main.35a6d271.css",
-    "static/js/main.9fec6fe4.js"
+    "static/css/main.6146f61b.css",
+    "static/js/main.81109d83.js"
   ]
 }
