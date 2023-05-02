@@ -1,20 +1,33 @@
 {
   "files": {
     "main.css": "/static/css/main.6146f61b.css",
-    "main.js": "/static/js/main.be509af7.js",
+    "main.js": "/static/js/main.bda6b770.js",
+    "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
+    "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
+    "static/media/hacker-horizon2.JPG": "/static/media/hacker-horizon2.ebb94d472d2343e18a95.JPG",
+    "static/media/linux-booth.png": "/static/media/linux-booth.0e2fd219972c07bed5cd.png",
     "static/media/21BCE1972.png": "/static/media/21BCE1972.2d6b57504812df52dea6.png",
+    "static/media/linux-booth2.jpg": "/static/media/linux-booth2.f7f2632388933fa0cab8.jpg",
+    "static/media/linux-booth1.jpg": "/static/media/linux-booth1.d073c377797807c8b168.jpg",
     "static/media/21BCE5926.jpg": "/static/media/21BCE5926.9dc65391d51c7b885790.jpg",
+    "static/media/cyber-o-day2.png": "/static/media/cyber-o-day2.2f947e5921291677af95.png",
+    "static/media/cyber-o-day1.jpg": "/static/media/cyber-o-day1.7d9756720771b2c4ff46.jpg",
     "static/media/Baleswar.jpeg": "/static/media/Baleswar.64f84cd548dade5c9760.jpeg",
     "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
+    "static/media/rescue-tux-2.jpg": "/static/media/rescue-tux-2.e4b40af3bda3536ebdaa.jpg",
+    "static/media/rescue-tux-1.jpg": "/static/media/rescue-tux-1.e54de7a74b80c99c464a.jpg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/21BPS1330.jpg": "/static/media/21BPS1330.58b0f0a6a1a79d58b613.jpg",
+    "static/media/hacker-horizon1.jpeg": "/static/media/hacker-horizon1.4821c714e209564cbf7d.jpeg",
     "static/media/Samridh.jpeg": "/static/media/Samridh.c756f84bfcb1faa7f02c.jpeg",
+    "static/media/rescue-tux.jpeg": "/static/media/rescue-tux.314d1f0e61d4dcd24f34.jpeg",
     "static/media/21BCE6104.jpeg": "/static/media/21BCE6104.344f728f46aecfd5e56e.jpeg",
     "static/media/21BEC1506.jpeg": "/static/media/21BEC1506.2e0d27e09e94587bbb27.jpeg",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
     "static/media/21BCE5139.jpg": "/static/media/21BCE5139.256eea8af6a0f0e96d0d.jpg",
+    "static/media/gsoc.png": "/static/media/gsoc.473dfce07c0bf4b84898.png",
     "static/media/blank.png": "/static/media/blank.2fda6558cd58b877e14f.png",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
     "static/media/Discord.svg": "/static/media/Discord.27583b533952833679e4badca4e9e2a4.svg",
@@ -22,10 +35,10 @@
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "index.html": "/index.html",
     "main.6146f61b.css.map": "/static/css/main.6146f61b.css.map",
-    "main.be509af7.js.map": "/static/js/main.be509af7.js.map"
+    "main.bda6b770.js.map": "/static/js/main.bda6b770.js.map"
   },
   "entrypoints": [
     "static/css/main.6146f61b.css",
-    "static/js/main.be509af7.js"
+    "static/js/main.bda6b770.js"
   ]
 }
