@@ -1,0 +1,135 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 100%;
+    background-color: #2E3440;
+}
+	
+.container{
+	width: 1024px;
+	margin: 0 auto;
+}
+	
+.container_btn{
+	width: 100%;
+	margin: 0px; 
+	padding: 0px;
+}
+
+.searchbar {
+    width: 57%;
+	float: left;
+	text-align: right;
+}
+	/* Styles for dropdown menu */
+.buttons{
+	float: right;	
+	width: 43%;
+}
+/* Styles for Handling the searchbar design */
+.searchbar .search {
+    display: inline-block;
+    border: 0px solid #2E3440;
+    padding: 0px;
+    transition: all 0.15s ease;
+}
+/* Handling the Search bar input */
+.searchbar input[type=text] {
+    font-size: 14px;
+    border: 1px solid #2E3440;
+    border-radius: 5px;
+    padding: 10px;
+    width: 25em;
+    margin: 10px 2px 0 0;
+}
+
+.btn-group .button {
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+}
+
+.btn-group {
+    display: inline-block;
+	margin-left: 50px;
+}
+
+.btn-group .button:hover {
+    background-color: #434C5E;
+    color: white;
+}
+
+.btn-group .button:active, .btn-group .button:focus {
+    background-color: #434C5E;
+    color: white;
+}
+
+/* Media Queries for handling the responsive designs */
+
+@media only screen and (max-width: 768px) {
+.container{
+	width: 100%!important;
+	margin: 0 auto;
+}
+
+.searchbar input[type=text] {
+    font-size: 14px;
+    border: 1px solid #2E3440;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%!important;
+    margin: 10px 2px 0 0;
+}
+
+.searchbar {
+    width: 100%!important;
+	float: none!important;
+}
+	
+.searchbar .search {
+    display: block;
+    border: 0px solid #2E3440;
+    padding: 0px;
+    transition: all 0.15s ease;
+    width: 95%!important;
+    margin: 0px;
+}
+	
+.btn-group .button {
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+    width: 100%!important;
+}
+	
+.btn-group {
+    display: block!important;
+    width: 100%!important;
+	margin: 0px!important;
+}
+
+.buttons {
+    float: right;
+    width: 100%!important;
+}
+
+}
