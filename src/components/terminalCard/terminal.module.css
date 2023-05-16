@@ -7,6 +7,9 @@
     /* height: 40vh; */
     width: 40vw;
     margin: 15px 15px 15px 15px ;
+    @media (max-width: 768px) {
+        width: 90vw;
+    }
 }
 
 .titlebar {
@@ -64,4 +67,20 @@
 .contents.noPrompts {
     margin-top: 0;
 }
+.thumbnail {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .titlebar {
+        margin-inline: 0.5rem;
+    }
 
+    .body {
+        padding-inline: 0.5rem;
+        padding-block: 0.5rem;
+    }
+}

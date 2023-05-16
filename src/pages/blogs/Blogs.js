@@ -1,8 +1,8 @@
 import TerminalWindow from '../../components/terminal/terminalWindow';
 import TerminalCard from '../../components/terminalCard/TerminalCard';
-import useFetch from "../../hooks/useFetch";
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import useFetch from "../../hooks/useFetch";
+// import { useEffect } from 'react';
+// import { useState } from 'react';
 
 export default function Blogs() {
 
