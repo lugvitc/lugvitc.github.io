@@ -15,11 +15,11 @@ export default function TerminalCard({
   date,
   department
 }) {
-  const myStyle = {
-    height: "40vh",
-    width: "38vw",
-    borderRadius: "10px"
-  };
+  // const myStyle = {
+  //   height: "40vh",
+  //   width: "38vw",
+  //   borderRadius: "10px"
+  // };
 
   const [likeCount, setLikeCount] = useState(100);
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function TerminalCard({
       </div>
 
       <div className={`${styles.body} ${util.terminalText}`}>
-        <img src={hacker} style={myStyle} alt="niubnei" />
+      <img className={styles.thumbnail} src={hacker} alt="niubnei" />
         <br />
         <button className="like-button" onClick={handleLikeClick}>
           <span className="icon"></span>
