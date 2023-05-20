@@ -1,93 +1,96 @@
 .index {
     border-radius: 10px;
-    /* border-color: solid var(--nord4); */
     border: 4px solid var(--bs-body-color);
     background-color: var(--header-footer-black);
-    /* min-width: 35%; */
-    max-height: 80vh;
     width: 40vw;
-    margin: 15px 15px 15px 15px ;
-    overflow-y: auto;
-    @media (max-width: 768px) {
-        width: 90vw;
+    margin: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .index {
+      width: 90vw;
     }
-}
-
-.titlebar {
+  }
+  
+  .titlebar {
     display: flex;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     justify-content: center;
     align-items: center;
-    padding-block: 0.75rem;
-    margin-inline: 0.0rem;
-    background-color: var(--header-footer-black); 
+    padding: 0.75rem;
+    margin: 0;
+    background-color: var(--header-footer-black);
     z-index: 1;
-}
-
-.dots {
+    overflow-x: auto;
+  }
+  
+  .dots {
     position: absolute;
-    display: flex;
-    margin-inline: 0.75rem;
+    display: none;
+    margin: 0.75rem;
     gap: 5px;
-}
-
-.dots.left {
+  }
+  
+  .dots.left {
     flex-direction: row;
     left: 0;
-}
-
-.dots.right {
+  }
+  
+  .dots.right {
     flex-direction: row-reverse;
     right: 0;
-}
-
-.dot {
+  }
+  
+  .dot {
     border-radius: 15px;
     height: 15px;
     width: 15px;
-}
-
-.dot:hover {
+  }
+  
+  .dot:hover {
     filter: brightness(50%);
-}
-
-.title {
+  }
+  
+  .title {
     color: var(--nord4);
     font-weight: bold;
-}
-
-.body {
+  }
+  
+  .body {
     background-color: var(--nord1);
-    border-radius: 0px 0px 10px 10px;
-    padding-inline: 1rem;
-    padding-block: 1rem;
-
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
     overflow-y: auto;
-}
-
-.contents {
-    margin-top: 1rem;
-}
-.contents.noPrompts {
+  }
+  
+  .contents.noPrompts {
     margin-top: 0;
-}
-.thumbnail {
+  }
+  
+  .thumbnail {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
     max-height: 50%;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .titlebar {
-        margin-inline: 0.5rem;
+      margin: 0.5rem;
     }
-
+    .dots{
+        display: hide;
+    }
     .body {
-        padding-inline: 0.5rem;
-        padding-block: 0.5rem;
+      padding: 0.5rem;
     }
-}
+  }
+  @media (min-width: 300px) {
+    .dots {
+      display: flex; /* Show the dots for screens larger than 768px */
+    }
+  }
