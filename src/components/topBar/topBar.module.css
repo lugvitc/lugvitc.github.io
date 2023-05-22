@@ -3,9 +3,9 @@
     width: 100%;
     top: 0;
     z-index: 10;
-}
-
-.contents {
+  }
+  
+  .contents {
     background-color: var(--header-footer-black);
     color: var(--nord4);
     display: flex;
@@ -13,9 +13,9 @@
     align-items: center;
     font-size: small;
     padding-inline: 0.5em;
-}
-
-.logo {
+  }
+  
+  .logo {
     margin: 0.5em;
     padding: 0.5em;
     height: 2em;
@@ -23,52 +23,72 @@
     cursor: pointer;
     border-radius: 100vmax;
     background-color: var(--nord2);
-
+  
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo:hover {
+  }
+  
+  .logo:hover {
     background-color: var(--nord10);
-}
-
-.logo svg {
+  }
+  
+  .logo svg {
     height: 2em;
-}
-
-.links {
+  }
+  
+  .links {
     display: flex;
     flex-direction: row;
     margin-right: auto;
-}
-
-.settings {
+  }
+  .linkk {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+  }
+  
+  .link {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: grid;
+    grid: auto auto/ auto auto auto;
+    padding-left: 30px;
+    width: 100%;
+    height: 10vh;
+    background-color: #212529;
+    align-items: center;
+  }
+  
+  .settings {
     display: flex;
     align-items: center;
-}
-
-.settings > svg {
+  }
+  
+  .settings > svg {
     fill: var(--nord3);
     cursor: pointer;
-}
-
-.settings > svg:hover,
-.settings.open > svg {
+  }
+  
+  .settings > svg:hover,
+  .settings.open > svg {
     fill: var(--nord10);
     animation: spin 4s linear infinite;
-}
-
-@keyframes spin {
+  }
+  
+  @keyframes spin {
     0% {
-        transform: rotate(0deg);
+      transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-}
-
-.nonClickable {
+  }
+  
+  .nonClickable {
+    /* display: flex; */
     border-color: var(--nord2);
     height: auto;
     text-decoration: none;
@@ -78,21 +98,21 @@
     padding-inline: 0.5em;
     margin: 0.5em;
     cursor: default;
-}
-
-.clickable {
+  }
+  
+  .clickable {
     text-decoration: none;
     color: var(--nord4);
-}
-
-.clickable:hover {
+  }
+  
+  .clickable:hover {
     transform: translateY(0.5em);
     color: var(--nord10);
     background-color: var(--nord0);
     transition: ease-out 0.25s;
-}
-
-.active {
+  }
+  
+  .active {
     transform: translateY(0.5em);
     background-color: var(--nord0);
     border-radius: 0.3em 0.3em 0 0;
@@ -100,54 +120,54 @@
     margin: 0.5em 0.5em 0 0.5em;
     color: var(--nord10);
     cursor: default;
-}
-
-.active::after {
-    content: ' ▲';
-}
-
-.inactive {
+  }
+  
+  .active::after {
+    content: " ▲";
+  }
+  
+  .inactive {
     background-color: var(--nord1);
     border-radius: 0.3em;
     padding-inline: 0.5em;
     margin: 0.5em;
-}
-
-.inactive::after {
-    content: ' ▼';
-}
-
-.bottomStrip {
+  }
+  
+  .inactive::after {
+    content: " ▼";
+  }
+  
+  .bottomStrip {
     background-color: var(--nord0);
     height: 0.2em;
-}
-
-@media only screen and (max-width: 500px) {
-    .links {
-        flex-direction: column;
+  }
+  
+  .mobileMenu {
+    display: none;
+    height: 20px;
+    width: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    .linkk {
+      /* flex-direction: column; */
+      display: none;
     }
-
-    .clickable:hover {
-        transform: translateX(0.5em);
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 10px 0px 10px;
     }
-
-    .active {
-        transform: translateY(0);
-        background-color: var(--nord0);
-        border-radius: 0.3em;
-        padding-inline: 0.5em;
-        margin: 0.5em;
-        color: var(--nord10);
+    .burg {
+      text-decoration: none;
+      color: rgb(48, 61, 61);
+      height: 6vw;
+      width: 20vw;
+      background-color: var(--nord0);
+      border-radius: 0.3em 0.3em 0 0;
+      padding-inline: 0.5em;
+      margin: 0.5em 0.5em 0.5em 0.5em;
+      color: var(--nord10);
+      cursor: default;
     }
-
-    .active::after {
-        content: '';
-    }
-    .inactive::after {
-        content: '';
-    }
-
-    .bottomStrip {
-        display: none;
-    }
-}
+  }
+  
