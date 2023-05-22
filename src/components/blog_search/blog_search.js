@@ -1,68 +1,125 @@
-// Functions to search for the blog or the content in the blog
-function blogsearch(e) {
-    const input = e
-    const filter = input.value.toUpperCase();
-    const filteredBlogs = blogs.filter(blog => {
-        return blog.name.toUpperCase().includes(filter);
-    });
+import  "./blog_search.css";
+
+
+
+function chooseBlog( blogs, setter) {
+  const sortDropdown = document.querySelector(".blog_sort_button");
+  const sortOption = sortDropdown.options[sortDropdown.selectedIndex].value;
+  switch (sortOption) {
+    case "Category":
+      displayCategoryBlog(blogs, setter,"");
+      break;
+    case "Web Development":
+      displayCategoryBlog(blogs, setter,"Web Development");
+      break;
+    case "Cyber Security":
+      displayCategoryBlog(blogs, setter,"Cyber Security");
+      break;
+    case "Android Development":
+      displayCategoryBlog(blogs, setter,"Android Development");
+      break;
+    case "UI/UX Design":
+      displayCategoryBlog(blogs, setter,"UI/UX Design");
+      break;
+  }
 }
 
-// Function to filter the blogs posted by Technical Department
-function filterByTechnical(blogs) {
-    filteredBlogs = blogs.filter(blog => blog.department === 'Technical');
-    return filteredBlogs
-};
+//
+function searchFunction(blogs,e,setter) {
+  const input = e.currentTarget;
+  const filter = input.value.toUpperCase();
+  const filteredBlogs = blogs.filter((blogs) => {
+    return (
+      blogs.title.toUpperCase().includes(filter) ||
+      blogs.description.toUpperCase().includes(filter)
+    );
+  });
+  setter(filteredBlogs);
+  console.log(filteredBlogs);
+}
+function displayCategoryBlog(blogs , setter,title) {
+    
+    const sortOption = title;
+    const filteredBlogs = blogs.filter((blogs) => {
+    return (
+      blogs.dept.includes(sortOption) 
+      
+    );
+  });
+  setter(filteredBlogs);
+ 
+}
 
-// Function to filter the blogs posted by Management Department
-function filterByTechnical(blogs) {
-    filteredBlogs = blogs.filter(blog => blog.department === 'Management');
-    return filteredBlogs
-};
+export default function BlogSearch({ all_blogs ,setter }) {
+  return (
+    <>
+    <div className="blogSearch">
+        <div className="searchbar">
+          <div className="search">
+            <input
+              type="text"
+              id="searchinput"
+              onChange={(e) => {
+                searchFunction(all_blogs,e,setter);
+              }}
+              placeholder="Search"
+            />
+          </div>
+        </div>
+          <div className="buttons">
+            <div className="btnGroup">
+              <span>Filter By: </span>
+              <select
+          className="blog_sort_button"
+          onChange={(e) => {
+            chooseBlog(all_blogs,setter);
+          }}
+        >
+                <option>Category</option>
+                <option>Web Development</option>
+                <option>Cyber Security</option>
+                <option>Android Development</option>
+                <option>Machine Learning</option>
+                <option>UI/UX Design</option>
+              </select>
+            </div>
+          </div>
+    </div>    
+</>
+  );
+}
 
-// Function to filter the blogs posted by Operations Department
-function filterByTechnical(blogs) {
-    filteredBlogs = blogs.filter(blog => blog.department === 'Operations');
-    return filteredBlogs
-};
-
-// Function to filter the blogs posted by Media Department
-function filterByTechnical(blogs) {
-    filteredBlogs = blogs.filter(blog => blog.department === 'Media');
-    return filteredBlogs
-};
-
-// Function to filter the blogs posted by Content Department
-function filterByTechnical(blogs) {
-    filteredBlogs = blogs.filter(blog => blog.department === 'Content');
-    return filteredBlogs
-};
-
-// Add an Event Listner to filter Dropdown
-const filterDropDown = document.querySelector(".button");
-
-filterDropDown.addEventListener("change", ()=> {
-    // filterOption will filter the Blogs posted by their Respective Departments from the Dropdown
-    // .options returns the collection of all options in the dropdown list
-    // .selectedIndex return the index of the selected option in the dropdown list - Index starts from 0
-    const filterOption = filterDropDown.options[filterDropDown.selectedIndex].value;
-    // Switch case to filter the blogs of the departments
-    switch (filterOption) {
-        case "Technical":
-            filterByTechnical();
-            break;
-        case "Management":
-            filterByManagement();
-            break;
-        case "Operations":
-            filterByOperations();
-            break;
-        case "Media":
-            filterByMedia();
-            break;
-        case "Content":
-            filterByContent();
-            break;
-        default:
-            break;
-    }
-})
+// <div className={Styles.blogSearch}>
+// <div className={Styles.searchbar}>
+//   <div className="search">
+//     <input
+//       type="text"
+//       id="searchinput"
+//       onChange={(e) => {
+//         searchFunction(all_blogs,e,setter);
+//       }}
+//       placeholder="Search"
+//     />
+//   </div>
+// </div>
+// <div className={Styles.right}>
+//   <div className={Styles.buttons}>
+//     <div className={Styles.btn_group}>
+//       <span style={{color: "#ffffff", fontSize: "14px"}}>Filter By: </span>
+//       <select
+//   className="blog_sort_button"
+//   onChange={(e) => {
+//     chooseBlog(all_blogs,setter);
+//   }}
+// >
+//         <option>Category</option>
+//         <option>Web Development</option>
+//         <option>Cyber Security</option>
+//         <option>Android Development</option>
+//         <option>Machine Learning</option>
+//         <option>UI/UX Design</option>
+//       </select>
+//     </div>
+//   </div>
+// </div>
+// </div>    

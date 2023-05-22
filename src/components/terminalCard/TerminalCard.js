@@ -1,7 +1,7 @@
 import styles from "./terminal.module.css";
 import util from "../../styles/util.module.css";
-import TerminalDots from "./terminalDots.js";
-import hacker from "../../images/hackers-horizon/hacker-horizon.JPG";
+// import TerminalDots from "./terminalDots.js";
+// import hacker from "../../images/hackers-horizon/hacker-horizon.JPG";
 import "../../components/blogs_popup_page/blogs_popup.css";
 import "../../styles/button.css";
 import "../terminalCard/cardRow.css";
@@ -10,14 +10,8 @@ import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 
 export default function TerminalCard({
-  title,
-  onClickRed,
-  onClickYellow,
-  onClickGreen,
-  summary,
-  date,
-  department,
-  mdtext,
+
+blogs
 }) {
   const [likeCount, setLikeCount] = useState(100);
   useEffect(() => {
@@ -39,36 +33,33 @@ export default function TerminalCard({
   };
 
   return (
-    <div className={styles.index}>
+    <>
+  {blogs.map((blog, index) => (
+    <div className={styles.index} key={index}>
       <div className={`${styles.titlebar} ${util.noSelection}`}>
-        <TerminalDots
-          onClickRed={onClickRed}
-          onClickYellow={onClickYellow}
-          onClickGreen={onClickGreen}
-        />
-        <div className={styles.title}>{title}</div>
+        <div className={styles.title}>{blog.title}</div>
       </div>
 
       <div className={`${styles.body} ${util.terminalText}`}>
-        <img className={styles.thumbnail} src={hacker} alt="niubnei" />
+        <img className={styles.thumbnail} src={blog.thumbnail} alt="niubnei" />
         <br />
         <div className="info">
           <button className="like-button" onClick={handleLikeClick}>
             <span className="icon"></span>
             <span className="count">{likeCount}</span>
           </button>
-          <h3>{department}</h3>
-          <h5>{date}</h5>
+          <div className="dept">{blog.dept}</div>
+          <div className="date">{blog.date}</div>
         </div>
         <p></p>
-        <p>{summary}</p>
+        <p>{blog.description}</p>
         <button className="button" onClick={handleReadMoreClick}>
           Read More
         </button>
 
         {showPopup && (
           <div className="popup">
-            <ReactMarkdown>{mdtext}</ReactMarkdown>
+            <ReactMarkdown>{blog.content}</ReactMarkdown>
             <button className="button" onClick={handleCloseClick}>
               Close
             </button>
@@ -76,5 +67,8 @@ export default function TerminalCard({
         )}
       </div>
     </div>
+
+))}
+    </>
   );
 }

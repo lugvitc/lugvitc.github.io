@@ -2,13 +2,15 @@
     border-radius: 10px;
     border: 4px solid var(--bs-body-color);
     background-color: var(--header-footer-black);
-    width: 40vw;
+    width: 27vw;
+    height: auto;
     margin: 15px;
+    margin-bottom: 20px;
   }
   
   @media (max-width: 768px) {
     .index {
-      width: 90vw;
+      width: 84vw;
     }
   }
   
