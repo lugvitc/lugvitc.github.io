@@ -14,77 +14,64 @@ export default function Blogs() {
         alignItems:"center",
     };
 
-    let blog2 = [{
-        title: "ello",
-        thumbnail: `https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
-        dept: "Web Development",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "peelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "Android Development",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "zeelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "UI/UX Design",
-        date: "01-05-2023",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "heelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "Android Development",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "feelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "UI/UX Design",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "keelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "Cyber Security",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-    {
-        title: "teelo",
-        thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        dept: "Android Development",
-        date: "01-11-2001",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-        content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
-    },
-]
+    //  uncomment for testing locally
+//     let blog2 = [{
+//         title: "ello",
+//         thumbnail: `https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
+//         dept: "Web Development",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "peelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "Android Development",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "zeelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "UI/UX Design",
+//         date: "01-05-2023",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "heelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "Android Development",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "feelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "UI/UX Design",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "keelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "Cyber Security",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+//     {
+//         title: "teelo",
+//         thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         dept: "Android Development",
+//         date: "01-11-2001",
+//         description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
+//         content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
+//     },
+// ]
 
     let blog = {
         title: "",
@@ -92,36 +79,40 @@ export default function Blogs() {
         date: "",
         description: "",
         content: "",
-        // photo_path: "https://api.dicebear.com/5.x/avataaars/svg?scale=50",
-        // extern_style: styleObj
     }
 
     // // all the blogs is passed to jsx part to display it.
     const [Blogs, setBlogs] = useState([]);
     const [AllBlogs, setAllBlogs] = useState([]);
 
-    // const { api, apiPost, apiURL } = useFetch();
-    // const picBaseURL = apiURL + "/leaderboard/pic/"
-
-    // const fetchMember = () => {
-    //     api("/leaderboard", {
-    //         method: "GET"
-    //     }).then((response) => response.json())
-    //         .then((response) => {
-    //             for (let blog in response) {
-    //                 // response[blog].title
-                  
-    //             }
-    //         })
-    // }
+    const { api, apiPost, apiURL } = useFetch();
+    const fetchBlogs = () => {
+        api("/blog", {
+            method: "POST"
+        }).then((response) => response.json())
+            .then((response) => {
+                let all_blogs = response["blog"]
+                all_blogs.forEach(blog => {
+                    let date = new Date(blog.date+' UTC');
+                    blog.date = date.toISOString().slice(0,10);
+                });
+                setBlogs(all_blogs);
+                setAllBlogs(all_blogs);
+                console.log(Blogs);
+        console.log(AllBlogs);
+            })
+    }
 
     useEffect(()=>{
-        setBlogs(blog2);
-        setAllBlogs(blog2);
-        
-        console.log(Blogs);
-        console.log(AllBlogs);
+        fetchBlogs();
     },[])
+
+    // remove this
+    // useEffect(() => {
+      
+    //     setAllBlogs(blog2);
+    //     setBlogs(blog2);
+    // }, [])
     
     return (
         <TerminalWindow
@@ -134,42 +125,6 @@ export default function Blogs() {
         <BlogSearch all_blogs={AllBlogs} setter={setBlogs}></BlogSearch>
         <div className="posts" style={myStyle}>
             <TerminalCard blogs={Blogs}></TerminalCard>
-{/*             
-            <TerminalCard
-            title='Blog1'
-            date = 'dd/mm/yy'
-            department= 'dep'
-            summary='  Quae dolore veritatis quo eos natus aut laboriosam enim voluptatibus error dignissimos ipsam, aliquam '
-            mdtext='# Sample MDtext
-            - this is a sample markdown text'>
-            </TerminalCard>
-
-            <TerminalCard
-            title='Blog2'
-            date = 'dd/mm/yy'
-            department= 'dep'
-            summary='  Quae dolore veritatis quo eos natus aut laboriosam enim voluptatibus error dignissimos ipsam, aliquam '
-            mdtext='# Sample MDtext
-            - this is a sample markdown text'>
-            </TerminalCard>
-
-            <TerminalCard
-            title='Blog3'
-            date = 'dd/mm/yy'
-            department= 'dep'
-            summary='  Quae dolore veritatis quo eos natus aut laboriosam enim voluptatibus error dignissimos ipsam, aliquam '
-            mdtext='# Sample MDtext
-            - this is a sample markdown text'>
-            </TerminalCard>
-            <TerminalCard
-            title='Blog4'
-            date = 'dd/mm/yy'
-            department= 'dep'
-            summary='  Quae dolore veritatis quo eos natus aut laboriosam enim voluptatibus error dignissimos ipsam, aliquam '
-            mdtext='# Sample MDtext
-            - this is a sample markdown text'>
-            </TerminalCard> */}
-
 
         </div>
             
@@ -177,3 +132,4 @@ export default function Blogs() {
         
     );
 }
+

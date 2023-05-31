@@ -26,10 +26,10 @@ export default function TerminalCard({ blogs }) {
   };
 
   const [showPopup, setShowPopup] = useState(false);
-  const [popupContent, setPopupContent] = useState("");
+  const [popupContent, setPopupContent] = useState({});
 
-  const handleReadMoreClick = (content) => {
-    setPopupContent(content);
+  const handleReadMoreClick = (content,blogTitle) => {
+    setPopupContent({content:content,title:blogTitle});
     setShowPopup(true);
   };
 
@@ -39,7 +39,9 @@ export default function TerminalCard({ blogs }) {
 
   return (
     <>
+      { (blogs.length == 0) && (<h3> No Blogs Available</h3>) }
       {blogs.map((blog, index) => (
+        
         <div className={styles.index} key={index}>
           <div className={`${styles.titlebar} ${util.noSelection}`}>
             <div className={styles.title}>{blog.title}</div>
@@ -60,14 +62,14 @@ export default function TerminalCard({ blogs }) {
                 <span className="icon"></span>
                 <span className="count">{likeCounts[index]}</span>
               </button>
-              <div className="dept">{blog.dept}</div>
+              <div className="blog_dept">{blog.tags}</div>
               <div className="date">{blog.date}</div>
             </div>
             <p></p>
             <p>{blog.description}</p>
             <button
               className="button"
-              onClick={() => handleReadMoreClick(blog.content)}
+              onClick={() => handleReadMoreClick(blog.content,blog.title)}
             >
               Read More
             </button>
@@ -77,7 +79,8 @@ export default function TerminalCard({ blogs }) {
 
       {showPopup && (
         <div className="popup">
-          <ReactMarkdown>{popupContent}</ReactMarkdown>
+          <div className="blog_title">{popupContent.title}</div>
+          <ReactMarkdown>{popupContent.content}</ReactMarkdown>
           <button className="button" onClick={handleCloseClick}>
             Close
           </button>

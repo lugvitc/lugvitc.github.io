@@ -59,7 +59,7 @@
     filter: brightness(0) invert(1);
   }
   /*  */
-  .dept{
+  .blog_dept{
     display: flex;
     height: 3.5vh;
     width: 200px;
@@ -75,7 +75,7 @@
     /* transition: background-color 0.3s, transform 0.3s; */
     /* margin-right: 10px; */
   }
-  .dept:hover {
+  .blog_dept:hover {
     display: flex;
     height: 3.5vh;
     width: 200px;
@@ -94,7 +94,7 @@
   .date{
     display: flex;
     height: 3.5vh;
-    width: 110px;
+    width: 120px;
     align-items: center;
     text-align: center;
     background-color: #2a2f3a;
@@ -127,7 +127,7 @@
     /* margin-right: 10px; */
   }
   @media (max-width: 768px) {
-    .dept,date{
+    .blog_dept,date{
       height: 5.25vh;
       
     }
