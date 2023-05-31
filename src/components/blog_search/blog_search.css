@@ -1,0 +1,144 @@
+
+	
+.blogSearch{
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 20px 25px 20px;
+
+}
+	
+
+
+.searchbar {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8vh;
+    align-items: center;
+
+    /* height: 25px; */
+}
+.buttons {	
+    height: 8vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+	/* float: left; */
+	/* text-align: right; */
+
+	/* Styles for dropdown menu */
+    
+.searchbar input[type=text] {
+    font-size: 18px;
+    border: 1px solid #2E3440;
+    border-radius: 5px;
+    padding: 9px;
+    width: 300px;
+    margin: 10px 2px 0 0;
+}
+
+.btnGroup {
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+}
+.btnGroup .blog_sort_button {
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+}
+
+
+/* Media Queries for handling the responsive designs */
+
+@media only screen and (max-width: 768px) {
+.container{
+	width: 100%!important;
+	margin: 0 auto;
+}
+
+.searchbar input[type=text] {
+    font-size: 14px;
+    border: 1px solid #2E3440;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%!important;
+    margin: 10px 2px 0 0;
+}
+
+.searchbar {
+    width: 100%!important;
+	float: none!important;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+	
+.searchbar .search {
+    display: block;
+    border: 0px solid #2E3440;
+    padding: 0px;
+    transition: all 0.15s ease;
+    width: 95%!important;
+    margin: 0px;
+}
+	
+.btnGroup .button {
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+    width: 100%!important;
+}
+.btnGroup .blog_sort_button{
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid #434C5E;
+    border-radius: 5px;
+    margin: 10px 2px;
+    width: 100%!important;
+}
+	
+
+
+}

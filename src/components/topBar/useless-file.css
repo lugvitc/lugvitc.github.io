@@ -1,0 +1,153 @@
+.index {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.contents {
+    background-color: var(--header-footer-black);
+    color: var(--nord4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: small;
+    padding-inline: 0.5em;
+}
+
+.logo {
+    margin: 0.5em;
+    padding: 0.5em;
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    border-radius: 100vmax;
+    background-color: var(--nord2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo:hover {
+    background-color: var(--nord10);
+}
+
+.logo svg {
+    height: 2em;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+.settings > svg {
+    fill: var(--nord3);
+    cursor: pointer;
+}
+
+.settings > svg:hover,
+.settings.open > svg {
+    fill: var(--nord10);
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nonClickable {
+    border-color: var(--nord2);
+    height: auto;
+    text-decoration: none;
+    color: var(--nord4);
+    background-color: var(--nord1);
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    margin: 0.5em;
+    cursor: default;
+}
+
+.clickable {
+    text-decoration: none;
+    color: var(--nord4);
+}
+
+.clickable:hover {
+    transform: translateY(0.5em);
+    color: var(--nord10);
+    background-color: var(--nord0);
+    transition: ease-out 0.25s;
+}
+
+.active {
+    transform: translateY(0.5em);
+    background-color: var(--nord0);
+    border-radius: 0.3em 0.3em 0 0;
+    padding-inline: 0.5em;
+    margin: 0.5em 0.5em 0 0.5em;
+    color: var(--nord10);
+    cursor: default;
+}
+
+.active::after {
+    content: ' ▲';
+}
+
+.inactive {
+    background-color: var(--nord1);
+    border-radius: 0.3em;
+    padding-inline: 0.5em;
+    margin: 0.5em;
+}
+
+.inactive::after {
+    content: ' ▼';
+}
+
+.bottomStrip {
+    background-color: var(--nord0);
+    height: 0.2em;
+}
+
+@media only screen and (max-width: 500px) {
+    .links {
+        flex-direction: column;
+    }
+
+    .clickable:hover {
+        transform: translateX(0.5em);
+    }
+
+    .active {
+        transform: translateY(0);
+        background-color: var(--nord0);
+        border-radius: 0.3em;
+        padding-inline: 0.5em;
+        margin: 0.5em;
+        color: var(--nord10);
+    }
+
+    .active::after {
+        content: '';
+    }
+    .inactive::after {
+        content: '';
+    }
+
+    .bottomStrip {
+        display: none;
+    }
+}
