@@ -17,6 +17,7 @@ import booth2 from "../../images/linux-booth/linux-booth2.jpg";
 import gsoc from "../../images/gsoc-made-easy/gsoc.png";
 import winnerOne from "../../images/adrenaline/winner-one.jpg";
 import winnerTwo from "../../images/adrenaline/winner-two.jpg";
+import password_poster from "../../images/password/password-poster.png";
 // import './events.module.css';
 const imgStyle = {
   width: "38vw",
@@ -560,6 +561,47 @@ export const eventsDetails = [
     </div>
   </div>
 </div>
+          </div>
+        </div>
+      </>
+    ),
+  },
+  {
+    number: "06",
+    name: "Password",     // name password
+    link: "lugvitc.github.io/#/events#password",      // link password
+    id: "password",       // id password
+    details: (
+      <>
+        <div className="box" style={boxArea}>
+          <div className="left" style={leftArea}>
+            <img
+              loading="lazy"
+              style={imgStyle}
+              src={password_poster}        // src
+              alt="password"      // alt
+            />
+          </div>
+          <div className="right" style={rightArea}>
+            <p>
+              "Password"  in this event  participants will have the opportunity to engage in hands-on 
+              workshops, where they can learn practical skills related to cybersecurity. These workshops 
+              will cover areas like cryptography, penetration testing, and incident response
+            </p>
+            <p>
+              The first day of the event will be a workshop taken up by the Technical department of the 
+              club, the workshop will ensure that the participants will learn about all the topics in 
+              detail with a hands on experience and how to use them in real time applications. 
+            </p>
+            <p>
+              "Password" is a unique all-inclusive event featuring three sessions. The main event takes 
+              place on the second day. The event aims to provide participants with a comprehensive platform 
+              to explore and showcase their skills and expertise. The first session is a captivating 
+              Capture the Flag (CTF) competition with 25 challenges covering topics like Linux and binary 
+              exploitation. The second session is an exciting Escape the Room challenge where participants must 
+              acquire a key from a remote machine. In the third session, participants use the obtained key to 
+              unlock a safe and earn a trophy.
+            </p>
           </div>
         </div>
       </>
