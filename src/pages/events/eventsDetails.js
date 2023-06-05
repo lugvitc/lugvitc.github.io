@@ -222,14 +222,10 @@ export const eventsDetails = [
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong>, who received a prize of X
-                rs.
+                Team <strong>EchoHelloWorld</strong>, who received a prize of Rs.3000 
               </li>
               <li>
-                Team <strong>X</strong>, who received a prize of X rs.
-              </li>
-              <li>
-                Team <strong>X</strong>, who received a prize of X rs.
+                Team <strong>Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who received a prize of 2000 rs.
               </li>
             </ol>
           </div>
