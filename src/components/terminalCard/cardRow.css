@@ -64,6 +64,8 @@
     height: 3.5vh;
     width: 200px;
     align-items: center;
+    justify-content: center;
+    
     background-color: #2a2f3a;
     /* border: 2px solid black; */
     border-radius: 8px;

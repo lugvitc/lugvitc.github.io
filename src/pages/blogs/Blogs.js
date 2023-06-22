@@ -92,10 +92,22 @@ export default function Blogs() {
         }).then((response) => response.json())
             .then((response) => {
                 let all_blogs = response["blog"]
+                // console.log(all_blogs.thumbnail);
+                all_blogs.forEach((th)=>{
+                    // console.log('leaderboard.lugvitc.org'+th.thumbnail);
+                    th.thumbnail='https://leaderboard.lugvitc.org'+th.thumbnail;
+                    console.log(th.thumbnail);
+                })
                 all_blogs.forEach(blog => {
                     let date = new Date(blog.date+' UTC');
                     blog.date = date.toISOString().slice(0,10);
+                    // let thumb = 'leaderboard.'+all_blogs.thumbnail;
+                    // blog.thumbnail=thumb; 
                 });
+                // let all_blogs2 = response["blog"]
+                // all_blogs.forEach(blog => {
+                // });
+
                 setBlogs(all_blogs);
                 setAllBlogs(all_blogs);
                 console.log(Blogs);
