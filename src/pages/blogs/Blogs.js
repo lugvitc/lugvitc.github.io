@@ -92,7 +92,10 @@ export default function Blogs() {
         }).then((response) => response.json())
             .then((response) => {
                 let all_blogs = response["blog"]
-                // console.log(all_blogs.thumbnail);
+                all_blogs.forEach((con)=>{
+                    con.content=con.content.replace(/\!\[(.*?)\]\s*\(\/api\/blog\/image/, "!\[$1\]\(https://leaderboard.lugvitc.org/api/blog/image")
+                    // console.log(th.thumbnail);
+                })
                 all_blogs.forEach((th)=>{
                     // console.log('leaderboard.lugvitc.org'+th.thumbnail);
                     th.thumbnail='https://leaderboard.lugvitc.org'+th.thumbnail;

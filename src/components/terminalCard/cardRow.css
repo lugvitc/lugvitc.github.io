@@ -134,3 +134,8 @@
       
     }
   }
+
+  .popup img{
+    max-width: min(75%, 500px);
+    max-height: min(75%, 500px);
+  }
