@@ -80,7 +80,9 @@ export default function TerminalCard({ blogs }) {
       {showPopup && (
         <div className="popup">
           <div className="blog_title">{popupContent.title}</div>
+
           <ReactMarkdown>{popupContent.content}</ReactMarkdown>
+          
           <button className="button" onClick={handleCloseClick}>
             Close
           </button>
