@@ -84,3 +84,14 @@ code {
     border-radius: 0.3em;
 }
 
+@media only screen and (max-width: 380px) {
+    main#content {
+        flex-direction: column-reverse;
+
+        padding-inline: 0rem;
+        padding-bottom: 0;
+    }
+}
+  
+
+
