@@ -74,7 +74,7 @@ export default function Members() {
                 </div>
                 <div class="teamContent">
                   <h3 class={layout.name}>Abhishek Kumar</h3>
-                  <h4 class={layout.title}>Technical Head</h4>
+                  <h4 class={layout.title}>President</h4>
                 </div>
                 <ul class={layout.social}>
                   <li>
