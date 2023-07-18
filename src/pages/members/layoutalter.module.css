@@ -16,8 +16,14 @@
     font-size: 20px;
 }
   .twos{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    font-family: tahoma;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
   }
   .spacer{
     padding: 100px;
