@@ -120,28 +120,28 @@ export default function Members() {
                 <ul class={layout.social}>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://github.com/aadityakushwaha"
                       class="fa fa-github"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://instagram.com/aaditya_kushwaha_"
                       class="fa fa-instagram"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://twitter.com/Aaditya_K_"
                       class="fa fa-twitter"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://www.linkedin.com/in/aadityakushwaha"
                       class="fa fa-linkedin"
                       aria-hidden="true"
                     ></a>
