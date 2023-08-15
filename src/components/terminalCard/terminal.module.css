@@ -7,10 +7,32 @@
     margin: 15px;
     margin-bottom: 20px;
   }
-  
+  /* ADDED RESPONSIVENESS TO INDEX COMPONENT FOR VARIOUS BREAKPOINTS */
+  @media (max-width: 1400px){
+    .index{
+      width: 35vw;
+    }
+  }
+  @media (max-width: 1200px)
+  {
+    .index{
+      width: 40vw;
+    }
+  }
+  @media (max-width: 992px)
+  {
+    .index{
+      width: 50vw;
+    }
+  }
   @media (max-width: 768px) {
     .index {
-      width: 84vw;
+      width: 61vw;
+    }
+  }
+  @media (max-width: 576px) {
+    .index {
+      width: 70vw;
     }
   }
   

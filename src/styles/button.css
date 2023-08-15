@@ -1,6 +1,5 @@
 .button {
   border: none;
-  color: white;
   padding: 4px 8px;
   text-align: center;
   text-decoration: none;
@@ -9,13 +8,14 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer; 
-  background-color: #3b4252;
+  background-color: #2a2f3a;
   color: black;
   border: 2px solid #212529;
   border-radius: 5px;
+  color: white;
 }
 
 .button:hover {
   background-color: #212529;
-  color: white;
+  
 }

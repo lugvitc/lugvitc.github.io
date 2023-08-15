@@ -30,19 +30,24 @@
     cursor: pointer;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    color: #212529;
-    font-weight: bold;
+    background-color: #2a2f3a;
+    color: #e0e7ec;
     transition: background-color 0.3s, transform 0.3s;
     margin-right: 10px;
+    padding: 4px;
+    padding-right: 11px;
+    
   }
-  
+  /* heart color inverted */
   .like-button .icon {
+    color: #e0e7ec;
     display: inline-block;
     width: 20px;
     height: 20px;
     background-image: url("../../images/heart.png");
     background-size: cover;
     margin-right: 5px;
+    filter: brightness(0) invert(1);
   }
   
   .like-button .count {
@@ -62,10 +67,11 @@
   .blog_dept{
     display: flex;
     height: 3.5vh;
-    width: 200px;
+    width: 170px;
     align-items: center;
     justify-content: center;
-    
+    padding: 1rem;
+    font-size: 1rem;
     background-color: #2a2f3a;
     /* border: 2px solid black; */
     border-radius: 8px;
@@ -78,10 +84,7 @@
     /* margin-right: 10px; */
   }
   .blog_dept:hover {
-    display: flex;
-    height: 3.5vh;
-    width: 200px;
-    align-items: center;
+
     background-color: #212529;
     /* border: 2px solid black; */
     border-radius: 8px;
@@ -93,6 +96,7 @@
     transition: background-color 0.3s, transform 0.3s;
     /* margin-right: 10px; */
   }
+  /* FIXED FONT-SIZE AND ALIGNMENT AND ANIMATION OF DATE COMPONENT */
   .date{
     display: flex;
     height: 3.5vh;
@@ -103,6 +107,7 @@
     /* border: 2px solid black; */
     border-radius: 8px;
     justify-content: center;
+    margin-left: 0.625rem;
     /* cursor: pointer; */
     /* font-family: Arial, sans-serif; */
     /* font-size: 24px; */
@@ -110,12 +115,11 @@
     /* font-weight: bold; */
     /* transition: background-color 0.3s, transform 0.3s; */
     /* margin-right: 10px; */
+    transition: background 0.5s;
+    font-size: 1rem;
+    padding: 1rem;
   }
   .date:hover {
-    display: flex;
-    height: 3.5vh;
-    width: 110px;
-    align-items: center;
     background-color: #212529;
     text-align: center;
     /* border: 2px solid black; */
@@ -128,10 +132,15 @@
     transition: background-color 0.3s, transform 0.3s;
     /* margin-right: 10px; */
   }
-  @media (max-width: 768px) {
-    .blog_dept,date{
-      height: 5.25vh;
-      
+  @media (max-width: 576px) {
+    .info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
     }
   }
 
