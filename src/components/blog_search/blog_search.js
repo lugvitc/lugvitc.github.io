@@ -4,7 +4,7 @@ function chooseBlog(blogs, setter) {
   const sortDropdown = document.querySelector(".blog_sort_button");
   const sortOption = sortDropdown.options[sortDropdown.selectedIndex].value;
   switch (sortOption) {
-    case "Category":
+    case "All":
       displayCategoryBlog(blogs, setter, "");
       break;
     case "Web Development":
@@ -18,6 +18,9 @@ function chooseBlog(blogs, setter) {
       break;
     case "UI/UX Design":
       displayCategoryBlog(blogs, setter, "UI/UX Design");
+      break;
+    default:
+      displayCategoryBlog(blogs, setter, "");
       break;
   }
 }
@@ -60,7 +63,7 @@ export default function BlogSearch({ all_blogs, setter }) {
           </div>
         </div>
         <div className="buttons">
-          <div className="btnGroup">
+          
             <select
               className="blog_sort_button"
               onChange={(e) => {
@@ -74,7 +77,7 @@ export default function BlogSearch({ all_blogs, setter }) {
               <option>Machine Learning</option>
               <option>UI/UX Design</option>
             </select>
-          </div>
+          
         </div>
       </div>
     </>

@@ -18,7 +18,7 @@ import gsoc from "../../images/gsoc-made-easy/gsoc.png";
 import winnerOne from "../../images/adrenaline/winner-one.jpg";
 import winnerTwo from "../../images/adrenaline/winner-two.jpg";
 import password_poster from "../../images/password/password-poster.png";
-// import './events.module.css';
+import styles from './events.module.css';
 const imgStyle = {
   width: "38vw",
   height: "auto",
@@ -49,13 +49,13 @@ export const eventsDetails = [
     details: (
       <>
         <br />
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}  >
+          <div className={styles.leftArea}>
             <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              className={"carousel slide " + styles.imgStyle}
               data-bs-ride="carousel"
-              style={imgStyle}
+              
             >
               <div class="carousel-indicators">
                 <button
@@ -83,7 +83,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={speaker}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -91,7 +91,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={winnerOne}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -99,7 +99,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={winnerTwo}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -131,7 +131,7 @@ export const eventsDetails = [
               </button>
             </div>
           </div>
-          <div className="right" style={rightArea}>
+          <div className={styles.rightArea}>
             <p>
               Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day
               event for participants to show-off their familiarity with

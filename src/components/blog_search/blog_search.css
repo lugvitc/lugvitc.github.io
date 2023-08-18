@@ -23,12 +23,12 @@
     /* height: 25px; */
 }
 .buttons {	
-    height: 8vh;
-    width: 30vw;
+    height: 9.5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 5vw;
 }
 
 	/* float: left; */
@@ -73,6 +73,13 @@
     border: 1px solid #434C5E;
     border-radius: 5px;
     margin: 10px 2px;
+}
+select{
+    padding: 10px;
+}
+option{
+    background-color: #434C5E;
+    color: #D8DEE9;
 }
 
 
@@ -138,6 +145,10 @@
     border-radius: 5px;
     margin: 10px 2px;
     width: 100%!important;
+}
+
+.buttons{
+    height: fit-content;
 }
 	
 
