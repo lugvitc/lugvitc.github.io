@@ -18,6 +18,10 @@ import gsoc from "../../images/gsoc-made-easy/gsoc.png";
 import winnerOne from "../../images/adrenaline/winner-one.jpg";
 import winnerTwo from "../../images/adrenaline/winner-two.jpg";
 import password_poster from "../../images/password/password-poster.png";
+
+import pswdwinnerone from "../../images/password/pswdwinnerone.jpg";
+import pswdwinnertwo from "../../images/password/pswdwinnertwo.jpg";
+import pswdwinnerthree from "../../images/password/pswdwinnerthree.jpg";
 import styles from "./events.module.css";
 const imgStyle = {
   width: "38vw",
@@ -500,7 +504,12 @@ export const eventsDetails = [
       <>
         <div className={styles.box}>
           <div className={styles.leftArea}>
-            <img loading="lazy" src={gsoc} alt="gsoc-made-easy" className={styles.containImage} />
+            <img
+              loading="lazy"
+              src={gsoc}
+              alt="gsoc-made-easy"
+              className={styles.containImage}
+            />
           </div>
           <div className={styles.rightArea}>
             <p>
@@ -624,13 +633,77 @@ export const eventsDetails = [
     details: (
       <>
         <div className={styles.box}>
+          
           <div className={styles.leftArea}>
-            <img
-              loading="lazy"
-              src={password_poster} // src
-              alt="password"
-              className={styles.containImage} // alt
-            />
+            <div
+              id="carouselExampleIndicators"
+              className={"carousel slide " + styles.imgStyle}
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    src={password_poster} // src
+                    alt="password"
+                    className={styles.containImage} // alt
+                  />
+                </div>
+                <div class="carousel-item active">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnerone}
+                    alt="winner"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnertwo}
+                    alt="winner"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnerthree}
+                    alt="winner"
+                  />
+                </div>
+              </div>
+              
+            </div>
           </div>
           <div className={styles.rightArea}>
             <p>
