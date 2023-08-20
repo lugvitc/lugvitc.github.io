@@ -28,6 +28,10 @@
   height: auto;
   border-radius: 10px;
 }
+
+.containImage{
+  width: 40vw;
+}
 @media (max-width: 800px) {
   .box {
     flex-direction: column;
@@ -40,5 +44,8 @@
   }
   .imgStyle{
     width: 76vw;
+  }
+  .containImage{
+    width: 80vw;
   }
 }
