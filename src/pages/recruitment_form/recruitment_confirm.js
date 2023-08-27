@@ -3,23 +3,21 @@ import TerminalWindow from '../../components/terminal/terminalWindow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
+import useFetch from '../../hooks/useFetch';
 
 export default function Confirm({ nextStep, values, previousStep }) {
+    const { apiPost } = useFetch();
     const next = async e => {
         e.preventDefault();
         // USE FLASK BACKEND HERE TO COLLECT ALL DATA
         let formData = values;
         delete formData['flagCommand'];
-        fetch('https://leaderboard.lugvitc.org/api/recruitment', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
+        const success = (await apiPost('/recruitment', formData)).status === 201;
         console.log(formData)
         //console.log(result)
-        nextStep();
+        if(success)
+            nextStep();
+        else alert("Error occured. Submission failed.");
     };
 
     const back = e => {

@@ -10,7 +10,7 @@ import App from "./App";
 import Home from "./pages/home";
 import Events from "./pages/events/events";
 import LearnLinux from "./pages/learnLinux/learnLinux";
-import UserForm from "./pages/recruitment_2022_v2/recruitment";
+import UserForm from "./pages/recruitment_form/recruitment";
 import RescueTux2022Routes from "./pages/rescueTux2022/routes";
 import Members from "./pages/members/boardmembers";
 import FFCSLeaderboard from "./pages/ffcs_leaderboard/ffcs_leaderboard";
@@ -58,11 +58,11 @@ const pages = [
   //    path: '/rescue-tux/*',
   //    component: <RescueTux2022Routes />
   //}
-  //{
-  //     title: 'Recruitment 2023',
-  //     link: '/recruitment',
-  //    component: <UserForm />
-  // }
+  {
+    title: 'Recruitment 2023',
+    link: '/recruitment',
+    component: <UserForm />
+  }
 ];
 
 ReactDOM.render(
