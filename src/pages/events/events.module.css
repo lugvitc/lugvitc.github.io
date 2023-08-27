@@ -1,9 +1,51 @@
 .event strong {
-    font-style: italic;
-    font-weight: bold;
-    color: var(--nord13);
+  font-style: italic;
+  font-weight: bold;
+  color: var(--nord13);
 }
 
 .name {
-    color: var(--nord12);
+  color: var(--nord12);
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftArea {
+  width: 40vw;
+  height: auto;
+  padding: 20px 20px 20px 40px;
+}
+.rightArea {
+  width: 40vw;
+  height: auto;
+  padding: 20px 40px 20px 20px;
+}
+.imgStyle{
+    width: 38vw;
+  height: auto;
+  border-radius: 10px;
+}
+
+.containImage{
+  width: 40vw;
+}
+@media (max-width: 800px) {
+  .box {
+    flex-direction: column;
+  }
+  .leftArea{
+    width: 80vw;
+  }
+  .rightArea{
+    width: 80vw;
+  }
+  .imgStyle{
+    width: 76vw;
+  }
+  .containImage{
+    width: 80vw;
+  }
 }

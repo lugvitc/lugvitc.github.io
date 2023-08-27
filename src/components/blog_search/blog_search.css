@@ -18,12 +18,14 @@
     /* height: 25px; */
 }
 
+
 .buttons {
     width: 30vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 5vw;
 }
 
 /* float: left; */
@@ -51,6 +53,30 @@
     cursor: pointer;
     transition: all 0.15s ease;
     border: 1px solid var(--nord2);
+
+    border-radius: 5px;
+    margin: 10px 2px;
+}
+select{
+    padding: 10px;
+}
+option{
+    background-color: #434C5E;
+    color: #D8DEE9;
+}
+
+
+/* Media Queries for handling the responsive designs */
+
+@media only screen and (max-width: 768px) {
+.container{
+	width: 100%!important;
+	margin: 0 auto;
+}
+
+.searchbar input[type=text] {
+    font-size: 14px;
+    border: 1px solid #2E3440;
     border-radius: 5px;
     /* display: flex;
     flex-direction: column;
@@ -70,4 +96,11 @@
     border: 1px solid var(--nord3);
     border-radius: 5px;
     margin-top: 5px;
+    margin: 10px 2px;
+    width: 100%!important;
+}
+
+.buttons{
+    height: fit-content;
+}
 }

@@ -1,4 +1,4 @@
-import  "./blog_search.css";
+import "./blog_search.css";
 
 function chooseBlog(blogs, setter) {
     const sortDropdown = document.querySelector(".blog_sort_button");
@@ -115,5 +115,4 @@ export default function BlogSearch({ all_blogs ,setter }) {
 //       </select>
 //     </div>
 //   </div>
-// </div>
 // </div>
