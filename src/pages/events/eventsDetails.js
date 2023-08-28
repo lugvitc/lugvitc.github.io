@@ -18,7 +18,11 @@ import gsoc from "../../images/gsoc-made-easy/gsoc.png";
 import winnerOne from "../../images/adrenaline/winner-one.jpg";
 import winnerTwo from "../../images/adrenaline/winner-two.jpg";
 import password_poster from "../../images/password/password-poster.png";
-// import './events.module.css';
+
+import pswdwinnerone from "../../images/password/pswdwinnerone.jpg";
+import pswdwinnertwo from "../../images/password/pswdwinnertwo.jpg";
+import pswdwinnerthree from "../../images/password/pswdwinnerthree.jpg";
+import styles from "./events.module.css";
 const imgStyle = {
   width: "38vw",
   height: "auto",
@@ -49,13 +53,12 @@ export const eventsDetails = [
     details: (
       <>
         <br />
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
             <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              className={"carousel slide " + styles.imgStyle}
               data-bs-ride="carousel"
-              style={imgStyle}
             >
               <div class="carousel-indicators">
                 <button
@@ -83,7 +86,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={speaker}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -91,7 +94,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={winnerOne}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -99,7 +102,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={winnerTwo}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -131,7 +134,7 @@ export const eventsDetails = [
               </button>
             </div>
           </div>
-          <div className="right" style={rightArea}>
+          <div className={styles.rightArea}>
             <p>
               Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day
               event for participants to show-off their familiarity with
@@ -158,7 +161,7 @@ export const eventsDetails = [
                 <br />
                 {/* <img
                                 loading='lazy'
-                                style={imgStyle}
+                                
                                 src={winnerOne}
                                 alt='V Maheysh, Suriyakrishnan S and Mithun P receiving their prize'
                             /> */}
@@ -178,7 +181,7 @@ export const eventsDetails = [
                 <br />
                 {/* <img
                                 loading='lazy'
-                                style={imgStyle}
+                                
                                 src={winnerTwo}
                                 alt='Divyashree S, Aravinda B and Amudhini P K receiving their prize'
                             /> */}
@@ -205,8 +208,8 @@ export const eventsDetails = [
     id: "rescue-tux",
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
             <p>
               The Linux Club at VIT Chennai organized the <i>Rescue Tux</i>{" "}
               event on 21st August 2022,{" "}
@@ -222,19 +225,20 @@ export const eventsDetails = [
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong>, who received a prize of Rs.3000 
+                Team <strong>EchoHelloWorld</strong>, who received a prize of
+                Rs.3000
               </li>
               <li>
-                Team <strong>Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who received a prize of 2000 rs.
+                Team <strong>Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who
+                received a prize of 2000 rs.
               </li>
             </ol>
           </div>
-          <div className="right" style={rightArea}>
-          <div
+          <div className={styles.rightArea}>
+            <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              className={"carousel slide " + styles.imgStyle}
               data-bs-ride="carousel"
-              style={imgStyle}
             >
               <div class="carousel-indicators">
                 <button
@@ -262,7 +266,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={rescue}
                     alt="rescue-tux"
                   />
@@ -270,7 +274,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={rescue1}
                     alt="rescue-tux"
                   />
@@ -278,7 +282,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    style={imgStyle}
+                    className={styles.imgStyle}
                     src={rescue2}
                     alt="rescue-tux"
                   />
@@ -297,44 +301,64 @@ export const eventsDetails = [
     id: "cyber-0-day",
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={cyber}
-              alt="cyber-o-day"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={cyber1}
-              alt="cyber-o-day"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={cyber2}
-              alt="cyber-o-day"
-            />
-    </div>
-  </div>
-</div>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
+            <div
+              id="carouselExampleIndicators"
+              className={"carousel slide " + styles.imgStyle}
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={cyber}
+                    alt="cyber-o-day"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={cyber1}
+                    alt="cyber-o-day"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={cyber2}
+                    alt="cyber-o-day"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="right" style={rightArea}>
+          <div className={styles.rightArea}>
             <p>
               The Linux Club at VIT Chennai, in collaboration with The
               Tech-Researchers Club, organized the <i>Cyber-0-Day</i> event from
@@ -382,8 +406,8 @@ export const eventsDetails = [
     id: "hackers-horizon",
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
             <p>
               Linux Club, VIT Chennai successfully organised “Hackers Horizon” a
               two-day, full hands-on hacking session. Event was led by none
@@ -411,42 +435,61 @@ export const eventsDetails = [
               BugXs, which encouraged every team to put up their all-out effort.
             </p>
           </div>
-          <div className="right" style={rightArea}>
-
-
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={hacker}
-              alt="hacker-horizon"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={hacker1}
-              alt="hacker-horizon"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={hacker2}
-              alt="hacker-horizon"
-            />
-    </div>
-  </div>
-</div>
+          <div className={styles.rightArea}>
+            <div
+              id="carouselExampleIndicators"
+              className={"carousel slide " + styles.imgStyle}
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={hacker}
+                    alt="hacker-horizon"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={hacker1}
+                    alt="hacker-horizon"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={hacker2}
+                    alt="hacker-horizon"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>
@@ -459,16 +502,16 @@ export const eventsDetails = [
     id: "gsoc-made-easy",
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
             <img
               loading="lazy"
-              style={imgStyle}
               src={gsoc}
               alt="gsoc-made-easy"
+              className={styles.containImage}
             />
           </div>
-          <div className="right" style={rightArea}>
+          <div className={styles.rightArea}>
             <p>
               Linux Club, VIT Chennai successfully organised “Google Summer of
               Code Made Easy” , purpose of the event was to guide students about
@@ -502,8 +545,8 @@ export const eventsDetails = [
     id: "linux-installation-booth",
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
+        <div className={styles.box}>
+          <div className={styles.leftArea}>
             <p>
               Linux Club, VIT Chennai successfully organised “LINUX INSTALLATION
               BOOTH”, where we helped students both install Linux OS and dual
@@ -522,41 +565,61 @@ export const eventsDetails = [
               events like this in the future.
             </p>
           </div>
-          <div className="right" style={rightArea}>
-
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={booth}
-              alt="linux-booth"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={booth1}
-              alt="linux-booth"
-            />
-    </div>
-    <div class="carousel-item">
-    <img
-              loading="lazy"
-              style={imgStyle}
-              src={booth2}
-              alt="linux-booth"
-            />
-    </div>
-  </div>
-</div>
+          <div className={styles.rightArea}>
+            <div
+              id="carouselExampleIndicators"
+              className={"carousel slide " + styles.imgStyle}
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={booth}
+                    alt="linux-booth"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={booth1}
+                    alt="linux-booth"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={booth2}
+                    alt="linux-booth"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>
@@ -564,39 +627,108 @@ export const eventsDetails = [
   },
   {
     number: "06",
-    name: "Password",     // name password
-    link: "lugvitc.github.io/#/events#password",      // link password
-    id: "password",       // id password
+    name: "Password", // name password
+    link: "lugvitc.github.io/#/events#password", // link password
+    id: "password", // id password
     details: (
       <>
-        <div className="box" style={boxArea}>
-          <div className="left" style={leftArea}>
-            <img
-              loading="lazy"
-              style={imgStyle}
-              src={password_poster}        // src
-              alt="password"      // alt
-            />
+        <div className={styles.box}>
+          
+          <div className={styles.leftArea}>
+            <div
+              id="carouselExampleIndicators"
+              className={"carousel slide " + styles.imgStyle}
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    src={password_poster} // src
+                    alt="password"
+                    className={styles.containImage} // alt
+                  />
+                </div>
+                <div class="carousel-item active">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnerone}
+                    alt="winner"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnertwo}
+                    alt="winner"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    loading="lazy"
+                    className={styles.imgStyle}
+                    src={pswdwinnerthree}
+                    alt="winner"
+                  />
+                </div>
+              </div>
+              
+            </div>
           </div>
-          <div className="right" style={rightArea}>
+          <div className={styles.rightArea}>
             <p>
-              "Password"  in this event  participants will have the opportunity to engage in hands-on 
-              workshops, where they can learn practical skills related to cybersecurity. These workshops 
-              will cover areas like cryptography, penetration testing, and incident response
+              "Password" in this event participants will have the opportunity to
+              engage in hands-on workshops, where they can learn practical
+              skills related to cybersecurity. These workshops will cover areas
+              like cryptography, penetration testing, and incident response
             </p>
             <p>
-              The first day of the event will be a workshop taken up by the Technical department of the 
-              club, the workshop will ensure that the participants will learn about all the topics in 
-              detail with a hands on experience and how to use them in real time applications. 
+              The first day of the event will be a workshop taken up by the
+              Technical department of the club, the workshop will ensure that
+              the participants will learn about all the topics in detail with a
+              hands on experience and how to use them in real time applications.
             </p>
             <p>
-              "Password" is a unique all-inclusive event featuring three sessions. The main event takes 
-              place on the second day. The event aims to provide participants with a comprehensive platform 
-              to explore and showcase their skills and expertise. The first session is a captivating 
-              Capture the Flag (CTF) competition with 25 challenges covering topics like Linux and binary 
-              exploitation. The second session is an exciting Escape the Room challenge where participants must 
-              acquire a key from a remote machine. In the third session, participants use the obtained key to 
-              unlock a safe and earn a trophy.
+              "Password" is a unique all-inclusive event featuring three
+              sessions. The main event takes place on the second day. The event
+              aims to provide participants with a comprehensive platform to
+              explore and showcase their skills and expertise. The first session
+              is a captivating Capture the Flag (CTF) competition with 25
+              challenges covering topics like Linux and binary exploitation. The
+              second session is an exciting Escape the Room challenge where
+              participants must acquire a key from a remote machine. In the
+              third session, participants use the obtained key to unlock a safe
+              and earn a trophy.
             </p>
           </div>
         </div>

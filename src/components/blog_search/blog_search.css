@@ -1,29 +1,24 @@
 
-	
-.blogSearch{
+
+.blogSearch {
 	width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 25px 20px 25px 20px;
-
+    margin: 25px 0px 25px 0px;
+    flex-direction: column-reverse;
+    align-items: center;
 }
-	
-
 
 .searchbar {
-    width: 30vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    height: 8vh;
+    justify-content: space-evenly;
     align-items: center;
-
     /* height: 25px; */
 }
-.buttons {	
-    height: 8vh;
+
+.buttons {
     width: 30vw;
     display: flex;
     flex-direction: row;
@@ -31,38 +26,36 @@
     align-items: center;
 }
 
-	/* float: left; */
-	/* text-align: right; */
+/* float: left; */
+/* text-align: right; */
+/* Styles for dropdown menu */
 
-	/* Styles for dropdown menu */
-    
 .searchbar input[type=text] {
     font-size: 18px;
-    border: 1px solid #2E3440;
-    border-radius: 5px;
-    padding: 9px;
-    width: 300px;
+    border: 1px solid var(--nord1);
+    border-radius: 10px;
+    padding: 9px 15px;
+    width: 50vw;
     margin: 10px 2px 0 0;
+    background-color: var(--nord0);
+    color: var(--nord5);
+    transition: background-color 250ms linear;
+}
+
+.searchbar input[type=text]:focus {
+    outline: none;
+    background-color: var(--header-footer-black);
+}
+
+.searchbar input[type=text]::placeholder {
+    opacity: 0.5;
+    color: var(--nord5);
 }
 
 .btnGroup {
-    background-color: #434C5E;
-    color: #D8DEE9;
+    background-color: var(--nord0);
+    color: var(--nord4);
     width: 250px;
-    padding: 17px 10px 10px 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    border: 1px solid #434C5E;
-    border-radius: 5px;
-    margin: 10px 2px;
-}
-.btnGroup .blog_sort_button {
-    background-color: #434C5E;
-    color: #D8DEE9;
     padding: 10px;
     text-align: center;
     display: inline-block;
@@ -70,76 +63,28 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.15s ease;
-    border: 1px solid #434C5E;
+    border: 1px solid var(--nord2);
     border-radius: 5px;
-    margin: 10px 2px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
 }
 
-
-/* Media Queries for handling the responsive designs */
-
-@media only screen and (max-width: 768px) {
-.container{
-	width: 100%!important;
-	margin: 0 auto;
-}
-
-.searchbar input[type=text] {
-    font-size: 14px;
-    border: 1px solid #2E3440;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%!important;
-    margin: 10px 2px 0 0;
-}
-
-.searchbar {
-    width: 100%!important;
-	float: none!important;
-    margin-right: 20px;
-    margin-bottom: 30px;
-}
-	
-.searchbar .search {
-    display: block;
-    border: 0px solid #2E3440;
-    padding: 0px;
-    transition: all 0.15s ease;
-    width: 95%!important;
-    margin: 0px;
-}
-	
-.btnGroup .button {
-    background-color: #434C5E;
-    color: #D8DEE9;
+.blog_sort_button {
+    background-color: var(--nord2);
+    color: var(--nord4);
     padding: 10px;
     text-align: center;
-    display: block;
+    display: inline-block;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.15s ease;
-    border: 1px solid #434C5E;
+    border: 1px solid var(--nord3);
     border-radius: 5px;
-    margin: 10px 2px;
-    width: 100%!important;
+    margin-top: 5px;
 }
-.btnGroup .blog_sort_button{
-    background-color: #434C5E;
-    color: #D8DEE9;
-    padding: 10px;
-    text-align: center;
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    border: 1px solid #434C5E;
-    border-radius: 5px;
-    margin: 10px 2px;
-    width: 100%!important;
-}
-	
 
-
+.blog_sort_button:focus {
+    outline: none;
 }

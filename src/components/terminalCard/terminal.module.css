@@ -1,3 +1,4 @@
+
 .index {
     border-radius: 10px;
     border: 4px solid var(--bs-body-color);
@@ -6,15 +7,21 @@
     height: auto;
     margin: 15px;
     margin-bottom: 20px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 1270px) {
     .index {
-      width: 84vw;
+        width: 40vw;
     }
-  }
-  
-  .titlebar {
+}
+
+@media (max-width: 768px) {
+    .index {
+        width: 84vw;
+    }
+}
+
+.titlebar {
     display: flex;
     position: -webkit-sticky;
     position: sticky;
@@ -26,73 +33,74 @@
     background-color: var(--header-footer-black);
     z-index: 1;
     overflow-x: auto;
-  }
-  
-  .dots {
+}
+
+.dots {
     position: absolute;
     display: none;
     margin: 0.75rem;
     gap: 5px;
-  }
-  
-  .dots.left {
+}
+
+.dots.left {
     flex-direction: row;
     left: 0;
-  }
-  
-  .dots.right {
+}
+
+.dots.right {
     flex-direction: row-reverse;
     right: 0;
-  }
-  
-  .dot {
+}
+
+.dot {
     border-radius: 15px;
     height: 15px;
     width: 15px;
-  }
-  
-  .dot:hover {
+}
+
+.dot:hover {
     filter: brightness(50%);
-  }
-  
-  .title {
+}
+
+.title {
     color: var(--nord4);
     font-weight: bold;
-  }
-  
-  .body {
+}
+
+.body {
     background-color: var(--nord1);
     border-radius: 0 0 10px 10px;
     padding: 1rem;
     overflow-y: auto;
-  }
-  
-  .contents.noPrompts {
+}
+
+.contents.noPrompts {
     margin-top: 0;
-  }
-  
-  .thumbnail {
+}
+
+.thumbnail {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
     max-height: 50%;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .titlebar {
-      margin: 0.5rem;
+        margin: 0.5rem;
     }
     .dots{
         display: hide;
     }
     .body {
-      padding: 0.5rem;
+        padding: 0.5rem;
     }
-  }
-  @media (min-width: 300px) {
+}
+
+@media (min-width: 300px) {
     .dots {
-      display: flex; /* Show the dots for screens larger than 768px */
+        display: flex; /* Show the dots for screens larger than 768px */
     }
-  }
+}
