@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.79de6a4c.css",
-    "main.js": "/static/js/main.447ec5c4.js",
+    "main.css": "/static/css/main.c19641e5.css",
+    "main.js": "/static/js/main.d2418954.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -33,6 +33,9 @@
     "static/media/rescue-tux-2.jpg": "/static/media/rescue-tux-2.e4b40af3bda3536ebdaa.jpg",
     "static/media/rescue-tux-1.jpg": "/static/media/rescue-tux-1.e54de7a74b80c99c464a.jpg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
+    "static/media/pswdwinnerone.jpg": "/static/media/pswdwinnerone.2592481a6861b78f5b47.jpg",
+    "static/media/pswdwinnerthree.jpg": "/static/media/pswdwinnerthree.33ac051beb35b66cb262.jpg",
+    "static/media/pswdwinnertwo.jpg": "/static/media/pswdwinnertwo.fe906f3e215fc37b7993.jpg",
     "static/media/hacker-horizon1.jpeg": "/static/media/hacker-horizon1.4821c714e209564cbf7d.jpeg",
     "static/media/Samridh.jpeg": "/static/media/Samridh.c756f84bfcb1faa7f02c.jpeg",
     "static/media/rescue-tux.jpeg": "/static/media/rescue-tux.314d1f0e61d4dcd24f34.jpeg",
@@ -48,11 +51,11 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "index.html": "/index.html",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
-    "main.79de6a4c.css.map": "/static/css/main.79de6a4c.css.map",
-    "main.447ec5c4.js.map": "/static/js/main.447ec5c4.js.map"
+    "main.c19641e5.css.map": "/static/css/main.c19641e5.css.map",
+    "main.d2418954.js.map": "/static/js/main.d2418954.js.map"
   },
   "entrypoints": [
-    "static/css/main.79de6a4c.css",
-    "static/js/main.447ec5c4.js"
+    "static/css/main.c19641e5.css",
+    "static/js/main.d2418954.js"
   ]
 }
