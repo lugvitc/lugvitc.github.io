@@ -568,33 +568,33 @@ export default function Members() {
                 </div>
                 <div class="teamContent">
                   <h3 class={layout.name}>Mogesh</h3>
-                  <h4 class={layout.title}>Technical Advisory</h4>
+                  <h4 class={layout.title}>Media Advisory</h4>
                 </div>
                 <ul class={layout.social}>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://github.com/mogesh06"
                       class="fa fa-github"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://instagram.com/_.mogesh06._?utm_source=qr&igshid=NGExMmI2YTkyZg=="
                       class="fa fa-instagram"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="https://twitter.com/Mogesh05?t=3A7bn3cbwElS6gCyhtUXUg&s=09"
                       class="fa fa-twitter"
                       aria-hidden="true"
                     ></a>
                   </li>
                   <li>
                     <a
-                      href="lugvitc.org"
+                      href="http://www.linkedin.com/in/mogeshvar-s-g"
                       class="fa fa-linkedin"
                       aria-hidden="true"
                     ></a>
