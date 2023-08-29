@@ -80,7 +80,7 @@ export default function RecruitmentStepTwo({
                             Technical Department - DevOps
                         </option>
                         <option value='Technical Department - CP'>
-                            Technical Department - DevOps
+                            Technical Department - CP
                         </option>
                         <option value='Management Department'>
                             Management Department
@@ -137,7 +137,7 @@ export default function RecruitmentStepTwo({
                             Technical Department - DevOps
                         </option>
                         <option value='Technical Department - CP'>
-                            Technical Department - DevOps
+                            Technical Department - CP
                         </option>
                         <option value='Management Department'>
                             Management Department
