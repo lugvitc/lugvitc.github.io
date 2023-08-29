@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c19641e5.css",
-    "main.js": "/static/js/main.31f04d9b.js",
+    "main.js": "/static/js/main.5826eafd.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -52,10 +52,10 @@
     "index.html": "/index.html",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "main.c19641e5.css.map": "/static/css/main.c19641e5.css.map",
-    "main.31f04d9b.js.map": "/static/js/main.31f04d9b.js.map"
+    "main.5826eafd.js.map": "/static/js/main.5826eafd.js.map"
   },
   "entrypoints": [
     "static/css/main.c19641e5.css",
-    "static/js/main.31f04d9b.js"
+    "static/js/main.5826eafd.js"
   ]
 }
