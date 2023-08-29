@@ -4,6 +4,7 @@ import TechnicalFrontendQuestions from './technical/frontend';
 import TechnicalBackendQuestions from './technical/backend';
 import TechnicalCybersecQuestions from './technical/cybersec';
 import TechnicalDevopsQuestions from './technical/devops';
+import TechnicalCpQuestions from './technical/cp';
 import ManagementCommonQuestions from './management/management_common';
 import OperationsCommonQuestions from './operation/operation_common';
 import MediaCommonQuestions from './media/media_common';
@@ -16,7 +17,7 @@ import ContentCommonQuestions from './content/content_common';
 
 export default function RecruitmentQuestions({values, prefDept, handleChange}){
     return (
-        prefDept === 'Technical Department - Linux' ?
+        prefDept === 'Technical Department' ?
                     <div>
                         <TechnicalCommonQuestions handleChange={handleChange} values={values} />
                         <TechnicalLinuxQuestions handleChange={handleChange} values={values} />
@@ -44,6 +45,12 @@ export default function RecruitmentQuestions({values, prefDept, handleChange}){
                     <div>
                         <TechnicalCommonQuestions handleChange={handleChange} values={values} />
                         <TechnicalDevopsQuestions handleChange={handleChange} values={values} />
+                    </div>
+                    :
+                    prefDept === 'Technical Department - CP' ?
+                    <div>
+                        <TechnicalCommonQuestions handleChange={handleChange} values={values} />
+                        <TechnicalCpQuestions handleChange={handleChange} values={values} />
                     </div>
                     :
                     prefDept === 'Management Department' ?

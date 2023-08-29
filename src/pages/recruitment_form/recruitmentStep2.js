@@ -64,7 +64,7 @@ export default function RecruitmentStepTwo({
                         <option value=' '>
                             Select a department
                         </option>
-                        <option value='Technical Department - Linux'>
+                        <option value='Technical Department'>
                             Technical Department
                         </option>
                         <option value='Technical Department - Frontend'>
@@ -77,6 +77,9 @@ export default function RecruitmentStepTwo({
                             Technical Department - Cybersec
                         </option>
                         <option value='Technical Department - DevOps'>
+                            Technical Department - DevOps
+                        </option>
+                        <option value='Technical Department - CP'>
                             Technical Department - DevOps
                         </option>
                         <option value='Management Department'>
@@ -118,7 +121,7 @@ export default function RecruitmentStepTwo({
                         <option value=' '>
                             Select a Department (Optional)
                         </option>
-                        <option value='Technical Department - Linux'>
+                        <option value='Technical Department'>
                             Technical Department
                         </option>
                         <option value='Technical Department - Frontend'>
@@ -131,6 +134,9 @@ export default function RecruitmentStepTwo({
                             Technical Department - Cybersec
                         </option>
                         <option value='Technical Department - DevOps'>
+                            Technical Department - DevOps
+                        </option>
+                        <option value='Technical Department - CP'>
                             Technical Department - DevOps
                         </option>
                         <option value='Management Department'>
