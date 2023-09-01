@@ -22,7 +22,7 @@ export default function ContentCommonQuestions({ handleChange, values }) {
                 <textarea
                     rows='6'
                     onChange={handleChange('content3')}
-                    value={values.content2}
+                    value={values.content3}
                 />
             </div>
         </>
