@@ -83,7 +83,7 @@ export default function Blogs() {
     //     setBlogs(blog2);
     // }, [])
 
-    const { api, apiPost, apiURL } = useFetch();
+    const { api, apiPost, apiURL, apiBaseURL } = useFetch();
     const fetchBlogs = () => {
         api("/blog", {
             method: "POST"
@@ -96,7 +96,7 @@ export default function Blogs() {
                 })
                 all_blogs.forEach((th)=>{
                     // console.log('leaderboard.lugvitc.org'+th.thumbnail);
-                    th.thumbnail='https://leaderboard.lugvitc.org'+th.thumbnail;
+                    th.thumbnail=apiBaseURL+th.thumbnail;
                     console.log(th.thumbnail);
                 })
                 all_blogs.forEach(blog => {
