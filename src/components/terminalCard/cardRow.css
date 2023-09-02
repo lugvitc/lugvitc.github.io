@@ -150,4 +150,11 @@
 .popup img{
     max-width: min(75%, 500px);
     max-height: min(75%, 500px);
+    width: 100%;
+    height: auto;
+}
+
+.blog_body{
+    max-width: 75rem;
+    margin: auto;
 }

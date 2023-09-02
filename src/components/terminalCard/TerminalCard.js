@@ -6,6 +6,7 @@ import "../terminalCard/cardRow.css";
 
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import DOMPurify from 'isomorphic-dompurify';
 
 export default function TerminalCard({ blogs }) {
     const [likeCounts, setLikeCounts] = useState([]);
@@ -82,12 +83,13 @@ export default function TerminalCard({ blogs }) {
 
         {showPopup && (
             <div className="popup">
-                <div className="blog_title">{popupContent.title}</div>
-                <ReactMarkdown>{popupContent.content}</ReactMarkdown>
-
-                <button className="button" onClick={handleCloseClick}>
-                    Close
-                </button>
+                <div className="blog_body">
+                    <div className="blog_title">{popupContent.title}</div>
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(popupContent.content) }}></div>
+                    <button className="button" onClick={handleCloseClick}>
+                        Close
+                    </button>
+                </div>
             </div>
         )}
         </>
