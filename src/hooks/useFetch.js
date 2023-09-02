@@ -1,6 +1,6 @@
 export default function useFetch() {
-    const apiBaseURL = "http://localhost:5000"
-//    const apiBaseURL = 'https://leaderboard.lugvitc.org';
+    //const apiBaseURL = "http://localhost:5000"
+    const apiBaseURL = 'https://leaderboard.lugvitc.org';
     const apiURL = apiBaseURL+'/api';
 
     const api = (path, init) => fetch(apiURL + path, init);
