@@ -59,10 +59,10 @@ const pages = [
   //    component: <RescueTux2022Routes />
   //}
   //{
-  //  title: 'Recruitment 2023',
-  //  link: '/recruitment',
-  //  component: <UserForm />
-  //}
+    title: 'Recruitment 2023',
+    link: '/recruitment',
+    component: <UserForm />
+  }
 ];
 
 ReactDOM.render(
