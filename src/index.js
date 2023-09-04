@@ -58,7 +58,7 @@ const pages = [
   //    path: '/rescue-tux/*',
   //    component: <RescueTux2022Routes />
   //}
-  //{
+  {
     title: 'Recruitment 2023',
     link: '/recruitment',
     component: <UserForm />
