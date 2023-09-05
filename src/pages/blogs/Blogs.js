@@ -91,7 +91,13 @@ export default function Blogs() {
             .then((response) => {
                 let all_blogs = response["blog"]
                 all_blogs.forEach((con)=>{
-                    con.content=con.content.replace(/\!\[(.*?)\]\s*\(\/api\/blog\/image/, "!\[$1\]\(https://leaderboard.lugvitc.org/api/blog/image")
+                    // con.content=con.content.replace(/\!\[(.*?)\]\s*\(\/api\/blog\/image/, "!\[$1\]\(https://leaderboard.lugvitc.org/api/blog/image")
+
+                    const regex = /src="\/api\/blog\/image\/([^"]+)"/g;
+                    const replacement = 'src="'+apiBaseURL+'/api/blog/image/$1"';
+
+                    con.content = con.content.replace(regex, replacement);
+
                     // console.log(th.thumbnail);
                 })
                 all_blogs.forEach((th)=>{
