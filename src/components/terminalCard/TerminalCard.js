@@ -69,6 +69,7 @@ export default function TerminalCard({ blogs }) {
                     <div className="blog_dept">{blog.tags}</div>
                     <div className="date">{blog.date}</div>
                     </div>
+                    <div className="blog_author">Author: {blog.published_by}</div>
                     <p></p>
                     <p>{blog.description}</p>
                     <button

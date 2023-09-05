@@ -158,3 +158,23 @@
     max-width: 75rem;
     margin: auto;
 }
+
+.blog_author{
+    display: flex;
+    min-height: 1.5em;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: #2a2f3a;
+    border-radius: 8px;
+    color: #e0e7ec;
+    margin: auto;
+    margin-top: 0.75rem;
+    padding: 2px;
+}
+
+.blog_author:hover{
+    background-color: #212529;
+    transition: background-color 0.3s, transform 0.3s;
+}
