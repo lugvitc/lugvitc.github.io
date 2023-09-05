@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d6a43a6.css",
-    "main.js": "/static/js/main.fc2db42f.js",
+    "main.css": "/static/css/main.a40300af.css",
+    "main.js": "/static/js/main.998b69d7.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -51,11 +51,11 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "index.html": "/index.html",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
-    "main.1d6a43a6.css.map": "/static/css/main.1d6a43a6.css.map",
-    "main.fc2db42f.js.map": "/static/js/main.fc2db42f.js.map"
+    "main.a40300af.css.map": "/static/css/main.a40300af.css.map",
+    "main.998b69d7.js.map": "/static/js/main.998b69d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d6a43a6.css",
-    "static/js/main.fc2db42f.js"
+    "static/css/main.a40300af.css",
+    "static/js/main.998b69d7.js"
   ]
 }
