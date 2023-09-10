@@ -34,7 +34,7 @@ export default function App({ children, pages }) {
                 }}
                 id='content'
             >
-                <Dock />
+                {/* <Dock /> */}
                 <div id='terminals'>{children}</div>
             </main>
         </>
