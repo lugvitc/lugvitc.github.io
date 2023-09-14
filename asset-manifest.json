@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7f2ae61.css",
-    "main.js": "/static/js/main.3b3faf16.js",
+    "main.css": "/static/css/main.cd7f7536.css",
+    "main.js": "/static/js/main.90a99dbf.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -48,14 +48,14 @@
     "static/media/blank.png": "/static/media/blank.2fda6558cd58b877e14f.png",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
     "static/media/Discord.svg": "/static/media/Discord.27583b533952833679e4badca4e9e2a4.svg",
-    "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "index.html": "/index.html",
+    "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
-    "main.c7f2ae61.css.map": "/static/css/main.c7f2ae61.css.map",
-    "main.3b3faf16.js.map": "/static/js/main.3b3faf16.js.map"
+    "main.cd7f7536.css.map": "/static/css/main.cd7f7536.css.map",
+    "main.90a99dbf.js.map": "/static/js/main.90a99dbf.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7f2ae61.css",
-    "static/js/main.3b3faf16.js"
+    "static/css/main.cd7f7536.css",
+    "static/js/main.90a99dbf.js"
   ]
 }
