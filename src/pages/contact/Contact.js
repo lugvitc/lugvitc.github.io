@@ -21,11 +21,11 @@ function Contact() {
             </div>
             <div className="flex flex-col items-center">
                 <div className='basis-1 my-2 textColor1'><h1>President</h1></div>
-                <div className='basis-1 my-2 textColor2'><a href="mailto:email@example.com"><i class="fa-solid fa-phone fa-bounce"></i> +91 9334138650</a></div> 
+                <div className='basis-1 my-2 textColor2'><a href="tel:+919334138650"><i class="fa-solid fa-phone fa-bounce"></i> +91 9334138650</a></div> 
             </div>
             <div className="flex flex-col items-center">
                 <div className='basis-1 my-2 textColor1'><h1>Vice-President</h1></div>
-                <div className='basis-1 my-2 textColor2'><a href="mailto:email@example.com"><i class="fa-solid fa-phone fa-bounce"></i> +91 8072320756</a></div> 
+                <div className='basis-1 my-2 textColor2'><a href="tel:+918072320756"><i class="fa-solid fa-phone fa-bounce"></i> +91 8072320756</a></div> 
             </div>
         </div>
 
@@ -45,7 +45,7 @@ function Contact() {
             </div>
             <div className="flex flex-row flex-wrap container">
                 <a className='mx-3 textColor1' href="">Management:</a>
-                <a className='textColor2' href="mailto:anagement@lugvitc.org">   <i class="fa-solid fa-envelope fa-beat fa-lg"></i>  management@lugvitc.org</a>
+                <a className='textColor2' href="mailto:management@lugvitc.org">   <i class="fa-solid fa-envelope fa-beat fa-lg"></i>  management@lugvitc.org</a>
             </div>
             <div className="flex flex-row flex-wrap container">
                 <a className='mx-3 textColor1' href="">Media:</a>

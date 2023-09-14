@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Routes, Route, Outlet } from "react-router-dom";
+import { HashRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
 
 import "./styles/colors.css";
 import "./styles/index.css";
@@ -52,6 +52,11 @@ const pages = [
     title: "Contact",
     link: "/contact",
     component: <Contact />,
+  },
+  {
+    title: "Forum",
+    link: "https://forum.lugvitc.org",
+    component: <></>,
   },
   //{
   //	title: 'Recruitment 2022',
