@@ -1,0 +1,27 @@
+.gridBox{
+   
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        margin: 20px 20px 20px 20px ;
+        /* grid-auto-rows: minmax(100px, auto); */
+
+}
+.textColor1{
+    color: #b85f69;
+}
+.textColor2{
+    color: #a1bc8a;
+}
+.textColor3{
+    color: #ebcb8b;
+}
+@media only screen and (max-width: 900px) {
+    .gridBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }

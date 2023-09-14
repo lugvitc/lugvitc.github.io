@@ -15,6 +15,7 @@ import RescueTux2022Routes from "./pages/rescueTux2022/routes";
 import Members from "./pages/members/boardmembers";
 import FFCSLeaderboard from "./pages/ffcs_leaderboard/ffcs_leaderboard";
 import Blogs from "./pages/blogs/Blogs";
+import Contact from "./pages/contact/Contact";
 
 const pages = [
   {
@@ -46,6 +47,11 @@ const pages = [
     title: "Blogs",
     link: "/blogs",
     component: <Blogs />,
+  },
+  {
+    title: "Contact",
+    link: "/contact",
+    component: <Contact />,
   },
   //{
   //	title: 'Recruitment 2022',
