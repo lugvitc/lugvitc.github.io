@@ -58,6 +58,12 @@ const pages = [
     link: "https://forum.lugvitc.org",
     component: <></>,
   },
+ {
+    title: "Results",
+    link: "https://results.lugvitc.org/",
+    component: <></>,
+  },
+
   //{
   //	title: 'Recruitment 2022',
   //	link: '/recruitment',
