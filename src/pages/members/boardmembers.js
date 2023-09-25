@@ -2,8 +2,6 @@ import TerminalWindow from "../../components/terminal/terminalWindow";
 // import { boardmembers_2021 } from "./boardmembers_2021";
 // import { boardmembers_2022 } from "./boardmembers_2022";
 // import { techadvisors_2022 } from "./techadvisors_2022";
-import layout from "./layout.module.css";
-import layout2 from "./layoutalter.module.css";
 import i1 from './Baleswar.jpeg';
 import i2 from './Samridh.jpeg';
 import i3 from '../../images/members/abhishek.jpg';
@@ -27,11 +25,23 @@ import i20 from '../../images/members/mogesh.png';
 import i21 from '../../images/members/revanth.png';
 import i22 from '../../images/members/sai.jpeg';
 import ib from '../../images/members/blank.png';
-
-
-
+import { useState } from "react";
 
 export default function Members() {
+    const [isOpen1, setIsOpen1] = useState(true);
+    const [isOpen2,setIsOpen2] = useState(false)
+    const toggleContent1 = () => {
+      setIsOpen1(!isOpen1);
+      if (isOpen2){
+        setIsOpen2(!isOpen2)
+      }  
+    };
+    const toggleContent2 =()=>{
+      setIsOpen2(!isOpen2)
+      if (isOpen1){
+        setIsOpen1(!isOpen1)
+      } 
+    }
   return (
     <TerminalWindow
       prompts={[
@@ -40,9 +50,12 @@ export default function Members() {
       ]}
       title="Board Members"
     >
-      <h2>~/club/boardmembers/2023</h2>
-
-      <div className={layout.twos}>
+    <div className="flex flex-col justify-around">
+    <div>
+    <button className={`w-0 h-0 border-[15px] border-solid border-transparent border-l-[#BF616A] ${isOpen1?'rotate-90' : ''} hover:scale-105 transition-all duration-300 ease-in-out`}onClick={toggleContent1}></button>
+    <span class="text-[#EBCB8B] text-[25px]">~/club/boardmembers/2023</span>
+    </div>
+      { isOpen1 &&<div class="flex flex-row flex-wrap justify-evenly">
         {/* {boardmembers_2022.map(({ position, member,batch,photo}, index) => (
                     <section key={index}>
                         <div className={layout.spacer}>
@@ -64,799 +77,688 @@ export default function Members() {
                 ))
                 }
                  */}
-        <div class="container">
-          <div class="row justify-content-center">
-            
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i3} />
+        <div>
+          <div className="flex flex-wrap justify-center items-center">
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i3} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Abhishek Kumar</h3>
-                  <h4 class={layout.title}>President</h4>
+                <div>
+                  <h3>Abhishek Kumar</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">President</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="https://github.com/AmrealAbhishek01"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="instagram.com/amrealabhishek/"
-                      class="fa fa-instagram"
+                      href="https://instagram.com/amrealabhishek/"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
+                      href="https://lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="https://www.linkedin.com/in/abhishek-kumar-284849215/"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i4} />
+            <div class=" w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i4} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Aditya Kushwaha</h3>
-                  <h4 class={layout.title}>Vice President</h4>
+                <div>
+                  <h3>Aditya Kushwaha</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Vice President</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/aadityakushwaha" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/aadityakushwaha" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://instagram.com/aaditya_kushwaha_" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://twitter.com/Aaditya_K_" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i6} />
+                </div>
+                <div>
+                  <h3>Animesh Rai</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
-                      href="https://github.com/aadityakushwaha"
-                      class="fa fa-github"
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="https://instagram.com/aaditya_kushwaha_"
-                      class="fa fa-instagram"
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="https://twitter.com/Aaditya_K_"
-                      class="fa fa-twitter"
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="https://www.linkedin.com/in/aadityakushwaha"
-                      class="fa fa-linkedin"
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i6} />
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i7} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Animesh Rai</h3>
-                  <h4 class={layout.title}>Technical Head</h4>
+                <div>
+                  <h3>Rahul Vijaykumar</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Co-Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i7} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Rahul Vijaykumar</h3>
-                  <h4 class={layout.title}>Technical Co-Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="https://github.com/rahulvk007"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/rahul.vk007?igshid=OGQ5ZDc2ODk2ZA=="
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="https://www.linkedin.com/in/rahul-vijayakumar-872218244/"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i8} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Venukanthan BS
-</h3>
-                  <h4 class={layout.title}>Cyber Security Lead</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="https://github.com/itsvenu22"
-                      class="fa fa-github"
+                      href="https://instagram.com/rahul.vk007?igshid=OGQ5ZDc2ODk2ZA=="
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/itsvenu22/ "
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/venukanthan_bs"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/venukanthan/"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i9} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Meetesh Saini</h3>
-                  <h4 class={layout.title}>Backend Lead</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i10} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Dhananjay Chauhan</h3>
-                  <h4 class={layout.title}>Front-End Lead</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/Dhananjay-Chauhan"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/dhananjay-chauhan-64293822b/"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i11} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Aditi Rai</h3>
-                  <h4 class={layout.title}>Competetive Programming Lead</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i22} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Sai Charan guntupalli
-</h3>
-                  <h4 class={layout.title}>Cloud Lead</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/sai80082"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/sai_charan_guntupalli/"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/_saicharan_"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="www.linkedin.com/in/sai-charan-guntupalli"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i17} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Kartikey Subramaniam</h3>
-                  <h4 class={layout.title}>Technical Advisory</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="github.com/hellokartikey"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="instagram.com/kartikey_2811"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i18} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Dhruv Hatkar</h3>
-                  <h4 class={layout.title}>Technical Advisory</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/slipstream8125"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/hatkar04_dhruv?igshid=YmMyMTA2M2Y="
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/Slipstream_8125"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://www.linkedin.com/in/dhruv-hatkar"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i19} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Ezhil S</h3>
-                  <h4 class={layout.title}>Technical Advisory</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/ezhil56x"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/ezhil56x"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/ezhil56x"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/ezhilshanmugham"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i20} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Mogesh</h3>
-                  <h4 class={layout.title}>Media Advisory</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/mogesh06"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/_.mogesh06._?utm_source=qr&igshid=NGExMmI2YTkyZg=="
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/Mogesh05?t=3A7bn3cbwElS6gCyhtUXUg&s=09"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="http://www.linkedin.com/in/mogeshvar-s-g"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i12} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Chitranshu</h3>
-                  <h4 class={layout.title}>Content Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i13} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>K. Nithya Reddy</h3>
-                  <h4 class={layout.title}>Content Co-Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i21} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>K. Revanth Sai</h3>
-                  <h4 class={layout.title}>Management Treasurer</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/Revanthsai2003"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/k_revanth_sai/"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://twitter.com/Revanth_1813"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/revanth-sai-9a8240231/"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i16} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Srideep Aalla</h3>
-                  <h4 class={layout.title}>Operations Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/srideepaalla?igshid=OGQ5ZDc2ODk2ZA=="
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/srideep-aalla-357005267"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i14} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Hrishikesk Naramparambath</h3>
-                  <h4 class={layout.title}>Media Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="https://github.com/kingslayer1312"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://instagram.com/quitepossiblyhrishi?igshid=ZDc4ODBmNjlmNQ=="
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/hrishikesh-naramparambath-24b010222"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i15} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Kathir M.N.</h3>
-                  <h4 class={layout.title}>Media Co-Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
 
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i8} />
+                </div>
+                <div>
+                  <h3>Venukanthan BS</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Cyber Security Lead</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/itsvenu22" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/venukanthan/" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.instagram.com/itsvenu22/" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://twitter.com/venukanthan_bs" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i9} />
+                </div>
+                <div>
+                  <h3>Meetesh Saini</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Backend Lead</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i10} />
+                </div>
+                <div>
+                  <h3>Dhananjay Chauhan</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Front-End Lead</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/Dhananjay-Chauhan" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/dhananjay-chauhan-64293822b/" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i11} />
+                </div>
+                <div>
+                  <h3>Aditi Rai</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Competetive Programming Lead</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i22} />
+                </div>
+                <div>
+                  <h3>Sai Charan Guntupalli</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Cloud Lead</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a
+                      href="https://github.com/sai80082"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="www.linkedin.com/in/sai-charan-guntupalli"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="https://www.instagram.com/sai_charan_guntupalli/"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="https://twitter.com/_saicharan_"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i17} />
+                </div>
+                <div>
+                  <h3>Kartikey Subramaniam</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Advisory</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a
+                      href="github.com/hellokartikey"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="instagram.com/kartikey_2811"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i18} />
+                </div>
+                <div>
+                  <h3>Dhruv Hatkar</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Advisory</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a
+                      href="https://github.com/slipstream8125"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="http://www.linkedin.com/in/dhruv-hatkar"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="https://instagram.com/hatkar04_dhruv?igshid=YmMyMTA2M2Y="
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="https://twitter.com/Slipstream_8125"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i19} />
+                </div>
+                <div>
+                  <h3>Ezhil S</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Advisory</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/ezhil56x" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/ezhilshanmugham" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://instagram.com/ezhil56x" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://twitter.com/ezhil56x" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+            <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+              <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i20} />
+              </div>
+              <div>
+                <h3>Mogesh</h3>
+                <h4 class="text-[15px] text-[#4e5052] capitalize">Media Advisory</h4>
+              </div>
+              <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                <li class="inline-block">
+                  <a
+                    href="https://github.com/mogesh06"
+                    class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                    aria-hidden="true"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li class="inline-block">
+                  <a
+                    href="http://www.linkedin.com/in/mogeshvar-s-g"
+                    class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                    aria-hidden="true"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li class="inline-block">
+                  <a
+                    href="https://instagram.com/_.mogesh06._?utm_source=qr&igshid=NGExMmI2YTkyZg=="
+                    class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                    aria-hidden="true"
+                    target="_blank"
+                  ></a>
+                </li>
+                <li class="inline-block">
+                  <a
+                    href="https://twitter.com/Mogesh05?t=3A7bn3cbwElS6gCyhtUXUg&s=09"
+                    class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                    aria-hidden="true"
+                    target='_blank'
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i12} />
+                </div>
+                <div>
+                  <h3>Chitranshu</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Content Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i13} />
+                </div>
+                <div>
+                  <h3>K. Nithya Reddy</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Content Co-Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                  <li class="inline-block">
+                    <a
+                      href="lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
+                      aria-hidden="true"
+                      target="_blank"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i21} />
+                </div>
+                <div>
+                  <h3>K. Revanth Sai</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Management Treasurer</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/Revanthsai2003" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/revanth-sai-9a8240231/" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.instagram.com/k_revanth_sai/" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://twitter.com/Revanth_1813" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i16} />
+                </div>
+                <div>
+                  <h3>Srideep Aalla</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Operations Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/srideep-aalla-357005267" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://instagram.com/srideepaalla?igshid=OGQ5ZDc2ODk2ZA==" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i14} />
+                </div>
+                <div>
+                  <h3>Hrishikesk Naramparambath</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Media Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="https://github.com/kingslayer1312" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://www.linkedin.com/in/hrishikesh-naramparambath-24b010222" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="https://instagram.com/quitepossiblyhrishi?igshid=ZDc4ODBmNjlmNQ==" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i15} />
+                </div>
+                <div>
+                  <h3>Kathir M.N.</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Media Co-Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
       
           </div>
         </div>
+      </div>}
+      <div>
+        <button className={`w-0 h-0 border-[15px] border-solid border-transparent border-l-[#BF616A] ${isOpen2?'rotate-90' : ''} hover:scale-105 transition-all duration-300 ease-in-out`}onClick={toggleContent2}></button>
+        <span class="text-[#EBCB8B] text-[25px]">~/club/boardmembers/2023</span>
       </div>
-      <h1>
-       ~/club/boardmembers/2022
-      </h1>
-      <div className={layout.twos}>
+      { isOpen2 && <div class="flex flex-row flex-wrap justify-evenly">
         {/* {boardmembers_2022.map(({ position, member,batch,photo}, index) => (
                     <section key={index}>
                         <div className={layout.spacer}>
@@ -878,343 +780,320 @@ export default function Members() {
                 ))
                 }
                  */}
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i1} />
+        <div>
+        <div className="flex flex-wrap justify-center items-center">
+            <div class="relative group w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i1} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Beleswar Prasad Padhi</h3>
-                  <h4 class={layout.title}>President</h4>
+                <div>
+                  <h3>Beleswar Prasad Padhi</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">President</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-instagram"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-twitter"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
+
             
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i2} />
+            <div class="relative group w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i2} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Samridh Anand Paatni</h3>
-                  <h4 class={layout.title}>Vice-President</h4>
+                <div>
+                  <h3>Samridh Anand Paatni</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Vice-President</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i3} />
+
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i3} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Abhishek Kumar</h3>
-                  <h4 class={layout.title}>Technical Head</h4>
+                <div>
+                  <h3>Abhishek Kumar</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="https://github.com/AmrealAbhishek01"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="instagram.com/amrealabhishek/"
-                      class="fa fa-instagram"
+                      href="https://instagram.com/amrealabhishek/"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
+                      href="https://lugvitc.org"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="https://www.linkedin.com/in/abhishek-kumar-284849215/"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
             
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i6} />
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i6} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Animesh Rai</h3>
-                  <h4 class={layout.title}>Technical Co-Head</h4>
+                <div>
+                  <h3>Animesh Rai</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Technical Co-Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-instagram"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-twitter"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={i5} />
+            <div class="w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="group bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={i11} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Aditi Rai</h3>
-                  <h4 class={layout.title}>Operations Head</h4>
+                <div>
+                  <h3>Aditi Rai</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Operations Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-instagram"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-twitter"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
-            
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={ib} />
+            <div class="relative group w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={ib} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Praveenraj R S</h3>
-                  <h4 class={layout.title}>Operation Co-Head</h4>
+                <div>
+                  <h3>Praveenraj R S</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Operation Co-Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
+                  </li>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="relative group w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg ">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={ib} />
+                </div>
+                <div>
+                  <h3>Arumilli Abhiram</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Management Head</h4>
+                </div>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-github"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-instagram"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-twitter"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
-                  <li>
+                  <li class="inline-block">
                     <a
                       href="lugvitc.org"
-                      class="fa fa-linkedin"
+                      class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter"
                       aria-hidden="true"
+                      target="_blank"
                     ></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={ib} />
+
+            <div class="relative group w-[300px] h-auto flex justify-center rounded-[10px] p-[13px]">
+              <div class="bg-[#25282b] text-center overflow-hidden relative h-[355px] w-[300px] mb-[30px] pt-[30px] pb-10 rounded-lg">
+                <div class="inline-block h-[135px] w-[130px] z-[1] relative mb-[50px] before:w-full before:h-0 before:bg-[#434c5e] before:absolute before:opacity-90 before:transition-all before:duration-[0.3s] before:ease-linear before:delay-[0s] before:rounded-[50%] before:scale-[3] before:bottom-[135%] before:inset-x-0 before:group-hover:h-full after:w-full after:h-full after:bg-[#484c50] after:absolute after:z-[-1] after:rounded-[50%] after:left-0 after:top-0">
+                  <img class="w-[135px] h-[135px] transition-all duration-[0.9s] ease-[ease] delay-[0s] rounded-[50%] scale-100 group-hover:shadow-[0_0_0_14px_#25282b] group-hover:scale-[0.7]" src={ib} />
                 </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Arumilli Abhiram</h3>
-                  <h4 class={layout.title}>Management Head</h4>
+                <div>
+                  <h3>Nithin Kumar</h3>
+                  <h4 class="text-[15px] text-[#4e5052] capitalize">Management Co-Head</h4>
                 </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
+                <ul class="w-full bg-[#434c5e] absolute bottom-[-100px] transition-all duration-[0.5s] ease-[ease] delay-[0s] m-0 p-0 left-0 group-hover:bottom-0">
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-github" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-linkedin" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-instagram" aria-hidden="true" target="_blank"></a>
                   </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
+                  <li class="inline-block">
+                    <a href="lugvitc.org" class="text-[17px] text-[white] transition-all duration-[0.3s] ease-[ease] delay-[0s] no-underline p-2.5 hover:text-[#25282b] hover:bg-[#f7f5ec] fa fa-twitter" aria-hidden="true" target="_blank"></a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class={layout.newCard}>
-              <div class={layout.ourTeam}>
-                <div class={layout.picture}>
-                  <img class="img-fluid" src={ib} />
-                </div>
-                <div class="teamContent">
-                  <h3 class={layout.name}>Nithin Kumar</h3>
-                  <h4 class={layout.title}>Management Co-Head</h4>
-                </div>
-                <ul class={layout.social}>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-github"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-instagram"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-twitter"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="lugvitc.org"
-                      class="fa fa-linkedin"
-                      aria-hidden="true"
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+
       
           </div>
         </div>
-      </div>
+      </div>}
+    </div>
       {/* <div className={layout2.twos}>
         {techadvisors_2022.map(({ position, member, batch, photo }, index) => (
           <section key={index}>
