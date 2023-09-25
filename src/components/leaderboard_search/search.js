@@ -55,8 +55,8 @@ export default function LeaderboardSearch({
 }) {
   // border-[1px], change it to just "border" after bootstrap is removed
   return (
-    <div className="flex flex-col-reverse items-center justify-center">
-      <input className="p-2 h-10 w-64 md:w-1/2 rounded-md text-sm bg-nord0 text-nord5 border-[1px] border-nord2 focus:outline-none focus:bg-headerFooterBlack transition duration-[470ms] ease-in-out" type="text" id="searchinput" onChange={(e) => { searchFunction(members, e, setter) }} placeholder="Search" />
+    <div className="flex flex-col-reverse items-center justify-center gap-6">
+      <input className="p-2 h-12 w-64 md:w-1/2 rounded-md text-base bg-nord0 text-nord5 border-[1px] border-nord2 focus:outline-none focus:bg-headerFooterBlack transition duration-[470ms] ease-in-out" type="text" id="searchinput" onChange={(e) => { searchFunction(members, e, setter) }} placeholder="Search" />
       <div className="px-4 py-2 bg-nord0 text-nord4 mb-2 rounded-md flex flex-col items-center border-[1px] border-nord2">
         <span className="text-nord6 text-sm">Sort By: </span>
         <select id="lb_option_select" className="h-8 bg-nord2 text-nord5 rounded-md border-[1px] border-nord3" onChange={(e) => { chooseSort(members, setter) }}>
