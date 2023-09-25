@@ -1,18 +1,20 @@
-import '../topThree/topcards.css';
 // import img1 from '../../images/top3ffcs/img1.png';
 // import img2 from '../../images/top3ffcs/img2.png';
 // import img3 from '../../images/top3ffcs/img3.png';
+
+
 export default function Topcards({
     top_3_members, getImgfromAPI, picBaseURL
 }) {
-    if (top_3_members.length == 0) {
+    if (top_3_members.length < 3) {
         return (<></>)
     }
     return (
+        // The tailwind styles are repeated here, TODO: make a card component and use that here
         <>
-            <div className="podium">
-                <div className="position1">
-                    <div className="img1">
+            <div className="flex flex-row justify-evenly md:justify-center items-center flex-wrap w-100 mb-8 h-[60vh]">
+                <div className="flex flex-col items-center w-30 sm:w-40 h-20 md:h-[40vh] md:w-52 md:mr-[2vw] md:mt-[7vh]">
+                    <div className="flex flex-col items-center justify-center w-20 h-[100px] md:w-52 md:h-52 z-[2]">
                         <svg
                             width="70px"
                             height="70px"
@@ -59,22 +61,22 @@ export default function Topcards({
                                 fill="#c0c0c0"
                             />
                         </svg>
-                        <img src={picBaseURL + top_3_members[1].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(1);}} />
+                        <img className="w-20 h-20 rounded-full md:w-28 md:h-28 border-nord1 border-[1px]" src={picBaseURL + top_3_members[1].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(1);}} />
                     </div>
-                    <div className="second-place">
-                        <div className="rank">
+                    <div className="flex flex-col justify-center items-center h-30 w-30 bg-nord2 rounded-2xl text-xs font-mono md:h-60 md:w-52 md:mt-[-40px] md:text-3xl font-bold text-center p-1">
+                        <div className="font-poiret text-xl md:text-5xl md:mt-16">
                             2
                         </div>
-                        <div className="name">
+                        <div className="text-xs md:mt-1 md:text-2xl">
                             {top_3_members[1].display}
                         </div>
-                        <div className="dept">
+                        <div className="text-xs md:mt-1 md:text-2xl">
                             {top_3_members[1].dept}
                         </div>
                     </div>
                 </div>
-                <div className="position2">
-                    <div className="img2">
+                <div className="flex flex-col items-center w-30 sm:w-40 h-20 md:h-[40vh] md:w-52">
+                    <div className="flex flex-col items-center justify-center w-20 h-[100px] md:w-52 md:h-52 z-[2]">
                         <svg
                             width="70px"
                             height="70px"
@@ -121,22 +123,22 @@ export default function Topcards({
                                 fill="#0092D2"
                             />
                         </svg>
-                        <img src={picBaseURL + top_3_members[0].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(0);}} />
+                        <img className="w-20 h-20 rounded-full md:w-28 md:h-28 border-nord1 border-[1px]" src={picBaseURL + top_3_members[0].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(0);}} />
                     </div>
-                    <div className="first-place">
-                        <div className="rank">
+                    <div className="flex flex-col items-center h-30 w-30 bg-nord2 rounded-2xl text-xs font-mono md:h-60 md:w-52 md:mt-[-40px] md:text-3xl font-bold text-center p-1">
+                        <div className="font-poiret text-xl md:text-5xl md:mt-16">
                             1
                         </div>
-                        <div className="name">
+                        <div className="text-xs md:mt-1 md:text-2xl">
                             {top_3_members[0].display}
                         </div>
-                        <div className="dept">
+                        <div className="text-xs md:mt-1 md:text-2xl">
                             {top_3_members[0].dept}
                         </div>
                     </div>
                 </div>
-                <div className="position3">
-                    <div className="img3">
+                <div className="flex flex-col items-center w-30 sm:w-40 h-20 md:h-[40vh] md:w-52 md:ml-[2vw] md:mt-[7vh]">
+                    <div className="flex flex-col items-center justify-center w-20 h-[100px] md:w-52 md:h-52 z-[2]">
                         <svg
                             width="70px"
                             height="70px"
@@ -183,16 +185,16 @@ export default function Topcards({
                                 fill="#835220"
                             />
                         </svg>
-                        <img src={picBaseURL + top_3_members[2].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(2);}} />
+                        <img className="w-20 h-20 rounded-full md:w-28 md:h-28 border-nord1 border-[1px]" src={picBaseURL + top_3_members[2].regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(2);}} />
                     </div>
-                    <div className="third-place">
-                        <div className="rank">
+                    <div className="flex flex-col justify-center items-center h-30 w-30 bg-nord2 rounded-2xl text-xs font-mono md:h-60 md:w-52 md:mt-[-40px] md:text-3xl font-bold text-center p-1">
+                        <div className="font-poiret text-xl md:text-5xl md:mt-16">
                             3
                         </div>
-                        <div className="name">
+                        <div className="md:mt-1 md:text-2xl">
                             {top_3_members[2].display}
                         </div>
-                        <div className="dept">
+                        <div className="md:mt-1 md:text-2xl">
                             {top_3_members[2].dept}
                         </div>
                     </div>
