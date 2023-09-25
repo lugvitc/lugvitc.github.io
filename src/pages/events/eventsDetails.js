@@ -22,28 +22,7 @@ import password_poster from "../../images/password/password-poster.png";
 import pswdwinnerone from "../../images/password/pswdwinnerone.jpg";
 import pswdwinnertwo from "../../images/password/pswdwinnertwo.jpg";
 import pswdwinnerthree from "../../images/password/pswdwinnerthree.jpg";
-import styles from "./events.module.css";
-const imgStyle = {
-  width: "38vw",
-  height: "auto",
-  borderRadius: "10px",
-};
-const boxArea = {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-};
-const leftArea = {
-  width: "40vw",
-  height: "auto",
-  padding: "20px 20px 20px 40px",
-};
-const rightArea = {
-  width: "40vw",
-  height: "auto",
-  padding: "20px 40px 20px 20px",
-};
+
 export const eventsDetails = [
   {
     number: "00",
@@ -53,11 +32,11 @@ export const eventsDetails = [
     details: (
       <>
         <br />
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className={"carousel slide rounded-xl"}
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -86,7 +65,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className=""
                     src={speaker}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -94,7 +73,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className=""
                     src={winnerOne}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -102,7 +81,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className=""
                     src={winnerTwo}
                     alt="The guest speaker enlightening students about FOSS"
                   />
@@ -134,7 +113,7 @@ export const eventsDetails = [
               </button>
             </div>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day
               event for participants to show-off their familiarity with
@@ -142,7 +121,7 @@ export const eventsDetails = [
               their projects to an industry expert.
             </p>
             <p>
-              <br />A total of <strong>20 participants</strong> took part with
+              <br />A total of <strong className="italic font-bold text-[#ebcb8b]">20 participants</strong> took part with
               1-3 pariticipants in each team. They used FOSS (free and
               open-source software) resources from a number of fields including
               computer vision, web scraping, web automation and blockchain
@@ -208,13 +187,13 @@ export const eventsDetails = [
     id: "rescue-tux",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               The Linux Club at VIT Chennai organized the <i>Rescue Tux</i>{" "}
               event on 21st August 2022,{" "}
-              <strong>sponsored by GeeksForGeeks</strong>. The event saw the
-              participation of about <strong>180 attendees</strong>, who enjoyed
+              <strong className="italic font-bold text-[#ebcb8b]">sponsored by GeeksForGeeks</strong>. The event saw the
+              participation of about <strong className="italic font-bold text-[#ebcb8b]">180 attendees</strong>, who enjoyed
               a Linux workshop by the club's President Beleswar Prasad Padhi and
               Vice President Samridh Anand Paatni, followed by lunch. The
               participants also took part in a CTF event featuring challenges
@@ -225,19 +204,19 @@ export const eventsDetails = [
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong>, who received a prize of
+                Team <strong className="italic font-bold text-[#ebcb8b]">EchoHelloWorld</strong>, who received a prize of
                 Rs.3000
               </li>
               <li>
-                Team <strong>Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who
+                Team <strong className="italic font-bold text-[#ebcb8b]">Ashwin Ponnur,Vishnu Sujith Krurp</strong>, who
                 received a prize of 2000 rs.
               </li>
             </ol>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className={"carousel slide rounded-xl"}
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -266,7 +245,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={rescue}
                     alt="rescue-tux"
                   />
@@ -274,7 +253,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={rescue1}
                     alt="rescue-tux"
                   />
@@ -282,7 +261,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={rescue2}
                     alt="rescue-tux"
                   />
@@ -301,11 +280,11 @@ export const eventsDetails = [
     id: "cyber-0-day",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className="carousel slide rounded-xl"
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -334,7 +313,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={cyber}
                     alt="cyber-o-day"
                   />
@@ -342,7 +321,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={cyber1}
                     alt="cyber-o-day"
                   />
@@ -350,7 +329,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={cyber2}
                     alt="cyber-o-day"
                   />
@@ -358,13 +337,13 @@ export const eventsDetails = [
               </div>
             </div>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               The Linux Club at VIT Chennai, in collaboration with The
               Tech-Researchers Club, organized the <i>Cyber-0-Day</i> event from
               24th to 25th September 2022. The event saw the participation of
-              around <strong>100 participants</strong> in teams of 1-3, and was{" "}
-              <strong>sponsored by Rapido</strong>. The event began with a Linux
+              around <strong className="italic font-bold text-[#ebcb8b]">100 participants</strong> in teams of 1-3, and was{" "}
+              <strong className="italic font-bold text-[#ebcb8b]">sponsored by Rapido</strong>. The event began with a Linux
               workshop by the President Beleswar Prasad Padhi and Vice President
               Samridh Anand Paatni, followed by a cybersecurity quiz and lunch.
             </p>
@@ -381,16 +360,16 @@ export const eventsDetails = [
             <p>The top three teams that emerged victorious were as follows:</p>
             <ol>
               <li>
-                Team <strong>EchoHelloWorld</strong> (Zehran 21BPS1091, Christeo
+                Team <strong className="italic font-bold text-[#ebcb8b]">EchoHelloWorld</strong> (Zehran 21BPS1091, Christeo
                 21BCE1635 & Aditya 21BCE1431), who received a prize of X rs.
               </li>
               <li>
-                Team <strong>HailAlan</strong> (Kushal Agrawal 22BPS1141, Ansh
+                Team <strong className="italic font-bold text-[#ebcb8b]">HailAlan</strong> (Kushal Agrawal 22BPS1141, Ansh
                 Sharma 22BCE1338 & Shashwat Mishra 22BCE1853), who received a
                 prize of X rs.
               </li>
               <li>
-                Team <strong>chill_sette</strong> (Naman 21BCE5852, Yash Singh
+                Team <strong className="italic font-bold text-[#ebcb8b]">chill_sette</strong> (Naman 21BCE5852, Yash Singh
                 21BCE5760 & Sagar 21BCE5790), who received a prize of X rs.
               </li>
             </ol>
@@ -406,8 +385,8 @@ export const eventsDetails = [
     id: "hackers-horizon",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “Hackers Horizon” a
               two-day, full hands-on hacking session. Event was led by none
@@ -435,10 +414,10 @@ export const eventsDetails = [
               BugXs, which encouraged every team to put up their all-out effort.
             </p>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className="carousel slide rounded-xl"
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -467,7 +446,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={hacker}
                     alt="hacker-horizon"
                   />
@@ -475,7 +454,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={hacker1}
                     alt="hacker-horizon"
                   />
@@ -483,7 +462,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={hacker2}
                     alt="hacker-horizon"
                   />
@@ -502,16 +481,16 @@ export const eventsDetails = [
     id: "gsoc-made-easy",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <img
               loading="lazy"
               src={gsoc}
               alt="gsoc-made-easy"
-              className={styles.containImage}
+              className="w-4/5 md:w-2/5"
             />
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “Google Summer of
               Code Made Easy” , purpose of the event was to guide students about
@@ -545,8 +524,8 @@ export const eventsDetails = [
     id: "linux-installation-booth",
     details: (
       <>
-        <div className={styles.box}>
-          <div className={styles.leftArea}>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               Linux Club, VIT Chennai successfully organised “LINUX INSTALLATION
               BOOTH”, where we helped students both install Linux OS and dual
@@ -565,10 +544,10 @@ export const eventsDetails = [
               events like this in the future.
             </p>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className="carousel slide rounded-xl"
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -597,7 +576,7 @@ export const eventsDetails = [
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={booth}
                     alt="linux-booth"
                   />
@@ -605,7 +584,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={booth1}
                     alt="linux-booth"
                   />
@@ -613,7 +592,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={booth2}
                     alt="linux-booth"
                   />
@@ -632,12 +611,12 @@ export const eventsDetails = [
     id: "password", // id password
     details: (
       <>
-        <div className={styles.box}>
+        <div className="flex flex-col justify-between md:flex-row">
           
-          <div className={styles.leftArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <div
               id="carouselExampleIndicators"
-              className={"carousel slide " + styles.imgStyle}
+              className="carousel slide rounded-xl"
               data-bs-ride="carousel"
             >
               <div class="carousel-indicators">
@@ -674,13 +653,13 @@ export const eventsDetails = [
                     loading="lazy"
                     src={password_poster} // src
                     alt="password"
-                    className={styles.containImage} // alt
+                    className="w-4/5 md:w-2/5" // alt
                   />
                 </div>
                 <div class="carousel-item active">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={pswdwinnerone}
                     alt="winner"
                   />
@@ -688,7 +667,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={pswdwinnertwo}
                     alt="winner"
                   />
@@ -696,7 +675,7 @@ export const eventsDetails = [
                 <div class="carousel-item">
                   <img
                     loading="lazy"
-                    className={styles.imgStyle}
+                    className="rounded-xl"
                     src={pswdwinnerthree}
                     alt="winner"
                   />
@@ -705,7 +684,7 @@ export const eventsDetails = [
               
             </div>
           </div>
-          <div className={styles.rightArea}>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
             <p>
               "Password" in this event participants will have the opportunity to
               engage in hands-on workshops, where they can learn practical
