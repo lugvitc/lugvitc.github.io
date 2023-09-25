@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Topcards dependency */
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
 body {
     background-color: var(--nord0);
     /* height: fit-content; */
