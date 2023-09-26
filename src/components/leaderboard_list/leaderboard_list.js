@@ -9,7 +9,7 @@ export default function List({
                 {
                     all_members.map((member, index) => (
                         <div className="w-72 h-32 lg:w-96 bg-nord0 border-[1px] border-nord2 rounded-md relative box-content hover:cursor-pointer" key={"img-member-"+member.regno} onClick={openPopUp(this)} memberindex={index}>
-                            <img className="w-32 h-32 rounded-l-md" src={picBaseURL + member.regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(index);}} />
+                            <img className="w-32 h-32 rounded-l-md object-cover object-center" src={picBaseURL + member.regno} onError={({ currentTarget }) => {currentTarget.onerror = null;currentTarget.src=getImgfromAPI(index);}} />
                             <div className="w-32 h-32 absolute left-0 bottom-0 rounded-l-md bg-gradient-to-t from-black to-[#00000030]">
                             </div>
                             <div className="w-32 h-32 absolute left-0 bottom-0 rounded-l-md font-sans flex flex-col justify-end items-start pl-1.5 pb-1.5 text-2xl font-bold">
