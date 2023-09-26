@@ -14,17 +14,17 @@ export default function TerminalWindow({
     title
 }) {
     return (
-        <div className={styles.index}>
-            <div className={`${styles.titlebar} ${util.noSelection}`}>
+        <div className={"bg-[#212529] min-w-[50%] rounded-[10px]"}>
+            <div className={`flex relative justify-center items-center  ml-3 mt-3 p-3 ${util.noSelection}`}>
                 <TerminalDots
                     onClickRed={onClickRed}
                     onClickYellow={onClickYellow}
                     onClickGreen={onClickGreen}
                 />
-                <div className={styles.title}>{title}</div>
+                <div className={`text-[#d8dee9] font-extrabold`}>{title}</div>
             </div>
 
-            <div className={`${styles.body} ${util.terminalText}`}>
+            <div className={`bg-[#3b4252] overflow-y-auto p-4 rounded-[0px_0px_10px_10px] ${util.terminalText}`}>
                 {prompts ? (
                     prompts.reduceRight(
                         (acc, curr) => (
@@ -39,10 +39,10 @@ export default function TerminalWindow({
                                 {acc}
                             </ShowAfterTypewriter>
                         ),
-                        <div className={styles.contents}>{children}</div>
+                        <div className={`mt-4`}>{children}</div>
                     )
                 ) : (
-                    <div className={`${styles.contents} ${styles.noPrompts}`}>
+                    <div className={`mt-0`}>
                         {children}
                     </div>
                 )}
