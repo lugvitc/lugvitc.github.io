@@ -1,3 +1,6 @@
+import styles from "./search.module.css"
+
+
 // function to sort members by name
 function sortByName(members, setter, reverse = false) {
   // create a copy of members, as original array will not be modified
@@ -31,7 +34,7 @@ function searchFunction(members, e, setter) {
 }
 
 function chooseSort(members, setter) {
-  const sortDropdown = document.getElementById("lb_option_select");
+  const sortDropdown = document.querySelector(".leaderboard_sort_button");
   const sortOption = sortDropdown.options[sortDropdown.selectedIndex].value;
   switch (sortOption) {
     case "Name \u2191":
@@ -53,18 +56,21 @@ function chooseSort(members, setter) {
 export default function LeaderboardSearch({
   members, setter
 }) {
-  // border-[1px], change it to just "border" after bootstrap is removed
   return (
-    <div className="flex flex-col-reverse items-center justify-center gap-6">
-      <input className="p-2 h-12 w-64 md:w-1/2 rounded-md text-base bg-nord0 text-nord5 border-[1px] border-nord2 focus:outline-none focus:bg-headerFooterBlack transition duration-[470ms] ease-in-out" type="text" id="searchinput" onChange={(e) => { searchFunction(members, e, setter) }} placeholder="Search" />
-      <div className="px-4 py-2 bg-nord0 text-nord4 mb-2 rounded-md flex flex-col items-center border-[1px] border-nord2">
-        <span className="text-nord6 text-sm">Sort By: </span>
-        <select id="lb_option_select" className="h-8 bg-nord2 text-nord5 rounded-md border-[1px] border-nord3" onChange={(e) => { chooseSort(members, setter) }}>
-          <option>Score &uarr;</option>
-          <option>Score &darr; </option>
-          <option>Name &uarr;</option>
-          <option>Name &darr;</option>
-        </select>
+    <div className={styles.container}>
+      <div className={styles.searchbar}>
+          <input type="text" id="searchinput" onChange={(e) => { searchFunction(members, e, setter) }} placeholder="Search" />
+      </div>
+      <div className={styles.buttons}>
+        <div className={styles.btn_group}>
+          <span style={{ color: "#ffffff", fontSize: "14px" }}>Sort By: </span>
+          <select className="leaderboard_sort_button" onChange={(e) => { chooseSort(members, setter) }}>
+            <option>Score &uarr;</option>
+            <option>Score &darr; </option>
+            <option>Name &uarr;</option>
+            <option>Name &darr;</option>
+          </select>
+        </div>
       </div>
     </div>
   )

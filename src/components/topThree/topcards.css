@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  height: 100%;
+  width: 100%;
+}
+.podium {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 60vh;
+  width: 100%;
+  /* margin: 0 auto; */
+  background-color: inherit;
+}
+
+/* Style for the first place */
+/* .first-place {
+  height: 240px;
+  width: 240px;
+
+  background-color: gold;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 12px 12px 9px 9px;
+} */
+
+/* Style for the second place */
+.second-place {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 240px;
+  background-color: var(--nord2);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  border-radius: 12px 12px 9px 9px;
+  margin-top: -40px;
+
+}
+.second-place .rank {
+  font-size: 50px;
+  margin-top: 66px;
+}
+.second-place .name {
+  font-size: 20px;
+  margin-top: 7px;
+  font-family: monospace;
+}
+.second-place .dept {
+  margin-top: 7px;
+  font-family: monospace;
+  font-size: 20px;
+}
+.img1 {
+  display: flex;
+  z-index: 2;
+  height: 200px;
+  width: 240px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img1 img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  border: 1px solid #303440;
+}
+.position1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  width: 240px;
+  margin-right: 2vw;
+  margin-top: 7vh;
+}
+/* first */
+.first-place {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 290px;
+  width: 240px;
+  background-color: var(--nord2);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  border-radius: 12px 12px 9px 9px;
+  margin-top: -40px;
+}
+.first-place .rank {
+  font-size: 80px;
+  margin-top: 45px;
+}
+.first-place .name {
+  font-size: 25px;
+  padding-top: 5px;
+  font-family: monospace;
+}
+.first-place .dept {
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: monospace;
+}
+.img2 {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+
+}
+.img2 img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  border: 1px solid #303440;
+}
+.position2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  width: 240px;
+  /* margin-top: 5vh; */
+}
+/*   thirsd */
+.third-place {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 240px;
+  background-color: var(--nord2);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  border-radius: 12px 12px 9px 9px;
+  margin-top: -40px;
+}
+.third-place .rank {
+  font-size: 60px;
+  margin-top: 40px;
+}
+.third-place .name {
+  font-size: 20px;
+  padding-top: 5px;
+  font-family: monospace;
+}
+.third-place .dept {
+  padding-top: 5px;
+  font-family: monospace;
+  font-size: 20px;
+}
+.img3 {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+}
+.img3 img {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  border: 1px solid #303440;
+}
+.position3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  width: 240px;
+  margin-left: 2vw;
+  margin-top: 5vh;
+}
+
+/*  */
+
+.rank,
+.name,
+.dept {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* media quesries */
+@media screen and (max-width: 880px) {
+  .second-place {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    background-color: var(--nord2);
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    border-radius: 12px 12px 9px 9px;
+    margin-top: 0px;
+  }
+  .second-place .rank {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  .second-place .name {
+    font-size: 12px;
+    /* margin-top: 7px; */
+    font-family: monospace;
+  }
+  .second-place .dept {
+    margin-top: 0px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+  .img1 {
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    width: 80px;
+    height: 100px;
+  }
+  .img1 img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #303440;
+  }
+  .position1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    margin-right: 0vw;
+    /* margin-top: 7vh;   */
+  }
+  .podium {
+    height: 50vh;
+  }
+  /* first */
+  .first-place {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    background-color: var(--nord2);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    border-radius: 12px 12px 9px 9px;
+    margin-top: 0px;
+  }
+  .first-place .rank {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  .first-place .name {
+    font-size: 12px;
+    padding-top: 0px;
+    font-family: monospace;
+  }
+  .first-place .dept {
+    padding-top: 0px;
+    font-size: 12px;
+    font-family: monospace;
+  }
+  .img2 {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    justify-content: center;
+    width: 80px;
+    height: 110px;
+  }
+  .img2 img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #303440;
+  }
+  .position2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    margin-right: 0vw;
+    margin-left: 0vw;
+  }
+  /*   thirsd */
+  .third-place {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    background-color: var(--nord2);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    border-radius: 12px 12px 9px 9px;
+    margin-top: 0px;
+  }
+  .third-place .rank {
+    font-size: 12px;
+    margin-top: 0px;
+  }
+  .third-place .name {
+    font-size: 12px;
+    padding-top: 0px;
+    font-family: monospace;
+  }
+  .third-place .dept {
+    padding-top: 0px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+  .img3 {
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    width: 80px;
+    height: 100px;
+  }
+  .img3 img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #303440;
+  }
+  .position3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    margin-left: 0vw;
+    margin-top: 6vh;
+  }
+}
+/* @media screen and (max-width: 880px) {
+    .position1{
+        margin-top: 5vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    .position2{
+        margin-top: 5vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        
+    }
+    .position3{
+        margin-top: 5vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+
+    }
+    .podium{
+        height: 150vh;
+    }
+} */
+/*  */
