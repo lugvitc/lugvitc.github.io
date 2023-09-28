@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { Colors } from '../styles/colors';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import ShowAfterTypewriter from '../components/showAfterTypewriter/showAfterTypwriter';
-import styles from '../styles/home.module.css';
+
 import nixos from "../images/nixos.png";
 import tails from "../images/pngkey.com-tails-png-2315158.png";
 import blackArch from "../images/blackarchlogo-removebg-preview.png";
 
 export default function Home() {
+
+    const bg_dark = { backgroundColor: "#212529" };
     const prompts = [{ path: '~', command: 'sudo lug' }];
     const [a, setA] = useState(0);
 
@@ -42,6 +44,7 @@ export default function Home() {
             desc: "BlackArch Linux is a penetration testing distribution based on Arch Linux. It is designed for penetration testers and security researchers, and it contains over 2872 tools that can be installed individually or in groups."
         }
     ];
+    
 
     return (
         <>
@@ -54,12 +57,7 @@ export default function Home() {
                     text='*************'
                 >
                     <br />
-                    <span style={{ color: Colors.nord14 }}>access granted...</span>
-                    <br />
-                    <br />
-                    <h1>Linux Club VIT, Chennai</h1>
-                    The 'Linux Club' of VIT, Chennai was created to spread
-                    awareness of Free and Open Source Software (FOSS) through Linux
+                    handlehover          awareness of Free and Open Source Software (FOSS) through Linux
                     flavours. It believes in developing collaborative open-source
                     projects.
                     <br />
@@ -82,12 +80,13 @@ export default function Home() {
                 {
                     a === 1 &&
                     distro.map((d) => (
-                        <div key={d.id} className={styles.card}><img src={d.image} alt="distro" />
-                            <div className={styles.overlay}>
-                                <h1 className={styles.overlayheading}>
+                        <div key={d.id} style={bg_dark} className={`home-distro-card `}>
+                            <img className='w-[17rem]' src={d.image} alt="distro" />
+                            <div className={'overlay'}>
+                                <h1 className={"text-[2rem] text-white"}>
                                     {d.title}
                                 </h1>
-                                <p className={styles.overlaydetails}>{d.desc}
+                                <p className={`w-80 z-[10] text-white `}>{d.desc}
                                 </p>
                             </div>
                         </div>
