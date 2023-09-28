@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.43ea850a.css",
-    "main.js": "/static/js/main.c3a5b3a3.js",
+    "main.css": "/static/css/main.6e4df7dc.css",
+    "main.js": "/static/js/main.a9787b80.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -40,22 +40,25 @@
     "static/media/Samridh.jpeg": "/static/media/Samridh.c756f84bfcb1faa7f02c.jpeg",
     "static/media/rescue-tux.jpeg": "/static/media/rescue-tux.314d1f0e61d4dcd24f34.jpeg",
     "static/media/aditya.jpeg": "/static/media/aditya.344f728f46aecfd5e56e.jpeg",
+    "static/media/nixos.png": "/static/media/nixos.cd14703757c2c1479bd8.png",
     "static/media/animesh.jpeg": "/static/media/animesh.2e0d27e09e94587bbb27.jpeg",
     "static/media/winner-two.jpg": "/static/media/winner-two.34b6797e61df0dc47790.jpg",
     "static/media/winner-one.jpg": "/static/media/winner-one.42dbd910470cf45dc37c.jpg",
     "static/media/abhishek.jpg": "/static/media/abhishek.256eea8af6a0f0e96d0d.jpg",
+    "static/media/blackarchlogo-removebg-preview.png": "/static/media/blackarchlogo-removebg-preview.d74c0b74f94679180d07.png",
     "static/media/gsoc.png": "/static/media/gsoc.473dfce07c0bf4b84898.png",
+    "static/media/pngkey.com-tails-png-2315158.png": "/static/media/pngkey.com-tails-png-2315158.c464f11092ced46b8ee8.png",
     "static/media/blank.png": "/static/media/blank.2fda6558cd58b877e14f.png",
     "static/media/Instagram.svg": "/static/media/Instagram.f19834e51679ce931f126f2b526d11f5.svg",
     "static/media/Discord.svg": "/static/media/Discord.27583b533952833679e4badca4e9e2a4.svg",
     "index.html": "/index.html",
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
-    "main.43ea850a.css.map": "/static/css/main.43ea850a.css.map",
-    "main.c3a5b3a3.js.map": "/static/js/main.c3a5b3a3.js.map"
+    "main.6e4df7dc.css.map": "/static/css/main.6e4df7dc.css.map",
+    "main.a9787b80.js.map": "/static/js/main.a9787b80.js.map"
   },
   "entrypoints": [
-    "static/css/main.43ea850a.css",
-    "static/js/main.c3a5b3a3.js"
+    "static/css/main.6e4df7dc.css",
+    "static/js/main.a9787b80.js"
   ]
 }
