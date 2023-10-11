@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b39cd503.css",
-    "main.js": "/static/js/main.d526ad57.js",
+    "main.js": "/static/js/main.869fb0c0.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -32,6 +32,8 @@
     "static/media/qrcode_payus.png": "/static/media/qrcode_payus.a8525fdf496cf8b73eca.png",
     "static/media/rescue-tux-2.jpg": "/static/media/rescue-tux-2.e4b40af3bda3536ebdaa.jpg",
     "static/media/rescue-tux-1.jpg": "/static/media/rescue-tux-1.e54de7a74b80c99c464a.jpg",
+    "static/media/cod2-2.jpeg": "/static/media/cod2-2.0c09a340df89411c4eec.jpeg",
+    "static/media/cod2-1.jpeg": "/static/media/cod2-1.2ab265488127371987a4.jpeg",
     "static/media/simplifiedLinuxFamily.png": "/static/media/simplifiedLinuxFamily.02beba67fa0dcc4c45b6.png",
     "static/media/pswdwinnerone.jpg": "/static/media/pswdwinnerone.2592481a6861b78f5b47.jpg",
     "static/media/pswdwinnerthree.jpg": "/static/media/pswdwinnerthree.33ac051beb35b66cb262.jpg",
@@ -55,10 +57,10 @@
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
     "main.b39cd503.css.map": "/static/css/main.b39cd503.css.map",
-    "main.d526ad57.js.map": "/static/js/main.d526ad57.js.map"
+    "main.869fb0c0.js.map": "/static/js/main.869fb0c0.js.map"
   },
   "entrypoints": [
     "static/css/main.b39cd503.css",
-    "static/js/main.d526ad57.js"
+    "static/js/main.869fb0c0.js"
   ]
 }
