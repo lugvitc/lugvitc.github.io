@@ -22,6 +22,10 @@ import password_poster from "../../images/password/password-poster.png";
 import pswdwinnerone from "../../images/password/pswdwinnerone.jpg";
 import pswdwinnertwo from "../../images/password/pswdwinnertwo.jpg";
 import pswdwinnerthree from "../../images/password/pswdwinnerthree.jpg";
+
+import cyber21 from "../../images/cyber-o-day-2/cod2-1.jpeg";
+import cyber22 from "../../images/cyber-o-day-2/cod2-2.jpeg";
+
 import Carousel from "./carousel";
 
 export const eventsDetails = [
@@ -390,4 +394,41 @@ export const eventsDetails = [
       </>
     ),
   },
+  {
+    number: "07",
+    name: "Cyber-0-Day 2.0", // name password
+    link: "lugvitc.github.io/#/events#cyber-o-day-2", // link password
+    id: "cod2", // id password
+    details: (
+      <>
+        <div className="flex flex-col justify-between md:flex-row">
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <Carousel images={[cyber21,cyber22]} />
+          </div>
+          <div className="w-4/5 py-5 px-5 md:w-2/5">
+            <p>
+            Cyber-0-Day 2.0, the flagship event of Technovit, took our future hackers on a riveting expedition into the world of cybersecurity. Held at the grand Netaji Auditorium, this 24-hour tech marathon was an unforgettable experience.
+            </p>
+            <p>
+            The event commenced with a knowledge-packed workshop covering five key topics: Linux fundamentals, OSINT reconnaissance, Web exploitation, cryptography, and Binary exploitation. Participants absorbed valuable insights and honed their skills during these interactive as well as hands-on sessions. Our tech team was active throughout the sessions assisting them with their doubts.
+            </p>
+            <p>
+            After the workshop, participants faced a challenging quiz that tested their grasp of the workshop topics. The top 20 teams which emerged victorious advanced to the final Capture The Flag (CTF) round, a nerve-wracking competition that pushed their skills to the limit. The CTF challenges were masterfully devised by our expert backend team.
+            </p>
+            <p>
+            From the CTF round, the top 10 teams proceeded to the Treasure Hunt, where they navigated a complex maze of clues and challenges. In the end, 3 teams emerged as the ultimate victor, winning a generous prize of a 5k, 3k, 2k INR Amazon gift vouchers respectively. The top 10 teams were awarded with exclusive hacking tools. 
+            </p>
+          </div>
+        </div>
+      </>
+    ),
+  },
 ];
+
+
+
+
+
+
+
+
