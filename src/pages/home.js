@@ -3,9 +3,15 @@ import { Colors } from '../styles/colors';
 import TerminalWindow from '../components/terminal/terminalWindow';
 import ShowAfterTypewriter from '../components/showAfterTypewriter/showAfterTypwriter';
 
-import nixos from "../images/nixos.png";
+// import nixos from "../images/nixos.png";
 import tails from "../images/pngkey.com-tails-png-2315158.png";
-import blackArch from "../images/blackarchlogo-removebg-preview.png";
+// import blackArch from "../images/blackarchlogo-removebg-preview.png";
+
+import cd1 from '../images/coding-ninja/codingNinja-2.jpeg'
+import cd2 from '../images/coding-ninja/codingNinja-1.jpeg'
+import cd3 from '../images/coding-ninja/codingNinja-3.jpeg'
+import cd4 from '../images/coding-ninja/codingNinja-4.jpg'
+
 
 export default function Home() {
 
@@ -27,21 +33,21 @@ export default function Home() {
     const distro = [
         {
             id: "distro1",
-            image: nixos,
-            title: "NixOS",
-            desc: "It is known for its reproducible builds and deployments, declarative system configuration, and reliable system upgrades. It follows a different approach to package management, ensuring that your system does not break easily. If you encounter any issues after an upgrade or installation, you can always roll back to a previous system state."
+            image: cd1,
+            title: "Take the Challenge",
+            desc: "So are you up for the challenge?💪  Unleash your potential and seize the opportunity to test your abilities, all while elevating your Linux passion."
         },
         {
             id: "distro2",
-            image: tails,
-            title: "Tails",
-            desc: "Tails is a unique computer operating system. It is designed to help you use the Internet anonymously and get around censorship. Tails is a live operating system that runs from a USB stick or DVD. It lets you connect to the Internet using virtually any computer while leaving no trace of your activities after you have finished."
+            image: cd4,
+            title: "Coding Ninja",
+            desc: "Coding Ninja focuses on making coding accessible and helping learners excel in competitive programming and software development.Coding Ninjas strives to bridge the knowledge gap in programming by offering comprehensive courses, coding challenges, and mentorship, enabling students to excel in tech careers and competitive coding competitions."
         },
         {
             id: "distro3",
-            image: blackArch,
-            title: "BlackArch",
-            desc: "BlackArch Linux is a penetration testing distribution based on Arch Linux. It is designed for penetration testers and security researchers, and it contains over 2872 tools that can be installed individually or in groups."
+            image: cd3,
+            title: "Prizes",
+            desc: "Here’s what all you can win-> Achiever Certificates for the Top 3 Contest Winners every week,Exclusive T-shirt , Laptop Bag, and Swag Set,Stylish Sipper Bottle and Mug,And not to mention-Eternal Glory!!"
         }
     ];
     
@@ -82,8 +88,10 @@ export default function Home() {
                 {
                     a === 1 &&
                     distro.map((d) => (
+                        <a href="https://lugvitc.org/#/codewars">
+
                         <div key={d.id} style={bg_dark} className={`home-distro-card `}>
-                            <img className='w-[17rem]' src={d.image} alt="distro" />
+                            <img className='w-[18rem] h-[23rem] rounded-lg' src={d.image} alt="distro" />
                             <div className={'overlay'}>
                                 <h1 className={"text-[2rem] text-white"}>
                                     {d.title}
@@ -92,6 +100,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
+                        </a>
                     ))
                 }
             </div>

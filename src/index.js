@@ -16,6 +16,7 @@ import Members from "./pages/members/boardmembers";
 import FFCSLeaderboard from "./pages/ffcs_leaderboard/ffcs_leaderboard";
 import Blogs from "./pages/blogs/Blogs";
 import Contact from "./pages/contact/Contact";
+import Codewars from "./pages/codewars/Codewars";
 
 const pages = [
   {
@@ -57,6 +58,11 @@ const pages = [
     title: "Forum",
     link: "https://forum.lugvitc.org",
     component: <></>,
+  },
+  {
+    title: "CodeWars",
+    link: "/codewars",
+    component: <Codewars/>,
   },
  // {
  //    title: "Results",
