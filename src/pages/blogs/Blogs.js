@@ -1,144 +1,200 @@
-import TerminalWindow from '../../components/terminal/terminalWindow';
-import TerminalCard from '../../components/terminalCard/TerminalCard';
-import BlogSearch from '../../components/blog_search/blog_search';
+import TerminalWindow from "../../components/terminal/terminalWindow";
+import TerminalCard from "../../components/terminalCard/TerminalCard";
+import BlogSearch from "../../components/blog_search/blog_search";
 import useFetch from "../../hooks/useFetch";
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react";
+import axios, { all } from "axios";
+import titleIcon from "../../images/title.png";
+import date from "../../images/date.png";
+import views from "../../images/views.png";
+import like from "../../images/like.png";
+import time from "../../images/time.png";
+import author from "../../images/author.png";
+// import { data } from "./data";
 export default function Blogs() {
+  const [AllBlogs, setAllBlogs] = useState([]);
+  // const [Blogs, setBlogs] = useState({});
 
-    const myStyle={
-        display:"flex",
-        flexDirection:"row",
-        flexWrap:"wrap",
-        justifyContent:"space-around",
-        alignItems:"center",
-    };
+  // useEffect(() => {
+  //   console.log(data.users);
+  //   fetch("https://forum.lugvitc.org/c/blog/10.json", {
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+  //   })
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
-    //  uncomment for testing locally
-    // let blog2 = [{
-    //     title: "ello",
-    //     thumbnail: `https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
-    //     dept: "Web Development",
-    //     date: "01-11-2001",
-    //     tags: "AI",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "peelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "Android Development",
-    //     date: "01-11-2001",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch # hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "zeelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "UI/UX Design",
-    //     date: "01-05-2023",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "heelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "Android Development",
-    //     date: "01-11-2001",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "feelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "UI/UX Design",
-    //     date: "01-11-2001",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "keelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "Cyber Security",
-    //     date: "01-11-2001",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // },
-    // {
-    //     title: "teelo",
-    //     thumbnail: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //     dept: "Android Development",
-    //     date: "01-11-2001",
-    //     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt vitae nesciunt quae architecto harum eligendi reprehenderit doloribus, culpa excepturi!",
-    //     content: "# hello\n## wow\n- Determinat\n- wow\n- Rajiv gandhi\n- my differential tearch",
-    // }]
+  useEffect(() => {
+    axios
+      .get("https://corsproxy.io/?https://forum.lugvitc.org/c/blog/10.json", {})
+      .then(function (response) {
+        console.log(response.data);
+        const userBlog = [];
+          response.data.topic_list.topics.forEach((topic) => {
+            const user = response.data.users.find(
+              (user) => user.id === topic.posters[0].user_id
+            );
+            if (user) {
+              // console.log("Username:", user.username);
+              // console.log("Name:", user.name);
+              // console.log("Views:", topic.views);
+              // console.log("Like Count:", topic.like_count);
+              // console.log("Created At:", topic.created_at);
+              // console.log("Slug:", topic.slug);
+              // console.log("User ID:", topic.posters[0].user_id);
+              // console.log("\n");
+              let userData = {};
+              const date = topic.created_at.substring(0, 10);
+              const time = topic.created_at.substring(11, 19);
 
-    // // all the blogs is passed to jsx part to display it.
-    const [Blogs, setBlogs] = useState([]);
-    const [AllBlogs, setAllBlogs] = useState([]);
+              userData["name"] = user.name;
+              userData["view_count"] = topic.views;
+              userData["likes"] = topic.like_count;
+              userData["postDate"] = date;
+              userData["postTime"] = time;
+              userData["link"] = "https://forum.lugvitc.org/t/" + topic.slug;
+              userData["title"] = topic.title;
+              // setBlogs(userData);
+              userBlog.push(userData);
+            }
+          });
+          setAllBlogs(userBlog);
+          // console.log(AllBlogs);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
-    // uncomment to test
-    // useEffect(() => {
-    //     setAllBlogs(blog2);
-    //     setBlogs(blog2);
-    // }, [])
+  // useEffect(() => {
+  //   const userBlog = [];
+  //   data.topic_list.topics.forEach((topic) => {
+  //     const user = data.users.find(
+  //       (user) => user.id === topic.posters[0].user_id
+  //     );
+  //     if (user) {
+  //       // console.log("Username:", user.username);
+  //       // console.log("Name:", user.name);
+  //       // console.log("Views:", topic.views);
+  //       // console.log("Like Count:", topic.like_count);
+  //       // console.log("Created At:", topic.created_at);
+  //       // console.log("Slug:", topic.slug);
+  //       // console.log("User ID:", topic.posters[0].user_id);
+  //       // console.log("\n");
+  //       let userData = {};
+  //       const date = topic.created_at.substring(0, 10);
+  //       const time = topic.created_at.substring(11, 19);
 
-    const { api, apiPost, apiURL, apiBaseURL } = useFetch();
-    const fetchBlogs = () => {
-        api("/blog", {
-            method: "POST"
-        }).then((response) => response.json())
-            .then((response) => {
-                let all_blogs = response["blog"]
-                all_blogs.forEach((con)=>{
-                    // con.content=con.content.replace(/\!\[(.*?)\]\s*\(\/api\/blog\/image/, "!\[$1\]\(https://leaderboard.lugvitc.org/api/blog/image")
+  //       userData["name"] = user.name;
+  //       userData["view_count"] = topic.views;
+  //       userData["likes"] = topic.like_count;
+  //       userData["postDate"] = date;
+  //       userData["postTime"] = time;
+  //       userData["link"] = "https://forum.lugvitc.org/t/" + topic.slug;
+  //       userData["title"] = topic.title;
+  //       // setBlogs(userData);
+  //       userBlog.push(userData);
+  //     }
+  //   });
+  //   setAllBlogs(userBlog);
+  //   // console.log(AllBlogs);
+  // });
 
-                    const regex = /src="\/api\/blog\/image\/([^"]+)"/g;
-                    const replacement = 'src="'+apiBaseURL+'/api/blog/image/$1"';
-
-                    con.content = con.content.replace(regex, replacement);
-
-                    // console.log(th.thumbnail);
-                })
-                all_blogs.forEach((th)=>{
-                    // console.log('leaderboard.lugvitc.org'+th.thumbnail);
-                    th.thumbnail=apiBaseURL+th.thumbnail;
-                    console.log(th.thumbnail);
-                })
-                all_blogs.forEach(blog => {
-                    let date = new Date(blog.date+' UTC');
-                    blog.date = date.toISOString().slice(0,10);
-                    // let thumb = 'leaderboard.'+all_blogs.thumbnail;
-                    // blog.thumbnail=thumb;
-                });
-                // let all_blogs2 = response["blog"]
-                // all_blogs.forEach(blog => {
-                // });
-
-                setBlogs(all_blogs);
-                setAllBlogs(all_blogs);
-                console.log(Blogs);
-        console.log(AllBlogs);
-            })
-    }
-
-    useEffect(()=>{
-        fetchBlogs();
-    },[])
-
-    return (
-        <TerminalWindow
-            prompts={[
-                { path: '~', command: 'cd blogs' },
-                { path: '~/blogs', command: 'cat blogs.txt' }
-            ]}
-            title='Blogs'
-        >
-            <BlogSearch all_blogs={AllBlogs} setter={setBlogs}></BlogSearch>
-            <div className="posts" style={myStyle}>
+  return (
+    <TerminalWindow
+      prompts={[
+        { path: "~", command: "cd blogs" },
+        { path: "~/blogs", command: "cat blogs.txt" },
+      ]}
+      title="Blogs"
+    >
+      {/* <BlogSearch all_blogs={AllBlogs} setter={setBlogs}></BlogSearch> */}
+            {/* <div className="posts" style={myStyle}>
                 <TerminalCard blogs={Blogs}></TerminalCard>
-            </div>
-        </TerminalWindow>
-    );
+            </div> */}
+      <div class="flex flex-row flex-wrap justify-center items-center  w-full">
+        {AllBlogs.map(
+          (
+            { name, likes, view_count, postDate, postTime, link, title },
+            index
+          ) => (
+            <a
+              href={link}
+              class="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 my-5 md:mx-5"
+            >
+              <div class="bg-gray-800 text-white w-full max-w-8xl min-w-7xl flex flex-col rounded-xl shadow-lg p-4">
+                <div class="flex items-center flex-col justify-center space-x-4">
+                  <img
+                    src={titleIcon}
+                    alt="loading"
+                    className="h-[25px] w-[25px] mx-5"
+                  />
+                  <div class="mt-3 text-md font-bold text-center">{title}</div>
+                </div>
+                <div class=" flex flex-row flex-wrap justify-between items-center cursor-pointer mt-4">
+                  <div class="flex items-end justify-start space-x-4">
+                    <img
+                      src={date}
+                      alt="loading"
+                      className="h-[25px] w-[25px]"
+                    />
+                    <div class="mx-3 text-md font-bold text-center">
+                      {postDate}
+                    </div>
+                  </div>
+                  <div class="flex items-end justify-start space-x-4">
+                    <img
+                      src={time}
+                      alt="loading"
+                      className="h-[25px] w-[25px]"
+                    />
+                    <div class="mx-3 text-md font-bold text-center">
+                      {postTime}
+                    </div>
+                  </div>
+                  <div class="flex items-end justify-start space-x-4">
+                    <img
+                      src={like}
+                      alt="loading"
+                      className="h-[25px] w-[25px]"
+                    />
+                    <div class="mx-3 text-md font-bold text-center">
+                      {likes}
+                    </div>
+                  </div>
+                  <div class="flex items-end justify-end space-x-4">
+                    <img
+                      src={views}
+                      alt="loading"
+                      className="h-[25px] w-[25px]"
+                    />
+                    <div class="mx-3 text-md font-bold text-center">
+                      {view_count}
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 text-white font-bold text-sm">
+                  <div class="flex items-end justify-end space-x-4">
+                    <img
+                      src={author}
+                      alt="loading"
+                      className="h-[35px] w-[35px]"
+                    />
+                    <div class="mx-3 text-md font-bold text-center">{name}</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          )
+        )}
+      </div>
+    </TerminalWindow>
+  );
 }
-
