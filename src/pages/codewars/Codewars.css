@@ -34,3 +34,23 @@
         border-bottom-left-radius: 0.5rem/* 8px */;
     }
   }
+
+  .banner{
+    height: 250px;
+    width: 60vw;
+    border-radius: 10px;
+  }
+  @media only screen and (max-width: 400px ) {
+    .banner{
+        height: 90px;
+        width: 320px;
+        border-radius: 10px;
+      }
+  }
+  @media only screen and  (max-width: 1000px) and (min-width: 400px) {
+    .banner{
+        height: 160px;
+        width: 60vw;
+        border-radius: 10px;
+      }
+  }

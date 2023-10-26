@@ -7,6 +7,8 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import  './Codewars.css'
+import banner from '../../images/coding-ninja/banner.png'
+
 export default function Blogs() {
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -78,6 +80,9 @@ export default function Blogs() {
         ]}
         title="CodeWar"
       >
+        <div className="flex flex-row justify-center items-center w-full my-5">
+          <img src={banner}  alt="loading..." className="banner"  />
+        </div>
         <div className="w-full flex flex-wrap flex-row justify-center items-center">
           <div className="notice">
           {/* <div className="w-[40rem] h-[50rem] bg-[#272a30] p-5 rounded-l-lg sm:max-sm:h-[80rem]"> */}

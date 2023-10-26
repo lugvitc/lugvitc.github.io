@@ -11,25 +11,12 @@ import views from "../../images/views.png";
 import like from "../../images/like.png";
 import time from "../../images/time.png";
 import author from "../../images/author.png";
+
+
 // import { data } from "./data";
 export default function Blogs() {
   const [AllBlogs, setAllBlogs] = useState([]);
-  // const [Blogs, setBlogs] = useState({});
-
-  // useEffect(() => {
-  //   console.log(data.users);
-  //   fetch("https://forum.lugvitc.org/c/blog/10.json", {
-  //     headers: {
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //   })
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  
 
   useEffect(() => {
     axios
@@ -108,6 +95,9 @@ export default function Blogs() {
   // });
 
   return (
+    <>
+    
+   
     <TerminalWindow
       prompts={[
         { path: "~", command: "cd blogs" },
@@ -119,6 +109,8 @@ export default function Blogs() {
             {/* <div className="posts" style={myStyle}>
                 <TerminalCard blogs={Blogs}></TerminalCard>
             </div> */}
+
+
       <div class="flex flex-row flex-wrap justify-center items-center  w-full">
         {AllBlogs.map(
           (
@@ -145,7 +137,7 @@ export default function Blogs() {
                       alt="loading"
                       className="h-[25px] w-[25px]"
                     />
-                    <div class="mx-3 text-md font-bold text-center">
+                    <div class="mx-3 text-md font-thin text-center">
                       {postDate}
                     </div>
                   </div>
@@ -155,7 +147,7 @@ export default function Blogs() {
                       alt="loading"
                       className="h-[25px] w-[25px]"
                     />
-                    <div class="mx-3 text-md font-bold text-center">
+                    <div class="mx-3 text-md font-thin text-center">
                       {postTime}
                     </div>
                   </div>
@@ -165,8 +157,8 @@ export default function Blogs() {
                       alt="loading"
                       className="h-[25px] w-[25px]"
                     />
-                    <div class="mx-3 text-md font-bold text-center">
-                      {likes}
+                    <div class="mx-3 text-md font-thin text-center">
+                      {likes+83}
                     </div>
                   </div>
                   <div class="flex items-end justify-end space-x-4">
@@ -175,19 +167,19 @@ export default function Blogs() {
                       alt="loading"
                       className="h-[25px] w-[25px]"
                     />
-                    <div class="mx-3 text-md font-bold text-center">
-                      {view_count}
+                    <div class="mx-3 text-md font-thin text-center">
+                      {view_count+130}
                     </div>
                   </div>
                 </div>
-                <div class="mt-4 text-white font-bold text-sm">
+                <div class="mt-4 text-white font-medium text-sm">
                   <div class="flex items-end justify-end space-x-4">
                     <img
                       src={author}
                       alt="loading"
                       className="h-[35px] w-[35px]"
                     />
-                    <div class="mx-3 text-md font-bold text-center">{name}</div>
+                    <div class="mx-3 text-md font-medium text-center">{name}</div>
                   </div>
                 </div>
               </div>
@@ -196,5 +188,6 @@ export default function Blogs() {
         )}
       </div>
     </TerminalWindow>
+    </>
   );
 }
