@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.63d64d3f.css",
-    "main.js": "/static/js/main.42ad2582.js",
+    "main.css": "/static/css/main.151a58fc.css",
+    "main.js": "/static/js/main.9a034903.js",
     "static/media/cyber-o-day.JPG": "/static/media/cyber-o-day.1a80e672c302cc8ec6d7.JPG",
     "static/media/hacker-horizon.JPG": "/static/media/hacker-horizon.79253aeafe52d3409068.JPG",
     "static/media/speaker.jpg": "/static/media/speaker.5ded7f34107f7aeb9d68.jpg",
@@ -26,6 +26,7 @@
     "static/media/mogesh.png": "/static/media/mogesh.d6daa7d380c60aaa19c3.png",
     "static/media/revanth.png": "/static/media/revanth.dd507a2fb2df2b4e31ae.png",
     "static/media/cyber-o-day2.png": "/static/media/cyber-o-day2.2f947e5921291677af95.png",
+    "static/media/banner.png": "/static/media/banner.0633e5f91e59f040b3f9.png",
     "static/media/cyber-o-day1.jpg": "/static/media/cyber-o-day1.7d9756720771b2c4ff46.jpg",
     "static/media/dhananjay.png": "/static/media/dhananjay.949c2d5f7d318e4fd568.png",
     "static/media/Baleswar.jpeg": "/static/media/Baleswar.64f84cd548dade5c9760.jpeg",
@@ -61,11 +62,11 @@
     "index.html": "/index.html",
     "static/media/Github.svg": "/static/media/Github.f68ebffb1037b78c3a9963194284688e.svg",
     "static/media/LinkedIn.svg": "/static/media/LinkedIn.a236a02cbeb24525fd3bcf55fc6e41c6.svg",
-    "main.63d64d3f.css.map": "/static/css/main.63d64d3f.css.map",
-    "main.42ad2582.js.map": "/static/js/main.42ad2582.js.map"
+    "main.151a58fc.css.map": "/static/css/main.151a58fc.css.map",
+    "main.9a034903.js.map": "/static/js/main.9a034903.js.map"
   },
   "entrypoints": [
-    "static/css/main.63d64d3f.css",
-    "static/js/main.42ad2582.js"
+    "static/css/main.151a58fc.css",
+    "static/js/main.9a034903.js"
   ]
 }
