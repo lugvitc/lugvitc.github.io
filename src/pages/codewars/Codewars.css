@@ -36,21 +36,21 @@
   }
 
   .banner{
-    height: 250px;
-    width: 60vw;
+    /* height: 250px;
+    width: 60vw; */
     border-radius: 10px;
   }
   @media only screen and (max-width: 400px ) {
     .banner{
         height: 90px;
-        width: 320px;
+        width: 390px;
         border-radius: 10px;
       }
   }
   @media only screen and  (max-width: 1000px) and (min-width: 400px) {
     .banner{
-        height: 160px;
-        width: 60vw;
+        height: 180px;
+        width: 85vw;
         border-radius: 10px;
       }
   }
