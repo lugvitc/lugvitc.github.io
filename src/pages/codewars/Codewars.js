@@ -86,10 +86,9 @@ export default function Blogs() {
         <div className="w-full flex flex-wrap flex-row justify-center items-center">
           <div className="notice">
           {/* <div className="w-[40rem] h-[50rem] bg-[#272a30] p-5 rounded-l-lg sm:max-sm:h-[80rem]"> */}
-            <h1 className="text-4xl text-center">Go for War ⚔️</h1> <br />
+            <h1 className="text-4xl text-center">Weekend Coding Contest 101</h1> <br />
             <p>
-              We here at the Linux Club, are beyond thrilled to announce our
-              latest collaboration with Coding Ninjas-The Linux Club CodeWars!
+              
               <br />
               <br />
               Celebrating the century with big opportunities🎉
@@ -105,8 +104,6 @@ Join us for Weekend Coding Contest 101 on November 25, 2023, from 6:30 PM to 8:0
               <br />
               Here’s what all you can win: <br />
               • Achiever Certificates for the Contest Winners <br />
-              • Exclusive T-shirt , Laptop Bag, and Swag Set <br />
-              • Stylish Sipper Bottle and Mug <br />
               • And not to mention-Eternal Glory!! <br />
               <br />
               So are you up for the challenge?💪 Unleash your potential and
