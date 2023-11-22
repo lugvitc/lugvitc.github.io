@@ -92,9 +92,10 @@ export default function Blogs() {
               latest collaboration with Coding Ninjas-The Linux Club CodeWars!
               <br />
               <br />
-              Whether you’re a seasoned coding ninja, or just taking your first
-              steps, this contest welcomes all skill levels. These weekly tests
-              are open to all 1st-4th-year students. CODE-CONTEST-CONQUER
+              Celebrating the century with big opportunities🎉
+Along with the gold points you earn at the Weekend Coding Contest 101, we’re now offering you a chance to cease a Internship opportunity at Groww and Dunzo along with Job opportunity at LaunchX
+The Top 100 eligible performers will get a chance to freeze the Interview Opportunity chance.
+Join us for Weekend Coding Contest 101 on November 25, 2023, from 6:30 PM to 8:00 PM
               <br />
               <br />
               🏆 But remember, to qualify for prizes and special rewards, make
