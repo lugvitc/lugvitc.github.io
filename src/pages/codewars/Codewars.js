@@ -196,7 +196,7 @@ export default function Blogs() {
                     className=" w-full h-[3rem] rounded-md px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200 mx-4"
                   >
                     <option value="Select your year">Select your year</option>
-                    // <option value="1st Yr Student">1st Yr Student</option>
+                    <!--  <option value="1st Yr Student">1st Yr Student</option> -->
                     <option value="2nd,3rd,4th Yr Student">
                       2nd,3rd,4th Yr Student
                     </option>
