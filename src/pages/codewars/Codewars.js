@@ -11,7 +11,7 @@ import banner from '../../images/coding-ninja/banner.png'
 
 export default function Blogs() {
   const [selectedValue, setSelectedValue] = useState("");
-
+  const {apiBaseURL} = useFetch()
   const handleDropdownChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -28,7 +28,7 @@ export default function Blogs() {
       // console.log(values);
       // console.log(selectedValue);
       axios
-        .post("https://corsproxy.altacee.com/https://leaderboard.lugvitc.org/api/submit_form", values)
+        .post(apiBaseURL+"/api/submit_form", values)
         .then(function (response) {
             // toast.success("Submitted Successfully.")
             if (values.year=="1st Yr Student") {

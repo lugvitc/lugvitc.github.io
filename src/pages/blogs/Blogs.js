@@ -16,7 +16,6 @@ import author from "../../images/author.png";
 // import { data } from "./data";
 export default function Blogs() {
   const [AllBlogs, setAllBlogs] = useState([]);
-  
 
   useEffect(() => {
     axios
