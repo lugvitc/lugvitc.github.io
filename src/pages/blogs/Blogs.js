@@ -20,7 +20,7 @@ export default function Blogs() {
 
   useEffect(() => {
     axios
-      .get("https://corsproxy.io/?https://forum.lugvitc.org/c/blog/10.json", {})
+      .get("https://corsproxy.altacee.com/https://forum.lugvitc.org/c/blog/10.json", {})
       .then(function (response) {
         console.log(response.data);
         const userBlog = [];
