@@ -60,6 +60,11 @@ const pages = [
     component: <></>,
   },
   {
+    title: "Cloud",
+    link: "https://cloudg.lugvitc.org",
+    component: <></>,
+  },
+  {
     title: "CodeWars",
     link: "/codewars",
     component: <Codewars/>,
