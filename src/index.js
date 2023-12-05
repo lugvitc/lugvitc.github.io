@@ -61,7 +61,7 @@ const pages = [
   },
   {
     title: "Cloud",
-    link: "https://cloudg.lugvitc.org",
+    link: "https://cloud.lugvitc.org",
     component: <></>,
   },
   {
