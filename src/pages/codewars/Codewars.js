@@ -42,7 +42,8 @@ export default function Blogs() {
         })
         .catch(function (error) {
           // toast.error(error)
-          console.log(" i am here");
+          console.log(" i am here in catch ");
+          console.log(error);
         });
     },
     validate: (values) => {
