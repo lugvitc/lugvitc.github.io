@@ -33,9 +33,9 @@ export default function Blogs() {
             // toast.success("Submitted Successfully.")
             if (values.year=="1st Yr Student") {
 
-              window.location.href="https://tinyurl.com/mrx5mndu"
+              window.location.href="https://tinyurl.com/yeyzf6rd"
             }else if (values.year=="2nd,3rd,4th Yr Student") {
-              window.location.href="https://tinyurl.com/yuzx8yea"
+              window.location.href="http://tinyurl.com/wtv856yp"
             }else{
                 console.log("something happened")
             }
