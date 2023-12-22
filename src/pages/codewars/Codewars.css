@@ -21,8 +21,8 @@
     height: 50rem;
     background-color: #272a30;
     padding: 1.25rem/* 20px */;
-    border-top-left-radius: 0.5rem/* 8px */;
-    border-bottom-left-radius: 0.5rem/* 8px */;
+    border-top-right-radius: 0.5rem/* 8px */;
+    border-bottom-right-radius: 0.5rem/* 8px */;
 }
 @media only screen and (max-width: 400px) {
     .notice2 {

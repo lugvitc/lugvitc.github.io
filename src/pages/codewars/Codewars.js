@@ -87,29 +87,42 @@ export default function Blogs() {
         <div className="w-full flex flex-wrap flex-row justify-center items-center">
           <div className="notice">
           {/* <div className="w-[40rem] h-[50rem] bg-[#272a30] p-5 rounded-l-lg sm:max-sm:h-[80rem]"> */}
-            <h1 className="text-4xl text-center">Weekend Coding Contest 101</h1> <br />
+            <h1 className="text-4xl text-center">CodeWars Coding Contest</h1> <br />
             <p>
               
+              
               <br />
+              Prepare for the Ultimate Linux Code Sprint at the ”Linux Club Saturday Test: Beginner" in collaboration with Coding Ninjas Studio!
               <br />
-              Celebrating the century with big opportunities🎉
-Along with the gold points you earn at the Weekend Coding Contest 101, we’re now offering you a chance to cease a Internship opportunity at Groww and Dunzo along with Job opportunity at LaunchX
-The Top 100 eligible performers will get a chance to freeze the Interview Opportunity chance.
-Join us for Weekend Coding Contest 101 on November 25, 2023, from 6:30 PM to 8:00 PM
+              ⚙️💻🚀
               <br />
+              🔍 Who's In?
+              <br />
+              Open to 1st-year students diving into the Beginner Level and 2nd to 4th-year students embracing the Advanced Level.
+              <br />
+              ⏰ Test Window:
+              <br />
+              90 minutes for our 1st-year champs (Beginner Level)
+120 minutes for the seasoned 2nd to 4th-year pros (Advanced Level)
+              <br />
+              📅 Date: 23 December  
+⏱ Time: 10:00 AM to 10:00 PM 
+              <br />
+              🚀 Ready, Set, Linux!
+              <br />
+
+Gear up for an unforgettable Linux Club Saturday Test. Let's shape this into a tech saga of epic proportions! 🌐💾🚀🐧✨
               <br />
               🏆 But remember, to qualify for prizes and special rewards, make
               sure to register the form on the right side .Upon filling this
               form you will be redirected to Coding Ninja Site where you need to
               register for the event. <br />
-              <br />
+             
               Here’s what all you can win: <br />
               • Achiever Certificates for the Contest Winners <br />
               • And not to mention-Eternal Glory!! <br />
               <br />
-              So are you up for the challenge?💪 Unleash your potential and
-              seize the opportunity to test your abilities, all while elevating
-              your Linux passion.
+             
             </p>
           </div>
           <div className="notice2">
@@ -196,6 +209,9 @@ Join us for Weekend Coding Contest 101 on November 25, 2023, from 6:30 PM to 8:0
                   >
                     <option value="Select your year">Select your year</option>
                     
+                    <option value="1st Yr Student">
+                      1st Yr Student
+                    </option>
                     <option value="2nd,3rd,4th Yr Student">
                       2nd,3rd,4th Yr Student
                     </option>
