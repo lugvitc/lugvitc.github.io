@@ -110,7 +110,7 @@ export default function Blogs() {
             </div> */}
 
 
-        <div class="grid grid-cols-3 gap-4  max-2xl:grid-cols-2 max-lg:grid-cols-1 max-md:grid-cols-1">
+        <div class="grid grid-cols-3 gap-4  max-2xl:grid-cols-2 max-lg:grid-cols-1 ">
           {AllBlogs.map(
             (
               { name, likes, view_count, postDate, postTime, link, title },
