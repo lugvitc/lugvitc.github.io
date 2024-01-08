@@ -11,6 +11,9 @@ dependencies:
   '@material-tailwind/react':
     specifier: ^2.1.8
     version: 2.1.8(react-dom@18.2.0)(react@18.2.0)
+  primereact:
+    specifier: ^10.3.0
+    version: 10.3.0(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -23,6 +26,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-photo-album:
+    specifier: ^2.3.0
+    version: 2.3.0(react@18.2.0)
   react-router-dom:
     specifier: ^6.21.1
     version: 6.21.1(react-dom@18.2.0)(react@18.2.0)
@@ -32,6 +38,9 @@ dependencies:
   react-tsparticles:
     specifier: ^2.12.2
     version: 2.12.2(react@18.2.0)
+  swiper:
+    specifier: ^11.0.5
+    version: 11.0.5
   tsparticles-slim:
     specifier: ^2.12.0
     version: 2.12.0
@@ -818,6 +827,12 @@ packages:
       '@types/react': 18.2.45
     dev: true
 
+  /@types/react-transition-group@4.4.10:
+    resolution: {integrity: sha512-hT/+s0VQs2ojCX823m60m5f0sL5idt9SO6Tj6Dg+rdphGPIeJbJ6CxvBYkgkGKrYeDjvIpKTR38UzmtHJOGW3Q==}
+    dependencies:
+      '@types/react': 18.2.45
+    dev: false
+
   /@types/react@18.2.45:
     resolution: {integrity: sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==}
     dependencies:
@@ -1239,6 +1254,13 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dom-helpers@5.2.1:
+    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
+    dependencies:
+      '@babel/runtime': 7.23.6
+      csstype: 3.1.3
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2473,6 +2495,24 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /primereact@10.3.0(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-eLIOJZKzrRIqxhLLmI0LPdfzdODK/OESX3Heh1DlgBDahxUgnFNYjnctbriDje51DW+NE8/xX3JQazUszH6McA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.2.45
+      '@types/react-transition-group': 4.4.10
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
+    dev: false
+
   /prismjs@1.27.0:
     resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
     engines: {node: '>=6'}
@@ -2548,6 +2588,15 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  /react-photo-album@2.3.0(react@18.2.0):
+    resolution: {integrity: sha512-CU+UMK4ZQHIoPZ672TSst9loKE5bxy6w0+bf7bY4XOw1g1C7+VdDWCW+wD8wPpbg2ve38QBTS73HVe6xYLAQ3w==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-router-dom@6.21.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-QCNrtjtDPwHDO+AO21MJd7yIcr41UetYt5jzaB9Y1UYaPTCnVuJq6S748g1dE11OQlCFIQg+RtAA1SEZIyiBeA==}
     engines: {node: '>=14.0.0'}
@@ -2593,6 +2642,20 @@ packages:
       prismjs: 1.29.0
       react: 18.2.0
       refractor: 3.6.0
+    dev: false
+
+  /react-transition-group@4.4.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
+    peerDependencies:
+      react: '>=16.6.0'
+      react-dom: '>=16.6.0'
+    dependencies:
+      '@babel/runtime': 7.23.6
+      dom-helpers: 5.2.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-tsparticles@2.12.2(react@18.2.0):
@@ -2938,6 +3001,11 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /swiper@11.0.5:
+    resolution: {integrity: sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /tabbable@6.2.0:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}

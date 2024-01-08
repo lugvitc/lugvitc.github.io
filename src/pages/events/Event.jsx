@@ -1,12 +1,20 @@
-import React from 'react'
-
+import React from "react";
+import Particle from "../../components/Particle/Particle";
+import EventsLanding from "../../components/landing/EventsLanding";
+import EventsTimeLine from "../../components/timeline/EventsTimeLine";
 function Event() {
   return (
-    <div>
-                  <h1 className='text-orange-600'>evevnt sme naoin</h1>
+    <>
+      <Particle />
+      < EventsLanding/>
+      <h3 class="w-full px-5 mt-2 text-3xl font-space leading-tight text-center text-gray-100 sm:mt-0 sm:px-0 sm:text-7xl mb-5 py-6">
+            Event Timeline
+          </h3>
+      < EventsTimeLine/>
 
-    </div>
-  )
+      
+    </>
+  );
 }
 
-export default Event
+export default Event;

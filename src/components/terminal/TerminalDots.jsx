@@ -26,7 +26,7 @@ export default function TerminalDots({
             <div
                 className={`h-[15px] w-[15px] rounded-[15px] hover:brightness-[50%]`}
                 style={{
-                    backgroundColor: "#ffgbh3",
+                    backgroundColor: "#9cd0a2",
                     cursor: onClickYellow ? 'pointer' : 'auto'
                 }}
                 onClick={onClickYellow}
@@ -34,7 +34,7 @@ export default function TerminalDots({
             <div
                 className={`h-[15px] w-[15px] rounded-[15px] hover:brightness-[50%]`}
                 style={{
-                    backgroundColor: "#ffffff",
+                    backgroundColor: "#fff",
                     cursor: onClickGreen ? 'pointer' : 'auto'
                 }}
                 onClick={onClickGreen}

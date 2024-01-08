@@ -12,13 +12,16 @@
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.8",
+    "primereact": "^10.3.0",
     "react": "^18.2.0",
     "react-code-blocks": "^0.1.5",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
+    "react-photo-album": "^2.3.0",
     "react-router-dom": "^6.21.1",
     "react-simple-typewriter": "^5.0.1",
     "react-tsparticles": "^2.12.2",
+    "swiper": "^11.0.5",
     "tsparticles-slim": "^2.12.0",
     "typewriter-effect": "^2.21.0",
     "zustand": "^4.4.7"

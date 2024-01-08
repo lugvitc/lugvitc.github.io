@@ -1,11 +1,6 @@
-import React from 'react'
+import PhotoAlbum from "react-photo-album";
+import photos from "./Photos";
 
-function Gallary() {
-  return (
-    <div>
-                 <h1 className='text-orange-600'> galalay</h1>
-    </div>
-  )
+export default function Gallary() {
+  return <PhotoAlbum photos={photos} layout="masonry" />;
 }
-
-export default Gallary

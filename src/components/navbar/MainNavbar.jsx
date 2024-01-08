@@ -402,6 +402,8 @@ export function MainNavbar() {
   }, []);
 
   return (
+    // <div className="bg-black ">
+
     <Navbar
     color="transparent" 
     className=" max-w-screen-xl p-2 lg:rounded-full lg:pl-6 "
@@ -410,7 +412,7 @@ export function MainNavbar() {
         <Typography
           as="a"
           href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-light font-space text-xs "
+          className="mr-4 ml-2  py-1.5 font-light font-space text-xs "
         >
           lugvitc
         </Typography>
@@ -436,6 +438,7 @@ export function MainNavbar() {
         <NavList />
       </MobileNav>
     </Navbar>
+    // </div>
   );
 }
 
