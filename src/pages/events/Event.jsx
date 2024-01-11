@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useRef} from "react";
 import Particle from "../../components/Particle/Particle";
 import EventsLanding from "../../components/landing/EventsLanding";
 import EventsTimeLine from "../../components/timeline/EventsTimeLine";

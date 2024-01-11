@@ -172,43 +172,45 @@ const tableData = [
 
 export default function Leaderboard() {
   const recordPerPage = 5;
+  tableData.sort((a, b) => b.points > a.points);
   const [currRecord, setCurrRecord] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
-  tableData.sort((a, b) => b.points > a.points);
-
-  // let data = tableData.slice(currRecord,currRecord+5);
-  let data =
-    filteredData.length > 0
+  const [filteredData, setFilteredData] = useState(tableData);
+  const [data, setData] = useState(
+    filteredData.length <= recordPerPage
       ? filteredData
-      : tableData.slice(currRecord, currRecord + 5);
+      : tableData.slice(currRecord, currRecord + 5)
+  );
+
+  function paginate(start = 0){
+    setCurrRecord(start);
+    filteredData.sort((a, b) => b.points > a.points);
+    setData(filteredData.length <= recordPerPage
+      ? filteredData
+      : filteredData.slice(currRecord, currRecord + 5));
+  }
+
   function nextPage() {
     setCurrRecord(currRecord + recordPerPage);
-    data.splice();
-    data = tableData.slice(currRecord, currRecord + 5);
-    // data = tableData[currRecord,currRecord+5];
-    console.log(currRecord);
-    console.log(tableData.slice(currRecord, currRecord + 5));
+    paginate(currRecord);
   }
+
   function prevPage() {
     setCurrRecord(currRecord - recordPerPage);
-    data = tableData.slice(currRecord - 5, currRecord + 5);
-    console.log(currRecord);
+    paginate(currRecord);
   }
+
   function handleSearch(e) {
     console.log(e.target.value);
     const searchTerm = e.target.value;
-    if (searchTerm.length > 0) {
-      setInputValue(searchTerm);
+    setInputValue(searchTerm);
 
-      const results = tableData.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+    const results = tableData.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
-      setFilteredData(results);
-    }
-    console.log(currRecord);
-    // setFilteredData([]);
+    setFilteredData(results);
+    paginate();
   }
 
   return (
@@ -234,71 +236,69 @@ export default function Leaderboard() {
 
       {/* top cards */}
       <div className="flex flex-row flex-wrap justify-center items-center font-space text-white">
-      <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6 shadow-md rounded-xl sm:px-12 bg-[#ffda05] mx-5 my-6">
-        <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
-          alt=""
-          className="w-32 h-32 mx-auto rounded-full  aspect-square"
-        />
-        <div className="space-y-4 text-center divide-y ">
-          <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">
-              {tableData[0].name}
-            </h2>
-            <p className="px-5 text-xs sm:text-base ">
-              {tableData[0].department}
-            </p>
+        <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6  rounded-xl sm:px-12 bg-[#FFD700] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(248,231,28,1)] ">
+          <img
+            src="https://source.unsplash.com/150x150/?portrait?3"
+            alt=""
+            className="w-32 h-32 mx-auto rounded-full  aspect-square"
+          />
+          <div className="space-y-4 text-center divide-y ">
+            <div className="my-2 space-y-1">
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                {tableData[0].name}
+              </h2>
+              <p className="px-5 text-xs sm:text-base ">
+                {tableData[0].department}
+              </p>
+            </div>
+            <div className="flex justify-center pt-2 space-x-4 align-center">
+              {tableData[0].points}
+            </div>
           </div>
-          <div className="flex justify-center pt-2 space-x-4 align-center">
-            {tableData[0].points}
+        </div>
+
+        <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6  rounded-xl sm:px-12 bg-[#a1a1a1] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(159,158,155,0.75)]">
+          <img
+            src="https://source.unsplash.com/150x150/?portrait?3"
+            alt=""
+            className="w-32 h-32 mx-auto rounded-full  aspect-square"
+          />
+          <div className="space-y-4 text-center divide-y ">
+            <div className="my-2 space-y-1">
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                {tableData[1].name}
+              </h2>
+              <p className="px-5 text-xs sm:text-base ">
+                {tableData[1].department}
+              </p>
+            </div>
+            <div className="flex justify-center pt-2 space-x-4 align-center">
+              {tableData[1].points}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6  rounded-xl sm:px-12 bg-[#cd7f32] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(213,153,100,1)]">
+          <img
+            src="https://source.unsplash.com/150x150/?portrait?3"
+            alt=""
+            className="w-32 h-32 mx-auto rounded-full  aspect-square"
+          />
+          <div className="space-y-4 text-center divide-y ">
+            <div className="my-2 space-y-1">
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                {tableData[2].name}
+              </h2>
+              <p className="px-5 text-xs sm:text-base ">
+                {tableData[2].department}
+              </p>
+            </div>
+            <div className="flex justify-center pt-2 space-x-4 align-center">
+              {tableData[2].points}
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6 shadow-md rounded-xl sm:px-12 bg-[#a1a1a1] mx-5 my-6">
-        <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
-          alt=""
-          className="w-32 h-32 mx-auto rounded-full  aspect-square"
-        />
-        <div className="space-y-4 text-center divide-y ">
-          <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">
-              {tableData[1].name}
-            </h2>
-            <p className="px-5 text-xs sm:text-base ">
-              {tableData[1].department}
-            </p>
-          </div>
-          <div className="flex justify-center pt-2 space-x-4 align-center">
-            {tableData[1].points}
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6 shadow-md rounded-xl sm:px-12 bg-[#804c1d] mx-5 my-6">
-        <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
-          alt=""
-          className="w-32 h-32 mx-auto rounded-full  aspect-square"
-        />
-        <div className="space-y-4 text-center divide-y ">
-          <div className="my-2 space-y-1">
-            <h2 className="text-xl font-semibold sm:text-2xl">
-              {tableData[2].name}
-            </h2>
-            <p className="px-5 text-xs sm:text-base ">
-              {tableData[2].department}
-            </p>
-          </div>
-          <div className="flex justify-center pt-2 space-x-4 align-center">
-            {tableData[2].points}
-          </div>
-        </div>
-      </div>
-
-      </div>
-      
 
       {/* leaderboard */}
       <div class="antialiased font-space ">

@@ -74,10 +74,10 @@ const navListMenuItems = [
 
 const navListMenuItemsAboutUs = [
   {
-    title: "Gallary",
+    title: "Gallery",
     description: "Sharing our experiences.",
     icon: SquaresPlusIcon,
-    link:"#/gallary"
+    link:"#/gallery"
   },
   {
     title: "About Us",
@@ -89,7 +89,7 @@ const navListMenuItemsAboutUs = [
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    link:"https://cloud.lugvitc.org/"
+    link:"#/blogs"
   },
   {
     title: "Members",
