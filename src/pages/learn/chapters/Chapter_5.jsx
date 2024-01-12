@@ -1,338 +1,470 @@
-import React from "react";
-// import YouTube from "react-youtube";
+import React, { useEffect } from "react";
+
 import Particle from "../../../components/Particle/Particle";
-function Chapter_1() {
+function Chapter_5() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       {/* <Particle/> */}
       <div className="flex flex-col justify-center items-center font-space  my-5 py-5">
         <p class="max-w-5xl px-5 mt-2 text-md  leading-tight text-center text-white sm:mt-10 sm:px-0 sm:text-2xl">
-          Chapter - 1
+          Chapter - 5
         </p>
         <div className="h-4"></div>
         <p class="max-w-5xl px-5 mt-2 text-4xl  leading-tight text-center text-white sm:mt-0 sm:px-0 sm:text-5xl">
-          Linux: What? Why? How?
+          Advanced Features
         </p>
       </div>
       <div className="h-5"></div>
       <div className="flex justify-center items-center z-auto bg-[]">
         <iframe
-          className="sm:h-[580px] sm:w-[1240px] outline-none"
-          src="https://www.youtube.com/embed/nZDx0dSeg6w"
-          title="Why Linux? : Session 1"
+        className="sm:h-[580px] sm:w-[1240px] outline-none"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/szIsA5awyP8?si=wnsLAgyjF7NgLt8n"
+          title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
       </div>
-      <div className="sm:h-20"></div>
 
-      <div class="p-8">
-        <div class="bg-[#16161A] p-4 rounded-lg shadow-xl py-8 mt-12">
-          <h4 class="text-4xl font-thin font-space text-white tracking-widest uppercase text-center">
-            Knowledge Center
-          </h4>
-          {/* <p class="text-center text-white font-space text-sm mt-2"></p> */}
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-12 px-2 xl:px-12 mt-4">
-            <div class="flex flex-row space-x-8 mt-8">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  1. What is Linux
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  When most people say 'Linux', they are talking about the OS, a
-                  free (libre) and open source Operating System. To be more
-                  precise Linux is the name of the OS Kernel (the core of an
-                  operating system) which is just one part of a larger system
-                  composed of other free and open source software (FOSS). When
-                  someone says that they are using 'Linux', they are probably
-                  using what's called a Linux distribution. A Linux Distribution
-                  is a complete operating system which includes the Linux
-                  Kernel, a package manager, a desktop environment, device
-                  drivers, among other things. A lot of these software are a
-                  part of the GNU software project thus, Linux is also referred
-                  to as GNU/Linux.Linux was created by Linus Torvalds in 1991.
-                  It was inspired by MINIX, another OS kernel in the Unix-like
-                  family of operating systems.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  2. Linux Distributions : 2.1 The Linux Family Tree
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  The customizability and freedom offered by linux has resulted
-                  in a number of different distributions (or 'distros'). You can
-                  checkout a timeline or a 'family-tree' of Linux distros here.
-                  A simplified version of the Linux family tree is shown below.
-                  The very first linux based OS is the GNU Linux. Linux is the
-                  kernel, GNU Linux is the OS. Major parent Linux distros in the
-                  family tree are: Debian, Slackware, Red Hat, Arch etc. All the
-                  distros under the same family use the same package manager.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-              <div >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  3 Why do we need it?
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  Linux is used worldwide, from webservers to android phones to
-                  desktops to smart appliances. Almost every device needs an
-                  operating system and Linux being free of cost and infinitely
-                  customizable fits the bill perfectly. Windows vs Linux: Linux
-                  is not a replacement or a separate 'version' of Windows, it is
-                  more of an alternative to it. Both are operating system, with
-                  Windows being a propietary aka closed source OS. End users
-                  can't modify windows (they can but only in the way Microsoft
-                  allows them to).
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  Installation
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  Now, the installation process of every Linux distribution is
-                  different. Some distros would complete the entire installation
-                  process through GUI (like Ubuntu), whereas some would require
-                  you to complete the installation manually through every step
-                  (like Arch). Installing a distro can be done in two ways: Dual
-                  Boot: Here, you partition your hard drive to make your
-                  physical computer use 2 OS directly. The first is the OS you
-                  are currently in, and the second one is the Linux distro you
-                  are installing. This is a tougher way but it is way more
-                  efficient than using a Virtual Machine. Using Linux in Dual
-                  boot will give you far better control than in Virtual Machine.
-                  But it can get harder to use the distro for everyday purposes
-                  if you are not much acquainted with linux (You can even break
-                  your software and now your computer wont open until you
-                  re-install the OS). Thus, our advice for this tutorial would
-                  be to go with a Linux Virtual Machine and once you are well
-                  acquainted with using Linux, you can switch to this Dual Boot
-                  option.
-                </p>
-              </div>
-            </div>
-
-            {/* <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-                    </svg>
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <h2>Terminal Utilities</h2>
+        <p>
+          Terminal Utilities are some miscellaneous commands and programs that
+          help in carrying out some day-to-day tasks which you might encounter
+          in using Linux. It saves much effort by performing those command line
+          operations fast.
+        </p>
+        <h3> Path Expansion </h3>
+        <table style={{ marginBlock: "1em" }}>
+          <thead>
+            <tr>
+              <th>Pattern</th>
+              <th>
+                <div classname="  text-blue-300">Matches</div>
+              </th>
+              <th>
+                <div classname="  text-blue-300">Syntax</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*</td>
+              <td>Any string of zero or more characters</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}ls mov*{/*</CodeBlock>*/}
                 </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Similique fugiat cumque?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
+              </td>
+            </tr>
+            <tr>
+              <td>?</td>
+              <td>Any single character</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}ls movi?{/*</CodeBlock>*/}
                 </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-                    </svg>
+              </td>
+            </tr>
+            <tr>
+              <td>[abc]</td>
+              <td>Any character in the enclosed class</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  ls [abcmo]*
+                  {/*</CodeBlock>*/}
                 </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Impedit iusto vitae dolorum, nostrum fugit?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
+              </td>
+            </tr>
+            <tr>
+              <td>![abc]</td>
+              <td>Any character not in the enclosed class</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  ls [!abcmo]*
+                  {/*</CodeBlock>*/}
                 </div>
-            </div> */}
-          </div>
+              </td>
+            </tr>
+            <tr>
+              <td>[[:alpha:]]</td>
+              <td>Any alphabetic character</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/} ls [[:alpha:]] {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>[[:alnum:]]</td>
+              <td>Any alphabetic character or digit</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}ls [[:alnum:]]{/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>[[:digit:]]</td>
+              <td>Any single digit from 0 to 9</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}ls [[:digit:]]{/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3> Brace Expansion </h3>
+        The Brace expansion is used to create multiple files having a common
+        pattern easily. Typically a comma-separated-values are enclosed in the
+        pair of braces which have the common pattern to create multiple files.
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} echo {"{"}Monday, Tuesday, Wednesday{"}"}.txt{" "}
+          {/*</CodeBlock>*/}
         </div>
-      </div>
-
-      <div class="px-4 py-20 bg-[#16161A] text-white font-space">
-        <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
-          <h2 class="w-full mr-8 text-3xl font-space font-extrabold leading-9 md:w-1/3">
-            Some more info...
-          </h2>
-          <dl class="w-full md:w-2/3">
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-                We have attached a few resources, which you can refer to install
-                some common Linux distros through Dual Boot:
-              </h3>
-            </dt>
-            <div class="mb-16 flex flex-col">
-              <a className="text-blue-300" href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">
-                Blog Post: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/-iSAyiicyQY">
-                Video tutorial: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxtechi.com/dual-boot-arch-linux-windows-10/">
-                Blog Post: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/L1B1O0R1IHA">
-                Video tutorial: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.geeksforgeeks.org/dual-boot-kali-linux-with-windows/">
-                Blog Post: Dual Boot Kali Linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/BRk71KypnBg">
-                Video tutorial: Dual Boot Kali linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://blnlabs.com/dual-boot-pop-os-and-windows-10/">
-                Blog Post: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/hbzCSjlbInY">
-                Video tutorial: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxfordevices.com/tutorials/linux/dual-boot-windows-10-and-linux-mint">
-                Blog Post: Dual Boot Linux Mint on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/eL1jHhLcgTU">
-                Video tutorial: Dual Boot Linux Mint on Windows
-              </a>
-            </div>
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-              Virtual Machine
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-              This is a relatively simpler method to install a linux distro in your system. Here, as the name suggests, you use the Linux distribution virtually. That is, the Linux distro runs on top of your current OS and this is achieved by the usage of a Virtual Machine Monitor (like VirtualBox or VMWare etc.). Here, you do not have to worry about breaking your software. Because, everything can be restored to its initial state easily. Thus, VMs are a great way to experiment and learn when you are using Linux for the first time. After you are well acquainted with using a distro virtually, you can switch to the Dual Boot option :D We have attached a few resources, which you can refer to install some common Linux distros through Virtual Machine in Virtual Box:
-              </p>
-              <br />
-                        <a className="text-blue-300" href='https://www.geeksforgeeks.org/how-to-install-ubuntu-on-virtualbox/'>
-                            Blog Post: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/x5MhydijWmc'>
-                            Video tutorial: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-arch-linux-virtualbox/'>
-                            Blog Post: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/_3-OMUQTf_k'>
-                            Video tutorial: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-kali-linux-virtualbox/'>
-                            Blog Post: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/V_Payl5FlgQ'>
-                            Video tutorial: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://www.how2shout.com/linux/how-to-install-pop-os-in-virtualbox-virtual-machine/'>
-                            Blog Post: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/qsB0gwrwIYQ'>
-                            Video tutorial: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-linux-mint-in-virtualbox/'>
-                            Blog Post: Install Linux Mint VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/aisUxv2S3gk'>
-                            Video tutorial: Install Linux Mint VM
-                        </a>
-                        <br />
-            </dd>
-            
-            <dd class="mb-16">
-              <p>
-                
-              </p>
-            </dd>
-          </dl>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} touch file{"{"}1..11{"}"}.txt {/*</CodeBlock>*/}
         </div>
-      </div>
+        <h3> Variable Expansion </h3>
+        Through variable expansion, you can store the output of a command to a
+        variable, so that you can use it at mulitple places without actually
+        having to retype the command again and again. It{"'"}s just like how you
+        use variables in coding programs.
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} myDirectory=value {/*</CodeBlock>*/}
+        </div>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} cd $myDirectory {/*</CodeBlock>*/}
+        </div>
+        <h3> grep </h3>
+        The grep command filters the output of a command and shows only the
+        lines/text which matches the pattern you provide as an arguement.
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} ls -l | grep movie {/*</CodeBlock>*/}
+        </div>
+        <h3> zip </h3>
+        The zip command helps to zip/archive a directory directly from the
+        command line interface.
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} zip (zip_file_name) (myDirectory) {/*</CodeBlock>*/}
+        </div>
+        <h3> unzip </h3>
+        The unzip command helps to unzip an archive from the command line
+        interface.
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/} unzip (zip_file_name) -d (/path/to/unzip){" "}
+          {/*</CodeBlock>*/}
+        </div>
+      </section>
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <h2>vim: A terminal-based text editor</h2>
+        <p>
+          <em>vim</em> is a simple text editor operated entirely in the
+          terminal. It is a an improved version of an earlier editor called{" "}
+          <em>vi</em> (vim stands for <em>vi improved</em>).
+        </p>
+        <p>
+          With vim, you can essentially replace your mouse with the keyboard.
+          This enables you to increase your speed while editing documents as
+          your hand doesn't leave the keyboard.
+        </p>
+
+        <h3>Installing vim</h3>
+        <p>
+          vim is available on the official repositories for most distros. So,
+          you can simply use the default package manager:
+        </p>
+        <ol>
+          <li>
+            <div classname="  text-blue-300">apt</div>:{" "}
+            <div className="w-[20rem]  text-blue-300 rounded-md">
+              {/*<CodeBlock>*/}sudo apt install vim{/*</CodeBlock>*/}
+            </div>
+          </li>
+          <li>
+            <div classname="  text-blue-300">pacman</div>:{" "}
+            <div className="w-[20rem]  text-blue-300 rounded-md">
+              {/*<CodeBlock>*/}sudo pacman -S vim{/*</CodeBlock>*/}
+            </div>
+          </li>
+          <li>
+            <div classname="  text-blue-300">dnf</div>:{" "}
+            <div className="w-[20rem]  text-blue-300 rounded-md">
+              {/*<CodeBlock>*/}sudo dnf install vim-enhanced{/*</CodeBlock>*/}
+            </div>
+          </li>
+        </ol>
+        <p>
+          After installation, type the command below to verify that vim has been
+          installed. If you see an output stating the version, you're all set.
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}vim --version{/*</CodeBlock>*/}
+        </div>
+
+        <h3>Modes</h3>
+        <p>
+          To be able to effectively replace all the funcionality a mouse
+          provides and still let you be able to type, vim has certain 'modes'.
+          They are:
+        </p>
+        <ol>
+          <li>
+            Normal mode: Used for moving around, entering commands and switching
+            to other modes. You can enter other modes only from normal mode. In
+            normal mode, you can give certain commands after typing the{" "}
+            <div classname="  text-blue-300">:</div> (
+            <div classname="  text-blue-300">shift</div> +{" "}
+            <div classname="  text-blue-300">;</div>) key.
+          </li>
+          <li>Insert mode: Used to actually type text.</li>
+          <li>Visual mode: Used to select text.</li>
+        </ol>
+
+        <h3>Opening a file</h3>
+        <p>Now, to open a file type the command:</p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}vim filename{/*</CodeBlock>*/}
+        </div>
+        <p>
+          You can also open an new, empty, untitled file by just typing{" "}
+          <div classname="  text-blue-300">vim</div>
+        </p>
+
+        <h3>Changing Modes and Giving Commands</h3>
+        <p>
+          The current modes can be seen at the bottom of the screen (the
+          terminal window). If you see nothing, you're in the normal mode. Now,
+          press <div classname="  text-blue-300">i</div> or{" "}
+          <div classname="  text-blue-300">a</div> to enter the Insert Mode. You
+          should see the text <div classname="  text-blue-300">--INSERT--</div>{" "}
+          at the bottom left. Exit Insert Mode by pressing{" "}
+          <div classname="  text-blue-300">esc</div>, you should now be back in
+          Normal Mode.
+        </p>
+        <p>
+          To enter Visual mode, press <div classname="  text-blue-300">v</div>.
+          You can exit this mode by pressing{" "}
+          <div classname="  text-blue-300">esc</div>.
+        </p>
+        <p>
+          To give commands, make sure you're in Normal mode and then press the{" "}
+          <div classname="  text-blue-300">:</div> key. If you can see a{" "}
+          <div classname="  text-blue-300">:</div> with a blinking cursor after
+          it, that means you can type your command.
+        </p>
+
+        <h3>Vim cheat sheet</h3>
+        <p>
+          Below is a cheat-sheet of the most basic key combinations, commands,
+          etc. in vim. Remember, these commands are used in Normal mode.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Keys to Press</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowSpan={4}>Saving and quitting</td>
+              <td>:q!</td>
+              <td>Quit vim and discard changes</td>
+            </tr>
+            <tr>
+              <td>:w</td>
+              <td>Save the file</td>
+            </tr>
+            <tr>
+              <td>:qw</td>
+              <td>Save the file and quit vim</td>
+            </tr>
+            <tr>
+              <td>:saveas filename</td>
+              <td>Save a copy with the given name</td>
+            </tr>
+            <tr>
+              <td rowSpan={19}>Moving Around</td>
+              <td>j</td>
+              <td>Go one line down</td>
+            </tr>
+            <tr>
+              <td>k</td>
+              <td>Go one line up</td>
+            </tr>
+            <tr>
+              <td>l</td>
+              <td>Go one character to the right</td>
+            </tr>
+            <tr>
+              <td>h</td>
+              <td>Go one character to the left</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>Go to the first character of the line</td>
+            </tr>
+            <tr>
+              <td>$</td>
+              <td>Go to the last character of the line</td>
+            </tr>
+            <tr>
+              <td>^</td>
+              <td>Go to the first non-whitespace character of the line</td>
+            </tr>
+            <tr>
+              <td>w</td>
+              <td>Go one word forward</td>
+            </tr>
+            <tr>
+              <td>b</td>
+              <td>Go one word backward</td>
+            </tr>
+            <tr>
+              <td>e</td>
+              <td>Go to the end of the next word</td>
+            </tr>
+            <tr>
+              <td>{")"}</td>
+              <td>Go one sentence forward</td>
+            </tr>
+            <tr>
+              <td>{"("}</td>
+              <td>Go one sentence backward</td>
+            </tr>
+            <tr>
+              <td>{"}"}</td>
+              <td>Go one paragraph forward</td>
+            </tr>
+            <tr>
+              <td>{"{"}</td>
+              <td>Go one paragraph backward</td>
+            </tr>
+            <tr>
+              <td>H</td>
+              <td>Go to the top of the screen</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>Go to the bottom of the screen</td>
+            </tr>
+            <tr>
+              <td>gg</td>
+              <td>Go to the top of the file</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>Go to the bottom of the file</td>
+            </tr>
+            <tr>
+              <td>:n</td>
+              <td>Go to line number n</td>
+            </tr>
+            <tr>
+              <td rowSpan={9}>Editing Text</td>
+              <td>i</td>
+              <td>Enter Insert mode with the cursor at the current position</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>Enter Insert mode with the cursor one position after</td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>delete the current character</td>
+            </tr>
+            <tr>
+              <td>X</td>
+              <td>delete the previous character</td>
+            </tr>
+            <tr>
+              <td>dw</td>
+              <td>delete(cut) the word the cursor is at</td>
+            </tr>
+            <tr>
+              <td>dd</td>
+              <td>delete(cut) the whole line</td>
+            </tr>
+            <tr>
+              <td>yy</td>
+              <td>copy the whole line</td>
+            </tr>
+            <tr>
+              <td>p</td>
+              <td>paste selection after the cursor</td>
+            </tr>
+            <tr>
+              <td>P</td>
+              <td>paste selection before the cursor</td>
+            </tr>
+            <tr>
+              <td rowSpan={4}>Selection</td>
+              <td>v</td>
+              <td>Enter visual mode to select text</td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>Enter visual mode with line selection</td>
+            </tr>
+            <tr>
+              <td>
+                j, h, k, l, 0, $, ^, w, b, e, {"("}, {")"}, {"}"}, {"{"}, etc
+              </td>
+              <td>
+                The keys use to move around in normal mode are used for
+                selection in visual mode
+              </td>
+            </tr>
+            <tr>
+              <td>y</td>
+              <td>Copy selection (will exit visual mode)</td>
+            </tr>
+            <tr>
+              <td rowSpan={2}>Undo/redo</td>
+              <td>u</td>
+              <td>Undo</td>
+            </tr>
+            <tr>
+              <td>ctrl + r</td>
+              <td>redo</td>
+            </tr>
+            <tr>
+              <td rowSpan={4}>Searching and Replacing Text</td>
+              <td>/xyz</td>
+              <td>
+                Search for (and highlight) every occurrence of 'xyz' in the file
+              </td>
+            </tr>
+            <tr>
+              <td>:noh</td>
+              <td>Remove all selections (and highlights)</td>
+            </tr>
+            <tr>
+              <td>:s /xyz/abc</td>
+              <td>
+                Replace 'xyz' with 'abc' in the current line (1st occurence
+                only)
+              </td>
+            </tr>
+            <tr>
+              <td>:%s /xyz/abc</td>
+              <td>Replace every occurrence of 'xyz' with 'abc'</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </>
   );
 }
 
-export default Chapter_1;
+export default Chapter_5;

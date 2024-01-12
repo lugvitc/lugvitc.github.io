@@ -1,25 +1,22 @@
+import React from "react";
 import {
   MagnifyingGlassIcon,
   ChevronUpDownIcon,
 } from "@heroicons/react/24/outline";
 import { PencilIcon, UserPlusIcon } from "@heroicons/react/24/solid";
+import { Button } from "@material-tailwind/react";
 import {
-  Card,
-  CardHeader,
-  Input,
-  Typography,
-  Button,
-  CardBody,
-  Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
-  Avatar,
-  IconButton,
-  Tooltip,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
 } from "@material-tailwind/react";
-
+import {
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Typography,
+} from "@material-tailwind/react";
 import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { useState } from "react";
@@ -171,34 +168,34 @@ const tableData = [
 ];
 
 export default function Leaderboard() {
-  const recordPerPage = 5;
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
+  // const recordPerPage = 5;
   tableData.sort((a, b) => b.points > a.points);
-  const [currRecord, setCurrRecord] = useState(0);
+  // const [currRecord, setCurrRecord] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [filteredData, setFilteredData] = useState(tableData);
-  const [data, setData] = useState(
-    filteredData.length <= recordPerPage
-      ? filteredData
-      : tableData.slice(currRecord, currRecord + 5)
-  );
+  // const [filteredData, setFilteredData] = useState(tableData);
+  const [data, setData] = useState(tableData);
 
-  function paginate(start = 0){
-    setCurrRecord(start);
-    filteredData.sort((a, b) => b.points > a.points);
-    setData(filteredData.length <= recordPerPage
-      ? filteredData
-      : filteredData.slice(currRecord, currRecord + 5));
-  }
+  // function paginate(start = 0){
+  //   setCurrRecord(start);
+  //   filteredData.sort((a, b) => b.points > a.points);
+  //   setData(filteredData.length <= recordPerPage
+  //     ? filteredData
+  //     : filteredData.slice(currRecord, currRecord + 5));
+  // }
 
-  function nextPage() {
-    setCurrRecord(currRecord + recordPerPage);
-    paginate(currRecord);
-  }
+  // function nextPage() {
+  //   setCurrRecord(currRecord + recordPerPage);
+  //   paginate(currRecord);
+  // }
 
-  function prevPage() {
-    setCurrRecord(currRecord - recordPerPage);
-    paginate(currRecord);
-  }
+  // function prevPage() {
+  //   setCurrRecord(currRecord - recordPerPage);
+  //   paginate(currRecord);
+  // }
 
   function handleSearch(e) {
     console.log(e.target.value);
@@ -209,8 +206,8 @@ export default function Leaderboard() {
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    setFilteredData(results);
-    paginate();
+    setData(results);
+    // paginate();
   }
 
   return (
@@ -379,7 +376,7 @@ export default function Leaderboard() {
                         Points
                       </th>
                       <th class="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        More info...
+                        More info ..
                       </th>
                     </tr>
                   </thead>
@@ -442,20 +439,51 @@ export default function Leaderboard() {
                                   class="absolute inset-0  rounded-full"
                                 ></span>
                                 <button class="relative hover:text-blue-300">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    class="w-6 h-6"
-                                  >
-                                    <path
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                                    />
-                                  </svg>
+                                  <Popover>
+                                    <PopoverHandler>
+                                      <Button>
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="none"
+                                          viewBox="0 0 24 24"
+                                          stroke-width="1.5"
+                                          stroke="currentColor"
+                                          class="w-6 h-6"
+                                        >
+                                          <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                          />
+                                        </svg>
+                                      </Button>
+                                    </PopoverHandler>
+                                    <PopoverContent className="z-[999] grid w-[28rem] grid-cols-1 overflow-hidden p-0">
+                                      <div className="p-4">
+                                        <Typography
+                                          color="blue-gray"
+                                          className="mb-2 text-lg font-bold"
+                                        >
+                                          Contributions
+                                        </Typography>
+                                        <Typography
+                                          variant="small"
+                                          color="gray"
+                                          className="mb-14 font-normal text-blue-gray-500"
+                                        >
+                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit eveniet, hic doloribus sit dicta rem quis laborum error amet. 
+                                        </Typography>
+                                        <a
+                                          href="#"
+                                          className="-ml-3 inline-block"
+                                        >
+                                          
+                                        </a>
+                                      </div>
+
+                                      
+                                    </PopoverContent>
+                                  </Popover>
                                 </button>
                               </span>
                             </td>
@@ -465,7 +493,7 @@ export default function Leaderboard() {
                     )}
                   </tbody>
                 </table>
-                <div class="px-5 py-5 bg-[#16161A] justify-start   flex flex-col xs:flex-row items-center xs:justify-between          ">
+                {/* <div class="px-5 py-5 bg-[#16161A] justify-start   flex flex-col xs:flex-row items-center xs:justify-between          ">
                   <span class="text-xs xs:text-sm text-white">
                     Showing {currRecord} to {currRecord + 5} of{" "}
                     {tableData.length} Entries
@@ -484,7 +512,7 @@ export default function Leaderboard() {
                       Next
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             {/* table data ends here */}

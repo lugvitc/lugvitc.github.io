@@ -14,7 +14,6 @@ import { Pagination } from "swiper/modules";
 
 function AdrenalineFOSSDay() {
   useEffect(() => {
-    // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
   });
   return (

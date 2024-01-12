@@ -1,25 +1,30 @@
-import React from "react";
-// import YouTube from "react-youtube";
+import React,{useEffect} from "react";
+
 import Particle from "../../../components/Particle/Particle";
-function Chapter_1() {
+function Chapter_6() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       {/* <Particle/> */}
       <div className="flex flex-col justify-center items-center font-space  my-5 py-5">
         <p class="max-w-5xl px-5 mt-2 text-md  leading-tight text-center text-white sm:mt-10 sm:px-0 sm:text-2xl">
-          Chapter - 1
+          Chapter - 6
         </p>
         <div className="h-4"></div>
         <p class="max-w-5xl px-5 mt-2 text-4xl  leading-tight text-center text-white sm:mt-0 sm:px-0 sm:text-5xl">
-          Linux: What? Why? How?
+          Desktop Customization
         </p>
       </div>
       <div className="h-5"></div>
       <div className="flex justify-center items-center z-auto bg-[]">
         <iframe
           className="sm:h-[580px] sm:w-[1240px] outline-none"
-          src="https://www.youtube.com/embed/nZDx0dSeg6w"
-          title="Why Linux? : Session 1"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/QFWTdmm2RG8?si=k0TnWZ7BXuxMCZIF"
+          title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -55,23 +60,42 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  1. What is Linux
+                  1.Vim Customization
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  When most people say 'Linux', they are talking about the OS, a
-                  free (libre) and open source Operating System. To be more
-                  precise Linux is the name of the OS Kernel (the core of an
-                  operating system) which is just one part of a larger system
-                  composed of other free and open source software (FOSS). When
-                  someone says that they are using 'Linux', they are probably
-                  using what's called a Linux distribution. A Linux Distribution
-                  is a complete operating system which includes the Linux
-                  Kernel, a package manager, a desktop environment, device
-                  drivers, among other things. A lot of these software are a
-                  part of the GNU software project thus, Linux is also referred
-                  to as GNU/Linux.Linux was created by Linus Torvalds in 1991.
-                  It was inspired by MINIX, another OS kernel in the Unix-like
-                  family of operating systems.
+                  If you are writing your first code in vim, you must feel odd
+                  regarding where the line numbers are, or where the current
+                  filename is. The default version of vim does not show these
+                  details. But, you can customize vim to include additional
+                  details according to your usage. All of the customization will
+                  be saved in the ~/.vimrc file. Vim always looks for this
+                  configuration file in the home directory before opening any
+                  file. So, it is necessary that you save this configuration
+                  file in the home directory.
+                  <br />
+                  Steps to apply some customization in vim editor:
+                  <br />
+                  vim ~/.vimrc to create and open the the config file in home
+                  directory.
+                  <br />
+                  Begin a line with " to add a comment describing the config.
+                  <br />
+                  In the next line, set the configuration option.
+                  <br />
+                  Repeat step 2 and 3 for every set of option you configure.
+                  <br />
+                  Save and close the config file.
+                  <br />
+                  You can see the whole list of configuration options for vim,
+                  by opening any file in vim and entering the command mode and
+                  then typing :options
+                  <br />
+                  Consider the example where you want vim to show the line
+                  numbers against the file content everytime you open a file.
+                  For that, first search the options list to find the command
+                  which sets the line numbers. You will see it's the set number
+                  command which does that. So, add the following lines to your
+                  ~/.vimrc file for the configuration. <br />
                 </p>
               </div>
             </div>
@@ -95,244 +119,249 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  2. Linux Distributions : 2.1 The Linux Family Tree
+                  2. Vim Plugins
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  The customizability and freedom offered by linux has resulted
-                  in a number of different distributions (or 'distros'). You can
-                  checkout a timeline or a 'family-tree' of Linux distros here.
-                  A simplified version of the Linux family tree is shown below.
-                  The very first linux based OS is the GNU Linux. Linux is the
-                  kernel, GNU Linux is the OS. Major parent Linux distros in the
-                  family tree are: Debian, Slackware, Red Hat, Arch etc. All the
-                  distros under the same family use the same package manager.
+                  A plugin is a way to extend Vim's functionality. As discussed
+                  in customization, you can make vim more suitable for your
+                  usage by adding more commands. But you can not do everything
+                  with vim commands. For using advanced features, you have to
+                  use plugins. So, plugins are basically software code written
+                  for vim, which instructs vim to perform some advanced
+                  operations on your behalf. For example, the auto-pairs plugin
+                  in vim auto-completes the other end of open elements for you.
+                  <br />
+                  Steps to install a plugin in vim editor:
+                  <br />
+                  Install the vim plugin manager: vim-plug. A plugin manager
+                  helps you to install/upgrade/delete multiple plugins easily,
+                  just like a package manager installs software in linux system.
+                  Run the following command to install vim-plug in your linux
+                  system:
+                  <br />
+                  <div className="text-blue-300">
+                    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+                    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                  </div>
                 </p>
               </div>
             </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-              <div >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  3 Why do we need it?
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  Linux is used worldwide, from webservers to android phones to
-                  desktops to smart appliances. Almost every device needs an
-                  operating system and Linux being free of cost and infinitely
-                  customizable fits the bill perfectly. Windows vs Linux: Linux
-                  is not a replacement or a separate 'version' of Windows, it is
-                  more of an alternative to it. Both are operating system, with
-                  Windows being a propietary aka closed source OS. End users
-                  can't modify windows (they can but only in the way Microsoft
-                  allows them to).
-                </p>
-              </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                  ></path>
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-xl font-bold text-green-200 font-space">
-                  Installation
-                </h4>
-                <p class="text-white font-space my-2 font-thin">
-                  Now, the installation process of every Linux distribution is
-                  different. Some distros would complete the entire installation
-                  process through GUI (like Ubuntu), whereas some would require
-                  you to complete the installation manually through every step
-                  (like Arch). Installing a distro can be done in two ways: Dual
-                  Boot: Here, you partition your hard drive to make your
-                  physical computer use 2 OS directly. The first is the OS you
-                  are currently in, and the second one is the Linux distro you
-                  are installing. This is a tougher way but it is way more
-                  efficient than using a Virtual Machine. Using Linux in Dual
-                  boot will give you far better control than in Virtual Machine.
-                  But it can get harder to use the distro for everyday purposes
-                  if you are not much acquainted with linux (You can even break
-                  your software and now your computer wont open until you
-                  re-install the OS). Thus, our advice for this tutorial would
-                  be to go with a Linux Virtual Machine and once you are well
-                  acquainted with using Linux, you can switch to this Dual Boot
-                  option.
-                </p>
-              </div>
-            </div>
-
-            {/* <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Similique fugiat cumque?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
-                </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Impedit iusto vitae dolorum, nostrum fugit?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
-                </div>
-            </div> */}
           </div>
         </div>
       </div>
 
-      <div class="px-4 py-20 bg-[#16161A] text-white font-space">
-        <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
-          <h2 class="w-full mr-8 text-3xl font-space font-extrabold leading-9 md:w-1/3">
-            Some more info...
-          </h2>
-          <dl class="w-full md:w-2/3">
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-                We have attached a few resources, which you can refer to install
-                some common Linux distros through Dual Boot:
-              </h3>
-            </dt>
-            <div class="mb-16 flex flex-col">
-              <a className="text-blue-300" href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">
-                Blog Post: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/-iSAyiicyQY">
-                Video tutorial: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxtechi.com/dual-boot-arch-linux-windows-10/">
-                Blog Post: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/L1B1O0R1IHA">
-                Video tutorial: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.geeksforgeeks.org/dual-boot-kali-linux-with-windows/">
-                Blog Post: Dual Boot Kali Linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/BRk71KypnBg">
-                Video tutorial: Dual Boot Kali linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://blnlabs.com/dual-boot-pop-os-and-windows-10/">
-                Blog Post: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/hbzCSjlbInY">
-                Video tutorial: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxfordevices.com/tutorials/linux/dual-boot-windows-10-and-linux-mint">
-                Blog Post: Dual Boot Linux Mint on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/eL1jHhLcgTU">
-                Video tutorial: Dual Boot Linux Mint on Windows
-              </a>
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <p>Steps to install a plugin in vim editor:</p>
+        <ol>
+          <li>
+            {" "}
+            Install the vim plugin manager: <code>vim-plug</code>. A plugin
+            manager helps you to install/upgrade/delete multiple plugins easily,
+            just like a package manager installs software in linux system. Run
+            the following command to install vim-plug in your linux system:{" "}
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/}
+              curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https:{"//"}
+              raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+              {/*</CodeBlock>*/}
             </div>
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-              Virtual Machine
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-              This is a relatively simpler method to install a linux distro in your system. Here, as the name suggests, you use the Linux distribution virtually. That is, the Linux distro runs on top of your current OS and this is achieved by the usage of a Virtual Machine Monitor (like VirtualBox or VMWare etc.). Here, you do not have to worry about breaking your software. Because, everything can be restored to its initial state easily. Thus, VMs are a great way to experiment and learn when you are using Linux for the first time. After you are well acquainted with using a distro virtually, you can switch to the Dual Boot option :D We have attached a few resources, which you can refer to install some common Linux distros through Virtual Machine in Virtual Box:
-              </p>
+          </li>
+          <li>
+            {" "}
+            Create a config file for the plugin manager with the name:{" "}
+            <code>~/.vimrc.plug</code>. In this file, we are going to include
+            the list of all the plugins we want to install in vim. You can find
+            all the plugins for vim in a GitHub search; just sign-in to GitHub,
+            and search <code>vim plugins</code>. So, let{"'"}s say we want to
+            install the plugins <code>preservim/nerdtree</code> and{" "}
+            <code>jiangmiao/auto-pairs</code>. Let{"'"}s write and save the{" "}
+            <code>~/.vimrc.plug</code> file like below:
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/} call plug#begin('~/.vim.plugged') <br />
               <br />
-                        <a className="text-blue-300" href='https://www.geeksforgeeks.org/how-to-install-ubuntu-on-virtualbox/'>
-                            Blog Post: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/x5MhydijWmc'>
-                            Video tutorial: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-arch-linux-virtualbox/'>
-                            Blog Post: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/_3-OMUQTf_k'>
-                            Video tutorial: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-kali-linux-virtualbox/'>
-                            Blog Post: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/V_Payl5FlgQ'>
-                            Video tutorial: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://www.how2shout.com/linux/how-to-install-pop-os-in-virtualbox-virtual-machine/'>
-                            Blog Post: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/qsB0gwrwIYQ'>
-                            Video tutorial: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-linux-mint-in-virtualbox/'>
-                            Blog Post: Install Linux Mint VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/aisUxv2S3gk'>
-                            Video tutorial: Install Linux Mint VM
-                        </a>
-                        <br />
-            </dd>
-            
-            <dd class="mb-16">
-              <p>
-                
-              </p>
-            </dd>
-          </dl>
+              {'"'} List all your plugins here down <br />
+              Plug 'preservim/nerdtree' <br />
+              Plug 'jiangmiao/auto-pairs' <br />
+              <br />
+              call plug#end()
+              {/*</CodeBlock>*/}
+            </div>{" "}
+          </li>
+          <li>
+            {" "}
+            Open the <code>~/.vimrc</code> file again, we will make a call to
+            the <code>~/.vimrc.plug</code> file from the <code>~/.vimrc</code>{" "}
+            file. Vim always opens the <code>~/.vimrc</code> config file before
+            editing any text file. Thus, we are essentially making a call to the
+            plugin config file from the main vim config file, so that vim can
+            deal with the plugins now. Let{"'"}s append the following lines to
+            the <code>~/.vimrc</code> file and save it for making the call:
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/} {'"'} we want to call our plugin configuration
+              from this file <br />
+              source ~/.vimrc.plug <br />
+              {/*</CodeBlock>*/}
+            </div>
+          </li>
+          <li>
+            {" "}
+            Now, open up any file with vim. Then enter the command mode in vim
+            and type <code>:PlugInstall</code> to install all the plugins listed
+            in the <code>~/.vimrc.plug</code> file. It should run successfully
+            and now you have all the plugins installed in your file. Done...
+          </li>
+        </ol>
+        Side Notes: <br />
+        <ul>
+          <li>
+            {" "}
+            To update all your plugins, open any file with vim and enter the
+            command mode and type <code>:PlugUpdate</code> to update your list
+            of plugins.{" "}
+          </li>
+          <li>
+            {" "}
+            To upgrade your plugin manager <code>vim-plug</code>, open any file
+            with vim and enter the command mode and type{" "}
+            <code>:PlugUpgrade</code> to update your plugin manager.{" "}
+          </li>
+          <li>
+            {" "}
+            To uninstall a plugin, open the <code>~/.vimrc.plug</code> file and
+            remove the respective plugin line you wish to uninstall. Then save
+            the file and quit. Open any file in vim now and enter the command
+            mode and type <code>:PlugClean</code> to uninstall the plugins you
+            wished to remove. Type <code>y</code> if asked to remove
+            directories.
+          </li>
+        </ul>
+      </section>
+
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <h2>Customizing GNOME</h2>
+        <p>
+          Customization is one of the most appealing aspects of linux. Below,
+          you can find some information on how to customize the GNOME desktop
+          enviroment.
+        </p>
+
+        <h3>Theming</h3>
+        <h4>Gnome Tweaks</h4>
+        <p>
+          Gnome tweaks are a set of extra settings for gnome (which honestly
+          should be a part of gnome by default). After installing the
+          application, you can make a lot of customizations like changing the
+          theme, the set of icons used, the cursor, etc.
+        </p>
+        <p>
+          Gnome Tweaks should be in the official repositories and you can
+          download it using:
+        </p>
+        <ol>
+          <li>
+            <code>apt</code>:{" "}
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/}sudo apt install gnome-tweaks{/*</CodeBlock>*/}
+            </div>
+          </li>
+          <li>
+            <code>pacman</code>:{" "}
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/}sudo pacman -S gnome-tweaks{/*</CodeBlock>*/}
+            </div>
+          </li>
+          <li>
+            <code>dnf</code>:{" "}
+            <div className="  text-blue-300">
+              {/*<CodeBlock>*/}sudo dnf install gnome-tweaks{/*</CodeBlock>*/}
+            </div>
+          </li>
+        </ol>
+        <p>
+          Now, searching for the gnome tweaks app or typing{" "}
+          <code>gnome-tweaks</code> in the terminal will open the app.
+        </p>
+
+        <h4>Custom Icons/Cursors</h4>
+        <p>
+          Go to and find an icon pack you like. Download it and extract the
+          tarball by typing:
+        </p>
+        <div className="  text-blue-300">
+          {/*<CodeBlock>*/}tar -xvf name.tar.gz{/*</CodeBlock>*/}
         </div>
-      </div>
+        <p>Now, move this file to the icons folder:</p>
+        <div className="  text-blue-300">
+          {/*<CodeBlock>*/}sudo mv name /usr/share/icons{/*</CodeBlock>*/}
+        </div>
+        <p>
+          Now, open the gnome-tweaks app (or restart if it was already open) and
+          go to the 'Appearance' tab and select the icon pack you just added in
+          the 'Icons' drop down menu.
+        </p>
+        <p>NOTE: any custom cursors you download also go in the same folder.</p>
+
+        <h4>Shell themes</h4>
+        <p>
+          Download a theme from the same site and put in{" "}
+          <code>/usr/share/themes</code> using:
+        </p>
+        <div className="  text-blue-300">
+          {/*<CodeBlock>*/}sudo mv name /usr/share/themes{/*</CodeBlock>*/}
+        </div>
+        <p>Go to the gnome tweaks app and change the theme</p>
+
+        <h4>Shell themes and Gnome 42</h4>
+        <p>NOTE: Written on 20220724</p>
+        <p>
+          If you see a 'Legacy Applications' option, that means you are in GNOME
+          42 (or higher, idk). For a whole lot of reasons, I would suggest you
+          to not change the theme. Not all apps will look the same and there
+          will be a lot of inconsistencies.
+        </p>
+
+        <h3>Extensions</h3>
+        <h4>What are Extensions</h4>
+        <p>
+          Extensions are extra software which increase the functionality of
+          gnome. They are very powerful and may break the system, so proceed on
+          you own risk and make sure you trust the extension.
+        </p>
+
+        <h4>Downloading Extensions</h4>
+        <p>
+          Frst, get the gnome shell browser extension for your preferred
+          browser. Then go to to install any extensions you like.
+        </p>
+        <p>
+          Install the 'Extensions Mangaer' app to easily view your extensions.{" "}
+        </p>
+
+        <h4>Some Recommended Extensions</h4>
+        <p>Here are some of the extensions I use:</p>
+        <ul>
+          <li>
+            Dash to panel: Not a fan of the dock and top-bar paradigm in GNOME,
+            me neither. Dash to panel bring a familiar Windows-like taskbar at
+            the bottom of the screen. It is VERY VERY customizable, so you can
+            fine tune it as much as you want.
+          </li>
+          <li>
+            Arc menu: Get a start-menu like arc-menu, where you can search for
+            apps and even pin apps!
+          </li>
+          <li>
+            Vitals: Shows you basic stats about your system (like the amount of
+            free memory, the network speed, etc.) on the top-bar (or the panel)
+          </li>
+          <li>
+            Lock keys: Shows you which (num lock or caps lock) lock keys are
+            currently active.
+          </li>
+        </ul>
+      </section>
     </>
   );
 }
 
-export default Chapter_1;
+export default Chapter_6;

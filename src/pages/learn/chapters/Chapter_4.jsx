@@ -1,25 +1,29 @@
-import React from "react";
-// import YouTube from "react-youtube";
+import React, { useEffect } from "react";
+
 import Particle from "../../../components/Particle/Particle";
-function Chapter_1() {
+function Chapter_4() {
+  useEffect(()=>{
+    window.scroll(0,0);
+  });
   return (
     <>
       {/* <Particle/> */}
       <div className="flex flex-col justify-center items-center font-space  my-5 py-5">
         <p class="max-w-5xl px-5 mt-2 text-md  leading-tight text-center text-white sm:mt-10 sm:px-0 sm:text-2xl">
-          Chapter - 1
+          Chapter - 4
         </p>
         <div className="h-4"></div>
         <p class="max-w-5xl px-5 mt-2 text-4xl  leading-tight text-center text-white sm:mt-0 sm:px-0 sm:text-5xl">
-          Linux: What? Why? How?
+          Processes and Packages
         </p>
       </div>
       <div className="h-5"></div>
       <div className="flex justify-center items-center z-auto bg-[]">
+       
         <iframe
-          className="sm:h-[580px] sm:w-[1240px] outline-none"
-          src="https://www.youtube.com/embed/nZDx0dSeg6w"
-          title="Why Linux? : Session 1"
+           className="sm:h-[580px] sm:w-[1240px] outline-none"
+          src="https://www.youtube.com/embed/H6Y0yRxu2Rs?si=AK-dMVMpNOjtN_cV"
+          title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -55,23 +59,29 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  1. What is Linux
+                  1. Processes
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  When most people say 'Linux', they are talking about the OS, a
-                  free (libre) and open source Operating System. To be more
-                  precise Linux is the name of the OS Kernel (the core of an
-                  operating system) which is just one part of a larger system
-                  composed of other free and open source software (FOSS). When
-                  someone says that they are using 'Linux', they are probably
-                  using what's called a Linux distribution. A Linux Distribution
-                  is a complete operating system which includes the Linux
-                  Kernel, a package manager, a desktop environment, device
-                  drivers, among other things. A lot of these software are a
-                  part of the GNU software project thus, Linux is also referred
-                  to as GNU/Linux.Linux was created by Linus Torvalds in 1991.
-                  It was inspired by MINIX, another OS kernel in the Unix-like
-                  family of operating systems.
+                  A Process is a program under execution. The concept of
+                  Processes is related more to the Operating System. Every OS
+                  deal with processes in order to achieve a particular job. A
+                  job is a complete unit of work under execution. To put it
+                  simply, Jobs are a collection of Processes which work to
+                  perform a specific task. Everything you do in Linux is
+                  associated with a process in the background. For example,
+                  clicking on a button, opening folders, opening terminal,
+                  opening Apps, running code etc. all are powered by processes
+                  in the background.
+                  <br />
+                  Every process has a Process ID (PID) and a Parent Process ID
+                  (PPID) attached to it. The init process is the parent process
+                  of all the processes running in the OS. And every process gets
+                  forked by a parent process. For example, if you open Chromium
+                  app, a new process gets forked from the parent init process in
+                  the name of chromium. Then again if you open a new tab in the
+                  Chromium app, a new process again gets forked from its parent
+                  chromium process in the name of tab1.
+                  <br />
                 </p>
               </div>
             </div>
@@ -95,23 +105,36 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  2. Linux Distributions : 2.1 The Linux Family Tree
+                  2. Process states
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  The customizability and freedom offered by linux has resulted
-                  in a number of different distributions (or 'distros'). You can
-                  checkout a timeline or a 'family-tree' of Linux distros here.
-                  A simplified version of the Linux family tree is shown below.
-                  The very first linux based OS is the GNU Linux. Linux is the
-                  kernel, GNU Linux is the OS. Major parent Linux distros in the
-                  family tree are: Debian, Slackware, Red Hat, Arch etc. All the
-                  distros under the same family use the same package manager.
+                  Every process goes through a sequence of states before its
+                  completed (called as process life cycle).
+                  <br />
+                  R: Running or Runnable state. A process starts with this state
+                  as it attempts to complete its execution. <br />
+                  S: Sleeping state. A process goes to this state when it needs
+                  resources that are currently not available (for e.g. waiting
+                  for user input). It automatically comes out of sleep state
+                  when the resources are made available by the CPU. <br />
+                  D: Uninterruptable sleeping state. If a process reaches this
+                  state, you can not kill the process or suspend it. It will
+                  only be terminated after it acquires the resource it is
+                  waiting for. T: Stopped or Traced state. This is a state where
+                  the process is suspended temporarily due to multiple reasons
+                  (maybe suspended by the user). You can resume the process
+                  execution from this state by bringing it to the running state
+                  again. <br />
+                  Z: Zombie state. This is a state where the process is
+                  orphaned. This happens when the parent process is terminated
+                  before the child process. This process will only be terminated
+                  when the init process gets terminated. <br />
                 </p>
               </div>
             </div>
 
             <div class="flex flex-row space-x-8 mt-8">
-              <div >
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-12 w-12 text-white"
@@ -129,18 +152,16 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  3 Why do we need it?
+                  3 Process Monitoring
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  Linux is used worldwide, from webservers to android phones to
-                  desktops to smart appliances. Almost every device needs an
-                  operating system and Linux being free of cost and infinitely
-                  customizable fits the bill perfectly. Windows vs Linux: Linux
-                  is not a replacement or a separate 'version' of Windows, it is
-                  more of an alternative to it. Both are operating system, with
-                  Windows being a propietary aka closed source OS. End users
-                  can't modify windows (they can but only in the way Microsoft
-                  allows them to).
+                  Since every command/application is powered by processes in the
+                  background, you can control the applications usage by
+                  monitoring processes. The htop command or the ps -aux command
+                  shows you the list of all processes running and shows what are
+                  the resources grabbed by them. It is a responsive output,
+                  meaning it refreshes the list of output every 3 seconds so you
+                  can monitor the processes at a single place.
                 </p>
               </div>
             </div>
@@ -164,175 +185,222 @@ function Chapter_1() {
               </div>
               <div>
                 <h4 class="text-xl font-bold text-green-200 font-space">
-                  Installation
+                  Background and Foreground jobs
                 </h4>
                 <p class="text-white font-space my-2 font-thin">
-                  Now, the installation process of every Linux distribution is
-                  different. Some distros would complete the entire installation
-                  process through GUI (like Ubuntu), whereas some would require
-                  you to complete the installation manually through every step
-                  (like Arch). Installing a distro can be done in two ways: Dual
-                  Boot: Here, you partition your hard drive to make your
-                  physical computer use 2 OS directly. The first is the OS you
-                  are currently in, and the second one is the Linux distro you
-                  are installing. This is a tougher way but it is way more
-                  efficient than using a Virtual Machine. Using Linux in Dual
-                  boot will give you far better control than in Virtual Machine.
-                  But it can get harder to use the distro for everyday purposes
-                  if you are not much acquainted with linux (You can even break
-                  your software and now your computer wont open until you
-                  re-install the OS). Thus, our advice for this tutorial would
-                  be to go with a Linux Virtual Machine and once you are well
-                  acquainted with using Linux, you can switch to this Dual Boot
-                  option.
+                  Foreground is the normal terminal interface where you type a
+                  command, wait for its response and then type another command
+                  and so on. So, on Foreground you can work with only a single
+                  command at a time. But with background, you can work with
+                  multiple commands at the same time. As the name suggests,
+                  here, you put a job execution to run in the background, and
+                  then you can run another job on the foreground at the same
+                  time! You can even put multiple jobs to run in the background
+                  while you are working on the foreground!
+                  <br />
+                  Append the & to the command to execute it in the background.
                 </p>
               </div>
             </div>
-
-            {/* <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Similique fugiat cumque?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
-                </div>
-            </div>
-
-            <div class="flex flex-row space-x-8 mt-8">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-green-200 font-space">Impedit iusto vitae dolorum, nostrum fugit?</h4>
-                    <p class="text-white font-space my-2 font-thin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!</p>
-                   
-                </div>
-            </div> */}
           </div>
         </div>
       </div>
 
-      <div class="px-4 py-20 bg-[#16161A] text-white font-space">
-        <div class="flex flex-col max-w-6xl mx-auto md:flex-row">
-          <h2 class="w-full mr-8 text-3xl font-space font-extrabold leading-9 md:w-1/3">
-            Some more info...
-          </h2>
-          <dl class="w-full md:w-2/3">
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-                We have attached a few resources, which you can refer to install
-                some common Linux distros through Dual Boot:
-              </h3>
-            </dt>
-            <div class="mb-16 flex flex-col">
-              <a className="text-blue-300" href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">
-                Blog Post: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/-iSAyiicyQY">
-                Video tutorial: Dual Boot Ubuntu on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxtechi.com/dual-boot-arch-linux-windows-10/">
-                Blog Post: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/L1B1O0R1IHA">
-                Video tutorial: Dual Boot Arch on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.geeksforgeeks.org/dual-boot-kali-linux-with-windows/">
-                Blog Post: Dual Boot Kali Linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/BRk71KypnBg">
-                Video tutorial: Dual Boot Kali linux on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://blnlabs.com/dual-boot-pop-os-and-windows-10/">
-                Blog Post: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/hbzCSjlbInY">
-                Video tutorial: Dual Boot Pop!_OS on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://www.linuxfordevices.com/tutorials/linux/dual-boot-windows-10-and-linux-mint">
-                Blog Post: Dual Boot Linux Mint on Windows
-              </a>
-              <br />
-              <a className="text-blue-300" href="https://youtu.be/eL1jHhLcgTU">
-                Video tutorial: Dual Boot Linux Mint on Windows
-              </a>
-            </div>
-            <dt class="mb-4">
-              <h3 class="text-xl font-space font-semibold text-green-200">
-              Virtual Machine
-              </h3>
-            </dt>
-            <dd class="mb-16">
-              <p>
-              This is a relatively simpler method to install a linux distro in your system. Here, as the name suggests, you use the Linux distribution virtually. That is, the Linux distro runs on top of your current OS and this is achieved by the usage of a Virtual Machine Monitor (like VirtualBox or VMWare etc.). Here, you do not have to worry about breaking your software. Because, everything can be restored to its initial state easily. Thus, VMs are a great way to experiment and learn when you are using Linux for the first time. After you are well acquainted with using a distro virtually, you can switch to the Dual Boot option :D We have attached a few resources, which you can refer to install some common Linux distros through Virtual Machine in Virtual Box:
-              </p>
-              <br />
-                        <a className="text-blue-300" href='https://www.geeksforgeeks.org/how-to-install-ubuntu-on-virtualbox/'>
-                            Blog Post: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/x5MhydijWmc'>
-                            Video tutorial: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-arch-linux-virtualbox/'>
-                            Blog Post: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/_3-OMUQTf_k'>
-                            Video tutorial: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-kali-linux-virtualbox/'>
-                            Blog Post: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/V_Payl5FlgQ'>
-                            Video tutorial: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://www.how2shout.com/linux/how-to-install-pop-os-in-virtualbox-virtual-machine/'>
-                            Blog Post: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/qsB0gwrwIYQ'>
-                            Video tutorial: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-linux-mint-in-virtualbox/'>
-                            Blog Post: Install Linux Mint VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/aisUxv2S3gk'>
-                            Video tutorial: Install Linux Mint VM
-                        </a>
-                        <br />
-            </dd>
-            
-            <dd class="mb-16">
-              <p>
-                
-              </p>
-            </dd>
-          </dl>
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}sleep 10000 &amp; {/*</CodeBlock>*/}
         </div>
-      </div>
+        <p>To list all the jobs running in background use command</p>
+
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}jobs {/*</CodeBlock>*/}
+        </div>
+        <p>
+          To bring a job execution from background to foreground, use command
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}fg %[jobnumber] {/*</CodeBlock>*/}
+        </div>
+
+        <p>
+          To push a job back into the background from foreground, use command
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}Ctrl+Z {/*</CodeBlock>*/}
+        </div>
+
+        <p>
+          To resume execution of a suspended job in the background, u se command
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}bg %[jobnumber] {/*</CodeBlock>*/}
+        </div>
+      </section>
+
+      <section className="text-gray-200 font-space mx-5 my-5 rounded-md px-5 py-5 bg-[#16161a]">
+        <h2>Package Managers</h2>
+        <p>
+          Most Linux distributions include a <em>package manager</em>, which a
+          software to install and manage installed software on your system.
+        </p>
+
+        <h2>The Default Package Manager</h2>
+        <p>
+          Debian-based systems (Ubuntu, Pop!_OS, Parrot OS, Kali Linux, etc.)
+          use <code>apt</code>. Arch-based systems use <code>pacman</code>.
+        </p>
+
+        <table style={{ marginBlock: "1em" }}>
+          <thead>
+            <tr>
+              <th>Package Manager</th>
+              <th>
+                <code>apt</code>
+              </th>
+              <th>
+                <code>pacman</code>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Distributions</td>
+              <td>Debian, Ubuntu, Pop!_OS, Kali Linux, Parrot OS</td>
+              <td>Arch</td>
+            </tr>
+            <tr>
+              <td>Searching for a Package</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo apt search &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo pacman -Ss &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Installing a Package</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo apt install &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo pacman -S &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Removing a Package</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo apt remove &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo pacman -R &lt;name&gt;
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Listing all Packages</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}sudo apt list --installed {/*</CodeBlock>*/}
+                </div>
+              </td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}sudo pacman -Qs {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Updating/Upgrading the System</td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}
+                  sudo apt update &amp;&amp; sudo apt upgrade -y
+                  {/*</CodeBlock>*/}
+                </div>
+              </td>
+              <td>
+                <div className="w-[20rem]  text-blue-300 rounded-md">
+                  {/*<CodeBlock>*/}sudo pacman -Syu {/*</CodeBlock>*/}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Flatpak</h2>
+        <p>
+          A flatpak is a simple way of installing packages without worrying
+          about dependencies, linux distributions, runtimes, etc.
+        </p>
+        <h3>Installation</h3>
+        <p>
+          You can install using <code>apt</code> or <code>pacman</code>
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}sudo apt install flatpak {/*</CodeBlock>*/}
+        </div>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}sudo pacman -S flatpak {/*</CodeBlock>*/}
+        </div>
+
+        <h3>Flathub</h3>
+        <p>
+          Flathub is a <em>remote</em> or remote repository of flatpak packages.
+          Most flatpaks you will need will be avialable in Flathub, so it is
+          worth it to install it.
+        </p>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}
+          flatpak remote-add --if-not-exists flathub
+          https://flathub.org/repo/flathub.flatpakrepo
+          {/*</CodeBlock>*/}
+        </div>
+        <h3>Basics</h3>
+        <h4>Listing Packages</h4>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}flatpak list --app {/*</CodeBlock>*/}
+        </div>
+        <h4>Installation</h4>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}
+          flatpak install &lt;remote&gt; &lt;name&gt;
+          {/*</CodeBlock>*/}
+        </div>
+        <h4>Uninstalling</h4>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}
+          flatpak uninstall &lt;remote&gt; &lt;name&gt;
+          {/*</CodeBlock>*/}
+        </div>
+        <h4>Updating</h4>
+        <div className="w-[20rem]  text-blue-300 rounded-md">
+          {/*<CodeBlock>*/}flatpack update {/*</CodeBlock>*/}
+        </div>
+      </section>
     </>
   );
 }
 
-export default Chapter_1;
+export default Chapter_4;
