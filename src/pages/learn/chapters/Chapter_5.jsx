@@ -42,7 +42,7 @@ function Chapter_5() {
         <h3> Path Expansion </h3>
         <table style={{ marginBlock: "1em" }}>
           <thead>
-            <tr>
+            <tr className="border px-5 py-5">
               <th>Pattern</th>
               <th>
                 <div classname="  text-blue-300">Matches</div>
@@ -53,7 +53,7 @@ function Chapter_5() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>*</td>
               <td>Any string of zero or more characters</td>
               <td>
@@ -62,7 +62,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>?</td>
               <td>Any single character</td>
               <td>
@@ -71,7 +71,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>[abc]</td>
               <td>Any character in the enclosed class</td>
               <td>
@@ -82,7 +82,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>![abc]</td>
               <td>Any character not in the enclosed class</td>
               <td>
@@ -93,7 +93,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>[[:alpha:]]</td>
               <td>Any alphabetic character</td>
               <td>
@@ -102,7 +102,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>[[:alnum:]]</td>
               <td>Any alphabetic character or digit</td>
               <td>
@@ -111,7 +111,7 @@ function Chapter_5() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>[[:digit:]]</td>
               <td>Any single digit from 0 to 9</td>
               <td>
@@ -267,156 +267,156 @@ function Chapter_5() {
           Below is a cheat-sheet of the most basic key combinations, commands,
           etc. in vim. Remember, these commands are used in Normal mode.
         </p>
-        <table>
+        <table className="border px-5 py-5">
           <thead>
-            <tr>
-              <th>Group</th>
-              <th>Keys to Press</th>
-              <th>Action</th>
+            <tr className="border px-5 py-5">
+              <th className="text-2xl text-green-200">Group</th>
+              <th className="text-2xl text-green-200">Keys to Press</th>
+              <th className="text-2xl text-green-200">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td rowSpan={4}>Saving and quitting</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-4">Saving and quitting</td>
               <td>:q!</td>
               <td>Quit vim and discard changes</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:w</td>
               <td>Save the file</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:qw</td>
               <td>Save the file and quit vim</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:saveas filename</td>
               <td>Save a copy with the given name</td>
             </tr>
-            <tr>
-              <td rowSpan={19}>Moving Around</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-19">Moving Around</td>
               <td>j</td>
               <td>Go one line down</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>k</td>
               <td>Go one line up</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>l</td>
               <td>Go one character to the right</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>h</td>
               <td>Go one character to the left</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>0</td>
               <td>Go to the first character of the line</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>$</td>
               <td>Go to the last character of the line</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>^</td>
               <td>Go to the first non-whitespace character of the line</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>w</td>
               <td>Go one word forward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>b</td>
               <td>Go one word backward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>e</td>
               <td>Go to the end of the next word</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>{")"}</td>
               <td>Go one sentence forward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>{"("}</td>
               <td>Go one sentence backward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>{"}"}</td>
               <td>Go one paragraph forward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>{"{"}</td>
               <td>Go one paragraph backward</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>H</td>
               <td>Go to the top of the screen</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>L</td>
               <td>Go to the bottom of the screen</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>gg</td>
               <td>Go to the top of the file</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>G</td>
               <td>Go to the bottom of the file</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:n</td>
               <td>Go to line number n</td>
             </tr>
-            <tr>
-              <td rowSpan={9}>Editing Text</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-9">Editing Text</td>
               <td>i</td>
               <td>Enter Insert mode with the cursor at the current position</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>a</td>
               <td>Enter Insert mode with the cursor one position after</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>x</td>
               <td>delete the current character</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>X</td>
               <td>delete the previous character</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>dw</td>
               <td>delete(cut) the word the cursor is at</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>dd</td>
               <td>delete(cut) the whole line</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>yy</td>
               <td>copy the whole line</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>p</td>
               <td>paste selection after the cursor</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>P</td>
               <td>paste selection before the cursor</td>
             </tr>
-            <tr>
-              <td rowSpan={4}>Selection</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-4">Selection</td>
               <td>v</td>
               <td>Enter visual mode to select text</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>V</td>
               <td>Enter visual mode with line selection</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>
                 j, h, k, l, 0, $, ^, w, b, e, {"("}, {")"}, {"}"}, {"{"}, etc
               </td>
@@ -425,38 +425,38 @@ function Chapter_5() {
                 selection in visual mode
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>y</td>
               <td>Copy selection (will exit visual mode)</td>
             </tr>
-            <tr>
-              <td rowSpan={2}>Undo/redo</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-2">Undo/redo</td>
               <td>u</td>
               <td>Undo</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>ctrl + r</td>
               <td>redo</td>
             </tr>
-            <tr>
-              <td rowSpan={4}>Searching and Replacing Text</td>
+            <tr className="border px-5 py-5">
+              <td className="row-span-4">Searching and Replacing Text</td>
               <td>/xyz</td>
               <td>
                 Search for (and highlight) every occurrence of 'xyz' in the file
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:noh</td>
               <td>Remove all selections (and highlights)</td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:s /xyz/abc</td>
               <td>
                 Replace 'xyz' with 'abc' in the current line (1st occurence
                 only)
               </td>
             </tr>
-            <tr>
+            <tr className="border px-5 py-5">
               <td>:%s /xyz/abc</td>
               <td>Replace every occurrence of 'xyz' with 'abc'</td>
             </tr>

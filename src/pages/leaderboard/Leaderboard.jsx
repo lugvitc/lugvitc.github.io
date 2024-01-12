@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import {
   MagnifyingGlassIcon,
   ChevronUpDownIcon,
@@ -167,47 +168,118 @@ const tableData = [
   },
 ];
 
+
+const defaultTopCardsData = [
+  {
+    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    name: "Loading...",
+    regno: "Loading...",
+    department: "Loading...",
+    org: "Loading...",
+    contributions: 0,
+    points: 0,
+  },
+  {
+    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    name: "Loading...",
+    regno: "Loading...",
+    department: "Loading...",
+    org: "Loading...",
+    contributions: 0,
+    points: 0,
+  },
+  {
+    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    name: "Loading...",
+    regno: "Loading...",
+    department: "Loading...",
+    org: "Loading...",
+    contributions: 0,
+    points: 0,
+  },
+  {
+    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    name: "Loading...",
+    regno: "Loading...",
+    department: "Loading...",
+    org: "Loading...",
+    contributions: 0,
+    points: 0,
+  },
+ 
+];
+
 export default function Leaderboard() {
-  const [open, setOpen] = React.useState(false);
+  const [data, setData] = useState([]);
+  const [topCardsData, setTopCardsData] = useState(defaultTopCardsData);
 
-  const handleOpen = () => setOpen(!open);
-
-  // const recordPerPage = 5;
-  tableData.sort((a, b) => b.points > a.points);
-  // const [currRecord, setCurrRecord] = useState(0);
+  const imageUrl = "http://127.0.0.1:5000/leaderboard/image/";
   const [inputValue, setInputValue] = useState("");
-  // const [filteredData, setFilteredData] = useState(tableData);
-  const [data, setData] = useState(tableData);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(!open);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:5000/leaderboard")
+      .then(function (response) {
+        console.log(response.data);
+        const topData = [];
+        let temp ={};
+        temp["name"]=response.data[0].name;
+        temp["department"]=response.data[0].department;
+        temp["points"]=response.data[0].points;
+        temp["imgUrl"]="http://127.0.0.1:5000/leaderboard/image/"+response.data[0].reg_no;
+        
+        topData.push(temp);
+        topData.push(temp);
+        topData.push(temp);
 
-  // function paginate(start = 0){
-  //   setCurrRecord(start);
-  //   filteredData.sort((a, b) => b.points > a.points);
-  //   setData(filteredData.length <= recordPerPage
-  //     ? filteredData
-  //     : filteredData.slice(currRecord, currRecord + 5));
-  // }
+        console.log(topData);
+        setData(response.data);
+        setTopCardsData(topData);
+        data.sort((a, b) => b.points > a.points);
+      })
+      .catch(function (error) {
+        console.log(error);
+        console.log(
+          "hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
+          );
+        });
+  },[]);
 
-  // function nextPage() {
-  //   setCurrRecord(currRecord + recordPerPage);
-  //   paginate(currRecord);
-  // }
+  // tableData.sort((a, b) => b.points > a.points);
 
-  // function prevPage() {
-  //   setCurrRecord(currRecord - recordPerPage);
-  //   paginate(currRecord);
-  // }
+
 
   function handleSearch(e) {
     console.log(e.target.value);
     const searchTerm = e.target.value;
-    setInputValue(searchTerm);
+    if (searchTerm=="") {
+      axios
+      .get("http://127.0.0.1:5000/leaderboard")
+      .then(function (response) {
+        console.log(response.data);
+        // const userData = [];
 
-    const results = tableData.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+        setData(response.data);
+        data.sort((a, b) => b.points > a.points);
+      })
+      .catch(function (error) {
+        console.log(error);
+        console.log(
+          "hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
+          );
+        });
+    }
+    else{
+      setInputValue(searchTerm);
 
-    setData(results);
-    // paginate();
+      const results = data.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setData(results);
+    }
+    
+
   }
 
   return (
@@ -235,63 +307,63 @@ export default function Leaderboard() {
       <div className="flex flex-row flex-wrap justify-center items-center font-space text-white">
         <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6  rounded-xl sm:px-12 bg-[#FFD700] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(248,231,28,1)] ">
           <img
-            src="https://source.unsplash.com/150x150/?portrait?3"
-            alt=""
+            src={topCardsData[0].imgUrl}
+            alt="loadinf"
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
-                {tableData[0].name}
+                {topCardsData[0].name}
               </h2>
               <p className="px-5 text-xs sm:text-base ">
-                {tableData[0].department}
+                {topCardsData[0].department}
               </p>
             </div>
             <div className="flex justify-center pt-2 space-x-4 align-center">
-              {tableData[0].points}
+              {topCardsData[0].points}
             </div>
           </div>
         </div>
 
         <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6  rounded-xl sm:px-12 bg-[#a1a1a1] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(159,158,155,0.75)]">
           <img
-            src="https://source.unsplash.com/150x150/?portrait?3"
+            src={topCardsData[0].imgUrl}
             alt=""
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
-                {tableData[1].name}
+                {topCardsData[1].name}
               </h2>
               <p className="px-5 text-xs sm:text-base ">
-                {tableData[1].department}
+                {topCardsData[1].department}
               </p>
             </div>
             <div className="flex justify-center pt-2 space-x-4 align-center">
-              {tableData[1].points}
+              {topCardsData[1].points}
             </div>
           </div>
         </div>
 
         <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6  rounded-xl sm:px-12 bg-[#cd7f32] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(213,153,100,1)]">
           <img
-            src="https://source.unsplash.com/150x150/?portrait?3"
+            src={topCardsData[0].imgUrl}
             alt=""
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
-                {tableData[2].name}
+                {topCardsData[0].name}
               </h2>
               <p className="px-5 text-xs sm:text-base ">
-                {tableData[2].department}
+                {topCardsData[0].department}
               </p>
             </div>
             <div className="flex justify-center pt-2 space-x-4 align-center">
-              {tableData[2].points}
+              {topCardsData[0].points}
             </div>
           </div>
         </div>
@@ -302,9 +374,7 @@ export default function Leaderboard() {
         <div class="container mx-auto px-4 sm:px-8 ">
           <div class="py-8">
             <div>
-              <h2 class="text-2xl font-semibold text-white leading-tight">
-                Users
-              </h2>
+              
             </div>
             <div class="my-2 flex sm:flex-row flex-col opacity-70">
               <div class="flex flex-row mb-1 sm:mb-0">
@@ -323,11 +393,11 @@ export default function Leaderboard() {
                         </div> */}
                 </div>
                 <div class="relative">
-                  <select class=" h-full rounded-r  sm:rounded-r-none sm:border-r-0  block appearance-none w-full bg-[#1A1920] text-white py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-[#1A1920] ">
+                  {/* <select class=" h-full rounded-r  sm:rounded-r-none sm:border-r-0  block appearance-none w-full bg-[#1A1920] text-white py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-[#1A1920] ">
                     <option>All</option>
                     <option>Active</option>
                     <option>Inactive</option>
-                  </select>
+                  </select> */}
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white ">
                     <svg
                       class="fill-current h-4 w-4"
@@ -385,10 +455,11 @@ export default function Leaderboard() {
                       ({
                         img,
                         name,
-                        regno,
+                        reg_no,
                         department,
-                        org,
+                        member_type,
                         contributions,
+                        contribution_details,
                         points,
                       }) => {
                         return (
@@ -398,7 +469,7 @@ export default function Leaderboard() {
                                 <div class="flex-shrink-0 w-10 h-10">
                                   <img
                                     class="w-full h-full rounded-full"
-                                    src={img}
+                                    src={imageUrl + reg_no}
                                     alt=""
                                   />
                                 </div>
@@ -407,7 +478,7 @@ export default function Leaderboard() {
                                     {name}
                                   </p>
                                   <p class="text-white font-thin text-sm whitespace-no-wrap">
-                                    {regno}
+                                    {reg_no}
                                   </p>
                                 </div>
                               </div>
@@ -417,7 +488,7 @@ export default function Leaderboard() {
                                 {department}
                               </p>
                               <p class="text-white whitespace-no-wrap text-sm">
-                                {org}
+                                {member_type}
                               </p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-md">
@@ -471,17 +542,13 @@ export default function Leaderboard() {
                                           color="gray"
                                           className="mb-14 font-normal text-blue-gray-500"
                                         >
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit eveniet, hic doloribus sit dicta rem quis laborum error amet. 
+                                          {contribution_details}
                                         </Typography>
                                         <a
                                           href="#"
                                           className="-ml-3 inline-block"
-                                        >
-                                          
-                                        </a>
+                                        ></a>
                                       </div>
-
-                                      
                                     </PopoverContent>
                                   </Popover>
                                 </button>

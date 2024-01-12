@@ -27,7 +27,7 @@ function EventsTimeLine() {
     let value = valueRef.current.value;
     console.log(value);
     setText(value);
-    if (text == "sudo fos") {
+    if (text == "man fos") {
       setText("");
       console.log(value+"  i am gere ");
       window.location.href = "http://localhost:5173/#/adrenaline";
