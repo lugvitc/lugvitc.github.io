@@ -4,7 +4,7 @@ import Particle from "../../../components/Particle/Particle";
 function Chapter_5() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  },[]);
   return (
     <>
       {/* <Particle/> */}

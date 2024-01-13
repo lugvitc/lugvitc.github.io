@@ -4,6 +4,12 @@ import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import i1 from '../../../../images/events/cyber-0-day/1.jpg'
+import i2 from '../../../../images/events/cyber-0-day/2.jpg'
+import i3 from '../../../../images/events/cyber-0-day/3.jpg'
+import i4 from '../../../../images/events/cyber-0-day/4.jpg'
+import i5 from '../../../../images/events/cyber-0-day/5.jpg'
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,9 +64,9 @@ function Cod() {
             </div>
             <div>
               <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
-                <video className=" rounded-lg" controls autoPlay>
+                <video className=" w-auto h-96 rounded-lg" controls autoplay muted>
                   <source
-                    src="https://docs.material-tailwind.com/demo.mp4"
+                    src="http://127.0.0.1:5000/event/videos/cod"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
@@ -88,49 +94,49 @@ function Cod() {
             >
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i2}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i3}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i4}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i5}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i2}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i3}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>

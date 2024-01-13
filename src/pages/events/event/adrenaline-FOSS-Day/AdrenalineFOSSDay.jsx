@@ -15,7 +15,7 @@ import { Pagination } from "swiper/modules";
 function AdrenalineFOSSDay() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  },[]);
   return (
     <>
       <Particle />

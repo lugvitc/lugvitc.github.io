@@ -8,6 +8,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import i1 from '../../../../images/events/installation-booth-2/1.jpg'
+import i2 from '../../../../images/events/installation-booth-2/2.jpg'
+import i3 from '../../../../images/events/installation-booth-2/3.jpg'
+import i4 from '../../../../images/events/installation-booth-2/4.jpg'
+import i5 from '../../../../images/events/installation-booth-2/5.jpg'
+
+
 // import required modules
 import { Pagination } from "swiper/modules";
 
@@ -88,49 +95,49 @@ function LinuxInstallationBooth2() {
             >
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i2}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i3}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i4}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i5}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i2}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i3}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>

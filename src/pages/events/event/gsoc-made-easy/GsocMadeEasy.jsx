@@ -11,6 +11,10 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
+import i1 from '../../../../images/events/gsoc-made-easy/1.png';
+
+
+
 
 function GsocMadeEasy() {
   useEffect(() => {
@@ -86,51 +90,23 @@ function GsocMadeEasy() {
               modules={[Pagination]}
               className="mySwiper"
             >
+              
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
+                  alt="loading image ./...../."
+                />
+              </SwiperSlide>
+              
+              <SwiperSlide>
+                <img
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
-                  alt="loading image ./...../."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src={i1}
                   alt="loading image ./...../."
                 />
               </SwiperSlide>

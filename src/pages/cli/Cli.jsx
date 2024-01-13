@@ -159,6 +159,60 @@ export default function Cli() {
         response = "opakakak camel"
         break;
 
+      case "baleshwar":
+        response = <div>
+        <ul>
+          <li>In the realm where penguins dance and code weaves its intricate tale,</li>
+          <li>Baleshwar, a luminary, steers the Linux ship without fail.</li>
+          <li>Ex-President of the club, his leadership shines bright,</li>
+          <li>Guiding open-source dreams through the digital night.</li>
+          <li>Google's summer embraced him twice, a feat so divine,</li>
+          <li>In the code's symphony, his genius does entwine.</li>
+          <li>Cybersecurity's maestro, a guardian of the byte,</li>
+          <li>He shields the digital realm, a vigilant knight.</li>
+          <li>With keystrokes and passion, he scripts the profound,</li>
+          <li>In the vast expanse of Linux, where wisdom is found.</li>
+          <li>Baleshwar, a name whispered in code's sacred lore,</li>
+          <li>A virtuoso of bits, forever to explore.</li>
+          <li></li>
+          
+        </ul> 
+        </div>
+        break; 
+
+      case "samridth":
+        response = <div>
+        <ul>
+          <li>In the digital tapestry where codes entwine,</li>
+          <li>Samridth, the virtuoso, in the binary shrine.</li>
+          <li>Ex-vice president, his legacy profound,</li>
+          <li>Crafting realms of Linux, where skills abound.</li>
+          <li>A web weaver, with keystrokes so deft,</li>
+          <li>He crafted the CTF site, where challenges are left.</li>
+          <li>The club's heartbeat echoed in his code,</li>
+          <li>A symphony of algorithms, gracefully bestowed.</li>
+          <li>In the cyber realms, where threats may roam,</li>
+          <li>Samridth stands guard, a sentinel in the chrome.</li>
+          <li>A developer's dream, his hands create,</li>
+          <li>On the web's canvas, he orchestrates fate.</li>
+          
+        </ul> 
+        </div>
+        break;       
+      
+       
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+
+
       default:
         response = "Unknown command: " + command;
         break;

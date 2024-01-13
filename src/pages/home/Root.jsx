@@ -124,10 +124,10 @@ function Root() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={1230} />+
+                <CountUp delay={1} end={10} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
-                  Participants
+                  Events
                 </p>
                 
               </div>
@@ -152,7 +152,7 @@ function Root() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={1230} />+
+                <CountUp delay={1} end={4000} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
                   Participants
@@ -180,10 +180,10 @@ function Root() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={1230} />+
+                <CountUp delay={1} end={60} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
-                  Participants
+                  Winners
                 </p>
                 
               </div>
