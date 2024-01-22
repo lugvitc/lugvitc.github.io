@@ -213,24 +213,10 @@ export default function Leaderboard() {
     axios
       .get(`${apiURL}/leaderboard`)
       .then(function (response) {
-        console.log(response.data);
-        const topData = [];
-        let temp = {};
-        temp["name"] = response.data[0].name;
-        temp["department"] = response.data[0].department;
-        temp["points"] = response.data[0].points;
-        temp["imgUrl"] = response.data[0].photo
-          ? `${apiURL}/leaderboard/image/` + response.data[0].reg_no
-          : randomPhoto();
-
-        topData.push(temp);
-        topData.push(temp);
-        topData.push(temp);
-
-        console.log(topData);
-        setData(response.data);
-        setTopCardsData(topData);
-        data.sort((a, b) => b.points > a.points);
+        let raw_data = response.data
+        raw_data.sort((a, b) => b.points - a.points);
+        setData(raw_data);
+        setTopCardsData(raw_data.slice(0, 3));
       })
       .catch(function (error) {
         console.log(error);
@@ -246,11 +232,9 @@ export default function Leaderboard() {
       axios
         .get(`${apiURL}/leaderboard`)
         .then(function (response) {
-          console.log(response.data);
-          // const userData = [];
-
-          setData(response.data);
-          data.sort((a, b) => b.points > a.points);
+          let raw_data = response.data
+          raw_data.sort((a, b) => b.points - a.points);
+          setData(raw_data);
         })
         .catch(function (error) {
           console.log(error);
@@ -290,9 +274,15 @@ export default function Leaderboard() {
       <div className="flex flex-row flex-wrap justify-center items-center font-space text-white">
         <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6  rounded-xl sm:px-12 bg-[#FFD700] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(248,231,28,1)] ">
           <img
-            src={topCardsData[0].imgUrl}
+            src={topCardsData[0].photo ? imageUrl + reg_no : randomPhoto()}
             alt="loadinf"
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
+            onError={(e) => {
+              e.target.onerror = null;
+              setTimeout(() => {
+                e.target.src = topCardsData[0].photo ? imageUrl + reg_no : randomPhoto();
+              }, 1000);
+            }}
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
@@ -311,9 +301,15 @@ export default function Leaderboard() {
 
         <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6  rounded-xl sm:px-12 bg-[#a1a1a1] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(159,158,155,0.75)]">
           <img
-            src={topCardsData[0].imgUrl}
+            src={topCardsData[1].photo ? imageUrl + reg_no : randomPhoto()}
             alt=""
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
+            onError={(e) => {
+              e.target.onerror = null;
+              setTimeout(() => {
+                e.target.src = topCardsData[1].photo ? imageUrl + reg_no : randomPhoto();
+              }, 1000);
+            }}
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
@@ -332,21 +328,27 @@ export default function Leaderboard() {
 
         <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6  rounded-xl sm:px-12 bg-[#cd7f32] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(213,153,100,1)]">
           <img
-            src={topCardsData[0].imgUrl}
+            src={topCardsData[2].photo ? imageUrl + reg_no : randomPhoto()}
             alt=""
             className="w-32 h-32 mx-auto rounded-full  aspect-square"
+            onError={(e) => {
+              e.target.onerror = null;
+              setTimeout(() => {
+                e.target.src = topCardsData[2].photo ? imageUrl + reg_no : randomPhoto();
+              }, 1000);
+            }}
           />
           <div className="space-y-4 text-center divide-y ">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
-                {topCardsData[0].name}
+                {topCardsData[2].name}
               </h2>
               <p className="px-5 text-xs sm:text-base ">
-                {topCardsData[0].department}
+                {topCardsData[2].department}
               </p>
             </div>
             <div className="flex justify-center pt-2 space-x-4 align-center">
-              {topCardsData[0].points}
+              {topCardsData[2].points}
             </div>
           </div>
         </div>
@@ -436,6 +438,12 @@ export default function Leaderboard() {
                                       photo ? imageUrl + reg_no : randomPhoto()
                                     }
                                     alt=""
+                                    onError={(e) => {
+                                      e.target.onerror = null;
+                                      setTimeout(() => {
+                                        e.target.src = photo ? imageUrl + reg_no : randomPhoto();
+                                      }, 1000);
+                                    }}
                                   />
                                 </div>
                                 <div class="ml-3">
