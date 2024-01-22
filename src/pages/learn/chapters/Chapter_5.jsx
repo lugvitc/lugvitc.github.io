@@ -4,7 +4,7 @@ import Particle from "../../../components/Particle/Particle";
 function Chapter_5() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
   return (
     <>
       {/* <Particle/> */}
@@ -20,7 +20,7 @@ function Chapter_5() {
       <div className="h-5"></div>
       <div className="flex justify-center items-center z-auto bg-[]">
         <iframe
-        className="sm:h-[580px] sm:w-[1240px] outline-none"
+          className="sm:h-[580px] sm:w-[1240px] outline-none"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/szIsA5awyP8?si=wnsLAgyjF7NgLt8n"

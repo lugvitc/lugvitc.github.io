@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 import TerminalDots from "./TerminalDots.jsx";
 
 export default function TerminalWindow({
-//   prompts,
+  //   prompts,
   children,
   onClickRed,
   onClickYellow,
@@ -23,14 +23,15 @@ export default function TerminalWindow({
           onClickYellow={onClickYellow}
           onClickGreen={onClickGreen}
         />
-        <div className={`text-[#d8dee9] font-bold font-space ml-5`}>{title}</div>
+        <div className={`text-[#d8dee9] font-bold font-space ml-5`}>
+          {title}
+        </div>
       </div>
 
       <div
         className={`bg-[#1A1920] text-white font-space overflow-y-auto p-4 rounded-[0px_0px_10px_10px] h-[20rem]`}
       >
-        
-                {/* <div>
+        {/* <div>
                     <Typewriter
                       options={{
                         strings: ["lug@vitc", "~$ sudo lug"],
@@ -46,11 +47,10 @@ export default function TerminalWindow({
                       }}
                     />
                 </div> */}
-              
-            <div className={`mt-4`}>{children}</div>
-    
-          {/* <div className={`mt-0`}>{children}</div> */}
-        
+
+        <div className={`mt-4`}>{children}</div>
+
+        {/* <div className={`mt-0`}>{children}</div> */}
       </div>
     </div>
   );

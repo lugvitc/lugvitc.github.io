@@ -15,7 +15,7 @@ function Footer() {
               </div>
               <div class="flex justify-center ">
                 <a
-                target="_blank"
+                  target="_blank"
                   href="https://discord.gg/ApShC247me"
                   class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-400"
                 >
@@ -26,7 +26,7 @@ function Footer() {
                   />
                 </a>
                 <a
-                target="_blank"
+                  target="_blank"
                   href="https://www.instagram.com/lugvitc/"
                   class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-400"
                 >
@@ -52,7 +52,7 @@ function Footer() {
                   </svg>
                 </a>
                 <a
-                target="_blank"
+                  target="_blank"
                   href="https://www.linkedin.com/company/lugvitc/"
                   class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-600"
                 >
@@ -72,7 +72,10 @@ function Footer() {
           </div>
 
           <div class="py-6 text-center bg-[#1A1920] dark:bg-gray-800 dark:text-gray-400">
-            <span> &copy; Copyright 2024 . All Rights Reserved : The Linux Club</span>
+            <span>
+              {" "}
+              &copy; Copyright 2024 . All Rights Reserved : The Linux Club
+            </span>
           </div>
         </div>
       </section>

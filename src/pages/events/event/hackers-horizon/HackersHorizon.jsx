@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Particle from "../../../../components/Particle/Particle";
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -8,13 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import i1 from '../../../../images/events/hackers-horizon/1.jpg'
-import i2 from '../../../../images/events/hackers-horizon/2.jpg'
-import i3 from '../../../../images/events/hackers-horizon/3.jpg'
-import i4 from '../../../../images/events/hackers-horizon/4.jpg'
-import i5 from '../../../../images/events/hackers-horizon/5.jpg'
-
-
+import i1 from "../../../../images/events/hackers-horizon/1.jpg";
+import i2 from "../../../../images/events/hackers-horizon/2.jpg";
+import i3 from "../../../../images/events/hackers-horizon/3.jpg";
+import i4 from "../../../../images/events/hackers-horizon/4.jpg";
+import i5 from "../../../../images/events/hackers-horizon/5.jpg";
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -125,52 +123,28 @@ function HackersHorizon() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i3}
-                  alt="loading image ./...../."
-                />
+                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i4}
-                  alt="loading image ./...../."
-                />
+                <img src={i4} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i5}
-                  alt="loading image ./...../."
-                />
+                <img src={i5} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i3}
-                  alt="loading image ./...../."
-                />
+                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
             </Swiper>
           </div>

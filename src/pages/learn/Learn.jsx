@@ -11,41 +11,42 @@ import { paths } from "../../App";
 
 function Learn() {
   const chapters = [
-    { 
-      link:"/chapter_1",
+    {
+      link: "/chapter_1",
       title: "Linux: What? Why? How?",
       description:
         "What is Linux,Linux Distributions , The Linux Family Tree,Why do we need it?,Installation ...",
     },
     {
-      link:"/chapter_2",
+      link: "/chapter_2",
       title: "Know the terminal",
       description:
         "What is the terminal?, Terminal Emulators, Shells, Terminal Basics, Terminal Commands ....",
     },
     {
-      link:"/chapter_3",
+      link: "/chapter_3",
       title: "Linux File System",
       description:
         "Filesystems, Everything is a File, The Filesystem Heirarchy Standard (FHS), Users, Groups and Permissions ...",
     },
 
     {
-      link:"/chapter_4",
+      link: "/chapter_4",
       title: "Processes and Packages",
       description:
         "Processes, Process states , Process Monitoring, Background and Foreground jobs, Package Managers...",
     },
     {
-      link:"/chapter_5",
+      link: "/chapter_5",
       title: "Advanced Features",
       description:
         "Terminal Utilities, Path Expansion ,Brace Expansion ,Modes, Opening a file, Changing Modes and Giving Commands, Vim cheat sheet ...",
     },
     {
-      link:"/chapter_6",
+      link: "/chapter_6",
       title: "Desktop Customization",
-      description: "Vim Customization, Vim Plugins , Customizing GNOME, Extensions",
+      description:
+        "Vim Customization, Vim Plugins , Customizing GNOME, Extensions",
     },
   ];
 
@@ -77,34 +78,27 @@ function Learn() {
         </div>
       </NavLink>
 
-      {chapters.map(({link,title,description})=>{
+      {chapters.map(({ link, title, description }) => {
         return (
           <NavLink to={link}>
-        <div className="flex flex-row justify-center items-center w-full font-space ">
-          <div class="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
-            <div class="text-lg font-semibold text-green-300 ">
-              {title}
-            </div>
-            <div class="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
-              <div className="bg-[#1A1920]  rounded-full h-14 w-14 mx-5 pr-4">
-                {React.createElement(FilmIcon, {
-                  strokeWidth: 2,
-                  className: "h-10 text-white w-10 ",
-                })}
-              </div>
+            <div className="flex flex-row justify-center items-center w-full font-space ">
+              <div class="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
+                <div class="text-lg font-semibold text-green-300 ">{title}</div>
+                <div class="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
+                  <div className="bg-[#1A1920]  rounded-full h-14 w-14 mx-5 pr-4">
+                    {React.createElement(FilmIcon, {
+                      strokeWidth: 2,
+                      className: "h-10 text-white w-10 ",
+                    })}
+                  </div>
 
-              <div className="sm:w-[70%]">
-                {description}
+                  <div className="sm:w-[70%]">{description}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </NavLink>
-        )
+          </NavLink>
+        );
       })}
-
-
-      
     </>
   );
 }

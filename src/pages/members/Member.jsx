@@ -8,8 +8,8 @@ import { members_2023 } from "./2023";
 import { members_2022 } from "./2022";
 import EventTerminal from "../../components/terminal/EventTerminal";
 import blank from "../../images/members/blank.png";
-import baleshwar from '../../images/members/Baleswar.jpeg'
-import samridth from '../../images/members/Samridh.jpeg'
+import baleshwar from "../../images/members/Baleswar.jpeg";
+import samridth from "../../images/members/Samridh.jpeg";
 import abhishek from "../../images/members/abhishek.jpg";
 import animesh from "../../images/members/animesh.png";
 import rahul from "../../images/members/rahul.png";
@@ -43,16 +43,7 @@ function Member() {
     srideep,
     revanth,
   ];
-  const arr2 = [
-    blank,
-    baleshwar,
-    samridth,
-    abhishek,
-    animesh,
-    aditi,
-    blank,
-   
-  ];
+  const arr2 = [blank, baleshwar, samridth, abhishek, animesh, aditi, blank];
   const members2023 = members_2023.map(
     ({ id, name, position, github, linkedin, instagram, email, image }) => (
       <div
@@ -109,7 +100,7 @@ function Member() {
           </div>
         </div>
       </div>
-    )
+    ),
   );
   const members2022 = members_2022.map(
     ({ id, name, position, github, linkedin, instagram, email, image }) => (
@@ -167,7 +158,7 @@ function Member() {
           </div>
         </div>
       </div>
-    )
+    ),
   );
   return (
     <>

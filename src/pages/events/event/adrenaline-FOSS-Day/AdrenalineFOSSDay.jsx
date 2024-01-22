@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Particle from "../../../../components/Particle/Particle";
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -11,11 +11,10 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-
 function AdrenalineFOSSDay() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
   return (
     <>
       <Particle />
@@ -51,7 +50,9 @@ function AdrenalineFOSSDay() {
                 <div>
                   <p className="font-semibold text-gray-400">Day 1</p>
                   <div className="h-4"></div>
-                  <p className="font-space text-gray-400">Project Presentation</p>
+                  <p className="font-space text-gray-400">
+                    Project Presentation
+                  </p>
                 </div>
                 {/* <div>
                   <p className="font-semibold text-gray-400">Day 2</p>

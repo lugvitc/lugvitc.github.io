@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Particle from "../../../../components/Particle/Particle";
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -11,11 +11,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-import i1 from '../../../../images/events/rescue-tux/1.jpg'
-import i2 from '../../../../images/events/rescue-tux/2.jpg'
-import i3 from '../../../../images/events/rescue-tux/3.jpg'
-import i4 from '../../../../images/events/rescue-tux/4.jpg'
-import i5 from '../../../../images/events/rescue-tux/5.jpg'
+import i1 from "../../../../images/events/rescue-tux/1.jpg";
+import i2 from "../../../../images/events/rescue-tux/2.jpg";
+import i3 from "../../../../images/events/rescue-tux/3.jpg";
+import i4 from "../../../../images/events/rescue-tux/4.jpg";
+import i5 from "../../../../images/events/rescue-tux/5.jpg";
 import { apiURL } from "../../../../utils/constant";
 
 function RescueTheTux() {
@@ -29,11 +29,14 @@ function RescueTheTux() {
       <div className="bg-transparent font-space">
         <div className="text-gray-300 container  mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
           <p className="font-space text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
-          Rescue The Tux
+            Rescue The Tux
           </p>
           <div className="h-10"></div>
           <p className="max-w-2xl font-space text-xl text-gray-400 md:text-2xl">
-          On the 21st of August 2022, the Linux Club organized the Rescue The Tux event, generously sponsored by GeeksForGeeks. This engaging gathering drew the participation of approximately 180 attendees, immersing them in a day filled with Linux expertise and challenges. 
+            On the 21st of August 2022, the Linux Club organized the Rescue The
+            Tux event, generously sponsored by GeeksForGeeks. This engaging
+            gathering drew the participation of approximately 180 attendees,
+            immersing them in a day filled with Linux expertise and challenges.
           </p>
 
           <div className="h-12 md:h-24"></div>
@@ -41,12 +44,14 @@ function RescueTheTux() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <p className="self-start inline font-space text-xl font-medium text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-600">
-              Linux workshop led by the club's President, Beleswar Prasad Padhi, and Vice President, Samridh Anand Paatni.
+                Linux workshop led by the club's President, Beleswar Prasad
+                Padhi, and Vice President, Samridh Anand Paatni.
               </p>
               {/* <h2 className="text-4xl font-bold">.</h2> */}
               <div className="h-6"></div>
               <p className=" text-2xl text-gray-400 md:pr-10">
-              The event's highlight was a Capture the Flag (CTF) competition, featuring meticulously crafted challenges by LUG members.
+                The event's highlight was a Capture the Flag (CTF) competition,
+                featuring meticulously crafted challenges by LUG members.
               </p>
               <div className="h-8"></div>
               <div className="grid grid-cols-2 gap-4 pt-8 border-t border-gray-800">
@@ -93,43 +98,24 @@ function RescueTheTux() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
-             
+
               <SwiperSlide>
-                <img
-                  src={i4}
-                  alt="loading image ./...../."
-                />
+                <img src={i4} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i5}
-                  alt="loading image ./...../."
-                />
+                <img src={i5} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
-            
             </Swiper>
           </div>
 
@@ -186,9 +172,7 @@ function RescueTheTux() {
               <div className="grid gap-4 mx-4 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">
                   <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400">
-                    <h5 className="text-2xl font-semibold">
-                      Rescue the Tux
-                    </h5>
+                    <h5 className="text-2xl font-semibold">Rescue the Tux</h5>
                     <span className="text-sm font-bold tracki uppercase text-white">
                       Event Details
                     </span>
@@ -199,24 +183,43 @@ function RescueTheTux() {
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 1 </h3> */}
                       <time className="text-xs tracki uppercase text-white">
-                      21st of August 2022
+                        21st of August 2022
                       </time>
                       <p className="mt-3">
-                      The event commenced with a comprehensive Linux workshop led by the club's President, Beleswar Prasad Padhi, and Vice President, Samridh Anand Paatni, providing valuable insights and hands-on experience for the eager participants. A delightful lunch interlude provided an opportunity for networking and further discussions.
+                        The event commenced with a comprehensive Linux workshop
+                        led by the club's President, Beleswar Prasad Padhi, and
+                        Vice President, Samridh Anand Paatni, providing valuable
+                        insights and hands-on experience for the eager
+                        participants. A delightful lunch interlude provided an
+                        opportunity for networking and further discussions.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 2</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
                       <p className="mt-3">
-                      The event's highlight was a Capture the Flag (CTF) competition, featuring meticulously crafted challenges by LUG members. The CTF platform was skillfully developed by the Vice President and President. As participants navigated through the challenges, the atmosphere buzzed with enthusiasm and problem-solving energy. 
+                        The event's highlight was a Capture the Flag (CTF)
+                        competition, featuring meticulously crafted challenges
+                        by LUG members. The CTF platform was skillfully
+                        developed by the Vice President and President. As
+                        participants navigated through the challenges, the
+                        atmosphere buzzed with enthusiasm and problem-solving
+                        energy.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">End</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
                       <p className="mt-3">
-                      To cap off the event, the winners of the CTF were awarded prizes, with a substantial prize pool exceeding 8,000+. This not only celebrated the achievements of the participants but also underscored the Linux Club's commitment to fostering a vibrant and rewarding community of enthusiasts at VIT Chennai. The Rescue Tux event left a lasting impression, combining education, camaraderie, and friendly competition in the realm of Linux and cybersecurity.
+                        To cap off the event, the winners of the CTF were
+                        awarded prizes, with a substantial prize pool exceeding
+                        8,000+. This not only celebrated the achievements of the
+                        participants but also underscored the Linux Club's
+                        commitment to fostering a vibrant and rewarding
+                        community of enthusiasts at VIT Chennai. The Rescue Tux
+                        event left a lasting impression, combining education,
+                        camaraderie, and friendly competition in the realm of
+                        Linux and cybersecurity.
                       </p>
                     </div>
                   </div>

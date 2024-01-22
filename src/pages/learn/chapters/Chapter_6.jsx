@@ -1,10 +1,10 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 import Particle from "../../../components/Particle/Particle";
 function Chapter_6() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
   return (
     <>
       {/* <Particle/> */}

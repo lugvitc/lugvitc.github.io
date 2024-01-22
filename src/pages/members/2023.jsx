@@ -7,7 +7,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/abhishek-kumar-284849215/",
     instagram: "https://www.instagram.com/amrealabhishek/",
     email: "AmrealAbhishek@gmail.com",
-    
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/animesh-rai-a9802b244/",
     instagram: "https://www.instagram.com/_ar025",
     email: "raianimeshldon0802@gmail.com",
-    
   },
   {
     id: 3,
@@ -28,7 +26,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/rahul-vk8244/",
     instagram: "https://www.instagram.com/rahul.vk007/",
     email: "rahulptvijayakumar@gmail.com",
-    
   },
   {
     id: 4,
@@ -38,7 +35,6 @@ export const members_2023 = [
     linkedin: "#",
     instagram: "#",
     email: "#",
-    
   },
   {
     id: 5,
@@ -48,7 +44,6 @@ export const members_2023 = [
     linkedin: "#",
     instagram: "instagram.com/kartikey_2811",
     email: "kartikey@tutanota.com",
-    
   },
   {
     id: 6,
@@ -58,7 +53,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/aditi-rai-507528221/",
     instagram: "https://www.instagram.com/noveworld/",
     email: "raiaditi178@gmail.com",
-    
   },
   {
     id: 7,
@@ -68,7 +62,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/venukanthan/",
     instagram: "https://www.instagram.com/itsvenu22/",
     email: "venukanthan.bs2021@vitstudent.ac.in",
-    
   },
   {
     id: 8,
@@ -78,7 +71,6 @@ export const members_2023 = [
     linkedin: "http://www.linkedin.com/in/dhruv-hatkar",
     instagram: "https://instagram.com/hatkar04_dhruv",
     email: "hatkardhruv@gmail.com",
-    
   },
 
   {
@@ -89,7 +81,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/meetesh-saini-5a3218244",
     instagram: "#",
     email: "code.meeteshsaini@gmail.com",
-    
   },
   {
     id: 10,
@@ -100,7 +91,6 @@ export const members_2023 = [
       "https://www.linkedin.com/in/hrishikesh-naramparambath-24b010222/",
     instagram: "https://www.instagram.com/quitepossiblyhrishi",
     email: "hrishabari@gmail.com",
-    
   },
   {
     id: 11,
@@ -110,7 +100,6 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/kathirmn/",
     instagram: "https://www.instagram.com/kathir_m_n/",
     email: "mnkathir2004@gmail.com",
-    
   },
   {
     id: 12,
@@ -120,7 +109,6 @@ export const members_2023 = [
     linkedin: "www.linkedin.com/in/mogeshvar-s-g",
     instagram: "https://www.instagram.com/_.mogesh06._",
     email: "mogesh03@outlook.com",
-    
   },
   {
     id: 13,
@@ -131,7 +119,6 @@ export const members_2023 = [
       "https://www.linkedin.com/in/srideep-aalla-357005267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/srideepaalla?igsh=cGI4djZ6ZDQ4c2R4",
     email: "srideep7.sa@gmail.com",
-    
   },
 
   {
@@ -142,6 +129,5 @@ export const members_2023 = [
     linkedin: "https://www.linkedin.com/in/revanth-sai-9a8240231/",
     instagram: "https://www.instagram.com/k_revanth_sai/",
     email: "revanthsai.k2021@vitstudent.ac.in",
-    
   },
 ];

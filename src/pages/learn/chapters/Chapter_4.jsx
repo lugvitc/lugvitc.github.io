@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 
 import Particle from "../../../components/Particle/Particle";
 function Chapter_4() {
-  useEffect(()=>{
-    window.scroll(0,0);
+  useEffect(() => {
+    window.scroll(0, 0);
   });
   return (
     <>
@@ -19,9 +19,8 @@ function Chapter_4() {
       </div>
       <div className="h-5"></div>
       <div className="flex justify-center items-center z-auto bg-[]">
-       
         <iframe
-           className="sm:h-[580px] sm:w-[1240px] outline-none"
+          className="sm:h-[580px] sm:w-[1240px] outline-none"
           src="https://www.youtube.com/embed/H6Y0yRxu2Rs?si=AK-dMVMpNOjtN_cV"
           title="YouTube video player"
           frameborder="0"

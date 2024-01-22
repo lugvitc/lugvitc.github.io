@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { CodeBlock, dracula } from "react-code-blocks";
 
 import Particle from "../../../components/Particle/Particle";
@@ -165,7 +165,8 @@ function Chapter_2() {
             syntax : <code>cd /path/to/directory</code>
             <br />
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}cd /etc/NetworkManager{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}cd /etc/NetworkManager
+              {/*</CodeBlock>*/}
             </div>
           </li>
           <li>
@@ -203,7 +204,8 @@ function Chapter_2() {
             syntax: <code>mkdir directory-name</code>
             <br />
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}mkdir temporaryDirectory{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}mkdir temporaryDirectory
+              {/*</CodeBlock>*/}
             </div>
           </li>
         </ol>
@@ -251,7 +253,8 @@ function Chapter_2() {
           command prompt again for you to type out few more letters.
         </p>
         <div className="w-[20rem]  text-blue-300 rounded-md">
-          {/*<CodeBlock theme={dracula}>*/}cd /etc/Net (press tab here){/*</CodeBlock>*/}
+          {/*<CodeBlock theme={dracula}>*/}cd /etc/Net (press tab here)
+          {/*</CodeBlock>*/}
         </div>
 
         <h3>Manual Pages</h3>
@@ -352,7 +355,8 @@ function Chapter_2() {
             <br />
             syntax: <code>less /path/to/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}less /etc/passwd{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}less /etc/passwd
+              {/*</CodeBlock>*/}
             </div>
           </li>
           <li>
@@ -364,7 +368,8 @@ function Chapter_2() {
             <br />
             syntax: <code>head -n 3 /path/to/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}head -n 3 /etc/passwd{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}head -n 3 /etc/passwd
+              {/*</CodeBlock>*/}
             </div>
           </li>
           <li>
@@ -376,7 +381,8 @@ function Chapter_2() {
             <br />
             syntax: <code>tail -n 4 /path/to/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}tail -n 4 /etc/passwd{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}tail -n 4 /etc/passwd
+              {/*</CodeBlock>*/}
             </div>
           </li>
           <li>
@@ -400,7 +406,8 @@ function Chapter_2() {
             syntax:{" "}
             <code>cp /path/to/source/file /path/to/destination/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}cp /etc/passwd ./tempPasswd{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}cp /etc/passwd ./tempPasswd
+              {/*</CodeBlock>*/}
             </div>
           </li>
           <li>
@@ -413,7 +420,7 @@ function Chapter_2() {
             <code>mv /path/to/source/file /path/to/destination/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
               {/*<CodeBlock theme={dracula}>*/}
-                mv ./tempPasswd ./tempDir/tempPasswd
+              mv ./tempPasswd ./tempDir/tempPasswd
               {/*</CodeBlock>*/}
             </div>
           </li>
@@ -423,7 +430,8 @@ function Chapter_2() {
             <br />
             syntax: <code>rm /path/to/file</code>
             <div className="w-[20rem]  text-blue-300 rounded-md">
-              {/*<CodeBlock theme={dracula}>*/}rm ./tempDir/tempPasswd{/*</CodeBlock>*/}
+              {/*<CodeBlock theme={dracula}>*/}rm ./tempDir/tempPasswd
+              {/*</CodeBlock>*/}
             </div>
             <div className="w-[20rem]  text-blue-300 rounded-md">
               {/*<CodeBlock theme={dracula}>*/}rm -r tempDir{/*</CodeBlock>*/}

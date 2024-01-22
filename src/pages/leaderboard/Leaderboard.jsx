@@ -158,10 +158,10 @@ const tableData = [
   },
 ];
 
-
 const defaultTopCardsData = [
   {
-    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     name: "Loading...",
     regno: "Loading...",
     department: "Loading...",
@@ -170,7 +170,8 @@ const defaultTopCardsData = [
     points: 0,
   },
   {
-    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     name: "Loading...",
     regno: "Loading...",
     department: "Loading...",
@@ -179,7 +180,8 @@ const defaultTopCardsData = [
     points: 0,
   },
   {
-    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     name: "Loading...",
     regno: "Loading...",
     department: "Loading...",
@@ -188,7 +190,8 @@ const defaultTopCardsData = [
     points: 0,
   },
   {
-    imgUrl: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     name: "Loading...",
     regno: "Loading...",
     department: "Loading...",
@@ -196,7 +199,6 @@ const defaultTopCardsData = [
     contributions: 0,
     points: 0,
   },
- 
 ];
 
 export default function Leaderboard() {
@@ -213,12 +215,14 @@ export default function Leaderboard() {
       .then(function (response) {
         console.log(response.data);
         const topData = [];
-        let temp ={};
-        temp["name"]=response.data[0].name;
-        temp["department"]=response.data[0].department;
-        temp["points"]=response.data[0].points;
-        temp["imgUrl"]=response.data[0].photo ? `${apiURL}/leaderboard/image/`+response.data[0].reg_no : randomPhoto();
-        
+        let temp = {};
+        temp["name"] = response.data[0].name;
+        temp["department"] = response.data[0].department;
+        temp["points"] = response.data[0].points;
+        temp["imgUrl"] = response.data[0].photo
+          ? `${apiURL}/leaderboard/image/` + response.data[0].reg_no
+          : randomPhoto();
+
         topData.push(temp);
         topData.push(temp);
         topData.push(temp);
@@ -230,40 +234,35 @@ export default function Leaderboard() {
       })
       .catch(function (error) {
         console.log(error);
-        });
-  },[]);
+      });
+  }, []);
 
   // tableData.sort((a, b) => b.points > a.points);
-
-
 
   function handleSearch(e) {
     console.log(e.target.value);
     const searchTerm = e.target.value;
-    if (searchTerm=="") {
+    if (searchTerm == "") {
       axios
-      .get(`${apiURL}/leaderboard`)
-      .then(function (response) {
-        console.log(response.data);
-        // const userData = [];
+        .get(`${apiURL}/leaderboard`)
+        .then(function (response) {
+          console.log(response.data);
+          // const userData = [];
 
-        setData(response.data);
-        data.sort((a, b) => b.points > a.points);
-      })
-      .catch(function (error) {
-        console.log(error);
+          setData(response.data);
+          data.sort((a, b) => b.points > a.points);
+        })
+        .catch(function (error) {
+          console.log(error);
         });
-    }
-    else{
+    } else {
       setInputValue(searchTerm);
 
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
       );
       setData(results);
     }
-    
-
   }
 
   return (
@@ -357,13 +356,10 @@ export default function Leaderboard() {
       <div class="antialiased font-space ">
         <div class="container mx-auto px-4 sm:px-8 ">
           <div class="py-8">
-            <div>
-              
-            </div>
+            <div></div>
             <div class="my-2 flex sm:flex-row flex-col opacity-70">
               <div class="flex flex-row mb-1 sm:mb-0">
-                <div class="relative">
-                </div>
+                <div class="relative"></div>
                 <div class="relative">
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white ">
                     <svg
@@ -436,7 +432,9 @@ export default function Leaderboard() {
                                 <div class="flex-shrink-0 w-10 h-10">
                                   <img
                                     class="w-full h-full rounded-full"
-                                    src={photo ? imageUrl + reg_no : randomPhoto()}
+                                    src={
+                                      photo ? imageUrl + reg_no : randomPhoto()
+                                    }
                                     alt=""
                                   />
                                 </div>
@@ -523,7 +521,7 @@ export default function Leaderboard() {
                             </td>
                           </tr>
                         );
-                      }
+                      },
                     )}
                   </tbody>
                 </table>

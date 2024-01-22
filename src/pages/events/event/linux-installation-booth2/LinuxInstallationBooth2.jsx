@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Particle from "../../../../components/Particle/Particle";
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -8,16 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import i1 from '../../../../images/events/installation-booth-2/1.jpg'
-import i2 from '../../../../images/events/installation-booth-2/2.jpg'
-import i3 from '../../../../images/events/installation-booth-2/3.jpg'
-import i4 from '../../../../images/events/installation-booth-2/4.jpg'
-import i5 from '../../../../images/events/installation-booth-2/5.jpg'
-
+import i1 from "../../../../images/events/installation-booth-2/1.jpg";
+import i2 from "../../../../images/events/installation-booth-2/2.jpg";
+import i3 from "../../../../images/events/installation-booth-2/3.jpg";
+import i4 from "../../../../images/events/installation-booth-2/4.jpg";
+import i5 from "../../../../images/events/installation-booth-2/5.jpg";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-
 
 function LinuxInstallationBooth2() {
   useEffect(() => {
@@ -30,11 +28,15 @@ function LinuxInstallationBooth2() {
       <div className="bg-transparent font-space">
         <div className="text-gray-300 container  mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
           <p className="font-space text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
-          Linux Installation Booth 2.0
+            Linux Installation Booth 2.0
           </p>
           <div className="h-10"></div>
           <p className="max-w-2xl font-space text-xl text-gray-400 md:text-2xl">
-          The Linux Club demonstrated its commitment to promoting open-source technology with the successful organization of "Linux Installation Booth 2.0" on 12th May 2023. This initiative aimed to break down barriers for students, offering assistance in installing Linux OS and setting up dual-boot systems.
+            The Linux Club demonstrated its commitment to promoting open-source
+            technology with the successful organization of "Linux Installation
+            Booth 2.0" on 12th May 2023. This initiative aimed to break down
+            barriers for students, offering assistance in installing Linux OS
+            and setting up dual-boot systems.
           </p>
 
           <div className="h-12 md:h-24"></div>
@@ -42,12 +44,12 @@ function LinuxInstallationBooth2() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <p className="self-start inline font-space text-xl font-medium text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-600">
-              The Linux Club Technical Team
+                The Linux Club Technical Team
               </p>
               {/* <h2 className="text-4xl font-bold">.</h2> */}
               <div className="h-6"></div>
               <p className=" text-2xl text-gray-400 md:pr-10">
-              The club's goal is to make Linux accessible to everyone.
+                The club's goal is to make Linux accessible to everyone.
               </p>
               <div className="h-8"></div>
               <div className="grid grid-cols-2 gap-4 pt-8 border-t border-gray-800">
@@ -57,7 +59,9 @@ function LinuxInstallationBooth2() {
                   <p className="font-space text-gray-400">Lecture</p>
                 </div> */}
                 <div>
-                  <p className="font-semibold text-gray-400">Linux Distro Distribution</p>
+                  <p className="font-semibold text-gray-400">
+                    Linux Distro Distribution
+                  </p>
                   <div className="h-4"></div>
                   {/* <p className="font-space text-gray-400">Live Bugfix</p> */}
                 </div>
@@ -94,52 +98,28 @@ function LinuxInstallationBooth2() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i3}
-                  alt="loading image ./...../."
-                />
+                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i4}
-                  alt="loading image ./...../."
-                />
+                <img src={i4} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i5}
-                  alt="loading image ./...../."
-                />
+                <img src={i5} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i1}
-                  alt="loading image ./...../."
-                />
+                <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i2}
-                  alt="loading image ./...../."
-                />
+                <img src={i2} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img
-                  src={i3}
-                  alt="loading image ./...../."
-                />
+                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -198,7 +178,7 @@ function LinuxInstallationBooth2() {
                 <div className="col-span-12 sm:col-span-3">
                   <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400">
                     <h5 className="text-2xl font-semibold">
-                    Linux Installation Booth 2.0
+                      Linux Installation Booth 2.0
                     </h5>
                     <span className="text-sm font-bold tracki uppercase text-white">
                       Event Details
@@ -210,25 +190,32 @@ function LinuxInstallationBooth2() {
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 1 </h3> */}
                       <time className="text-xs tracki uppercase text-white">
-                      {/* 24th to the 25th of September */}
+                        {/* 24th to the 25th of September */}
                       </time>
                       <p className="mt-3">
-                      The club's goal of making Linux accessible to everyone, regardless of technical background, resonated well as more than 200 participants enthusiastically engaged with the event.
+                        The club's goal of making Linux accessible to everyone,
+                        regardless of technical background, resonated well as
+                        more than 200 participants enthusiastically engaged with
+                        the event.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 2</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
                       <p className="mt-3">
-                      The installation booth provided a supportive learning environment, where students received hands-on guidance, step-by-step instructions, and assistance throughout the Linux installation process. The infectious curiosity and enthusiasm displayed by the participants reflected the impact of the Linux Club's efforts in sparking interest and demystifying Linux for the student community.
+                        The installation booth provided a supportive learning
+                        environment, where students received hands-on guidance,
+                        step-by-step instructions, and assistance throughout the
+                        Linux installation process. The infectious curiosity and
+                        enthusiasm displayed by the participants reflected the
+                        impact of the Linux Club's efforts in sparking interest
+                        and demystifying Linux for the student community.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">End</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
-                      <p className="mt-3">
-                      
-                      </p>
+                      <p className="mt-3"></p>
                     </div>
                   </div>
                 </div>

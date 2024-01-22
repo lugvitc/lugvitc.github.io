@@ -1,7 +1,9 @@
-html{
+html {
   background-color: #000000;
-  cursor: url('./images/icons/cursor.png'), auto;	
+  cursor: url("./images/icons/cursor.png"), auto;
 }
 .custom-tux {
-  cursor: url('./path/to/custom-cursor.png') 25 25, auto;
+  cursor:
+    url("./path/to/custom-cursor.png") 25 25,
+    auto;
 }

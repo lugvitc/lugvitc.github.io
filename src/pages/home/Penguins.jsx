@@ -1,5 +1,5 @@
-import React from 'react';
-import './penguin.css'; // Import a CSS file for styling
+import React from "react";
+import "./penguin.css"; // Import a CSS file for styling
 
 const Penguins = () => {
   return (
@@ -20,7 +20,6 @@ const Penguins = () => {
            QQQQQ#######QQQQQ
       `}
       </pre>
-      
 
       {/* Repeat for the other penguins */}
     </div>
@@ -80,4 +79,4 @@ const Hacker = () => {
   );
 };
 
-export { Penguins,Arch,Hacker};
+export { Penguins, Arch, Hacker };

@@ -111,7 +111,7 @@ function Chapter_1() {
             </div>
 
             <div class="flex flex-row space-x-8 mt-8">
-              <div >
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-12 w-12 text-white"
@@ -231,7 +231,10 @@ function Chapter_1() {
               </h3>
             </dt>
             <div class="mb-16 flex flex-col">
-              <a className="text-blue-300" href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">
+              <a
+                className="text-blue-300"
+                href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/"
+              >
                 Blog Post: Dual Boot Ubuntu on Windows
               </a>
               <br />
@@ -239,7 +242,10 @@ function Chapter_1() {
                 Video tutorial: Dual Boot Ubuntu on Windows
               </a>
               <br />
-              <a className="text-blue-300" href="https://www.linuxtechi.com/dual-boot-arch-linux-windows-10/">
+              <a
+                className="text-blue-300"
+                href="https://www.linuxtechi.com/dual-boot-arch-linux-windows-10/"
+              >
                 Blog Post: Dual Boot Arch on Windows
               </a>
               <br />
@@ -247,7 +253,10 @@ function Chapter_1() {
                 Video tutorial: Dual Boot Arch on Windows
               </a>
               <br />
-              <a className="text-blue-300" href="https://www.geeksforgeeks.org/dual-boot-kali-linux-with-windows/">
+              <a
+                className="text-blue-300"
+                href="https://www.geeksforgeeks.org/dual-boot-kali-linux-with-windows/"
+              >
                 Blog Post: Dual Boot Kali Linux on Windows
               </a>
               <br />
@@ -255,7 +264,10 @@ function Chapter_1() {
                 Video tutorial: Dual Boot Kali linux on Windows
               </a>
               <br />
-              <a className="text-blue-300" href="https://blnlabs.com/dual-boot-pop-os-and-windows-10/">
+              <a
+                className="text-blue-300"
+                href="https://blnlabs.com/dual-boot-pop-os-and-windows-10/"
+              >
                 Blog Post: Dual Boot Pop!_OS on Windows
               </a>
               <br />
@@ -263,7 +275,10 @@ function Chapter_1() {
                 Video tutorial: Dual Boot Pop!_OS on Windows
               </a>
               <br />
-              <a className="text-blue-300" href="https://www.linuxfordevices.com/tutorials/linux/dual-boot-windows-10-and-linux-mint">
+              <a
+                className="text-blue-300"
+                href="https://www.linuxfordevices.com/tutorials/linux/dual-boot-windows-10-and-linux-mint"
+              >
                 Blog Post: Dual Boot Linux Mint on Windows
               </a>
               <br />
@@ -273,60 +288,85 @@ function Chapter_1() {
             </div>
             <dt class="mb-4">
               <h3 class="text-xl font-space font-semibold text-green-200">
-              Virtual Machine
+                Virtual Machine
               </h3>
             </dt>
             <dd class="mb-16">
               <p>
-              This is a relatively simpler method to install a linux distro in your system. Here, as the name suggests, you use the Linux distribution virtually. That is, the Linux distro runs on top of your current OS and this is achieved by the usage of a Virtual Machine Monitor (like VirtualBox or VMWare etc.). Here, you do not have to worry about breaking your software. Because, everything can be restored to its initial state easily. Thus, VMs are a great way to experiment and learn when you are using Linux for the first time. After you are well acquainted with using a distro virtually, you can switch to the Dual Boot option :D We have attached a few resources, which you can refer to install some common Linux distros through Virtual Machine in Virtual Box:
+                This is a relatively simpler method to install a linux distro in
+                your system. Here, as the name suggests, you use the Linux
+                distribution virtually. That is, the Linux distro runs on top of
+                your current OS and this is achieved by the usage of a Virtual
+                Machine Monitor (like VirtualBox or VMWare etc.). Here, you do
+                not have to worry about breaking your software. Because,
+                everything can be restored to its initial state easily. Thus,
+                VMs are a great way to experiment and learn when you are using
+                Linux for the first time. After you are well acquainted with
+                using a distro virtually, you can switch to the Dual Boot option
+                :D We have attached a few resources, which you can refer to
+                install some common Linux distros through Virtual Machine in
+                Virtual Box:
               </p>
               <br />
-                        <a className="text-blue-300" href='https://www.geeksforgeeks.org/how-to-install-ubuntu-on-virtualbox/'>
-                            Blog Post: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/x5MhydijWmc'>
-                            Video tutorial: Install Ubuntu VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-arch-linux-virtualbox/'>
-                            Blog Post: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/_3-OMUQTf_k'>
-                            Video tutorial: Install Arch VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-kali-linux-virtualbox/'>
-                            Blog Post: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/V_Payl5FlgQ'>
-                            Video tutorial: Install Kali Linux VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://www.how2shout.com/linux/how-to-install-pop-os-in-virtualbox-virtual-machine/'>
-                            Blog Post: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/qsB0gwrwIYQ'>
-                            Video tutorial: Install Pop!_OS VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://itsfoss.com/install-linux-mint-in-virtualbox/'>
-                            Blog Post: Install Linux Mint VM
-                        </a>
-                        <br />
-                        <a className="text-blue-300" href='https://youtu.be/aisUxv2S3gk'>
-                            Video tutorial: Install Linux Mint VM
-                        </a>
-                        <br />
+              <a
+                className="text-blue-300"
+                href="https://www.geeksforgeeks.org/how-to-install-ubuntu-on-virtualbox/"
+              >
+                Blog Post: Install Ubuntu VM
+              </a>
+              <br />
+              <a className="text-blue-300" href="https://youtu.be/x5MhydijWmc">
+                Video tutorial: Install Ubuntu VM
+              </a>
+              <br />
+              <a
+                className="text-blue-300"
+                href="https://itsfoss.com/install-arch-linux-virtualbox/"
+              >
+                Blog Post: Install Arch VM
+              </a>
+              <br />
+              <a className="text-blue-300" href="https://youtu.be/_3-OMUQTf_k">
+                Video tutorial: Install Arch VM
+              </a>
+              <br />
+              <a
+                className="text-blue-300"
+                href="https://itsfoss.com/install-kali-linux-virtualbox/"
+              >
+                Blog Post: Install Kali Linux VM
+              </a>
+              <br />
+              <a className="text-blue-300" href="https://youtu.be/V_Payl5FlgQ">
+                Video tutorial: Install Kali Linux VM
+              </a>
+              <br />
+              <a
+                className="text-blue-300"
+                href="https://www.how2shout.com/linux/how-to-install-pop-os-in-virtualbox-virtual-machine/"
+              >
+                Blog Post: Install Pop!_OS VM
+              </a>
+              <br />
+              <a className="text-blue-300" href="https://youtu.be/qsB0gwrwIYQ">
+                Video tutorial: Install Pop!_OS VM
+              </a>
+              <br />
+              <a
+                className="text-blue-300"
+                href="https://itsfoss.com/install-linux-mint-in-virtualbox/"
+              >
+                Blog Post: Install Linux Mint VM
+              </a>
+              <br />
+              <a className="text-blue-300" href="https://youtu.be/aisUxv2S3gk">
+                Video tutorial: Install Linux Mint VM
+              </a>
+              <br />
             </dd>
-            
+
             <dd class="mb-16">
-              <p>
-                
-              </p>
+              <p></p>
             </dd>
           </dl>
         </div>

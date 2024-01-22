@@ -13,14 +13,7 @@ import {
   Card,
   IconButton,
 } from "@material-tailwind/react";
-import {
-  
-  Collapse,
-
-  List,
-  ListItem,
-
-} from "@material-tailwind/react";
+import { Collapse, List, ListItem } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
   UserCircleIcon,
@@ -36,13 +29,10 @@ import {
   PowerIcon,
   RocketLaunchIcon,
   Bars2Icon,
-  TrophyIcon
+  TrophyIcon,
 } from "@heroicons/react/24/solid";
 
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
   Bars4Icon,
   GlobeAmericasIcon,
@@ -51,25 +41,19 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-
-
-
-
 // nav list menu
 const navListMenuItems = [
   {
     title: "Forums",
-    description:
-      "Linux Club's own forum and discussion area.",
-    link:"https://forum.lugvitc.org/"
+    description: "Linux Club's own forum and discussion area.",
+    link: "https://forum.lugvitc.org/",
   },
   {
     title: "Cloud",
     description:
       "Linux Club's own online management tool to manage club's activities",
-    link:"https://cloud.lugvitc.org/"
+    link: "https://cloud.lugvitc.org/",
   },
-  
 ];
 
 const navListMenuItemsAboutUs = [
@@ -77,33 +61,32 @@ const navListMenuItemsAboutUs = [
     title: "Gallery",
     description: "Sharing our experiences.",
     icon: SquaresPlusIcon,
-    link:"#/gallery"
+    link: "#/gallery",
   },
   {
     title: "About Us",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
-    link:"#/about"
+    link: "#/about",
   },
   {
     title: "Blog",
     description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
-    link:"#/blogs"
+    link: "#/blogs",
   },
   {
     title: "Members",
     description: "Amazing group of inquisitive people.",
     icon: UserGroupIcon,
-    link:"#/members"
+    link: "#/members",
   },
   {
     title: "Leaderboard",
     description: "leaderboard for club members.",
     icon: TrophyIcon,
-    link:"#/leaderboard"
+    link: "#/leaderboard",
   },
-
 ];
 
 const navListMenuItemsSupport = [
@@ -111,13 +94,13 @@ const navListMenuItemsSupport = [
     title: "Support",
     description: "Reach out to us for assistance or inquiries on our Forums",
     icon: GlobeAmericasIcon,
-    link:"https://forum.lugvitc.org/"
+    link: "https://forum.lugvitc.org/",
   },
   {
     title: "Contact",
     description: "Find the perfect solution for your needs.",
     icon: PhoneIcon,
-    link:"#/contact"
+    link: "#/contact",
   },
 ];
 
@@ -125,7 +108,7 @@ function NavListMenuSupport() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItemsSupport.map(
-    ({ icon, title, description ,link}, key) => (
+    ({ icon, title, description, link }, key) => (
       <a href={link} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg  hover:text-white p-2 ">
@@ -154,7 +137,7 @@ function NavListMenuSupport() {
       </a>
     ),
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -171,7 +154,7 @@ function NavListMenuSupport() {
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white"  />{" "}
+              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" />{" "}
               ~cd Support
               <ChevronDownIcon
                 strokeWidth={2.5}
@@ -204,7 +187,7 @@ function NavListMenuAboutUs() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItemsAboutUs.map(
-    ({ icon, title, description,link }, key) => (
+    ({ icon, title, description, link }, key) => (
       <a href={link} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg  hover:text-white p-2 ">
@@ -233,7 +216,7 @@ function NavListMenuAboutUs() {
       </a>
     ),
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -250,8 +233,8 @@ function NavListMenuAboutUs() {
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white"  />{" "}
-              ~whoami 
+              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" />{" "}
+              ~whoami
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -282,18 +265,22 @@ function NavListMenuAboutUs() {
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const renderItems = navListMenuItems.map(({ title, description,link }) => (
+  const renderItems = navListMenuItems.map(({ title, description, link }) => (
     // <Link to={link}>
-     <a href={link} key={title}> 
+    <a href={link} key={title}>
       <MenuItem>
         <Typography variant="h6" color="gray" className="mb-1 font-space">
           {title}
         </Typography>
-        <Typography variant="small" color="gray" className="font-normal font-space">
+        <Typography
+          variant="small"
+          color="gray"
+          className="font-normal font-space"
+        >
           {description}
         </Typography>
       </MenuItem>
-     </a> 
+    </a>
     // </Link>
   ));
 
@@ -301,9 +288,14 @@ function NavListMenu() {
     <React.Fragment>
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal text-white ">
-            <MenuItem className="hidden items-center gap-2 font-light font-space text-xs  text-white  lg:flex lg:rounded-full hover:bg-[#1f2937] hover:text-white " >
-              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white"  />{" "}
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal text-white "
+          >
+            <MenuItem className="hidden items-center gap-2 font-light font-space text-xs  text-white  lg:flex lg:rounded-full hover:bg-[#1f2937] hover:text-white ">
+              <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" />{" "}
               ~cd community{" "}
               <ChevronDownIcon
                 strokeWidth={2}
@@ -329,8 +321,8 @@ function NavListMenu() {
         </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 font-light font-space text-xs  text-white lg:hidden  hover:bg-[#1f2937] hover:text-white">
-        <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" />{" "}
-        ~cd community{" "}
+        <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" /> ~cd
+        community{" "}
       </MenuItem>
       <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
         {renderItems}
@@ -344,39 +336,37 @@ const navListItems = [
   {
     label: "~cd root",
     icon: HomeIcon,
-    link:"#/"
+    link: "#/",
   },
   {
     label: "~cd learn",
     icon: AcademicCapIcon,
-    link:"#/learn"
+    link: "#/learn",
   },
   {
     label: "~cd events",
     icon: CubeTransparentIcon,
-    link:"#/events"
+    link: "#/events",
   },
-  
-
-
 ];
 
 function NavList() {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center ">
-      {navListItems.map(({ label, icon ,link}, key) => (
-      
-      // <Link to={link} key={key}>
+      {navListItems.map(({ label, icon, link }, key) => (
+        // <Link to={link} key={key}>
         <Typography
-        key={label}
-        as="a"
-        href={link}
-        variant="small"
-        color="gray"
-        className="font-light font-space text-xs  text-white"
+          key={label}
+          as="a"
+          href={link}
+          variant="small"
+          color="gray"
+          className="font-light font-space text-xs  text-white"
         >
           <MenuItem className="flex items-center gap-2 lg:rounded-full hover:bg-[#1f2937]">
-            {React.createElement(icon, { className: "h-[18px] w-[18px] text-white" })}{" "}
+            {React.createElement(icon, {
+              className: "h-[18px] w-[18px] text-white",
+            })}{" "}
             <span className="text-white "> {label}</span>
           </MenuItem>
         </Typography>
@@ -397,7 +387,7 @@ export function MainNavbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setIsNavOpen(false)
+      () => window.innerWidth >= 960 && setIsNavOpen(false),
     );
   }, []);
 
@@ -405,8 +395,8 @@ export function MainNavbar() {
     // <div className="bg-black ">
 
     <Navbar
-    color="transparent" 
-    className=" max-w-screen-xl p-2 lg:rounded-full lg:pl-6 "
+      color="transparent"
+      className=" max-w-screen-xl p-2 lg:rounded-full lg:pl-6 "
     >
       <div className="relative mx-auto flex items-center justify-between text-white">
         <Typography
@@ -419,7 +409,6 @@ export function MainNavbar() {
         <div className="hidden lg:block">
           <NavList />
         </div>
-        
 
         {/* <Button size="sm" variant="text" className="hover:bg-[#1f2937] text-white font-space text-xs">
           <span>Log In</span>
@@ -442,6 +431,5 @@ export function MainNavbar() {
   );
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////
-//  
+//

@@ -19,7 +19,7 @@ import Leaderboard from "./pages/leaderboard/Leaderboard";
 import Blogs from "./pages/blogs/Blogs";
 import Contact from "./pages/contact/Contact";
 import AboutUs from "./pages/about/AboutUs";
-import Gallery from "./pages/gallery/Gallery";  
+import Gallery from "./pages/gallery/Gallery";
 import Footer from "./components/footer/Footer";
 import Cli from "./pages/cli/Cli";
 
@@ -115,35 +115,35 @@ const router = createHashRouter([
   },
   {
     path: "/adrenaline",
-    element: <AdrenalineFOSSDay/>,
+    element: <AdrenalineFOSSDay />,
   },
   {
     path: "/rescuethetux",
-    element: <RescueTheTux/>,
+    element: <RescueTheTux />,
   },
   {
     path: "/cyberOday",
-    element: <CyberOday/>,
+    element: <CyberOday />,
   },
   {
     path: "/gsocmadeeasy",
-    element: <GsocmadeEasy/>,
+    element: <GsocmadeEasy />,
   },
   {
     path: "/hackershorizon",
-    element: <HackersHorizon/>,
+    element: <HackersHorizon />,
   },
   {
     path: "/linuxInstallationBooth2",
-    element: <LinuxInstallationBooth2/>,
+    element: <LinuxInstallationBooth2 />,
   },
   {
     path: "/password2023",
-    element: <Password2023/>,
+    element: <Password2023 />,
   },
   {
     path: "/cyberOday2",
-    element: <CyberOday2/>,
+    element: <CyberOday2 />,
   },
   {
     path: "/cli",

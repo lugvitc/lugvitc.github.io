@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import CountUp from "react-countup";
 
 function EventsLanding() {
@@ -35,12 +35,11 @@ function EventsLanding() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={10} />+
+                  <CountUp delay={1} end={10} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
                   Events
                 </p>
-                
               </div>
             </div>
 
@@ -63,12 +62,11 @@ function EventsLanding() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={4000} />+
+                  <CountUp delay={1} end={4000} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
                   Participants
                 </p>
-                
               </div>
             </div>
 
@@ -91,19 +89,18 @@ function EventsLanding() {
                 </svg>
 
                 <h4 class="relative mt-6 mb-3 text-5xl font-bold font-space text-white">
-                <CountUp delay={1} end={60} />+
+                  <CountUp delay={1} end={60} />+
                 </h4>
                 <p class="relative text-3xl mt-5  text-center text-white font-space">
                   Winners
                 </p>
-                
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default EventsLanding
+export default EventsLanding;
