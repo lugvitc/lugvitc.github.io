@@ -30,7 +30,7 @@ function EventsTimeLine() {
     if (text == "man fos") {
       setText("");
       console.log(value + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/adrenaline";
+      window.location.href = "/#/adrenaline";
     }
   }
   function handleChange2() {
@@ -40,7 +40,7 @@ function EventsTimeLine() {
     if (text2 == "man rescu") {
       setText2("");
       console.log(value2 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/rescuethetux";
+      window.location.href = "/#/rescuethetux";
     }
   }
   function handleChange3() {
@@ -50,7 +50,7 @@ function EventsTimeLine() {
     if (text3 == "man co") {
       setText3("");
       console.log(value3 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/cyberOday";
+      window.location.href = "/#/cyberOday";
     }
   }
   function handleChange4() {
@@ -60,7 +60,7 @@ function EventsTimeLine() {
     if (text4 == "man gso") {
       setText4("");
       console.log(value4 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/gsocmadeeasy";
+      window.location.href = "/#/gsocmadeeasy";
     }
   }
   function handleChange5() {
@@ -70,7 +70,7 @@ function EventsTimeLine() {
     if (text5 == "man hacke") {
       setText5("");
       console.log(value5 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/hackershorizon";
+      window.location.href = "/#/hackershorizon";
     }
   }
   function handleChange6() {
@@ -80,7 +80,7 @@ function EventsTimeLine() {
     if (text6 == "man instal") {
       setText6("");
       console.log(value6 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/linuxInstallationBooth2";
+      window.location.href = "/#/linuxInstallationBooth2";
     }
   }
   function handleChange7() {
@@ -90,7 +90,7 @@ function EventsTimeLine() {
     if (text7 == "man password2") {
       setText7("");
       console.log(value7 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/password2023";
+      window.location.href = "/#/password2023";
     }
   }
   function handleChange8() {
@@ -100,7 +100,7 @@ function EventsTimeLine() {
     if (text8 == "man cod") {
       setText8("");
       console.log(value8 + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/cyberOday2";
+      window.location.href = "/#/cyberOday2";
     }
   }
 

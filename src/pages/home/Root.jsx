@@ -30,8 +30,7 @@ function Root() {
     setText(value);
     if (text == "sudo lu") {
       setText("");
-      console.log(value + "  i am gere ");
-      window.location.href = "http://localhost:5173/#/cli";
+      window.location.href = "/#/cli";
     }
   }
 
