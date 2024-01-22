@@ -16,6 +16,7 @@ import i2 from '../../../../images/events/password/2.jpg'
 import i3 from '../../../../images/events/password/3.jpg'
 import i4 from '../../../../images/events/password/4.jpg'
 import i5 from '../../../../images/events/password/5.jpg'
+import { apiURL } from "../../../../utils/constant";
 
 
 
@@ -67,7 +68,7 @@ function Password2023() {
               <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
-                    src="http://127.0.0.1:5000/event/videos/password23"
+                    src={`${apiURL}/event/videos/password23`}
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

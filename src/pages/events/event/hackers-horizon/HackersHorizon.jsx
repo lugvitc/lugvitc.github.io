@@ -18,6 +18,7 @@ import i5 from '../../../../images/events/hackers-horizon/5.jpg'
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { apiURL } from "../../../../utils/constant";
 
 function HackersHorizon() {
   useEffect(() => {
@@ -69,7 +70,7 @@ function HackersHorizon() {
               <div class="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
-                    src="http://127.0.0.1:5000/event/videos/hackerhorizon"
+                    src={`${apiURL}/event/videos/hackerhorizon`}
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

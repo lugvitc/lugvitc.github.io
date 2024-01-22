@@ -1,17 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import {
-  MagnifyingGlassIcon,
-  ChevronUpDownIcon,
-} from "@heroicons/react/24/outline";
-import { PencilIcon, UserPlusIcon } from "@heroicons/react/24/solid";
 import { Button } from "@material-tailwind/react";
-import {
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-} from "@material-tailwind/react";
 import {
   Popover,
   PopoverHandler,
@@ -21,6 +10,7 @@ import {
 import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { useState } from "react";
+import { apiURL, randomPhoto } from "../../utils/constant";
 
 const TABLE_HEAD = [
   "Member",
@@ -213,13 +203,13 @@ export default function Leaderboard() {
   const [data, setData] = useState([]);
   const [topCardsData, setTopCardsData] = useState(defaultTopCardsData);
 
-  const imageUrl = "http://127.0.0.1:5000/leaderboard/image/";
+  const imageUrl = `${apiURL}/leaderboard/image/`;
   const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/leaderboard")
+      .get(`${apiURL}/leaderboard`)
       .then(function (response) {
         console.log(response.data);
         const topData = [];
@@ -227,7 +217,7 @@ export default function Leaderboard() {
         temp["name"]=response.data[0].name;
         temp["department"]=response.data[0].department;
         temp["points"]=response.data[0].points;
-        temp["imgUrl"]="http://127.0.0.1:5000/leaderboard/image/"+response.data[0].reg_no;
+        temp["imgUrl"]=response.data[0].photo ? `${apiURL}/leaderboard/image/`+response.data[0].reg_no : randomPhoto();
         
         topData.push(temp);
         topData.push(temp);
@@ -240,9 +230,6 @@ export default function Leaderboard() {
       })
       .catch(function (error) {
         console.log(error);
-        console.log(
-          "hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
-          );
         });
   },[]);
 
@@ -255,7 +242,7 @@ export default function Leaderboard() {
     const searchTerm = e.target.value;
     if (searchTerm=="") {
       axios
-      .get("http://127.0.0.1:5000/leaderboard")
+      .get(`${apiURL}/leaderboard`)
       .then(function (response) {
         console.log(response.data);
         // const userData = [];
@@ -265,9 +252,6 @@ export default function Leaderboard() {
       })
       .catch(function (error) {
         console.log(error);
-        console.log(
-          "hello hello hello hello hello hello hello hello hello hello hello hello hello hello "
-          );
         });
     }
     else{
@@ -379,25 +363,8 @@ export default function Leaderboard() {
             <div class="my-2 flex sm:flex-row flex-col opacity-70">
               <div class="flex flex-row mb-1 sm:mb-0">
                 <div class="relative">
-                  {/* <select
-                            class="appearance-none h-full rounded-l  w-full bg-[#1A1920]  text-white py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-[#1A1920] focus:border-gray-500">
-                            <option>5</option>
-                            <option>10</option>
-                            <option>20</option>
-                        </select> */}
-                  {/* <div
-                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                            </svg>
-                        </div> */}
                 </div>
                 <div class="relative">
-                  {/* <select class=" h-full rounded-r  sm:rounded-r-none sm:border-r-0  block appearance-none w-full bg-[#1A1920] text-white py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-[#1A1920] ">
-                    <option>All</option>
-                    <option>Active</option>
-                    <option>Inactive</option>
-                  </select> */}
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white ">
                     <svg
                       class="fill-current h-4 w-4"
@@ -453,7 +420,7 @@ export default function Leaderboard() {
                   <tbody className="bg-[#16161A]">
                     {data.map(
                       ({
-                        img,
+                        photo,
                         name,
                         reg_no,
                         department,
@@ -469,7 +436,7 @@ export default function Leaderboard() {
                                 <div class="flex-shrink-0 w-10 h-10">
                                   <img
                                     class="w-full h-full rounded-full"
-                                    src={imageUrl + reg_no}
+                                    src={photo ? imageUrl + reg_no : randomPhoto()}
                                     alt=""
                                   />
                                 </div>
@@ -560,211 +527,11 @@ export default function Leaderboard() {
                     )}
                   </tbody>
                 </table>
-                {/* <div class="px-5 py-5 bg-[#16161A] justify-start   flex flex-col xs:flex-row items-center xs:justify-between          ">
-                  <span class="text-xs xs:text-sm text-white">
-                    Showing {currRecord} to {currRecord + 5} of{" "}
-                    {tableData.length} Entries
-                  </span>
-                  <div class="inline-flex mt-2 xs:mt-0">
-                    <button
-                      onClick={prevPage}
-                      class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
-                    >
-                      Prev
-                    </button>
-                    <button
-                      onClick={nextPage}
-                      class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div> */}
               </div>
             </div>
-            {/* table data ends here */}
           </div>
         </div>
       </div>
     </>
   );
 }
-
-{
-  /* <div className="flex flex-row justify-center items-center ">
-   
-
-   <Card className="h-full w-full sm:w-[80%] font-space bg-[#1A1920]">
-     <CardHeader floated={false} shadow={false} className="rounded-none">
-       <div className="mb-8 flex items-center justify-center bg-[#1A1920]" >
-         <div>
-           <Typography variant="h5" color="white" className="text-center font-space">
-             Leaderboard
-           </Typography>
-           <Typography color="white" className=" font-normal font-space">
-           Pioneers of the Penguination: Leading the Linux Way
-           </Typography>
-         </div>
-         
-       </div>
-       <div className="flex flex-col items-center justify-between gap-4 md:flex-row bg-[#1A1920]">
-         <Tabs value="all" className="w-full md:w-max">
-           <TabsHeader>
-             {TABS.map(({ label, value }) => (
-               <Tab key={value} value={value}>
-                 &nbsp;&nbsp;{label}&nbsp;&nbsp;
-               </Tab>
-             ))}
-           </TabsHeader>
-         </Tabs>
-         <div className="w-full md:w-72">
-           <Input
-             label="Search"
-             icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-           />
-         </div>
-       </div>
-     </CardHeader>
-     <CardBody className="overflow-scroll px-0">
-       <table className="mt-4 w-full min-w-max table-auto text-left">
-         <thead>
-           <tr>
-             {TABLE_HEAD.map((head, index) => (
-               <th
-                 key={head}
-                 className="cursor-pointer border-y border-white-100 bg-white-50/50 p-4 transition-colors hover:bg-white-50"
-               >
-                 <Typography
-                   variant="small"
-                   color="white"
-                   className="flex items-center justify-between gap-2 font-normal leading-none opacity-70 font-space"
-                 >
-                   {head}{" "}
-                   {index !== TABLE_HEAD.length - 1 && (
-                     <ChevronUpDownIcon strokeWidth={2} className="h-4 w-4" />
-                   )}
-                 </Typography>
-               </th>
-             ))}
-           </tr>
-         </thead>
-         <tbody>
-           {TABLE_ROWS.map(
-             ({ img, name, email, department, org, contributions, points }, index) => {
-               const isLast = index === TABLE_ROWS.length - 1;
-               const classes = isLast
-                 ? "p-4"
-                 : "p-4 border-b border-white-50";
-
-               return (
-                 <tr key={name}>
-                   <td className={classes}>
-                     <div className="flex items-center gap-3">
-                       <Avatar src={img} alt={name} size="sm" />
-                       <div className="flex flex-col">
-                         <Typography
-                           variant="small"
-                           color="white"
-                           className="font-normal font-space"
-                         >
-                           {name}
-                         </Typography>
-                         <Typography
-                           variant="small"
-                           color="white"
-                           className="font-normal opacity-70 font-space"
-                         >
-                           {email}
-                         </Typography>
-                       </div>
-                     </div>
-                   </td>
-                   <td className={classes}>
-                     <div className="flex flex-col">
-                       <Typography
-                         variant="small"
-                         color="white"
-                         className="font-normal font-space"
-                       >
-                         {department}
-                       </Typography>
-                       <Typography
-                         variant="small"
-                         color="white"
-                         className="font-normal opacity-70 font-space"
-                       >
-                         {org}
-                       </Typography>
-                     </div>
-                   </td>
-                   <td className={classes}>
-                     <div className="w-max">
-                       <Chip
-                         variant="ghost"
-                         size="sm"
-                         value={contributions}
-                         color={contributions >= 5 ? "green" : contributions >= 2 ? "orange" : contributions === 0 && "red"}
-
-                       />
-                     </div>
-                   </td>
-                   <td className={classes}>
-                     <Typography
-                       variant="small"
-                       color="white"
-                       className="font-normal font-space"
-                     >
-                       {points}
-                     </Typography>
-                   </td>
-                   <td className={classes}>
-                     <Tooltip content="Edit User">
-                       <IconButton variant="text">
-                         <PencilIcon className="h-4 w-4" />
-                       </IconButton>
-                     </Tooltip>
-                   </td>
-                 </tr>
-               );
-             },
-           )}
-         </tbody>
-       </table>
-     </CardBody>
-     <CardFooter className="flex items-center justify-between border-t border-white-50 p-4">
-       <Typography variant="small" color="white" className="font-normal font-space">
-         Page 1 of 10
-       </Typography>
-       <div className="flex gap-2">
-         <Button variant="outlined" size="sm" className="font-space">
-           Previous
-         </Button>
-         <Button variant="outlined" size="sm" className="font-space">
-           Next
-         </Button>
-       </div>
-     </CardFooter>
-   </Card>
-   </div> */
-}
-
-// import React from 'react'
-// import CardTable from "../../components/CardTable/CardTable";
-
-// function Leaderboard() {
-//   return (
-//     <>
-//       <div className="flex flex-wrap mt-4">
-//         <div className="w-full mb-12 px-4">
-//           <CardTable />
-//         </div>
-//         <div className="w-full mb-12 px-4">
-//           <CardTable color="dark" />
-//         </div>
-//       </div>
-
-//     </>
-//   )
-// }
-
-// export default Leaderboard

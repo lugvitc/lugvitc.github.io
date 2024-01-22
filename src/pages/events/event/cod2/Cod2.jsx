@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { apiURL } from "../../../../utils/constant";
 
 
 function Cod2() {
@@ -66,7 +67,7 @@ function Cod2() {
               <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
                 <video className=" rounded-lg w-30 h-96" controls autoPlay>
                   <source
-                    src="http://127.0.0.1:5000/event/videos/cod2"
+                    src={`${apiURL}/event/videos/cod2`}
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

@@ -1,7 +1,9 @@
+import { apiURL } from "../../utils/constant";
+
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const galleryLink = (id, width, height) =>
-  `http://127.0.0.1:5000/gallery/image/${id}`;
+  `${apiURL}/gallery/image/${id}`;
 
 const unsplashPhotos = [
   { id: "1", width: 1080, height: 800 },
