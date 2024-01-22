@@ -1,0 +1,18 @@
+/* Penguins.css */
+
+.penguins-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  margin: 0;
+  color: whitesmoke;
+  background-color: #000000;
+}
+
+pre {
+  font-family: "Space Mono";
+  white-space: pre-wrap;
+  font-size: 2vh;
+}
