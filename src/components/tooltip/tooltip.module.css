@@ -1,7 +1,0 @@
-.toolTip {
-    position: fixed;
-    z-index: 10;
-    background-color: var(--header-footer-black);
-    border-radius: 0.5em;
-    padding-inline: 1em;
-}

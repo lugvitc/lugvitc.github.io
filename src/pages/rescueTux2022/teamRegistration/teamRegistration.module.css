@@ -1,7 +1,0 @@
-input.valid {
-    background-color: var(--nord14);
-}
-
-input.invalid {
-    background-color: var(--nord12);
-}
