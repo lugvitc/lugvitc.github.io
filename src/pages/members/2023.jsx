@@ -130,4 +130,15 @@ export const members_2023 = [
     instagram: "https://www.instagram.com/k_revanth_sai/",
     email: "revanthsai.k2021@vitstudent.ac.in",
   },
+
+  {
+    id: 15,
+    name: "Chitranshu Gupta",
+    position: "Content Head",
+    github: "#",
+    linkedin: "#",
+    instagram: "#",
+    email: "chitranshu.gupta2021@vitstudent.ac.in",
+  },
+
 ];
