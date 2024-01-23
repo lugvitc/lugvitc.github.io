@@ -24,6 +24,7 @@ import kathir from "../../images/members/kathir.png";
 import mogesh from "../../images/members/mogesh.png";
 import srideep from "../../images/members/srideep.png";
 import revanth from "../../images/members/revanth.png";
+import chitranshu from "../../images/members/chitranshu.png";
 
 function Member() {
   const arr = [
@@ -42,6 +43,7 @@ function Member() {
     mogesh,
     srideep,
     revanth,
+    chitranshu,
   ];
   const arr2 = [blank, baleshwar, samridth, abhishek, animesh, aditi, blank];
   const members2023 = members_2023.map(
