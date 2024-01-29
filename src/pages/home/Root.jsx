@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Particles from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { Typewriter } from "react-simple-typewriter";
+import { Alert } from "@material-tailwind/react";
 import {
   Card,
   CardBody,
@@ -34,10 +35,55 @@ function Root() {
     }
   }
 
+  function Icon() {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+        />
+      </svg>
+    );
+  }
+  
+
   return (
     <>
       <Particles />
+      
+      <div className="flex justify-center items-center font-space mt-5">
+      <Alert
+       className="bg-[#000000] w-[80%] opacity-80"
+        open={open}
+        icon={<Icon />}
+        action={
+          <Button
+            variant="text"
+            color="white"
+            size="xl"
+            className="!absolute top-3 right-3"
+            onClick={()=>{
+              window.location.href="https://ctf.lugvitc.org"
+            }}
+            href=''
+          >
+            Visit
+          </Button>
+        }
+      >
+        Password'24 is live. CTF starts at January 29'2024 18:00:00. Go visit.
+      </Alert>  
+      </div>
       <div className="flex flex-row flex-wrap  ">
+        
         <div className="flex justify-center items-center flex-wrap sm:w-7/12 sm:h-[60vh]">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
