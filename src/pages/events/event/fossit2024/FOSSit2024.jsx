@@ -74,7 +74,7 @@ function FOSSit2024() {
               </div>
             </div>
             <div>
-              <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
                 <video className=" rounded-lg w-30 h-96" controls autoPlay>
                   <source
                     src={`${apiURL}/event/videos/cod2`}
@@ -82,7 +82,7 @@ function FOSSit2024() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 

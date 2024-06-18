@@ -65,7 +65,7 @@ function HackersHorizon() {
               </div>
             </div>
             <div>
-              <div class="-mr-2 rounded-lg md:rounded-l-full h-96">
+              {/* <div class="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
                     src={`${apiURL}/event/videos/hackerhorizon`}
@@ -73,7 +73,7 @@ function HackersHorizon() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 
