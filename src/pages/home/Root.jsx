@@ -58,30 +58,6 @@ function Root() {
   return (
     <>
       <Particles />
-      
-      <div className="flex justify-center items-center font-space mt-5">
-      <Alert
-       className="bg-[#000000] w-[80%] opacity-80"
-        open={open}
-        icon={<Icon />}
-        action={
-          <Button
-            variant="text"
-            color="white"
-            size="xl"
-            className="!absolute top-3 right-3"
-            onClick={()=>{
-              window.location.href="https://ctf.lugvitc.org"
-            }}
-            href=''
-          >
-            Visit
-          </Button>
-        }
-      >
-        Password'24 is live. CTF starts at January 29'2024 18:00:00. Go visit.
-      </Alert>  
-      </div>
       <div className="flex flex-row flex-wrap  ">
         
         <div className="flex justify-center items-center flex-wrap sm:w-7/12 sm:h-[60vh]">
