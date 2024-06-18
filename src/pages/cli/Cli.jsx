@@ -70,6 +70,8 @@ export default function Cli() {
               <li>05: LINUX Installation Booth</li>
               <li>06: Password</li>
               <li>07: Cyber-0-Day 2.0</li>
+              <li>08: Password 2024</li>
+              <li>09: FOSSit 2024</li>
             </ul>
           </div>
         );
