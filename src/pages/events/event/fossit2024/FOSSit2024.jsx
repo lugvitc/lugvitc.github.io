@@ -4,11 +4,14 @@ import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import i1 from "../../../../images/events/cyber-0-day-2/1.jpg";
-import i2 from "../../../../images/events/cyber-0-day-2/2.jpg";
-import i3 from "../../../../images/events/cyber-0-day-2/3.jpg";
-import i4 from "../../../../images/events/cyber-0-day-2/4.jpg";
-import i5 from "../../../../images/events/cyber-0-day-2/5.jpg";
+import i1 from "../../../../images/events/fossit24/1.jpg";
+import i2 from "../../../../images/events/fossit24/2.jpg";
+import i3 from "../../../../images/events/fossit24/3.jpg";
+import i4 from "../../../../images/events/fossit24/4.jpg";
+import i5 from "../../../../images/events/fossit24/5.jpg";
+import i6 from "../../../../images/events/fossit24/6.jpg";
+import i7 from "../../../../images/events/fossit24/7.jpg";
+import i8 from "../../../../images/events/fossit24/8.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -104,6 +107,15 @@ function FOSSit2024() {
               className="mySwiper"
             >
               <SwiperSlide>
+                <img src={i5} alt="loading image ./...../." />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={i6} alt="loading image ./...../." />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={i8} alt="loading image ./...../." />
+              </SwiperSlide>
+              <SwiperSlide>
                 <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
@@ -114,18 +126,6 @@ function FOSSit2024() {
               </SwiperSlide>
               <SwiperSlide>
                 <img src={i4} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i5} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i1} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i2} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
             </Swiper>
           </div>
