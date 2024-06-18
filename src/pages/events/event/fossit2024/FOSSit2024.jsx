@@ -29,15 +29,15 @@ function FOSSit2024() {
       <div className="bg-transparent font-space">
         <div className="text-gray-300 container  mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
           <p className="font-space text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
-            FOSS'it 2024
+            FOSSit '24
           </p>
           <div className="h-10"></div>
           <p className="max-w-2xl font-space text-xl text-gray-400 md:text-2xl">
-            FOSS'it 2024 was a 24-hour Open Source marathon held on April 14,
-            2024 aimed towards introducing the participants to the different
-            aspects of Free and Open Source Software. With workshops,
-            competition, collaboration, the event encapsulated the world of FOSS
-            into a informative and fun experience.
+            FOSSit '24 was a 24-hour Open Source marathon held on April 14, 2024
+            aimed towards introducing the participants to the different aspects
+            of Free and Open Source Software. With workshops, competition,
+            collaboration, the event encapsulated the world of FOSS into a
+            informative and fun experience.
           </p>
 
           <div className="h-12 md:h-24"></div>
@@ -183,7 +183,7 @@ function FOSSit2024() {
               <div className="grid gap-4 mx-4 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">
                   <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400">
-                    <h5 className="text-2xl font-semibold">FOSS'it 2024</h5>
+                    <h5 className="text-2xl font-semibold">FOSSit '24</h5>
                     <span className="text-sm font-bold tracki uppercase text-white">
                       Event Details
                     </span>
