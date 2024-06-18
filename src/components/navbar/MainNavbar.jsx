@@ -46,13 +46,13 @@ const navListMenuItems = [
   {
     title: "Forums",
     description: "Linux Club's own forum and discussion area.",
-    link: "https://forum.lugvitc.org/",
+    link: "https://forum.lugvitc.net/",
   },
   {
     title: "Cloud",
     description:
       "Linux Club's own online management tool to manage club's activities",
-    link: "https://cloud.lugvitc.org/",
+    link: "https://cloud.lugvitc.net/",
   },
 ];
 
@@ -94,7 +94,7 @@ const navListMenuItemsSupport = [
     title: "Support",
     description: "Reach out to us for assistance or inquiries on our Forums",
     icon: GlobeAmericasIcon,
-    link: "https://forum.lugvitc.org/",
+    link: "https://forum.lugvitc.net/",
   },
   {
     title: "Contact",

@@ -93,49 +93,49 @@ function AdrenalineFOSSDay() {
             >
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
