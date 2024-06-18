@@ -106,7 +106,7 @@ function EventsTimeLine() {
 
   return (
     <>
-      <div class="w-full md:mx-5 md:px-10 font-space">
+      <div class="md:mx-5 md:px-10 font-space">
         <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-white ">
           {/* <!-- left --> */}
 
