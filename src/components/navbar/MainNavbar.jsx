@@ -348,6 +348,11 @@ const navListItems = [
     icon: CubeTransparentIcon,
     link: "#/events",
   },
+  {
+    label: "~cd hub",
+    icon: CodeBracketSquareIcon,
+    link: "http://hub.lugvitc.net/",
+  }
 ];
 
 function NavList() {
@@ -372,7 +377,7 @@ function NavList() {
         </Typography>
         // </Link>
       ))}
-      <NavListMenu />
+      {/* <NavListMenu /> */}
       <NavListMenuAboutUs />
       <NavListMenuSupport />
     </ul>
