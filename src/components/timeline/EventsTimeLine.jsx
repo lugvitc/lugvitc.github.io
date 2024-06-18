@@ -218,7 +218,7 @@ function EventsTimeLine() {
                   <b className="text-blue-gray-600">
                     [root@lugvitc superuser]#
                   </b>{" "}
-                  <b className="text-light-green-300">cat cod2.sh </b>
+                  <b className="text-light-green-300">cat fossit24.sh </b>
                 </p>
                 <p>
                   FOSSit '24 was a 24-hour Open Source marathon held on April 14, 2024
