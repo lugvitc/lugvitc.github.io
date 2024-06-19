@@ -4,11 +4,18 @@ import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import i1 from "../../../../images/events/cyber-0-day-2/1.jpg";
-import i2 from "../../../../images/events/cyber-0-day-2/2.jpg";
-import i3 from "../../../../images/events/cyber-0-day-2/3.jpg";
-import i4 from "../../../../images/events/cyber-0-day-2/4.jpg";
-import i5 from "../../../../images/events/cyber-0-day-2/5.jpg";
+import i1 from "../../../../images/events/password24/1.jpg";
+import i2 from "../../../../images/events/password24/2.jpg";
+import i3 from "../../../../images/events/password24/3.jpg";
+import i4 from "../../../../images/events/password24/4.jpg";
+import i5 from "../../../../images/events/password24/5.jpg";
+import i6 from "../../../../images/events/password24/6.jpg";
+import i7 from "../../../../images/events/password24/7.jpg";
+import i8 from "../../../../images/events/password24/8.jpg";
+import i9 from "../../../../images/events/password24/9.jpg";
+import i10 from "../../../../images/events/password24/10.jpg";
+import i11 from "../../../../images/events/password24/11.jpg";
+import i12 from "../../../../images/events/password24/12.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -77,7 +84,7 @@ function Password2024() {
               </div>
             </div>
             <div>
-              <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
                 <video className=" rounded-lg w-30 h-96" controls autoPlay>
                   <source
                     src={`${apiURL}/event/videos/cod2`}
@@ -85,7 +92,7 @@ function Password2024() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -110,25 +117,20 @@ function Password2024() {
                 <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={i2} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i3} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
                 <img src={i4} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
                 <img src={i5} alt="loading image ./...../." />
               </SwiperSlide>
+              <SwiperSlide><img src={i6} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i7} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i8} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i9} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i10} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i11} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i12} alt="loading image ./...../." /></SwiperSlide>
               <SwiperSlide>
                 <img src={i1} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i2} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
             </Swiper>
           </div>

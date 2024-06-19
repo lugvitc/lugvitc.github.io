@@ -67,7 +67,7 @@ function Cod() {
               </div>
             </div>
             <div>
-              <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video
                   className=" w-auto h-96 rounded-lg"
                   controls
@@ -77,7 +77,7 @@ function Cod() {
                   <source src={`${apiURL}/event/videos/cod`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 
