@@ -65,7 +65,7 @@ function HackersHorizon() {
               </div>
             </div>
             <div>
-              <div class="-mr-2 rounded-lg md:rounded-l-full h-96">
+              {/* <div class="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
                     src={`${apiURL}/event/videos/hackerhorizon`}
@@ -73,7 +73,7 @@ function HackersHorizon() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -93,19 +93,19 @@ function HackersHorizon() {
           {/* <div class="grid gap-4 md:grid-cols-3">
             <div class="flex-col p-8 py-16 rounded-lg shadow-2xl md:p-12 bg-gradient-to-br from-gray-900 to-black">
               <img
-                src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                 alt="loading image ./...../."
               />
             </div>
             <div class="flex-col p-8 py-16 rounded-lg shadow-2xl md:p-12 bg-gradient-to-b from-gray-900 to-black">
               <img
-                src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                 alt="loading image ./...../."
               />
             </div>
             <div class="flex-col p-8 py-16 rounded-lg shadow-2xl md:p-12 bg-gradient-to-bl from-gray-900 to-black">
               <img
-                src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                 alt="loading image ./...../."
               />
             </div>

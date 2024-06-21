@@ -16,17 +16,6 @@ function Footer() {
               <div class="flex justify-center ">
                 <a
                   target="_blank"
-                  href="https://discord.gg/ApShC247me"
-                  class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-400"
-                >
-                  <img
-                    src={Discord}
-                    alt=""
-                    className="h-6 w-6 hover:bg-blue-600 rounded-md"
-                  />
-                </a>
-                <a
-                  target="_blank"
                   href="https://www.instagram.com/lugvitc/"
                   class="mr-6 text-gray-600 dark:text-gray-400 hover:text-blue-400"
                 >

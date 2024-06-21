@@ -4,11 +4,18 @@ import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import i1 from "../../../../images/events/cyber-0-day/1.jpg";
-import i2 from "../../../../images/events/cyber-0-day/2.jpg";
-import i3 from "../../../../images/events/cyber-0-day/3.jpg";
-import i4 from "../../../../images/events/cyber-0-day/4.jpg";
-import i5 from "../../../../images/events/cyber-0-day/5.jpg";
+import i1 from "../../../../images/events/password24/1.jpg";
+import i2 from "../../../../images/events/password24/2.jpg";
+import i3 from "../../../../images/events/password24/3.jpg";
+import i4 from "../../../../images/events/password24/4.jpg";
+import i5 from "../../../../images/events/password24/5.jpg";
+import i6 from "../../../../images/events/password24/6.jpg";
+import i7 from "../../../../images/events/password24/7.jpg";
+import i8 from "../../../../images/events/password24/8.jpg";
+import i9 from "../../../../images/events/password24/9.jpg";
+import i10 from "../../../../images/events/password24/10.jpg";
+import i11 from "../../../../images/events/password24/11.jpg";
+import i12 from "../../../../images/events/password24/12.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,7 +25,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { apiURL } from "../../../../utils/constant";
 
-function Cod() {
+function Password2024() {
   useEffect(() => {
     // Scroll to the top when the component mounts
     window.scrollTo(0, 0);
@@ -29,13 +36,15 @@ function Cod() {
       <div className="bg-transparent font-space">
         <div className="text-gray-300 container  mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
           <p className="font-space text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
-            Cyber-0-Day
+            Password 2.0
           </p>
           <div className="h-10"></div>
           <p className="max-w-2xl font-space text-xl text-gray-400 md:text-2xl">
-            In partnership with The Tech-Researchers Club, the Linux Club at VIT
-            Chennai orchestrated the Cyber-0-Day event spanning from the 24th to
-            the 25th of September 2022.
+            The club's flagship event for the academic year, Password 2.0 was
+            held on January 29-30, 2024. With a participation far exceeding the
+            expected 500, workshops, tutorials, a innovative operating system
+            and a CTF competition unlike any other, it was one of the most
+            memorable events.
           </p>
 
           <div className="h-12 md:h-24"></div>
@@ -43,17 +52,18 @@ function Cod() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <p className="self-start inline font-space text-xl font-medium text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-600">
-                Linux workshop led by the club's President, Beleswar Prasad
-                Padhi, and Vice President, Samridh Anand Paatni.
+                Cyber Security
               </p>
               {/* <h2 className="text-4xl font-bold">.</h2> */}
               <div className="h-6"></div>
               <p className=" text-2xl text-gray-400 md:pr-10">
-                The event's highlight was a Capture the Flag (CTF) competition,
-                featuring meticulously crafted challenges by LUG members.
+                Workshops on Linux basics, web security, cryptography, binary
+                exploitation and real life exploits by the members followed by
+                CTFs and the novel Attack and Defense competition, it was the
+                pinnacle of events in its technology and turnout.
               </p>
               <div className="h-8"></div>
-              <div className="grid grid-cols-2 gap-4 pt-8 border-t border-gray-800">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-8 border-t border-gray-800">
                 <div>
                   <p className="font-semibold text-gray-400">Part 1</p>
                   <div className="h-4"></div>
@@ -62,19 +72,24 @@ function Cod() {
                 <div>
                   <p className="font-semibold text-gray-400">Part 2</p>
                   <div className="h-4"></div>
-                  <p className="font-space text-gray-400">CTF Competition</p>
+                  <p className="font-space text-gray-400">Round 1 - CTF</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-400">Part 3</p>
+                  <div className="h-4"></div>
+                  <p className="font-space text-gray-400">
+                    Round 2 - Attack and Defense
+                  </p>
                 </div>
               </div>
             </div>
             <div>
-              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
-                <video
-                  className=" w-auto h-96 rounded-lg"
-                  controls
-                  autoplay
-                  muted
-                >
-                  <source src={`${apiURL}/event/videos/cod`} type="video/mp4" />
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96 ">
+                <video className=" rounded-lg w-30 h-96" controls autoPlay>
+                  <source
+                    src={`${apiURL}/event/videos/cod2`}
+                    type="video/mp4"
+                  />
                   Your browser does not support the video tag.
                 </video>
               </div> */}
@@ -102,25 +117,20 @@ function Cod() {
                 <img src={i1} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={i2} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i3} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
                 <img src={i4} alt="loading image ./...../." />
               </SwiperSlide>
               <SwiperSlide>
                 <img src={i5} alt="loading image ./...../." />
               </SwiperSlide>
+              <SwiperSlide><img src={i6} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i7} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i8} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i9} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i10} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i11} alt="loading image ./...../." /></SwiperSlide>
+              <SwiperSlide><img src={i12} alt="loading image ./...../." /></SwiperSlide>
               <SwiperSlide>
                 <img src={i1} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i2} alt="loading image ./...../." />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={i3} alt="loading image ./...../." />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -178,7 +188,7 @@ function Cod() {
               <div className="grid gap-4 mx-4 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">
                   <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400">
-                    <h5 className="text-2xl font-semibold">Cyber-O-Day</h5>
+                    <h5 className="text-2xl font-semibold">Password 2.0</h5>
                     <span className="text-sm font-bold tracki uppercase text-white">
                       Event Details
                     </span>
@@ -189,41 +199,40 @@ function Cod() {
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 1 </h3> */}
                       <time className="text-xs tracki uppercase text-white">
-                        24th to the 25th of September
+                        {/* 24th to the 25th of September */}
+                        January 29 - January 30, 2024
                       </time>
                       <p className="mt-3">
-                        With the generous sponsorship of Rapido, the event
-                        attracted the participation of approximately 100
-                        enthusiastic individuals, forming teams of 1-3 members
-                        each. The event's kickoff involved a Linux workshop
-                        conducted by President Beleswar Prasad Padhi and Vice
-                        President Samridh Anand Paatni, setting the stage for a
-                        day filled with cybersecurity exploration.
+                        Password 2.0 kicked off with an exploration into some
+                        real life exploits used by cyber security professionals
+                        and explanations on some of the most popular cyber-sec
+                        attacks in the industry. This was followed by workshops
+                        on operating systems, linux basics, web exploitation,
+                        binary exploitation, brute forcing and more. The event
+                        also featured the first beta test of the operating
+                        system "Strat OS".
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">Day 2</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
                       <p className="mt-3">
-                        Following the enlightening workshop, participants
-                        engaged in a cybersecurity quiz, stimulating their
-                        intellect before enjoying a well-deserved lunch. The
-                        highlight of the event was the CTF+Bug Bounty challenge,
-                        a meticulously crafted competition by LUG members. The
-                        CTF platform was ingeniously developed by the club.
+                        The first round was a direct Capture The Flag (CTF)
+                        round with many cryptic, easy and difficult CTFs from
+                        the technical team. At the end of the round, the
+                        leaderboard was announced for the commencement of the
+                        next round.{" "}
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-400">
                       {/* <h3 className="text-xl font-semibold tracki">End</h3> */}
                       <time className="text-xs tracki uppercase text-white"></time>
                       <p className="mt-3">
-                        The top-performing teams from the initial rounds
-                        advanced to a 12-hour hackathon, where they tackled
-                        intricate problem statements focusing on API Testing
-                        Platforms and Network Monitoring Tools. The crowning
-                        moment occurred in the Nethaji Auditorium, where the top
-                        three victorious teams were awarded their well-deserved
-                        prizes
+                        The Attack and Defense round featured the formation of
+                        Meta teams based on the leaderboard announced prior.
+                        Their objective: Attack other teams server and defend
+                        your own. Featuring high difficulty CTFs, this one was
+                        made to challenge even the best teams.
                       </p>
                     </div>
                   </div>
@@ -239,4 +248,4 @@ function Cod() {
   );
 }
 
-export default Cod;
+export default Password2024;
