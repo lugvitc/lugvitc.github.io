@@ -32,6 +32,8 @@ import HackersHorizon from "./pages/events/event/hackers-horizon/HackersHorizon"
 import LinuxInstallationBooth2 from "./pages/events/event/linux-installation-booth2/LinuxInstallationBooth2";
 import Password2023 from "./pages/events/event/password2023/Password2023";
 import CyberOday2 from "./pages/events/event/cod2/Cod2";
+import Password2024 from "./pages/events/event/password2024/Password2024";
+import FOSSit2024 from "./pages/events/event/fossit2024/FOSSit2024.jsx";
 
 import Chapter_1 from "./pages/learn/chapters/Chapter_1";
 import Chapter_2 from "./pages/learn/chapters/Chapter_2";
@@ -60,6 +62,8 @@ export const paths = {
   linuxInstallationBooth2: "/linuxInstallationBooth2",
   password2023: "/password2023",
   cyberOday2: "/cyberOday2",
+  password2024: "/password2024",
+  fossit2024: "/fossit2024",
 
   cli: "/cli",
   chapter_1: "/chapter_1",
@@ -144,6 +148,14 @@ const router = createHashRouter([
   {
     path: "/cyberOday2",
     element: <CyberOday2 />,
+  },
+  {
+    path: "/password2024",
+    element: <Password2024 />,
+  },
+  {
+    path: "/fossit2024",
+    element: <FOSSit2024 />,
   },
   {
     path: "/cli",

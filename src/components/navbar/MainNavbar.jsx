@@ -46,47 +46,47 @@ const navListMenuItems = [
   {
     title: "Forums",
     description: "Linux Club's own forum and discussion area.",
-    link: "https://forum.lugvitc.org/",
+    link: "https://forum.lugvitc.net/",
   },
   {
     title: "Cloud",
     description:
       "Linux Club's own online management tool to manage club's activities",
-    link: "https://cloud.lugvitc.org/",
+    link: "https://cloud.lugvitc.net/",
   },
 ];
 
 const navListMenuItemsAboutUs = [
-  {
-    title: "Gallery",
-    description: "Sharing our experiences.",
-    icon: SquaresPlusIcon,
-    link: "#/gallery",
-  },
+  // {
+  //   title: "Gallery",
+  //   description: "Sharing our experiences.",
+  //   icon: SquaresPlusIcon,
+  //   link: "#/gallery",
+  // },
   {
     title: "About Us",
     description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
     link: "#/about",
   },
-  {
-    title: "Blog",
-    description: "Find the perfect solution for your needs.",
-    icon: Bars4Icon,
-    link: "#/blogs",
-  },
+  // {
+  //   title: "Blog",
+  //   description: "Find the perfect solution for your needs.",
+  //   icon: Bars4Icon,
+  //   link: "#/blogs",
+  // },
   {
     title: "Members",
     description: "Amazing group of inquisitive people.",
     icon: UserGroupIcon,
     link: "#/members",
   },
-  {
-    title: "Leaderboard",
-    description: "leaderboard for club members.",
-    icon: TrophyIcon,
-    link: "#/leaderboard",
-  },
+  // {
+  //   title: "Leaderboard",
+  //   description: "leaderboard for club members.",
+  //   icon: TrophyIcon,
+  //   link: "#/leaderboard",
+  // },
 ];
 
 const navListMenuItemsSupport = [
@@ -94,7 +94,7 @@ const navListMenuItemsSupport = [
     title: "Support",
     description: "Reach out to us for assistance or inquiries on our Forums",
     icon: GlobeAmericasIcon,
-    link: "https://forum.lugvitc.org/",
+    link: "https://forum.lugvitc.net/",
   },
   {
     title: "Contact",
@@ -348,6 +348,11 @@ const navListItems = [
     icon: CubeTransparentIcon,
     link: "#/events",
   },
+  {
+    label: "~cd hub",
+    icon: CodeBracketSquareIcon,
+    link: "http://hub.lugvitc.net/",
+  }
 ];
 
 function NavList() {
@@ -372,9 +377,23 @@ function NavList() {
         </Typography>
         // </Link>
       ))}
-      <NavListMenu />
+      {/* <NavListMenu /> */}
       <NavListMenuAboutUs />
-      <NavListMenuSupport />
+      {/* <NavListMenuSupport /> */}
+      <Typography
+          as="a"
+          href={"/#/contact"}
+          variant="small"
+          color="gray"
+          className="font-light font-space text-xs  text-white"
+        >
+          <MenuItem className="flex items-center gap-2 lg:rounded-full hover:bg-[#1f2937]">
+            {React.createElement(PhoneIcon, {
+              className: "h-[18px] w-[18px] text-white",
+            })}{" "}
+            <span className="text-white "> ~cd contact</span>
+          </MenuItem>
+        </Typography>
     </ul>
   );
 }

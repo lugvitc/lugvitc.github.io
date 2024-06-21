@@ -65,7 +65,7 @@ function GsocMadeEasy() {
               </div>
             </div>
             <div>
-              <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
                     src="https://docs.material-tailwind.com/demo.mp4"
@@ -73,7 +73,7 @@ function GsocMadeEasy() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 

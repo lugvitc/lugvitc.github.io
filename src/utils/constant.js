@@ -1,4 +1,4 @@
-export const apiURL = "https://leaderboard.lugvitc.org";
+export const apiURL = "https://leaderboard.lugvitc.net";
 
 export const randomPhoto = () => {
   return (

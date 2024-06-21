@@ -62,7 +62,7 @@ function AdrenalineFOSSDay() {
               </div>
             </div>
             <div>
-              <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
+              {/* <div className="-mr-2 rounded-lg md:rounded-l-full h-96">
                 <video className=" rounded-lg" controls autoPlay>
                   <source
                     src="https://docs.material-tailwind.com/demo.mp4"
@@ -70,7 +70,7 @@ function AdrenalineFOSSDay() {
                   />
                   Your browser does not support the video tag.
                 </video>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -93,49 +93,49 @@ function AdrenalineFOSSDay() {
             >
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://lugvitc.org/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
+                  src="https://lugvitc.net/static/media/hacker-horizon.79253aeafe52d3409068.JPG"
                   alt="loading image ./...../."
                 />
               </SwiperSlide>
