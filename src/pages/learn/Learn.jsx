@@ -15,7 +15,7 @@ function Learn() {
       link: "/chapter_1",
       title: "Linux: What? Why? How?",
       description:
-        "What is Linux,Linux Distributions , The Linux Family Tree,Why do we need it?,Installation ...",
+        "What is Linux, Linux Distributions, The Linux Family Tree,Why do we need it?,Installation ...",
     },
     {
       link: "/chapter_2",
@@ -34,19 +34,19 @@ function Learn() {
       link: "/chapter_4",
       title: "Processes and Packages",
       description:
-        "Processes, Process states , Process Monitoring, Background and Foreground jobs, Package Managers...",
+        "Processes, Process states, Process Monitoring, Background and Foreground jobs, Package Managers...",
     },
     {
       link: "/chapter_5",
       title: "Advanced Features",
       description:
-        "Terminal Utilities, Path Expansion ,Brace Expansion ,Modes, Opening a file, Changing Modes and Giving Commands, Vim cheat sheet ...",
+        "Terminal Utilities, Path Expansion, Brace Expansion, Modes, Opening a file, Changing Modes and Giving Commands, Vim cheat sheet ...",
     },
     {
       link: "/chapter_6",
       title: "Desktop Customization",
       description:
-        "Vim Customization, Vim Plugins , Customizing GNOME, Extensions",
+        "Vim Customization, Vim Plugins, Customizing GNOME, Extensions",
     },
   ];
 

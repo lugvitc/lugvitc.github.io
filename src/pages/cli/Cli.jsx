@@ -3,7 +3,7 @@ import { Terminal } from "primereact/terminal";
 import { TerminalService } from "primereact/terminalservice";
 import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
-import { Typewriter } from "react-simple-typewriter";
+// import { Typewriter } from "react-simple-typewriter";
 export default function Cli() {
   const commandHandler = (text) => {
     // console.log("executing: ", text);
@@ -60,22 +60,6 @@ export default function Cli() {
         break;
 
       case "event-list":
-        // response = (
-        //   <div>
-        //     <ul>
-        //       <li>00: Adrenaline/FOSS Day</li>
-        //       <li>01: Rescue Tux</li>
-        //       <li>02: Cyber-0-Day</li>
-        //       <li>03: Hackers' Horizon</li>
-        //       <li>04: GSOC Made Easy</li>
-        //       <li>05: LINUX Installation Booth</li>
-        //       <li>06: Password</li>
-        //       <li>07: Cyber-0-Day 2.0</li>
-        //       <li>08: Password 2024</li>
-        //       <li>09: FOSSit 2024</li>
-        //     </ul>
-        //   </div>
-        // );
         response = (
           <div>
             <ul>
@@ -98,26 +82,32 @@ export default function Cli() {
         response =
           "Held on the 17th March, 2022, Adreanline/FOSS Day was a one-day event for participants to show-off their familiarity with open-source technologies. Participants gathered to demonstrate their projects to an industry expert.";
         break;
+
       case "man rescue-tux":
         response =
           "Rescue The Tux event, generously sponsored by GeeksForGeeks, was an opportunity to bring together participants for an immersive Linux competition, introducing them to the world of Linux and Open Source Software.";
         break;
+
       case "man cyber-0-day":
         response =
           "Cyber-0-Day 2.0, the flagship event of Technovit, took our future hackers on a riveting expedition into the world of cybersecurity. Held at the grand Netaji Auditorium, this 24-hour tech marathon was an unforgettable experience.The event commenced with a knowledge-packed workshop covering five key topics: Linux fundamentals, OSINT reconnaissance, Web exploitation, cryptography, and Binary exploitation. Participants absorbed valuable insights and honed their skills during these interactive as well as hands-on sessions. Our tech team was active throughout the sessions assisting them with their doubts.";
         break;
+
       case "man hackers-horizon":
         response =
           'The Linux Club organized a highly successful two-day event, "Hackers Horizon" on 11th and 12th February 2023, featuring a full hands-on hacking session led by the esteemed Mr. Ankit Singh, a renowned cybersecurity expert and a top 50 Bugcrowd hacker globally.';
         break;
+
       case "man gsoc-made-easy":
         response =
-          "Linux Club, VIT Chennai successfully organised “Google Summer of Code Made Easy” , purpose of the event was to guide students about GSOC. Beleswar Prasad Padhi, president of LINUX CLUB was speaker of the event, he participated in GSoC and contributed to the well-known Metasploit cybersecurity framework";
+          "Linux Club, VIT Chennai successfully organised “Google Summer of Code Made Easy”, purpose of the event was to guide students about GSOC. Beleswar Prasad Padhi, president of LINUX CLUB was speaker of the event, he participated in GSoC and contributed to the well-known Metasploit cybersecurity framework";
         break;
+
       case "man linux-installation-booth":
         response =
           "Linux Club, VIT Chennai successfully organised “LINUX INSTALLATION BOOTH”, where we helped students both install Linux OS and dual boot their systems. Our aim was to make Linux accessible to everyone, regardless of their technical background, and we are proud to say that we achieved this goal. During the event, we provided step-by-step guidance and assistance to students installing Linux on their systems. We welcomed more than 200 participants. It was amazing to see the enthusiasm and curiosity of the students who participated in the booth. Many of them were interested in learning more about Linux and its potential.";
         break;
+
       case "man password":
         response =
           "Password in this event participants will have the opportunity to engage in hands-on workshops, where they can learn practical skills related to cybersecurity. These workshops will cover areas like cryptography, penetration testing, and incident response";
@@ -127,10 +117,12 @@ export default function Cli() {
         response =
           "Cyber-0-Day 2.0, the flagship event of Technovit, took our future hackers on a riveting expedition into the world of cybersecurity. Held at the grand Netaji Auditorium, this 24-hour tech marathon was an unforgettable experience.The event commenced with a knowledge-packed workshop covering five key topics: Linux fundamentals, OSINT reconnaissance, Web exploitation, cryptography, and Binary exploitation. Participants absorbed valuable insights and honed their skills during these interactive as well as hands-on sessions. Our tech team was active throughout the sessions assisting them with their doubts.";
         break;
+
       case "man password2":
         response =
           "The club's flagship event for the academic year, Password 2.0 saw engaging workshops, the official launch of StratOS and a novel attack and defense based CTF round covering the wide field of cybersecurity";
         break;
+
       case "man fossit":
         response =
           "FOSSit '24 was a 24-hour Open Source marathon aimed towards introducing the participants to the different aspects of Free and Open Source Software. With workshops, competition, collaboration, the event encapsulated the world of FOSS into a informative and fun experience.";
@@ -206,14 +198,16 @@ export default function Cli() {
               <li>rm: Remove files or directories. rm file_name</li>
               <li>cp: Copy files or directories. cp source destination</li>
               <li>
-                {" "}
                 mv: Move or rename files or directories. mv old_name new_name
               </li>
               <li>
                 touch: Create an empty file or update the access and
                 modification times of a file. touch filename
               </li>
-              <li>cat: Display the contents of a file. cat filename</li>
+              <li>
+                cat: Display the contents of a file. cat filename example: cat
+                level_8
+              </li>
               <li>
                 echo: Display a message or concatenate files. echo "Hello,
                 Linux!"
@@ -222,7 +216,6 @@ export default function Cli() {
           </div>
         );
         break;
-        ``;
 
       case "board-member":
         response = (
@@ -286,6 +279,52 @@ export default function Cli() {
               <li>On the web's canvas, he orchestrates fate.</li>
             </ul>
           </div>
+        );
+        break;
+
+      case "nexus":
+        response = (
+          <div>
+            <a href="https://a.lugvitc.net/d577b6d3-6fa2-4cec-ad29-208c9476bf22">
+              Begin
+            </a>
+          </div>
+        );
+        break;
+
+      case "cat level_8":
+        response = (
+          <div>
+            <p>Requires super user privilege</p>
+          </div>
+        );
+        break;
+
+      case "sudo cat level_8":
+        response = (
+          <div>
+            <a href="https://a.lugvitc.net/1cc7a3f4-1637-4ce1-a3b2-051f06f89b2e">
+              Level 9
+            </a>
+          </div>
+        );
+        break;
+
+      case "sudo":
+        response = (
+          <div>Learn the basics before using super user privileges</div>
+        );
+        break;
+
+      case "ls":
+        response = (
+          <ul>
+            <li>Desktop</li>
+            <li>Downloads</li>
+            <li>level_8</li>
+            <li>Music</li>
+            <li>Pictures</li>
+          </ul>
         );
         break;
 
