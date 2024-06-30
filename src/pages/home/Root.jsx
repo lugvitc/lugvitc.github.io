@@ -53,13 +53,11 @@ function Root() {
       </svg>
     );
   }
-  
 
   return (
     <>
       <Particles />
       <div className="flex flex-row flex-wrap  ">
-        
         <div className="flex justify-center items-center flex-wrap sm:w-7/12 sm:h-[60vh]">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
@@ -100,7 +98,7 @@ function Root() {
             </p>
             <Typewriter
               words={[
-                "Are you a member of CLI cult ,If yes explore our website with our CLI",
+                "Are you a member of CLI cult, If yes explore our website with our CLI",
               ]}
               cursor
               cursorStyle="_"
