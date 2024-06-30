@@ -285,7 +285,9 @@ export default function Cli() {
       case "nexus":
         response = (
           <div>
-            <a href="https://a.lugvitc.net/vlvl5">Begin</a>
+            <a href="https://a.lugvitc.net/d577b6d3-6fa2-4cec-ad29-208c9476bf22">
+              Begin
+            </a>
           </div>
         );
         break;
