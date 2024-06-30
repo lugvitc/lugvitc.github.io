@@ -301,16 +301,13 @@ export default function Cli() {
         break;
 
       case "sudo cat level_8":
-        let password = window.prompt("Password: ");
-        if (password === "Qwa6dhb@LGNp") {
-          response = (
-            <div>
-              <a href="https://git.lugvitc.net/KreativeThinker/PhantomExchange">
-                Level 9
-              </a>
-            </div>
-          );
-        }
+        response = (
+          <div>
+            <a href="https://a.lugvitc.net/1cc7a3f4-1637-4ce1-a3b2-051f06f89b2e">
+              Level 9
+            </a>
+          </div>
+        );
         break;
 
       case "sudo":
