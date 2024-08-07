@@ -8,30 +8,20 @@ function Contact() {
     {
       label: "Technical",
       value: "Technical",
-      desc: `technical@lugvitc.net`,
-      head: "Animesh Rai",
-      contact: "9669662159",
+      head: "Aadivishnu Gajendra",
+      contact: "8657069756",
     },
     {
-      label: "Operations",
-      value: "Operations",
-      desc: `operations@lugvitc.net`,
-      head: "Srideep Aalla",
-      contact: "9392658762",
-    },
-    {
-      label: "Management",
-      value: "Management",
-      desc: `management@lugvitc.net`,
-      head: "Yuvraj Singh",
-      contact: "8929740534",
+      label: "Outreach",
+      value: "Outreach",
+      head: "Keerthana S",
+      contact: "8838747110",
     },
     {
       label: "Media",
       value: "Media",
-      desc: `media@lugvitc.net`,
-      head: "Hrishikesh Naramparambath",
-      contact: "9940316676",
+      head: "Harshanth Srinivasan",
+      contact: "7200043686",
     },
     // {
     //   label: "Advisory",
@@ -43,16 +33,14 @@ function Contact() {
     {
       label: "Treasury",
       value: "Treasury",
-      desc: `treasury@lugvitc.net`,
-      head: "K Revanth Sai",
-      contact: "9705039703",
+      head: "Shyam Sundar R",
+      contact: "7449097613",
     },
     {
       label: "Content",
       value: "Content",
-      desc: `content@lugvitc.net`,
-      head: "Chitranshu Gupta",
-      contact: "9389786149",
+      head: "Siya Kumar",
+      contact: "8920892177",
     },
   ];
   return (
@@ -153,8 +141,8 @@ function Contact() {
             </svg>
           </div>
           <h6 className="text-xl mt-5 font-semibold text-white">President</h6>
-          <p className="mt-2 mb-4 text-white">Abhishek </p>
-          <p className="mt-2 mb-4 text-white">+91 9334138650</p>
+          <p className="mt-2 mb-4 text-white">Ojass Praven Bharati </p>
+          <p className="mt-2 mb-4 text-white">+91 8830933096</p>
         </div>
         <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
@@ -176,8 +164,8 @@ function Contact() {
           <h5 className="text-xl mt-5 font-semibold text-white">
             Vice-President
           </h5>
-          <p className="mt-2 mb-4 text-white">Aditya Kushwaha</p>
-          <p className="mt-2 mb-4 text-white">+91 8072320756</p>
+          <p className="mt-2 mb-4 text-white">Shaina</p>
+          <p className="mt-2 mb-4 text-white">+91 8925785445</p>
         </div>
         {/* <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
@@ -217,9 +205,6 @@ function Contact() {
                 <div class="flex-auto mx-5">
                   <h1 class="text-xl font-bold">{label}</h1>
                 </div>
-                <a href="#" class="text-center text-blue-gray-800 mx-5">
-                  {desc}
-                </a>
                 <a href="#" class="text-center text-blue-gray-800 mx-5">
                   {head}
                 </a>
