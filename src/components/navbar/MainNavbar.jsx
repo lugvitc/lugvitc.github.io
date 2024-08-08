@@ -352,6 +352,11 @@ const navListItems = [
     label: "~cd hub",
     icon: CodeBracketSquareIcon,
     link: "http://hub.lugvitc.net/",
+  },
+  {
+    label: "~cd leaderboards",
+    icon: TrophyIcon,
+    link: "#/leaderboard",
   }
 ];
 
