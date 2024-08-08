@@ -288,34 +288,7 @@ export default function Leaderboard() {
 
       {/* top cards */}
       <div className="flex flex-row flex-wrap justify-center items-center font-space text-white">
-        <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6  rounded-xl sm:px-12 bg-[#FFD700] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(248,231,28,1)] ">
-          <img
-            src={topCardsData[0].photo ? imageUrl + reg_no : randomPhoto()}
-            alt="loadinf"
-            className="w-32 h-32 mx-auto rounded-full  aspect-square"
-            onError={(e) => {
-              e.target.onerror = null;
-              setTimeout(() => {
-                e.target.src = topCardsData[0].photo ? imageUrl + reg_no : randomPhoto();
-              }, 1000);
-            }}
-          />
-          <div className="space-y-4 text-center divide-y ">
-            <div className="my-2 space-y-1">
-              <h2 className="text-xl font-semibold sm:text-2xl">
-                {topCardsData[0].name}
-              </h2>
-              <p className="px-5 text-xs sm:text-base ">
-                {topCardsData[0].department}
-              </p>
-            </div>
-            <div className="flex justify-center pt-2 space-x-4 align-center">
-              {topCardsData[0].points}
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6  rounded-xl sm:px-12 bg-[#a1a1a1] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(159,158,155,0.75)]">
+        <div className="flex flex-col justify-center max-w-xs h-[23rem] p-6  rounded-xl sm:px-12 mx-5 my-6 shadow-[0px_0px_32px_10px_rgba(159,158,155,0.75)]">
           <img
             src={topCardsData[1].photo ? imageUrl + reg_no : randomPhoto()}
             alt=""
@@ -342,7 +315,34 @@ export default function Leaderboard() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6  rounded-xl sm:px-12 bg-[#cd7f32] mx-5 my-6 shadow-[0px_0px_92px_10px_rgba(213,153,100,1)]">
+        <div className="flex flex-col justify-center max-w-xs h-[25rem]  p-6  rounded-xl sm:px-12 mx-5 my-6 shadow-[0px_0px_32px_10px_rgba(248,231,28,1)] ">
+          <img
+            src={topCardsData[0].photo ? imageUrl + reg_no : randomPhoto()}
+            alt="loadinf"
+            className="w-32 h-32 mx-auto rounded-full  aspect-square"
+            onError={(e) => {
+              e.target.onerror = null;
+              setTimeout(() => {
+                e.target.src = topCardsData[0].photo ? imageUrl + reg_no : randomPhoto();
+              }, 1000);
+            }}
+          />
+          <div className="space-y-4 text-center divide-y ">
+            <div className="my-2 space-y-1">
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                {topCardsData[0].name}
+              </h2>
+              <p className="px-5 text-xs sm:text-base ">
+                {topCardsData[0].department}
+              </p>
+            </div>
+            <div className="flex justify-center pt-2 space-x-4 align-center">
+              {topCardsData[0].points}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center max-w-xs h-[20rem] p-6  rounded-xl sm:px-12 mx-5 my-6 shadow-[0px_0px_32px_10px_rgba(213,153,100,1)]">
           <img
             src={topCardsData[2].photo ? imageUrl + reg_no : randomPhoto()}
             alt=""
