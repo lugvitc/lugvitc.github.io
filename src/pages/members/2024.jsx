@@ -46,12 +46,12 @@ export const members_2024 = [
   },
   {
     id: 6,
-    name: "Keerthana S",
+    name: "S.Keerthana",
     position: "Outreach Lead",
     github: "#",
-    linkedin: "#",
-    instagram: "#",
-    email: "#",
+    linkedin: "https://www.linkedin.com/in/keerthana-sundar-40ba52277/",
+    instagram: "https://www.instagram.com/___ketzzz/",
+    email: "mailto:keerthana.s2022c@vitstudent.ac.in",
   },
   {
     id: 7,

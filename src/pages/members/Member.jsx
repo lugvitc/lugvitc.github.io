@@ -30,6 +30,7 @@ import ojass from "../../images/members/ojass.jpeg";
 import shaina from "../../images/members/shaina.jpeg";
 import aadivishnu from "../../images/members/aadivishnu.jpg";
 import siya from "../../images/members/siya.jpeg";
+import keerthana from "../../images/members/keerthana.jpeg";
 
 function Member() {
   const img2024 = [
@@ -39,7 +40,7 @@ function Member() {
     aadivishnu,
     siya,
     blank,
-    blank,
+    keerthana,
     blank
   ];
   const img2023 = [
