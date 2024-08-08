@@ -12,6 +12,8 @@ import Typewriters from "typewriter-effect";
 import { useState } from "react";
 import { apiURL, randomPhoto } from "../../utils/constant";
 import { supabase } from "../../utils/supabase";
+import "react-responsive-modal/styles.css";
+import Modal from "react-responsive-modal";
 
 const TABLE_HEAD = [
   "Member",
@@ -210,6 +212,13 @@ export default function Leaderboard() {
   const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
+  const [current_contribution_details, setCurrent_contribution_details] = useState("");
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const onOpenModal = (credential_details) => {
+    setCurrent_contribution_details(credential_details);
+    setModalOpen(true);
+  };
+  const onCloseModal = () => setModalOpen(false);
 
   const getLeaderboardData = async () => {
     try {
@@ -426,9 +435,6 @@ export default function Leaderboard() {
                       <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
                         Points
                       </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        More info ..
-                      </th>
                     </tr>
                   </thead>
                   <tbody className="bg-[#16161A]">
@@ -444,7 +450,7 @@ export default function Leaderboard() {
                         points,
                       }) => {
                         return (
-                          <tr>
+                          <tr onClick={() => onOpenModal(contribution_details)}>
                             <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
                               <div className="flex items-center">
                                 <div className="flex-shrink-0 w-10 h-10">
@@ -492,57 +498,6 @@ export default function Leaderboard() {
                                 <span className="relative">{points}</span>
                               </span>
                             </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
-                              <span className="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
-                                <span
-                                  aria-hidden
-                                  className="absolute inset-0  rounded-full"
-                                ></span>
-                                <button className="relative hover:text-blue-300">
-                                  <Popover>
-                                    <PopoverHandler>
-                                      <Button>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                          stroke-width="1.5"
-                                          stroke="currentColor"
-                                          className="w-6 h-6"
-                                        >
-                                          <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                                          />
-                                        </svg>
-                                      </Button>
-                                    </PopoverHandler>
-                                    <PopoverContent className="z-[999] grid w-[28rem] grid-cols-1 overflow-hidden p-0">
-                                      <div className="p-4">
-                                        <Typography
-                                          color="blue-gray"
-                                          className="mb-2 text-lg font-bold"
-                                        >
-                                          Contributions
-                                        </Typography>
-                                        <Typography
-                                          variant="small"
-                                          color="gray"
-                                          className="mb-14 font-normal text-blue-gray-500"
-                                        >
-                                          {contribution_details}
-                                        </Typography>
-                                        <a
-                                          href="#"
-                                          className="-ml-3 inline-block"
-                                        ></a>
-                                      </div>
-                                    </PopoverContent>
-                                  </Popover>
-                                </button>
-                              </span>
-                            </td>
                           </tr>
                         );
                       },
@@ -554,6 +509,27 @@ export default function Leaderboard() {
           </div>
         </div>
       </div>
+      <Modal open={modalOpen} onClose={onCloseModal} >
+        <div className="p-4">
+                                        <Typography
+                                          color="blue-gray"
+                                          className="mb-2 text-lg font-bold"
+                                        >
+                                          Contributions
+                                        </Typography>
+                                        <Typography
+                                          variant="small"
+                                          color="gray"
+                                          className="mb-14 font-normal text-blue-gray-500"
+                                        >
+                                          {current_contribution_details}
+                                        </Typography>
+                                        <a
+                                          href="#"
+                                          className="-ml-3 inline-block"
+                                        ></a>
+                                      </div>
+      </Modal>
     </>
   );
 }
