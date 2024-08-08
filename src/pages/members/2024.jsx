@@ -23,8 +23,8 @@ export const members_2024 = [
     position: "Technical Lead",
     github: "https://github.com/mradigen",
     linkedin: "https://linkedin.com/in/aadivishnu-gajendra",
-    instagram: "#",
-    email: "#",
+    instagram: "https://instagram.com/lugvitc",
+    email: "mailto:aadivishnu@proton.me",
   },
   {
     id: 4,
@@ -61,5 +61,23 @@ export const members_2024 = [
     linkedin: "#",
     instagram: "#",
     email: "#",
-  }
+  },
+  {
+    id: 8,
+    name: "Niket Girdhar",
+    position: "Management Lead",
+    github: "https://github.com/lugvitc",
+    linkedin: "https://www.linkedin.com/in/niket-girdhar-068858250/",
+    instagram: "https://instagram.com/lugvitc",
+    email: "mailto:cclinuxclub@vit.ac.in",
+  },
+  {
+    id: 9,
+    name: "Vivek Chaudhary",
+    position: "Co-Management Lead",
+    github: "https://github.com/Vivek084c",
+    linkedin: "https://www.linkedin.com/in/vivek-chaudhary-8243a9250/",
+    instagram: "https://instagram.com/lugvitc",
+    email: "mailto:cclinuxclub@vit.ac.in",
+  },
 ];

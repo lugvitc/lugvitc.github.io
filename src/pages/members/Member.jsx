@@ -41,6 +41,8 @@ function Member() {
     siya,
     blank,
     keerthana,
+    blank,
+    blank,
     blank
   ];
   const img2023 = [
