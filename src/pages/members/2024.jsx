@@ -66,10 +66,10 @@ export const members_2024 = [
     id: 8,
     name: "Niket Girdhar",
     position: "Management Lead",
-    github: "https://github.com/lugvitc",
+    github: "https://github.com/NiketGirdhar22",
     linkedin: "https://www.linkedin.com/in/niket-girdhar-068858250/",
-    instagram: "https://instagram.com/lugvitc",
-    email: "mailto:cclinuxclub@vit.ac.in",
+    instagram: "https://www.instagram.com/niketgirdhar",
+    email: "mailto:niketgirdhar2004@gmail.com",
   },
   {
     id: 9,
