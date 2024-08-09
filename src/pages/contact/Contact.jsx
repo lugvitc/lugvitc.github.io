@@ -18,6 +18,12 @@ function Contact() {
       contact: "8838747110",
     },
     {
+      label: "Management",
+      value: "Management",
+      head: "Niket Girdhar",
+      contact: "9780050565",
+    },
+    {
       label: "Media",
       value: "Media",
       head: "Harshanth Srinivasan",
