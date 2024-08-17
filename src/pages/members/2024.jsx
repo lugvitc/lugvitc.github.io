@@ -31,8 +31,8 @@ export const members_2024 = [
     name: "Siya Kumar",
     position: "Content Lead",
     github: "https://github.com/siya21k",
-    linkedin: "https://www.instagram.com/siyaa.k21/",
-    instagram: "http://www.linkedin.com/in/siyakumar",
+    linkedin: "http://www.linkedin.com/in/siyakumar",
+    instagram: "https://www.instagram.com/siyaa.k21/",
     email: "mailto:siyak.kumar21@gmail.com",
   },
   {
