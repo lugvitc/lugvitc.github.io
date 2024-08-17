@@ -83,11 +83,10 @@ export const members_2024 = [
   {
     id: 10,
     name: "Anumeya Sehgal",
-    position: "Developmet Lead",
+    position: "Development Lead",
     github: "https://github.com/KreativeThinker",
     linkedin: "https://github.com/KreativeThinker/kreativethinker.github.io",
     instagram: "https://www.instagram.com/Kreative.Thinker",
     email: "mailto:anumeyasehgal@proton.me",
   },
 ];
-
