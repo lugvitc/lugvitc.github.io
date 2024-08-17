@@ -205,10 +205,6 @@ export default function Cli() {
                 modification times of a file. touch filename
               </li>
               <li>
-                cat: Display the contents of a file. cat filename example: cat
-                level_8
-              </li>
-              <li>
                 echo: Display a message or concatenate files. echo "Hello,
                 Linux!"
               </li>
@@ -221,11 +217,10 @@ export default function Cli() {
         response = (
           <div>
             <ul>
-              <li>President : Dhananjay</li>
-              <li>Vice-President : Aditya</li>
-              <li>Technical Head : Animesh</li>
-              <li>Frontend Lead : Dhananjay</li>
-              <li>President : Abhishek</li>
+              <li>President : Ojass</li>
+              <li>Vice-President : Shaina</li>
+              <li>Treasurer : Shyam</li>
+              <li>Technical Head : Aadivishnu</li>
             </ul>
           </div>
         );
@@ -282,34 +277,6 @@ export default function Cli() {
         );
         break;
 
-      case "nexus":
-        response = (
-          <div>
-            <a href="https://a.lugvitc.net/d577b6d3-6fa2-4cec-ad29-208c9476bf22">
-              Begin
-            </a>
-          </div>
-        );
-        break;
-
-      case "cat level_8":
-        response = (
-          <div>
-            <p>Requires super user privilege</p>
-          </div>
-        );
-        break;
-
-      case "sudo cat level_8":
-        response = (
-          <div>
-            <a href="https://a.lugvitc.net/1cc7a3f4-1637-4ce1-a3b2-051f06f89b2e">
-              Level 9
-            </a>
-          </div>
-        );
-        break;
-
       case "sudo":
         response = (
           <div>Learn the basics before using super user privileges</div>
@@ -321,7 +288,6 @@ export default function Cli() {
           <ul>
             <li>Desktop</li>
             <li>Downloads</li>
-            <li>level_8</li>
             <li>Music</li>
             <li>Pictures</li>
           </ul>
