@@ -217,11 +217,10 @@ export default function Cli() {
         response = (
           <div>
             <ul>
-              <li>President : Dhananjay</li>
-              <li>Vice-President : Aditya</li>
-              <li>Technical Head : Animesh</li>
-              <li>Frontend Lead : Dhananjay</li>
-              <li>President : Abhishek</li>
+              <li>President : Ojass</li>
+              <li>Vice-President : Shaina</li>
+              <li>Treasurer : Shyam</li>
+              <li>Technical Head : Aadivishnu</li>
             </ul>
           </div>
         );
