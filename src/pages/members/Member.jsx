@@ -28,7 +28,7 @@ import revanth from "../../images/members/revanth.png";
 import chitranshu from "../../images/members/chitranshu.png";
 import ojass from "../../images/members/ojass.jpeg";
 import shaina from "../../images/members/shaina.jpeg";
-import aadivishnu from "../../images/members/aadivishnu.jpg";
+import yeyati from "../../images/members/yeyati.jpg";
 import siya from "../../images/members/siya.jpeg";
 import keerthana from "../../images/members/keerthana.jpeg";
 
@@ -37,13 +37,13 @@ function Member() {
     blank,
     ojass,
     shaina,
-    aadivishnu,
+    yeyati,
     siya,
     blank,
     keerthana,
     blank,
     blank,
-    blank
+    // mogesh,
   ];
   const img2023 = [
     blank,
