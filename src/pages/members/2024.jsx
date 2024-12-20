@@ -80,13 +80,4 @@ export const members_2024 = [
     instagram: "https://instagram.com/lugvitc",
     email: "mailto:cclinuxclub@vit.ac.in",
   },
-  {
-    id: 10,
-    name: "Anumeya Sehgal",
-    position: "Development Lead",
-    github: "https://github.com/KreativeThinker",
-    linkedin: "https://github.com/KreativeThinker/kreativethinker.github.io",
-    instagram: "https://www.instagram.com/Kreative.Thinker",
-    email: "mailto:anumeyasehgal@proton.me",
-  },
 ];
