@@ -212,7 +212,8 @@ export default function Leaderboard() {
   const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
-  const [current_contribution_details, setCurrent_contribution_details] = useState("");
+  const [current_contribution_details, setCurrent_contribution_details] =
+    useState("");
   const [modalOpen, setModalOpen] = React.useState(false);
   const onOpenModal = (credential_details) => {
     setCurrent_contribution_details(credential_details);
@@ -222,16 +223,22 @@ export default function Leaderboard() {
 
   const getLeaderboardData = async () => {
     try {
-      const { data, error } = await supabase.from("leaderboard").select().order('points', { ascending: false });
+      const { data, error } = await supabase
+        .from("leaderboard")
+        .select()
+        .order("points", { ascending: false });
       if (error) throw error;
       setData(data);
+      console.log(data);
       // create topData from data index 0 to 2, if that index no data then use defaultTopdata for that index
-      const topData = [0, 1, 2].map((index) => data[index] || defaultTopCardsData[index]);
+      const topData = [0, 1, 2].map(
+        (index) => data[index] || defaultTopCardsData[index],
+      );
       setTopCardsData(topData);
     } catch (error) {
       console.log("error", error);
     }
-  }
+  };
 
   useEffect(() => {
     getLeaderboardData();
@@ -257,7 +264,7 @@ export default function Leaderboard() {
       axios
         .get(`${apiURL}/leaderboard`)
         .then(function (response) {
-          let raw_data = response.data
+          let raw_data = response.data;
           raw_data.sort((a, b) => b.points - a.points);
           setData(raw_data);
         })
@@ -305,7 +312,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[1].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[1].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -332,7 +341,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[0].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[0].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -359,7 +370,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[2].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[2].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -450,7 +463,10 @@ export default function Leaderboard() {
                         points,
                       }) => {
                         return (
-                          <tr onClick={() => onOpenModal(contribution_details)} className="hover:cursor-pointer">
+                          <tr
+                            onClick={() => onOpenModal(contribution_details)}
+                            className="hover:cursor-pointer"
+                          >
                             <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
                               <div className="flex items-center">
                                 <div className="flex-shrink-0 w-10 h-10">
@@ -463,7 +479,9 @@ export default function Leaderboard() {
                                     onError={(e) => {
                                       e.target.onerror = null;
                                       setTimeout(() => {
-                                        e.target.src = photo ? imageUrl + reg_no : randomPhoto();
+                                        e.target.src = photo
+                                          ? imageUrl + reg_no
+                                          : randomPhoto();
                                       }, 1000);
                                     }}
                                   />
@@ -509,26 +527,20 @@ export default function Leaderboard() {
           </div>
         </div>
       </div>
-      <Modal open={modalOpen} onClose={onCloseModal} >
+      <Modal open={modalOpen} onClose={onCloseModal}>
         <div className="p-4">
-                                        <Typography
-                                          color="blue-gray"
-                                          className="mb-2 text-lg font-bold"
-                                        >
-                                          Contributions
-                                        </Typography>
-                                        <Typography
-                                          variant="small"
-                                          color="gray"
-                                          className="mb-14 font-normal text-blue-gray-500"
-                                        >
-                                          {current_contribution_details}
-                                        </Typography>
-                                        <a
-                                          href="#"
-                                          className="-ml-3 inline-block"
-                                        ></a>
-                                      </div>
+          <Typography color="blue-gray" className="mb-2 text-lg font-bold">
+            Contributions
+          </Typography>
+          <Typography
+            variant="small"
+            color="gray"
+            className="mb-14 font-normal text-blue-gray-500"
+          >
+            {current_contribution_details}
+          </Typography>
+          <a href="#" className="-ml-3 inline-block"></a>
+        </div>
       </Modal>
     </>
   );
