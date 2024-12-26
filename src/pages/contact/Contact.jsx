@@ -8,8 +8,8 @@ function Contact() {
     {
       label: "Technical",
       value: "Technical",
-      head: "Aadivishnu Gajendra",
-      contact: "8657069756",
+      head: "Yeyati Prashar",
+      contact: "8368034356",
     },
     {
       label: "Outreach",
@@ -20,8 +20,8 @@ function Contact() {
     {
       label: "Management",
       value: "Management",
-      head: "Niket Girdhar",
-      contact: "9780050565",
+      head: "Vivek Chaudhary",
+      contact: "9173543546",
     },
     {
       label: "Media",

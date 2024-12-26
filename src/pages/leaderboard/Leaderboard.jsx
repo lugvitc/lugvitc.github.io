@@ -15,152 +15,6 @@ import { supabase } from "../../utils/supabase";
 import "react-responsive-modal/styles.css";
 import Modal from "react-responsive-modal";
 
-const TABLE_HEAD = [
-  "Member",
-  "Department",
-  "Contributions",
-  "Points",
-  "More Info",
-];
-
-const tableData = [
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
-    name: "John Michael",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Organization",
-    contributions: 5,
-    points: 3126,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
-    name: "John Michael",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Organization",
-    contributions: 5,
-    points: 3644,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
-    name: "John Michael",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Organization",
-    contributions: 5,
-    points: 3515,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
-    name: "Alexa Liras",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 2,
-    points: 2661,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
-    name: "Laurent Perrier",
-    regno: "21BCE4545",
-    department: "Executive",
-    org: "Projects",
-    contributions: 2,
-    points: 1919,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 0,
-    points: 1928,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Executive",
-    contributions: 2,
-    points: 2128,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 0,
-    points: 1912,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Executive",
-    contributions: 2,
-    points: 962,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 0,
-    points: 291,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Executive",
-    contributions: 2,
-    points: 29804,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 0,
-    points: 192,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Executive",
-    contributions: 2,
-    points: 2891,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Dhananjay Chauhan",
-    regno: "22BAX1002",
-    department: "Programator",
-    org: "Developer",
-    contributions: 0,
-    points: 198,
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    regno: "22BAX1002",
-    department: "Manager",
-    org: "Executive",
-    contributions: 2,
-    points: 981,
-  },
-];
-
 const defaultTopCardsData = [
   {
     imgUrl:
@@ -212,7 +66,8 @@ export default function Leaderboard() {
   const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
-  const [current_contribution_details, setCurrent_contribution_details] = useState("");
+  const [current_contribution_details, setCurrent_contribution_details] =
+    useState("");
   const [modalOpen, setModalOpen] = React.useState(false);
   const onOpenModal = (credential_details) => {
     setCurrent_contribution_details(credential_details);
@@ -222,16 +77,22 @@ export default function Leaderboard() {
 
   const getLeaderboardData = async () => {
     try {
-      const { data, error } = await supabase.from("leaderboard").select().order('points', { ascending: false });
+      const { data, error } = await supabase
+        .from("leaderboard")
+        .select()
+        .order("points", { ascending: false });
       if (error) throw error;
       setData(data);
+      console.log(data);
       // create topData from data index 0 to 2, if that index no data then use defaultTopdata for that index
-      const topData = [0, 1, 2].map((index) => data[index] || defaultTopCardsData[index]);
+      const topData = [0, 1, 2].map(
+        (index) => data[index] || defaultTopCardsData[index]
+      );
       setTopCardsData(topData);
     } catch (error) {
       console.log("error", error);
     }
-  }
+  };
 
   useEffect(() => {
     getLeaderboardData();
@@ -257,7 +118,7 @@ export default function Leaderboard() {
       axios
         .get(`${apiURL}/leaderboard`)
         .then(function (response) {
-          let raw_data = response.data
+          let raw_data = response.data;
           raw_data.sort((a, b) => b.points - a.points);
           setData(raw_data);
         })
@@ -268,7 +129,7 @@ export default function Leaderboard() {
       setInputValue(searchTerm);
 
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setData(results);
     }
@@ -305,7 +166,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[1].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[1].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -332,7 +195,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[0].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[0].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -359,7 +224,9 @@ export default function Leaderboard() {
             onError={(e) => {
               e.target.onerror = null;
               setTimeout(() => {
-                e.target.src = topCardsData[2].photo ? imageUrl + reg_no : randomPhoto();
+                e.target.src = topCardsData[2].photo
+                  ? imageUrl + reg_no
+                  : randomPhoto();
               }, 1000);
             }}
           />
@@ -423,84 +290,73 @@ export default function Leaderboard() {
                 <table className="min-w-full leading-normal bg-[#16161A]">
                   <thead>
                     <tr>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Member
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                        Rank
                       </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Department
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                        Name
                       </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Contributions
-                      </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
                         Points
                       </th>
                     </tr>
                   </thead>
                   <tbody className="bg-[#16161A]">
                     {data.map(
-                      ({
-                        photo,
-                        name,
-                        reg_no,
-                        department,
-                        member_type,
-                        contributions,
-                        contribution_details,
-                        points,
-                      }) => {
-                        return (
-                          <tr onClick={() => onOpenModal(contribution_details)} className="hover:cursor-pointer">
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
-                              <div className="flex items-center">
-                                <div className="flex-shrink-0 w-10 h-10">
-                                  <img
-                                    className="w-full h-full rounded-full"
-                                    src={
-                                      photo ? imageUrl + reg_no : randomPhoto()
-                                    }
-                                    alt=""
-                                    onError={(e) => {
-                                      e.target.onerror = null;
-                                      setTimeout(() => {
-                                        e.target.src = photo ? imageUrl + reg_no : randomPhoto();
-                                      }, 1000);
-                                    }}
-                                  />
-                                </div>
-                                <div className="ml-3">
-                                  <p className="text-white whitespace-no-wrap text-md">
-                                    {name}
-                                  </p>
-                                  <p className="text-white font-thin text-sm whitespace-no-wrap">
-                                    {reg_no}
-                                  </p>
-                                </div>
+                      (
+                        { photo, name, reg_no, contribution_details, points },
+                        index
+                      ) => (
+                        <tr
+                          key={reg_no}
+                          onClick={() => onOpenModal(contribution_details)}
+                          className="hover:cursor-pointer"
+                        >
+                          {/* Rank Column */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm text-white text-center">
+                            {index + 1}
+                          </td>
+
+                          {/* User Details */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
+                            <div className="flex items-center justify-center">
+                              <div className="flex-shrink-0 w-10 h-10">
+                                <img
+                                  className="w-full h-full rounded-full"
+                                  src={
+                                    photo ? imageUrl + reg_no : randomPhoto()
+                                  }
+                                  alt="Profile"
+                                  onError={(e) => {
+                                    e.target.onerror = null;
+                                    setTimeout(() => {
+                                      e.target.src = photo
+                                        ? imageUrl + reg_no
+                                        : randomPhoto();
+                                    }, 1000);
+                                  }}
+                                />
                               </div>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] ">
-                              <p className="text-white whitespace-no-wrap text-md">
-                                {department}
-                              </p>
-                              <p className="text-white whitespace-no-wrap text-sm">
-                                {member_type}
-                              </p>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-md">
-                              <p className="text-white ml-5">{contributions}</p>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
-                              <span className="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
-                                <span
-                                  aria-hidden
-                                  className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                                ></span>
-                                <span className="relative">{points}</span>
-                              </span>
-                            </td>
-                          </tr>
-                        );
-                      },
+                              <div className="ml-3">
+                                <p className="text-white whitespace-no-wrap text-md">
+                                  {name}
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+
+                          {/* Points */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm text-center">
+                            <span className="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
+                              <span
+                                aria-hidden
+                                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                              ></span>
+                              <span className="relative">{points}</span>
+                            </span>
+                          </td>
+                        </tr>
+                      )
                     )}
                   </tbody>
                 </table>
@@ -509,26 +365,20 @@ export default function Leaderboard() {
           </div>
         </div>
       </div>
-      <Modal open={modalOpen} onClose={onCloseModal} >
+      <Modal open={modalOpen} onClose={onCloseModal}>
         <div className="p-4">
-                                        <Typography
-                                          color="blue-gray"
-                                          className="mb-2 text-lg font-bold"
-                                        >
-                                          Contributions
-                                        </Typography>
-                                        <Typography
-                                          variant="small"
-                                          color="gray"
-                                          className="mb-14 font-normal text-blue-gray-500"
-                                        >
-                                          {current_contribution_details}
-                                        </Typography>
-                                        <a
-                                          href="#"
-                                          className="-ml-3 inline-block"
-                                        ></a>
-                                      </div>
+          <Typography color="blue-gray" className="mb-2 text-lg font-bold">
+            Contributions
+          </Typography>
+          <Typography
+            variant="small"
+            color="gray"
+            className="mb-14 font-normal text-blue-gray-500"
+          >
+            {current_contribution_details}
+          </Typography>
+          <a href="#" className="-ml-3 inline-block"></a>
+        </div>
       </Modal>
     </>
   );

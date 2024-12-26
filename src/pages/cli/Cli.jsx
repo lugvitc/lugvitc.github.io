@@ -220,7 +220,7 @@ export default function Cli() {
               <li>President : Ojass</li>
               <li>Vice-President : Shaina</li>
               <li>Treasurer : Shyam</li>
-              <li>Technical Head : Aadivishnu</li>
+              <li>Technical Head : Yeyati</li>
             </ul>
           </div>
         );
