@@ -80,13 +80,14 @@ export default function Leaderboard() {
       const { data, error } = await supabase
         .from("leaderboard")
         .select()
-        .order("points", { ascending: false });
+        .order("points", { ascending: false })
+        .order("reg_no", { ascending: true });
       if (error) throw error;
       setData(data);
       console.log(data);
       // create topData from data index 0 to 2, if that index no data then use defaultTopdata for that index
       const topData = [0, 1, 2].map(
-        (index) => data[index] || defaultTopCardsData[index]
+        (index) => data[index] || defaultTopCardsData[index],
       );
       setTopCardsData(topData);
     } catch (error) {
@@ -129,7 +130,7 @@ export default function Leaderboard() {
       setInputValue(searchTerm);
 
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
       );
       setData(results);
     }
@@ -305,7 +306,7 @@ export default function Leaderboard() {
                     {data.map(
                       (
                         { photo, name, reg_no, contribution_details, points },
-                        index
+                        index,
                       ) => (
                         <tr
                           key={reg_no}
@@ -356,7 +357,7 @@ export default function Leaderboard() {
                             </span>
                           </td>
                         </tr>
-                      )
+                      ),
                     )}
                   </tbody>
                 </table>
