@@ -22,7 +22,7 @@ import dhruv from "../../images/members/dhruv.png";
 import meetesh from "../../images/members/meetesh.png";
 import hrishikesh from "../../images/members/hrishikesh.png";
 import kathir from "../../images/members/kathir.png";
-import mogesh from "../../images/members/mogesh.png";
+import mogesh from "../../images/members/mogesh.jpeg";
 import srideep from "../../images/members/srideep.png";
 import revanth from "../../images/members/revanth.png";
 import chitranshu from "../../images/members/chitranshu.png";
@@ -31,6 +31,10 @@ import shaina from "../../images/members/shaina.jpeg";
 import yeyati from "../../images/members/yeyati.jpg";
 import siya from "../../images/members/siya.jpeg";
 import keerthana from "../../images/members/keerthana.jpeg";
+import ssr from "..//..//images/members/ssr.jpeg";
+import vivekc from "..//..//images/members/vivekc.jpeg";
+import harshanth from "..//..//images/members/harshanth.png";
+import riya from "..//..//images/members/riya.jpeg";
 
 function Member() {
   const img2024 = [
@@ -38,12 +42,13 @@ function Member() {
     ojass,
     shaina,
     yeyati,
-    siya,
-    blank,
+    ssr,
+    harshanth,
     keerthana,
-    blank,
-    blank,
-    // mogesh,
+    siya,
+    vivekc,
+    mogesh,
+    riya,
   ];
   const img2023 = [
     blank,
