@@ -86,7 +86,7 @@ export default function Leaderboard() {
       console.log(data);
       // create topData from data index 0 to 2, if that index no data then use defaultTopdata for that index
       const topData = [0, 1, 2].map(
-        (index) => data[index] || defaultTopCardsData[index],
+        (index) => data[index] || defaultTopCardsData[index]
       );
       setTopCardsData(topData);
     } catch (error) {
@@ -129,7 +129,7 @@ export default function Leaderboard() {
       setInputValue(searchTerm);
 
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setData(results);
     }
@@ -290,89 +290,73 @@ export default function Leaderboard() {
                 <table className="min-w-full leading-normal bg-[#16161A]">
                   <thead>
                     <tr>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Member
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                        Rank
                       </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Department
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                        Name
                       </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                        Contributions
-                      </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200  text-left text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                      <th className="px-5 py-3 border-b-2 border-gray-200 text-center text-sm font-semibold text-gray-400 uppercase tracking-wider">
                         Points
                       </th>
                     </tr>
                   </thead>
                   <tbody className="bg-[#16161A]">
                     {data.map(
-                      ({
-                        photo,
-                        name,
-                        reg_no,
-                        department,
-                        member_type,
-                        contributions,
-                        contribution_details,
-                        points,
-                      }) => {
-                        return (
-                          <tr
-                            onClick={() => onOpenModal(contribution_details)}
-                            className="hover:cursor-pointer"
-                          >
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
-                              <div className="flex items-center">
-                                <div className="flex-shrink-0 w-10 h-10">
-                                  <img
-                                    className="w-full h-full rounded-full"
-                                    src={
-                                      photo ? imageUrl + reg_no : randomPhoto()
-                                    }
-                                    alt=""
-                                    onError={(e) => {
-                                      e.target.onerror = null;
-                                      setTimeout(() => {
-                                        e.target.src = photo
-                                          ? imageUrl + reg_no
-                                          : randomPhoto();
-                                      }, 1000);
-                                    }}
-                                  />
-                                </div>
-                                <div className="ml-3">
-                                  <p className="text-white whitespace-no-wrap text-md">
-                                    {name}
-                                  </p>
-                                  <p className="text-white font-thin text-sm whitespace-no-wrap">
-                                    {reg_no}
-                                  </p>
-                                </div>
+                      (
+                        { photo, name, reg_no, contribution_details, points },
+                        index
+                      ) => (
+                        <tr
+                          key={reg_no}
+                          onClick={() => onOpenModal(contribution_details)}
+                          className="hover:cursor-pointer"
+                        >
+                          {/* Rank Column */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm text-white text-center">
+                            {index + 1}
+                          </td>
+
+                          {/* User Details */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
+                            <div className="flex items-center justify-center">
+                              <div className="flex-shrink-0 w-10 h-10">
+                                <img
+                                  className="w-full h-full rounded-full"
+                                  src={
+                                    photo ? imageUrl + reg_no : randomPhoto()
+                                  }
+                                  alt="Profile"
+                                  onError={(e) => {
+                                    e.target.onerror = null;
+                                    setTimeout(() => {
+                                      e.target.src = photo
+                                        ? imageUrl + reg_no
+                                        : randomPhoto();
+                                    }, 1000);
+                                  }}
+                                />
                               </div>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] ">
-                              <p className="text-white whitespace-no-wrap text-md">
-                                {department}
-                              </p>
-                              <p className="text-white whitespace-no-wrap text-sm">
-                                {member_type}
-                              </p>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-md">
-                              <p className="text-white ml-5">{contributions}</p>
-                            </td>
-                            <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm">
-                              <span className="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
-                                <span
-                                  aria-hidden
-                                  className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                                ></span>
-                                <span className="relative">{points}</span>
-                              </span>
-                            </td>
-                          </tr>
-                        );
-                      },
+                              <div className="ml-3">
+                                <p className="text-white whitespace-no-wrap text-md">
+                                  {name}
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+
+                          {/* Points */}
+                          <td className="px-5 py-5 border-b border-gray-200 bg-[#16161A] text-sm text-center">
+                            <span className="relative inline-block px-3 py-1 font-semibold text-white leading-tight">
+                              <span
+                                aria-hidden
+                                className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                              ></span>
+                              <span className="relative">{points}</span>
+                            </span>
+                          </td>
+                        </tr>
+                      )
                     )}
                   </tbody>
                 </table>
