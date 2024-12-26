@@ -85,10 +85,10 @@ export const members_2024 = [
     id: 10,
     name: "Riya Bansal",
     position: "Advisory",    // get data from anumeya
-    github: "#",
-    linkedin: "#",
-    instagram: "#",
-    email: "#",
+    github: "https://github.com/riyabansalv",
+    linkedin: "https://www.linkedin.com/in/riya-bansal-v-bb01b2278/",
+    instagram: "https://instagram.com/riya_bansal05/",
+    email: "riyabansalv.2022@vitstudent.ac.in",
   },
   // {
   //   id: 9,
