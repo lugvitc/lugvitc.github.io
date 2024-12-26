@@ -16,6 +16,7 @@ function EventsTimeLine() {
   const [text8, setText8] = useState("");
   const [text9, setText9] = useState("");
   const [text10, setText10] = useState("");
+  const [text11, setText11] = useState("");
   const valueRef = useRef(null);
   const valueRef2 = useRef(null);
   const valueRef3 = useRef(null);
@@ -26,6 +27,7 @@ function EventsTimeLine() {
   const valueRef8 = useRef(null);
   const valueRef9 = useRef(null);
   const valueRef10 = useRef(null);
+  const valueRef11 = useRef(null);
 
   function handleChange() {
     let value = valueRef.current.value;
@@ -128,6 +130,16 @@ function EventsTimeLine() {
       window.location.href = "/#/fossit2024";
     }
   }
+  function handleChange11() {
+    let value11 = valueRef11.current.value;
+    console.log(value11);
+    setText11(value11);
+    if (text11 == "man StuxNe") {
+      setText11("");
+      console.log(value11 + "  i am gere ");
+      window.location.href = "/#/StuxNet";
+    }
+  }
 
   return (
     <>
@@ -189,6 +201,70 @@ function EventsTimeLine() {
               <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
             </div>
           </div> */}
+
+          {/* <!-- left --> */}
+          <div class="flex flex-row-reverse md:contents">
+            <div class="bg-transparent  text-white  col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <EventTerminal
+                title="lug:~$cli-v.0.0.1x"
+                children="coiacascasuin"
+              >
+                <p>
+                  <b className="text-blue-gray-600">lug@vitc:~/events$ </b>{" "}
+                  <b className="text-light-green-300">sudo StuxNet </b>
+                </p>
+                {/* <br />   */}
+                <p>
+                  <b className="text-blue-gray-600">
+                    [sudo] password for lugvitc:
+                  </b>{" "}
+                  <b className="text-light-green-300"></b>
+                </p>
+                <p>
+                  <b className="text-blue-gray-600">
+                    [root@lugvitc superuser]#
+                  </b>{" "}
+                  <b className="text-light-green-300">cat StuxNet.sh </b>
+                </p>
+                <p>
+                Starting from July 30, 2024, Stuxnet became a captivating week-long event
+                 that drew participants into an exciting treasure hunt inspired by the 
+                 Terminator series. With a mix of physical and digital challenges, 
+                 the event tested problem-solving and teamwork skills, making it an 
+                 unforgettable experience. The thrilling culmination was a quest to 
+                 uncover a hidden SD card, with the chance to win a ₹5000 cash prize,
+                  making it one of the most memorable events of the year..
+                </p>
+                <br />
+                <NavLink
+                  className="text-light-green-300 underline "
+                  to={paths.StuxNet}
+                >
+                  Read more here...
+                </NavLink>
+                <br />
+                or Type 'man StuxNet' to use our CLI|
+                <pre>
+                  $~:{" "}
+                  <input
+                    ref={valueRef11}
+                    type="text"
+                    name=""
+                    id="command"
+                    className="bg-transparent outline-none"
+                    onChange={handleChange11}
+                  />{" "}
+                </pre>
+              </EventTerminal>
+            </div>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-[#fff] pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
+            </div>
+          </div>
 
           {/* <!-- right --> */}
           <div class="flex md:contents">

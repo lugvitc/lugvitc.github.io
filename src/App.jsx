@@ -34,6 +34,7 @@ import Password2023 from "./pages/events/event/password2023/Password2023";
 import CyberOday2 from "./pages/events/event/cod2/Cod2";
 import Password2024 from "./pages/events/event/password2024/Password2024";
 import FOSSit2024 from "./pages/events/event/fossit2024/FOSSit2024.jsx";
+import StuxNet from "./pages/events/event/StuxNet/StuxNet.jsx";
 
 import Chapter_1 from "./pages/learn/chapters/Chapter_1";
 import Chapter_2 from "./pages/learn/chapters/Chapter_2";
@@ -64,6 +65,7 @@ export const paths = {
   cyberOday2: "/cyberOday2",
   password2024: "/password2024",
   fossit2024: "/fossit2024",
+  StuxNet: "/StuxNet",
 
   cli: "/cli",
   chapter_1: "/chapter_1",
@@ -156,6 +158,10 @@ const router = createHashRouter([
   {
     path: "/fossit2024",
     element: <FOSSit2024 />,
+  },
+  {
+    path: "/StuxNet",
+    element: <StuxNet />,
   },
   {
     path: "/cli",
