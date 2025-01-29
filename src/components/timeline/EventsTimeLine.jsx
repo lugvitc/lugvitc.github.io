@@ -17,6 +17,9 @@ function EventsTimeLine() {
   const [text9, setText9] = useState("");
   const [text10, setText10] = useState("");
   const [text11, setText11] = useState("");
+  const [text12, setText12] = useState("");
+  const [text13, setText13] = useState("");
+
   const valueRef = useRef(null);
   const valueRef2 = useRef(null);
   const valueRef3 = useRef(null);
@@ -28,6 +31,8 @@ function EventsTimeLine() {
   const valueRef9 = useRef(null);
   const valueRef10 = useRef(null);
   const valueRef11 = useRef(null);
+  const valueRef12 = useRef(null);
+  const valueRef13 = useRef(null);
 
   function handleChange() {
     let value = valueRef.current.value;
@@ -140,6 +145,26 @@ function EventsTimeLine() {
       window.location.href = "/#/StuxNet";
     }
   }
+  function handleChange12() {
+    let value12 = valueRef12.current.value;
+    console.log(value12);
+    setText12(value12);
+    if (text12 == "man LinuxInstallation3.") {
+      setText11("");
+      console.log(value12 + "  i am gere ");
+      window.location.href = "/#/LinuxInstallation2024";
+    }
+  }
+  function handleChange13() {
+    let value13 = valueRef13.current.value;
+    console.log(value13);
+    setText13(value13);
+    if (text13 == "man Cyber0day3") {
+      setText13("");
+      console.log(value13 + "  i am gere ");
+      window.location.href = "/#/Cyber0day3";
+    }
+  }
 
   return (
     <>
@@ -202,6 +227,134 @@ function EventsTimeLine() {
             </div>
           </div> */}
 
+           {/* <!-- left --> */}
+           <div class="flex flex-row-reverse md:contents">
+            <div class="bg-transparent  text-white  col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+              <EventTerminal
+                title="lug:~$cli-v.0.0.2x"
+                children="coiacascasuin"
+              >
+                <p>
+                  <b className="text-blue-gray-600">lug@vitc:~/events$ </b>{" "}
+                  <b className="text-light-green-300">sudo Cyber-0-day-3 </b>
+                </p>
+                {/* <br />   */}
+                <p>
+                  <b className="text-blue-gray-600">
+                    [sudo] password for lugvitc:
+                  </b>{" "}
+                  <b className="text-light-green-300"></b>
+                </p>
+                <p>
+                  <b className="text-blue-gray-600">
+                    [root@lugvitc superuser]#
+                  </b>{" "}
+                  <b className="text-light-green-300">cat c0d3.sh </b>
+                </p>
+                <p>
+                  One of the major events of the club, Cyber 0 Day 3.0,
+                  was held on October 12, 2024, providing an entire day 
+                  of interactive cybersecurity activities. The event 
+                  consisted of hands-on workshops in OSINT, Web Exploits, 
+                  and WiFi hacking, followed by an animated quiz that selected 
+                  top teams for the overnight Jeopardy-style CTF. With dynamic 
+                  flags and a competitive scoring system, the CTF provided a 
+                  unique and challenging experience, cementing the event as 
+                  a highlight of the academic year.
+                </p>
+                <br />
+                <NavLink
+                  className="text-light-green-300 underline "
+                  to={paths.Cyber0day3}
+                >
+                  Read more here...
+                </NavLink>
+                <br />
+                or Type 'man Cyber0day3.0' to use our CLI|
+                <pre>
+                  $~:{" "}
+                  <input
+                    ref={valueRef13}
+                    type="text"
+                    name=""
+                    id="command"
+                    className="bg-transparent outline-none"
+                    onChange={handleChange13}
+                  />{" "}
+                </pre>
+              </EventTerminal>
+            </div>
+
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-[#fff] pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
+            </div>
+          </div>
+
+          {/* <!-- right --> */}
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-[#fff] pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
+            </div>
+            <div class="bg-transparent  text-white  col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <EventTerminal
+                title="lug:~$cli-v.0.0.1x"
+                children="coiacascasuin"
+              >
+                <p>
+                  <b className="text-blue-gray-600">lug@vitc:~/events$ </b>{" "}
+                  <b className="text-light-green-300">sudo LinuxInstallation Booth 3.0  </b>
+                </p>
+                {/* <br />   */}
+                <p>
+                  <b className="text-blue-gray-600">
+                    [sudo] password for lugvitc:
+                  </b>{" "}
+                  <b className="text-light-green-300"></b>
+                </p>
+                <p>
+                  <b className="text-blue-gray-600">
+                    [root@lugvitc superuser]#
+                  </b>{" "}
+                  <b className="text-light-green-300">cat LinuxInstallation Booth3.sh </b>
+                </p>
+                <p>
+                On 9th and 10th August 2024, the Linux Club organized a Linux Installation 
+                Booth in AB1. The event was interactive, attracting a huge number of 
+                participants, allowing them to gain practical experience in installing 
+                and configuring Linux distributions while fostering a deeper appreciation 
+                for open-source technologies.
+                </p>
+                <br />
+                <NavLink
+                  className="text-light-green-300 underline "
+                  to={paths.LinuxInstallation2024}
+                >
+                  Read more here...
+                </NavLink>
+                <br />
+                or Type 'man LinuxInstallation3.0' to use our CLI|
+                <pre>
+                  $~:{" "}
+                  <input
+                    ref={valueRef12}
+                    type="text"
+                    name=""
+                    id="command"
+                    className="bg-transparent outline-none"
+                    onChange={handleChange12}
+                  />{" "}
+                </pre>
+              </EventTerminal>
+            </div>
+          </div>
+
+          
           {/* <!-- left --> */}
           <div class="flex flex-row-reverse md:contents">
             <div class="bg-transparent  text-white  col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
