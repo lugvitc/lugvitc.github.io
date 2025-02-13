@@ -61,7 +61,7 @@ const defaultTopCardsData = [
 export default function Leaderboard() {
   const [data, setData] = useState([]);
   const [topCardsData, setTopCardsData] = useState(defaultTopCardsData);
-
+  const [originalData, setOriginalData] = useState([]);
   const imageUrl = `${apiURL}/leaderboard/image/`;
   const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = React.useState(false);
@@ -95,45 +95,37 @@ export default function Leaderboard() {
   };
 
   useEffect(() => {
+    const getLeaderboardData = async () => {
+      try {
+        const { data, error } = await supabase
+          .from("leaderboard")
+          .select()
+          .order("points", { ascending: false });
+        if (error) throw error;
+        setOriginalData(data);
+        setData(data);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+  
     getLeaderboardData();
-    // axios
-    //   .get(`${apiURL}/leaderboard`)
-    //   .then(function (response) {
-    //     let raw_data = response.data
-    //     raw_data.sort((a, b) => b.points - a.points);
-    //     setData(raw_data);
-    //     setTopCardsData(raw_data.slice(0, 3));
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
   }, []);
-
-  // tableData.sort((a, b) => b.points > a.points);
-
+  
   function handleSearch(e) {
-    console.log(e.target.value);
     const searchTerm = e.target.value;
-    if (searchTerm == "") {
-      axios
-        .get(`${apiURL}/leaderboard`)
-        .then(function (response) {
-          let raw_data = response.data;
-          raw_data.sort((a, b) => b.points - a.points);
-          setData(raw_data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+    setInputValue(searchTerm);
+  
+    if (searchTerm === "") {
+      setData(originalData);
     } else {
-      setInputValue(searchTerm);
-
-      const results = data.filter((item) =>
+      const results = originalData.filter((item) =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setData(results);
     }
   }
+  
 
   return (
     <>
