@@ -78,10 +78,10 @@ export default function Leaderboard() {
   const getLeaderboardData = async () => {
     try {
       const { data, error } = await supabase
-        .from("leaderboard")
+        .from("leaderboard_points")
         .select()
         .order("points", { ascending: false })
-        .order("reg_no", { ascending: true });
+        .order("registration_number", { ascending: true });
       if (error) throw error;
       setData(data);
       console.log(data);
@@ -97,17 +97,6 @@ export default function Leaderboard() {
 
   useEffect(() => {
     getLeaderboardData();
-    // axios
-    //   .get(`${apiURL}/leaderboard`)
-    //   .then(function (response) {
-    //     let raw_data = response.data
-    //     raw_data.sort((a, b) => b.points - a.points);
-    //     setData(raw_data);
-    //     setTopCardsData(raw_data.slice(0, 3));
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
   }, []);
 
   // tableData.sort((a, b) => b.points > a.points);
@@ -117,7 +106,7 @@ export default function Leaderboard() {
     const searchTerm = e.target.value;
     if (searchTerm == "") {
       axios
-        .get(`${apiURL}/leaderboard`)
+        .get(`${apiURL}/leaderboard_new`)
         .then(function (response) {
           let raw_data = response.data;
           raw_data.sort((a, b) => b.points - a.points);
