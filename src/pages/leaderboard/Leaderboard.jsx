@@ -78,15 +78,16 @@ export default function Leaderboard() {
   const getLeaderboardData = async () => {
     try {
       const { data, error } = await supabase
-        .from("leaderboard")
+        .from("leaderboard_points")
         .select()
-        .order("points", { ascending: false });
+        .order("points", { ascending: false })
+        .order("registration_number", { ascending: true });
       if (error) throw error;
       setData(data);
       console.log(data);
       // create topData from data index 0 to 2, if that index no data then use defaultTopdata for that index
       const topData = [0, 1, 2].map(
-        (index) => data[index] || defaultTopCardsData[index]
+        (index) => data[index] || defaultTopCardsData[index],
       );
       setTopCardsData(topData);
     } catch (error) {
@@ -96,17 +97,6 @@ export default function Leaderboard() {
 
   useEffect(() => {
     getLeaderboardData();
-    // axios
-    //   .get(`${apiURL}/leaderboard`)
-    //   .then(function (response) {
-    //     let raw_data = response.data
-    //     raw_data.sort((a, b) => b.points - a.points);
-    //     setData(raw_data);
-    //     setTopCardsData(raw_data.slice(0, 3));
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
   }, []);
 
   // tableData.sort((a, b) => b.points > a.points);
@@ -116,7 +106,7 @@ export default function Leaderboard() {
     const searchTerm = e.target.value;
     if (searchTerm == "") {
       axios
-        .get(`${apiURL}/leaderboard`)
+        .get(`${apiURL}/leaderboard_new`)
         .then(function (response) {
           let raw_data = response.data;
           raw_data.sort((a, b) => b.points - a.points);
@@ -129,7 +119,7 @@ export default function Leaderboard() {
       setInputValue(searchTerm);
 
       const results = data.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
       );
       setData(results);
     }
@@ -305,7 +295,7 @@ export default function Leaderboard() {
                     {data.map(
                       (
                         { photo, name, reg_no, contribution_details, points },
-                        index
+                        index,
                       ) => (
                         <tr
                           key={reg_no}
@@ -356,7 +346,7 @@ export default function Leaderboard() {
                             </span>
                           </td>
                         </tr>
-                      )
+                      ),
                     )}
                   </tbody>
                 </table>
