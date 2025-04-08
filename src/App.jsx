@@ -34,6 +34,9 @@ import Password2023 from "./pages/events/event/password2023/Password2023";
 import CyberOday2 from "./pages/events/event/cod2/Cod2";
 import Password2024 from "./pages/events/event/password2024/Password2024";
 import FOSSit2024 from "./pages/events/event/fossit2024/FOSSit2024.jsx";
+import StuxNet from "./pages/events/event/StuxNet/StuxNet.jsx";
+import LinuxInstallation2024 from "./pages/events/event/LinuxInstallation2024/LinuxInstallation2024.jsx";
+import Cyber0day3 from "./pages/events/event/cod3/cod3";
 
 import Chapter_1 from "./pages/learn/chapters/Chapter_1";
 import Chapter_2 from "./pages/learn/chapters/Chapter_2";
@@ -64,6 +67,9 @@ export const paths = {
   cyberOday2: "/cyberOday2",
   password2024: "/password2024",
   fossit2024: "/fossit2024",
+  StuxNet: "/StuxNet",
+  LinuxInstallation2024: "/linuxInstallation2024",
+  Cyber0day3: "/Cyber0day3",
 
   cli: "/cli",
   chapter_1: "/chapter_1",
@@ -126,7 +132,7 @@ const router = createHashRouter([
     element: <RescueTheTux />,
   },
   {
-    path: "/cyberOday",
+    path: "/CyberOday",
     element: <CyberOday />,
   },
   {
@@ -156,6 +162,18 @@ const router = createHashRouter([
   {
     path: "/fossit2024",
     element: <FOSSit2024 />,
+  },
+  {
+    path: "/StuxNet",
+    element: <StuxNet />,
+  },
+  {
+    path: "/LinuxInstallation2024",
+    element: <LinuxInstallation2024 />,
+  },
+  {
+    path: "/Cyber0day3",
+    element: <Cyber0day3 />,
   },
   {
     path: "/cli",
