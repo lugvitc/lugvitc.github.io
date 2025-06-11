@@ -22,6 +22,7 @@ import AboutUs from "./pages/about/AboutUs";
 import Gallery from "./pages/gallery/Gallery";
 import Footer from "./components/footer/Footer";
 import Cli from "./pages/cli/Cli";
+import MembersArchive from "./pages/members/MembersArchive";
 
 // importing all events
 import AdrenalineFOSSDay from "./pages/events/event/adrenaline-FOSS-Day/AdrenalineFOSSDay";
@@ -102,6 +103,10 @@ const router = createHashRouter([
   {
     path: "/members",
     element: <Member />,
+  },
+  {
+    path: "/members-archive",
+    element: <MembersArchive />,
   },
   {
     path: "/leaderboard",
