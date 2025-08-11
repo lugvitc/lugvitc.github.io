@@ -37,6 +37,7 @@ import Password2024 from "./pages/events/event/password2024/Password2024";
 import FOSSit2024 from "./pages/events/event/fossit2024/FOSSit2024.jsx";
 import StuxNet from "./pages/events/event/StuxNet/StuxNet.jsx";
 import LinuxInstallation2024 from "./pages/events/event/LinuxInstallation2024/LinuxInstallation2024.jsx";
+import LinuxInstallation2025 from "./pages/events/event/LinuxInstallation2025/LinuxInstallation2025.jsx";
 import Cyber0day3 from "./pages/events/event/cod3/cod3";
 
 import Chapter_1 from "./pages/learn/chapters/Chapter_1";
@@ -70,6 +71,7 @@ export const paths = {
   fossit2024: "/fossit2024",
   StuxNet: "/StuxNet",
   LinuxInstallation2024: "/linuxInstallation2024",
+  LinuxInstallation2025: "/linuxInstallation2025",
   Cyber0day3: "/Cyber0day3",
 
   cli: "/cli",
@@ -208,9 +210,13 @@ const router = createHashRouter([
     path: "/chapter_6",
     element: <Chapter_6 />,
   },
-
+  {
+    path: "/LinuxInstallation2025",
+    element: <LinuxInstallation2025 />,
+  },
+  
   // {
-  //   path:'*',
+    //   path:'*',
   //   element: <PageNotFound></PageNotFound> ,
   // },
 ]);
