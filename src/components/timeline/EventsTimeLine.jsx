@@ -19,6 +19,7 @@ function EventsTimeLine() {
   const [text11, setText11] = useState("");
   const [text12, setText12] = useState("");
   const [text13, setText13] = useState("");
+  const [text14, setText14] = useState("");
 
   const valueRef = useRef(null);
   const valueRef2 = useRef(null);
@@ -33,6 +34,7 @@ function EventsTimeLine() {
   const valueRef11 = useRef(null);
   const valueRef12 = useRef(null);
   const valueRef13 = useRef(null);
+  const valueRef14 = useRef(null);
 
   function handleChange() {
     let value = valueRef.current.value;
@@ -163,6 +165,16 @@ function EventsTimeLine() {
       setText13("");
       console.log(value13 + "  i am gere ");
       window.location.href = "/#/Cyber0day3";
+    }
+  }
+  function handleChange14() {
+    let value14 = valueRef14.current.value;
+    console.log(value14);
+    setText14(value14);
+    if (text14 == "man LinuxInstallationBooth202") {
+      setText14("");
+      console.log(value14 + "  i am here ");
+      window.location.href = "/#/linuxInstallation2025";
     }
   }
 
@@ -1054,6 +1066,67 @@ function EventsTimeLine() {
                 <div class="h-full w-1 bg-[#fff] pointer-events-none"></div>
               </div>
               <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
+            </div>
+          </div>
+
+          {/* <!-- right --> */}
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-[#fff] pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-[#fff]   shadow"></div>
+            </div>
+            <div class="bg-transparent  text-white  col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <EventTerminal
+                title="lug:~$cli-v.0.0.1x"
+                children="coiacascasuin"
+              >
+                <p>
+                  <b className="text-blue-gray-600">lug@vitc:~/events$ </b>{" "}
+                  <b className="text-light-green-300">sudo LinuxInstallation Booth 2025</b>
+                </p>
+                {/* <br />   */}
+                <p>
+                  <b className="text-blue-gray-600">
+                    [sudo] password for lugvitc:
+                  </b>{" "}
+                  <b className="text-light-green-300"></b>
+                </p>
+                <p>
+                  <b className="text-blue-gray-600">
+                    [root@lugvitc superuser]#
+                  </b>{" "}
+                  <b className="text-light-green-300">cat ./LinuxInstallation Booth 2025.sh </b>
+                </p>
+                <p>
+                On 11th and 12th August 2025, the Linux Club organized a Linux Installation 
+                Booth in AB1 Portico. The event was interactive, attracting a huge number of 
+                participants, allowing them to gain practical experience in installing 
+                and configuring Linux distributions while fostering a deeper appreciation 
+                for open-source technologies.
+                </p>
+                <br />
+                <NavLink
+                  className="text-light-green-300 underline "
+                  to={paths.LinuxInstallation2025}
+                >
+                  Read more here...
+                </NavLink>
+                <br />
+                or Type 'man LinuxInstallationBooth2025' to use our CLI|
+                <pre>
+                  $~:{" "}
+                  <input
+                    ref={valueRef14}
+                    type="text"
+                    name=""
+                    id="command"
+                    className="bg-transparent outline-none"
+                    onChange={handleChange14}
+                  />{" "}
+                </pre>
+              </EventTerminal>
             </div>
           </div>
         </div>
