@@ -8,26 +8,26 @@ function Contact() {
     {
       label: "Technical",
       value: "Technical",
-      head: "Yeyati Prashar",
-      contact: "8368034356",
+      head: "Siddharth Karanam",
+      contact: "9959290138",
     },
     {
       label: "Outreach",
       value: "Outreach",
-      head: "Keerthana S",
-      contact: "8838747110",
+      head: "Atharv Shiva Hiremath",
+      contact: "9987143905",
     },
     {
       label: "Management",
       value: "Management",
-      head: "Vivek Chaudhary",
-      contact: "9173543546",
+      head: "Omkar Rajurkar",
+      contact: "7304394717",
     },
     {
       label: "Media",
       value: "Media",
-      head: "Harshanth Srinivasan",
-      contact: "7200043686",
+      head: "Rejit Antony",
+      contact: "8978672798",
     },
     // {
     //   label: "Advisory",
@@ -39,14 +39,14 @@ function Contact() {
     {
       label: "Treasury",
       value: "Treasury",
-      head: "Shyam Sundar R",
-      contact: "7449097613",
+      head: "Naveen",
+      contact: "9311084001",
     },
     {
       label: "Content",
       value: "Content",
-      head: "Siya Kumar",
-      contact: "8920892177",
+      head: "Tiya Sur",
+      contact: "9301985644",
     },
   ];
   return (
@@ -146,9 +146,9 @@ function Contact() {
               />
             </svg>
           </div>
-          <h6 className="text-xl mt-5 font-semibold text-white">President</h6>
-          <p className="mt-2 mb-4 text-white">Ojass Praven Bharati </p>
-          <p className="mt-2 mb-4 text-white">+91 8830933096</p>
+          <h6 className="text-xl mt-5 font-semibold text-white">Chairperson</h6>
+          <p className="mt-2 mb-4 text-white">Dharmik Vivek Shinde</p>
+          <p className="mt-2 mb-4 text-white">+91 9980746509</p>
         </div>
         <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
@@ -168,10 +168,33 @@ function Contact() {
             </svg>
           </div>
           <h5 className="text-xl mt-5 font-semibold text-white">
-            Vice-President
+            General Secretary
           </h5>
-          <p className="mt-2 mb-4 text-white">Shaina</p>
-          <p className="mt-2 mb-4 text-white">+91 8925785445</p>
+          <p className="mt-2 mb-4 text-white">Anumeya Sehgal</p>
+          <p className="mt-2 mb-4 text-white">+91 8287760026</p>
+        </div>
+        <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
+          <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+          </div>
+          <h5 className="text-xl mt-5 font-semibold text-white">
+            Joint Secretary
+          </h5>
+          <p className="mt-2 mb-4 text-white">Adhya Sharma</p>
+          <p className="mt-2 mb-4 text-white">+91 7701901629</p>
         </div>
         {/* <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
