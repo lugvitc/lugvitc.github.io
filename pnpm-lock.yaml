@@ -17,6 +17,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.45.1
         version: 2.45.1
+      '@tabler/icons-react':
+        specifier: ^3.46.0
+        version: 3.46.0(react@18.2.0)
       axios:
         specifier: ^1.6.5
         version: 1.6.5
@@ -559,6 +562,14 @@ packages:
 
   '@swc/types@0.1.5':
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
+
+  '@tabler/icons-react@3.46.0':
+    resolution: {integrity: sha512-CCm7xJWhDT2PH4ZIFkP6AgYKtVhq0gpYkjUN+GVh1AzmIQaa77OW0bQPBPQiTE0PsXMR9oSxFqA3qBglzPyrVQ==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.46.0':
+    resolution: {integrity: sha512-f2RYFl3fzPwj5WO82x6en0dmkjefxEfOm16D1ByM6cj/McNiwOkL4VaPUoP9VVIrXAD9WnTSVFr70px703b//A==}
 
   '@types/hast@2.3.9':
     resolution: {integrity: sha512-pTHyNlaMD/oKJmS+ZZUyFUcsZeBZpC0lmGquw98CqRVNgAdJZJeD7GoeLiT6Xbx5rU9VCjSt0RwEvDgzh4obFw==}
@@ -2497,6 +2508,13 @@ snapshots:
   '@swc/counter@0.1.2': {}
 
   '@swc/types@0.1.5': {}
+
+  '@tabler/icons-react@3.46.0(react@18.2.0)':
+    dependencies:
+      '@tabler/icons': 3.46.0
+      react: 18.2.0
+
+  '@tabler/icons@3.46.0': {}
 
   '@types/hast@2.3.9':
     dependencies:
