@@ -78,7 +78,7 @@ export default function Leaderboard() {
   const getLeaderboardData = async () => {
     try {
       const { data, error } = await supabase
-        .from("leaderboard_points")
+        .from("leaderboard")
         .select()
         .order("points", { ascending: false })
         .order("registration_number", { ascending: true });
