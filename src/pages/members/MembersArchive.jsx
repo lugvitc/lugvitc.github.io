@@ -112,10 +112,10 @@ function MembersArchive() {
               </a>
             <a href={linkedin} target="_blank" className="p-1.5 rounded-md h-[16px] w-[16px]" rel="noreferrer">
               <IconBrandLinkedin/>
-              </a>
+            </a>
             <a href={instagram} target="_blank" className="p-1.5 rounded-md h-[19px] w-[19px]" rel="noreferrer">
               <IconBrandInstagram/>
-              </a>
+            </a>
               <a
                 rel="noopener noreferrer"
                 href={email}
@@ -157,7 +157,7 @@ function MembersArchive() {
         </p>
 
         <p className="max-w-5xl px-5 mt-2 text-md font-black leading-tight text-center text-white sm:mt-10 sm:px-0 sm:text-lg">
-          Honoring the dedicated leaders who built our community foundation and 
+          Honoring the dedicated leaders who built our community foundation and
           paved the way for future generations of Linux enthusiasts.
         </p>
 
@@ -203,9 +203,9 @@ function MembersArchive() {
               <b className="text-light-green-300">cat members_2024</b>
             </p>
             <p>
-              The 2024 board members led the club through an incredible year of innovation and growth. 
-              Under President Ojass Pravin Bharati and Vice President Shaina's leadership, the team 
-              organized flagship events like Password 2.0, StuxNet treasure hunt, and numerous 
+              The 2024 board members led the club through an incredible year of innovation and growth.
+              Under President Ojass Pravin Bharati and Vice President Shaina's leadership, the team
+              organized flagship events like Password 2.0, StuxNet treasure hunt, and numerous
               cybersecurity workshops that set new standards for technical excellence and community engagement.
             </p>
             <p>
@@ -237,10 +237,10 @@ function MembersArchive() {
               <b className="text-light-green-300">cat members_2023</b>
             </p>
             <p>
-              The 2023 board, led by President Abhishek Kumar and Technical Head Animesh Rai, 
-              established many of the club's core traditions and technical foundations. This dynamic 
-              team pioneered several cybersecurity initiatives, organized successful Password events, 
-              and built the framework that continues to guide the club's mission of promoting 
+              The 2023 board, led by President Abhishek Kumar and Technical Head Animesh Rai,
+              established many of the club's core traditions and technical foundations. This dynamic
+              team pioneered several cybersecurity initiatives, organized successful Password events,
+              and built the framework that continues to guide the club's mission of promoting
               Linux and open-source technologies.
             </p>
             <p>
@@ -272,10 +272,10 @@ function MembersArchive() {
               <b className="text-light-green-300">cat members_2022</b>
             </p>
             <p>
-              The founding members of our modern era! President Beleswar Prasad Padhi and 
-              Vice President Samridh Anand Paatni, along with their dedicated team, laid the 
-              groundwork for what would become one of VIT Chennai's most active technical clubs. 
-              Their vision and pioneering spirit established the Linux Users Group as a hub for 
+              The founding members of our modern era! President Beleswar Prasad Padhi and
+              Vice President Samridh Anand Paatni, along with their dedicated team, laid the
+              groundwork for what would become one of VIT Chennai's most active technical clubs.
+              Their vision and pioneering spirit established the Linux Users Group as a hub for
               cybersecurity education, open-source advocacy, and technical innovation.
             </p>
             <p>
