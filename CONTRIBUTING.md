@@ -1,6 +1,6 @@
 # Contributing to Linux Club VITC website
 
-Thank you for your interest in making the linux club website better. Before you get started, please review our [Code of Conduct](https://github.com/lugvitc/visual-encryptor/blob/master/CODE_OF_CONDUCT.md). This helps us ensure that the community is positive and supportive for everyone involved.
+Thank you for your interest in making the linux club website better. Before you get started, please review our [Code of Conduct](https://github.com/lugvitc/lugvitc.github.io/blob/master/CODE_OF_CONDUCT.md). This helps us ensure that the community is positive and supportive for everyone involved.
 
 # Getting started
 

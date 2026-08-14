@@ -13,38 +13,37 @@ function Learn() {
   const chapters = [
     {
       link: "/chapter_1",
-      title: "Linux: What? Why? How?",
+      title: ".rwxrwxr-x 1 root root Linux: What? Why? How?.txt",
       description:
-        "What is Linux, Linux Distributions, The Linux Family Tree,Why do we need it?,Installation ...",
+        "What is Linux, Linux distributions, the Linux family tree, why we need it, installation ...",
     },
     {
       link: "/chapter_2",
-      title: "Know the terminal",
+      title: ".rwxrwxr-x 1 root root Know the terminal.txt",
       description:
         "What is the terminal?, Terminal Emulators, Shells, Terminal Basics, Terminal Commands ....",
     },
     {
       link: "/chapter_3",
-      title: "Linux File System",
+      title: ".rwxrwxr-x 1 root root Linux File System.txt",
       description:
-        "Filesystems, Everything is a File, The Filesystem Heirarchy Standard (FHS), Users, Groups and Permissions ...",
+        "Filesystems, \"Everything is a File\", The Filesystem Hierarchy Standard (FHS), Users, Groups and Permissions ...",
     },
-
     {
       link: "/chapter_4",
-      title: "Processes and Packages",
+      title: ".rwxrwxr-x 1 root root Processes and Packages.txt",
       description:
         "Processes, Process states, Process Monitoring, Background and Foreground jobs, Package Managers...",
     },
     {
       link: "/chapter_5",
-      title: "Advanced Features",
+      title: ".rwxrwxr-x 1 root root Advanced Features.txt",
       description:
         "Terminal Utilities, Path Expansion, Brace Expansion, Modes, Opening a file, Changing Modes and Giving Commands, Vim cheat sheet ...",
     },
     {
       link: "/chapter_6",
-      title: "Desktop Customization",
+      title: ".rwxrwxr-x 1 root root Desktop Customisation.txt",
       description:
         "Vim Customization, Vim Plugins, Customizing GNOME, Extensions",
     },
@@ -56,11 +55,11 @@ function Learn() {
 
       <NavLink to="/learn">
         <div className="flex flex-row justify-center items-center w-full font-space ">
-          <div class="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
-            <div class="text-lg font-semibold text-green-300 ">
-              drwxrwxrwx 1 root root learn-linux.txt
+          <div className="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
+            <div className="text-lg font-semibold text-green-300 ">
+              .rwxrwxr-x 1 root root learn-linux.txt
             </div>
-            <div class="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
+            <div className="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
               <div className="bg-[#1A1920]  rounded-full h-14 w-14 mx-5 pr-4">
                 {React.createElement(InformationCircleIcon, {
                   strokeWidth: 2,
@@ -82,9 +81,9 @@ function Learn() {
         return (
           <NavLink to={link}>
             <div className="flex flex-row justify-center items-center w-full font-space ">
-              <div class="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
-                <div class="text-lg font-semibold text-green-300 ">{title}</div>
-                <div class="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
+              <div className="p-5 mb-4 bg-[#1A1920] rounded-lg w-[70%]">
+                <div className="text-lg font-semibold text-green-300 ">{title}</div>
+                <div className="flex flex-row flex-wrap justify-start w-full my-5 text-white  ">
                   <div className="bg-[#1A1920]  rounded-full h-14 w-14 mx-5 pr-4">
                     {React.createElement(FilmIcon, {
                       strokeWidth: 2,

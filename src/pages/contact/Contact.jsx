@@ -8,45 +8,57 @@ function Contact() {
     {
       label: "Technical",
       value: "Technical",
-      head: "Siddharth Karanam",
-      contact: "9959290138",
-    },
-    {
-      label: "Outreach",
-      value: "Outreach",
-      head: "Atharv Shiva Hiremath",
-      contact: "9987143905",
+      head: "Aadhithya Narayanan Madhusudhanan",
+      contact: "",
     },
     {
       label: "Management",
       value: "Management",
-      head: "Omkar Rajurkar",
-      contact: "7304394717",
+      head: "Shamant Marathe",
+      contact: "",
     },
     {
       label: "Media",
       value: "Media",
-      head: "Rejit Antony",
-      contact: "8978672798",
+      head: "Kavin Karthik",
+      contact: "",
     },
-    // {
-    //   label: "Advisory",
-    //   value: "Advisory",
-    //   desc: `advisory@lugvitc.net`,
-    //   head:"",
-    //   contact:""
-    // },
     {
       label: "Treasury",
       value: "Treasury",
-      head: "Naveen",
-      contact: "9311084001",
+      head: "Atharava Srivastava",
+      contact: "",
     },
     {
-      label: "Content",
-      value: "Content",
-      head: "Tiya Sur",
-      contact: "9301985644",
+      label: "Devops",
+      value: "Devops",
+      head: "Gunit Kumar",
+      contact: "",
+    },
+    {
+      label: "Casual",
+      value: "Casual",
+      head: "Archit Arora",
+      contact: "",
+    },
+    
+    {
+      label: "Advisory",
+      value: "Advisory",
+      head:"Anumeya Sehgal",
+      contact:""
+    },
+    {
+      label: "Advisory",
+      value: "Advisory",
+      head:"Naveen",
+      contact:""
+    },
+    {
+      label: "Advisory",
+      value: "Advisory",
+      head:"Rejit Antony",
+      contact:""
     },
   ];
   return (
@@ -89,9 +101,9 @@ function Contact() {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4"
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
@@ -147,8 +159,29 @@ function Contact() {
             </svg>
           </div>
           <h6 className="text-xl mt-5 font-semibold text-white">Chairperson</h6>
-          <p className="mt-2 mb-4 text-white">Dharmik Vivek Shinde</p>
-          <p className="mt-2 mb-4 text-white">+91 9980746509</p>
+          <p className="mt-2 mb-4 text-white">Amiitesh Pradeep Kumar</p>
+          <p className="mt-2 mb-4 text-white"></p>
+        </div>
+        <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
+          <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+          </div>
+          <h6 className="text-xl mt-5 font-semibold text-white">Vice Chairperson</h6>
+          <p className="mt-2 mb-4 text-white">Atri Mukherjee</p>
+          <p className="mt-2 mb-4 text-white"></p>
         </div>
         <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
@@ -170,8 +203,8 @@ function Contact() {
           <h5 className="text-xl mt-5 font-semibold text-white">
             General Secretary
           </h5>
-          <p className="mt-2 mb-4 text-white">Anumeya Sehgal</p>
-          <p className="mt-2 mb-4 text-white">+91 8287760026</p>
+          <p className="mt-2 mb-4 text-white">Kashyap M P</p>
+          <p className="mt-2 mb-4 text-white"></p>
         </div>
         <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
           <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
@@ -193,19 +226,9 @@ function Contact() {
           <h5 className="text-xl mt-5 font-semibold text-white">
             Joint Secretary
           </h5>
-          <p className="mt-2 mb-4 text-white">Adhya Sharma</p>
-          <p className="mt-2 mb-4 text-white">+91 7701901629</p>
+          <p className="mt-2 mb-4 text-white">Karthik Ramanathan Lakshmanan</p>
+          <p className="mt-2 mb-4 text-white">+91 8667068389</p>
         </div>
-        {/* <div className="w-[300px] sm:w-[300px]  px-6 mx-5 text-center">
-          <div className=" p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-            <i className="fas fa-phone text-xl"></i>
-          </div>
-          <h5 className="text-xl mt-5 font-semibold text-white">
-            Faculty Co-ordinator
-          </h5>
-          <p className="mt-2 mb-4 text-white">Somenoe</p>
-          <p className="mt-2 mb-4 text-white">+91 8072320756</p>
-        </div> */}
       </div>
 
       <div className="h-10"></div>
@@ -213,31 +236,31 @@ function Contact() {
 
       {/*  */}
 
-      <div class="w-10/12 md:w-7/12 lg:5/12 mx-auto relative py-20 font-space text-wh">
-        <h1 class="text-3xl text-center font-bold text-white">
+      <div className="w-10/12 md:w-7/12 lg:5/12 mx-auto relative py-20 font-space text-wh">
+        <h1 className="text-3xl text-center font-bold text-white">
           <Typewriters
             options={{
-              strings: ["Contact our departments!"],
+              strings: ["Contact our department heads!"],
               autoStart: true,
               loop: true,
             }}
           />
         </h1>
-        <div class="border-l-2 mt-10">
+        <div className="border-l-2 mt-10">
           {data.map(({ label, desc, head, contact }) => {
             return (
-              <div class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center justify-evenly px-6 py-4 bg-white text-blue-gray-800 rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
-                <div class="w-5 h-5 bg-white absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+              <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center justify-evenly px-6 py-4 bg-white text-blue-gray-800 rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+                <div className="w-5 h-5 bg-white absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
 
-                <div class="w-10 h-1 bg-white absolute -left-10 z-0"></div>
+                <div className="w-10 h-1 bg-white absolute -left-10 z-0"></div>
                 {/* <div className="flex flex-row justify-start items-center"> */}
-                <div class="flex-auto mx-5">
-                  <h1 class="text-xl font-bold">{label}</h1>
+                <div className="flex-auto mx-5">
+                  <h1 className="text-xl font-bold">{label}</h1>
                 </div>
-                <a href="#" class="text-center text-blue-gray-800 mx-5">
+                <a href="#" className="text-center text-blue-gray-800 mx-5">
                   {head}
                 </a>
-                <a href="#" class="text-center text-blue-gray-800 mx-5">
+                <a href="#" className="text-center text-blue-gray-800 mx-5">
                   {contact}
                 </a>
                 {/* </div> */}

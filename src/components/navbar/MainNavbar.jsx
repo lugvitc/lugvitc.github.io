@@ -30,6 +30,7 @@ import {
   RocketLaunchIcon,
   Bars2Icon,
   TrophyIcon,
+  RssIcon
 } from "@heroicons/react/24/solid";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -234,7 +235,7 @@ function NavListMenuAboutUs() {
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px] text-white" />{" "}
-              ~whoami
+              whoami
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -334,29 +335,24 @@ function NavListMenu() {
 // nav list component
 const navListItems = [
   {
-    label: "~cd root",
+    label: "cd ~",
     icon: HomeIcon,
     link: "#/",
   },
   {
-    label: "~cd learn",
+    label: "cd ~/learn",
     icon: AcademicCapIcon,
     link: "#/learn",
   },
   {
-    label: "~cd events",
+    label: "ls ~/events",
     icon: CubeTransparentIcon,
     link: "#/events",
   },
   {
-    label: "~cd hub",
-    icon: CodeBracketSquareIcon,
-    link: "http://hub.lugvitc.net/",
-  },
-  {
-    label: "~cd leaderboards",
-    icon: TrophyIcon,
-    link: "#/leaderboard",
+    label: "cd ~/blog",
+    icon: RssIcon,
+    link: "https://blog.lugvitc.tech",
   }
 ];
 
@@ -396,7 +392,7 @@ function NavList() {
             {React.createElement(PhoneIcon, {
               className: "h-[18px] w-[18px] text-white",
             })}{" "}
-            <span className="text-white "> ~cd contact</span>
+            <span className="text-white "> cd ~/contact</span>
           </MenuItem>
         </Typography>
     </ul>
