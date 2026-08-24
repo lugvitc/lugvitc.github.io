@@ -353,6 +353,11 @@ const navListItems = [
     label: "cd ~/blog",
     icon: RssIcon,
     link: "https://blog.lugvitc.tech",
+  },
+  {
+    label: "cd ~/.old",
+    icon: Cog6ToothIcon,
+    link: "#/old",
   }
 ];
 
