@@ -201,11 +201,21 @@ function Terminal({ onLaunch, unlocked, keyResolved = false, operatorKey = null 
   return <section className="terminal-shell" onClick={() => inputRef.current?.focus()}><div className="terminal-notch">O:/MB <span>read only</span></div><div className="terminal-history" ref={historyRef}>{history.map((line, index) => <div className="terminal-line" key={`${index}-${line}`}>{line}</div>)}{unlocked && <div className="terminal-insert">[new record: comms/received/voice-01]</div>}{keyResolved && <div className="terminal-insert">[new record: comms/received/voice-02]</div>}<form className="terminal-prompt" onSubmit={(event) => { event.preventDefault(); run(input); }}><label htmlFor="terminal-command">{path} &gt;</label><input id="terminal-command" ref={inputRef} value={input} onChange={(event) => setInput(event.target.value)} autoComplete="off" spellCheck="false" aria-label="Terminal command" /></form></div></section>;
 }
 
-function useReceiver(onSignal, onStatus, onEvent) {
+function useReceiver(onSignal, onStatus, onEvent, targetFrequency, targetAmplitude) {
   const portRef = useRef(null);
   const readerRef = useRef(null);
   const [connected, setConnected] = useState(false);
   const supported = typeof navigator !== "undefined" && "serial" in navigator;
+  const sendCommand = useCallback(async (command) => {
+    const port = portRef.current;
+    if (!port?.writable) return;
+    const writer = port.writable.getWriter();
+    try {
+      await writer.write(new TextEncoder().encode(`${JSON.stringify(command)}\n`));
+    } finally {
+      writer.releaseLock();
+    }
+  }, []);
   const disconnect = useCallback(async () => { try { await readerRef.current?.cancel(); } catch { /* reader may already be closed */ } try { await portRef.current?.close(); } catch { /* port may already be closed */ } readerRef.current = null; portRef.current = null; setConnected(false); }, []);
   const connect = useCallback(async () => {
     if (!supported) { onStatus("web serial unavailable // receiver remains locked"); return; }
@@ -213,6 +223,8 @@ function useReceiver(onSignal, onStatus, onEvent) {
       const port = await navigator.serial.requestPort();
       await port.open({ baudRate: 115200 });
       portRef.current = port; setConnected(true); onStatus("serial carrier present // listening");
+      await sendCommand({ type: "target", frequency: targetFrequency, amplitude: targetAmplitude });
+      await sendCommand({ type: "led", state: "off" });
       const reader = port.readable.getReader(); readerRef.current = reader;
       let buffer = "";
       while (readerRef.current === reader) {
@@ -222,9 +234,9 @@ function useReceiver(onSignal, onStatus, onEvent) {
         messages.forEach((message) => { try { const event = JSON.parse(message.trim()); if (event.type === "signal" && Number.isFinite(Number(event.frequency))) onSignal({ frequency: clamp(Number(event.frequency), 200, 1200), amplitude: clamp(Number(event.amplitude), 0, 100) }); onEvent?.(event); } catch { /* malformed carrier frame */ } });
       }
     } catch (error) { setConnected(false); onStatus(error?.name === "NotFoundError" ? "no receiver selected // lock held" : "serial carrier failed // lock held"); }
-  }, [onSignal, onStatus, onEvent, supported]);
+  }, [onSignal, onStatus, onEvent, supported, targetFrequency, targetAmplitude, sendCommand]);
   useEffect(() => () => { disconnect(); }, [disconnect]);
-  return { connect, connected, supported };
+  return { connect, connected, supported, sendCommand };
 }
 
 function useSplitKey(onResolved) {
@@ -264,15 +276,15 @@ function Receiver({ onLocked, targetFrequency, minAmplitude, onEvent }) {
   const locked = Math.abs(frequency - targetFrequency) <= 10 && amplitude >= minAmplitude;
   const handleSignal = useCallback(({ frequency: nextFrequency, amplitude: nextAmplitude }) => { setFrequency(nextFrequency); setAmplitude(nextAmplitude); }, []);
   const handleStatus = useCallback((nextStatus) => setStatus(nextStatus), []);
-  const serial = useReceiver(handleSignal, handleStatus, onEvent);
+  const { connect, connected, sendCommand } = useReceiver(handleSignal, handleStatus, onEvent, targetFrequency, minAmplitude);
   useEffect(() => {
     if (!locked) { setStableSince(null); return undefined; }
     if (!stableSince) { setStableSince(Date.now()); return undefined; }
-    const timer = setTimeout(() => { if (Date.now() - stableSince >= 1000) onLocked(); }, 1050);
+    const timer = setTimeout(() => { if (Date.now() - stableSince >= 1000) { sendCommand({ type: "led", state: "on" }); onLocked(); } }, 1050);
     return () => clearTimeout(timer);
-  }, [locked, onLocked, stableSince]);
+  }, [locked, onLocked, sendCommand, stableSince]);
   const trace = Array.from({ length: 80 }, (_, index) => `${(index / 79) * 100},${50 - Math.sin(index * (frequency / 95)) * (8 + amplitude / 5)}`).join(" ");
-  return <main className="receiver-screen"><div className="receiver-copy"><span>O:/MB/launch</span><h1>RECEIVER LOCK</h1><p>the carrier is unstable. the room is not.</p></div><div className={`carrier-trace ${locked ? "is-locked" : ""}`}><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Live carrier trace"><polyline points={trace} /></svg></div><div className="receiver-readout"><span>FREQUENCY <strong>{frequency} kHz</strong></span><span>AMPLITUDE <strong>{amplitude}%</strong></span><span className={locked ? "readout-good" : ""}>{locked ? "CARRIER WITHIN WINDOW" : `LOCK WINDOW ±10 kHz / AMP ≥${minAmplitude}%`}</span></div><div className="receiver-actions"><button type="button" onClick={serial.connect} disabled={serial.connected}>{serial.connected ? "ESP-32 CONNECTED" : "CONNECT ESP-32"}</button><span>{status}</span></div><p className="receiver-footnote">no keyboard path // no manual override // GPIO33 frequency / GPIO34 amplitude</p></main>;
+  return <main className="receiver-screen"><div className="receiver-copy"><span>O:/MB/launch</span><h1>RECEIVER LOCK</h1><p>the carrier is unstable. the room is not.</p></div><div className={`carrier-trace ${locked ? "is-locked" : ""}`}><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Live carrier trace"><polyline points={trace} /></svg></div><div className="receiver-readout"><span>FREQUENCY <strong>{frequency} kHz</strong></span><span>AMPLITUDE <strong>{amplitude}%</strong></span><span className={locked ? "readout-good" : ""}>{locked ? "CARRIER WITHIN WINDOW" : `LOCK WINDOW ±10 kHz / AMP ≥${minAmplitude}%`}</span></div><div className="receiver-actions"><button type="button" onClick={connect} disabled={connected}>{connected ? "ESP-32 CONNECTED" : "CONNECT ESP-32"}</button><span>{status}</span></div><p className="receiver-footnote">no keyboard path // no manual override // GPIO33 frequency / GPIO34 amplitude</p></main>;
 }
 
 function Intrusion({ onDone }) {
