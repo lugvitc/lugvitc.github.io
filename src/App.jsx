@@ -23,6 +23,7 @@ import Gallery from "./pages/gallery/Gallery";
 import Footer from "./components/footer/Footer";
 import Cli from "./pages/cli/Cli";
 import MembersArchive from "./pages/members/MembersArchive";
+import Signal from "./pages/sting/Signal";
 
 // importing all events
 import AdrenalineFOSSDay from "./pages/events/event/adrenaline-FOSS-Day/AdrenalineFOSSDay";
@@ -214,7 +215,11 @@ const router = createHashRouter([
     path: "/LinuxInstallation2025",
     element: <LinuxInstallation2025 />,
   },
-  
+  {
+    path: "/old",
+    element: <Signal />,
+  },
+
   // {
     //   path:'*',
   //   element: <PageNotFound></PageNotFound> ,
