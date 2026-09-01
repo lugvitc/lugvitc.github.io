@@ -14,7 +14,7 @@ All the code related to the website are placed inside the `src` directory.
 * Fork the repo.
 * Clone your copy of the repo to your local machine.
 * use command `npm install` to install all packages required by the project.
-* use command `npm start` to see the website rendered in your localhost.
+* use command `npm run dev` to see the website rendered in your localhost.
 * Now all the changes made in your local system will reflect in the rendered localhost website.
 
 # Roadmap of features expected
