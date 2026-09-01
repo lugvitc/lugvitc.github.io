@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
@@ -17,6 +17,9 @@ import kavin_karthik from "../../images/members/kavin_karthik.jpg";
 import shamant_marathe from "../../images/members/shamant_marathe.jpg";
 
 function Member() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const img2026 = [
     blank,
     amiitesh,
@@ -165,6 +168,7 @@ function Member() {
       <div className="flex justify-center items-center my-10">
         <a
           href="#/members-archive"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="inline-flex items-center px-6 py-3 text-sm font-medium text-white bg-gray-600 bg-opacity-40 rounded-lg hover:bg-opacity-60 focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 transition-all duration-300"
         >
           <svg

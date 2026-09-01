@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { IconBrandInstagram } from '@tabler/icons-react';
@@ -47,6 +47,9 @@ import harshanth from "..//..//images/members/harshanth.png";
 import riya from "..//..//images/members/riya.jpeg";
 
 function MembersArchive() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const img2025 = [
     blank,
     dharmik_vivek_shinde,
