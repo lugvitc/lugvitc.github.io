@@ -59,8 +59,8 @@ export const members_2026 = [
     id: 8,
     name: "Shamant Marathe",
     position: "Management Lead",
-    github: "",
-    linkedin: "",
+    github: "https://www.github.com/i-m-sham",
+    linkedin: "https://www.linkedin.com/in/shamant-marathe-9b88a4323",
     instagram: "",
   },
 ];
