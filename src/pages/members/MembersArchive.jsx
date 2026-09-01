@@ -3,11 +3,22 @@ import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { IconBrandInstagram } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
+import { members_2025 } from "./2025";
+import { members_2024 } from "./2024";
 import { members_2023 } from "./2023";
 import { members_2022 } from "./2022";
-import { members_2024 } from "./2024";
 import EventTerminal from "../../components/terminal/EventTerminal";
 import blank from "../../images/members/blank.png";
+import dharmik_vivek_shinde from "../../images/members/dharmik_vivek_shinde.jpg";
+import adhya_sharma from "../../images/members/adhya_sharma.jpg";
+import anumeya_sehgal from "../../images/members/anumeya_sehgal.jpg";
+import atharv_shiva_hiremath from "../../images/members/atharv_shiva_hiremath.jpg";
+import naveen_duhan from "../../images/members/naveen_duhan.jpg";
+import omkar_rajurkar from "../../images/members/omkar_rajurkar.jpg";
+import rejit_munnar from "../../images/members/rejit_munnar.jpg";
+import shrreya_vishwanathan from "../../images/members/shrreya_vishwanathan.jpg";
+import siddharth_karanam from "../../images/members/siddharth_karanam.jpg";
+import tiya_sur from "../../images/members/tiya_sur.jpg";
 import baleshwar from "../../images/members/Baleswar.jpeg";
 import samridth from "../../images/members/Samridh.jpeg";
 import abhishek from "../../images/members/abhishek.jpg";
@@ -36,6 +47,19 @@ import harshanth from "..//..//images/members/harshanth.png";
 import riya from "..//..//images/members/riya.jpeg";
 
 function MembersArchive() {
+  const img2025 = [
+    blank,
+    dharmik_vivek_shinde,
+    anumeya_sehgal,
+    adhya_sharma,
+    naveen_duhan,
+    siddharth_karanam,
+    omkar_rajurkar,
+    shrreya_vishwanathan,
+    rejit_munnar,
+    atharv_shiva_hiremath,
+    tiya_sur,
+  ];
   const img2024 = [
     blank,
     ojass,
@@ -182,6 +206,47 @@ function MembersArchive() {
             Back to Current Members
           </a>
         </div>
+      </div>
+
+      {/* 2025 */}
+      <div className="flex justify-center w-full">
+        <div className="mx-1 px-1 w-[40rem]">
+          <EventTerminal title="lug:~$cli-v.0.0.1x" children="coiacascasuin">
+            <p>
+              <b className="text-blue-gray-600">lug@vitc:~/archive$ </b>
+              <b className="text-light-green-300">
+                sudo lug run -it archive.ion
+              </b>
+            </p>
+            <p>
+              <b className="text-blue-gray-600">[sudo] password for lugvitc:</b>
+              <b className="text-light-green-300"></b>
+            </p>
+            <p>
+              <b className="text-blue-gray-600">[root@lugvitc superuser]# </b>
+              <b className="text-light-green-300">cat members_2025</b>
+            </p>
+            <p>
+              The 2025 board members led the club through an incredible year of innovation and growth. Under the leadership of Chairperson Dharmik Shinde, General Secretary Anumeya Sehgal, and Joint Secretary Aadhya Sharma, the team organized flagship events like Linux Installation Booth 4.0, Cyber-0-Day 4.0, and Ricing Day, while also developing the Blog website and Whats4Linux project. The club further expanded its presence through its association with the FOSS United Foundation, strengthening its connection with the wider open-source community.
+            </p>
+            <p>
+              <b className="text-blue-gray-600">[root@lugvitc superuser]# </b>
+              <b className="text-light-green-300">open members_2025</b>
+            </p>
+            <Typewriters
+              words={["Our 2025 Board Members - Innovation & Growth"]}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </EventTerminal>
+        </div>
+      </div>
+
+      <div className="flex flex-row flex-wrap justify-center items-center text-white font-space">
+        <MemberCard members={members_2025} imgArray={img2025} />
       </div>
 
       {/* 2024 */}

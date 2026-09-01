@@ -4,43 +4,39 @@ import Particle from "../../components/Particle/Particle";
 import Typewriters from "typewriter-effect";
 import { IconBrandInstagram } from '@tabler/icons-react';
 import { IconBrandLinkedin } from '@tabler/icons-react';
-import { members_2025 } from "./2025";
+import { members_2026 } from "./2026";
 import EventTerminal from "../../components/terminal/EventTerminal";
 import blank from "../../images/members/blank.png";
-import dharmik_vivek_shinde from "../../images/members/dharmik_vivek_shinde.jpg";
-import adhya_sharma from "../../images/members/adhya_sharma.jpg";
-import anumeya_sehgal from "../../images/members/anumeya_sehgal.jpg";
-import atharv_shiva_hiremath from "../../images/members/atharv_shiva_hiremath.jpg";
-import naveen_duhan from "../../images/members/naveen_duhan.jpg";
-import omkar_rajurkar from  "../../images/members/omkar_rajurkar.jpg";
-import rejit_munnar from "../../images/members/rejit_munnar.jpg";
-import shrreya_vishwanathan from "../../images/members/shrreya_vishwanathan.jpg";
-import siddharth_karanam from "../../images/members/siddharth_karanam.jpg";
-import tiya_sur from "../../images/members/tiya_sur.jpg";
+import amiitesh from "../../images/members/amiitesh.png";
+import atri from "../../images/members/atri.jpg";
+import kashyap from "../../images/members/kashyap.jpg";
+import karthik_rl from "../../images/members/karthik_rl.jpg";
+import atharva_srivastava from "../../images/members/atharva_srivastava.jpeg";
+import aadhithya_nm from "../../images/members/aadhithya_nm.jpeg";
+import kavin_karthik from "../../images/members/kavin_karthik.jpg";
+import shamant_marathe from "../../images/members/shamant_marathe.jpg";
 
 function Member() {
-  const img2025 = [
+  const img2026 = [
     blank,
-    dharmik_vivek_shinde,
-    anumeya_sehgal,
-    adhya_sharma,
-    naveen_duhan,
-    siddharth_karanam,
-    omkar_rajurkar,
-    shrreya_vishwanathan,
-    rejit_munnar,
-    atharv_shiva_hiremath,
-    tiya_sur,
+    amiitesh,
+    atri,
+    kashyap,
+    karthik_rl,
+    atharva_srivastava,
+    aadhithya_nm,
+    kavin_karthik,
+    shamant_marathe,
   ];
 
-  const members2025 = members_2025.map(
+  const members2026 = members_2026.map(
     ({ id, name, position, github, linkedin, instagram, email, image }) => (
       <div
         key={id}
         className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-[#1A1920] mx-5 my-6"
       >
         <img
-          src={img2025[id]}
+          src={img2026[id]}
           alt=""
           className="w-32 h-32 mx-auto rounded-full  aspect-square"
         />
@@ -70,21 +66,6 @@ function Member() {
             </a>
             <a href={instagram} target="_blank" className="p-1.5 rounded-md h-[19px] w-[19px]" rel="noreferrer">
               <IconBrandInstagram/>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href={email}
-              target="_blank"
-              aria-label="Email"
-              className="p-2 rounded-md  "
-            >
-              <svg
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 fill-current"
-              >
-                <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
-              </svg>
             </a>
           </div>
         </div>
@@ -132,7 +113,7 @@ function Member() {
             </p>
             <p>
               <b className="text-blue-gray-600">[root@lugvitc superuser]#</b>{" "}
-              <b className="text-light-green-300">cat members_2025 </b>
+              <b className="text-light-green-300">cat members_2026 </b>
               <p>
                 Welcome to the heart of our Linux Club! Our dedicated Board
                 Members form the backbone of our community, steering us towards
@@ -142,10 +123,10 @@ function Member() {
             </p>
             <p>
               <b className="text-blue-gray-600">[root@lugvitc superuser]#</b>{" "}
-              <b className="text-light-green-300">open members_2025 </b>
+              <b className="text-light-green-300">open members_2026 </b>
             </p>
             <Typewriters
-              words={["Our Current Board Members - 2025"]}
+              words={["Our Current Board Members - 2026"]}
               cursor
               cursorStyle="_"
               typeSpeed={70}
@@ -157,7 +138,7 @@ function Member() {
       </div>
 
       <div className="flex flex-row flex-wrap justify-center items-center text-white font-space">
-        {members2025}
+        {members2026}
       </div>
 
       {/* Archive Button */}
